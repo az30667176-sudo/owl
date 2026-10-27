@@ -130,6 +130,29 @@
   .dir-row .d { color: var(--muted); font-size: 11px; }
   .link { color: #a78bfa; cursor: pointer; font-size: 12px; }
   @media (max-width: 1100px) { .pgrid { grid-template-columns: 1fr; } }
+  /* profile v2 */
+  .hero { display: grid; grid-template-columns: 56px 1fr auto; gap: 16px; align-items: center; padding: 14px 16px; background: var(--panel); border: 1px solid var(--border); border-radius: 14px; margin-bottom: 14px; }
+  .hero .avatar { width: 56px; height: 56px; font-size: 20px; }
+  .hero h1 { margin: 0; font-size: 20px; line-height: 1.2; }
+  .hero .meta { color: var(--muted); font-size: 12px; margin-top: 3px; }
+  .strip { display: flex; gap: 0; border-left: 1px solid var(--border); }
+  .strip .stat { padding: 0 14px; display: flex; flex-direction: column; align-items: flex-start; border-right: 1px solid var(--border); }
+  .strip .stat:last-child { border-right: 0; }
+  .strip .v { font: 700 17px var(--mono); line-height: 1.1; }
+  .strip .l { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; margin-top: 2px; }
+  .card.ai { border-color: #4c1d95; background: linear-gradient(180deg, rgba(139,92,246,.10), rgba(139,92,246,.03)); margin-bottom: 14px; }
+  .card.ai.dim { opacity: .7; }
+  .ai-h { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .ai-badge { font-size: 11px; font-weight: 700; color: #c4b5fd; border: 1px solid #6d28d9; border-radius: 999px; padding: 2px 8px; }
+  .ai-body p { margin: 8px 0 0; font-size: 14px; line-height: 1.55; }
+  .cite { font: 600 11px var(--mono); color: #a78bfa; cursor: pointer; margin-left: 2px; }
+  .cite:hover { text-decoration: underline; }
+  .tabs { display: flex; gap: 4px; margin: 4px 0 12px; border-bottom: 1px solid var(--border); }
+  .tabs button { background: transparent; border: 0; border-bottom: 2px solid transparent; color: var(--muted); padding: 8px 12px; font: inherit; font-size: 13px; cursor: pointer; }
+  .tabs button.active { color: var(--text); border-bottom-color: var(--accent); }
+  .tabpane[hidden] { display: none; }
+  .stmt.hl { background: rgba(139,92,246,.12); border-radius: 8px; padding: 10px 8px 4px; margin-left: -8px; margin-right: -8px; }
+  @media (max-width: 1100px) { .hero { grid-template-columns: 56px 1fr; } .strip { grid-column: 1 / -1; border-left: 0; flex-wrap: wrap; } }
 </style>
 </head>
 <body>
@@ -161,9 +184,11 @@
 (async () => {
   // ---------- load ----------
   const load = async f => { const r = await fetch(`./data/${f}`); if (!r.ok) throw new Error(`${f}: ${r.status}`); return r.json(); };
-  let taxonomy, issuesRaw, peopleRaw, stancesRaw;
+  let taxonomy, issuesRaw, peopleRaw, stancesRaw, summariesRaw = { summaries: {} };
   try { [taxonomy, issuesRaw, peopleRaw, stancesRaw] = await Promise.all(["taxonomy.json", "issues.json", "people.json", "stances.json"].map(load)); }
   catch (e) { document.getElementById("loading").textContent = "Could not load data/*.json — serve this folder over http (see data/README.md). " + e.message; return; }
+  try { summariesRaw = await load("summaries.json"); } catch { /* optional file */ }
+  const SUMMARIES = summariesRaw.summaries || {};
   document.getElementById("loading").remove();
   if ([issuesRaw, peopleRaw, stancesRaw].some(x => x._meta && x._meta.mock)) document.getElementById("mock").hidden = false;
 
@@ -180,6 +205,7 @@
   const CONF = ["low", "mid", "high", "super_high"], CONF_W = { low: .4, mid: .7, high: 1, super_high: 1.2 };
   const dirOf = s => s > 0.15 ? "support" : s < -0.15 ? "oppose" : "neutral";
   const STATEMENTS = stancesRaw.stances.filter(s => (byId[s.person] && issueById[s.issue]) || console.warn("statement with unknown person/issue dropped:", s));
+  const stById = Object.fromEntries(STATEMENTS.filter(s => s.statement_id).map(s => [s.statement_id, s]));
   // Salience ("heat"): how much a legislator talks about an issue, not which side.
   // sum over statements of venue_weight * 2^(-age_days/180). Mock data uses the newest statement date as "today" so the demo is stable.
   const NOW = stancesRaw._meta?.mock ? d3.max(STATEMENTS, s => new Date(s.date || 0)) : new Date();
@@ -284,12 +310,12 @@
     const lab = labels ? `<text x="6" y="${H - 1}" font-size="9" fill="#8b93a7">${dated[0].date}</text><text x="${W - 6}" y="${H - 1}" font-size="9" fill="#8b93a7" text-anchor="end">${dated[dated.length - 1].date}</text>` : "";
     return `<svg width="${W}" height="${H + (labels ? 10 : 0)}" style="vertical-align:middle;display:block">${segs}${dots}${lab}</svg>`;
   }
-  function evidenceHtml(e) {
+  function evidenceHtml(e, hlId) {
     const i = issueById[e.to], st = e.statements;
     const head = `<div style="font-weight:600">${title(byId[e.from])} on ${i.name}</div><div style="font-size:11px;color:var(--muted)">${i.catName} › ${i.subName}</div>
       <div class="tags" style="margin-top:6px"><span class="tag" style="color:${color(e.direction)}">${e.direction} · ${fmt(e.score)}</span><span class="tag">${e.n} statement${e.n > 1 ? "s" : ""}</span><span class="tag" title="attention: recency-weighted statement count, percentile across all edges">🔥 ${Math.round(e.heat * 100)}th pct</span>${e.flip ? `<span class="tag" style="border-color:#b45309;color:#fbbf24">⟲ flipped</span>` : ""}<span class="tag c-${e.llm_confidence}">confidence: ${e.llm_confidence}</span></div>
       ${e.n > 1 ? `<div style="margin-top:8px;font-size:11px;color:var(--muted)">direction over time</div>${ribbon(st, 300)}` : ""}`;
-    const items = [...st].reverse().map(s => `<div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--border)"><div style="font-size:11px;color:var(--muted)">${s.date || "undated"} · <span style="color:${color(s.direction)}">${s.direction} ${fmt(s.score)}</span> · <span class="tag c-${s.llm_confidence}" style="padding:0 5px">${s.llm_confidence}</span></div>
+    const items = [...st].reverse().map(s => `<div class="stmt ${hlId && s.statement_id === hlId ? "hl" : ""}" style="margin-top:10px;padding-top:10px;border-top:1px solid var(--border)"><div style="font-size:11px;color:var(--muted)">${s.statement_id ? `<span class="tag" style="padding:0 5px">${s.statement_id.replace(/^st0*/, "#")}</span> · ` : ""}${s.date || "undated"} · <span style="color:${color(s.direction)}">${s.direction} ${fmt(s.score)}</span> · <span class="tag c-${s.llm_confidence}" style="padding:0 5px">${s.llm_confidence}</span></div>
       <blockquote>“${s.quote}”</blockquote><div style="font-size:12px;color:var(--muted)">${s.bill || ""} · linkage ${s.linkage} · ${s.model || ""}</div><a href="${s.source}" target="_blank" rel="noopener">source ↗</a></div>`).join("");
     return `<div class="evidence">${head}${items}</div>`;
   }
@@ -365,7 +391,7 @@
   }
 
   // ---------- PROFILE (one page per legislator) ----------
-  const openProfile = id => { state.mode = "profile"; state.p.person = id; state.p.sel = null; state.p.open = null; history.replaceState(null, "", `#/legislator/${id}`); render(); };
+  const openProfile = id => { state.mode = "profile"; state.p.person = id; state.p.sel = null; state.p.hl = null; state.p.open = null; history.replaceState(null, "", `#/legislator/${id}`); render(); };
   const profileBtn = id => `<div style="margin-top:10px"><button class="btn" data-open="${id}">Open profile →</button></div>`;
   const partyColor = p => p === "D" ? "#3b82f6" : p === "R" ? "#f87171" : "#9ca3af";
   function renderProfileAside() {
@@ -388,22 +414,64 @@
     const divs = mine.map(x => { const peers = EDGES.filter(e => e.to === x.e.to && e.from !== p.id && byId[e.from].party === p.party).map(e => e.score); return peers.length ? Math.abs(x.e.score - peers.reduce((a, b) => a + b, 0) / peers.length) : null; }).filter(v => v !== null);
     const divergence = divs.length ? divs.reduce((a, b) => a + b, 0) / divs.length : null;
     const initials = p.name.replace(/^Rep\. /, "").split(" ").map(s => s[0]).join("").slice(0, 2);
+    const partyName = p.party === "D" ? "Democrat" : p.party === "R" ? "Republican" : "Independent";
+    const tab = P.tab || "overview";
+    const stat = (v, l, c, t) => `<div class="stat" ${t ? `title="${t}"` : ""}><span class="v" ${c ? `style="color:${c}"` : ""}>${v}</span><span class="l">${l}</span></div>`;
+    const summary = SUMMARIES[p.id];
+    const cite = id => { const st = stById[id]; return st ? `<a class="cite" data-st="${id}" title="${st.date} · ${issueById[st.issue].name}">[${id.replace(/^st0*/, "")}]</a>` : ""; };
+    const summaryHtml = summary
+      ? `<div class="card ai"><div class="ai-h"><span class="ai-badge">✦ AI summary</span><span class="sub" style="margin:0">generated by ${summary.model} · ${summary.generated_at} · every claim cites a statement — click a number to read it</span></div>
+          <div class="ai-body">${summary.sentences.map(s => `<p>${s.text} ${s.cites.map(cite).join(" ")}</p>`).join("")}</div></div>`
+      : `<div class="card ai dim"><div class="ai-h"><span class="ai-badge">✦ AI summary</span><span class="sub" style="margin:0">not generated yet — produced offline by Muse Spark from this legislator's statements (see data/README.md)</span></div></div>`;
     wrap.innerHTML = `
-      <div class="ph"><div class="avatar" style="background:${partyColor(p.party)}">${initials}</div>
-        <div><h1>${p.name}</h1><div class="meta">${seat(p)} · ${p.party === "D" ? "Democrat" : p.party === "R" ? "Republican" : "Independent"} · ${p.gender === "F" ? "Female" : "Male"} · in office since ${p.since}${p.bioguide_id ? ` · <a class="link" href="https://bioguide.congress.gov/search/bio/${p.bioguide_id}" target="_blank">bioguide ↗</a>` : ""}</div>
-          <div class="kpis"><div class="kpi"><div class="v">${mine.length}</div><div class="l">stances</div></div><div class="kpi"><div class="v" style="color:var(--support)">${sup}</div><div class="l">support</div></div><div class="kpi"><div class="v" style="color:var(--oppose)">${opp}</div><div class="l">oppose</div></div><div class="kpi" title="mean |score| across issues: how strongly they commit, regardless of direction"><div class="v">${decisive.toFixed(2)}</div><div class="l">decisiveness</div></div><div class="kpi" title="mean distance from the average of other members of the same party on the same issues"><div class="v">${divergence === null ? "—" : divergence.toFixed(2)}</div><div class="l">vs own party</div></div><div class="kpi"><div class="v">${nStatements}</div><div class="l">statements</div></div>${flips ? `<div class="kpi"><div class="v" style="color:#fbbf24">⟲ ${flips}</div><div class="l">flipped</div></div>` : ""}</div></div></div>
-      <div class="pgrid">
-        <div class="card"><h3>Where they stand</h3><div class="sub">Grouped by committee; click a committee row to expand. Bar = score, faded = low LLM confidence; <b>dot size = attention</b> (how often and how recently they raise it); ×N = statements; ⟲ = position changed, with a direction ribbon over time. <span style="color:${partyColor(p.party)}">▌</span> = average of other ${p.party === "D" ? "Democrats" : p.party === "R" ? "Republicans" : "members"} on the same issue. Click an issue for the evidence. <span class="link" id="exp-all">expand all</span> · <span class="link" id="col-all">collapse all</span></div><svg id="pbars"></svg></div>
-        <div>
-          <div class="card"><h3>Attention map</h3><div class="sub">Where they stand (x) vs how much they talk about it (y). Top corners = loud supporter / loud opponent; bottom = on record but rarely raised.</div><svg id="pscatter" viewBox="0 0 270 230" style="width:100%;height:auto"></svg></div>
-          <div class="card" style="margin-top:14px"><h3>Stance fingerprint</h3><div class="sub">One spoke per issue; radius = |score|.</div><svg id="pradar" viewBox="0 0 270 270" style="width:100%;height:auto"></svg>
-          <h3 style="margin-top:14px">Committees touched</h3><div class="sub">${[...new Set(mine.map(x => x.i.catName))].map(c => `<span class="chip" style="cursor:default">${c}</span>`).join(" ") || "—"}</div></div>
+      <div class="hero">
+        <div class="avatar" style="background:${partyColor(p.party)}">${initials}</div>
+        <div class="who"><h1>${p.name}</h1><div class="meta">${seat(p)} · ${partyName} · ${p.gender === "F" ? "Female" : "Male"} · since ${p.since}${p.bioguide_id ? ` · <a class="link" href="https://bioguide.congress.gov/search/bio/${p.bioguide_id}" target="_blank">bioguide ↗</a>` : ""}</div></div>
+        <div class="strip">${stat(mine.length, "issues")}${stat(sup, "support", "var(--support)")}${stat(opp, "oppose", "var(--oppose)")}${stat(nStatements, "statements")}${stat(decisive.toFixed(2), "decisiveness", null, "mean |score| across issues: how strongly they commit, regardless of direction")}${stat(divergence === null ? "—" : divergence.toFixed(2), "vs party", null, "mean distance from other " + partyName + "s on the same issues")}${flips ? stat("⟲ " + flips, "flipped", "#fbbf24") : ""}</div>
+      </div>
+      ${summaryHtml}
+      <div class="tabs">${[["overview", "Overview"], ["issues", "Issues by committee"], ["timeline", "Timeline"]].map(([k, l]) => `<button class="${tab === k ? "active" : ""}" data-tab="${k}">${l}</button>`).join("")}</div>
+      <div id="tab-overview" class="tabpane" ${tab !== "overview" ? "hidden" : ""}>
+        <div class="pgrid">
+          <div class="card"><h3>Attention map</h3><div class="sub">Where they stand (x) vs how much they talk about it (y). Top corners = loud supporter / loud opponent; bottom = on record but rarely raised. Gold ring = position changed.</div><svg id="pscatter" viewBox="0 0 270 230" style="width:100%;height:auto;max-width:520px"></svg></div>
+          <div class="card"><h3>Stance fingerprint</h3><div class="sub">One spoke per issue; radius = |score|.</div><svg id="pradar" viewBox="0 0 270 270" style="width:100%;height:auto"></svg>
+            <h3 style="margin-top:14px">Committees touched</h3><div class="sub">${[...new Set(mine.map(x => x.i.catName))].map(c => `<span class="chip" style="cursor:default">${c}</span>`).join(" ") || "—"}</div></div>
         </div>
+      </div>
+      <div id="tab-issues" class="tabpane" ${tab !== "issues" ? "hidden" : ""}>
+        <div class="card"><h3>Where they stand</h3><div class="sub">Grouped by committee; click a committee row to expand. Bar = score, faded = low LLM confidence; <b>dot size = attention</b>; ×N = statements; ⟲ = position changed (ribbon on the right). <span style="color:${partyColor(p.party)}">▌</span> = average of other ${partyName}s on the same issue. Click an issue for the evidence. <span class="link" id="exp-all">expand all</span> · <span class="link" id="col-all">collapse all</span></div><svg id="pbars"></svg></div>
+      </div>
+      <div id="tab-timeline" class="tabpane" ${tab !== "timeline" ? "hidden" : ""}>
+        <div class="card"><h3>Everything they said, in order</h3><div class="sub">One ribbon per issue on a shared time axis. Band color = direction held at that time, dot = a statement. Click a dot for the quote.</div><svg id="ptimeline"></svg></div>
       </div>`;
+    wrap.querySelectorAll(".tabs button").forEach(b => b.onclick = () => { P.tab = b.dataset.tab; renderProfile(); });
+    wrap.querySelectorAll(".cite").forEach(a => a.onclick = () => { const st = stById[a.dataset.st]; P.sel = EDGES.find(e => e.from === st.person && e.to === st.issue); P.hl = st.statement_id; renderSide(); });
     if (!P.open) P.open = new Set(mine.length <= 12 ? mine.map(x => x.i.cat) : []);
-    $("exp-all").onclick = () => { mine.forEach(x => P.open.add(x.i.cat)); drawBars(p, mine); };
-    $("col-all").onclick = () => { P.open.clear(); drawBars(p, mine); };
-    drawBars(p, mine); drawScatter(mine); drawRadar(mine);
+    if (tab === "issues") { $("exp-all").onclick = () => { mine.forEach(x => P.open.add(x.i.cat)); drawBars(p, mine); }; $("col-all").onclick = () => { P.open.clear(); drawBars(p, mine); }; drawBars(p, mine); }
+    if (tab === "overview") { drawScatter(mine); drawRadar(mine); }
+    if (tab === "timeline") drawTimeline(mine);
+  }
+  function drawTimeline(mine) {
+    const s = d3.select("#ptimeline"); s.selectAll("*").remove();
+    const rows = mine.filter(x => x.e.statements.some(st => st.date)).sort((a, b) => b.e.salience - a.e.salience);
+    if (!rows.length) { s.attr("height", 40).append("text").attr("x", 0).attr("y", 20).attr("fill", "#8b93a7").attr("font-size", 12).text("No dated statements."); return; }
+    const all = rows.flatMap(x => x.e.statements).filter(st => st.date), t0 = d3.min(all, st => new Date(st.date)), t1 = d3.max(all, st => new Date(st.date));
+    const W = Math.max(560, $("ptimeline").parentElement.clientWidth - 28), L = 190, R = 20, rowH = 34, top = 26, H = top + rows.length * rowH + 10;
+    const x = d3.scaleTime().domain([d3.timeDay.offset(t0, -20), d3.timeDay.offset(t1, 20)]).range([L, W - R]);
+    s.attr("width", W).attr("height", H).attr("viewBox", `0 0 ${W} ${H}`);
+    const axis = s.append("g").attr("transform", `translate(0,${top - 8})`).call(d3.axisTop(x).ticks(6).tickSizeOuter(0));
+    axis.selectAll("text").attr("fill", "#8b93a7").attr("font-size", 10); axis.selectAll("line,path").attr("stroke", "#3b4150");
+    rows.forEach((r, k) => {
+      const y = top + k * rowH, st = r.e.statements.filter(a => a.date);
+      const g2 = s.append("g").attr("transform", `translate(0,${y})`);
+      g2.append("text").attr("x", L - 10).attr("y", 20).attr("text-anchor", "end").attr("fill", "#e6e8ee").attr("font-size", 12).text(r.i.name.length > 24 ? r.i.name.slice(0, 23) + "…" : r.i.name);
+      g2.append("rect").attr("x", L - 4).attr("y", 6).attr("width", 3).attr("height", 22).attr("fill", CAT_HUE[r.i.cat]);
+      st.forEach((a, j) => { const x0 = x(new Date(a.date)), x1 = j < st.length - 1 ? x(new Date(st[j + 1].date)) : x.range()[1];
+        g2.append("rect").attr("x", x0).attr("y", 11).attr("width", Math.max(2, x1 - x0)).attr("height", 12).attr("fill", color(a.direction)).attr("fill-opacity", .3 + Math.abs(a.score) * .5); });
+      st.forEach(a => g2.append("circle").attr("cx", x(new Date(a.date))).attr("cy", 17).attr("r", 5).attr("fill", color(a.direction)).attr("stroke", "#0f1115").attr("stroke-width", 1.5).style("cursor", "pointer")
+        .on("click", () => { state.p.sel = r.e; state.p.hl = a.statement_id; renderSide(); }).append("title").text(`${a.date} · ${a.direction} ${fmt(a.score)}\n“${a.quote}”`));
+      if (r.e.flip) g2.append("text").attr("x", W - R).attr("y", 21).attr("text-anchor", "end").attr("fill", "#fbbf24").attr("font-size", 12).text("⟲");
+    });
   }
   function drawScatter(mine) {
     const s = d3.select("#pscatter"); s.selectAll("*").remove(); if (!mine.length) return;
@@ -469,9 +537,10 @@
   function renderProfileSide() {
     const e = state.p.sel, p = byId[state.p.person];
     if (!p) { $side.innerHTML = `<div class="empty-state">Every legislator has a page at <code>#/legislator/&lt;id&gt;</code>. Pick one on the left.</div>`; return; }
-    $side.innerHTML = e ? `<div class="person-card"><div class="name">${issueById[e.to].name}</div><div class="meta">${issueById[e.to].catName} › ${issueById[e.to].subName}</div>${evidenceHtml(e)}</div>`
-      : `<div class="empty-state">Click a bar on the left to read the quote behind that score.<br><br><span class="link" id="share-link">Copy link to this page</span></div>`;
+    $side.innerHTML = e ? `<div class="person-card"><div class="name">${issueById[e.to].name}</div><div class="meta">${issueById[e.to].catName} › ${issueById[e.to].subName}</div>${evidenceHtml(e, state.p.hl)}</div>`
+      : `<div class="empty-state">Click a bar, a dot or a citation number to read the quote behind it.<br><br><span class="link" id="share-link">Copy link to this page</span></div>`;
     const sl = $("share-link"); if (sl) sl.onclick = () => { navigator.clipboard?.writeText(location.href); sl.textContent = "Link copied"; };
+    const hl = $side.querySelector(".stmt.hl"); if (hl) hl.scrollIntoView({ block: "center" });
   }
 
   // ---------- GRAPH ----------

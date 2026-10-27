@@ -1,0 +1,101 @@
+{
+  "_meta": {
+    "description": "Optional. Per-legislator AI summaries generated OFFLINE by Muse Spark from that legislator's statements. Each sentence must cite >= 1 statement_id from stances.json; the UI renders the citations as clickable numbers. Regenerate whenever stances change. Never generate at page load.",
+    "mock": true,
+    "prompt_contract": "Input: all statements for one legislator (quote, issue, date, score). Output: 2-4 neutral sentences describing their stance pattern, consistency over time, and where they diverge from their party; no adjectives of praise or blame; every sentence cites statement_ids it relies on."
+  },
+  "summaries": {
+    "p09": {
+      "model": "muse-spark-1.3",
+      "generated_at": "2026-09-02",
+      "sentences": [
+        {
+          "text": "On gun policy, Finch moved from opposing the background-check bill in 2025 to voting for it in 2026, tying the change to the rural-seller amendment and events in Sacramento.",
+          "cites": [
+            "st008",
+            "st055",
+            "st056"
+          ]
+        },
+        {
+          "text": "He frames energy and infrastructure through district jobs and grid reliability: supportive of data-center buildout, skeptical of renewable subsidies.",
+          "cites": [
+            "st019",
+            "st035"
+          ]
+        },
+        {
+          "text": "On defense he backs the cyber budget increase without qualification.",
+          "cites": [
+            "st054"
+          ]
+        }
+      ]
+    },
+    "p04": {
+      "model": "muse-spark-1.3",
+      "generated_at": "2026-09-02",
+      "sentences": [
+        {
+          "text": "Beaumont's positions are consistent across the record: opposed to new gun regulation, policing restrictions, AI licensing and corporate-tax increases, with no recorded shifts.",
+          "cites": [
+            "st004",
+            "st014",
+            "st026",
+            "st044"
+          ]
+        },
+        {
+          "text": "His gun-policy statements are the most repeated item in his record and are among the shortest, suggesting a settled position rather than an evolving one.",
+          "cites": [
+            "st057",
+            "st058"
+          ]
+        }
+      ]
+    },
+    "p01": {
+      "model": "muse-spark-1.3",
+      "generated_at": "2026-09-02",
+      "sentences": [
+        {
+          "text": "Marquez supports gun regulation, policing reform and Ukraine aid, and opposes the border bill, consistently pairing funding with accountability language.",
+          "cites": [
+            "st001",
+            "st013",
+            "st031",
+            "st051"
+          ]
+        },
+        {
+          "text": "Her policing position is repeated across sessions with the same framing, indicating a stable priority rather than a one-off vote.",
+          "cites": [
+            "st013",
+            "st061"
+          ]
+        }
+      ]
+    },
+    "p05": {
+      "model": "muse-spark-1.3",
+      "generated_at": "2026-09-02",
+      "sentences": [
+        {
+          "text": "Raman supports AI infrastructure and regulation together, but her data-center support has softened over 2026 as she added water and grid conditions.",
+          "cites": [
+            "st024",
+            "st017",
+            "st059",
+            "st060"
+          ]
+        },
+        {
+          "text": "She is the only member in this set to attach a due-process condition to red-flag laws rather than oppose or endorse them outright.",
+          "cites": [
+            "st005"
+          ]
+        }
+      ]
+    }
+  }
+}

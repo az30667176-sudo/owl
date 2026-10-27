@@ -35,3 +35,8 @@ So the backend should **never pre-aggregate**; emit every statement and let the 
 - `direction` is derived from `score` (> 0.15 support, < -0.15 oppose, else neutral); keep both so the UI never recomputes.
 - Unknown `parent` / `person` / `issue` ids are dropped by the loader and logged to the console — fix the data, not the UI.
 - Files marked `"mock": true` in `_meta` contain fictional legislators. Never ship them.
+
+## `summaries.json` (optional)
+
+Per-legislator AI summary, generated **offline** by Muse Spark and committed as data. Shape: `{ summaries: { <person_id>: { model, generated_at, sentences: [ { text, cites: [statement_id, ...] } ] } } }`.
+Rules: every sentence cites at least one `statement_id` it relies on; cited statements must belong to that legislator; neutral wording, no praise/blame adjectives. The UI renders citations as clickable numbers that open the quoted statement. Missing file or missing legislator = the card shows "not generated yet".
