@@ -1,0 +1,131 @@
+{
+  "_meta": {
+    "description": "Topic taxonomy, level 1 + 2. Level 1 = U.S. House standing committees; level 2 = their subcommittees. Issues (level 3) live in issues.json and point at a subcommittee id. Committees with no subcommittees act as their own leaf.",
+    "source": "Transcribed for the prototype; regenerate from https://api.congress.gov/v3/committee/house (and /committee/{chamber}/{code}) before production.",
+    "congress": 119
+  },
+  "committees": [
+    { "id": "hsag", "name": "Agriculture", "subcommittees": [
+      { "id": "hsag-commodity", "name": "Commodity Markets, Digital Assets, and Rural Development" },
+      { "id": "hsag-conservation", "name": "Conservation, Research, and Biotechnology" },
+      { "id": "hsag-forestry", "name": "Forestry and Horticulture" },
+      { "id": "hsag-farm", "name": "General Farm Commodities, Risk Management, and Credit" },
+      { "id": "hsag-livestock", "name": "Livestock, Dairy, and Poultry" },
+      { "id": "hsag-nutrition", "name": "Nutrition and Foreign Agriculture" } ] },
+    { "id": "hsap", "name": "Appropriations", "subcommittees": [
+      { "id": "hsap-ag", "name": "Agriculture, Rural Development, FDA" },
+      { "id": "hsap-cjs", "name": "Commerce, Justice, Science" },
+      { "id": "hsap-defense", "name": "Defense" },
+      { "id": "hsap-energy", "name": "Energy and Water Development" },
+      { "id": "hsap-fsgg", "name": "Financial Services and General Government" },
+      { "id": "hsap-homeland", "name": "Homeland Security" },
+      { "id": "hsap-interior", "name": "Interior, Environment" },
+      { "id": "hsap-labor", "name": "Labor, HHS, Education" },
+      { "id": "hsap-legislative", "name": "Legislative Branch" },
+      { "id": "hsap-milcon", "name": "Military Construction, Veterans Affairs" },
+      { "id": "hsap-state", "name": "National Security, Department of State" },
+      { "id": "hsap-thud", "name": "Transportation, HUD" } ] },
+    { "id": "hsas", "name": "Armed Services", "subcommittees": [
+      { "id": "hsas-cyber", "name": "Cyber, Information Technologies, and Innovation" },
+      { "id": "hsas-intel", "name": "Intelligence and Special Operations" },
+      { "id": "hsas-personnel", "name": "Military Personnel" },
+      { "id": "hsas-readiness", "name": "Readiness" },
+      { "id": "hsas-seapower", "name": "Seapower and Projection Forces" },
+      { "id": "hsas-strategic", "name": "Strategic Forces" },
+      { "id": "hsas-tactical", "name": "Tactical Air and Land Forces" } ] },
+    { "id": "hsbu", "name": "Budget", "subcommittees": [] },
+    { "id": "hsed", "name": "Education and Workforce", "subcommittees": [
+      { "id": "hsed-k12", "name": "Early Childhood, Elementary, and Secondary Education" },
+      { "id": "hsed-help", "name": "Health, Employment, Labor, and Pensions" },
+      { "id": "hsed-higher", "name": "Higher Education and Workforce Development" },
+      { "id": "hsed-protections", "name": "Workforce Protections" } ] },
+    { "id": "hsif", "name": "Energy and Commerce", "subcommittees": [
+      { "id": "hsif-comms", "name": "Communications and Technology" },
+      { "id": "hsif-energy", "name": "Energy" },
+      { "id": "hsif-environment", "name": "Environment" },
+      { "id": "hsif-health", "name": "Health" },
+      { "id": "hsif-innovation", "name": "Commerce, Manufacturing, and Trade" },
+      { "id": "hsif-oversight", "name": "Oversight and Investigations" } ] },
+    { "id": "hsso", "name": "Ethics", "subcommittees": [] },
+    { "id": "hsba", "name": "Financial Services", "subcommittees": [
+      { "id": "hsba-capital", "name": "Capital Markets" },
+      { "id": "hsba-digital", "name": "Digital Assets, Financial Technology, and Artificial Intelligence" },
+      { "id": "hsba-institutions", "name": "Financial Institutions" },
+      { "id": "hsba-housing", "name": "Housing and Insurance" },
+      { "id": "hsba-natsec", "name": "National Security, Illicit Finance, and International Financial Institutions" },
+      { "id": "hsba-oversight", "name": "Oversight and Investigations" } ] },
+    { "id": "hsfa", "name": "Foreign Affairs", "subcommittees": [
+      { "id": "hsfa-africa", "name": "Africa" },
+      { "id": "hsfa-eap", "name": "East Asia and Pacific" },
+      { "id": "hsfa-europe", "name": "Europe" },
+      { "id": "hsfa-mena", "name": "Middle East and North Africa" },
+      { "id": "hsfa-oversight", "name": "Oversight and Intelligence" },
+      { "id": "hsfa-sca", "name": "South and Central Asia" },
+      { "id": "hsfa-wh", "name": "Western Hemisphere" } ] },
+    { "id": "hshm", "name": "Homeland Security", "subcommittees": [
+      { "id": "hshm-border", "name": "Border Security and Enforcement" },
+      { "id": "hshm-ct", "name": "Counterterrorism and Intelligence" },
+      { "id": "hshm-cyber", "name": "Cybersecurity and Infrastructure Protection" },
+      { "id": "hshm-emergency", "name": "Emergency Management and Technology" },
+      { "id": "hshm-oversight", "name": "Oversight, Investigations, and Accountability" },
+      { "id": "hshm-transport", "name": "Transportation and Maritime Security" } ] },
+    { "id": "hsha", "name": "House Administration", "subcommittees": [
+      { "id": "hsha-elections", "name": "Elections" },
+      { "id": "hsha-modernization", "name": "Modernization and Innovation" },
+      { "id": "hsha-oversight", "name": "Oversight" } ] },
+    { "id": "hsju", "name": "Judiciary", "subcommittees": [
+      { "id": "hsju-constitution", "name": "Constitution and Limited Government" },
+      { "id": "hsju-courts", "name": "Courts, Intellectual Property, Artificial Intelligence, and the Internet" },
+      { "id": "hsju-crime", "name": "Crime and Federal Government Surveillance" },
+      { "id": "hsju-immigration", "name": "Immigration Integrity, Security, and Enforcement" },
+      { "id": "hsju-oversight", "name": "Oversight" } ] },
+    { "id": "hsii", "name": "Natural Resources", "subcommittees": [
+      { "id": "hsii-energy", "name": "Energy and Mineral Resources" },
+      { "id": "hsii-lands", "name": "Federal Lands" },
+      { "id": "hsii-indian", "name": "Indian and Insular Affairs" },
+      { "id": "hsii-oversight", "name": "Oversight and Investigations" },
+      { "id": "hsii-water", "name": "Water, Wildlife, and Fisheries" } ] },
+    { "id": "hsgo", "name": "Oversight and Government Reform", "subcommittees": [
+      { "id": "hsgo-cyber", "name": "Cybersecurity, Information Technology, and Government Innovation" },
+      { "id": "hsgo-doge", "name": "Delivering on Government Efficiency" },
+      { "id": "hsgo-growth", "name": "Economic Growth, Energy Policy, and Regulatory Affairs" },
+      { "id": "hsgo-law", "name": "Federal Law Enforcement" },
+      { "id": "hsgo-health", "name": "Health Care and Financial Services" },
+      { "id": "hsgo-military", "name": "Military and Foreign Affairs" } ] },
+    { "id": "hsru", "name": "Rules", "subcommittees": [
+      { "id": "hsru-budget", "name": "Legislative and Budget Process" },
+      { "id": "hsru-org", "name": "Rules and Organization of the House" } ] },
+    { "id": "hssy", "name": "Science, Space, and Technology", "subcommittees": [
+      { "id": "hssy-energy", "name": "Energy" },
+      { "id": "hssy-environment", "name": "Environment" },
+      { "id": "hssy-oversight", "name": "Investigations and Oversight" },
+      { "id": "hssy-research", "name": "Research and Technology" },
+      { "id": "hssy-space", "name": "Space and Aeronautics" } ] },
+    { "id": "hssm", "name": "Small Business", "subcommittees": [
+      { "id": "hssm-contracting", "name": "Contracting and Infrastructure" },
+      { "id": "hssm-growth", "name": "Economic Growth, Tax, and Capital Access" },
+      { "id": "hssm-innovation", "name": "Innovation, Entrepreneurship, and Workforce Development" },
+      { "id": "hssm-oversight", "name": "Oversight, Investigations, and Regulations" },
+      { "id": "hssm-rural", "name": "Rural Development, Energy, and Supply Chains" } ] },
+    { "id": "hspw", "name": "Transportation and Infrastructure", "subcommittees": [
+      { "id": "hspw-aviation", "name": "Aviation" },
+      { "id": "hspw-coastguard", "name": "Coast Guard and Maritime Transportation" },
+      { "id": "hspw-econdev", "name": "Economic Development, Public Buildings, and Emergency Management" },
+      { "id": "hspw-highways", "name": "Highways and Transit" },
+      { "id": "hspw-rail", "name": "Railroads, Pipelines, and Hazardous Materials" },
+      { "id": "hspw-water", "name": "Water Resources and Environment" } ] },
+    { "id": "hsvr", "name": "Veterans' Affairs", "subcommittees": [
+      { "id": "hsvr-disability", "name": "Disability Assistance and Memorial Affairs" },
+      { "id": "hsvr-economic", "name": "Economic Opportunity" },
+      { "id": "hsvr-health", "name": "Health" },
+      { "id": "hsvr-oversight", "name": "Oversight and Investigations" },
+      { "id": "hsvr-tech", "name": "Technology Modernization" } ] },
+    { "id": "hswm", "name": "Ways and Means", "subcommittees": [
+      { "id": "hswm-health", "name": "Health" },
+      { "id": "hswm-oversight", "name": "Oversight" },
+      { "id": "hswm-ss", "name": "Social Security" },
+      { "id": "hswm-tax", "name": "Tax" },
+      { "id": "hswm-trade", "name": "Trade" },
+      { "id": "hswm-welfare", "name": "Work and Welfare" } ] }
+  ]
+}

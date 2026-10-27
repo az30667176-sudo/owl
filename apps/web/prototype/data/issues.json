@@ -1,0 +1,21 @@
+{
+  "_meta": {
+    "description": "Level 3 of the taxonomy: concrete issues that stances attach to. Each issue belongs to exactly one subcommittee (or a committee id when that committee has no subcommittees). In production these are produced by the LLM stage (Muse Spark clusters bills/speeches into issues) and reviewed by humans.",
+    "mock": true
+  },
+  "issues": [
+    { "id": "gun-policy", "name": "Gun Policy", "parent": "hsju-crime" },
+    { "id": "policing-reform", "name": "Policing & Reform", "parent": "hsju-constitution" },
+    { "id": "border-security", "name": "Border Security", "parent": "hshm-border" },
+    { "id": "daca-pathways", "name": "DACA / Pathways", "parent": "hsju-immigration" },
+    { "id": "data-centers", "name": "Data Centers", "parent": "hssy-research" },
+    { "id": "ai-regulation", "name": "AI Regulation", "parent": "hsju-courts" },
+    { "id": "renewables", "name": "Renewables", "parent": "hsii-energy" },
+    { "id": "nuclear", "name": "Nuclear", "parent": "hsif-energy" },
+    { "id": "drug-pricing", "name": "Drug Pricing", "parent": "hsif-health" },
+    { "id": "corporate-tax", "name": "Corporate Tax Rate", "parent": "hswm-tax" },
+    { "id": "china-tariffs", "name": "China Tariffs", "parent": "hswm-trade" },
+    { "id": "ukraine-aid", "name": "Ukraine Aid", "parent": "hsfa-europe" },
+    { "id": "mil-cyber", "name": "Military Cyber Budget", "parent": "hsas-cyber" }
+  ]
+}

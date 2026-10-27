@@ -1,0 +1,184 @@
+{
+  "_meta": {
+    "description": "Legislators: U.S. House members, all states. chamber is always house in the current scope (field kept for schema stability). bioguide_id comes from congress.gov in production. Names here are FICTIONAL.",
+    "mock": true
+  },
+  "people": [
+    {
+      "id": "p01",
+      "bioguide_id": null,
+      "name": "Rep. Alicia Marquez",
+      "chamber": "house",
+      "state": "CA",
+      "district": "CA-12",
+      "party": "D",
+      "gender": "F",
+      "since": 2019
+    },
+    {
+      "id": "p02",
+      "bioguide_id": null,
+      "name": "Rep. Daniel Okafor",
+      "chamber": "house",
+      "state": "CA",
+      "district": "CA-27",
+      "party": "D",
+      "gender": "M",
+      "since": 2021
+    },
+    {
+      "id": "p03",
+      "bioguide_id": null,
+      "name": "Rep. Grace Lindqvist",
+      "chamber": "house",
+      "state": "CA",
+      "district": "CA-45",
+      "party": "R",
+      "gender": "F",
+      "since": 2023
+    },
+    {
+      "id": "p04",
+      "bioguide_id": null,
+      "name": "Rep. Thomas Beaumont",
+      "chamber": "house",
+      "state": "CA",
+      "district": "CA-23",
+      "party": "R",
+      "gender": "M",
+      "since": 2013
+    },
+    {
+      "id": "p05",
+      "bioguide_id": null,
+      "name": "Rep. Priya Raman",
+      "chamber": "house",
+      "state": "CA",
+      "district": "CA-17",
+      "party": "D",
+      "gender": "F",
+      "since": 2017
+    },
+    {
+      "id": "p06",
+      "bioguide_id": null,
+      "name": "Rep. Samuel Whitfield",
+      "chamber": "house",
+      "state": "CA",
+      "district": "CA-48",
+      "party": "R",
+      "gender": "M",
+      "since": 2015
+    },
+    {
+      "id": "p07",
+      "bioguide_id": null,
+      "name": "Rep. Mei-Ling Tsao",
+      "chamber": "house",
+      "state": "CA",
+      "district": "CA-36",
+      "party": "D",
+      "gender": "F",
+      "since": 2021
+    },
+    {
+      "id": "p08",
+      "bioguide_id": null,
+      "name": "Rep. Carlos Ibanez",
+      "chamber": "house",
+      "state": "CA",
+      "district": "CA-21",
+      "party": "D",
+      "gender": "M",
+      "since": 2019
+    },
+    {
+      "id": "p09",
+      "bioguide_id": null,
+      "name": "Rep. Harold Finch",
+      "chamber": "house",
+      "state": "CA",
+      "district": "CA-01",
+      "party": "R",
+      "gender": "M",
+      "since": 2011
+    },
+    {
+      "id": "p10",
+      "bioguide_id": null,
+      "name": "Rep. Nadia Rousseau",
+      "chamber": "house",
+      "state": "CA",
+      "district": "CA-50",
+      "party": "D",
+      "gender": "F",
+      "since": 2023
+    },
+    {
+      "id": "s01",
+      "bioguide_id": null,
+      "name": "Rep. Margaret Holloway",
+      "chamber": "house",
+      "state": "CA",
+      "district": "CA-33",
+      "party": "D",
+      "gender": "F",
+      "since": 2017
+    },
+    {
+      "id": "s02",
+      "bioguide_id": null,
+      "name": "Rep. Walker Dunne",
+      "chamber": "house",
+      "state": "TX",
+      "district": "TX-21",
+      "party": "R",
+      "gender": "M",
+      "since": 2013
+    },
+    {
+      "id": "s03",
+      "bioguide_id": null,
+      "name": "Rep. Elena Vasquez",
+      "chamber": "house",
+      "state": "AZ",
+      "district": "AZ-03",
+      "party": "D",
+      "gender": "F",
+      "since": 2021
+    },
+    {
+      "id": "s04",
+      "bioguide_id": null,
+      "name": "Rep. Robert Kessler",
+      "chamber": "house",
+      "state": "OH",
+      "district": "OH-12",
+      "party": "R",
+      "gender": "M",
+      "since": 2019
+    },
+    {
+      "id": "s05",
+      "bioguide_id": null,
+      "name": "Rep. Amara Okonkwo",
+      "chamber": "house",
+      "state": "NY",
+      "district": "NY-10",
+      "party": "D",
+      "gender": "F",
+      "since": 2023
+    },
+    {
+      "id": "s06",
+      "bioguide_id": null,
+      "name": "Rep. James Thornton",
+      "chamber": "house",
+      "state": "FL",
+      "district": "FL-19",
+      "party": "R",
+      "gender": "M",
+      "since": 2015
+    }
+  ]
+}
