@@ -1,0 +1,23 @@
+name: Need frontend review
+description: You finished a spec round and need the frontend owner to confirm the contract.
+labels: ["need frontend review"]
+body:
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected contract
+      description: Which schema in packages/contract/ and what shape you expect. Paste a sample payload.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why
+      description: What on your side depends on this.
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Blocks me?
+      options: ["Yes, blocked until resolved", "No, can proceed with mock"]
+    validations:
+      required: true

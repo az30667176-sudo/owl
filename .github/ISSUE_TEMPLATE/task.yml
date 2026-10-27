@@ -1,0 +1,23 @@
+name: Task
+description: A unit of work closable within a day.
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Definition of done
+      description: Concrete, checkable. e.g. "GET /graph?state=CA returns >= 1 edge with quote".
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options: ["ingest", "process", "web", "contract", "infra"]
+    validations:
+      required: true
