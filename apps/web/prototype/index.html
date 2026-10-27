@@ -107,6 +107,29 @@
   .pill.house { background: rgba(139,92,246,.18); color: #c4b5fd; } .pill.senate { background: rgba(245,158,11,.18); color: #fcd34d; }
   .toolbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; color: var(--muted); font-size: 12px; }
   #loading { position: fixed; inset: 0; display: grid; place-items: center; background: var(--bg); color: var(--muted); z-index: 10; }
+  /* profile mode */
+  #profile { position: absolute; inset: 0; overflow: auto; padding: 18px 22px 30px; display: none; }
+  .ph { display: flex; gap: 18px; align-items: flex-start; margin-bottom: 18px; }
+  .ph .avatar { width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; font-size: 22px; color: white; flex: none; }
+  .ph h1 { margin: 0; font-size: 22px; }
+  .ph .meta { color: var(--muted); font-size: 13px; margin-top: 2px; }
+  .ph .kpis { display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap; }
+  .kpi { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 8px 12px; min-width: 92px; }
+  .kpi .v { font-size: 18px; font-weight: 700; font-family: var(--mono); }
+  .kpi .l { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+  .pgrid { display: grid; grid-template-columns: 1fr 300px; gap: 18px; align-items: start; }
+  .card { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 14px; }
+  .card h3 { margin: 0 0 4px; font-size: 14px; }
+  .card .sub { color: var(--muted); font-size: 12px; margin-bottom: 10px; }
+  .pbar-row { cursor: pointer; }
+  .pbar-row:hover rect.bg, .pbar-row.active rect.bg { fill: #242935; }
+  .dir-list { display: flex; flex-direction: column; gap: 4px; margin-top: 4px; }
+  .dir-row { display: flex; justify-content: space-between; align-items: center; padding: 7px 8px; border-radius: 8px; cursor: pointer; }
+  .dir-row:hover, .dir-row.active { background: var(--panel-2); }
+  .dir-row .n { font-weight: 600; font-size: 13px; }
+  .dir-row .d { color: var(--muted); font-size: 11px; }
+  .link { color: #a78bfa; cursor: pointer; font-size: 12px; }
+  @media (max-width: 1100px) { .pgrid { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -114,7 +137,7 @@
 <div class="app">
   <header>
     <span class="brand">🦉 OWL</span>
-    <span class="modes"><button id="m-explore">Explore</button><button id="m-focus">Focus</button><button id="m-list">List</button></span>
+    <span class="modes"><button id="m-explore">Explore</button><button id="m-focus">Focus</button><button id="m-list">List</button><button id="m-profile">Legislators</button></span>
     <span class="crumb" id="crumb"></span>
     <span class="mock" id="mock" hidden>MOCK DATA · fictional legislators</span>
   </header>
@@ -123,6 +146,7 @@
     <div class="hint" id="hint"></div>
     <svg id="graph"></svg>
     <div id="table-wrap"></div>
+    <div id="profile"></div>
     <div class="legend" id="legend">
       <span><i style="background:var(--support)"></i>Support</span>
       <span><i style="background:var(--oppose)"></i>Oppose</span>
@@ -164,8 +188,11 @@
   const state = {
     mode: "explore", cat: null, sub: null, issue: null, person: null, edge: null,
     f: { issues: new Set(ISSUES.filter(i => countFor(i.id) > 0).map(i => i.id)), chambers: new Set(["house", "senate"]), state: "", parties: new Set(["D", "R", "I"]), dirs: new Set(["support", "oppose", "neutral"]), minConf: 0, q: "" },
-    l: { chamber: "", state: "", cat: "", sub: "", issue: "", dir: "", party: "", gender: "", minConf: 0, sort: "score", desc: true, sel: null }
+    l: { chamber: "", state: "", cat: "", sub: "", issue: "", dir: "", party: "", gender: "", minConf: 0, sort: "score", desc: true, sel: null },
+    p: { person: null, sel: null, q: "" }
   };
+  // deep link: #/legislator/<id>
+  { const m = /^#\/legislator\/([\w-]+)/.exec(location.hash); if (m && byId[m[1]]) { state.mode = "profile"; state.p.person = m[1]; } }
   // default focus = first issue with stances
   { const first = ISSUES.find(i => countFor(i.id) > 0); if (first) { state.cat = first.cat; state.sub = first.sub; state.issue = first.id; } }
 
@@ -217,7 +244,7 @@
       const sel = state.edge && mine.find(e => e.to === state.edge) || mine[0];
       $side.innerHTML = `<div class="person-card"><div class="name">${title(p)}</div><div class="meta">${seat(p)} · ${p.party} · ${mine.length} stances in view</div>
         ${mine.map(e => `<div class="stance-line ${sel === e ? "active" : ""}" data-issue="${e.to}"><div><div class="t">${issueById[e.to].name}</div><div class="c">${issueById[e.to].catName} › ${issueById[e.to].subName}</div></div><div class="score" style="color:${color(e.direction)}">${fmt(e.score)}</div></div>`).join("")}
-        ${sel ? evidenceHtml(sel) : ""}<div style="margin-top:12px"><button class="btn" id="back">← all legislators</button></div></div>`;
+        ${sel ? evidenceHtml(sel) : ""}<div style="margin-top:12px;display:flex;gap:8px"><button class="btn" id="back">← all legislators</button><button class="btn" data-open="${p.id}">Open profile →</button></div></div>`;
       $side.querySelectorAll(".stance-line").forEach(el => el.onclick = () => { state.edge = el.dataset.issue; renderSide(); });
       $("back").onclick = () => { state.person = null; state.edge = null; render(); };
       return;
@@ -255,7 +282,7 @@
     const rows = edges.map(e => { const p = byId[e.from], pct = Math.abs(e.score) * 50, left = e.score < 0 ? 50 - pct : 50;
       return `<div class="row ${state.person === p.id ? "active" : ""}" data-id="${p.id}"><div><div class="name">${title(p)}</div><div class="meta">${seat(p)} · ${p.party}</div><div class="bar"><span style="left:${left}%;width:${pct}%;background:${color(e.direction)}"></span></div></div><div class="score" style="color:${color(e.direction)}">${fmt(e.score)}</div></div>`; }).join("");
     const sel = state.person && edges.find(e => e.from === state.person);
-    $side.innerHTML = `<h2 class="topic-title">${i.name}</h2><div class="topic-sub">${i.catName} › ${i.subName} · ${edges.length} legislators</div><div class="spectrum">${ticks}</div>${rows}${sel ? evidenceHtml(sel) : `<div class="empty-state" style="padding-top:10px">Click a legislator to read the quote behind the score.</div>`}`;
+    $side.innerHTML = `<h2 class="topic-title">${i.name}</h2><div class="topic-sub">${i.catName} › ${i.subName} · ${edges.length} legislators</div><div class="spectrum">${ticks}</div>${rows}${sel ? evidenceHtml(sel) + profileBtn(sel.from) : `<div class="empty-state" style="padding-top:10px">Click a legislator to read the quote behind the score.</div>`}`;
     $side.querySelectorAll(".row").forEach(el => el.onclick = () => { state.person = el.dataset.id; render(); });
   }
 
@@ -303,8 +330,87 @@
   }
   function renderListSide() {
     const e = state.l.sel;
-    $side.innerHTML = e ? `<div class="person-card"><div class="name">${title(byId[e.from])}</div><div class="meta">${seat(byId[e.from])} · ${byId[e.from].party} · ${byId[e.from].gender === "F" ? "Female" : "Male"} · in office since ${byId[e.from].since}</div>${evidenceHtml(e)}</div>`
+    $side.innerHTML = e ? `<div class="person-card"><div class="name">${title(byId[e.from])}</div><div class="meta">${seat(byId[e.from])} · ${byId[e.from].party} · ${byId[e.from].gender === "F" ? "Female" : "Male"} · in office since ${byId[e.from].since}</div>${evidenceHtml(e)}${profileBtn(e.from)}</div>`
       : `<div class="empty-state">Use the dropdowns to narrow the list, then click a row to read the evidence.</div>`;
+  }
+
+  // ---------- PROFILE (one page per legislator) ----------
+  const openProfile = id => { state.mode = "profile"; state.p.person = id; state.p.sel = null; history.replaceState(null, "", `#/legislator/${id}`); render(); };
+  const profileBtn = id => `<div style="margin-top:10px"><button class="btn" data-open="${id}">Open profile →</button></div>`;
+  const partyColor = p => p === "D" ? "#3b82f6" : p === "R" ? "#f87171" : "#9ca3af";
+  function renderProfileAside() {
+    const P = state.p, q = P.q.trim().toLowerCase();
+    const people = PEOPLE.filter(p => !q || p.name.toLowerCase().includes(q) || p.state.toLowerCase() === q || (p.district || "").toLowerCase().includes(q)).sort((a, b) => a.name.localeCompare(b.name));
+    $aside.innerHTML = `<div class="h" style="margin-top:8px">Legislators</div><input class="search" id="pq" placeholder="name, state or district…" value="${P.q}">
+      <div class="dir-list">${people.map(p => `<div class="dir-row ${P.person === p.id ? "active" : ""}" data-id="${p.id}"><div><div class="n">${p.name}</div><div class="d">${seat(p)} · ${EDGES.filter(e => e.from === p.id).length} stances</div></div><span class="pill ${p.party}">${p.party}</span></div>`).join("")}</div>`;
+    $aside.querySelectorAll(".dir-row").forEach(el => el.onclick = () => openProfile(el.dataset.id));
+    const pq = $("pq"); pq.oninput = () => { P.q = pq.value; renderProfileAside(); pq.focus(); pq.setSelectionRange(pq.value.length, pq.value.length); };
+  }
+  function partyMean(issue, party) { const xs = EDGES.filter(e => e.to === issue && byId[e.from].party === party).map(e => e.score); return xs.length ? xs.reduce((a, b) => a + b, 0) / xs.length : null; }
+  function renderProfile() {
+    const wrap = $("profile"), P = state.p, p = byId[P.person];
+    if (!p) { wrap.innerHTML = `<div class="empty-state">Pick a legislator on the left.</div>`; return; }
+    const mine = EDGES.filter(e => e.from === p.id).map(e => ({ e, i: issueById[e.to] }));
+    const sup = mine.filter(x => x.e.direction === "support").length, opp = mine.filter(x => x.e.direction === "oppose").length;
+    const avg = mine.length ? mine.reduce((a, x) => a + x.e.score, 0) / mine.length : 0;
+    // divergence from own party: mean |score - partyMean| over issues where party mean exists (excluding self)
+    const divs = mine.map(x => { const peers = EDGES.filter(e => e.to === x.e.to && e.from !== p.id && byId[e.from].party === p.party).map(e => e.score); return peers.length ? Math.abs(x.e.score - peers.reduce((a, b) => a + b, 0) / peers.length) : null; }).filter(v => v !== null);
+    const divergence = divs.length ? divs.reduce((a, b) => a + b, 0) / divs.length : null;
+    const initials = p.name.replace(/^Rep\. /, "").split(" ").map(s => s[0]).join("").slice(0, 2);
+    wrap.innerHTML = `
+      <div class="ph"><div class="avatar" style="background:${partyColor(p.party)}">${initials}</div>
+        <div><h1>${p.name}</h1><div class="meta">${seat(p)} · ${p.party === "D" ? "Democrat" : p.party === "R" ? "Republican" : "Independent"} · ${p.gender === "F" ? "Female" : "Male"} · in office since ${p.since}${p.bioguide_id ? ` · <a class="link" href="https://bioguide.congress.gov/search/bio/${p.bioguide_id}" target="_blank">bioguide ↗</a>` : ""}</div>
+          <div class="kpis"><div class="kpi"><div class="v">${mine.length}</div><div class="l">stances</div></div><div class="kpi"><div class="v" style="color:var(--support)">${sup}</div><div class="l">support</div></div><div class="kpi"><div class="v" style="color:var(--oppose)">${opp}</div><div class="l">oppose</div></div><div class="kpi"><div class="v">${fmt(avg)}</div><div class="l">avg score</div></div><div class="kpi"><div class="v">${divergence === null ? "—" : divergence.toFixed(2)}</div><div class="l">vs own party</div></div></div></div></div>
+      <div class="pgrid">
+        <div class="card"><h3>Where they stand</h3><div class="sub">Grouped by committee. Bar = score, faded = low LLM confidence. <span style="color:${partyColor(p.party)}">▌</span> = average of other ${p.party === "D" ? "Democrats" : p.party === "R" ? "Republicans" : "members"} on the same issue. Click a row for the evidence.</div><svg id="pbars"></svg></div>
+        <div class="card"><h3>Stance fingerprint</h3><div class="sub">One spoke per issue; radius = |score|, green out = support, red = oppose.</div><svg id="pradar" viewBox="0 0 270 270" style="width:100%;height:auto"></svg>
+          <h3 style="margin-top:14px">Committees touched</h3><div class="sub">${[...new Set(mine.map(x => x.i.catName))].map(c => `<span class="chip" style="cursor:default">${c}</span>`).join(" ") || "—"}</div></div>
+      </div>`;
+    drawBars(p, mine); drawRadar(mine);
+  }
+  function drawBars(p, mine) {
+    const svgEl = d3.select("#pbars"); svgEl.selectAll("*").remove();
+    const groups = d3.groups(mine.sort((a, b) => a.i.catName.localeCompare(b.i.catName) || b.e.score - a.e.score), x => x.i.catName);
+    const W = Math.max(520, $("pbars").parentElement.clientWidth - 28), L = 230, R = 60, rowH = 26, gh = 24, pad = 8;
+    const H = groups.reduce((a, [, rows]) => a + gh + rows.length * rowH + pad, 0) + 10;
+    svgEl.attr("width", W).attr("height", H).attr("viewBox", `0 0 ${W} ${H}`);
+    const x = d3.scaleLinear().domain([-1, 1]).range([L, W - R]);
+    svgEl.append("line").attr("x1", x(0)).attr("x2", x(0)).attr("y1", 0).attr("y2", H).attr("stroke", "#3b4150").attr("stroke-dasharray", "3 3");
+    svgEl.append("text").attr("x", x(-1)).attr("y", 10).attr("fill", "var(--oppose)").attr("font-size", 10).text("oppose");
+    svgEl.append("text").attr("x", x(1)).attr("y", 10).attr("text-anchor", "end").attr("fill", "var(--support)").attr("font-size", 10).text("support");
+    let y = 14; const conf = { low: .35, mid: .6, high: .85, super_high: 1 };
+    for (const [cat, rows] of groups) {
+      svgEl.append("text").attr("x", 0).attr("y", y + 14).attr("fill", CAT_HUE[rows[0].i.cat]).attr("font-size", 11).attr("font-weight", 700).text(cat.toUpperCase()); y += gh;
+      for (const r of rows) {
+        const row = svgEl.append("g").attr("class", "pbar-row" + (state.p.sel === r.e ? " active" : "")).attr("transform", `translate(0,${y})`).style("cursor", "pointer").on("click", () => { state.p.sel = r.e; renderProfile(); renderSide(); });
+        row.append("rect").attr("class", "bg").attr("x", 0).attr("y", 0).attr("width", W).attr("height", rowH).attr("fill", "transparent");
+        row.append("text").attr("x", L - 10).attr("y", 17).attr("text-anchor", "end").attr("fill", "#e6e8ee").attr("font-size", 12).text(r.i.name.length > 30 ? r.i.name.slice(0, 29) + "…" : r.i.name);
+        row.append("rect").attr("x", Math.min(x(0), x(r.e.score))).attr("y", 6).attr("width", Math.abs(x(r.e.score) - x(0))).attr("height", 14).attr("rx", 3).attr("fill", color(r.e.direction)).attr("fill-opacity", conf[r.e.llm_confidence]);
+        const pm = (() => { const xs = EDGES.filter(e => e.to === r.e.to && e.from !== p.id && byId[e.from].party === p.party).map(e => e.score); return xs.length ? xs.reduce((a, b) => a + b, 0) / xs.length : null; })();
+        if (pm !== null) row.append("rect").attr("x", x(pm) - 1.5).attr("y", 3).attr("width", 3).attr("height", 20).attr("fill", partyColor(p.party)).append("title").text(`party avg ${fmt(pm)}`);
+        row.append("text").attr("x", r.e.score >= 0 ? x(r.e.score) + 6 : x(r.e.score) - 6).attr("y", 17).attr("text-anchor", r.e.score >= 0 ? "start" : "end").attr("fill", color(r.e.direction)).attr("font-size", 11).attr("font-family", "var(--mono)").text(fmt(r.e.score));
+        y += rowH;
+      }
+      y += pad;
+    }
+  }
+  function drawRadar(mine) {
+    const s = d3.select("#pradar"); s.selectAll("*").remove();
+    const cx = 135, cy = 135, R = 100, n = mine.length; if (!n) return;
+    [0.25, 0.5, 0.75, 1].forEach(r => s.append("circle").attr("cx", cx).attr("cy", cy).attr("r", R * r).attr("fill", "none").attr("stroke", "#2a2f3a"));
+    const pts = mine.map((x, k) => { const a = (k / n) * 2 * Math.PI - Math.PI / 2, r = Math.abs(x.e.score) * R; return { x: cx + r * Math.cos(a), y: cy + r * Math.sin(a), a, x0: cx + R * Math.cos(a), y0: cy + R * Math.sin(a), d: x }; });
+    pts.forEach(p => s.append("line").attr("x1", cx).attr("y1", cy).attr("x2", p.x0).attr("y2", p.y0).attr("stroke", "#2a2f3a"));
+    s.append("path").attr("d", d3.line().x(p => p.x).y(p => p.y).curve(d3.curveLinearClosed)(pts)).attr("fill", "rgba(139,92,246,.18)").attr("stroke", "var(--accent)").attr("stroke-width", 1.5);
+    pts.forEach(p => { s.append("circle").attr("cx", p.x).attr("cy", p.y).attr("r", 4).attr("fill", color(p.d.e.direction)).append("title").text(`${p.d.i.name}: ${fmt(p.d.e.score)}`);
+      const lx = cx + (R + 14) * Math.cos(p.a), ly = cy + (R + 14) * Math.sin(p.a);
+      s.append("text").attr("x", lx).attr("y", ly + 3).attr("font-size", 8.5).attr("fill", "#8b93a7").attr("text-anchor", Math.cos(p.a) > .2 ? "start" : Math.cos(p.a) < -.2 ? "end" : "middle").text(p.d.i.name.length > 14 ? p.d.i.name.slice(0, 13) + "…" : p.d.i.name); });
+  }
+  function renderProfileSide() {
+    const e = state.p.sel, p = byId[state.p.person];
+    if (!p) { $side.innerHTML = `<div class="empty-state">Every legislator has a page at <code>#/legislator/&lt;id&gt;</code>. Pick one on the left.</div>`; return; }
+    $side.innerHTML = e ? `<div class="person-card"><div class="name">${issueById[e.to].name}</div><div class="meta">${issueById[e.to].catName} › ${issueById[e.to].subName}</div>${evidenceHtml(e)}</div>`
+      : `<div class="empty-state">Click a bar on the left to read the quote behind that score.<br><br><span class="link" id="share-link">Copy link to this page</span></div>`;
+    const sl = $("share-link"); if (sl) sl.onclick = () => { navigator.clipboard?.writeText(location.href); sl.textContent = "Link copied"; };
   }
 
   // ---------- GRAPH ----------
@@ -323,9 +429,11 @@
     return { nodes: [...topics.map(id => ({ id, kind: "topic", name: issueById[id].name, main: true, cat: issueById[id].cat })), ...persons.map(id => ({ id, kind: "person", name: byId[id].name.replace(/^(Rep|Sen)\. /, "") }))], links: fe.map(e => ({ source: e.from, target: e.to, e, main: true })) };
   }
   function renderGraph() {
-    const list = state.mode === "list";
-    $("table-wrap").style.display = list ? "block" : "none"; svg.style("display", list ? "none" : "block"); $("legend").style.display = list ? "none" : "flex";
+    const list = state.mode === "list", prof = state.mode === "profile";
+    $("table-wrap").style.display = list ? "block" : "none"; $("profile").style.display = prof ? "block" : "none";
+    svg.style("display", list || prof ? "none" : "block"); $("legend").style.display = list || prof ? "none" : "flex";
     if (list) { sim && sim.stop(); return renderTable(); }
+    if (prof) { sim && sim.stop(); return renderProfile(); }
     g.selectAll("*").remove();
     const { nodes, links } = buildGraphData(), { width, height } = svg.node().getBoundingClientRect(), explore = state.mode === "explore";
     const deg = {}; links.forEach(l => { deg[l.source] = (deg[l.source] || 0) + 1; deg[l.target] = (deg[l.target] || 0) + 1; });
@@ -353,15 +461,17 @@
 
   // ---------- shell ----------
   function renderHeader() {
-    ["explore", "focus", "list"].forEach(m => $("m-" + m).classList.toggle("active", state.mode === m));
-    if (state.mode === "list") { $crumb.innerHTML = `<b>Legislator list</b> · dropdown filters`; $hint.textContent = ""; }
+    ["explore", "focus", "list", "profile"].forEach(m => $("m-" + m).classList.toggle("active", state.mode === m));
+    if (state.mode === "profile") { const p = byId[state.p.person]; $crumb.innerHTML = p ? `<b>${p.name}</b> · ${seat(p)}` : `<b>Legislators</b>`; $hint.textContent = ""; }
+    else if (state.mode === "list") { $crumb.innerHTML = `<b>Legislator list</b> · dropdown filters`; $hint.textContent = ""; }
     else if (state.mode === "explore") { $crumb.innerHTML = `<b>All issues</b> · filtered view`; $hint.textContent = "Tick issues on the left to filter · hover to see connections · click an issue to focus · click a legislator for evidence"; }
     else { const i = issueById[state.issue]; $crumb.innerHTML = i ? `<b>${i.catName}</b> › ${i.subName} › <b>${i.name}</b>` : "Pick an issue"; $hint.textContent = "Drag nodes · click a legislator for evidence · grey issues = what these legislators also talk about"; }
   }
-  function renderAside() { ({ explore: renderExploreAside, focus: renderFocusAside, list: renderListAside })[state.mode](); }
-  function renderSide() { ({ explore: renderExploreSide, focus: renderFocusSide, list: renderListSide })[state.mode](); }
-  function render() { renderHeader(); renderAside(); renderSide(); renderGraph(); }
-  ["explore", "focus", "list"].forEach(m => $("m-" + m).onclick = () => { state.mode = m; state.person = null; render(); });
+  function renderAside() { ({ explore: renderExploreAside, focus: renderFocusAside, list: renderListAside, profile: renderProfileAside })[state.mode](); }
+  function renderSide() { ({ explore: renderExploreSide, focus: renderFocusSide, list: renderListSide, profile: renderProfileSide })[state.mode](); $side.querySelectorAll("[data-open]").forEach(b => b.onclick = () => openProfile(b.dataset.open)); }
+  function render() { renderHeader(); renderAside(); renderSide(); renderGraph(); if (state.mode !== "profile" && location.hash.startsWith("#/legislator")) history.replaceState(null, "", location.pathname); }
+  ["explore", "focus", "list", "profile"].forEach(m => $("m-" + m).onclick = () => { state.mode = m; state.person = null; render(); });
+  window.addEventListener("hashchange", () => { const m = /^#\/legislator\/([\w-]+)/.exec(location.hash); if (m && byId[m[1]]) { state.mode = "profile"; state.p.person = m[1]; state.p.sel = null; render(); } });
   render();
   window.addEventListener("resize", renderGraph);
 })();
