@@ -13,16 +13,18 @@ window.OWL_TAXONOMY = [
     { id: "ai_regulation", name: "AI Regulation" }, { id: "data_centers", name: "Data Centers" }, { id: "privacy", name: "Data Privacy" } ] }
 ];
 
-const P = (id, name, district, party) => ({ id, kind: "person", name, attrs: [
+const P = (id, name, district, party, gender, since) => ({ id, kind: "person", name, attrs: [
   { attr: "district", value: district, source: "https://api.congress.gov/v3/member/" + id },
-  { attr: "party", value: party, source: "https://api.congress.gov/v3/member/" + id } ] });
+  { attr: "party", value: party, source: "https://api.congress.gov/v3/member/" + id },
+  { attr: "gender", value: gender, source: "https://api.congress.gov/v3/member/" + id },
+  { attr: "since", value: since, source: "https://api.congress.gov/v3/member/" + id } ] });
 
 window.OWL_PEOPLE = [
-  P("p01", "Rep. Alicia Marquez", "CA-12", "D"), P("p02", "Rep. Daniel Okafor", "CA-27", "D"),
-  P("p03", "Rep. Grace Lindqvist", "CA-45", "R"), P("p04", "Rep. Thomas Beaumont", "CA-23", "R"),
-  P("p05", "Rep. Priya Raman", "CA-17", "D"), P("p06", "Rep. Samuel Whitfield", "CA-48", "R"),
-  P("p07", "Rep. Mei-Ling Tsao", "CA-36", "D"), P("p08", "Rep. Carlos Ibanez", "CA-21", "D"),
-  P("p09", "Rep. Harold Finch", "CA-01", "R"), P("p10", "Rep. Nadia Rousseau", "CA-50", "D")
+  P("p01", "Rep. Alicia Marquez", "CA-12", "D", "F", 2019), P("p02", "Rep. Daniel Okafor", "CA-27", "D", "M", 2021),
+  P("p03", "Rep. Grace Lindqvist", "CA-45", "R", "F", 2023), P("p04", "Rep. Thomas Beaumont", "CA-23", "R", "M", 2013),
+  P("p05", "Rep. Priya Raman", "CA-17", "D", "F", 2017), P("p06", "Rep. Samuel Whitfield", "CA-48", "R", "M", 2015),
+  P("p07", "Rep. Mei-Ling Tsao", "CA-36", "D", "F", 2021), P("p08", "Rep. Carlos Ibanez", "CA-21", "D", "M", 2019),
+  P("p09", "Rep. Harold Finch", "CA-01", "R", "M", 2011), P("p10", "Rep. Nadia Rousseau", "CA-50", "D", "F", 2023)
 ];
 
 // edges: person -> subcategory topic. score in [-1, 1]; direction derived from score.

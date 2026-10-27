@@ -92,13 +92,30 @@
   .stance-line .c { font-size: 11px; color: var(--muted); }
   .btn { background: var(--panel-2); border: 1px solid var(--border); color: var(--text); border-radius: 8px; padding: 5px 10px; font: inherit; font-size: 12px; cursor: pointer; }
   .btn:hover { border-color: var(--accent); }
+  /* list mode */
+  .field { margin: 0 4px 10px; }
+  .field label { display: block; font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 4px; }
+  .field select { width: 100%; background: var(--panel-2); border: 1px solid var(--border); color: var(--text); border-radius: 8px; padding: 7px 8px; font: inherit; font-size: 13px; }
+  .field select:focus { outline: none; border-color: var(--accent); }
+  #table-wrap { position: absolute; inset: 0; overflow: auto; padding: 14px; display: none; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  th { position: sticky; top: 0; background: var(--panel); color: var(--muted); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: .06em; cursor: pointer; user-select: none; }
+  th.sorted { color: var(--text); }
+  tbody tr { cursor: pointer; }
+  tbody tr:hover, tbody tr.active { background: var(--panel-2); }
+  td.quote { max-width: 360px; overflow: hidden; text-overflow: ellipsis; color: var(--muted); }
+  .pill { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 11px; font-weight: 600; }
+  .pill.D { background: rgba(59,130,246,.2); color: #93c5fd; } .pill.R { background: rgba(248,113,113,.2); color: #fca5a5; }
+  .pill.support { background: rgba(34,197,94,.18); color: #86efac; } .pill.oppose { background: rgba(239,68,68,.18); color: #fca5a5; } .pill.neutral { background: rgba(156,163,175,.18); color: #d1d5db; }
+  .toolbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; color: var(--muted); font-size: 12px; }
 </style>
 </head>
 <body>
 <div class="app">
   <header>
     <span class="brand">🦉 OWL</span>
-    <span class="modes"><button id="m-explore">Explore</button><button id="m-focus">Focus</button></span>
+    <span class="modes"><button id="m-explore">Explore</button><button id="m-focus">Focus</button><button id="m-list">List</button></span>
     <span class="crumb" id="crumb"></span>
     <span class="mock">MOCK DATA · fictional legislators</span>
   </header>
@@ -108,7 +125,8 @@
   <section>
     <div class="hint" id="hint"></div>
     <svg id="graph"></svg>
-    <div class="legend">
+    <div id="table-wrap"></div>
+    <div class="legend" id="legend">
       <span><i style="background:var(--support)"></i>Support</span>
       <span><i style="background:var(--oppose)"></i>Oppose</span>
       <span><i style="background:var(--neutral)"></i>Neutral</span>
@@ -136,7 +154,8 @@
   const state = {
     mode: "explore", cat: "public_safety", sub: "guns", person: null, edge: null,
     f: { subs: new Set(SUBS.filter(s => countFor(s.id) > 0).map(s => s.id)), parties: new Set(["D", "R"]),
-         dirs: new Set(["support", "oppose", "neutral"]), minConf: 0, q: "" }
+         dirs: new Set(["support", "oppose", "neutral"]), minConf: 0, q: "" },
+    l: { cat: "", sub: "", dir: "", party: "", gender: "", minConf: 0, sort: "score", desc: true, sel: null }
   };
 
   const $ = id => document.getElementById(id);
@@ -152,8 +171,56 @@
       && (!q || byId[e.from].name.toLowerCase().includes(q) || subById[e.to].name.toLowerCase().includes(q)));
   }
 
+  // ---------- list mode ----------
+  function listRows() {
+    const L = state.l;
+    return EDGES.filter(e => {
+      const p = byId[e.from], s = subById[e.to];
+      return (!L.cat || s.cat === L.cat) && (!L.sub || e.to === L.sub) && (!L.dir || e.direction === L.dir)
+        && (!L.party || attr(p, "party") === L.party) && (!L.gender || attr(p, "gender") === L.gender)
+        && CONF.indexOf(e.llm_confidence) >= L.minConf;
+    }).map(e => ({ e, p: byId[e.from], s: subById[e.to] }));
+  }
+  function renderListAside() {
+    const L = state.l;
+    const opt = (v, label, cur) => `<option value="${v}" ${String(cur) === String(v) ? "selected" : ""}>${label}</option>`;
+    const subsForCat = (L.cat ? TAX.find(c => c.id === L.cat).subs : SUBS).filter(s => countFor(s.id) > 0);
+    $aside.innerHTML = `
+      <div class="h" style="margin-top:8px">Find legislators</div>
+      <div class="field"><label>Category</label><select id="l-cat">${opt("", "Any category", L.cat)}${TAX.map(c => opt(c.id, c.name, L.cat)).join("")}</select></div>
+      <div class="field"><label>Topic</label><select id="l-sub">${opt("", "Any topic", L.sub)}${subsForCat.map(s => opt(s.id, s.name, L.sub)).join("")}</select></div>
+      <div class="field"><label>Stance</label><select id="l-dir">${opt("", "Any stance", L.dir)}${["support", "oppose", "neutral"].map(d => opt(d, d[0].toUpperCase() + d.slice(1), L.dir)).join("")}</select></div>
+      <div class="field"><label>Party</label><select id="l-party">${opt("", "Any party", L.party)}${opt("D", "Democrat", L.party)}${opt("R", "Republican", L.party)}</select></div>
+      <div class="field"><label>Gender</label><select id="l-gender">${opt("", "Any", L.gender)}${opt("F", "Female", L.gender)}${opt("M", "Male", L.gender)}</select></div>
+      <div class="field"><label>Min. LLM confidence</label><select id="l-conf">${CONF.map((c, i) => opt(i, c, L.minConf)).join("")}</select></div>
+      <div class="field"><button class="btn" id="l-reset">Reset filters</button></div>`;
+    const bind = (id, key, num) => { const el = $(id); el.onchange = () => { L[key] = num ? +el.value : el.value; if (key === "cat") L.sub = ""; L.sel = null; render(); }; };
+    bind("l-cat", "cat"); bind("l-sub", "sub"); bind("l-dir", "dir"); bind("l-party", "party"); bind("l-gender", "gender"); bind("l-conf", "minConf", true);
+    $("l-reset").onclick = () => { Object.assign(L, { cat: "", sub: "", dir: "", party: "", gender: "", minConf: 0, sel: null }); render(); };
+  }
+  function renderTable() {
+    const wrap = $("table-wrap"), L = state.l;
+    const rows = listRows();
+    const key = { name: r => r.p.name, district: r => attr(r.p, "district"), party: r => attr(r.p, "party"), gender: r => attr(r.p, "gender"), topic: r => r.s.name, score: r => r.e.score, conf: r => CONF.indexOf(r.e.llm_confidence) }[L.sort];
+    rows.sort((a, b) => { const x = key(a), y = key(b); const c = typeof x === "number" ? x - y : String(x).localeCompare(String(y)); return L.desc ? -c : c; });
+    const th = (k, label) => `<th data-k="${k}" class="${L.sort === k ? "sorted" : ""}">${label}${L.sort === k ? (L.desc ? " ↓" : " ↑") : ""}</th>`;
+    const csv = () => { const h = ["name","district","party","gender","topic","category","direction","score","linkage","llm_confidence","bill","quote","source"]; const lines = [h.join(",")].concat(rows.map(r => [r.p.name, attr(r.p,"district"), attr(r.p,"party"), attr(r.p,"gender"), r.s.name, r.s.catName, r.e.direction, r.e.score, r.e.linkage, r.e.llm_confidence, r.e.bill, r.e.quote, r.e.source].map(v => `"${String(v).replace(/"/g, '""')}"`).join(","))); const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([lines.join("\n")], { type: "text/csv" })); a.download = "owl-legislators.csv"; a.click(); };
+    wrap.innerHTML = `<div class="toolbar"><span>${rows.length} stances · ${new Set(rows.map(r => r.p.id)).size} legislators</span><button class="btn" id="csv">Export CSV</button></div>
+      <table><thead><tr>${th("name", "Legislator")}${th("district", "District")}${th("party", "Party")}${th("gender", "Gender")}${th("topic", "Topic")}<th>Stance</th>${th("score", "Score")}${th("conf", "Confidence")}<th>Quote</th></tr></thead>
+      <tbody>${rows.map((r, i) => `<tr data-i="${i}" class="${L.sel === r.e ? "active" : ""}"><td><b>${r.p.name}</b></td><td>${attr(r.p, "district")}</td><td><span class="pill ${attr(r.p, "party")}">${attr(r.p, "party")}</span></td><td>${attr(r.p, "gender")}</td><td>${r.s.name}<div style="font-size:11px;color:var(--muted)">${r.s.catName}</div></td><td><span class="pill ${r.e.direction}">${r.e.direction}</span></td><td class="score" style="color:${color(r.e.direction)}">${r.e.score > 0 ? "+" : ""}${r.e.score.toFixed(2)}</td><td><span class="tag c-${r.e.llm_confidence}">${r.e.llm_confidence}</span></td><td class="quote" title="${r.e.quote.replace(/"/g, "&quot;")}">“${r.e.quote}”</td></tr>`).join("") || `<tr><td colspan="9" class="empty-state">No legislators match.</td></tr>`}</tbody></table>`;
+    wrap.querySelectorAll("th[data-k]").forEach(h => h.onclick = () => { const k = h.dataset.k; if (L.sort === k) L.desc = !L.desc; else { L.sort = k; L.desc = k === "score" || k === "conf"; } renderTable(); });
+    wrap.querySelectorAll("tbody tr[data-i]").forEach(tr => tr.onclick = () => { L.sel = rows[+tr.dataset.i].e; renderTable(); renderSide(); });
+    $("csv").onclick = csv;
+  }
+  function renderListSide() {
+    const e = state.l.sel;
+    $side.innerHTML = e ? `<div class="person-card"><div class="name">${byId[e.from].name}</div><div class="meta">${attr(byId[e.from], "district")} · ${attr(byId[e.from], "party")} · ${attr(byId[e.from], "gender") === "F" ? "Female" : "Male"} · in office since ${attr(byId[e.from], "since")}</div>${evidenceHtml(e, subById[e.to].name)}</div>`
+      : `<div class="empty-state">Use the dropdowns to narrow the list, then click a row to read the evidence.</div>`;
+  }
+
   // ---------- left panel ----------
   function renderAside() {
+    if (state.mode === "list") return renderListAside();
     if (state.mode === "focus") return renderFocusAside();
     const chip = (cls, id, label, on) => `<span class="chip ${cls} ${on ? "active" : ""}" data-k="${cls}" data-id="${id}">${label}</span>`;
     const groups = TAX.map(c => {
@@ -209,6 +276,7 @@
 
   // ---------- right panel ----------
   function renderSide() {
+    if (state.mode === "list") return renderListSide();
     if (state.mode === "focus") return renderFocusSide();
     const fe = filteredEdges();
     if (state.person && byId[state.person]) {
@@ -278,6 +346,10 @@
   }
 
   function renderGraph() {
+    const list = state.mode === "list";
+    $("table-wrap").style.display = list ? "block" : "none";
+    svg.style("display", list ? "none" : "block"); $("legend").style.display = list ? "none" : "flex";
+    if (list) { sim && sim.stop(); return renderTable(); }
     g.selectAll("*").remove();
     const { nodes, links } = buildGraphData();
     const { width, height } = svg.node().getBoundingClientRect();
@@ -327,12 +399,15 @@
   function renderHeader() {
     $("m-explore").classList.toggle("active", state.mode === "explore");
     $("m-focus").classList.toggle("active", state.mode === "focus");
-    if (state.mode === "explore") { $crumb.innerHTML = `<b>All topics</b> · filtered view`; $hint.textContent = "Tick topics on the left to filter · hover to see connections · click a topic to focus · click a legislator for evidence"; }
+    $("m-list").classList.toggle("active", state.mode === "list");
+    if (state.mode === "list") { $crumb.innerHTML = `<b>Legislator list</b> · dropdown filters`; $hint.textContent = ""; }
+    else if (state.mode === "explore") { $crumb.innerHTML = `<b>All topics</b> · filtered view`; $hint.textContent = "Tick topics on the left to filter · hover to see connections · click a topic to focus · click a legislator for evidence"; }
     else { const s = subById[state.sub]; $crumb.innerHTML = s ? `<b>${s.catName}</b> › <b>${s.name}</b>` : "Pick a category"; $hint.textContent = "Drag nodes · click a legislator for evidence · grey topics = what these legislators also talk about"; }
   }
   function render() { renderHeader(); renderAside(); renderSide(); renderGraph(); }
   $("m-explore").onclick = () => { state.mode = "explore"; state.person = null; render(); };
   $("m-focus").onclick = () => { state.mode = "focus"; state.person = null; render(); };
+  $("m-list").onclick = () => { state.mode = "list"; state.person = null; render(); };
   render();
   window.addEventListener("resize", renderGraph);
 })();
