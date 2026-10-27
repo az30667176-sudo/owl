@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>OWL Prototype</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<style>
+  :root {
+    --bg: #0f1115; --panel: #171a21; --panel-2: #1e222b; --border: #2a2f3a;
+    --text: #e6e8ee; --muted: #8b93a7; --accent: #8b5cf6;
+    --support: #22c55e; --oppose: #ef4444; --neutral: #9ca3af;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; background: var(--bg); color: var(--text);
+    font: 14px/1.45 -apple-system, "Segoe UI", Inter, Roboto, sans-serif; }
+  .app { display: grid; grid-template-columns: 240px 1fr 360px; grid-template-rows: 48px 1fr; height: 100vh; }
+  header { grid-column: 1 / -1; display: flex; align-items: center; gap: 14px; padding: 0 16px;
+    border-bottom: 1px solid var(--border); background: var(--panel); }
+  header .brand { font-weight: 700; letter-spacing: .3px; }
+  header .crumb { color: var(--muted); font-size: 13px; }
+  header .crumb b { color: var(--text); font-weight: 600; }
+  header .mock { margin-left: auto; font-size: 11px; padding: 3px 8px; border: 1px solid #b45309; color: #fbbf24; border-radius: 999px; }
+  aside, section, .side { overflow: auto; }
+  aside { border-right: 1px solid var(--border); background: var(--panel); padding: 14px 12px; }
+  .h { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 12px 4px 6px; }
+  .cat { padding: 8px 10px; border-radius: 8px; cursor: pointer; color: var(--text); display: flex; justify-content: space-between; }
+  .cat:hover { background: var(--panel-2); }
+  .cat.active { background: rgba(139,92,246,.18); color: #c4b5fd; }
+  .cat .n { color: var(--muted); font-size: 12px; }
+  .subs { display: flex; flex-wrap: wrap; gap: 6px; padding: 2px 4px 8px; }
+  .chip { font-size: 12px; padding: 4px 10px; border: 1px solid var(--border); border-radius: 999px; cursor: pointer; color: var(--muted); }
+  .chip:hover { border-color: var(--accent); color: var(--text); }
+  .chip.active { background: var(--accent); border-color: var(--accent); color: white; }
+  .chip.empty { opacity: .4; cursor: default; }
+  section { position: relative; }
+  svg { width: 100%; height: 100%; display: block; }
+  .legend { position: absolute; left: 14px; bottom: 12px; display: flex; gap: 14px; font-size: 12px; color: var(--muted);
+    background: rgba(23,26,33,.85); padding: 6px 10px; border-radius: 8px; border: 1px solid var(--border); }
+  .legend i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px; vertical-align: -1px; }
+  .hint { position: absolute; left: 14px; top: 12px; font-size: 12px; color: var(--muted); }
+  .side { border-left: 1px solid var(--border); background: var(--panel); padding: 14px; }
+  .topic-title { font-size: 18px; font-weight: 700; margin: 0 0 2px; }
+  .topic-sub { color: var(--muted); font-size: 12px; margin-bottom: 12px; }
+  .spectrum { height: 8px; border-radius: 999px; background: linear-gradient(90deg, var(--oppose), #4b5563 50%, var(--support)); position: relative; margin: 6px 0 14px; }
+  .spectrum .tick { position: absolute; top: -4px; width: 4px; height: 16px; border-radius: 2px; background: white; opacity: .85; transform: translateX(-2px); }
+  .row { display: grid; grid-template-columns: 1fr auto; gap: 8px; align-items: center; padding: 8px 8px; border-radius: 8px; cursor: pointer; }
+  .row:hover, .row.active { background: var(--panel-2); }
+  .row .name { font-weight: 600; }
+  .row .meta { color: var(--muted); font-size: 12px; }
+  .bar { height: 6px; border-radius: 999px; background: #2a2f3a; position: relative; margin-top: 5px; overflow: hidden; }
+  .bar > span { position: absolute; top: 0; bottom: 0; }
+  .score { font-family: var(--mono); font-size: 12px; min-width: 44px; text-align: right; }
+  .evidence { margin-top: 14px; padding: 12px; background: var(--panel-2); border: 1px solid var(--border); border-radius: 10px; }
+  .evidence blockquote { margin: 8px 0; padding-left: 10px; border-left: 3px solid var(--accent); color: #d1d5db; font-style: italic; }
+  .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+  .tag { font-size: 11px; padding: 2px 7px; border-radius: 6px; border: 1px solid var(--border); color: var(--muted); font-family: var(--mono); }
+  .tag.c-high, .tag.c-super_high { border-color: #166534; color: #86efac; }
+  .tag.c-mid { border-color: #854d0e; color: #fde047; }
+  .tag.c-low { border-color: #7f1d1d; color: #fca5a5; }
+  .evidence a { color: #a78bfa; font-size: 12px; }
+  .empty-state { color: var(--muted); padding: 20px 8px; }
+  .node-label { font-size: 11px; fill: #cbd5e1; pointer-events: none; }
+  .node-label.topic { font-size: 13px; font-weight: 700; fill: #f3f4f6; }
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <span class="brand">🦉 OWL</span>
+    <span class="crumb" id="crumb">Pick a category</span>
+    <span class="mock">MOCK DATA · fictional legislators</span>
+  </header>
+
+  <aside>
+    <div class="h">Category</div>
+    <div id="cats"></div>
+    <div class="h">Sub-category</div>
+    <div class="subs" id="subs"></div>
+  </aside>
+
+  <section>
+    <div class="hint">Drag nodes · click a legislator for evidence · scroll to zoom</div>
+    <svg id="graph"></svg>
+    <div class="legend">
+      <span><i style="background:var(--support)"></i>Support</span>
+      <span><i style="background:var(--oppose)"></i>Oppose</span>
+      <span><i style="background:var(--neutral)"></i>Neutral</span>
+      <span style="margin-left:6px">line width = linkage strength</span>
+    </div>
+  </section>
+
+  <div class="side" id="side">
+    <div class="empty-state">Choose a category and sub-category to see where legislators stand.</div>
+  </div>
+</div>
+
+<script src="./mock-data.js"></script>
+<script>
+(() => {
+  const TAX = window.OWL_TAXONOMY, PEOPLE = window.OWL_PEOPLE, EDGES = window.OWL_EDGES;
+  const byId = Object.fromEntries(PEOPLE.map(p => [p.id, p]));
+  const attr = (p, k) => (p.attrs.find(a => a.attr === k) || {}).value || "";
+  const color = d => d === "support" ? "var(--support)" : d === "oppose" ? "var(--oppose)" : "var(--neutral)";
+  const lw = { low: 1, mid: 2, high: 3.5, super_high: 5 };
+  const state = { cat: null, sub: null, person: null };
+
+  const $cats = document.getElementById("cats"), $subs = document.getElementById("subs"),
+        $side = document.getElementById("side"), $crumb = document.getElementById("crumb");
+
+  const countFor = sub => EDGES.filter(e => e.to === sub).length;
+
+  function renderCats() {
+    $cats.innerHTML = TAX.map(c => {
+      const n = c.subs.reduce((a, s) => a + countFor(s.id), 0);
+      return `<div class="cat ${state.cat === c.id ? "active" : ""}" data-id="${c.id}"><span>${c.name}</span><span class="n">${n}</span></div>`;
+    }).join("");
+    $cats.querySelectorAll(".cat").forEach(el => el.onclick = () => {
+      state.cat = el.dataset.id; state.sub = null; state.person = null;
+      const first = TAX.find(c => c.id === state.cat).subs.find(s => countFor(s.id) > 0);
+      if (first) state.sub = first.id;
+      render();
+    });
+  }
+
+  function renderSubs() {
+    const c = TAX.find(c => c.id === state.cat);
+    if (!c) { $subs.innerHTML = `<span class="chip empty">—</span>`; return; }
+    $subs.innerHTML = c.subs.map(s => {
+      const n = countFor(s.id);
+      return `<span class="chip ${state.sub === s.id ? "active" : ""} ${n ? "" : "empty"}" data-id="${s.id}">${s.name}${n ? ` · ${n}` : ""}</span>`;
+    }).join("");
+    $subs.querySelectorAll(".chip:not(.empty)").forEach(el => el.onclick = () => { state.sub = el.dataset.id; state.person = null; render(); });
+  }
+
+  function renderCrumb() {
+    const c = TAX.find(c => c.id === state.cat), s = c && c.subs.find(s => s.id === state.sub);
+    $crumb.innerHTML = c ? `<b>${c.name}</b>${s ? ` › <b>${s.name}</b>` : ""}` : "Pick a category";
+  }
+
+  function renderSide() {
+    const c = TAX.find(c => c.id === state.cat), s = c && c.subs.find(s => s.id === state.sub);
+    if (!s) { $side.innerHTML = `<div class="empty-state">Choose a category and sub-category to see where legislators stand.</div>`; return; }
+    const edges = EDGES.filter(e => e.to === s.id).sort((a, b) => b.score - a.score);
+    const ticks = edges.map(e => `<span class="tick" style="left:${(e.score + 1) / 2 * 100}%;background:${color(e.direction)}"></span>`).join("");
+    const rows = edges.map(e => {
+      const p = byId[e.from], pct = Math.abs(e.score) * 50;
+      const left = e.score < 0 ? 50 - pct : 50;
+      return `<div class="row ${state.person === p.id ? "active" : ""}" data-id="${p.id}">
+        <div><div class="name">${p.name}</div><div class="meta">${attr(p, "district")} · ${attr(p, "party")}</div>
+          <div class="bar"><span style="left:${left}%;width:${pct}%;background:${color(e.direction)}"></span></div></div>
+        <div class="score" style="color:${color(e.direction)}">${e.score > 0 ? "+" : ""}${e.score.toFixed(2)}</div></div>`;
+    }).join("");
+    const sel = state.person && edges.find(e => e.from === state.person);
+    const ev = sel ? `<div class="evidence">
+        <div style="font-weight:600">${byId[sel.from].name} on ${s.name}</div>
+        <blockquote>“${sel.quote}”</blockquote>
+        <div class="tags">
+          <span class="tag" style="color:${color(sel.direction)}">${sel.direction}</span>
+          <span class="tag">linkage: ${sel.linkage}</span>
+          <span class="tag c-${sel.llm_confidence}">confidence: ${sel.llm_confidence}</span>
+          <span class="tag">${sel.model}</span>
+        </div>
+        <div style="margin-top:8px;font-size:12px;color:var(--muted)">${sel.bill}</div>
+        <a href="${sel.source}" target="_blank" rel="noopener">source ↗</a>
+      </div>` : `<div class="empty-state" style="padding-top:10px">Click a legislator to read the quote behind the score.</div>`;
+    $side.innerHTML = `<h2 class="topic-title">${s.name}</h2><div class="topic-sub">${c.name} · ${edges.length} legislators · CA</div>
+      <div class="spectrum">${ticks}</div>${rows}${ev}`;
+    $side.querySelectorAll(".row").forEach(el => el.onclick = () => { state.person = el.dataset.id; render(); });
+  }
+
+  // ---- graph ----
+  const svg = d3.select("#graph"), g = svg.append("g");
+  svg.call(d3.zoom().scaleExtent([.4, 3]).on("zoom", ev => g.attr("transform", ev.transform)));
+  let sim;
+  function renderGraph() {
+    g.selectAll("*").remove();
+    const c = TAX.find(c => c.id === state.cat), s = c && c.subs.find(s => s.id === state.sub);
+    if (!s) return;
+    const edges = EDGES.filter(e => e.to === s.id);
+    const persons = [...new Set(edges.map(e => e.from))].map(id => byId[id]);
+    // neighbours: other topics these persons also have stances on (second ring, dimmed)
+    const other = EDGES.filter(e => e.to !== s.id && persons.some(p => p.id === e.from));
+    const topicIds = [...new Set(other.map(e => e.to))];
+    const topicName = id => { for (const c of TAX) { const t = c.subs.find(x => x.id === id); if (t) return t.name; } return id; };
+
+    const nodes = [
+      { id: s.id, kind: "topic", name: s.name, main: true },
+      ...persons.map(p => ({ id: p.id, kind: "person", name: p.name.replace("Rep. ", "") })),
+      ...topicIds.map(id => ({ id, kind: "topic", name: topicName(id), main: false }))
+    ];
+    const links = [
+      ...edges.map(e => ({ source: e.from, target: e.to, e, main: true })),
+      ...other.map(e => ({ source: e.from, target: e.to, e, main: false }))
+    ];
+    const { width, height } = svg.node().getBoundingClientRect();
+
+    sim && sim.stop();
+    sim = d3.forceSimulation(nodes)
+      .force("link", d3.forceLink(links).id(d => d.id).distance(l => l.main ? 150 : 110).strength(l => l.main ? .8 : .25))
+      .force("charge", d3.forceManyBody().strength(-380))
+      .force("center", d3.forceCenter(width / 2, height / 2))
+      .force("collide", d3.forceCollide(34));
+
+    const link = g.append("g").selectAll("line").data(links).join("line")
+      .attr("stroke", d => color(d.e.direction)).attr("stroke-width", d => lw[d.e.linkage])
+      .attr("stroke-opacity", d => d.main ? .8 : .2);
+
+    const node = g.append("g").selectAll("g").data(nodes).join("g")
+      .style("cursor", d => d.kind === "person" ? "pointer" : "default")
+      .call(d3.drag().on("start", (ev, d) => { if (!ev.active) sim.alphaTarget(.3).restart(); d.fx = d.x; d.fy = d.y; })
+        .on("drag", (ev, d) => { d.fx = ev.x; d.fy = ev.y; })
+        .on("end", (ev, d) => { if (!ev.active) sim.alphaTarget(0); d.fx = null; d.fy = null; }))
+      .on("click", (ev, d) => {
+        if (d.kind === "person") { state.person = d.id; render(); }
+        else if (!d.main) { for (const c of TAX) { if (c.subs.some(x => x.id === d.id)) { state.cat = c.id; state.sub = d.id; state.person = null; render(); return; } } }
+      });
+
+    node.filter(d => d.kind === "topic").append("rect")
+      .attr("rx", 10).attr("x", d => -(d.name.length * 4 + 14)).attr("y", -16).attr("width", d => d.name.length * 8 + 28).attr("height", 32)
+      .attr("fill", d => d.main ? "var(--accent)" : "#2a2f3a").attr("stroke", d => d.main ? "#c4b5fd" : "#3b4150");
+
+    node.filter(d => d.kind === "person").append("circle")
+      .attr("r", d => state.person === d.id ? 16 : 12)
+      .attr("fill", d => { const e = edges.find(e => e.from === d.id); return color(e.direction); })
+      .attr("stroke", d => state.person === d.id ? "#fff" : "#0f1115").attr("stroke-width", 2);
+
+    node.append("text").attr("class", d => "node-label" + (d.kind === "topic" ? " topic" : ""))
+      .attr("text-anchor", "middle").attr("dy", d => d.kind === "topic" ? 5 : 28).text(d => d.name);
+
+    sim.on("tick", () => {
+      link.attr("x1", d => d.source.x).attr("y1", d => d.source.y).attr("x2", d => d.target.x).attr("y2", d => d.target.y);
+      node.attr("transform", d => `translate(${d.x},${d.y})`);
+    });
+  }
+
+  function render() { renderCats(); renderSubs(); renderCrumb(); renderSide(); renderGraph(); }
+  // default view
+  state.cat = "public_safety"; state.sub = "guns";
+  render();
+  window.addEventListener("resize", renderGraph);
+})();
+</script>
+</body>
+</html>
