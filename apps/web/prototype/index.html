@@ -151,7 +151,7 @@
       <span><i style="background:var(--support)"></i>Support</span>
       <span><i style="background:var(--oppose)"></i>Oppose</span>
       <span><i style="background:var(--neutral)"></i>Neutral</span>
-      <span style="margin-left:6px">line width = linkage</span>
+      <span style="margin-left:6px">width = attention · opacity = strength · dashed = flipped</span>
     </div>
   </section>
   <div class="side" id="side"></div>
@@ -180,15 +180,22 @@
   const CONF = ["low", "mid", "high", "super_high"], CONF_W = { low: .4, mid: .7, high: 1, super_high: 1.2 };
   const dirOf = s => s > 0.15 ? "support" : s < -0.15 ? "oppose" : "neutral";
   const STATEMENTS = stancesRaw.stances.filter(s => (byId[s.person] && issueById[s.issue]) || console.warn("statement with unknown person/issue dropped:", s));
+  // Salience ("heat"): how much a legislator talks about an issue, not which side.
+  // sum over statements of venue_weight * 2^(-age_days/180). Mock data uses the newest statement date as "today" so the demo is stable.
+  const NOW = stancesRaw._meta?.mock ? d3.max(STATEMENTS, s => new Date(s.date || 0)) : new Date();
+  const venueW = src => /congress\.gov|govinfo|house\.gov|senate\.gov/.test(src || "") ? 1 : /cnn|fox|nytimes|wsj|politico|washingtonpost|reuters|apnews/.test(src || "") ? .8 : .6;
+  const heatOf = s => { const days = s.date ? (NOW - new Date(s.date)) / 864e5 : 365; return venueW(s.source) * Math.pow(2, -Math.max(0, days) / 180); };
   const EDGES = [...d3.group(STATEMENTS, s => s.person + "|" + s.issue).values()].map(list => {
     const st = [...list].sort((a, b) => String(a.date || "").localeCompare(String(b.date || "")));
     const w = st.map(s => CONF_W[s.llm_confidence] || .7), score = st.reduce((a, s, i) => a + s.score * w[i], 0) / w.reduce((a, b) => a + b, 0);
     const latest = st[st.length - 1], dirs = st.map(s => s.direction);
-    return { from: latest.person, to: latest.issue, score, direction: dirOf(score), n: st.length, statements: st,
+    return { from: latest.person, to: latest.issue, score, direction: dirOf(score), n: st.length, statements: st, salience: st.reduce((a, s) => a + heatOf(s), 0),
       linkage: CONF[Math.max(...st.map(s => CONF.indexOf(s.linkage)))], llm_confidence: CONF[Math.max(...st.map(s => CONF.indexOf(s.llm_confidence)))],
       flip: new Set(dirs.filter(d => d !== "neutral")).size > 1, first: st[0].date, last: latest.date,
       quote: latest.quote, bill: latest.bill, source: latest.source, model: latest.model };
   });
+  { const sorted = EDGES.map(e => e.salience).sort((a, b) => a - b); EDGES.forEach(e => e.heat = sorted.length > 1 ? sorted.indexOf(e.salience) / (sorted.length - 1) : 1); } // global percentile 0..1
+  const heatW = h => 1 + h * 5; // edge width from heat percentile
   const STATES = [...new Set(PEOPLE.map(p => p.state))].sort();
   const color = d => d === "support" ? "var(--support)" : d === "oppose" ? "var(--oppose)" : "var(--neutral)";
   const lw = { low: 1, mid: 2, high: 3.5, super_high: 5 };
@@ -267,17 +274,21 @@
     $side.querySelectorAll(".row").forEach(el => el.onclick = () => { state.person = el.dataset.id; state.edge = null; render(); });
   }
   const fmt = s => (s > 0 ? "+" : "") + s.toFixed(2);
-  function sparkline(st) {
-    if (st.length < 2) return "";
-    const W = 120, H = 28, x = k => 4 + k / (st.length - 1) * (W - 8), y = s => H / 2 - s * (H / 2 - 3);
-    const pts = st.map((s, k) => `${x(k)},${y(s.score)}`).join(" ");
-    return `<svg width="${W}" height="${H}" style="vertical-align:middle"><line x1="4" x2="${W - 4}" y1="${H / 2}" y2="${H / 2}" stroke="#3b4150" stroke-dasharray="2 2"/><polyline points="${pts}" fill="none" stroke="#a78bfa" stroke-width="1.5"/>${st.map((s, k) => `<circle cx="${x(k)}" cy="${y(s.score)}" r="3" fill="${color(s.direction)}"><title>${s.date || ""} ${fmt(s.score)}</title></circle>`).join("")}</svg>`;
+  // Direction ribbon: a time band colored by the direction held at each moment; flips show as color changes.
+  function ribbon(st, W = 300, H = 22, labels = true) {
+    const dated = st.filter(s => s.date); if (dated.length < 2) return "";
+    const t0 = new Date(dated[0].date), t1 = new Date(dated[dated.length - 1].date), span = Math.max(1, t1 - t0);
+    const x = d => 6 + (new Date(d) - t0) / span * (W - 12);
+    const segs = dated.map((s, k) => { const x0 = x(s.date), x1 = k < dated.length - 1 ? x(dated[k + 1].date) : W - 6; return `<rect x="${x0}" y="${H / 2 - 5}" width="${Math.max(2, x1 - x0)}" height="10" fill="${color(s.direction)}" fill-opacity="${.35 + Math.abs(s.score) * .6}"/>`; }).join("");
+    const dots = dated.map(s => `<circle cx="${x(s.date)}" cy="${H / 2}" r="4" fill="${color(s.direction)}" stroke="#0f1115" stroke-width="1.5"><title>${s.date} · ${s.direction} ${fmt(s.score)}</title></circle>`).join("");
+    const lab = labels ? `<text x="6" y="${H - 1}" font-size="9" fill="#8b93a7">${dated[0].date}</text><text x="${W - 6}" y="${H - 1}" font-size="9" fill="#8b93a7" text-anchor="end">${dated[dated.length - 1].date}</text>` : "";
+    return `<svg width="${W}" height="${H + (labels ? 10 : 0)}" style="vertical-align:middle;display:block">${segs}${dots}${lab}</svg>`;
   }
   function evidenceHtml(e) {
     const i = issueById[e.to], st = e.statements;
     const head = `<div style="font-weight:600">${title(byId[e.from])} on ${i.name}</div><div style="font-size:11px;color:var(--muted)">${i.catName} › ${i.subName}</div>
-      <div class="tags" style="margin-top:6px"><span class="tag" style="color:${color(e.direction)}">${e.direction} · ${fmt(e.score)}</span><span class="tag">${e.n} statement${e.n > 1 ? "s" : ""}</span>${e.flip ? `<span class="tag" style="border-color:#b45309;color:#fbbf24">⟲ flipped</span>` : ""}<span class="tag c-${e.llm_confidence}">confidence: ${e.llm_confidence}</span></div>
-      ${e.n > 1 ? `<div style="margin-top:8px;font-size:11px;color:var(--muted)">score over time ${sparkline(st)}</div>` : ""}`;
+      <div class="tags" style="margin-top:6px"><span class="tag" style="color:${color(e.direction)}">${e.direction} · ${fmt(e.score)}</span><span class="tag">${e.n} statement${e.n > 1 ? "s" : ""}</span><span class="tag" title="attention: recency-weighted statement count, percentile across all edges">🔥 ${Math.round(e.heat * 100)}th pct</span>${e.flip ? `<span class="tag" style="border-color:#b45309;color:#fbbf24">⟲ flipped</span>` : ""}<span class="tag c-${e.llm_confidence}">confidence: ${e.llm_confidence}</span></div>
+      ${e.n > 1 ? `<div style="margin-top:8px;font-size:11px;color:var(--muted)">direction over time</div>${ribbon(st, 300)}` : ""}`;
     const items = [...st].reverse().map(s => `<div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--border)"><div style="font-size:11px;color:var(--muted)">${s.date || "undated"} · <span style="color:${color(s.direction)}">${s.direction} ${fmt(s.score)}</span> · <span class="tag c-${s.llm_confidence}" style="padding:0 5px">${s.llm_confidence}</span></div>
       <blockquote>“${s.quote}”</blockquote><div style="font-size:12px;color:var(--muted)">${s.bill || ""} · linkage ${s.linkage} · ${s.model || ""}</div><a href="${s.source}" target="_blank" rel="noopener">source ↗</a></div>`).join("");
     return `<div class="evidence">${head}${items}</div>`;
@@ -382,20 +393,36 @@
         <div><h1>${p.name}</h1><div class="meta">${seat(p)} · ${p.party === "D" ? "Democrat" : p.party === "R" ? "Republican" : "Independent"} · ${p.gender === "F" ? "Female" : "Male"} · in office since ${p.since}${p.bioguide_id ? ` · <a class="link" href="https://bioguide.congress.gov/search/bio/${p.bioguide_id}" target="_blank">bioguide ↗</a>` : ""}</div>
           <div class="kpis"><div class="kpi"><div class="v">${mine.length}</div><div class="l">stances</div></div><div class="kpi"><div class="v" style="color:var(--support)">${sup}</div><div class="l">support</div></div><div class="kpi"><div class="v" style="color:var(--oppose)">${opp}</div><div class="l">oppose</div></div><div class="kpi" title="mean |score| across issues: how strongly they commit, regardless of direction"><div class="v">${decisive.toFixed(2)}</div><div class="l">decisiveness</div></div><div class="kpi" title="mean distance from the average of other members of the same party on the same issues"><div class="v">${divergence === null ? "—" : divergence.toFixed(2)}</div><div class="l">vs own party</div></div><div class="kpi"><div class="v">${nStatements}</div><div class="l">statements</div></div>${flips ? `<div class="kpi"><div class="v" style="color:#fbbf24">⟲ ${flips}</div><div class="l">flipped</div></div>` : ""}</div></div></div>
       <div class="pgrid">
-        <div class="card"><h3>Where they stand</h3><div class="sub">Grouped by committee; click a committee row to expand. Bar = score, faded = low LLM confidence, ×N = number of statements, ⟲ = position changed over time. <span style="color:${partyColor(p.party)}">▌</span> = average of other ${p.party === "D" ? "Democrats" : p.party === "R" ? "Republicans" : "members"} on the same issue. Click an issue for the evidence. <span class="link" id="exp-all">expand all</span> · <span class="link" id="col-all">collapse all</span></div><svg id="pbars"></svg></div>
-        <div class="card"><h3>Stance fingerprint</h3><div class="sub">One spoke per issue; radius = |score|, green out = support, red = oppose.</div><svg id="pradar" viewBox="0 0 270 270" style="width:100%;height:auto"></svg>
+        <div class="card"><h3>Where they stand</h3><div class="sub">Grouped by committee; click a committee row to expand. Bar = score, faded = low LLM confidence; <b>dot size = attention</b> (how often and how recently they raise it); ×N = statements; ⟲ = position changed, with a direction ribbon over time. <span style="color:${partyColor(p.party)}">▌</span> = average of other ${p.party === "D" ? "Democrats" : p.party === "R" ? "Republicans" : "members"} on the same issue. Click an issue for the evidence. <span class="link" id="exp-all">expand all</span> · <span class="link" id="col-all">collapse all</span></div><svg id="pbars"></svg></div>
+        <div>
+          <div class="card"><h3>Attention map</h3><div class="sub">Where they stand (x) vs how much they talk about it (y). Top corners = loud supporter / loud opponent; bottom = on record but rarely raised.</div><svg id="pscatter" viewBox="0 0 270 230" style="width:100%;height:auto"></svg></div>
+          <div class="card" style="margin-top:14px"><h3>Stance fingerprint</h3><div class="sub">One spoke per issue; radius = |score|.</div><svg id="pradar" viewBox="0 0 270 270" style="width:100%;height:auto"></svg>
           <h3 style="margin-top:14px">Committees touched</h3><div class="sub">${[...new Set(mine.map(x => x.i.catName))].map(c => `<span class="chip" style="cursor:default">${c}</span>`).join(" ") || "—"}</div></div>
+        </div>
       </div>`;
     if (!P.open) P.open = new Set(mine.length <= 12 ? mine.map(x => x.i.cat) : []);
     $("exp-all").onclick = () => { mine.forEach(x => P.open.add(x.i.cat)); drawBars(p, mine); };
     $("col-all").onclick = () => { P.open.clear(); drawBars(p, mine); };
-    drawBars(p, mine); drawRadar(mine);
+    drawBars(p, mine); drawScatter(mine); drawRadar(mine);
+  }
+  function drawScatter(mine) {
+    const s = d3.select("#pscatter"); s.selectAll("*").remove(); if (!mine.length) return;
+    const W = 270, H = 230, m = { l: 30, r: 10, t: 14, b: 26 };
+    const x = d3.scaleLinear().domain([-1, 1]).range([m.l, W - m.r]), maxS = d3.max(mine, d => d.e.salience) || 1, y = d3.scaleLinear().domain([0, maxS * 1.1]).range([H - m.b, m.t]);
+    s.append("line").attr("x1", x(0)).attr("x2", x(0)).attr("y1", m.t).attr("y2", H - m.b).attr("stroke", "#3b4150").attr("stroke-dasharray", "3 3");
+    s.append("line").attr("x1", m.l).attr("x2", W - m.r).attr("y1", H - m.b).attr("y2", H - m.b).attr("stroke", "#3b4150");
+    s.append("text").attr("x", m.l).attr("y", H - 8).attr("font-size", 9).attr("fill", "var(--oppose)").text("oppose");
+    s.append("text").attr("x", W - m.r).attr("y", H - 8).attr("font-size", 9).attr("fill", "var(--support)").attr("text-anchor", "end").text("support");
+    s.append("text").attr("x", 8).attr("y", m.t + 4).attr("font-size", 9).attr("fill", "#8b93a7").attr("transform", `rotate(-90 8 ${m.t + 4})`).attr("text-anchor", "end").text("attention →");
+    const pts = s.selectAll("g").data(mine).join("g").attr("transform", d => `translate(${x(d.e.score)},${y(d.e.salience)})`).style("cursor", "pointer").on("click", (ev, d) => { state.p.sel = d.e; renderProfile(); renderSide(); });
+    pts.append("circle").attr("r", d => 4 + d.e.n * 1.5).attr("fill", d => CAT_HUE[d.i.cat]).attr("fill-opacity", .85).attr("stroke", d => d.e.flip ? "#fbbf24" : "#0f1115").attr("stroke-width", d => d.e.flip ? 2 : 1).append("title").text(d => `${d.i.name}: ${fmt(d.e.score)}, ${d.e.n} statements`);
+    pts.append("text").attr("x", 0).attr("y", d => -(6 + d.e.n * 1.5)).attr("font-size", 8.5).attr("fill", "#cbd5e1").attr("text-anchor", "middle").text(d => d.i.name.length > 16 ? d.i.name.slice(0, 15) + "…" : d.i.name);
   }
   function drawBars(p, mine) {
     const svgEl = d3.select("#pbars"); svgEl.selectAll("*").remove();
     const P = state.p;
     const groups = d3.groups(mine.sort((a, b) => a.i.catName.localeCompare(b.i.catName) || b.e.score - a.e.score), x => x.i.cat);
-    const W = Math.max(520, $("pbars").parentElement.clientWidth - 28), L = 230, R = 70, rowH = 26, gh = 30, pad = 8;
+    const W = Math.max(560, $("pbars").parentElement.clientWidth - 28), L = 210, R = 150, rowH = 26, gh = 30, pad = 8, maxS = d3.max(mine, d => d.e.salience) || 1;
     const H = groups.reduce((a, [cat, rows]) => a + gh + (P.open.has(cat) ? rows.length * rowH : 0) + pad, 0) + 14;
     svgEl.attr("width", W).attr("height", H).attr("viewBox", `0 0 ${W} ${H}`);
     const x = d3.scaleLinear().domain([-1, 1]).range([L, W - R]);
@@ -420,7 +447,9 @@
         row.append("rect").attr("x", Math.min(x(0), x(r.e.score))).attr("y", 6).attr("width", Math.abs(x(r.e.score) - x(0))).attr("height", 14).attr("rx", 3).attr("fill", color(r.e.direction)).attr("fill-opacity", conf[r.e.llm_confidence]);
         const pm = (() => { const xs = EDGES.filter(e => e.to === r.e.to && e.from !== p.id && byId[e.from].party === p.party).map(e => e.score); return xs.length ? xs.reduce((a, b) => a + b, 0) / xs.length : null; })();
         if (pm !== null) row.append("rect").attr("x", x(pm) - 1.5).attr("y", 3).attr("width", 3).attr("height", 20).attr("fill", partyColor(p.party)).append("title").text(`party avg ${fmt(pm)}`);
-        row.append("text").attr("x", r.e.score >= 0 ? x(r.e.score) + 6 : x(r.e.score) - 6).attr("y", 17).attr("text-anchor", r.e.score >= 0 ? "start" : "end").attr("fill", color(r.e.direction)).attr("font-size", 11).attr("font-family", "var(--mono)").text(fmt(r.e.score) + (r.e.n > 1 ? `  ×${r.e.n}` : "") + (r.e.flip ? "  ⟲" : ""));
+        row.append("circle").attr("cx", x(r.e.score)).attr("cy", 13).attr("r", 2.5 + (r.e.salience / maxS) * 6.5).attr("fill", color(r.e.direction)).attr("stroke", "#0f1115").attr("stroke-width", 1.5).append("title").text(`attention ${Math.round(r.e.heat * 100)}th percentile · ${r.e.n} statements`);
+        row.append("text").attr("x", r.e.score >= 0 ? x(r.e.score) + 12 : x(r.e.score) - 12).attr("y", 17).attr("text-anchor", r.e.score >= 0 ? "start" : "end").attr("fill", color(r.e.direction)).attr("font-size", 11).attr("font-family", "var(--mono)").text(fmt(r.e.score) + (r.e.n > 1 ? `  ×${r.e.n}` : "") + (r.e.flip ? "  ⟲" : ""));
+        if (r.e.n > 1) row.append("foreignObject").attr("x", W - R + 10).attr("y", 2).attr("width", R - 14).attr("height", rowH).html(ribbon(r.e.statements, R - 14, 22, false));
         y += rowH;
       }
       y += pad;
@@ -473,7 +502,8 @@
     sim = d3.forceSimulation(nodes)
       .force("link", d3.forceLink(links).id(d => d.id).distance(l => explore ? 90 : (l.main ? 150 : 110)).strength(l => l.main ? .7 : .25))
       .force("charge", d3.forceManyBody().strength(explore ? -260 : -380)).force("center", d3.forceCenter(width / 2, height / 2)).force("collide", d3.forceCollide(d => d.kind === "topic" ? 40 : 22));
-    const link = g.append("g").selectAll("line").data(links).join("line").attr("stroke", d => color(d.e.direction)).attr("stroke-width", d => lw[d.e.linkage]).attr("stroke-opacity", d => d.main ? .7 : .2);
+    const link = g.append("g").selectAll("line").data(links).join("line").attr("stroke", d => color(d.e.direction)).attr("stroke-width", d => heatW(d.e.heat)).attr("stroke-opacity", d => (d.main ? .45 : .15) + Math.abs(d.e.score) * .45).attr("stroke-dasharray", d => d.e.flip ? "7 4" : null);
+    link.append("title").text(d => `${byId[d.e.from].name} on ${issueById[d.e.to].name}: ${d.e.direction} ${fmt(d.e.score)} · ${d.e.n} statement${d.e.n > 1 ? "s" : ""} · attention ${Math.round(d.e.heat * 100)}th pct${d.e.flip ? " · flipped" : ""}`);
     const node = g.append("g").selectAll("g").data(nodes).join("g").style("cursor", "pointer")
       .call(d3.drag().on("start", (ev, d) => { if (!ev.active) sim.alphaTarget(.3).restart(); d.fx = d.x; d.fy = d.y; }).on("drag", (ev, d) => { d.fx = ev.x; d.fy = ev.y; }).on("end", (ev, d) => { if (!ev.active) sim.alphaTarget(0); d.fx = null; d.fy = null; }))
       .on("click", (ev, d) => { if (d.kind === "person") { state.person = d.id; state.edge = null; render(); } else { const i = issueById[d.id]; if (explore || !d.main) { state.mode = "focus"; state.cat = i.cat; state.sub = i.sub; state.issue = i.id; state.person = null; render(); } } })
@@ -484,7 +514,7 @@
       .attr("stroke", d => state.person === d.id ? "#fff" : (byId[d.id].chamber === "senate" ? "#fcd34d" : "#0f1115")).attr("stroke-width", 2);
     node.append("text").attr("class", d => "node-label" + (d.kind === "topic" ? " topic" : "")).attr("text-anchor", "middle").attr("dy", d => d.kind === "topic" ? (explore ? 36 : 5) : 22).text(d => d.name);
     function highlight(d) {
-      if (!d) { node.attr("opacity", 1); link.attr("stroke-opacity", l => l.main ? .7 : .2); return; }
+      if (!d) { node.attr("opacity", 1); link.attr("stroke-opacity", l => (l.main ? .45 : .15) + Math.abs(l.e.score) * .45); return; }
       const near = new Set([d.id]); links.forEach(l => { if (l.source.id === d.id) near.add(l.target.id); if (l.target.id === d.id) near.add(l.source.id); });
       node.attr("opacity", n => near.has(n.id) ? 1 : .15); link.attr("stroke-opacity", l => l.source.id === d.id || l.target.id === d.id ? .95 : .05);
     }
