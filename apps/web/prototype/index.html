@@ -141,11 +141,11 @@
   .link { color: var(--accent); cursor: pointer; font-size: 12px; }
   @media (max-width: 1100px) { .pgrid { grid-template-columns: 1fr; } }
   /* profile v2 */
-  .hero { display: grid; grid-template-columns: 56px 1fr auto; gap: 16px; align-items: center; padding: 14px 16px; background: var(--panel); border: 1px solid var(--border); border-radius: 14px; margin-bottom: 14px; }
+  .hero { display: grid; grid-template-columns: 56px minmax(260px, 1fr) auto; gap: 16px; align-items: center; padding: 14px 16px; background: var(--panel); border: 1px solid var(--border); border-radius: 14px; margin-bottom: 14px; }
   .hero .avatar { width: 56px; height: 56px; font-size: 20px; }
   .hero h1 { margin: 0; font-size: 20px; line-height: 1.2; }
   .hero .meta { color: var(--muted); font-size: 12px; margin-top: 3px; }
-  .strip { display: flex; gap: 0; border-left: 1px solid var(--border); }
+  .strip { display: flex; gap: 0; border-left: 1px solid var(--border); flex-wrap: wrap; row-gap: 8px; }
   .strip .stat { padding: 0 14px; display: flex; flex-direction: column; align-items: flex-start; border-right: 1px solid var(--border); }
   .strip .stat:last-child { border-right: 0; }
   .strip .v { font: 700 17px var(--mono); line-height: 1.1; }
