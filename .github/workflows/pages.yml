@@ -1,9 +1,9 @@
-name: Deploy prototype to GitHub Pages
+name: Deploy web app to GitHub Pages
 
 on:
   push:
     branches: [main]
-    paths: ["apps/web/prototype/**", "packages/contract/**", ".github/workflows/pages.yml"]
+    paths: ["apps/web/**", "data/**", "packages/contract/**", ".github/workflows/pages.yml"]
   workflow_dispatch:
 
 permissions:
@@ -27,10 +27,16 @@ jobs:
         with:
           node-version: 20
       - name: Validate data against packages/contract
-        run: node packages/contract/validate.mjs apps/web/prototype/data --records services/process/samples
+        run: node packages/contract/validate.mjs data --records data/records
+      - name: Assemble site (app + contract-B data files)
+        run: |
+          mkdir -p _site/data
+          cp -r apps/web/. _site/
+          cp data/taxonomy.json data/issues.json data/people.json data/stances.json _site/data/
+          if [ -f data/summaries.json ]; then cp data/summaries.json _site/data/; fi
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: apps/web/prototype
+          path: _site
       - id: deployment
         uses: actions/deploy-pages@v4

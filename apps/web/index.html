@@ -207,6 +207,14 @@
   #profile { padding: 18px 28px 40px; }
   .pgrid { grid-template-columns: 1fr 320px; gap: 28px; }
   @media (max-width: 1180px) { .masthead .crumb { display: none; } .masthead { gap: 18px; } .masthead .tagline { display: none; } }
+  /* scrollbars: thin, on-theme */
+  * { scrollbar-width: thin; scrollbar-color: #2a3148 transparent; }
+  *::-webkit-scrollbar { width: 8px; height: 8px; }
+  *::-webkit-scrollbar-track { background: transparent; }
+  *::-webkit-scrollbar-thumb { background: #2a3148; border-radius: 999px; border: 2px solid transparent; background-clip: padding-box; }
+  *::-webkit-scrollbar-thumb:hover { background: #3a4260; background-clip: padding-box; }
+  *::-webkit-scrollbar-button { display: none; height: 0; width: 0; }
+  *::-webkit-scrollbar-corner { background: transparent; }
 </style>
 </head>
 <body>
@@ -237,7 +245,9 @@
 <script>
 (async () => {
   // ---------- load ----------
-  const load = async f => { const r = await fetch(`./data/${f}`); if (!r.ok) throw new Error(`${f}: ${r.status}`); return r.json(); };
+  // Data lives in <repo>/data. GitHub Pages copies it next to this page; local dev serves the repo root.
+  const DATA_BASE = (await fetch("./data/people.json", { method: "HEAD" }).then(r => r.ok).catch(() => false)) ? "./data/" : "../../data/";
+  const load = async f => { const r = await fetch(`${DATA_BASE}${f}`); if (!r.ok) throw new Error(`${f}: ${r.status}`); return r.json(); };
   let taxonomy, issuesRaw, peopleRaw, stancesRaw, summariesRaw = { summaries: {} };
   try { [taxonomy, issuesRaw, peopleRaw, stancesRaw] = await Promise.all(["taxonomy.json", "issues.json", "people.json", "stances.json"].map(load)); }
   catch (e) { document.getElementById("loading").textContent = "Could not load data/*.json — serve this folder over http (see data/README.md). " + e.message; return; }

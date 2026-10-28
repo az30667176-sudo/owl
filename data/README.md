@@ -1,8 +1,8 @@
 # Prototype data contract
 
-> Authoritative schemas + validator: [`packages/contract/`](../../../../packages/contract/README.md). This file is the frontend-side description of the same shapes.
+> Authoritative schemas + validator: [`packages/contract/`](../packages/contract/README.md). This file is the frontend-side description of the same shapes.
 
-The prototype UI loads these four files at startup. Drop real data in the same shape and the UI works unchanged.
+The web app loads these files at startup (GitHub Pages copies this directory next to `apps/web/index.html`). Drop real data in the same shape and the UI works unchanged.
 All ids are stable strings; names are display-only.
 
 | File | One row per | Key fields |

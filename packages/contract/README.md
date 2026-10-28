@@ -19,8 +19,8 @@ Owners: A is owned by **ingest** (producer) and **process** (consumer) jointly; 
 Validate anything against the contracts with:
 
 ```bash
-node packages/contract/validate.mjs apps/web/prototype/data --records services/process/samples   # contract B (+ verbatim quotes)
-node packages/contract/validate.mjs --record services/process/samples/record-hearing-mock.json   # contract A
+node packages/contract/validate.mjs data --records data/records   # contract B (+ verbatim quotes)
+node packages/contract/validate.mjs --record data/records/record-hearing-mock.json   # contract A
 ```
 
 The GitHub Pages workflow runs the first command before every deploy; invalid data never ships.
@@ -42,7 +42,7 @@ One JSON object per unit of text the model should read in one go (a hearing exce
 | `hints.bill_urls` | uri[] | no | bills under discussion |
 | `_meta.mock` | bool | no | true for fictional samples; never set on real data |
 
-Example: `services/process/samples/record-hearing-mock.json`.
+Example: `data/records/record-hearing-mock.json`.
 
 ## Contract B — data files (process → frontend)
 

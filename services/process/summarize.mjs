@@ -3,10 +3,10 @@
 //
 //   node services/process/summarize.mjs [--only p09,p04] [--model muse-spark-1.3] [--dry]
 //
-// Reads  apps/web/prototype/data/{people,issues,taxonomy,stances}.json
-// Writes apps/web/prototype/data/summaries.json  (merging with existing entries)
+// Reads  data/{people,issues,taxonomy,stances}.json
+// Writes data/summaries.json  (merging with existing entries)
 //
-// Contract (see apps/web/prototype/data/README.md): 2-4 neutral sentences, every sentence
+// Contract (see data/README.md): 2-4 neutral sentences, every sentence
 // cites >= 1 statement_id that belongs to this legislator. Sentences whose citations fail
 // validation are dropped; a legislator with zero valid sentences is skipped and reported.
 
@@ -15,7 +15,7 @@ import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "../..");
-const DATA = resolve(ROOT, "apps/web/prototype/data");
+const DATA = resolve(ROOT, "data");
 const args = process.argv.slice(2);
 const opt = (name, def) => { const i = args.indexOf(name); return i >= 0 ? args[i + 1] : def; };
 const ONLY = opt("--only", "") ? opt("--only").split(",") : null;

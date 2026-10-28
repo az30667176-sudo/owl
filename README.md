@@ -42,9 +42,12 @@ consistency, verbatim quotes and summary citations. The Pages workflow runs it b
 
 ```
 apps/web/                      Data vis
-  prototype/index.html           the whole app (HTML + vanilla JS + D3, no build step)
-  prototype/data/                the five contract-B files the app loads (mock today)
-  prototype/assets/logo/         Muse Image logo
+  index.html                     the whole app (HTML + vanilla JS + D3, no build step)
+  assets/logo/                   Muse Image logo
+data/                          Contract-B data store (process writes, web reads; mock today)
+  taxonomy.json · issues.json · people.json · stances.json · summaries.json
+  records/                       contract-A records (mock sample; real ones optional, used to re-check quotes)
+  extracted/                     per-record extraction logs (accepted / rejected / new issues)
 packages/contract/             Contracts A / B / C
   README.md                      field-by-field spec, ownership, change process
   *.schema.json                  JSON Schema per file
@@ -54,10 +57,9 @@ services/ingest/               Data producer + pre-processing (contract A out)
 services/process/              Data process (contract A in, contract B out)
   extract.mjs                    record → statement rows via Muse Spark, with quote/direction/id checks
   summarize.mjs                  statements → per-legislator summary with validated citations
-  gen-image.mjs                  Muse Image helper
-  samples/                       mock contract-A record
+tools/                         gen-image.mjs (Muse Image) · claude-muse.ps1 (run Claude Code on the Meta Model API)
 docs/                          ARCHITECTURE.md (board + ERD) · WORKFLOW.md (issues, labels, gh)
-.github/                       Pages deploy (validates data first), issue + PR templates
+.github/                       Pages deploy (validate data → assemble app + data → publish), issue + PR templates
 ```
 
 ## Workflow (async, issue-driven)
@@ -75,17 +77,17 @@ Cheatsheet: [docs/WORKFLOW.md](docs/WORKFLOW.md).
 
 ```bash
 cp .env.example .env                                  # MODEL_API_KEY (Meta Model API), CONGRESS_API_KEY
-cd apps/web/prototype && python -m http.server 8090   # open http://localhost:8090 (fetch needs http, not file://)
-node packages/contract/validate.mjs apps/web/prototype/data --records services/process/samples
-node services/process/extract.mjs services/process/samples/record-hearing-mock.json   # one record → statements
+python -m http.server 8090                            # from the repo root; open http://localhost:8090/apps/web/
+node packages/contract/validate.mjs data --records data/records
+node services/process/extract.mjs data/records/record-hearing-mock.json   # one record → statements
 node services/process/summarize.mjs                                                    # statements → summaries
 ```
 
 ## Meta models used
 
 - **Muse Spark 1.3** — stance extraction and scoring, per-legislator summaries (`services/process`)
-- **Muse Image 1.0** — logo and shareable cards (`services/process/gen-image.mjs`)
-- **Muse Code** — team coding agent during development
+- **Muse Image 1.0** — logo and shareable cards (`tools/gen-image.mjs`)
+- **Muse Code / Claude Code on Muse** — coding during development (`tools/claude-muse.ps1` points Claude Code at the Meta Model API)
 
 ## Team
 

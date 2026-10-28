@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 // Generate an image with Muse Image (Meta Model API) and save it as PNG.
-//   node services/process/gen-image.mjs <out.png> "<prompt>" [size]
+//   node tools/gen-image.mjs <out.png> "<prompt>" [size]
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
-const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "../..");
+const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 if (existsSync(resolve(ROOT, ".env"))) for (const line of readFileSync(resolve(ROOT, ".env"), "utf8").split(/\r?\n/)) {
   const m = /^([A-Z0-9_]+)=(.*)$/.exec(line.trim()); if (m && !process.env[m[1]]) process.env[m[1]] = m[2];
 }

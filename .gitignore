@@ -10,3 +10,4 @@ dist/
 data/raw/
 *.log
 .DS_Store
+data/_site

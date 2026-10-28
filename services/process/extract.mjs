@@ -3,8 +3,8 @@
 //
 //   node services/process/extract.mjs <record.json> [--merge] [--model muse-spark-1.3]
 //
-// Reads taxonomy/issues/people from apps/web/prototype/data. Writes
-// apps/web/prototype/data/extracted/<record id>.json; with --merge also appends the
+// Reads taxonomy/issues/people from data. Writes
+// data/extracted/<record id>.json; with --merge also appends the
 // validated statements to stances.json and any new issues to issues.json.
 //
 // Hard validation (a statement that fails any check is dropped and reported):
@@ -18,7 +18,7 @@ import { resolve, dirname, basename } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "../..");
-const DATA = resolve(ROOT, "apps/web/prototype/data");
+const DATA = resolve(ROOT, "data");
 const args = process.argv.slice(2);
 const recordPath = args.find(a => !a.startsWith("--"));
 const opt = (n, d) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : d; };
