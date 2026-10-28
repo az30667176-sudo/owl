@@ -1,0 +1,116 @@
+{
+  "record_id": "rec-2026-09-18-hssy-research-hearing",
+  "model": "muse-spark-1.3",
+  "extracted_at": "2026-10-28T06:12:08.569Z",
+  "accepted": [
+    {
+      "statement_id": "st063",
+      "person": "p05",
+      "issue": "data-centers",
+      "date": "2026-09-18",
+      "score": 0.7,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "I support this bill, and I want to be clear about why.",
+      "bill": "H.R. 6110",
+      "source": "https://www.congress.gov/congressional-record/mock/hearing-2026-09-18",
+      "record_id": "rec-2026-09-18-hssy-research-hearing",
+      "model": "muse-spark-1.3",
+      "rationale": "She explicitly supports the bill while conditioning final passage on a water-use disclosure amendment."
+    },
+    {
+      "statement_id": "st064",
+      "person": "p04",
+      "issue": "data-centers",
+      "date": "2026-09-18",
+      "score": 1,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "Federal permitting reform is overdue and this bill does it; I support it without reservation.",
+      "bill": "H.R. 6110",
+      "source": "https://www.congress.gov/congressional-record/mock/hearing-2026-09-18",
+      "record_id": "rec-2026-09-18-hssy-research-hearing",
+      "model": "muse-spark-1.3",
+      "rationale": "He states unreserved support for the bill and urges clean passage."
+    },
+    {
+      "statement_id": "st065",
+      "person": "p09",
+      "issue": "data-centers",
+      "date": "2026-09-18",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "So yes, I support the permitting title.",
+      "bill": "H.R. 6110",
+      "source": "https://www.congress.gov/congressional-record/mock/hearing-2026-09-18",
+      "record_id": "rec-2026-09-18-hssy-research-hearing",
+      "model": "muse-spark-1.3",
+      "rationale": "He explicitly affirms support for the permitting title."
+    },
+    {
+      "statement_id": "st066",
+      "person": "p09",
+      "issue": "ai-regulation",
+      "date": "2026-09-18",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "I also want the record to show I am not persuaded that we need a federal AI licensing regime on top of it; that is a separate bill and I remain opposed to it.",
+      "bill": null,
+      "source": "https://www.congress.gov/congressional-record/mock/hearing-2026-09-18",
+      "record_id": "rec-2026-09-18-hssy-research-hearing",
+      "model": "muse-spark-1.3",
+      "rationale": "He explicitly states continued opposition to a federal AI licensing regime."
+    },
+    {
+      "statement_id": "st067",
+      "person": "p07",
+      "issue": "data-centers",
+      "date": "2026-09-18",
+      "score": -0.8,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "Until this bill contains an enforceable water cap, not a disclosure, a cap, I am a no.",
+      "bill": "H.R. 6110",
+      "source": "https://www.congress.gov/congressional-record/mock/hearing-2026-09-18",
+      "record_id": "rec-2026-09-18-hssy-research-hearing",
+      "model": "muse-spark-1.3",
+      "rationale": "She declares she cannot support the bill as written without an enforceable water cap."
+    },
+    {
+      "statement_id": "st068",
+      "person": "p01",
+      "issue": "gun-policy",
+      "date": "2026-09-18",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "we cannot keep burying children while weapons of war are sold without so much as a background check. I will vote yes when it reaches the floor.",
+      "bill": "H.R. 4410",
+      "source": "https://www.congress.gov/congressional-record/mock/hearing-2026-09-18",
+      "record_id": "rec-2026-09-18-hssy-research-hearing",
+      "model": "muse-spark-1.3",
+      "rationale": "She affirms she will vote yes for background checks to restrict sales without checks."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 4396,
+    "prompt_tokens": 2762,
+    "total_tokens": 7158,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3740
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}
