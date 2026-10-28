@@ -397,7 +397,7 @@
     const i = issueById[state.issue];
     if (!i) { $side.innerHTML = `<div class="empty-state">Choose a committee, subcommittee and issue.</div>`; return; }
     const edges = EDGES.filter(e => e.to === i.id).sort((a, b) => b.score - a.score);
-    const ticks = edges.map(e => `<span class="tick" style="left:${(e.score + 1) / 2 * 100}%;background:${color(e.direction)}"></span>`).join("");
+    const ticks = edges.map(e => `<span class="tick" data-open="${e.from}" title="${title(byId[e.from])} · ${fmt(e.score)} — open profile" style="left:${(e.score + 1) / 2 * 100}%;background:${color(e.direction)};cursor:pointer"></span>`).join("");
     const rows = edges.map(e => { const p = byId[e.from], pct = Math.abs(e.score) * 50, left = e.score < 0 ? 50 - pct : 50;
       return `<div class="row ${state.person === p.id ? "active" : ""}" data-id="${p.id}"><div><div class="name">${title(p)}</div><div class="meta">${seat(p)} · ${p.party}</div><div class="bar"><span style="left:${left}%;width:${pct}%;background:${color(e.direction)}"></span></div></div><div class="score" style="color:${color(e.direction)}">${fmt(e.score)}</div></div>`; }).join("");
     const sel = state.person && edges.find(e => e.from === state.person);
@@ -638,7 +638,7 @@
     link.append("title").text(d => `${byId[d.e.from].name} on ${issueById[d.e.to].name}: ${d.e.direction} ${fmt(d.e.score)} · ${d.e.n} statement${d.e.n > 1 ? "s" : ""} · attention ${Math.round(d.e.heat * 100)}th pct${d.e.flip ? " · flipped" : ""}`);
     const node = g.append("g").selectAll("g").data(nodes).join("g").style("cursor", "pointer")
       .call(d3.drag().on("start", (ev, d) => { if (!ev.active) sim.alphaTarget(.3).restart(); d.fx = d.x; d.fy = d.y; }).on("drag", (ev, d) => { d.fx = ev.x; d.fy = ev.y; }).on("end", (ev, d) => { if (!ev.active) sim.alphaTarget(0); d.fx = null; d.fy = null; }))
-      .on("click", (ev, d) => { if (d.kind === "person") { state.person = d.id; state.edge = null; render(); } else { const i = issueById[d.id]; if (explore || !d.main) { state.mode = "focus"; state.cat = i.cat; state.sub = i.sub; state.issue = i.id; state.person = null; render(); } } })
+      .on("click", (ev, d) => { if (d.kind === "person") { openProfile(d.id); } else { const i = issueById[d.id]; if (explore || !d.main) { state.mode = "focus"; state.cat = i.cat; state.sub = i.sub; state.issue = i.id; state.person = null; render(); } } })
       .on("mouseenter", (ev, d) => highlight(d)).on("mouseleave", () => highlight(null));
     node.filter(d => d.kind === "topic").append("circle").attr("r", d => explore ? 14 + Math.min(16, (deg[d.id] || 0) * 2) : 18).attr("fill", d => d.main ? CAT_HUE[d.cat] : "var(--border)").attr("fill-opacity", d => d.main ? .9 : 1).attr("stroke", d => d.main ? "#fff" : "var(--border-strong)").attr("stroke-width", 1.5);
     node.filter(d => d.kind === "person").append("circle").attr("r", d => state.person === d.id ? 14 : (byId[d.id].chamber === "senate" ? 11 : 9))
@@ -658,8 +658,8 @@
     ["explore", "focus", "list", "profile"].forEach(m => $("m-" + m).classList.toggle("active", state.mode === m));
     if (state.mode === "profile") { const p = byId[state.p.person]; $crumb.innerHTML = p ? `<b>${p.name}</b> · ${seat(p)}` : `<b>Legislators</b>`; $hint.textContent = ""; }
     else if (state.mode === "list") { $crumb.innerHTML = `<b>Legislator list</b> · dropdown filters`; $hint.textContent = ""; }
-    else if (state.mode === "explore") { $crumb.innerHTML = `<b>All issues</b> · filtered view`; $hint.textContent = "Tick issues on the left to filter · hover to see connections · click an issue to focus · click a legislator for evidence"; }
-    else { const i = issueById[state.issue]; $crumb.innerHTML = i ? `<b>${i.catName}</b> › ${i.subName} › <b>${i.name}</b>` : "Pick an issue"; $hint.textContent = "Drag nodes · click a legislator for evidence · grey issues = what these legislators also talk about"; }
+    else if (state.mode === "explore") { $crumb.innerHTML = `<b>All issues</b> · filtered view`; $hint.textContent = "Tick issues on the left to filter · hover to see connections · click an issue to focus · click a legislator to open their page"; }
+    else { const i = issueById[state.issue]; $crumb.innerHTML = i ? `<b>${i.catName}</b> › ${i.subName} › <b>${i.name}</b>` : "Pick an issue"; $hint.textContent = "Drag nodes · click a legislator to open their page · grey issues = what these legislators also talk about"; }
   }
   function renderAside() { ({ explore: renderExploreAside, focus: renderFocusAside, list: renderListAside, profile: renderProfileAside })[state.mode](); }
   function renderSide() {
