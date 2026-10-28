@@ -15,19 +15,6 @@ Stances are extracted and scored by **Muse Spark** (Meta Model API). Every state
 one click. Per-legislator summaries are written by Muse Spark too, with every sentence citing the
 statements it rests on.
 
-## What the frontend does today
-
-| View | What you get |
-|---|---|
-| **Explore** | Force graph of issues (grouped by House committee) and representatives (coloured by party). Edge width = attention, dashed = flipped. Filters: issue, state, party, direction, min confidence, search. |
-| **Issues** | One issue, every representative on the spectrum, with their other issues one hover away. |
-| **Find** | Dropdown filters → sortable table of (representative, issue, score, quote) rows → CSV. |
-| **Legislators** | Profile per member: hero + stats, AI summary with clickable citations, attention map, stances by committee, timeline of every statement. Deep link `#/legislator/<id>`. |
-
-Issue taxonomy = **House standing committees → subcommittees → issues** (three levels).
-The UI loads five JSON files at startup and derives everything else in the browser; drop in real
-files of the same shape and nothing else changes.
-
 ## Architecture
 
 Four boxes, three contracts (mirrors the team board):
