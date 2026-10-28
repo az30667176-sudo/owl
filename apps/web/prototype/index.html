@@ -4,17 +4,27 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>OWL Prototype</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,400&family=Public+Sans:wght@400;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
 <style>
+  /* OWL Night Watch tokens: see the design system (claude.ai/artifact/EpJB5dSQaBEEuKzhToDhF1) */
   :root {
-    --bg: #0f1115; --panel: #171a21; --panel-2: #1e222b; --border: #2a2f3a;
-    --text: #e6e8ee; --muted: #8b93a7; --accent: #8b5cf6;
-    --support: #22c55e; --oppose: #ef4444; --neutral: #9ca3af;
-    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    --bg: #0f1322; --panel: #171c2e; --panel-2: #1f2538; --border: #2c3348; --border-strong: #4a5372;
+    --text: #efe6d2; --muted: #aaa493; --faint: #6c6f7d;
+    --accent: #f0b429; --on-accent: #1a1200; --parchment: #efe6d2;
+    --support: #3fcf77; --oppose: #f2705f; --neutral: #9aa3b2;
+    --party-d: #5b8cff; --party-r: #ff7a6b; --party-i: #b9bfcc;
+    --ai: #c9b6ff; --ai-wash: #1d1a33;
+    --sans: "Public Sans", "Segoe UI", system-ui, sans-serif;
+    --display: "Fraunces", "Iowan Old Style", Georgia, serif;
+    --mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
   }
   * { box-sizing: border-box; }
   html, body { height: 100%; margin: 0; background: var(--bg); color: var(--text);
-    font: 14px/1.45 -apple-system, "Segoe UI", Inter, Roboto, sans-serif; }
+    font: 14px/1.45 var(--sans); }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  h1, .topic-title, .person-card .name, .ph h1, .hero h1 { font-family: var(--display); font-weight: 600; letter-spacing: -.01em; }
   .app { display: grid; grid-template-columns: 280px 1fr 360px; grid-template-rows: 48px 1fr; height: 100vh; }
   header { grid-column: 1 / -1; display: flex; align-items: center; gap: 14px; padding: 0 16px; border-bottom: 1px solid var(--border); background: var(--panel); }
   header .brand { font-weight: 700; letter-spacing: .3px; }
@@ -22,25 +32,25 @@
   header .crumb b { color: var(--text); font-weight: 600; }
   .modes { display: inline-flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-left: 8px; }
   .modes button { background: transparent; border: 0; color: var(--muted); padding: 5px 12px; cursor: pointer; font: inherit; font-size: 12px; }
-  .modes button.active { background: var(--accent); color: white; }
-  header .mock { margin-left: auto; font-size: 11px; padding: 3px 8px; border: 1px solid #b45309; color: #fbbf24; border-radius: 999px; }
+  .modes button.active { background: var(--accent); color: var(--on-accent); }
+  header .mock { margin-left: auto; font-size: 11px; padding: 3px 8px; border: 1px solid var(--accent); color: var(--accent); border-radius: 999px; }
   aside, section, .side { overflow: auto; }
   aside { border-right: 1px solid var(--border); background: var(--panel); padding: 10px 12px 24px; }
   .h { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 14px 4px 6px; display: flex; justify-content: space-between; }
   .h a { color: var(--accent); cursor: pointer; text-transform: none; letter-spacing: 0; font-size: 11px; }
   .cat { padding: 7px 10px; border-radius: 8px; cursor: pointer; color: var(--text); display: flex; justify-content: space-between; gap: 8px; font-size: 13px; }
   .cat:hover { background: var(--panel-2); }
-  .cat.active { background: rgba(139,92,246,.18); color: #c4b5fd; }
+  .cat.active { background: rgba(240,180,41,.14); color: var(--accent); }
   .cat .n { color: var(--muted); font-size: 12px; }
   .subs { display: flex; flex-wrap: wrap; gap: 6px; padding: 2px 4px 4px; }
   .chip { font-size: 12px; padding: 4px 10px; border: 1px solid var(--border); border-radius: 999px; cursor: pointer; color: var(--muted); user-select: none; }
   .chip:hover { border-color: var(--accent); color: var(--text); }
-  .chip.active { background: var(--accent); border-color: var(--accent); color: white; }
+  .chip.active { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
   .chip.empty { opacity: .4; cursor: default; }
-  .chip.d.active { background: #2563eb; border-color: #2563eb; }
-  .chip.r.active { background: #dc2626; border-color: #dc2626; }
-  .chip.support.active { background: var(--support); border-color: var(--support); color: #052e16; }
-  .chip.oppose.active { background: var(--oppose); border-color: var(--oppose); }
+  .chip.d.active { background: var(--party-d); border-color: var(--party-d); color: #06112b; }
+  .chip.r.active { background: var(--party-r); border-color: var(--party-r); color: #2b0906; }
+  .chip.support.active { background: var(--support); border-color: var(--support); color: #04200f; }
+  .chip.oppose.active { background: var(--oppose); border-color: var(--oppose); color: #2b0906; }
   .chip.neutral.active { background: var(--neutral); border-color: var(--neutral); color: #111; }
   .search, .field select { width: 100%; background: var(--panel-2); border: 1px solid var(--border); color: var(--text); border-radius: 8px; padding: 7px 10px; font: inherit; font-size: 13px; outline: none; }
   .search:focus, .field select:focus { border-color: var(--accent); }
@@ -64,26 +74,26 @@
   .side { border-left: 1px solid var(--border); background: var(--panel); padding: 14px; }
   .topic-title { font-size: 18px; font-weight: 700; margin: 0 0 2px; }
   .topic-sub { color: var(--muted); font-size: 12px; margin-bottom: 12px; }
-  .spectrum { height: 8px; border-radius: 999px; background: linear-gradient(90deg, var(--oppose), #4b5563 50%, var(--support)); position: relative; margin: 6px 0 14px; }
+  .spectrum { height: 8px; border-radius: 999px; background: linear-gradient(90deg, var(--oppose), var(--border-strong) 50%, var(--support)); position: relative; margin: 6px 0 14px; }
   .spectrum .tick { position: absolute; top: -4px; width: 4px; height: 16px; border-radius: 2px; background: white; opacity: .85; transform: translateX(-2px); }
   .row { display: grid; grid-template-columns: 1fr auto; gap: 8px; align-items: center; padding: 8px 8px; border-radius: 8px; cursor: pointer; }
   .row:hover, .row.active { background: var(--panel-2); }
   .row .name { font-weight: 600; }
   .row .meta { color: var(--muted); font-size: 12px; }
-  .bar { height: 6px; border-radius: 999px; background: #2a2f3a; position: relative; margin-top: 5px; overflow: hidden; }
+  .bar { height: 6px; border-radius: 999px; background: var(--border); position: relative; margin-top: 5px; overflow: hidden; }
   .bar > span { position: absolute; top: 0; bottom: 0; }
   .score { font-family: var(--mono); font-size: 12px; min-width: 44px; text-align: right; }
   .evidence { margin-top: 14px; padding: 12px; background: var(--panel-2); border: 1px solid var(--border); border-radius: 10px; }
-  .evidence blockquote { margin: 8px 0; padding-left: 10px; border-left: 3px solid var(--accent); color: #d1d5db; font-style: italic; }
+  .evidence blockquote { margin: 8px 0; padding-left: 10px; border-left: 3px solid var(--accent); color: var(--text); font-family: var(--display); font-style: italic; font-size: 15px; line-height: 24px; }
   .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
   .tag { font-size: 11px; padding: 2px 7px; border-radius: 6px; border: 1px solid var(--border); color: var(--muted); font-family: var(--mono); }
-  .tag.c-high, .tag.c-super_high { border-color: #166534; color: #86efac; }
-  .tag.c-mid { border-color: #854d0e; color: #fde047; }
-  .tag.c-low { border-color: #7f1d1d; color: #fca5a5; }
-  .evidence a { color: #a78bfa; font-size: 12px; }
+  .tag.c-high, .tag.c-super_high { border-color: var(--support); color: var(--support); }
+  .tag.c-mid { border-color: var(--accent); color: var(--accent); }
+  .tag.c-low { border-color: var(--oppose); color: var(--oppose); }
+  .evidence a { color: var(--accent); font-size: 12px; }
   .empty-state { color: var(--muted); padding: 20px 8px; }
-  .node-label { font-size: 11px; fill: #cbd5e1; pointer-events: none; }
-  .node-label.topic { font-size: 12px; font-weight: 700; fill: #f3f4f6; }
+  .node-label { font-size: 11px; fill: var(--text); pointer-events: none; }
+  .node-label.topic { font-size: 12px; font-weight: 700; fill: var(--text); }
   .person-card { padding: 10px 8px; border-radius: 8px; }
   .person-card .name { font-weight: 700; font-size: 16px; }
   .person-card .meta { color: var(--muted); font-size: 12px; margin-bottom: 8px; }
@@ -102,9 +112,9 @@
   tbody tr:hover, tbody tr.active { background: var(--panel-2); }
   td.quote { max-width: 320px; overflow: hidden; text-overflow: ellipsis; color: var(--muted); }
   .pill { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 11px; font-weight: 600; }
-  .pill.D { background: rgba(59,130,246,.2); color: #93c5fd; } .pill.R { background: rgba(248,113,113,.2); color: #fca5a5; } .pill.I { background: rgba(156,163,175,.2); color: #d1d5db; }
-  .pill.support { background: rgba(34,197,94,.18); color: #86efac; } .pill.oppose { background: rgba(239,68,68,.18); color: #fca5a5; } .pill.neutral { background: rgba(156,163,175,.18); color: #d1d5db; }
-  .pill.house { background: rgba(139,92,246,.18); color: #c4b5fd; } .pill.senate { background: rgba(245,158,11,.18); color: #fcd34d; }
+  .pill.D { background: rgba(91,140,255,.2); color: var(--party-d); } .pill.R { background: rgba(255,122,107,.2); color: var(--party-r); } .pill.I { background: rgba(185,191,204,.2); color: var(--party-i); }
+  .pill.support { background: rgba(63,207,119,.18); color: var(--support); } .pill.oppose { background: rgba(242,112,95,.18); color: var(--oppose); } .pill.neutral { background: rgba(154,163,178,.18); color: var(--neutral); }
+  .pill.house { background: rgba(240,180,41,.18); color: var(--accent); } .pill.senate { background: rgba(245,158,11,.18); color: var(--accent); }
   .toolbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; color: var(--muted); font-size: 12px; }
   #loading { position: fixed; inset: 0; display: grid; place-items: center; background: var(--bg); color: var(--muted); z-index: 10; }
   /* profile mode */
@@ -122,13 +132,13 @@
   .card h3 { margin: 0 0 4px; font-size: 14px; }
   .card .sub { color: var(--muted); font-size: 12px; margin-bottom: 10px; }
   .pbar-row { cursor: pointer; }
-  .pbar-row:hover rect.bg, .pbar-row.active rect.bg { fill: #242935; }
+  .pbar-row:hover rect.bg, .pbar-row.active rect.bg { fill: var(--panel-2); }
   .dir-list { display: flex; flex-direction: column; gap: 4px; margin-top: 4px; }
   .dir-row { display: flex; justify-content: space-between; align-items: center; padding: 7px 8px; border-radius: 8px; cursor: pointer; }
   .dir-row:hover, .dir-row.active { background: var(--panel-2); }
   .dir-row .n { font-weight: 600; font-size: 13px; }
   .dir-row .d { color: var(--muted); font-size: 11px; }
-  .link { color: #a78bfa; cursor: pointer; font-size: 12px; }
+  .link { color: var(--accent); cursor: pointer; font-size: 12px; }
   @media (max-width: 1100px) { .pgrid { grid-template-columns: 1fr; } }
   /* profile v2 */
   .hero { display: grid; grid-template-columns: 56px 1fr auto; gap: 16px; align-items: center; padding: 14px 16px; background: var(--panel); border: 1px solid var(--border); border-radius: 14px; margin-bottom: 14px; }
@@ -140,18 +150,18 @@
   .strip .stat:last-child { border-right: 0; }
   .strip .v { font: 700 17px var(--mono); line-height: 1.1; }
   .strip .l { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; margin-top: 2px; }
-  .card.ai { border-color: #4c1d95; background: linear-gradient(180deg, rgba(139,92,246,.10), rgba(139,92,246,.03)); margin-bottom: 14px; }
+  .card.ai { border-color: var(--ai); background: var(--ai-wash); margin-bottom: 14px; }
   .card.ai.dim { opacity: .7; }
   .ai-h { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
-  .ai-badge { font-size: 11px; font-weight: 700; color: #c4b5fd; border: 1px solid #6d28d9; border-radius: 999px; padding: 2px 8px; }
+  .ai-badge { font-size: 11px; font-weight: 700; color: var(--ai); border: 1px solid var(--ai); border-radius: 999px; padding: 2px 8px; }
   .ai-body p { margin: 8px 0 0; font-size: 14px; line-height: 1.55; }
-  .cite { font: 600 11px var(--mono); color: #a78bfa; cursor: pointer; margin-left: 2px; }
+  .cite { font: 600 11px var(--mono); color: var(--ai); cursor: pointer; margin-left: 2px; }
   .cite:hover { text-decoration: underline; }
   .tabs { display: flex; gap: 4px; margin: 4px 0 12px; border-bottom: 1px solid var(--border); }
   .tabs button { background: transparent; border: 0; border-bottom: 2px solid transparent; color: var(--muted); padding: 8px 12px; font: inherit; font-size: 13px; cursor: pointer; }
   .tabs button.active { color: var(--text); border-bottom-color: var(--accent); }
   .tabpane[hidden] { display: none; }
-  .stmt.hl { background: rgba(139,92,246,.12); border-radius: 8px; padding: 10px 8px 4px; margin-left: -8px; margin-right: -8px; }
+  .stmt.hl { background: rgba(201,182,255,.12); border-radius: 8px; padding: 10px 8px 4px; margin-left: -8px; margin-right: -8px; }
   @media (max-width: 1100px) { .hero { grid-template-columns: 56px 1fr; } .strip { grid-column: 1 / -1; border-left: 0; flex-wrap: wrap; } }
 </style>
 </head>
@@ -194,7 +204,7 @@
 
   // ---------- model ----------
   const COMMITTEES = taxonomy.committees;
-  const PALETTE = ["#f59e0b", "#06b6d4", "#ec4899", "#84cc16", "#8b5cf6", "#f97316", "#14b8a6", "#e11d48", "#3b82f6", "#a3e635", "#d946ef", "#0ea5e9", "#facc15", "#22c55e", "#fb7185", "#2dd4bf", "#c084fc", "#fbbf24", "#60a5fa", "#4ade80"];
+  const PALETTE = ["#f59e0b", "#06b6d4", "#ec4899", "#84cc16", "#8b5cf6", "#f97316", "#14b8a6", "#e11d48", "#3b82f6", "#a3e635", "#d946ef", "#0ea5e9", "#facc15", "#22c55e", "#fb7185", "#2dd4bf", "#c084fc", "var(--accent)", "#60a5fa", "#4ade80"];
   const CAT_HUE = Object.fromEntries(COMMITTEES.map((c, i) => [c.id, PALETTE[i % PALETTE.length]]));
   const SUBS = COMMITTEES.flatMap(c => (c.subcommittees.length ? c.subcommittees : [{ id: c.id, name: c.name, leaf: true }]).map(s => ({ ...s, cat: c.id, catName: c.name })));
   const subById = Object.fromEntries(SUBS.map(s => [s.id, s]));
@@ -306,14 +316,14 @@
     const t0 = new Date(dated[0].date), t1 = new Date(dated[dated.length - 1].date), span = Math.max(1, t1 - t0);
     const x = d => 6 + (new Date(d) - t0) / span * (W - 12);
     const segs = dated.map((s, k) => { const x0 = x(s.date), x1 = k < dated.length - 1 ? x(dated[k + 1].date) : W - 6; return `<rect x="${x0}" y="${H / 2 - 5}" width="${Math.max(2, x1 - x0)}" height="10" fill="${color(s.direction)}" fill-opacity="${.35 + Math.abs(s.score) * .6}"/>`; }).join("");
-    const dots = dated.map(s => `<circle cx="${x(s.date)}" cy="${H / 2}" r="4" fill="${color(s.direction)}" stroke="#0f1115" stroke-width="1.5"><title>${s.date} · ${s.direction} ${fmt(s.score)}</title></circle>`).join("");
-    const lab = labels ? `<text x="6" y="${H - 1}" font-size="9" fill="#8b93a7">${dated[0].date}</text><text x="${W - 6}" y="${H - 1}" font-size="9" fill="#8b93a7" text-anchor="end">${dated[dated.length - 1].date}</text>` : "";
+    const dots = dated.map(s => `<circle cx="${x(s.date)}" cy="${H / 2}" r="4" fill="${color(s.direction)}" stroke="var(--bg)" stroke-width="1.5"><title>${s.date} · ${s.direction} ${fmt(s.score)}</title></circle>`).join("");
+    const lab = labels ? `<text x="6" y="${H - 1}" font-size="9" fill="var(--muted)">${dated[0].date}</text><text x="${W - 6}" y="${H - 1}" font-size="9" fill="var(--muted)" text-anchor="end">${dated[dated.length - 1].date}</text>` : "";
     return `<svg width="${W}" height="${H + (labels ? 10 : 0)}" style="vertical-align:middle;display:block">${segs}${dots}${lab}</svg>`;
   }
   function evidenceHtml(e, hlId) {
     const i = issueById[e.to], st = e.statements;
     const head = `<div style="font-weight:600">${title(byId[e.from])} on ${i.name}</div><div style="font-size:11px;color:var(--muted)">${i.catName} › ${i.subName}</div>
-      <div class="tags" style="margin-top:6px"><span class="tag" style="color:${color(e.direction)}">${e.direction} · ${fmt(e.score)}</span><span class="tag">${e.n} statement${e.n > 1 ? "s" : ""}</span><span class="tag" title="attention: recency-weighted statement count, percentile across all edges">🔥 ${Math.round(e.heat * 100)}th pct</span>${e.flip ? `<span class="tag" style="border-color:#b45309;color:#fbbf24">⟲ flipped</span>` : ""}<span class="tag c-${e.llm_confidence}">confidence: ${e.llm_confidence}</span></div>
+      <div class="tags" style="margin-top:6px"><span class="tag" style="color:${color(e.direction)}">${e.direction} · ${fmt(e.score)}</span><span class="tag">${e.n} statement${e.n > 1 ? "s" : ""}</span><span class="tag" title="attention: recency-weighted statement count, percentile across all edges">🔥 ${Math.round(e.heat * 100)}th pct</span>${e.flip ? `<span class="tag" style="border-color:var(--accent);color:var(--accent)">⟲ flipped</span>` : ""}<span class="tag c-${e.llm_confidence}">confidence: ${e.llm_confidence}</span></div>
       ${e.n > 1 ? `<div style="margin-top:8px;font-size:11px;color:var(--muted)">direction over time</div>${ribbon(st, 300)}` : ""}`;
     const items = [...st].reverse().map(s => `<div class="stmt ${hlId && s.statement_id === hlId ? "hl" : ""}" style="margin-top:10px;padding-top:10px;border-top:1px solid var(--border)"><div style="font-size:11px;color:var(--muted)">${s.statement_id ? `<span class="tag" style="padding:0 5px">${s.statement_id.replace(/^st0*/, "#")}</span> · ` : ""}${s.date || "undated"} · <span style="color:${color(s.direction)}">${s.direction} ${fmt(s.score)}</span> · <span class="tag c-${s.llm_confidence}" style="padding:0 5px">${s.llm_confidence}</span></div>
       <blockquote>“${s.quote}”</blockquote><div style="font-size:12px;color:var(--muted)">${s.bill || ""} · linkage ${s.linkage} · ${s.model || ""}</div><a href="${s.source}" target="_blank" rel="noopener">source ↗</a></div>`).join("");
@@ -377,7 +387,7 @@
     const th = (k, label) => `<th data-k="${k}" class="${L.sort === k ? "sorted" : ""}">${label}${L.sort === k ? (L.desc ? " ↓" : " ↑") : ""}</th>`;
     wrap.innerHTML = `<div class="toolbar"><span>${rows.length} stances · ${new Set(rows.map(r => r.p.id)).size} legislators</span><button class="btn" id="csv">Export CSV</button></div>
       <table><thead><tr>${th("name", "Legislator")}${th("state", "District")}${th("party", "Party")}${th("gender", "Gender")}${th("issue", "Issue")}<th>Committee</th><th>Stance</th>${th("score", "Score")}${th("n", "Stmts")}${th("conf", "Confidence")}<th>Latest quote</th></tr></thead>
-      <tbody>${rows.map((r, k) => `<tr data-i="${k}" class="${L.sel === r.e ? "active" : ""}"><td><b>${r.p.name}</b></td><td>${seat(r.p)}</td><td><span class="pill ${r.p.party}">${r.p.party}</span></td><td>${r.p.gender}</td><td>${r.i.name}<div style="font-size:11px;color:var(--muted)">${r.i.subName}</div></td><td style="color:var(--muted)">${r.i.catName}</td><td><span class="pill ${r.e.direction}">${r.e.direction}</span></td><td class="score" style="color:${color(r.e.direction)}">${fmt(r.e.score)}</td><td style="text-align:center">${r.e.n}${r.e.flip ? ' <span style="color:#fbbf24" title="position changed over time">⟲</span>' : ""}</td><td><span class="tag c-${r.e.llm_confidence}">${r.e.llm_confidence}</span></td><td class="quote" title="${r.e.quote.replace(/"/g, "&quot;")}">“${r.e.quote}”</td></tr>`).join("") || `<tr><td colspan="11" class="empty-state">No legislators match.</td></tr>`}</tbody></table>`;
+      <tbody>${rows.map((r, k) => `<tr data-i="${k}" class="${L.sel === r.e ? "active" : ""}"><td><b>${r.p.name}</b></td><td>${seat(r.p)}</td><td><span class="pill ${r.p.party}">${r.p.party}</span></td><td>${r.p.gender}</td><td>${r.i.name}<div style="font-size:11px;color:var(--muted)">${r.i.subName}</div></td><td style="color:var(--muted)">${r.i.catName}</td><td><span class="pill ${r.e.direction}">${r.e.direction}</span></td><td class="score" style="color:${color(r.e.direction)}">${fmt(r.e.score)}</td><td style="text-align:center">${r.e.n}${r.e.flip ? ' <span style="color:var(--accent)" title="position changed over time">⟲</span>' : ""}</td><td><span class="tag c-${r.e.llm_confidence}">${r.e.llm_confidence}</span></td><td class="quote" title="${r.e.quote.replace(/"/g, "&quot;")}">“${r.e.quote}”</td></tr>`).join("") || `<tr><td colspan="11" class="empty-state">No legislators match.</td></tr>`}</tbody></table>`;
     wrap.querySelectorAll("th[data-k]").forEach(h => h.onclick = () => { const k = h.dataset.k; if (L.sort === k) L.desc = !L.desc; else { L.sort = k; L.desc = k === "score" || k === "conf"; } renderTable(); });
     wrap.querySelectorAll("tbody tr[data-i]").forEach(tr => tr.onclick = () => { L.sel = rows[+tr.dataset.i].e; renderTable(); renderSide(); });
     $("csv").onclick = () => { const h = ["name", "state", "district", "party", "gender", "issue", "subcommittee", "committee", "direction", "score", "statements", "flipped", "first_date", "last_date", "linkage", "llm_confidence", "latest_bill", "latest_quote", "latest_source"];
@@ -393,7 +403,7 @@
   // ---------- PROFILE (one page per legislator) ----------
   const openProfile = id => { state.mode = "profile"; state.p.person = id; state.p.sel = null; state.p.hl = null; state.p.open = null; history.replaceState(null, "", `#/legislator/${id}`); render(); };
   const profileBtn = id => `<div style="margin-top:10px"><button class="btn" data-open="${id}">Open profile →</button></div>`;
-  const partyColor = p => p === "D" ? "#3b82f6" : p === "R" ? "#f87171" : "#9ca3af";
+  const partyColor = p => p === "D" ? "var(--party-d)" : p === "R" ? "var(--party-r)" : "var(--party-i)";
   function renderProfileAside() {
     const P = state.p, q = P.q.trim().toLowerCase();
     const people = PEOPLE.filter(p => !q || p.name.toLowerCase().includes(q) || p.state.toLowerCase() === q || (p.district || "").toLowerCase().includes(q)).sort((a, b) => a.name.localeCompare(b.name));
@@ -427,7 +437,7 @@
       <div class="hero">
         <div class="avatar" style="background:${partyColor(p.party)}">${initials}</div>
         <div class="who"><h1>${p.name}</h1><div class="meta">${seat(p)} · ${partyName} · ${p.gender === "F" ? "Female" : "Male"} · since ${p.since}${p.bioguide_id ? ` · <a class="link" href="https://bioguide.congress.gov/search/bio/${p.bioguide_id}" target="_blank">bioguide ↗</a>` : ""}</div></div>
-        <div class="strip">${stat(mine.length, "issues")}${stat(sup, "support", "var(--support)")}${stat(opp, "oppose", "var(--oppose)")}${stat(nStatements, "statements")}${stat(decisive.toFixed(2), "decisiveness", null, "mean |score| across issues: how strongly they commit, regardless of direction")}${stat(divergence === null ? "—" : divergence.toFixed(2), "vs party", null, "mean distance from other " + partyName + "s on the same issues")}${flips ? stat("⟲ " + flips, "flipped", "#fbbf24") : ""}</div>
+        <div class="strip">${stat(mine.length, "issues")}${stat(sup, "support", "var(--support)")}${stat(opp, "oppose", "var(--oppose)")}${stat(nStatements, "statements")}${stat(decisive.toFixed(2), "decisiveness", null, "mean |score| across issues: how strongly they commit, regardless of direction")}${stat(divergence === null ? "—" : divergence.toFixed(2), "vs party", null, "mean distance from other " + partyName + "s on the same issues")}${flips ? stat("⟲ " + flips, "flipped", "var(--accent)") : ""}</div>
       </div>
       ${summaryHtml}
       <div class="tabs">${[["overview", "Overview"], ["issues", "Issues by committee"], ["timeline", "Timeline"]].map(([k, l]) => `<button class="${tab === k ? "active" : ""}" data-tab="${k}">${l}</button>`).join("")}</div>
@@ -454,37 +464,37 @@
   function drawTimeline(mine) {
     const s = d3.select("#ptimeline"); s.selectAll("*").remove();
     const rows = mine.filter(x => x.e.statements.some(st => st.date)).sort((a, b) => b.e.salience - a.e.salience);
-    if (!rows.length) { s.attr("height", 40).append("text").attr("x", 0).attr("y", 20).attr("fill", "#8b93a7").attr("font-size", 12).text("No dated statements."); return; }
+    if (!rows.length) { s.attr("height", 40).append("text").attr("x", 0).attr("y", 20).attr("fill", "var(--muted)").attr("font-size", 12).text("No dated statements."); return; }
     const all = rows.flatMap(x => x.e.statements).filter(st => st.date), t0 = d3.min(all, st => new Date(st.date)), t1 = d3.max(all, st => new Date(st.date));
     const W = Math.max(560, $("ptimeline").parentElement.clientWidth - 28), L = 190, R = 20, rowH = 34, top = 26, H = top + rows.length * rowH + 10;
     const x = d3.scaleTime().domain([d3.timeDay.offset(t0, -20), d3.timeDay.offset(t1, 20)]).range([L, W - R]);
     s.attr("width", W).attr("height", H).attr("viewBox", `0 0 ${W} ${H}`);
     const axis = s.append("g").attr("transform", `translate(0,${top - 8})`).call(d3.axisTop(x).ticks(6).tickSizeOuter(0));
-    axis.selectAll("text").attr("fill", "#8b93a7").attr("font-size", 10); axis.selectAll("line,path").attr("stroke", "#3b4150");
+    axis.selectAll("text").attr("fill", "var(--muted)").attr("font-size", 10); axis.selectAll("line,path").attr("stroke", "var(--border-strong)");
     rows.forEach((r, k) => {
       const y = top + k * rowH, st = r.e.statements.filter(a => a.date);
       const g2 = s.append("g").attr("transform", `translate(0,${y})`);
-      g2.append("text").attr("x", L - 10).attr("y", 20).attr("text-anchor", "end").attr("fill", "#e6e8ee").attr("font-size", 12).text(r.i.name.length > 24 ? r.i.name.slice(0, 23) + "…" : r.i.name);
+      g2.append("text").attr("x", L - 10).attr("y", 20).attr("text-anchor", "end").attr("fill", "var(--text)").attr("font-size", 12).text(r.i.name.length > 24 ? r.i.name.slice(0, 23) + "…" : r.i.name);
       g2.append("rect").attr("x", L - 4).attr("y", 6).attr("width", 3).attr("height", 22).attr("fill", CAT_HUE[r.i.cat]);
       st.forEach((a, j) => { const x0 = x(new Date(a.date)), x1 = j < st.length - 1 ? x(new Date(st[j + 1].date)) : x.range()[1];
         g2.append("rect").attr("x", x0).attr("y", 11).attr("width", Math.max(2, x1 - x0)).attr("height", 12).attr("fill", color(a.direction)).attr("fill-opacity", .3 + Math.abs(a.score) * .5); });
-      st.forEach(a => g2.append("circle").attr("cx", x(new Date(a.date))).attr("cy", 17).attr("r", 5).attr("fill", color(a.direction)).attr("stroke", "#0f1115").attr("stroke-width", 1.5).style("cursor", "pointer")
+      st.forEach(a => g2.append("circle").attr("cx", x(new Date(a.date))).attr("cy", 17).attr("r", 5).attr("fill", color(a.direction)).attr("stroke", "var(--bg)").attr("stroke-width", 1.5).style("cursor", "pointer")
         .on("click", () => { state.p.sel = r.e; state.p.hl = a.statement_id; renderSide(); }).append("title").text(`${a.date} · ${a.direction} ${fmt(a.score)}\n“${a.quote}”`));
-      if (r.e.flip) g2.append("text").attr("x", W - R).attr("y", 21).attr("text-anchor", "end").attr("fill", "#fbbf24").attr("font-size", 12).text("⟲");
+      if (r.e.flip) g2.append("text").attr("x", W - R).attr("y", 21).attr("text-anchor", "end").attr("fill", "var(--accent)").attr("font-size", 12).text("⟲");
     });
   }
   function drawScatter(mine) {
     const s = d3.select("#pscatter"); s.selectAll("*").remove(); if (!mine.length) return;
     const W = 270, H = 230, m = { l: 30, r: 10, t: 14, b: 26 };
     const x = d3.scaleLinear().domain([-1, 1]).range([m.l, W - m.r]), maxS = d3.max(mine, d => d.e.salience) || 1, y = d3.scaleLinear().domain([0, maxS * 1.1]).range([H - m.b, m.t]);
-    s.append("line").attr("x1", x(0)).attr("x2", x(0)).attr("y1", m.t).attr("y2", H - m.b).attr("stroke", "#3b4150").attr("stroke-dasharray", "3 3");
-    s.append("line").attr("x1", m.l).attr("x2", W - m.r).attr("y1", H - m.b).attr("y2", H - m.b).attr("stroke", "#3b4150");
+    s.append("line").attr("x1", x(0)).attr("x2", x(0)).attr("y1", m.t).attr("y2", H - m.b).attr("stroke", "var(--border-strong)").attr("stroke-dasharray", "3 3");
+    s.append("line").attr("x1", m.l).attr("x2", W - m.r).attr("y1", H - m.b).attr("y2", H - m.b).attr("stroke", "var(--border-strong)");
     s.append("text").attr("x", m.l).attr("y", H - 8).attr("font-size", 9).attr("fill", "var(--oppose)").text("oppose");
     s.append("text").attr("x", W - m.r).attr("y", H - 8).attr("font-size", 9).attr("fill", "var(--support)").attr("text-anchor", "end").text("support");
-    s.append("text").attr("x", 8).attr("y", m.t + 4).attr("font-size", 9).attr("fill", "#8b93a7").attr("transform", `rotate(-90 8 ${m.t + 4})`).attr("text-anchor", "end").text("attention →");
+    s.append("text").attr("x", 8).attr("y", m.t + 4).attr("font-size", 9).attr("fill", "var(--muted)").attr("transform", `rotate(-90 8 ${m.t + 4})`).attr("text-anchor", "end").text("attention →");
     const pts = s.selectAll("g").data(mine).join("g").attr("transform", d => `translate(${x(d.e.score)},${y(d.e.salience)})`).style("cursor", "pointer").on("click", (ev, d) => { state.p.sel = d.e; renderProfile(); renderSide(); });
-    pts.append("circle").attr("r", d => 4 + d.e.n * 1.5).attr("fill", d => CAT_HUE[d.i.cat]).attr("fill-opacity", .85).attr("stroke", d => d.e.flip ? "#fbbf24" : "#0f1115").attr("stroke-width", d => d.e.flip ? 2 : 1).append("title").text(d => `${d.i.name}: ${fmt(d.e.score)}, ${d.e.n} statements`);
-    pts.append("text").attr("x", 0).attr("y", d => -(6 + d.e.n * 1.5)).attr("font-size", 8.5).attr("fill", "#cbd5e1").attr("text-anchor", "middle").text(d => d.i.name.length > 16 ? d.i.name.slice(0, 15) + "…" : d.i.name);
+    pts.append("circle").attr("r", d => 4 + d.e.n * 1.5).attr("fill", d => CAT_HUE[d.i.cat]).attr("fill-opacity", .85).attr("stroke", d => d.e.flip ? "var(--accent)" : "var(--bg)").attr("stroke-width", d => d.e.flip ? 2 : 1).append("title").text(d => `${d.i.name}: ${fmt(d.e.score)}, ${d.e.n} statements`);
+    pts.append("text").attr("x", 0).attr("y", d => -(6 + d.e.n * 1.5)).attr("font-size", 8.5).attr("fill", "var(--text)").attr("text-anchor", "middle").text(d => d.i.name.length > 16 ? d.i.name.slice(0, 15) + "…" : d.i.name);
   }
   function drawBars(p, mine) {
     const svgEl = d3.select("#pbars"); svgEl.selectAll("*").remove();
@@ -494,28 +504,28 @@
     const H = groups.reduce((a, [cat, rows]) => a + gh + (P.open.has(cat) ? rows.length * rowH : 0) + pad, 0) + 14;
     svgEl.attr("width", W).attr("height", H).attr("viewBox", `0 0 ${W} ${H}`);
     const x = d3.scaleLinear().domain([-1, 1]).range([L, W - R]);
-    svgEl.append("line").attr("x1", x(0)).attr("x2", x(0)).attr("y1", 0).attr("y2", H).attr("stroke", "#3b4150").attr("stroke-dasharray", "3 3");
+    svgEl.append("line").attr("x1", x(0)).attr("x2", x(0)).attr("y1", 0).attr("y2", H).attr("stroke", "var(--border-strong)").attr("stroke-dasharray", "3 3");
     svgEl.append("text").attr("x", x(-1)).attr("y", 10).attr("fill", "var(--oppose)").attr("font-size", 10).text("oppose");
     svgEl.append("text").attr("x", x(1)).attr("y", 10).attr("text-anchor", "end").attr("fill", "var(--support)").attr("font-size", 10).text("support");
     let y = 14; const conf = { low: .35, mid: .6, high: .85, super_high: 1 };
     for (const [cat, rows] of groups) {
       const open = P.open.has(cat), catName = rows[0].i.catName, mean = rows.reduce((a, r) => a + r.e.score, 0) / rows.length, nSt = rows.reduce((a, r) => a + r.e.n, 0);
       const gr = svgEl.append("g").attr("transform", `translate(0,${y})`).style("cursor", "pointer").on("click", () => { open ? P.open.delete(cat) : P.open.add(cat); drawBars(p, mine); });
-      gr.append("rect").attr("x", 0).attr("y", 2).attr("width", W).attr("height", gh - 4).attr("rx", 6).attr("fill", "#1e222b");
+      gr.append("rect").attr("x", 0).attr("y", 2).attr("width", W).attr("height", gh - 4).attr("rx", 6).attr("fill", "var(--panel-2)");
       gr.append("text").attr("x", 8).attr("y", 19).attr("fill", CAT_HUE[cat]).attr("font-size", 11).attr("font-weight", 700).text(`${open ? "▾" : "▸"} ${catName.toUpperCase()}`);
-      gr.append("text").attr("x", L - 10).attr("y", 19).attr("text-anchor", "end").attr("fill", "#8b93a7").attr("font-size", 10).text(`${rows.length} issue${rows.length > 1 ? "s" : ""} · ${nSt} stmt`);
+      gr.append("text").attr("x", L - 10).attr("y", 19).attr("text-anchor", "end").attr("fill", "var(--muted)").attr("font-size", 10).text(`${rows.length} issue${rows.length > 1 ? "s" : ""} · ${nSt} stmt`);
       if (!open) { gr.append("rect").attr("x", Math.min(x(0), x(mean))).attr("y", 9).attr("width", Math.abs(x(mean) - x(0))).attr("height", 10).attr("rx", 3).attr("fill", color(dirOf(mean))).attr("fill-opacity", .7);
-        gr.append("text").attr("x", mean >= 0 ? x(mean) + 6 : x(mean) - 6).attr("y", 18).attr("text-anchor", mean >= 0 ? "start" : "end").attr("fill", "#8b93a7").attr("font-size", 10).attr("font-family", "var(--mono)").text(`avg ${fmt(mean)}`); }
+        gr.append("text").attr("x", mean >= 0 ? x(mean) + 6 : x(mean) - 6).attr("y", 18).attr("text-anchor", mean >= 0 ? "start" : "end").attr("fill", "var(--muted)").attr("font-size", 10).attr("font-family", "var(--mono)").text(`avg ${fmt(mean)}`); }
       y += gh;
       if (!open) { y += pad; continue; }
       for (const r of rows) {
         const row = svgEl.append("g").attr("class", "pbar-row" + (state.p.sel === r.e ? " active" : "")).attr("transform", `translate(0,${y})`).style("cursor", "pointer").on("click", () => { state.p.sel = r.e; renderProfile(); renderSide(); });
         row.append("rect").attr("class", "bg").attr("x", 0).attr("y", 0).attr("width", W).attr("height", rowH).attr("fill", "transparent");
-        row.append("text").attr("x", L - 10).attr("y", 17).attr("text-anchor", "end").attr("fill", "#e6e8ee").attr("font-size", 12).text(r.i.name.length > 30 ? r.i.name.slice(0, 29) + "…" : r.i.name);
+        row.append("text").attr("x", L - 10).attr("y", 17).attr("text-anchor", "end").attr("fill", "var(--text)").attr("font-size", 12).text(r.i.name.length > 30 ? r.i.name.slice(0, 29) + "…" : r.i.name);
         row.append("rect").attr("x", Math.min(x(0), x(r.e.score))).attr("y", 6).attr("width", Math.abs(x(r.e.score) - x(0))).attr("height", 14).attr("rx", 3).attr("fill", color(r.e.direction)).attr("fill-opacity", conf[r.e.llm_confidence]);
         const pm = (() => { const xs = EDGES.filter(e => e.to === r.e.to && e.from !== p.id && byId[e.from].party === p.party).map(e => e.score); return xs.length ? xs.reduce((a, b) => a + b, 0) / xs.length : null; })();
         if (pm !== null) row.append("rect").attr("x", x(pm) - 1.5).attr("y", 3).attr("width", 3).attr("height", 20).attr("fill", partyColor(p.party)).append("title").text(`party avg ${fmt(pm)}`);
-        row.append("circle").attr("cx", x(r.e.score)).attr("cy", 13).attr("r", 2.5 + (r.e.salience / maxS) * 6.5).attr("fill", color(r.e.direction)).attr("stroke", "#0f1115").attr("stroke-width", 1.5).append("title").text(`attention ${Math.round(r.e.heat * 100)}th percentile · ${r.e.n} statements`);
+        row.append("circle").attr("cx", x(r.e.score)).attr("cy", 13).attr("r", 2.5 + (r.e.salience / maxS) * 6.5).attr("fill", color(r.e.direction)).attr("stroke", "var(--bg)").attr("stroke-width", 1.5).append("title").text(`attention ${Math.round(r.e.heat * 100)}th percentile · ${r.e.n} statements`);
         row.append("text").attr("x", r.e.score >= 0 ? x(r.e.score) + 12 : x(r.e.score) - 12).attr("y", 17).attr("text-anchor", r.e.score >= 0 ? "start" : "end").attr("fill", color(r.e.direction)).attr("font-size", 11).attr("font-family", "var(--mono)").text(fmt(r.e.score) + (r.e.n > 1 ? `  ×${r.e.n}` : "") + (r.e.flip ? "  ⟲" : ""));
         if (r.e.n > 1) row.append("foreignObject").attr("x", W - R + 10).attr("y", 2).attr("width", R - 14).attr("height", rowH).html(ribbon(r.e.statements, R - 14, 22, false));
         y += rowH;
@@ -526,13 +536,13 @@
   function drawRadar(mine) {
     const s = d3.select("#pradar"); s.selectAll("*").remove();
     const cx = 135, cy = 135, R = 100, n = mine.length; if (!n) return;
-    [0.25, 0.5, 0.75, 1].forEach(r => s.append("circle").attr("cx", cx).attr("cy", cy).attr("r", R * r).attr("fill", "none").attr("stroke", "#2a2f3a"));
+    [0.25, 0.5, 0.75, 1].forEach(r => s.append("circle").attr("cx", cx).attr("cy", cy).attr("r", R * r).attr("fill", "none").attr("stroke", "var(--border)"));
     const pts = mine.map((x, k) => { const a = (k / n) * 2 * Math.PI - Math.PI / 2, r = Math.abs(x.e.score) * R; return { x: cx + r * Math.cos(a), y: cy + r * Math.sin(a), a, x0: cx + R * Math.cos(a), y0: cy + R * Math.sin(a), d: x }; });
-    pts.forEach(p => s.append("line").attr("x1", cx).attr("y1", cy).attr("x2", p.x0).attr("y2", p.y0).attr("stroke", "#2a2f3a"));
-    s.append("path").attr("d", d3.line().x(p => p.x).y(p => p.y).curve(d3.curveLinearClosed)(pts)).attr("fill", "rgba(139,92,246,.18)").attr("stroke", "var(--accent)").attr("stroke-width", 1.5);
+    pts.forEach(p => s.append("line").attr("x1", cx).attr("y1", cy).attr("x2", p.x0).attr("y2", p.y0).attr("stroke", "var(--border)"));
+    s.append("path").attr("d", d3.line().x(p => p.x).y(p => p.y).curve(d3.curveLinearClosed)(pts)).attr("fill", "rgba(240,180,41,.18)").attr("stroke", "var(--accent)").attr("stroke-width", 1.5);
     pts.forEach(p => { s.append("circle").attr("cx", p.x).attr("cy", p.y).attr("r", 4).attr("fill", color(p.d.e.direction)).append("title").text(`${p.d.i.name}: ${fmt(p.d.e.score)}`);
       const lx = cx + (R + 14) * Math.cos(p.a), ly = cy + (R + 14) * Math.sin(p.a);
-      s.append("text").attr("x", lx).attr("y", ly + 3).attr("font-size", 8.5).attr("fill", "#8b93a7").attr("text-anchor", Math.cos(p.a) > .2 ? "start" : Math.cos(p.a) < -.2 ? "end" : "middle").text(p.d.i.name.length > 14 ? p.d.i.name.slice(0, 13) + "…" : p.d.i.name); });
+      s.append("text").attr("x", lx).attr("y", ly + 3).attr("font-size", 8.5).attr("fill", "var(--muted)").attr("text-anchor", Math.cos(p.a) > .2 ? "start" : Math.cos(p.a) < -.2 ? "end" : "middle").text(p.d.i.name.length > 14 ? p.d.i.name.slice(0, 13) + "…" : p.d.i.name); });
   }
   function renderProfileSide() {
     const e = state.p.sel, p = byId[state.p.person];
@@ -577,10 +587,10 @@
       .call(d3.drag().on("start", (ev, d) => { if (!ev.active) sim.alphaTarget(.3).restart(); d.fx = d.x; d.fy = d.y; }).on("drag", (ev, d) => { d.fx = ev.x; d.fy = ev.y; }).on("end", (ev, d) => { if (!ev.active) sim.alphaTarget(0); d.fx = null; d.fy = null; }))
       .on("click", (ev, d) => { if (d.kind === "person") { state.person = d.id; state.edge = null; render(); } else { const i = issueById[d.id]; if (explore || !d.main) { state.mode = "focus"; state.cat = i.cat; state.sub = i.sub; state.issue = i.id; state.person = null; render(); } } })
       .on("mouseenter", (ev, d) => highlight(d)).on("mouseleave", () => highlight(null));
-    node.filter(d => d.kind === "topic").append("circle").attr("r", d => explore ? 14 + Math.min(16, (deg[d.id] || 0) * 2) : 18).attr("fill", d => d.main ? CAT_HUE[d.cat] : "#2a2f3a").attr("fill-opacity", d => d.main ? .9 : 1).attr("stroke", d => d.main ? "#fff" : "#3b4150").attr("stroke-width", 1.5);
+    node.filter(d => d.kind === "topic").append("circle").attr("r", d => explore ? 14 + Math.min(16, (deg[d.id] || 0) * 2) : 18).attr("fill", d => d.main ? CAT_HUE[d.cat] : "var(--border)").attr("fill-opacity", d => d.main ? .9 : 1).attr("stroke", d => d.main ? "#fff" : "var(--border-strong)").attr("stroke-width", 1.5);
     node.filter(d => d.kind === "person").append("circle").attr("r", d => state.person === d.id ? 14 : (byId[d.id].chamber === "senate" ? 11 : 9))
-      .attr("fill", d => { if (explore) return byId[d.id].party === "D" ? "#3b82f6" : byId[d.id].party === "R" ? "#f87171" : "#9ca3af"; const e = links.find(l => l.main && (l.source.id ?? l.source) === d.id); return e ? color(e.e.direction) : "#9ca3af"; })
-      .attr("stroke", d => state.person === d.id ? "#fff" : (byId[d.id].chamber === "senate" ? "#fcd34d" : "#0f1115")).attr("stroke-width", 2);
+      .attr("fill", d => { if (explore) return partyColor(byId[d.id].party); const e = links.find(l => l.main && (l.source.id ?? l.source) === d.id); return e ? color(e.e.direction) : "var(--neutral)"; })
+      .attr("stroke", d => state.person === d.id ? "#fff" : (byId[d.id].chamber === "senate" ? "var(--accent)" : "var(--bg)")).attr("stroke-width", 2);
     node.append("text").attr("class", d => "node-label" + (d.kind === "topic" ? " topic" : "")).attr("text-anchor", "middle").attr("dy", d => d.kind === "topic" ? (explore ? 36 : 5) : 22).text(d => d.name);
     function highlight(d) {
       if (!d) { node.attr("opacity", 1); link.attr("stroke-opacity", l => (l.main ? .45 : .15) + Math.abs(l.e.score) * .45); return; }
