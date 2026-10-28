@@ -29,7 +29,7 @@ gh issue list --label "need backend review"
 gh issue list --assignee @me
 
 # open one
-gh issue create --title "process -> vis payload: add llm_confidence" --label "need frontend review" --label contract --body "Proposed change to packages/contract/vis.schema.json: ..."
+gh issue create --title "process -> vis payload: add llm_confidence" --label "need frontend review" --label contract --body "Proposed change to packages/contract/statements.schema.json: ..."
 
 # work it
 git checkout -b feat/12-confidence-field

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/az30667176-sudo/owl/packages/contract/people.schema.json",
+  "title": "Contract B — people.json (House members)",
+  "description": "Current U.S. House members. Source: congress.gov /member?currentMember=true filtered to chamber House.",
+  "type": "object",
+  "required": ["people"],
+  "additionalProperties": false,
+  "properties": {
+    "_meta": { "$ref": "record.schema.json#/$defs/meta" },
+    "people": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "bioguide_id", "name", "chamber", "state", "district", "party", "gender", "since"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^[A-Za-z0-9_-]+$", "description": "Stable. In production use the bioguide id itself." },
+          "bioguide_id": { "type": ["string", "null"], "pattern": "^[A-Z][0-9]{6}$", "description": "congress.gov join key. null only when _meta.mock is true." },
+          "name": { "type": "string", "pattern": "^Rep\\. .+" },
+          "chamber": { "const": "house" },
+          "state": { "type": "string", "pattern": "^[A-Z]{2}$" },
+          "district": { "type": "string", "pattern": "^[A-Z]{2}-(AL|[0-9]{1,2})$", "description": "CA-12; at-large districts use AL." },
+          "party": { "enum": ["D", "R", "I"] },
+          "gender": { "enum": ["F", "M"] },
+          "since": { "type": "integer", "minimum": 1950, "maximum": 2100, "description": "First year in office." }
+        }
+      }
+    }
+  }
+}

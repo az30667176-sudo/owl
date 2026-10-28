@@ -1,5 +1,7 @@
 # Prototype data contract
 
+> Authoritative schemas + validator: [`packages/contract/`](../../../../packages/contract/README.md). This file is the frontend-side description of the same shapes.
+
 The prototype UI loads these four files at startup. Drop real data in the same shape and the UI works unchanged.
 All ids are stable strings; names are display-only.
 

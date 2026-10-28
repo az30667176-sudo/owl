@@ -16,7 +16,7 @@ Data process (Muse Spark)      contract B --> stance edges
    v
 [filter]  state=CA, attr={x,y,z}      e.g. "CA incumbent 52 congressmen"
    v
-Data vis                        contract C --> [{ name, attrs: [{ attr, source }, ...] }]
+Data vis                        contract C --> derived in the browser (see packages/contract/derived.md)
 ```
 
 ## Data model (ERD)
@@ -65,3 +65,7 @@ MVP filter: California incumbent House members (52).
 | Domain tagging | Muse Spark 1.3 | bill -> domain enum + linkage |
 | Vis (stretch) | Muse Wonder | agent answering questions over the graph |
 | Vis (stretch) | Muse Image | per-issue share card |
+
+## Contracts (current)
+
+The board's contracts A/B/C are formalised in [`packages/contract/README.md`](../packages/contract/README.md): A = `record.schema.json`, B = the five data files the frontend loads, C = browser-side derivation rules. The shapes sketched above are the day-one draft and are superseded by that directory.

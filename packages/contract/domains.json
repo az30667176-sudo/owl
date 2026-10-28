@@ -1,4 +1,0 @@
-{
-  "_comment": "Closed domain enum. Adding a value = contract change (open an issue with label contract).",
-  "domains": ["public_safety", "energy", "healthcare", "immigration", "economy_tax", "education", "housing", "environment", "technology_ai", "defense", "infrastructure", "civil_rights"]
-}

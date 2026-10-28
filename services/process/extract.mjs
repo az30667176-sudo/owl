@@ -91,7 +91,7 @@ for (const a of accepted) console.log(`  ✓ ${a.statement_id} ${byId[a.person].
 for (const x of rejected) console.log(`  ✗ ${x.st.person} → ${x.st.issue || x.st.new_issue?.name}: ${x.why.join("; ")}`);
 if (MERGE && accepted.length) {
   if (newIssues.length) { issuesFile.issues.push(...newIssues); writeFileSync(resolve(DATA, "issues.json"), JSON.stringify(issuesFile, null, 2) + "\n"); }
-  stancesFile.stances.push(...accepted.map(({ record_id, rationale, ...s }) => s));
+  stancesFile.stances.push(...accepted.map(({ rationale, ...s }) => s));
   writeFileSync(resolve(DATA, "stances.json"), JSON.stringify(stancesFile, null, 2) + "\n");
   console.log(`merged into stances.json (+${accepted.length}) and issues.json (+${newIssues.length})`);
 }

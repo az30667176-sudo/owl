@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/az30667176-sudo/owl/packages/contract/issues.schema.json",
+  "title": "Contract B — issues.json (level 3)",
+  "description": "Concrete issues that statements attach to. parent must be a subcommittee id, or a committee id when that committee has no subcommittees (checked by validate.mjs).",
+  "type": "object",
+  "required": ["issues"],
+  "additionalProperties": false,
+  "properties": {
+    "_meta": { "$ref": "record.schema.json#/$defs/meta" },
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "parent"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$", "description": "slug of name" },
+          "name": { "type": "string", "minLength": 1, "maxLength": 80 },
+          "parent": { "type": "string", "pattern": "^hs[a-z]{2}(-[a-z0-9-]+)?$" }
+        }
+      }
+    }
+  }
+}

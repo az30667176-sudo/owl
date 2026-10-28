@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/az30667176-sudo/owl/packages/contract/statements.schema.json",
+  "title": "Contract B — stances.json (one row per statement)",
+  "description": "Never pre-aggregated: a legislator who speaks five times on an issue yields five rows. Cross-file rules (person/issue exist, direction matches score, quote verbatim) are enforced by validate.mjs.",
+  "type": "object",
+  "required": ["stances"],
+  "additionalProperties": false,
+  "properties": {
+    "_meta": { "$ref": "record.schema.json#/$defs/meta" },
+    "stances": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["statement_id", "person", "issue", "date", "score", "direction", "linkage", "llm_confidence", "quote", "bill", "source", "model"],
+        "additionalProperties": false,
+        "properties": {
+          "statement_id": { "type": "string", "pattern": "^st[0-9]{3,}$" },
+          "person": { "type": "string", "description": "people.json id" },
+          "issue": { "type": "string", "description": "issues.json id" },
+          "date": { "type": "string", "format": "date" },
+          "score": { "type": "number", "minimum": -1, "maximum": 1, "description": "+1 strongest support, -1 strongest opposition." },
+          "direction": { "enum": ["support", "oppose", "neutral"], "description": "Derived from score: > 0.15 support, < -0.15 oppose, else neutral." },
+          "linkage": { "$ref": "#/$defs/level", "description": "How directly the quote addresses the issue." },
+          "llm_confidence": { "$ref": "#/$defs/level", "description": "The model's confidence in its reading." },
+          "quote": { "type": "string", "minLength": 2, "maxLength": 600, "description": "Verbatim substring of the source record's content." },
+          "bill": { "type": ["string", "null"], "maxLength": 120 },
+          "source": { "type": "string", "format": "uri" },
+          "model": { "type": "string", "minLength": 1 },
+          "record_id": { "type": "string", "description": "Back-reference to the contract-A record. Required for real data; lets the validator check the quote." },
+          "rationale": { "type": ["string", "null"], "maxLength": 400 }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "level": { "enum": ["low", "mid", "high", "super_high"] }
+  }
+}
