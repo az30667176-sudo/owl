@@ -1,16 +1,25 @@
 {
   "_meta": {
     "description": "Optional. Per-legislator AI summaries generated OFFLINE by Muse Spark from that legislator's statements. Each sentence must cite >= 1 statement_id from stances.json; the UI renders the citations as clickable numbers. Regenerate whenever stances change. Never generate at page load.",
-    "mock": true,
-    "prompt_contract": "Input: all statements for one legislator (quote, issue, date, score). Output: 2-4 neutral sentences describing their stance pattern, consistency over time, and where they diverge from their party; no adjectives of praise or blame; every sentence cites statement_ids it relies on."
+    "mock": false,
+    "prompt_contract": "Input: all statements for one legislator (quote, issue, date, score). Output: 2-4 neutral sentences describing their stance pattern, consistency over time, and where they diverge from their party; no adjectives of praise or blame; every sentence cites statement_ids it relies on.",
+    "generator": "services/process/summarize.mjs"
   },
   "summaries": {
     "p09": {
       "model": "muse-spark-1.3",
-      "generated_at": "2026-09-02",
+      "generated_at": "2026-10-28",
       "sentences": [
         {
-          "text": "On gun policy, Finch moved from opposing the background-check bill in 2025 to voting for it in 2026, tying the change to the rural-seller amendment and events in Sacramento.",
+          "text": "Rep. Finch supported Data Centers in January 2025 and the Military Cyber Budget in March 2026, and opposed Renewables in August 2025.",
+          "cites": [
+            "st019",
+            "st054",
+            "st035"
+          ]
+        },
+        {
+          "text": "On Gun Policy on H.R. 4410, he moved from opposing in August 2025 to supporting in June 2026 and voting yes in August 2026.",
           "cites": [
             "st008",
             "st055",
@@ -18,15 +27,11 @@
           ]
         },
         {
-          "text": "He frames energy and infrastructure through district jobs and grid reliability: supportive of data-center buildout, skeptical of renewable subsidies.",
+          "text": "His 2026 support for Gun Policy diverges from the average Republican opposition score of -0.73, while his support for Data Centers and the Military Cyber Budget is in the same direction as the Republican averages of 0.63 and 0.75.",
           "cites": [
+            "st055",
+            "st056",
             "st019",
-            "st035"
-          ]
-        },
-        {
-          "text": "On defense he backs the cyber budget increase without qualification.",
-          "cites": [
             "st054"
           ]
         }
@@ -34,65 +39,435 @@
     },
     "p04": {
       "model": "muse-spark-1.3",
-      "generated_at": "2026-09-02",
+      "generated_at": "2026-10-28",
       "sentences": [
         {
-          "text": "Beaumont's positions are consistent across the record: opposed to new gun regulation, policing restrictions, AI licensing and corporate-tax increases, with no recorded shifts.",
+          "text": "Beaumont opposed bills on gun background checks, AI regulation, policing reform, and corporate tax rates.",
           "cites": [
             "st004",
-            "st014",
             "st026",
+            "st014",
             "st044"
           ]
         },
         {
-          "text": "His gun-policy statements are the most repeated item in his record and are among the shortest, suggesting a settled position rather than an evolving one.",
+          "text": "On gun background checks, he expressed opposition in January 2025 and continued to express opposition in March 2026 and August 2026.",
           "cites": [
+            "st004",
             "st057",
             "st058"
+          ]
+        },
+        {
+          "text": "His positions were in the same opposing direction as other Republicans in the dataset on those issues, with more negative scores on gun policy and policing reform than the Republican averages of -0.22 and -0.20.",
+          "cites": [
+            "st004",
+            "st057",
+            "st058",
+            "st014"
           ]
         }
       ]
     },
     "p01": {
       "model": "muse-spark-1.3",
-      "generated_at": "2026-09-02",
+      "generated_at": "2026-10-28",
       "sentences": [
         {
-          "text": "Marquez supports gun regulation, policing reform and Ukraine aid, and opposes the border bill, consistently pairing funding with accountability language.",
+          "text": "Marquez supported background-check legislation on gun policy, policing reform legislation, and supplemental appropriations for Ukraine aid, and opposed border-enforcement legislation.",
           "cites": [
             "st001",
             "st013",
-            "st031",
-            "st051"
+            "st051",
+            "st031"
           ]
         },
         {
-          "text": "Her policing position is repeated across sessions with the same framing, indicating a stable priority rather than a one-off vote.",
+          "text": "On policing and reform, she expressed support in January 2025 and again in May 2026, showing consistent direction over time with no change.",
           "cites": [
             "st013",
             "st061"
+          ]
+        },
+        {
+          "text": "On border security, she opposed H.R. 2, diverging from the average for other Democrats in the dataset, which was 0.30 in the support direction.",
+          "cites": [
+            "st031"
           ]
         }
       ]
     },
     "p05": {
       "model": "muse-spark-1.3",
-      "generated_at": "2026-09-02",
+      "generated_at": "2026-10-28",
       "sentences": [
         {
-          "text": "Raman supports AI infrastructure and regulation together, but her data-center support has softened over 2026 as she added water and grid conditions.",
+          "text": "Rep. Raman expressed support for AI infrastructure, federal extreme-risk gun legislation, and AI accountability guardrails.",
           "cites": [
-            "st024",
+            "st017",
+            "st005",
+            "st024"
+          ]
+        },
+        {
+          "text": "On data centers, she remained supportive from August 2025 to July 2026, pairing that support with calls for grid upgrades and water safeguards.",
+          "cites": [
             "st017",
             "st059",
             "st060"
           ]
         },
         {
-          "text": "She is the only member in this set to attach a due-process condition to red-flag laws rather than oppose or endorse them outright.",
+          "text": "Her support for data centers diverges from the average opposition among other Democrats in the dataset, while her support on gun policy and AI regulation was in the same supportive direction as other Democrats.",
           "cites": [
-            "st005"
+            "st060",
+            "st005",
+            "st024"
+          ]
+        }
+      ]
+    },
+    "p02": {
+      "model": "muse-spark-1.3",
+      "generated_at": "2026-10-28",
+      "sentences": [
+        {
+          "text": "Okafor expressed support for universal background checks on gun policy and for Medicare negotiation on drug pricing, and a neutral position on data center investment pending stronger energy-sourcing requirements.",
+          "cites": [
+            "st002",
+            "st039",
+            "st020"
+          ]
+        },
+        {
+          "text": "The three statements each address a different issue once between August 2025 and March 2026, with no repeated issue showing a change of direction.",
+          "cites": [
+            "st002",
+            "st020",
+            "st039"
+          ]
+        },
+        {
+          "text": "His scores were 0.65 on gun policy compared with 0.50 for other Democrats, 0.70 on drug pricing compared with 0.85, and 0.10 on data centers compared with 0.17, indicating same-direction alignment rather than divergence.",
+          "cites": [
+            "st002",
+            "st039",
+            "st020"
+          ]
+        }
+      ]
+    },
+    "p03": {
+      "model": "muse-spark-1.3",
+      "generated_at": "2026-10-28",
+      "sentences": [
+        {
+          "text": "In statements from March 5 to March 23, 2026, she supported federal permitting reform for data centers under H.R. 6110 and supported advanced nuclear under H.R. 1111, while opposing the Background Checks Act H.R. 4410.",
+          "cites": [
+            "st021",
+            "st036",
+            "st003"
+          ]
+        },
+        {
+          "text": "The provided records contain one statement per issue and show no change of direction within the same issue over that period.",
+          "cites": [
+            "st021",
+            "st036",
+            "st003"
+          ]
+        },
+        {
+          "text": "On data centers, nuclear, and gun policy, the direction of her support or opposition matched the direction of the averages for other Republicans in the dataset.",
+          "cites": [
+            "st021",
+            "st036",
+            "st003"
+          ]
+        }
+      ]
+    },
+    "p06": {
+      "model": "muse-spark-1.3",
+      "generated_at": "2026-10-28",
+      "sentences": [
+        {
+          "text": "The statements show opposition to federal action on policing reform, drug-price controls and background checks, and support for border-security measures.",
+          "cites": [
+            "st016",
+            "st040",
+            "st006",
+            "st030"
+          ]
+        },
+        {
+          "text": "From January 2025 to March 2026, no issue appears more than once, so the data show no change of direction within any single issue.",
+          "cites": [
+            "st016",
+            "st040",
+            "st006",
+            "st030"
+          ]
+        },
+        {
+          "text": "On policing reform his score of -0.20 was less negative than the Republican average of -0.75, while his scores of -0.35 on gun policy and 0.85 on border security compared with Republican averages of -0.44 and 0.91.",
+          "cites": [
+            "st016",
+            "st006",
+            "st030"
+          ]
+        }
+      ]
+    },
+    "p07": {
+      "model": "muse-spark-1.3",
+      "generated_at": "2026-10-28",
+      "sentences": [
+        {
+          "text": "Tsao supported closing the gun-show loophole through background checks and supported federal credits for solar and storage, and later opposed hyperscale AI infrastructure expansion without binding limits on water impacts.",
+          "cites": [
+            "st007",
+            "st034",
+            "st018"
+          ]
+        },
+        {
+          "text": "Her gun-policy support aligns closely with the Democratic average, while her opposition on data centers diverges from other Democrats who on average supported the issue.",
+          "cites": [
+            "st007",
+            "st018"
+          ]
+        },
+        {
+          "text": "The available statements address each issue once from January 2025 to March 2026, showing no change of direction within the same issue.",
+          "cites": [
+            "st007",
+            "st034",
+            "st018"
+          ]
+        }
+      ]
+    },
+    "p08": {
+      "model": "muse-spark-1.3",
+      "generated_at": "2026-10-28",
+      "sentences": [
+        {
+          "text": "Ibanez expressed support for funding both border security and humane processing, for targeted tariffs on subsidized steel while describing blanket tariffs as a tax on his district, and for body cameras in the context of policing reform.",
+          "cites": [
+            "st029",
+            "st047",
+            "st015"
+          ]
+        },
+        {
+          "text": "From August 2025 to March 2026, all three statements were scored in the support direction, with no move from opposing to supporting or from supporting to opposing observed.",
+          "cites": [
+            "st029",
+            "st047",
+            "st015"
+          ]
+        },
+        {
+          "text": "On Border Security and China Tariffs, his support scores of 0.20 and 0.30 were in the opposite direction from the averages for other Democrats of -0.13 and -0.40, while on Policing & Reform his support score of 0.45 was in the same direction as the Democratic average of 0.65.",
+          "cites": [
+            "st029",
+            "st047",
+            "st015"
+          ]
+        }
+      ]
+    },
+    "p10": {
+      "model": "muse-spark-1.3",
+      "generated_at": "2026-10-28",
+      "sentences": [
+        {
+          "text": "Rousseau recorded support-direction positions on AI regulation, nuclear energy, and gun policy, including conditional openness to new reactor designs pending waste issues and support for safe-storage requirements.",
+          "cites": [
+            "st025",
+            "st037",
+            "st009"
+          ]
+        },
+        {
+          "text": "Across statements dated January 2025 to March 2026, the data show support direction without a change of direction.",
+          "cites": [
+            "st037",
+            "st025",
+            "st009"
+          ]
+        },
+        {
+          "text": "On gun policy her score of 0.30 was below the 0.56 average for other Democrats in the dataset, while on AI regulation her score of 0.75 was near the 0.68 Democratic average.",
+          "cites": [
+            "st009",
+            "st025"
+          ]
+        }
+      ]
+    },
+    "s01": {
+      "model": "muse-spark-1.3",
+      "generated_at": "2026-10-28",
+      "sentences": [
+        {
+          "text": "Between January and August 2025, Holloway expressed support for background checks legislation on gun policy, conditional support for the cyber increase in the NDAA, and support for lower drug costs legislation.",
+          "cites": [
+            "st010",
+            "st053",
+            "st041"
+          ]
+        },
+        {
+          "text": "All three positions were recorded in the support direction, with no change of direction during the period.",
+          "cites": [
+            "st010",
+            "st053",
+            "st041"
+          ]
+        },
+        {
+          "text": "On gun policy and drug pricing, her support scores were above the averages for other Democrats in the dataset on the same issues.",
+          "cites": [
+            "st010",
+            "st041"
+          ]
+        }
+      ]
+    },
+    "s02": {
+      "model": "muse-spark-1.3",
+      "generated_at": "2026-10-28",
+      "sentences": [
+        {
+          "text": "He opposed measures on AI regulation and gun policy while supporting measures on border security and China tariffs.",
+          "cites": [
+            "st028",
+            "st011",
+            "st033",
+            "st045"
+          ]
+        },
+        {
+          "text": "His support for border security was consistent between March 2026 and September 2026.",
+          "cites": [
+            "st033",
+            "st062"
+          ]
+        },
+        {
+          "text": "On AI regulation, gun policy and border security, his positions were in the same direction as the averages for other Republicans in the dataset.",
+          "cites": [
+            "st028",
+            "st011",
+            "st033"
+          ]
+        }
+      ]
+    },
+    "s03": {
+      "model": "muse-spark-1.3",
+      "generated_at": "2026-10-28",
+      "sentences": [
+        {
+          "text": "The legislator opposed China tariffs in January 2025, supported border security measures in August 2025, and expressed conditional support for background checks in March 2026.",
+          "cites": [
+            "st046",
+            "st032",
+            "st012"
+          ]
+        },
+        {
+          "text": "Because each statement addresses a different issue, the record shows no change of direction on the same issue over time.",
+          "cites": [
+            "st046",
+            "st032",
+            "st012"
+          ]
+        },
+        {
+          "text": "The positions differed from other Democrats' averages on China Tariffs at -0.40 compared with 0.30 and on Border Security at 0.40 compared with -0.23, while on Gun Policy the 0.20 support level was below the Democratic average of 0.58.",
+          "cites": [
+            "st046",
+            "st032",
+            "st012"
+          ]
+        }
+      ]
+    },
+    "s04": {
+      "model": "muse-spark-1.3",
+      "generated_at": "2026-10-28",
+      "sentences": [
+        {
+          "text": "Rep. Kessler supported data center permitting in January 2025 and small modular reactors in August 2025, and opposed supplemental appropriations for Ukraine aid in March 2026.",
+          "cites": [
+            "st022",
+            "st038",
+            "st048"
+          ]
+        }
+      ]
+    },
+    "s05": {
+      "model": "muse-spark-1.3",
+      "generated_at": "2026-10-28",
+      "sentences": [
+        {
+          "text": "Between January 2025 and March 2026, Okonkwo expressed support on Corporate Tax Rate, Ukraine Aid, and AI Regulation, and opposition on Data Centers.",
+          "cites": [
+            "st043",
+            "st049",
+            "st023",
+            "st027"
+          ]
+        },
+        {
+          "text": "The four statements each address a different issue, with no repeated issue showing a move from supporting to opposing or opposing to supporting.",
+          "cites": [
+            "st043",
+            "st049",
+            "st023",
+            "st027"
+          ]
+        },
+        {
+          "text": "On Data Centers, Okonkwo's opposition differed in direction from the average of other Democrats in the dataset, who averaged support, while on Ukraine Aid and AI Regulation her support was in the same direction as the Democratic averages.",
+          "cites": [
+            "st023",
+            "st049",
+            "st027"
+          ]
+        }
+      ]
+    },
+    "s06": {
+      "model": "muse-spark-1.3",
+      "generated_at": "2026-10-28",
+      "sentences": [
+        {
+          "text": "Thornton supported the Military Cyber Budget and Ukraine aid while opposing an increase in the corporate tax rate.",
+          "cites": [
+            "st052",
+            "st050",
+            "st042"
+          ]
+        },
+        {
+          "text": "Each of these issues appears once in the statements from January 2025 to March 2026, showing no change of direction within the same issue.",
+          "cites": [
+            "st052",
+            "st050",
+            "st042"
+          ]
+        },
+        {
+          "text": "His support for Ukraine aid is in the opposite direction from the average opposition among other Republicans in the dataset, while his support on the military cyber budget and opposition on the corporate tax rate are in the same direction as Republican averages.",
+          "cites": [
+            "st050",
+            "st052",
+            "st042"
           ]
         }
       ]
