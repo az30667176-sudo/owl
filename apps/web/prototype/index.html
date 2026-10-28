@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>OWL Prototype</title>
+<title>OWL — Open Watch on Legislators</title>
+<link rel="icon" type="image/png" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,400&family=Public+Sans:wght@400;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
@@ -163,16 +164,58 @@
   .tabpane[hidden] { display: none; }
   .stmt.hl { background: rgba(201,182,255,.12); border-radius: 8px; padding: 10px 8px 4px; margin-left: -8px; margin-right: -8px; }
   @media (max-width: 1100px) { .hero { grid-template-columns: 56px 1fr; } .strip { grid-column: 1 / -1; border-left: 0; flex-wrap: wrap; } }
+
+  /* ---- Editorial layout: masthead, hairlines instead of cards, margin notes ---- */
+  .app { grid-template-columns: 236px 1fr 320px; grid-template-rows: 64px 1fr; }
+  .masthead { display: grid; grid-template-columns: auto auto 1fr auto; align-items: center; gap: 28px; padding: 0 24px; background: var(--bg);
+    border-bottom: 1px solid var(--border); box-shadow: inset 0 -3px 0 0 var(--bg), inset 0 -4px 0 0 var(--accent); }
+  .masthead .brand { display: flex; align-items: baseline; gap: 10px; text-decoration: none; color: var(--text); }
+  .masthead .logo { width: 34px; height: 34px; border-radius: 50%; align-self: center; }
+  .masthead .wordmark { font-family: var(--display); font-weight: 600; font-size: 26px; letter-spacing: .02em; line-height: 1; }
+  .masthead .tagline { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .masthead .modes { display: flex; gap: 22px; border: 0; margin: 0; }
+  .masthead .modes button { padding: 6px 0; font-size: 13px; letter-spacing: .02em; color: var(--muted); border-bottom: 2px solid transparent; border-radius: 0; background: transparent; }
+  .masthead .modes button:hover { color: var(--text); }
+  .masthead .modes button.active { color: var(--text); background: transparent; border-bottom-color: var(--accent); }
+  .masthead .crumb { font-size: 12px; color: var(--muted); justify-self: start; }
+  .masthead .mock { margin-left: 0; border-radius: 3px; letter-spacing: .06em; text-transform: uppercase; font-size: 10px; }
+  aside { background: transparent; border-right: 1px solid var(--border); padding: 18px 18px 28px; }
+  .side { background: transparent; border-left: 1px solid var(--border); padding: 18px 18px 28px; }
+  .side::before { content: attr(data-label); display: block; font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+  .h { font-size: 10.5px; letter-spacing: .14em; color: var(--accent); margin: 18px 0 8px; }
+  .h a { color: var(--muted); }
+  .cat, .row, .btn, .search, .field select, .dir-row, .stance-line, .tag, .pill { border-radius: 3px; }
+  .chip { border-radius: 3px; }
+  .card { background: transparent; border: 0; border-top: 1px solid var(--border); border-radius: 0; padding: 14px 0 6px; }
+  .card h3, .topic-title, .ph h1, .hero h1 { font-family: var(--display); font-weight: 600; }
+  .card h3 { font-size: 17px; margin-bottom: 2px; }
+  .card.ai { border: 0; border-top: 1px solid var(--ai); border-radius: 0; background: var(--ai-wash); padding: 14px 16px; margin: 14px 0; }
+  .evidence { background: transparent; border: 0; border-top: 1px solid var(--border); border-radius: 0; padding: 12px 0 0; }
+  .evidence blockquote { font-size: 16px; line-height: 26px; }
+  .hero { background: transparent; border: 0; border-bottom: 1px solid var(--border); border-radius: 0; padding: 6px 0 18px; }
+  .hero h1 { font-size: 30px; }
+  .strip .v { font-size: 16px; }
+  .strip .l { color: var(--muted); }
+  .kpi, .stat { border-radius: 0; }
+  .tabs { border-bottom: 1px solid var(--border); }
+  .tabs button { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; padding: 10px 0; margin-right: 22px; }
+  th { background: var(--bg); letter-spacing: .12em; }
+  td.quote { font-family: var(--display); font-style: italic; }
+  .legend { border-radius: 3px; background: var(--bg); }
+  .topic-sub, .person-card .meta, .row .meta, .dir-row .d { letter-spacing: .01em; }
+  .person-card .name { font-size: 18px; }
+  #profile { padding: 18px 28px 40px; }
+  .pgrid { grid-template-columns: 1fr 320px; gap: 28px; }
 </style>
 </head>
 <body>
 <div id="loading">Loading data…</div>
 <div class="app">
-  <header>
-    <span class="brand">🦉 OWL</span>
-    <span class="modes"><button id="m-explore">Explore</button><button id="m-focus">Focus</button><button id="m-list">List</button><button id="m-profile">Legislators</button></span>
+  <header class="masthead">
+    <a class="brand" href="#" id="brand"><img class="logo" src="assets/logo/owl-mark-64.png" alt=""><span class="wordmark">OWL</span><span class="tagline">Open Watch on Legislators</span></a>
+    <nav class="modes" aria-label="Sections"><button id="m-explore">Explore</button><button id="m-focus">Issues</button><button id="m-list">Find</button><button id="m-profile">Legislators</button></nav>
     <span class="crumb" id="crumb"></span>
-    <span class="mock" id="mock" hidden>MOCK DATA · fictional legislators</span>
+    <span class="mock" id="mock" hidden>Mock data · fictional legislators</span>
   </header>
   <aside id="aside"></aside>
   <section>
@@ -306,7 +349,7 @@
     const byP = {}; fe.forEach(e => (byP[e.from] ??= []).push(e));
     const rows = Object.entries(byP).sort((a, b) => b[1].length - a[1].length).map(([pid, es]) => { const p = byId[pid];
       return `<div class="row" data-id="${pid}"><div><div class="name">${title(p)}</div><div class="meta">${seat(p)} · ${p.party} · <span style="color:var(--support)">${es.filter(e => e.direction === "support").length} for</span> · <span style="color:var(--oppose)">${es.filter(e => e.direction === "oppose").length} against</span></div></div><div class="score">${es.length}</div></div>`; }).join("");
-    $side.innerHTML = `<h2 class="topic-title">In view</h2><div class="topic-sub">${fe.length} stances across ${Object.keys(byP).length} legislators. Click one to see their positions.</div>${rows || `<div class="empty-state">Nothing matches the filters.</div>`}`;
+    $side.innerHTML = `<div class="topic-sub">${fe.length} stances across ${Object.keys(byP).length} legislators. Click one to see their positions.</div>${rows || `<div class="empty-state">Nothing matches the filters.</div>`}`;
     $side.querySelectorAll(".row").forEach(el => el.onclick = () => { state.person = el.dataset.id; state.edge = null; render(); });
   }
   const fmt = s => (s > 0 ? "+" : "") + s.toFixed(2);
@@ -609,9 +652,15 @@
     else { const i = issueById[state.issue]; $crumb.innerHTML = i ? `<b>${i.catName}</b> › ${i.subName} › <b>${i.name}</b>` : "Pick an issue"; $hint.textContent = "Drag nodes · click a legislator for evidence · grey issues = what these legislators also talk about"; }
   }
   function renderAside() { ({ explore: renderExploreAside, focus: renderFocusAside, list: renderListAside, profile: renderProfileAside })[state.mode](); }
-  function renderSide() { ({ explore: renderExploreSide, focus: renderFocusSide, list: renderListSide, profile: renderProfileSide })[state.mode](); $side.querySelectorAll("[data-open]").forEach(b => b.onclick = () => openProfile(b.dataset.open)); }
+  function renderSide() {
+    const hasEvidence = state.mode === "focus" ? !!state.person : state.mode === "explore" ? !!state.person : state.mode === "list" ? !!state.l.sel : !!state.p.sel;
+    $side.dataset.label = hasEvidence ? "Evidence" : state.mode === "explore" ? "In view" : "Notes";
+    ({ explore: renderExploreSide, focus: renderFocusSide, list: renderListSide, profile: renderProfileSide })[state.mode]();
+    $side.querySelectorAll("[data-open]").forEach(b => b.onclick = () => openProfile(b.dataset.open));
+  }
   function render() { renderHeader(); renderAside(); renderSide(); renderGraph(); if (state.mode !== "profile" && location.hash.startsWith("#/legislator")) history.replaceState(null, "", location.pathname); }
   ["explore", "focus", "list", "profile"].forEach(m => $("m-" + m).onclick = () => { state.mode = m; state.person = null; render(); });
+  $("brand").onclick = e => { e.preventDefault(); state.mode = "explore"; state.person = null; render(); };
   window.addEventListener("hashchange", () => { const m = /^#\/legislator\/([\w-]+)/.exec(location.hash); if (m && byId[m[1]]) { state.mode = "profile"; state.p.person = m[1]; state.p.sel = null; render(); } });
   render();
   window.addEventListener("resize", renderGraph);
