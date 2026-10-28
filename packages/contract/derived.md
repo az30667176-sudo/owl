@@ -15,7 +15,7 @@ For all statements with the same `person` and `issue`, sorted by `date`:
 | `flip` | true when the set of non-neutral statement directions has more than one member (neutral → support is **not** a flip) |
 | `linkage`, `llm_confidence` | the maximum across statements |
 | `quote`, `bill`, `source` | from the latest statement (used as the headline evidence) |
-| `salience` | Σ over statements of `venue_weight × 2^(−age_days / 180)`; `venue_weight` = 1.0 for `media_type: gov`, 0.8 for major news, 0.6 otherwise; `age_days` relative to today (mock data: relative to the newest statement so the demo is stable) |
+| `salience` | Σ over statements of `2^(−age_days / 180)` (recent statements count more, half-life 180 days); `age_days` relative to today (mock data: relative to the newest statement so the demo is stable). All sources are official records, so there is no venue weighting |
 | `heat` | percentile rank of `salience` across all edges, 0…1 |
 
 ## Per-legislator
