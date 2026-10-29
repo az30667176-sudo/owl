@@ -73,6 +73,8 @@ Labels: `area:ingest` `area:process` `area:web` `contract` `blocked` `P0` `P1`.
 Milestones: M1 contract frozen (10/28) · M2 end-to-end on real data (10/31) · M3 submission (11/4).
 Cheatsheet: [docs/WORKFLOW.md](docs/WORKFLOW.md).
 
+**Spec-driven changes (OpenSpec).** `openspec/specs/` holds the live specs (data-contract, web-app, process-pipeline). Anything beyond a one-line fix starts as a change: in Claude Code run `/opsx:propose "<what you want>"` (writes proposal, spec delta, design, tasks under `openspec/changes/<name>/`), review it, `/opsx:apply` to implement, `/opsx:archive` to fold the delta into the live specs. CLI: `openspec list`, `openspec validate --all`, `openspec view`.
+
 ## Quick start
 
 ```bash

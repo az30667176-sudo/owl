@@ -1,0 +1,41 @@
+schema: spec-driven
+
+context: |
+  Language: en
+  All artifacts must be written in en.
+  Keep OpenSpec structural headings and SHALL/MUST keywords in English.
+
+  Project: OWL — Open Watch on Legislators. Evidence-anchored knowledge graph of U.S. House
+  members' stances on issues, built for the Meta AI Developer Hackathon (deadline 2026-11-04).
+  Four boxes, three contracts: data producer -A-> pre-processing -B-> data process (Muse Spark)
+  -C-> data vis (apps/web). Read these before proposing anything:
+    - packages/contract/README.md   (contracts A/B/C, field by field; the single source of truth)
+    - packages/contract/derived.md  (what the browser derives from contract B)
+    - data/README.md                (the five data files the app loads)
+    - docs/ARCHITECTURE.md, docs/WORKFLOW.md
+  Capabilities live under openspec/specs/: data-contract (A/B), web-app (views, contract C),
+  process-pipeline (extract.mjs, summarize.mjs).
+  Hard rules that every change must respect:
+    - quotes are verbatim substrings of the source record; never paraphrased
+    - statements are never pre-aggregated; one row per statement
+    - direction is derived from score (> .15 support, < -.15 oppose)
+    - repo content is English only; no senators, House members only
+    - a schema change needs a GitHub issue labelled `contract` and the consuming side's OK
+
+rules:
+  proposal:
+    - State which contract (A, B, C or none) the change touches and which GitHub issue it relates to
+    - Keep proposals under 400 words
+  specs:
+    - One requirement per behaviour; every requirement has at least one WHEN/THEN scenario
+  tasks:
+    - Each task names the file(s) it touches; include a final task that runs node packages/contract/validate.mjs data --records data/records
+
+operations:
+  apply:
+    guidance:
+      - Run the contract validator after any change under data/ or packages/contract/
+      - Commit messages in English; end with "Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>" when Claude wrote the code
+  archive:
+    guidance:
+      - Summarize what moved into the main specs before finishing
