@@ -35,7 +35,7 @@ operations:
   apply:
     guidance:
       - Run the contract validator after any change under data/ or packages/contract/
-      - Commit messages in English. Trailer by tool: "Co-Authored-By: Muse Code <noreply@meta.com>" when Muse Code wrote the code, "Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>" when Claude did
+      - 'Commit messages in English. Trailer by tool: "Co-Authored-By: Muse Code <noreply@meta.com>" when Muse Code wrote the code, "Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>" when Claude did'
   archive:
     guidance:
       - Summarize what moved into the main specs before finishing
