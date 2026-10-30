@@ -24,6 +24,6 @@
 
 ## 4. Verify and announce
 
-- [ ] 4.1 Validator OK; local server: Explore ◆ + panel, profile block for Tsao/Raman/Beaumont, `#/bill/hr6110` toggles; temporarily rename `conditions.json` and confirm nothing breaks.
-- [ ] 4.2 Commits by Muse Code with trailer `Co-Authored-By: Muse Code <noreply@meta.com>`; push; Pages run validates.
-- [ ] 4.3 Open a GitHub issue labelled `contract` announcing `data/conditions.json` (shape, rules, how to validate, that the five existing files are unchanged).
+- [x] 4.1 Validator OK; local server: Explore ◆ + panel, profile block for Tsao/Raman/Beaumont, `#/bill/hr6110` toggles; temporarily rename `conditions.json` and confirm nothing breaks.
+- [x] 4.2 Commits by Muse Code with trailer `Co-Authored-By: Muse Code <noreply@meta.com>`; push; Pages run validates.
+- [x] 4.3 Open a GitHub issue labelled `contract` announcing `data/conditions.json` (shape, rules, how to validate, that the five existing files are unchanged).
