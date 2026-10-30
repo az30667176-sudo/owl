@@ -215,6 +215,51 @@
   *::-webkit-scrollbar-thumb:hover { background: #3a4260; background-clip: padding-box; }
   *::-webkit-scrollbar-button { display: none; height: 0; width: 0; }
   *::-webkit-scrollbar-corner { background: transparent; }
+  /* bill page (3.2-3.3): structure mirrors data/_site/bill-page.html, tokens only */
+  #bill { position: absolute; inset: 0; overflow: auto; padding: 18px 22px 30px; display: none; }
+  .bill-wrap { max-width: 1180px; }
+  .bill-wrap .crumbline { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); font-family: var(--mono); }
+  .bill-wrap .crumbline a { color: var(--accent); cursor: pointer; text-decoration: none; }
+  .bill-wrap h1 { font-size: 24px; margin: 6px 0 2px; }
+  .bill-sub { color: var(--muted); font-size: 13px; margin: 0 0 12px; }
+  .bill-strip { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 10px 0; margin-bottom: 6px; }
+  .bill-strip b { font: 700 22px/1 var(--mono); display: block; }
+  .bill-strip span { font-size: 11px; color: var(--muted); letter-spacing: .08em; text-transform: uppercase; }
+  .bill-sec { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin: 18px 0 8px; font-family: var(--mono); }
+  .bill-spec { position: relative; height: 64px; margin: 14px 0 4px; }
+  .bill-spec .ax { position: absolute; top: 24px; left: 0; right: 0; border-top: 1px solid var(--border-strong); }
+  .bill-spec .ax i { position: absolute; top: -16px; font: 10px var(--mono); color: var(--muted); font-style: normal; }
+  .bill-spec .dot { position: absolute; top: 18px; width: 13px; height: 13px; border-radius: 50%; border: 2px solid var(--bg); transform: translateX(-50%); }
+  .bill-spec .dot.cond::after { content: "◆"; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); color: var(--accent); font-size: 10px; }
+  .bill-spec .nm { position: absolute; top: 38px; font: 500 10px var(--mono); color: var(--muted); transform: translateX(-50%); white-space: nowrap; }
+  .bill-grid { display: grid; grid-template-columns: 1fr 330px; gap: 26px; align-items: start; }
+  @media (max-width: 1180px) { .bill-grid { grid-template-columns: 1fr; } }
+  #billmap { width: 100%; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); display: block; }
+  .bill-legend { display: flex; gap: 16px; flex-wrap: wrap; font-size: 12px; color: var(--muted); margin-top: 10px; }
+  .bill-legend i { display: inline-block; width: 18px; height: 0; border-top: 2px solid; vertical-align: middle; margin-right: 6px; }
+  .bill-toggle { display: flex; gap: 10px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid var(--border); cursor: pointer; user-select: none; }
+  .bill-toggle.dis { opacity: .4; cursor: not-allowed; }
+  .bill-toggle input { margin-top: 5px; accent-color: var(--accent); }
+  .bill-toggle .t { font-weight: 600; }
+  .bill-toggle .m { color: var(--muted); font-size: 12px; }
+  .bill-warn { display: none; border-left: 2px solid var(--oppose); background: rgba(242,112,95,.1); padding: 6px 10px; font-size: 12px; margin-top: 8px; }
+  .bill-tally { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; margin: 12px 0 4px; }
+  .bill-tally div { border-top: 2px solid var(--border-strong); padding-top: 6px; }
+  .bill-tally b { font: 700 24px/1 var(--mono); display: block; }
+  .bill-tally b small { font-size: 13px; color: var(--muted); font-weight: 400; margin-left: 4px; }
+  .bill-tally span { font-size: 11px; color: var(--muted); letter-spacing: .08em; text-transform: uppercase; }
+  .bill-moves { margin: 6px 0 0; padding: 0; list-style: none; font-size: 13px; }
+  .bill-moves li { padding: 6px 0; border-bottom: 1px solid var(--border); }
+  .bill-moves .why { color: var(--muted); font-size: 12px; }
+  .bill-read { font-family: var(--display); background: var(--ai-wash); border-left: 2px solid var(--ai); padding: 8px 12px; margin-top: 12px; font-size: 14px; }
+  .bill-read .k { font: 500 10px var(--mono); letter-spacing: .1em; color: var(--ai); text-transform: uppercase; display: block; margin-bottom: 3px; }
+  .bill-card { margin-top: 14px; border-top: 1px solid var(--border); padding-top: 12px; min-height: 84px; }
+  .bill-card h3 { font-size: 17px; margin: 0 0 2px; }
+  .bill-card .meta { color: var(--muted); font-size: 12px; margin-bottom: 8px; }
+  .bill-card .c { display: grid; grid-template-columns: 12px 1fr; gap: 8px; padding: 6px 0; border-top: 1px dashed var(--border); font-size: 13px; }
+  .bill-card .c .cdot { width: 9px; height: 9px; border-radius: 50%; margin-top: 6px; }
+  .bill-card .c .q { font-family: var(--display); font-style: italic; color: var(--muted); }
+  #bill .dim { opacity: .18 !important; }
   /* conditions markers (2.2): fixed-position what-if tooltip in existing tokens */
   .cond-tip { background: var(--panel-2); border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; font-size: 12px; }
   .cond-tip .cond-q { font-family: var(--display); font-style: italic; color: var(--muted); margin-top: 4px; font-size: 14px; line-height: 22px; }
@@ -235,6 +280,7 @@
     <svg id="graph"></svg>
     <div id="table-wrap"></div>
     <div id="profile"></div>
+    <div id="bill"></div>
     <div class="legend" id="legend">
       <span><i style="background:var(--support)"></i>Support</span>
       <span><i style="background:var(--oppose)"></i>Oppose</span>
@@ -266,9 +312,11 @@
   // bill id: lower-case letters+digits of the leading bill number ("H.R. 6110 …" -> "hr6110"; null for null)
   const billId = s => { if (s == null) return null; const m = /^\s*([A-Za-z.][A-Za-z.\s]*?\d+)/.exec(s); return m ? m[1].replace(/[^A-Za-z0-9]/g, "").toLowerCase() : null; };
   const nowWord = v => (v === null || v === undefined) ? "has not spoken on it" : v > .15 ? "supports now" : v < -.15 ? "opposes now" : "is neutral now";
+  // lower-case a demand name for mid-sentence use after "if"/"until"; abbreviations ("Sec.") and acronyms stay untouched
+  const lcFirst = s => String(s).replace(/^([A-Za-z][A-Za-z.]*)/, w => (w.includes(".") || !/^[A-Z][a-z]/.test(w)) ? w : w[0].toLowerCase() + w.slice(1));
   // stance-first what-if sentence for one condition row; nowScore = aggregated edge score for that person+issue, or null
   const phrase = (nowScore, row) => {
-    const dem = (DEMANDS[row.demand] || {}).name || row.demand, n = nowWord(nowScore);
+    const dem = lcFirst((DEMANDS[row.demand] || {}).name || row.demand), n = nowWord(nowScore);
     if (row.scope === "final_passage") return `${n}, but will <b>withhold the final-passage vote</b> until ${dem}`;
     if (row.stance_if_met === "support") return (nowScore !== null && nowScore !== undefined && nowScore < -.15)
       ? `${n} · <b style="color:var(--support)">would accept passage</b> if ${dem}`
@@ -322,10 +370,13 @@
     mode: "explore", cat: null, sub: null, issue: null, person: null, edge: null,
     f: { issues: new Set(ISSUES.filter(i => countFor(i.id) > 0).map(i => i.id)), chambers: new Set(["house", "senate"]), state: "", parties: new Set(["D", "R", "I"]), dirs: new Set(["support", "oppose", "neutral"]), minConf: 0, q: "" },
     l: { chamber: "", state: "", cat: "", sub: "", issue: "", dir: "", party: "", gender: "", minConf: 0, sort: "score", desc: true, sel: null },
-    p: { person: null, sel: null, q: "" }
+    p: { person: null, sel: null, q: "" },
+    b: { id: null, ticked: [], sel: null }
   };
-  // deep link: #/legislator/<id>
+  // deep link: #/legislator/<id> + #/bill/<id> (3.1)
+  const openBill = id => { state.mode = "bill"; state.b.id = id; state.b.ticked = []; state.b.sel = null; history.replaceState(null, "", `#/bill/${id}`); render(); };
   { const m = /^#\/legislator\/([\w-]+)/.exec(location.hash); if (m && byId[m[1]]) { state.mode = "profile"; state.p.person = m[1]; } }
+  { const m = /^#\/bill\/([\w-]+)/.exec(location.hash); if (m) { state.mode = "bill"; state.b.id = m[1]; } }
   // default focus = first issue with stances
   { const first = ISSUES.find(i => countFor(i.id) > 0); if (first) { state.cat = first.cat; state.sub = first.sub; state.issue = first.id; } }
 
@@ -411,7 +462,7 @@
       <div class="tags" style="margin-top:6px"><span class="tag" style="color:${color(e.direction)}">${e.direction} · ${fmt(e.score)}</span><span class="tag">${e.n} statement${e.n > 1 ? "s" : ""}</span><span class="tag" title="attention: recency-weighted statement count, percentile across all edges">🔥 ${Math.round(e.heat * 100)}th pct</span>${e.flip ? `<span class="tag" style="border-color:var(--accent);color:var(--accent)">⟲ flipped</span>` : ""}<span class="tag c-${e.llm_confidence}">confidence: ${e.llm_confidence}</span></div>
       ${e.n > 1 ? `<div style="margin-top:8px;font-size:11px;color:var(--muted)">direction over time</div>${ribbon(st, 300)}` : ""}`;
     const items = [...st].reverse().map(s => `<div class="stmt ${hlId && s.statement_id === hlId ? "hl" : ""}" style="margin-top:10px;padding-top:10px;border-top:1px solid var(--border)"><div style="font-size:11px;color:var(--muted)">${s.statement_id ? `<span class="tag" style="padding:0 5px">${s.statement_id.replace(/^st0*/, "#")}</span> · ` : ""}${s.date || "undated"} · <span style="color:${color(s.direction)}">${s.direction} ${fmt(s.score)}</span> · <span class="tag c-${s.llm_confidence}" style="padding:0 5px">${s.llm_confidence}</span></div>
-      <blockquote>“${s.quote}”</blockquote><div style="font-size:12px;color:var(--muted)">${s.bill || ""} · linkage ${s.linkage} · ${s.model || ""}</div><a href="${s.source}" target="_blank" rel="noopener">source ↗</a></div>`).join("");
+      <blockquote>“${s.quote}”</blockquote><div style="font-size:12px;color:var(--muted)">${s.bill && billId(s.bill) ? `<a class="link" href="#/bill/${billId(s.bill)}">${s.bill} ↗</a>` : (s.bill || "")} · linkage ${s.linkage} · ${s.model || ""}</div><a href="${s.source}" target="_blank" rel="noopener">source ↗</a></div>`).join("");
     return `<div class="evidence">${head}${items}</div>`;
   }
 
@@ -550,7 +601,7 @@
     const condRows = condByPerson[p.id] || [];
     const condBlock = condRows.length ? `<div class="h" style="margin:16px 0 4px">Conditions</div>` + condRows.map(r => {
       const dot = r.stance_if_met === "support" ? "var(--support)" : "var(--oppose)", dtype = (DEMANDS[r.demand] || {}).type || "";
-      return `<div style="display:flex;gap:10px;margin:10px 0"><span style="width:10px;height:10px;border-radius:50%;background:${dot};flex:none;margin-top:5px"></span><div><div>${condShort(nowOf(r.person, r.issue), r)}</div><div style="font-size:11px;color:var(--muted);margin-top:2px">${r.bill ? `${r.bill} · ` : ""}<span class="tag">${dtype}</span></div><div class="cond-q">“${r.quote}”</div></div></div>`;
+      return `<div style="display:flex;gap:10px;margin:10px 0"><span style="width:10px;height:10px;border-radius:50%;background:${dot};flex:none;margin-top:5px"></span><div><div>${condShort(nowOf(r.person, r.issue), r)}</div><div style="font-size:11px;color:var(--muted);margin-top:2px">${r.bill && billId(r.bill) ? `<a class="link" href="#/bill/${billId(r.bill)}">${r.bill} ↗</a> · ` : (r.bill ? `${r.bill} · ` : "")}<span class="tag">${dtype}</span></div><div class="cond-q">“${r.quote}”</div></div></div>`;
     }).join("") : "";
     const stat = (v, l, c, t) => `<div class="stat" ${t ? `title="${t}"` : ""}><span class="v" ${c ? `style="color:${c}"` : ""}>${v}</span><span class="l">${l}</span></div>`;
     const summary = SUMMARIES[p.id];
@@ -680,6 +731,276 @@
     const hl = $side.querySelector(".stmt.hl"); if (hl) hl.scrollIntoView({ block: "center" });
   }
 
+  // ---------- BILL (3.1-3.3): negotiation map; everything derived from STATEMENTS/EDGES + CONDS ----------
+  const shortName = n => String(n).replace(/^(Rep|Sen)\.\s*/, "");
+  // bill id -> { id, num, title, issue, iss, stmts, conds }; bills discovered from statements + condition rows
+  function billGroups() {
+    const per = new Map();
+    const add = (id, kind, row) => { if (!id) return; if (!per.has(id)) per.set(id, { id, stmts: [], conds: [] }); per.get(id)[kind].push(row); };
+    STATEMENTS.filter(s => s.bill).forEach(s => add(billId(s.bill), "stmts", s));
+    CONDS.filter(r => r.bill).forEach(r => add(billId(r.bill), "conds", r));
+    return per;
+  }
+  function billInfo(id) {
+    const g = billGroups().get(id);
+    if (!g || (!g.stmts.length && !g.conds.length)) return null;
+    const latest = g.stmts.slice().sort((a, b) => String(a.date || "").localeCompare(String(b.date || ""))).pop();
+    const chosen = latest ? latest.bill : g.conds[0].bill;
+    const m = /^\s*([A-Za-z.]+\s*\d+)\s*(.*)$/.exec(chosen || "");
+    const counts = {};
+    g.stmts.forEach(s => counts[s.issue] = (counts[s.issue] || 0) + 1);
+    g.conds.forEach(r => counts[r.issue] = (counts[r.issue] || 0) + 1);
+    const issue = Object.entries(counts).sort((a, b) => b[1] - a[1])[0][0];
+    return { ...g, num: m ? m[1].replace(/\s+/g, " ") : (chosen || id), title: m ? m[2].trim() : "", issue, iss: issueById[issue], latest };
+  }
+  // legislators with a bill-matched statement or a condition row on this bill; score = confidence-weighted mean or null
+  function billLegs(info) {
+    const pids = [...new Set([...info.stmts.map(s => s.person), ...info.conds.map(r => r.person)])].filter(id => byId[id]);
+    return pids.map(pid => {
+      const mine = info.stmts.filter(s => s.person === pid);
+      let score = null;
+      if (mine.length) { const w = mine.map(s => CONF_W[s.llm_confidence] || .7); score = mine.reduce((a, s, i) => a + s.score * w[i], 0) / w.reduce((a, b) => a + b, 0); }
+      return { id: pid, p: byId[pid], score, conds: info.conds.filter(r => r.person === pid) };
+    }).sort((a, b) => (b.score ?? -2) - (a.score ?? -2));
+  }
+  // projection (design decision 6): ticked oppose-if-met -> NO; ticked vote-scope support -> YES;
+  // ticked final_passage support -> base kept, final vote secured; unmet final_passage blocked by an excluding tick -> UNKNOWN
+  function billProject(legs, active) {
+    const on = new Set(active), dn = d => (DEMANDS[d] || {}).name || d;
+    return legs.map(L => {
+      const base = L.score === null ? "UNKNOWN" : dirOf(L.score) === "support" ? "YES" : dirOf(L.score) === "oppose" ? "NO" : "UNKNOWN";
+      const lose = L.conds.find(c => c.stance_if_met === "oppose" && on.has(c.demand));
+      if (lose) return { ...L, base, proj: "NO", why: `Would oppose if ${lcFirst(dn(lose.demand))} is added` };
+      const wins = L.conds.filter(c => c.stance_if_met === "support" && on.has(c.demand));
+      const winVote = wins.find(c => c.scope !== "final_passage");
+      if (winVote) return { ...L, base, proj: "YES", why: `Supports if ${lcFirst(dn(winVote.demand))} is met` };
+      if (wins.length) return { ...L, base, proj: base, why: `Final-passage vote secured by ${lcFirst(dn(wins[0].demand))}` };
+      const pending = L.conds.find(c => c.stance_if_met === "support" && c.scope === "final_passage" && !on.has(c.demand));
+      if (pending && [...on].some(t => ((DEMANDS[t] || {}).excludes || []).includes(pending.demand)))
+        return { ...L, base, proj: "UNKNOWN", why: `Final-passage vote withheld without ${lcFirst(dn(pending.demand))}` };
+      if (base === "NO" && L.conds.some(c => c.stance_if_met === "support"))
+        return { ...L, base, proj: base, why: "Condition not met" };
+      if (pending && base === "YES")
+        return { ...L, base, proj: base, why: `Supports now, but the final-passage vote is withheld until ${lcFirst(dn(pending.demand))}` };
+      return { ...L, base, proj: base, why: null };
+    });
+  }
+  // deterministic read-across sentence built from the projection, never hand-written
+  function billReadAcross(proj, active) {
+    const nm = id => shortName(byId[id].name);
+    const grp = lbl => proj.filter(p => p.base === lbl).map(p => nm(p.id));
+    const nowGrp = lbl => proj.filter(p => p.proj === lbl).map(p => nm(p.id));
+    const fmtList = a => a.length > 1 ? a.slice(0, -1).join(", ") + " and " + a[a.length - 1] : (a[0] || "");
+    const bits = [], sy = grp("YES"), sn = grp("NO"), su = grp("UNKNOWN");
+    if (sy.length) bits.push(`${fmtList(sy)} support${sy.length === 1 ? "s" : ""}`);
+    if (sn.length) bits.push(`${fmtList(sn)} oppose${sn.length === 1 ? "s" : ""}`);
+    if (su.length) bits.push(`${fmtList(su)} ${su.length === 1 ? "has" : "have"} no statement on file`);
+    let s = `As written: ${bits.join("; ")}.`;
+    if (active.length) {
+      const moved = proj.filter(p => p.proj !== p.base);
+      if (!moved.length) s += " This package moves nobody.";
+      else {
+        s += ` This package moves ${moved.map(p => `${nm(p.id)} from ${p.base} to ${p.proj}`).join(" and ")}.`;
+        const dS = nowGrp("YES").length - sy.length, dO = nowGrp("NO").length - sn.length;
+        s += ` Net ${dS >= 0 ? "+" : ""}${dS} support / ${dO >= 0 ? "+" : ""}${dO} oppose.`;
+      }
+    }
+    return s;
+  }
+  function renderBillAside() {
+    const groups = [...billGroups().entries()].map(([id, g]) => ({ id, info: billInfo(id) })).filter(x => x.info)
+      .sort((a, b) => a.info.num.localeCompare(b.info.num));
+    $aside.innerHTML = `<div class="h" style="margin-top:8px">Bills in data</div>`
+      + (groups.map(g => `<div class="cat ${state.b.id === g.id ? "active" : ""}" data-bill="${g.id}"><span>${g.info.num}${g.info.title ? " · " + g.info.title : ""}</span><span class="n">${g.info.stmts.length + g.info.conds.length}</span></div>`).join("") || `<div class="empty-state">No bills in data.</div>`)
+      + `<div style="margin-top:12px"><button class="btn" id="bill-explore">← back to Explore</button></div>`;
+    $aside.querySelectorAll("[data-bill]").forEach(el => el.onclick = () => openBill(el.dataset.bill));
+    $("bill-explore").onclick = () => { state.mode = "explore"; state.b.id = null; render(); };
+  }
+  function renderBillSide() {
+    $side.innerHTML = `<div class="empty-state">The negotiation map is derived from statements on this bill and the conditions ledger. Tick a demand to preview who moves. Hover an edge for the quote. Click a legislator to open their profile.</div>`;
+  }
+  function renderBill() {
+    const wrap = $("bill"), info = billInfo(state.b.id);
+    if (!info) {
+      wrap.innerHTML = `<div class="empty-state" style="padding:24px">Bill not found in data. <span class="link" id="bill-missing-back">← back to Explore</span></div>`;
+      $("bill-missing-back").onclick = () => { state.mode = "explore"; state.b.id = null; render(); };
+      return;
+    }
+    const legs = billLegs(info);
+    const demands = [...new Set(info.conds.map(r => r.demand))].map(id => ({ id, ...{ name: id, type: "" }, ...(DEMANDS[id] || {}) }));
+    state.b.ticked = state.b.ticked.filter(d => demands.some(x => x.id === d));
+    const active = state.b.ticked, on = new Set(active);
+    const proj = billProject(legs, active), byP = Object.fromEntries(proj.map(p => [p.id, p]));
+    const sup = legs.filter(l => l.score !== null && l.score > .15).length;
+    const opp = legs.filter(l => l.score !== null && l.score < -.15).length;
+    const silent = legs.filter(l => l.score === null && l.conds.length).length;
+    const path = `${info.iss.catName} › ${info.iss.subName} › ${info.iss.name}`;
+    const dots = legs.filter(l => l.score !== null).map((l, k) =>
+      `<span class="dot${l.conds.length ? " cond" : ""}" title="${shortName(l.p.name)} · ${fmt(l.score)}" style="left:${(l.score + 1) / 2 * 100}%;background:${partyColor(l.p.party)}"></span><span class="nm" style="left:${(l.score + 1) / 2 * 100}%;${k % 2 ? "top:48px;" : ""}">${shortName(l.p.name)} ${fmt(l.score)}</span>`).join("");
+    // toggles honour excludes both ways, with a one-line explanation
+    const isDis = d => demands.some(t => t.id !== d.id && on.has(t.id) && (((DEMANDS[t.id] || {}).excludes || []).includes(d.id) || ((DEMANDS[d.id] || {}).excludes || []).includes(t.id)));
+    const conflict = demands.find(d => isDis(d));
+    const blocker = conflict ? demands.find(t => on.has(t.id) && (((DEMANDS[t.id] || {}).excludes || []).includes(conflict.id) || ((DEMANDS[conflict.id] || {}).excludes || []).includes(t.id))) : null;
+    const toggles = demands.map(d => {
+      const mine = info.conds.filter(r => r.demand === d.id);
+      const sP = [...new Set(mine.filter(r => r.stance_if_met === "support").map(r => r.person))].map(pid => shortName(byId[pid].name));
+      const oP = [...new Set(mine.filter(r => r.stance_if_met === "oppose").map(r => r.person))].map(pid => shortName(byId[pid].name));
+      const who = [sP.length ? `stated by ${sP.join(", ")}` : "", oP.length ? `opposed by ${oP.join(", ")}` : ""].filter(Boolean).join(", ");
+      return `<label class="bill-toggle${isDis(d.id) ? " dis" : ""}"><input type="checkbox" data-d="${d.id}"${on.has(d.id) ? " checked" : ""}${isDis(d.id) ? " disabled" : ""}><div><div class="t">${d.name}</div><div class="m">${[d.type, who].filter(Boolean).join(" · ")}</div></div></label>`;
+    }).join("");
+    const nS = proj.filter(p => p.proj === "YES").length, bS = proj.filter(p => p.base === "YES").length;
+    const nO = proj.filter(p => p.proj === "NO").length, bO = proj.filter(p => p.base === "NO").length;
+    const nU = proj.filter(p => p.proj === "UNKNOWN").length;
+    const dlt = (a, c) => a - c ? ` <small>${a - c > 0 ? "+" : ""}${a - c}</small>` : "";
+    const moved = proj.filter(p => p.proj !== p.base), still = proj.filter(p => p.proj === p.base);
+    const arrowCls = s => s === "YES" ? "var(--support)" : s === "NO" ? "var(--oppose)" : "var(--muted)";
+    const moves = (!active.length ? `<li><span style="color:var(--muted)">Tick a demand above to see who would move.</span></li>`
+      : !moved.length ? `<li><span style="color:var(--muted)">Nobody moves under this package.</span></li>`
+      : moved.map(p => `<li><div style="display:flex;justify-content:space-between;gap:8px"><span><b>${shortName(byId[p.id].name)}</b> <span style="color:var(--muted);font-size:11px">${seat(byId[p.id])} ${byId[p.id].party}</span></span><span style="font-family:var(--mono);font-size:12px"><span style="color:${arrowCls(p.base)}">${p.base}</span> → <span style="color:${arrowCls(p.proj)}">${p.proj}</span></span></div>${p.why ? `<div class="why">${p.why}.</div>` : ""}</li>`).join(""))
+      + (active.length && still.length ? `<li><span style="color:var(--muted);font-size:12px">Unchanged · ${still.map(p => `${shortName(byId[p.id].name)} ${p.proj}`).join(" · ")}</span></li>` : "");
+    wrap.innerHTML = `<div class="bill-wrap">
+      <div class="crumbline"><a id="bill-back">← Explore</a> · ${path} · <span style="color:var(--text)">Bill</span></div>
+      <h1>${info.num}${info.title ? ` · ${info.title}` : ""}</h1>
+      <div class="bill-sub">${path} · ${info.stmts.length} statement${info.stmts.length === 1 ? "" : "s"} in data${info.latest ? ` · latest ${info.latest.date || "undated"}` : ""}</div>
+      <div class="bill-strip"><div><b style="color:var(--support)">${sup}</b><span>support now</span></div><div><b style="color:var(--oppose)">${opp}</b><span>oppose now</span></div><div><b style="color:var(--accent)">${info.conds.length}</b><span>stated conditions</span></div><div><b>${silent}</b><span>member silent on it</span></div></div>
+      <div class="bill-sec">Where they stand today · ◆ = has stated a condition</div>
+      <div class="bill-spec"><div class="ax"><i style="left:0">−1 oppose</i><i style="left:49%">0</i><i style="right:0">+1 support</i></div>${dots}</div>
+      <div class="bill-sec">What it would take · negotiation map</div>
+      <div class="bill-sub" style="margin:0 0 6px">Tick demands to see who moves · hover an edge for the quote · click a legislator for their conditions.</div>
+      <div class="bill-grid"><div>
+        <svg id="billmap" viewBox="0 0 860 ${Math.max(400, 110 + legs.length * 96)}"></svg>
+        <div class="bill-legend"><span><i style="border-color:var(--support)"></i>supports <b>if</b> demand met</span><span><i style="border-color:var(--oppose)"></i>opposes <b>if</b> demand met</span><span><i style="border-color:var(--accent);border-top-style:dashed"></i>current stance, width = strength</span><span><i style="border-color:var(--oppose);border-top-style:dotted"></i>demands that exclude each other</span><span style="flex-basis:100%;margin-top:4px">node colour = party only · projected vote = the label under the name (<span style="background:var(--support);color:var(--bg);padding:0 4px">YES</span> <span style="background:var(--oppose);color:var(--bg);padding:0 4px">NO</span> <span style="border:1px solid var(--muted);color:var(--muted);padding:0 4px">UNKNOWN</span>); <span style="color:var(--accent)">was …</span> marks a vote the package changes</span></div>
+        <div class="bill-card" id="billcard"><div class="empty-state">Hover a legislator to see their stated conditions and how the current package affects them · click to open their profile.</div></div>
+      </div><div>
+        <div class="bill-sec" style="margin-top:0">Try an amendment package</div>${toggles}
+        <div class="bill-warn" id="bill-warn" style="display:${blocker ? "block" : "none"}">${blocker ? `“${(DEMANDS[blocker.id] || {}).name || blocker.id}” excludes “${(DEMANDS[conflict.id] || {}).name || conflict.id}”, so it is disabled while “${(DEMANDS[blocker.id] || {}).name || blocker.id}” is ticked.` : ""}</div>
+        <div class="bill-sec" style="margin-top:18px">If this package passed · who moves</div>
+        <div class="bill-tally"><div><b style="color:var(--support)">${nS}${dlt(nS, bS)}</b><span>support</span></div><div><b style="color:var(--oppose)">${nO}${dlt(nO, bO)}</b><span>oppose</span></div><div><b>${nU}</b><span>unknown</span></div></div>
+        <ul class="bill-moves">${moves}</ul>
+        <div class="bill-read"><span class="k">Read-across</span><span>${billReadAcross(proj, active)}</span></div>
+      </div></div>
+    </div>`;
+    $("bill-back").onclick = () => { state.mode = "explore"; state.b.id = null; render(); };
+    wrap.querySelectorAll("input[data-d]").forEach(cb => cb.onchange = () => {
+      const id = cb.dataset.d;
+      state.b.ticked = cb.checked ? [...new Set([...state.b.ticked, id])] : state.b.ticked.filter(d => d !== id);
+      renderBill();
+    });
+    // --- negotiation map svg ---
+    const W = 860, H = Math.max(400, 110 + legs.length * 96), cy = H / 2;
+    const svg = d3.select("#billmap");
+    const billPos = { x: 120, y: cy };
+    const demPos = {}, legPos = {};
+    demands.forEach((d, i) => demPos[d.id] = { x: 380, y: demands.length === 1 ? cy : 80 + i * ((H - 160) / Math.max(1, demands.length - 1)) });
+    legs.forEach((l, i) => legPos[l.id] = { x: 670, y: legs.length === 1 ? cy : 60 + i * ((H - 120) / Math.max(1, legs.length - 1)) });
+    const supC = "#3fcf77", oppC = "#f2705f", ambC = "#f0b429";
+    const partyHex = p => p === "D" ? "#5b8cff" : p === "R" ? "#ff7a6b" : "#b9bfcc";
+    const curve = (a, b, lead) => `M${a.x},${a.y} C${(a.x + b.x) / 2},${a.y} ${(a.x + b.x) / 2},${b.y} ${b.x - lead},${b.y}`;
+    // spokes bill -> demand
+    svg.append("g").selectAll("line").data(demands).join("line")
+      .attr("x1", billPos.x + 75).attr("y1", billPos.y).attr("x2", d => demPos[d.id].x - 9).attr("y2", d => demPos[d.id].y)
+      .style("stroke", "var(--border)").attr("stroke-width", 1.2);
+    // dotted red arcs between mutually exclusive demands
+    const pairs = [];
+    demands.forEach((a, i) => demands.slice(i + 1).forEach(b => { if (((DEMANDS[a.id] || {}).excludes || []).includes(b.id) || ((DEMANDS[b.id] || {}).excludes || []).includes(a.id)) pairs.push([a.id, b.id]); }));
+    svg.append("g").selectAll("path").data(pairs).join("path").attr("fill", "none")
+      .style("stroke", "var(--oppose)").attr("stroke-dasharray", "2 4").attr("stroke-width", 1.4).attr("opacity", .8)
+      .attr("d", ([a, b]) => { const p = demPos[a], q = demPos[b]; return `M${p.x - 6},${p.y + 12} C${p.x - 70},${(p.y + q.y) / 2} ${q.x - 70},${(p.y + q.y) / 2} ${q.x - 6},${q.y - 12}`; });
+    // faint dashed amber current-stance edges bill -> legislator (width by |score|)
+    const nowEdges = svg.append("g").selectAll("path").data(legs.filter(l => l.score !== null)).join("path")
+      .attr("class", "b-now").attr("data-leg", d => d.id).attr("fill", "none")
+      .style("stroke", "var(--accent)").attr("stroke-dasharray", "3 5").attr("stroke-width", d => 1 + 3 * Math.abs(d.score)).attr("opacity", .35)
+      .attr("d", d => { const b = legPos[d.id]; return `M${billPos.x},${billPos.y - 32} C${billPos.x},${Math.min(billPos.y, b.y) - 40} ${b.x - 140},${b.y} ${b.x - 16},${b.y}`; });
+    nowEdges.on("mousemove", (ev, d) => showBillTip(ev, `<b>${d.p.name}</b> · current stance <span style="color:${ambC}">${fmt(d.score)}</span> (${dirOf(d.score)})`))
+      .on("mouseleave", hideBillTip);
+    // curved condition edges demand -> legislator, coloured by stance_if_met
+    const edgeRows = info.conds.filter(r => byId[r.person] && demPos[r.demand] && legPos[r.person]);
+    const hit = svg.append("g").selectAll("path").data(edgeRows).join("path")
+      .attr("class", "b-hit").attr("data-leg", d => d.person).attr("fill", "none")
+      .attr("stroke", "transparent").attr("stroke-width", 18).style("pointer-events", "stroke")
+      .attr("d", d => { const a = { x: demPos[d.demand].x + 9, y: demPos[d.demand].y }; return curve(a, legPos[d.person], 16); });
+    hit.on("mousemove", (ev, d) => { const L = legs.find(l => l.id === d.person); showBillTip(ev, `<b>${byId[d.person].name}</b> ${phrase(L ? L.score : null, d)}<div class="cond-q">“${d.quote}”</div>`); })
+      .on("mouseleave", hideBillTip);
+    const vis = svg.append("g").selectAll("path").data(edgeRows).join("path")
+      .attr("class", "b-cond").attr("data-leg", d => d.person).attr("fill", "none")
+      .style("stroke", d => d.stance_if_met === "support" ? "var(--support)" : "var(--oppose)")
+      .attr("stroke-width", d => on.has(d.demand) ? 3.2 : 2.2).attr("opacity", d => active.length === 0 ? .75 : on.has(d.demand) ? 1 : .2)
+      .style("pointer-events", "none")
+      .attr("d", d => { const a = { x: demPos[d.demand].x + 9, y: demPos[d.demand].y }; return curve(a, legPos[d.person], 16); });
+    const labs = svg.append("g").selectAll("text").data(edgeRows).join("text")
+      .attr("class", "b-lab").attr("data-leg", d => d.person).attr("text-anchor", "middle")
+      .style("font", "500 10px var(--mono)").style("fill", d => d.stance_if_met === "support" ? "var(--support)" : "var(--oppose)")
+      .attr("opacity", d => active.length === 0 ? .9 : on.has(d.demand) ? 1 : .25)
+      .attr("x", d => demPos[d.demand].x + (legPos[d.person].x - demPos[d.demand].x) * .42)
+      .attr("y", d => demPos[d.demand].y + (legPos[d.person].y - demPos[d.demand].y) * .42 - 6)
+      .text(d => d.stance_if_met === "support" ? "→ would support" : "→ would oppose");
+    // bill node
+    const nb = svg.append("g").attr("transform", `translate(${billPos.x},${billPos.y})`);
+    nb.append("rect").attr("x", -75).attr("y", -31).attr("width", 150).attr("height", 62).attr("fill", "#161b2e").style("stroke", "var(--accent)");
+    nb.append("text").attr("text-anchor", "middle").attr("y", -8).style("font", "600 13px var(--display)").style("fill", "var(--text)").text(info.num);
+    nb.append("text").attr("text-anchor", "middle").attr("y", 8).style("font", "11px var(--sans)").style("fill", "var(--muted)").text(info.title.length > 24 ? info.title.slice(0, 23) + "…" : info.title);
+    nb.append("text").attr("text-anchor", "middle").attr("y", 22).style("font", "500 10px var(--mono)").style("fill", "var(--muted)")
+      .text(active.length ? `+ ${active.map(a => ((DEMANDS[a] || {}).name || a).split(" ")[0]).join(" + ").toUpperCase()}` : "AS WRITTEN");
+    // demand nodes (click toggles the package)
+    const nd = svg.append("g").selectAll("g").data(demands).join("g")
+      .attr("transform", d => `translate(${demPos[d.id].x},${demPos[d.id].y})`).style("cursor", "pointer")
+      .on("click", (ev, d) => { if (isDis(d.id)) return; state.b.ticked = on.has(d.id) ? state.b.ticked.filter(x => x !== d.id) : [...state.b.ticked, d.id]; renderBill(); });
+    nd.append("circle").attr("r", d => on.has(d.id) ? 11 : 9).attr("fill", d => on.has(d.id) ? ambC : "#0f1322").style("stroke", "var(--text)").attr("stroke-width", 1.5);
+    nd.append("text").attr("y", -18).attr("text-anchor", "middle").style("font-size", "12px").style("fill", "var(--text)").style("font-weight", 600).text(d => d.name);
+    nd.append("text").attr("y", 28).attr("text-anchor", "middle").style("font", "500 10px var(--mono)").style("fill", "var(--muted)")
+      .text(d => `${(d.type || "").toUpperCase()} · UNLOCKS ${info.conds.filter(r => r.demand === d.id && r.stance_if_met === "support").length} · LOSES ${info.conds.filter(r => r.demand === d.id && r.stance_if_met === "oppose").length}`);
+    // legislator nodes: party-colour fill only; projection is the label under the name
+    const LBL = { YES: "YES", NO: "NO", UNKNOWN: "UNKNOWN" };
+    const nl = svg.append("g").selectAll("g").data(legs).join("g")
+      .attr("class", "b-leg").attr("data-leg", d => d.id)
+      .attr("transform", d => `translate(${legPos[d.id].x},${legPos[d.id].y})`).style("cursor", "pointer")
+      .on("click", (ev, d) => openProfile(d.id))
+      .on("mouseenter", (ev, d) => { focusBillLeg(d.id); state.b.sel = d.id; updateBillCard(); })
+      .on("mousemove", (ev, d) => {
+        const P = byP[d.id];
+        const h = `<b>${d.p.name}</b> · ${seat(d.p)} · ${d.p.party}<br>${nowWord(d.score)}${d.score !== null ? ` (${fmt(d.score)})` : ""}`
+          + (d.conds.length ? d.conds.map(c => `<div style="margin-top:6px;border-top:1px solid var(--border);padding-top:6px">${condShort(d.score, c)}<div class="cond-q">“${c.quote}”</div></div>`).join("")
+            : `<div class="cond-q" style="margin-top:6px">No stated condition. Nothing in the data says what would move this vote.</div>`);
+        showBillTip(ev, h);
+      })
+      .on("mouseleave", () => { focusBillLeg(null); hideBillTip(); });
+    nl.append("circle").attr("r", 11).attr("fill", d => partyHex(d.p.party)).attr("stroke", "#0f1322").attr("stroke-width", 2);
+    nl.append("text").attr("x", 24).attr("y", -6).style("font-size", "12px").style("fill", "var(--text)").style("font-weight", 600).text(d => shortName(d.p.name));
+    nl.append("text").attr("x", 24).attr("y", 8).style("font", "500 10px var(--mono)").style("fill", "var(--muted)").text(d => `${seat(d.p)} · ${d.p.party}`);
+    const pill = nl.append("g").attr("transform", "translate(24,15)");
+    pill.append("rect").attr("height", 20).attr("rx", 2)
+      .style("fill", d => byP[d.id].proj === "UNKNOWN" ? "none" : byP[d.id].proj === "YES" ? supC : oppC)
+      .style("stroke", d => byP[d.id].proj === "UNKNOWN" ? "var(--muted)" : byP[d.id].proj === "YES" ? supC : oppC)
+      .attr("stroke-width", 1.2).attr("width", d => LBL[byP[d.id].proj].length * 8.4 + 14);
+    pill.append("text").attr("x", 7).attr("y", 14.5).style("font", "700 12px var(--mono)").style("letter-spacing", ".08em")
+      .style("fill", d => byP[d.id].proj === "UNKNOWN" ? "var(--muted)" : "#0f1322").text(d => LBL[byP[d.id].proj]);
+    nl.append("text").attr("y", 29.5).style("font", "600 11px var(--mono)")
+      .attr("x", d => 24 + LBL[byP[d.id].proj].length * 8.4 + 14 + 8)
+      .style("fill", d => byP[d.id].proj !== byP[d.id].base ? "var(--accent)" : "var(--muted)")
+      .text(d => byP[d.id].proj !== byP[d.id].base ? `was ${byP[d.id].base}` : (d.score === null ? "no statement" : `now ${fmt(d.score)}`));
+    function showBillTip(ev, html) { condTip.style.display = "block"; condTip.style.left = (ev.clientX + 14) + "px"; condTip.style.top = (ev.clientY + 10) + "px"; condTip.innerHTML = html; }
+    function hideBillTip() { condTip.style.display = "none"; }
+    function focusBillLeg(id) {
+      ["b-cond", "b-now", "b-lab"].forEach(c => svg.selectAll("." + c).classed("dim", function () { return id && this.dataset.leg !== id; }));
+      svg.selectAll(".b-leg").attr("opacity", function () { return id && this.dataset.leg !== id ? .35 : 1; });
+    }
+    function updateBillCard() {
+      const card = $("billcard"), id = state.b.sel, L = legs.find(l => l.id === id);
+      if (!L) { card.innerHTML = `<div class="empty-state">Hover a legislator to see their stated conditions and how the current package affects them · click to open their profile.</div>`; return; }
+      const P = byP[id], col = P.proj === "YES" ? supC : P.proj === "NO" ? oppC : "#9aa3b2";
+      const latest = info.stmts.filter(s => s.person === id).sort((a, b) => String(a.date || "").localeCompare(String(b.date || ""))).pop();
+      let h = `<h3>${L.p.name}</h3><div class="meta">${seat(L.p)} · ${L.p.party} · current ${L.score === null ? "no statement on this bill" : `${fmt(L.score)} ${dirOf(L.score)}`} · projected <b style="color:${col}">${P.proj}</b>${P.why ? " · " + P.why : ""}</div>`;
+      h += latest ? `<div class="c"><div class="cdot" style="background:${ambC}"></div><div><div>Current stance</div><div class="q">“${latest.quote}”</div></div></div>`
+        : `<div class="c"><div></div><div class="empty-state">No statement on this bill.</div></div>`;
+      h += L.conds.length ? L.conds.map(c => `<div class="c"><div class="cdot" style="background:${c.stance_if_met === "support" ? supC : oppC}"></div><div><div>${condShort(L.score, c)} <span style="color:var(--muted);font:500 10px var(--mono)"> · ${(DEMANDS[c.demand] || {}).type || ""}</span></div><div class="q">“${c.quote}”</div></div></div>`).join("")
+        : `<div class="c"><div></div><div class="empty-state">No stated conditions. Nothing in the data says what would move this vote.</div></div>`;
+      h += `<div style="margin-top:8px"><button class="btn" data-open="${id}">Open profile →</button></div>`;
+      card.innerHTML = h;
+      card.querySelector("[data-open]").onclick = () => openProfile(id);
+    }
+    updateBillCard();
+  }
+
   // ---------- GRAPH ----------
   const svg = d3.select("#graph"), g = svg.append("g");
   svg.call(d3.zoom().scaleExtent([.3, 3]).on("zoom", ev => g.attr("transform", ev.transform)));
@@ -696,11 +1017,12 @@
     return { nodes: [...topics.map(id => ({ id, kind: "topic", name: issueById[id].name, main: true, cat: issueById[id].cat })), ...persons.map(id => ({ id, kind: "person", name: byId[id].name.replace(/^(Rep|Sen)\. /, "") }))], links: fe.map(e => ({ source: e.from, target: e.to, e, main: true })) };
   }
   function renderGraph() {
-    const list = state.mode === "list", prof = state.mode === "profile";
-    $("table-wrap").style.display = list ? "block" : "none"; $("profile").style.display = prof ? "block" : "none";
-    svg.style("display", list || prof ? "none" : "block"); $("legend").style.display = list || prof ? "none" : "flex";
+    const list = state.mode === "list", prof = state.mode === "profile", bill = state.mode === "bill";
+    $("table-wrap").style.display = list ? "block" : "none"; $("profile").style.display = prof ? "block" : "none"; $("bill").style.display = bill ? "block" : "none";
+    svg.style("display", list || prof || bill ? "none" : "block"); $("legend").style.display = list || prof || bill ? "none" : "flex";
     if (list) { sim && sim.stop(); return renderTable(); }
     if (prof) { sim && sim.stop(); return renderProfile(); }
+    if (bill) { sim && sim.stop(); return renderBill(); }
     g.selectAll("*").remove();
     const { nodes, links } = buildGraphData(), { width, height } = svg.node().getBoundingClientRect(), explore = state.mode === "explore";
     const deg = {}; links.forEach(l => { deg[l.source] = (deg[l.source] || 0) + 1; deg[l.target] = (deg[l.target] || 0) + 1; });
@@ -741,22 +1063,28 @@
   function renderHeader() {
     ["explore", "focus", "list", "profile"].forEach(m => $("m-" + m).classList.toggle("active", state.mode === m));
     if (state.mode === "profile") { const p = byId[state.p.person]; $crumb.innerHTML = p ? `<b>${p.name}</b> · ${seat(p)}` : `<b>Legislators</b>`; $hint.textContent = ""; }
+    else if (state.mode === "bill") { const info = billInfo(state.b.id); $crumb.innerHTML = info ? `<b>${info.num}</b> · ${info.title || "Bill"}` : `<b>Bill</b> · not found`; $hint.textContent = ""; }
     else if (state.mode === "list") { $crumb.innerHTML = `<b>Legislator list</b> · dropdown filters`; $hint.textContent = ""; }
     else if (state.mode === "explore") { $crumb.innerHTML = `<b>All issues</b> · filtered view`; $hint.textContent = "Tick issues on the left to filter · hover to see connections · click an issue to focus · click a legislator to open their page"; }
     else { const i = issueById[state.issue]; $crumb.innerHTML = i ? `<b>${i.catName}</b> › ${i.subName} › <b>${i.name}</b>` : "Pick an issue"; $hint.textContent = "Drag nodes · click a legislator to open their page · grey issues = what these legislators also talk about"; }
   }
-  function renderAside() { ({ explore: renderExploreAside, focus: renderFocusAside, list: renderListAside, profile: renderProfileAside })[state.mode](); }
+  function renderAside() { ({ explore: renderExploreAside, focus: renderFocusAside, list: renderListAside, profile: renderProfileAside, bill: renderBillAside })[state.mode](); }
   function renderSide() {
     const hasEvidence = state.mode === "focus" ? !!state.person : state.mode === "explore" ? !!state.person : state.mode === "list" ? !!state.l.sel : !!state.p.sel;
     $side.dataset.label = hasEvidence ? "Evidence" : state.mode === "explore" ? "In view" : "Notes";
-    ({ explore: renderExploreSide, focus: renderFocusSide, list: renderListSide, profile: renderProfileSide })[state.mode]();
+    ({ explore: renderExploreSide, focus: renderFocusSide, list: renderListSide, profile: renderProfileSide, bill: renderBillSide })[state.mode]();
     $side.querySelectorAll("[data-open]").forEach(b => b.onclick = () => openProfile(b.dataset.open));
     bindCondChips();
   }
-  function render() { renderHeader(); renderAside(); renderSide(); renderGraph(); if (state.mode !== "profile" && location.hash.startsWith("#/legislator")) history.replaceState(null, "", location.pathname); }
+  function render() { renderHeader(); renderAside(); renderSide(); renderGraph(); if (!["profile", "bill"].includes(state.mode) && /^#\/(legislator|bill)\//.test(location.hash)) history.replaceState(null, "", location.pathname); }
   ["explore", "focus", "list", "profile"].forEach(m => $("m-" + m).onclick = () => { state.mode = m; state.person = null; render(); });
   $("brand").onclick = e => { e.preventDefault(); state.mode = "explore"; state.person = null; render(); };
-  window.addEventListener("hashchange", () => { const m = /^#\/legislator\/([\w-]+)/.exec(location.hash); if (m && byId[m[1]]) { state.mode = "profile"; state.p.person = m[1]; state.p.sel = null; render(); } });
+  window.addEventListener("hashchange", () => {
+    let m = /^#\/legislator\/([\w-]+)/.exec(location.hash);
+    if (m && byId[m[1]]) { state.mode = "profile"; state.p.person = m[1]; state.p.sel = null; render(); return; }
+    m = /^#\/bill\/([\w-]+)/.exec(location.hash);
+    if (m) { state.mode = "bill"; state.b.id = m[1]; state.b.ticked = []; state.b.sel = null; render(); }
+  });
   render();
   window.addEventListener("resize", renderGraph);
 })();

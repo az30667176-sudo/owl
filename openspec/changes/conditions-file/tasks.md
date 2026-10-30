@@ -18,9 +18,9 @@
 
 ## 3. Bill page
 
-- [ ] 3.1 Route `#/bill/<id>` (hashchange + initial load), nav back to Explore.
-- [ ] 3.2 Header, stance strip (support now / oppose now / conditions / silent), current-stance spectrum with ◆ on legislators who stated a condition.
-- [ ] 3.3 Negotiation map per `data/_site/bill-page.html`: demand nodes, condition edges, toggles honouring `excludes`, YES/NO/UNKNOWN labels with "was …", who-moves list, deterministic read-across sentence, hover tooltips, click legislator → profile.
+- [x] 3.1 Route `#/bill/<id>` (hashchange + initial load), nav back to Explore.
+- [x] 3.2 Header, stance strip (support now / oppose now / conditions / silent), current-stance spectrum with ◆ on legislators who stated a condition.
+- [x] 3.3 Negotiation map per `data/_site/bill-page.html`: demand nodes, condition edges, toggles honouring `excludes`, YES/NO/UNKNOWN labels with "was …", who-moves list, deterministic read-across sentence, hover tooltips, click legislator → profile.
 
 ## 4. Verify and announce
 
