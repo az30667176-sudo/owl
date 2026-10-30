@@ -11,10 +11,10 @@
 
 ## 2. Explore and profile
 
-- [ ] 2.1 `apps/web/index.html` loader: optional `conditions.json` (same pattern as summaries); build `DEMANDS`, `CONDS`, lookups by person, by person|issue, by issue; bill id helper.
-- [ ] 2.2 Explore: ◆ marker at the midpoint of edges with conditions; stance-first tooltip; no change to existing edge styling.
-- [ ] 2.3 Explore side panel when an issue is selected: bills of that issue, each with its demand chips (name, type, wins/loses, stance-first lines, link to `#/bill/<id>`); hovering a chip highlights only matching edges.
-- [ ] 2.4 Profile: "Conditions" block between the AI summary and the tabs; hidden when empty.
+- [x] 2.1 `apps/web/index.html` loader: optional `conditions.json` (same pattern as summaries); build `DEMANDS`, `CONDS`, lookups by person, by person|issue, by issue; bill id helper.
+- [x] 2.2 Explore: ◆ marker at the midpoint of edges with conditions; stance-first tooltip; no change to existing edge styling.
+- [x] 2.3 Explore side panel when an issue is selected: bills of that issue, each with its demand chips (name, type, wins/loses, stance-first lines, link to `#/bill/<id>`); hovering a chip highlights only matching edges.
+- [x] 2.4 Profile: "Conditions" block between the AI summary and the tabs; hidden when empty.
 
 ## 3. Bill page
 

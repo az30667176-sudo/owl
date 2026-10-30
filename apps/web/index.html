@@ -215,6 +215,9 @@
   *::-webkit-scrollbar-thumb:hover { background: #3a4260; background-clip: padding-box; }
   *::-webkit-scrollbar-button { display: none; height: 0; width: 0; }
   *::-webkit-scrollbar-corner { background: transparent; }
+  /* conditions markers (2.2): fixed-position what-if tooltip in existing tokens */
+  .cond-tip { background: var(--panel-2); border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; font-size: 12px; }
+  .cond-tip .cond-q { font-family: var(--display); font-style: italic; color: var(--muted); margin-top: 4px; font-size: 14px; line-height: 22px; }
 </style>
 </head>
 <body>
@@ -253,6 +256,28 @@
   catch (e) { document.getElementById("loading").textContent = "Could not load data/*.json — serve this folder over http (see data/README.md). " + e.message; return; }
   try { summariesRaw = await load("summaries.json"); } catch { /* optional file */ }
   const SUMMARIES = summariesRaw.summaries || {};
+  // conditions ledger (optional; missing or empty = app behaves exactly as before)
+  let conditionsRaw = { demands: [], conditions: [] };
+  try { conditionsRaw = await load("conditions.json"); } catch { /* optional file */ }
+  const DEMANDS = Object.fromEntries((conditionsRaw.demands || []).map(d => [d.id, d]));
+  const CONDS = conditionsRaw.conditions || [];
+  const condByPI = {}, condByPerson = {}, condByIssue = {};
+  CONDS.forEach(r => { (condByPI[r.person + "|" + r.issue] ??= []).push(r); (condByPerson[r.person] ??= []).push(r); (condByIssue[r.issue] ??= []).push(r); });
+  // bill id: lower-case letters+digits of the leading bill number ("H.R. 6110 …" -> "hr6110"; null for null)
+  const billId = s => { if (s == null) return null; const m = /^\s*([A-Za-z.][A-Za-z.\s]*?\d+)/.exec(s); return m ? m[1].replace(/[^A-Za-z0-9]/g, "").toLowerCase() : null; };
+  const nowWord = v => (v === null || v === undefined) ? "has not spoken on it" : v > .15 ? "supports now" : v < -.15 ? "opposes now" : "is neutral now";
+  // stance-first what-if sentence for one condition row; nowScore = aggregated edge score for that person+issue, or null
+  const phrase = (nowScore, row) => {
+    const dem = (DEMANDS[row.demand] || {}).name || row.demand, n = nowWord(nowScore);
+    if (row.scope === "final_passage") return `${n}, but will <b>withhold the final-passage vote</b> until ${dem}`;
+    if (row.stance_if_met === "support") return (nowScore !== null && nowScore !== undefined && nowScore < -.15)
+      ? `${n} · <b style="color:var(--support)">would accept passage</b> if ${dem}`
+      : `${n} · <b style="color:var(--support)">would support</b> if ${dem}`;
+    return `${n} · <b style="color:var(--oppose)">would turn against it</b> if ${dem}`;
+  };
+  // phrase without the leading "<stance now> · " part, first letter capitalised (profile form)
+  const condShort = (nowScore, row) => phrase(nowScore, row).replace(/^[^·]*· /, "").replace(/^(<b[^>]*>)?(\w)/, (m, t, c) => (t || "") + c.toUpperCase());
+  const nowOf = (p, i) => edgeScoreByPI[p + "|" + i] ?? null;
   document.getElementById("loading").remove();
   if ([issuesRaw, peopleRaw, stancesRaw].some(x => x._meta && x._meta.mock)) document.getElementById("mock").hidden = false;
 
@@ -285,6 +310,7 @@
   });
   { const sorted = EDGES.map(e => e.salience).sort((a, b) => a - b); EDGES.forEach(e => e.heat = sorted.length > 1 ? sorted.indexOf(e.salience) / (sorted.length - 1) : 1); } // global percentile 0..1
   const heatW = h => 1 + h * 5; // edge width from heat percentile
+  const edgeScoreByPI = Object.fromEntries(EDGES.map(e => [e.from + "|" + e.to, e.score]));
   const STATES = [...new Set(PEOPLE.map(p => p.state))].sort();
   const color = d => d === "support" ? "var(--support)" : d === "oppose" ? "var(--oppose)" : "var(--neutral)";
   const lw = { low: 1, mid: 2, high: 3.5, super_high: 5 };
@@ -305,6 +331,12 @@
 
   const $ = id => document.getElementById(id);
   const $aside = $("aside"), $side = $("side"), $crumb = $("crumb"), $hint = $("hint");
+  // what-if tooltip for condition markers (no app tooltip exists; styled like the reference, existing tokens only)
+  const condTip = document.createElement("div");
+  condTip.className = "cond-tip";
+  condTip.style.cssText = "position:fixed;pointer-events:none;display:none;z-index:9;max-width:320px;";
+  document.body.appendChild(condTip);
+  let graphLinkSel = null; // current graph edge selection, for demand-chip highlight (2.3)
   const toggle = (set, v) => set.has(v) ? set.delete(v) : set.add(v);
   const personOk = (p, f) => f.chambers.has(p.chamber) && (!f.state || p.state === f.state) && f.parties.has(p.party);
 
@@ -359,7 +391,7 @@
     const byP = {}; fe.forEach(e => (byP[e.from] ??= []).push(e));
     const rows = Object.entries(byP).sort((a, b) => b[1].length - a[1].length).map(([pid, es]) => { const p = byId[pid];
       return `<div class="row" data-id="${pid}"><div><div class="name">${title(p)}</div><div class="meta">${seat(p)} · ${p.party} · <span style="color:var(--support)">${es.filter(e => e.direction === "support").length} for</span> · <span style="color:var(--oppose)">${es.filter(e => e.direction === "oppose").length} against</span></div></div><div class="score">${es.length}</div></div>`; }).join("");
-    $side.innerHTML = `<div class="topic-sub">${fe.length} stances across ${Object.keys(byP).length} legislators. Click one to see their positions.</div>${rows || `<div class="empty-state">Nothing matches the filters.</div>`}`;
+    $side.innerHTML = `<div class="topic-sub">${fe.length} stances across ${Object.keys(byP).length} legislators. Click one to see their positions.</div>${rows || `<div class="empty-state">Nothing matches the filters.</div>`} ${conditionsPanel(state.issue)}`;
     $side.querySelectorAll(".row").forEach(el => el.onclick = () => { state.person = el.dataset.id; state.edge = null; render(); });
   }
   const fmt = s => (s > 0 ? "+" : "") + s.toFixed(2);
@@ -383,6 +415,41 @@
     return `<div class="evidence">${head}${items}</div>`;
   }
 
+  // bill-grouped demand panel (2.3): "What it would take" for one issue; "" when the issue has no rows
+  function conditionsPanel(issueId) {
+    const rows = condByIssue[issueId] || [];
+    if (!rows.length) return "";
+    // bills = distinct billId over stances of this issue + condition rows of this issue
+    const per = new Map();
+    STATEMENTS.filter(s => s.issue === issueId && s.bill && billId(s.bill)).forEach(s => { const id = billId(s.bill); if (!per.has(id)) per.set(id, { stmts: [], conds: [] }); per.get(id).stmts.push(s); });
+    rows.filter(r => r.bill && billId(r.bill)).forEach(r => { const id = billId(r.bill); if (!per.has(id)) per.set(id, { stmts: [], conds: [] }); per.get(id).conds.push(r); });
+    if (!per.size) return "";
+    const groups = [...per.entries()].map(([id, g]) => {
+      // title = text after the bill number from the latest statement, else the bill string
+      const latest = g.stmts.slice().sort((a, b) => String(a.date || "").localeCompare(String(b.date || ""))).pop();
+      const chosen = latest ? latest.bill : g.conds[0].bill;
+      const m = /^\s*([A-Za-z.]+\s*\d+)\s*(.*)$/.exec(chosen || "");
+      const num = m ? m[1].replace(/\s+/g, " ") : (chosen || id), title = m ? m[2].trim() : "";
+      const onBill = rows.filter(r => billId(r.bill) === id);
+      const chips = [...new Set(onBill.map(r => r.demand))].map(d => { const def = DEMANDS[d] || {}, mine = onBill.filter(r => r.demand === d);
+        const wins = mine.filter(r => r.stance_if_met === "support").length, loses = mine.filter(r => r.stance_if_met === "oppose").length;
+        const lines = mine.map(r => `<div><b>${byId[r.person].name}</b> ${phrase(nowOf(r.person, r.issue), r)}</div>`).join("");
+        return `<button class="chip cond-chip" data-issue="${issueId}" data-demand="${d}" data-bill="${id}" data-people="${mine.map(r => r.person).join(" ")}" style="display:block;width:100%;text-align:left;margin:6px 0"><div style="font-weight:600">${def.name || d}</div><div style="font-size:11px;color:var(--muted)">${def.type || ""} · wins ${wins} · loses ${loses}</div><div style="font-size:12px;margin-top:4px">${lines}</div></button>`; }).join("");
+      return `<div style="margin-top:12px;border-top:1px solid var(--border);padding-top:10px"><div style="font-weight:700">${num}${title ? ` <span style="font-weight:400;color:var(--muted)">${title}</span>` : ""}</div><a href="#/bill/${id}" style="color:var(--accent);font-size:12px">bill page ↗</a>${chips}</div>`;
+    }).join("");
+    return `<div class="h" style="margin-top:16px">What it would take</div>${groups}`;
+  }
+  // chip hover: edges of the chip's legislators on this issue go full opacity, other edges of the issue dim; leaving restores
+  function bindCondChips() {
+    $side.querySelectorAll(".cond-chip").forEach(ch => {
+      const set = new Set((ch.dataset.people || "").split(" ").filter(Boolean)), issue = ch.dataset.issue;
+      ch.addEventListener("mouseenter", () => { if (!graphLinkSel) return;
+        graphLinkSel.attr("stroke-opacity", l => l.e.to === issue ? (set.has(l.e.from) ? .95 : .08) : ((l.main ? .45 : .15) + Math.abs(l.e.score) * .45)); });
+      ch.addEventListener("mouseleave", () => { if (!graphLinkSel) return;
+        graphLinkSel.attr("stroke-opacity", l => (l.main ? .45 : .15) + Math.abs(l.e.score) * .45); });
+    });
+  }
+
   // ---------- FOCUS ----------
   function renderFocusAside() {
     const cats = COMMITTEES.filter(c => ISSUES.some(i => i.cat === c.id && countFor(i.id) > 0)).map(c => `<div class="cat ${state.cat === c.id ? "active" : ""}" data-id="${c.id}"><span>${c.name}</span><span class="n">${ISSUES.filter(i => i.cat === c.id).reduce((a, i) => a + countFor(i.id), 0)}</span></div>`).join("");
@@ -401,7 +468,7 @@
     const rows = edges.map(e => { const p = byId[e.from], pct = Math.abs(e.score) * 50, left = e.score < 0 ? 50 - pct : 50;
       return `<div class="row ${state.person === p.id ? "active" : ""}" data-id="${p.id}"><div><div class="name">${title(p)}</div><div class="meta">${seat(p)} · ${p.party}</div><div class="bar"><span style="left:${left}%;width:${pct}%;background:${color(e.direction)}"></span></div></div><div class="score" style="color:${color(e.direction)}">${fmt(e.score)}</div></div>`; }).join("");
     const sel = state.person && edges.find(e => e.from === state.person);
-    $side.innerHTML = `<h2 class="topic-title">${i.name}</h2><div class="topic-sub">${i.catName} › ${i.subName} · ${edges.length} legislators</div><div class="spectrum">${ticks}</div>${rows}${sel ? evidenceHtml(sel) + profileBtn(sel.from) : `<div class="empty-state" style="padding-top:10px">Click a legislator to read the quote behind the score.</div>`}`;
+    $side.innerHTML = `<h2 class="topic-title">${i.name}</h2><div class="topic-sub">${i.catName} › ${i.subName} · ${edges.length} legislators</div><div class="spectrum">${ticks}</div>${rows}${sel ? evidenceHtml(sel) + profileBtn(sel.from) : `<div class="empty-state" style="padding-top:10px">Click a legislator to read the quote behind the score.</div>`} ${conditionsPanel(i.id)}`;
     $side.querySelectorAll(".row").forEach(el => el.onclick = () => { state.person = el.dataset.id; render(); });
   }
 
@@ -479,6 +546,12 @@
     const initials = p.name.replace(/^Rep\. /, "").split(" ").map(s => s[0]).join("").slice(0, 2);
     const partyName = p.party === "D" ? "Democrat" : p.party === "R" ? "Republican" : "Independent";
     const tab = P.tab || "overview";
+    // Conditions block (2.4): one row per condition, stance-first short phrase; hidden when empty
+    const condRows = condByPerson[p.id] || [];
+    const condBlock = condRows.length ? `<div class="h" style="margin:16px 0 4px">Conditions</div>` + condRows.map(r => {
+      const dot = r.stance_if_met === "support" ? "var(--support)" : "var(--oppose)", dtype = (DEMANDS[r.demand] || {}).type || "";
+      return `<div style="display:flex;gap:10px;margin:10px 0"><span style="width:10px;height:10px;border-radius:50%;background:${dot};flex:none;margin-top:5px"></span><div><div>${condShort(nowOf(r.person, r.issue), r)}</div><div style="font-size:11px;color:var(--muted);margin-top:2px">${r.bill ? `${r.bill} · ` : ""}<span class="tag">${dtype}</span></div><div class="cond-q">“${r.quote}”</div></div></div>`;
+    }).join("") : "";
     const stat = (v, l, c, t) => `<div class="stat" ${t ? `title="${t}"` : ""}><span class="v" ${c ? `style="color:${c}"` : ""}>${v}</span><span class="l">${l}</span></div>`;
     const summary = SUMMARIES[p.id];
     const cite = id => { const st = stById[id]; return st ? `<a class="cite" data-st="${id}" title="${st.date} · ${issueById[st.issue].name}">[${id.replace(/^st0*/, "")}]</a>` : ""; };
@@ -493,6 +566,7 @@
         <div class="strip">${stat(mine.length, "issues")}${stat(sup, "support", "var(--support)")}${stat(opp, "oppose", "var(--oppose)")}${stat(nStatements, "statements")}${stat(decisive.toFixed(2), "decisiveness", null, "mean |score| across issues: how strongly they commit, regardless of direction")}${stat(divergence === null ? "—" : divergence.toFixed(2), "vs party", null, "mean distance from other " + partyName + "s on the same issues")}${flips ? stat("⟲ " + flips, "flipped", "var(--accent)") : ""}</div>
       </div>
       ${summaryHtml}
+      ${condBlock}
       <div class="tabs">${[["overview", "Overview"], ["issues", "Issues by committee"], ["timeline", "Timeline"]].map(([k, l]) => `<button class="${tab === k ? "active" : ""}" data-tab="${k}">${l}</button>`).join("")}</div>
       <div id="tab-overview" class="tabpane" ${tab !== "overview" ? "hidden" : ""}>
         <div class="pgrid">
@@ -645,12 +719,22 @@
       .attr("fill", d => { if (explore) return partyColor(byId[d.id].party); const e = links.find(l => l.main && (l.source.id ?? l.source) === d.id); return e ? color(e.e.direction) : "var(--neutral)"; })
       .attr("stroke", d => state.person === d.id ? "#fff" : (byId[d.id].chamber === "senate" ? "var(--accent)" : "var(--bg)")).attr("stroke-width", 2);
     node.append("text").attr("class", d => "node-label" + (d.kind === "topic" ? " topic" : "")).attr("text-anchor", "middle").attr("dy", d => d.kind === "topic" ? (explore ? 36 : 5) : 22).text(d => d.name);
+    // condition markers (2.2): amber diamond at the midpoint of edges with rows; existing edge styling untouched
+    const condLinks = links.filter(l => (condByPI[l.e.from + "|" + l.e.to] || []).length);
+    const markers = g.append("g").selectAll("path").data(condLinks).join("path")
+      .attr("d", d3.symbol(d3.symbolDiamond, 70)).attr("fill", "var(--accent)").attr("stroke", "var(--bg)").attr("stroke-width", 1.5)
+      .style("cursor", "pointer").style("pointer-events", "all")
+      .on("mousemove", (ev, l) => { const rows = condByPI[l.e.from + "|" + l.e.to] || [];
+        condTip.style.display = "block"; condTip.style.left = (ev.clientX + 14) + "px"; condTip.style.top = (ev.clientY + 10) + "px";
+        condTip.innerHTML = rows.map(r => `<div><b>${byId[r.person].name}</b> ${phrase(l.e.score, r)}<div class="cond-q">“${r.quote}”</div></div>`).join(`<hr style="border:0;border-top:1px solid var(--border);margin:6px 0">`); })
+      .on("mouseleave", () => { condTip.style.display = "none"; });
+    graphLinkSel = link;
     function highlight(d) {
       if (!d) { node.attr("opacity", 1); link.attr("stroke-opacity", l => (l.main ? .45 : .15) + Math.abs(l.e.score) * .45); return; }
       const near = new Set([d.id]); links.forEach(l => { if (l.source.id === d.id) near.add(l.target.id); if (l.target.id === d.id) near.add(l.source.id); });
       node.attr("opacity", n => near.has(n.id) ? 1 : .15); link.attr("stroke-opacity", l => l.source.id === d.id || l.target.id === d.id ? .95 : .05);
     }
-    sim.on("tick", () => { link.attr("x1", d => d.source.x).attr("y1", d => d.source.y).attr("x2", d => d.target.x).attr("y2", d => d.target.y); node.attr("transform", d => `translate(${d.x},${d.y})`); });
+    sim.on("tick", () => { link.attr("x1", d => d.source.x).attr("y1", d => d.source.y).attr("x2", d => d.target.x).attr("y2", d => d.target.y); node.attr("transform", d => `translate(${d.x},${d.y})`); markers.attr("transform", d => `translate(${(d.source.x + d.target.x) / 2},${(d.source.y + d.target.y) / 2})`); });
   }
 
   // ---------- shell ----------
@@ -667,6 +751,7 @@
     $side.dataset.label = hasEvidence ? "Evidence" : state.mode === "explore" ? "In view" : "Notes";
     ({ explore: renderExploreSide, focus: renderFocusSide, list: renderListSide, profile: renderProfileSide })[state.mode]();
     $side.querySelectorAll("[data-open]").forEach(b => b.onclick = () => openProfile(b.dataset.open));
+    bindCondChips();
   }
   function render() { renderHeader(); renderAside(); renderSide(); renderGraph(); if (state.mode !== "profile" && location.hash.startsWith("#/legislator")) history.replaceState(null, "", location.pathname); }
   ["explore", "focus", "list", "profile"].forEach(m => $("m-" + m).onclick = () => { state.mode = m; state.person = null; render(); });
