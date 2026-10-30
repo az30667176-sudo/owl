@@ -1,0 +1,69 @@
+{
+  "_meta": {
+    "description": "Conditions ledger (contract B, optional). One row per condition a legislator states for supporting or opposing a bill. MOCK: built by hand from data/records/record-hearing-mock.json.",
+    "mock": true
+  },
+  "demands": [
+    { "id": "water-cap", "name": "Enforceable water-use cap", "type": "amendment" },
+    { "id": "water-disc", "name": "Binding water-use disclosure (Sec. 4)", "type": "amendment" },
+    { "id": "clean", "name": "Pass the bill clean, no amendments", "type": "procedure", "excludes": ["water-cap", "water-disc"] }
+  ],
+  "conditions": [
+    {
+      "condition_id": "cd001",
+      "demand": "water-cap",
+      "person": "p07",
+      "issue": "data-centers",
+      "bill": "H.R. 6110",
+      "stance_if_met": "support",
+      "scope": "vote",
+      "condition": "Supports H.R. 6110 only if it contains an enforceable water-use cap rather than a disclosure.",
+      "quote": "Until this bill contains an enforceable water cap, not a disclosure, a cap, I am a no.",
+      "statement_id": null,
+      "record_id": "rec-2026-09-18-hssy-research-hearing",
+      "model": "muse-spark-1.3"
+    },
+    {
+      "condition_id": "cd002",
+      "demand": "water-disc",
+      "person": "p05",
+      "issue": "data-centers",
+      "bill": "H.R. 6110",
+      "stance_if_met": "support",
+      "scope": "final_passage",
+      "condition": "Supports the bill now but will vote for final passage only after a binding water-use disclosure is added to Section 4.",
+      "quote": "Section 4 still has no binding water-use disclosure, and I will offer an amendment to add one before I vote for final passage.",
+      "statement_id": null,
+      "record_id": "rec-2026-09-18-hssy-research-hearing",
+      "model": "muse-spark-1.3"
+    },
+    {
+      "condition_id": "cd003",
+      "demand": "water-disc",
+      "person": "p04",
+      "issue": "data-centers",
+      "bill": "H.R. 6110",
+      "stance_if_met": "oppose",
+      "scope": "vote",
+      "condition": "Supports the bill but opposes it if the water-use disclosure amendment is added.",
+      "quote": "What I do not support is the amendment she describes.",
+      "statement_id": null,
+      "record_id": "rec-2026-09-18-hssy-research-hearing",
+      "model": "muse-spark-1.3"
+    },
+    {
+      "condition_id": "cd004",
+      "demand": "clean",
+      "person": "p04",
+      "issue": "data-centers",
+      "bill": "H.R. 6110",
+      "stance_if_met": "support",
+      "scope": "vote",
+      "condition": "Supports the bill as long as it passes clean, without amendments.",
+      "quote": "We should pass the bill clean.",
+      "statement_id": null,
+      "record_id": "rec-2026-09-18-hssy-research-hearing",
+      "model": "muse-spark-1.3"
+    }
+  ]
+}

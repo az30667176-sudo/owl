@@ -34,6 +34,7 @@ jobs:
           cp -r apps/web/. _site/
           cp data/taxonomy.json data/issues.json data/people.json data/stances.json _site/data/
           if [ -f data/summaries.json ]; then cp data/summaries.json _site/data/; fi
+          if [ -f data/conditions.json ]; then cp data/conditions.json _site/data/; fi
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

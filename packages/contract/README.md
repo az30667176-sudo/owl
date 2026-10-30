@@ -11,7 +11,7 @@ Single source of truth for every byte that crosses a team boundary. Maps 1:1 to 
 | Contract | Producer → Consumer | Shape | Schema |
 |---|---|---|---|
 | **A** | ingest → process | one **record**: speaker-tagged text + source + hints | `record.schema.json` |
-| **B** | process → frontend | five **data files** the frontend loads at startup | `taxonomy`, `issues`, `people`, `statements`, `summaries` `.schema.json` |
+| **B** | process → frontend | six **data files** the frontend loads at startup | `taxonomy`, `issues`, `people`, `statements`, `summaries`, `conditions` `.schema.json` |
 | **C** | frontend-internal | derived in the browser from B (aggregation, filters, graph) | `derived.md` (rules, no file crosses a boundary) |
 
 Owners: A is owned by **ingest** (producer) and **process** (consumer) jointly; B is owned by **process** (producer) and **web** (consumer) jointly. A change to any schema = open an issue with label `contract`, get the consuming side's thumbs-up, then land the schema and the code in one PR.
@@ -46,7 +46,7 @@ Example: `data/records/record-hearing-mock.json`.
 
 ## Contract B — data files (process → frontend)
 
-Five files in one directory. The frontend fetches them relative to its own URL (`./data/<file>`), so the directory must be served next to `index.html`. All ids are stable strings; names are display-only. Files marked `_meta.mock: true` contain fictional legislators and must never be published as real.
+Six files in one directory. The frontend fetches them relative to its own URL (`./data/<file>`), so the directory must be served next to `index.html`. All ids are stable strings; names are display-only. Files marked `_meta.mock: true` contain fictional legislators and must never be published as real.
 
 ### taxonomy.json — levels 1 + 2
 
@@ -109,6 +109,35 @@ Level 1 = House standing committees, level 2 = their subcommittees. A committee 
 { "_meta": {...}, "summaries": { "<person id>": { "model", "generated_at", "sentences": [ { "text", "cites": ["st012", ...] } ] } } }
 ```
 Generated offline by `services/process/summarize.mjs`. Every sentence cites ≥ 1 statement that belongs to that person; the validator drops nothing — it fails the file if a citation points elsewhere. Missing file or missing person = the UI shows "not generated yet".
+
+### conditions.json — optional
+
+```
+{ "_meta": {...}, "demands": [ { "id", "name", "type", "excludes"? } ], "conditions": [ { "condition_id", "demand", "person", "issue", "bill", "stance_if_met", "scope", "condition", "quote", "statement_id", "record_id", "model" } ] }
+```
+
+| field | type | rule |
+|---|---|---|
+| `demands[].id` | kebab-case string | unique across the file |
+| `demands[].name` | string 1–80 chars | display name of the demand |
+| `demands[].type` | `amendment` \| `funding` \| `timeline` \| `oversight` \| `exemption` \| `study` \| `procedure` \| `other` | demand kind; drives bill-page grouping |
+| `demands[].excludes` | string[] | optional; other demand ids that cannot be adopted together with this one |
+| `condition_id` | `cd` + digits | unique across the file |
+| `demand` | demands id | must exist in the registry |
+| `person` | people id | must exist |
+| `issue` | issues id | must exist |
+| `bill` | string \| null (≤ 120 chars) | bill named near the condition |
+| `stance_if_met` | `support` \| `oppose` | stance the legislator takes if the demand is met |
+| `scope` | `vote` \| `final_passage` | which vote the condition governs |
+| `condition` | string 1–300 chars | one-sentence paraphrase of the condition |
+| `quote` | string 2–400 chars | **verbatim substring of the source record's `content`** (whitespace/quote-normalised). The whole ledger rests on this |
+| `statement_id` | string \| null | stances id, or null when not yet linked. When non-null it must exist and belong to the same `person` |
+| `record_id` | string | back-reference to the contract-A record. The validator uses it to check the quote |
+| `model` | string | e.g. `muse-spark-1.3` |
+
+Demand registry: `water-cap` (amendment, "Enforceable water-use cap"), `water-disc` (amendment, "Binding water-use disclosure (Sec. 4)"), `clean` (procedure, "Pass the bill clean, no amendments", excludes `water-cap` + `water-disc`).
+
+Rules: `quote` must be verbatim against the record named by `record_id`; `statement_id` is nullable but when present must match the row's `person`; conditions are never averaged into scores.
 
 ## Contract C — derived in the browser
 

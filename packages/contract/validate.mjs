@@ -118,13 +118,15 @@ function validateDir(dir) {
   const people = readJson(join(dir, "people.json"));
   const stances = readJson(join(dir, "stances.json"));
   const summaries = existsSync(join(dir, "summaries.json")) ? readJson(join(dir, "summaries.json")) : null;
+  const conditions = existsSync(join(dir, "conditions.json")) ? readJson(join(dir, "conditions.json")) : null;
 
   const okT = validateAgainst(taxonomy, "taxonomy.schema.json", "taxonomy.json");
   const okI = validateAgainst(issues, "issues.schema.json", "issues.json");
   const okP = validateAgainst(people, "people.schema.json", "people.json");
   const okS = validateAgainst(stances, "statements.schema.json", "stances.json");
   const okSum = summaries ? validateAgainst(summaries, "summaries.schema.json", "summaries.json") : true;
-  if (!(okT && okI && okP && okS && okSum)) return;
+  const okCond = conditions ? validateAgainst(conditions, "conditions.schema.json", "conditions.json") : true;
+  if (!(okT && okI && okP && okS && okSum && okCond)) return;
 
   const mock = !!(people._meta?.mock || stances._meta?.mock);
 
@@ -182,11 +184,46 @@ function validateDir(dir) {
       else if (stOwner.get(c) !== pid) err(`summaries.json ${pid} sentence ${i}: cites ${c} which belongs to ${stOwner.get(c)}`);
     }));
   }
+  // conditions
+  let condCount = 0;
+  if (conditions) {
+    const demandIds = new Set();
+    for (const d of conditions.demands) {
+      if (demandIds.has(d.id)) err(`conditions.json ${d.id}: duplicate demand id`);
+      demandIds.add(d.id);
+    }
+    for (const d of conditions.demands) {
+      for (const x of d.excludes || []) {
+        if (!demandIds.has(x)) err(`conditions.json ${d.id}: excludes unknown demand ${x}`);
+      }
+    }
+    const condIds = new Set();
+    for (const c of conditions.conditions) {
+      const L = `conditions.json ${c.condition_id}`;
+      if (condIds.has(c.condition_id)) err(`${L}: duplicate condition_id`); condIds.add(c.condition_id);
+      if (!demandIds.has(c.demand)) err(`${L}: unknown demand ${c.demand}`);
+      if (!personIds.has(c.person)) err(`${L}: unknown person ${c.person}`);
+      if (!issueIds.has(c.issue)) err(`${L}: unknown issue ${c.issue}`);
+      if (c.statement_id !== null) {
+        if (!stIds.has(c.statement_id)) err(`${L}: unknown statement_id ${c.statement_id}`);
+        else if (stOwner.get(c.statement_id) !== c.person) err(`${L}: statement_id ${c.statement_id} belongs to ${stOwner.get(c.statement_id)}, not ${c.person}`);
+      }
+      if (c.record_id) {
+        const r = records.get(c.record_id);
+        if (!r) { quoteSkipped++; }
+        else {
+          quoteChecked++;
+          if (!norm(r.content).includes(norm(c.quote))) err(`${L}: quote is not a verbatim substring of record ${c.record_id}`);
+        }
+      } else quoteSkipped++;
+    }
+    condCount = conditions.conditions.length;
+  }
   const orphans = [...personIds].filter((p) => !stances.stances.some((s) => s.person === p));
   if (orphans.length) warn(`people.json: ${orphans.length} legislator(s) with no statements (fine for real data, UI shows them empty)`);
   const unused = [...issueIds].filter((i) => !stances.stances.some((s) => s.issue === i));
   if (unused.length) warn(`issues.json: ${unused.length} issue(s) with no statements: ${unused.join(", ")}`);
-  console.log(`contract B: ${taxonomy.committees.length} committees, ${issues.issues.length} issues, ${people.people.length} people, ${stances.stances.length} statements, ${summaries ? Object.keys(summaries.summaries).length : 0} summaries; quotes checked ${quoteChecked}, skipped ${quoteSkipped}${mock ? " [mock data]" : ""}`);
+  console.log(`contract B: ${taxonomy.committees.length} committees, ${issues.issues.length} issues, ${people.people.length} people, ${stances.stances.length} statements, ${summaries ? Object.keys(summaries.summaries).length : 0} summaries, ${condCount} conditions; quotes checked ${quoteChecked}, skipped ${quoteSkipped}${mock ? " [mock data]" : ""}`);
 }
 
 if (opt.dir) validateDir(opt.dir); else loadRecords();

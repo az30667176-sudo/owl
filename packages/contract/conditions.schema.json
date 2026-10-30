@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/az30667176-sudo/owl/packages/contract/conditions.schema.json",
+  "title": "Contract B — conditions.json (optional)",
+  "description": "Conditions ledger: one row per condition a legislator states for supporting or opposing a bill. Verbatim quotes against records (checked by validate.mjs). Never averaged into scores.",
+  "type": "object",
+  "required": ["demands", "conditions"],
+  "additionalProperties": false,
+  "properties": {
+    "_meta": { "$ref": "record.schema.json#/$defs/meta" },
+    "demands": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "type"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+          "name": { "type": "string", "minLength": 1, "maxLength": 80 },
+          "type": { "enum": ["amendment", "funding", "timeline", "oversight", "exemption", "study", "procedure", "other"] },
+          "excludes": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "conditions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["condition_id", "demand", "person", "issue", "bill", "stance_if_met", "scope", "condition", "quote", "statement_id", "record_id", "model"],
+        "additionalProperties": false,
+        "properties": {
+          "condition_id": { "type": "string", "pattern": "^cd[0-9]{3,}$" },
+          "demand": { "type": "string", "description": "demands registry id" },
+          "person": { "type": "string", "description": "people.json id" },
+          "issue": { "type": "string", "description": "issues.json id" },
+          "bill": { "type": ["string", "null"], "maxLength": 120 },
+          "stance_if_met": { "enum": ["support", "oppose"] },
+          "scope": { "enum": ["vote", "final_passage"] },
+          "condition": { "type": "string", "minLength": 1, "maxLength": 300 },
+          "quote": { "type": "string", "minLength": 2, "maxLength": 400, "description": "Verbatim substring of the source record's content." },
+          "statement_id": { "type": ["string", "null"], "description": "stances.json id, or null when not yet linked. When present it must belong to the same person." },
+          "record_id": { "type": "string", "description": "Back-reference to the contract-A record. Lets the validator check the quote." },
+          "model": { "type": "string", "minLength": 1 }
+        }
+      }
+    }
+  }
+}

@@ -11,6 +11,7 @@ All ids are stable strings; names are display-only.
 | `issues.json` | Concrete issue (level 3) | `id`, `name`, `parent` → a subcommittee id (or a committee id when it has no subcommittees) |
 | `people.json` | Legislator (U.S. House members, all 50 states; no senators in current scope) | `id`, `bioguide_id`, `name`, `chamber` (always `house` for now, kept for schema stability), `state` (2-letter), `district` (`CA-12`), `party` (`D`\|`R`\|`I`), `gender` (`F`\|`M`), `since` (year) |
 | `stances.json` | **statement** (one speech / vote / sponsorship) | `statement_id`, `person` → people id, `issue` → issue id, `date` (ISO), `score` [-1, 1], `direction` (`support`\|`oppose`\|`neutral`), `linkage`, `llm_confidence` (`low`\|`mid`\|`high`\|`super_high`), `quote` (verbatim), `bill`, `source` (URL), `model` |
+| `conditions.json` | **condition** a legislator states for supporting or opposing a bill (optional) | `condition_id`, `demand` → demands registry id, `person` → people id, `issue` → issue id, `bill`, `stance_if_met` (`support`\|`oppose`), `scope` (`vote`\|`final_passage`), `condition`, `quote` (verbatim), `statement_id` (nullable), `record_id`, `model` |
 
 ### How the UI aggregates statements
 

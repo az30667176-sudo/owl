@@ -2,12 +2,12 @@
 
 ## 1. Contract and mock ledger
 
-- [ ] 1.1 Create `packages/contract/conditions.schema.json` per the data-contract delta (top level `{ _meta?, demands[], conditions[] }`, enums, patterns, lengths, `statement_id` string|null, `bill` string|null).
-- [ ] 1.2 Extend `packages/contract/validate.mjs`: load `conditions.json` when present; schema-validate; unique demand ids; `excludes` ids exist; unique `condition_id`; `demand`, `person`, `issue` exist; non-null `statement_id` exists and matches person; verbatim quote vs record when supplied, else counted as skipped; conditions count in the summary line.
-- [ ] 1.3 Create `data/conditions.json` (`_meta.mock: true`) with demands `water-cap` (amendment), `water-disc` (amendment), `clean` (procedure, excludes both) and four rows from `data/records/record-hearing-mock.json`: Tsao p07 water-cap support vote; Raman p05 water-disc support final_passage; Beaumont p04 water-disc oppose vote; Beaumont p04 clean support vote. Quotes copied verbatim; issue `data-centers`; bill `H.R. 6110`; `statement_id: null`.
-- [ ] 1.4 Add the file to `packages/contract/README.md` (contract B table + `### conditions.json` section) and a row to `data/README.md`.
-- [ ] 1.5 `.github/workflows/pages.yml`: copy `data/conditions.json` into `_site/data/` when present.
-- [ ] 1.6 `node packages/contract/validate.mjs data --records data/records` prints OK with 4 conditions and quotes checked.
+- [x] 1.1 Create `packages/contract/conditions.schema.json` per the data-contract delta (top level `{ _meta?, demands[], conditions[] }`, enums, patterns, lengths, `statement_id` string|null, `bill` string|null).
+- [x] 1.2 Extend `packages/contract/validate.mjs`: load `conditions.json` when present; schema-validate; unique demand ids; `excludes` ids exist; unique `condition_id`; `demand`, `person`, `issue` exist; non-null `statement_id` exists and matches person; verbatim quote vs record when supplied, else counted as skipped; conditions count in the summary line.
+- [x] 1.3 Create `data/conditions.json` (`_meta.mock: true`) with demands `water-cap` (amendment), `water-disc` (amendment), `clean` (procedure, excludes both) and four rows from `data/records/record-hearing-mock.json`: Tsao p07 water-cap support vote; Raman p05 water-disc support final_passage; Beaumont p04 water-disc oppose vote; Beaumont p04 clean support vote. Quotes copied verbatim; issue `data-centers`; bill `H.R. 6110`; `statement_id: null`.
+- [x] 1.4 Add the file to `packages/contract/README.md` (contract B table + `### conditions.json` section) and a row to `data/README.md`.
+- [x] 1.5 `.github/workflows/pages.yml`: copy `data/conditions.json` into `_site/data/` when present.
+- [x] 1.6 `node packages/contract/validate.mjs data --records data/records` prints OK with 4 conditions and quotes checked.
 
 ## 2. Explore and profile
 
