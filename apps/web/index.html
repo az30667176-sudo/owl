@@ -227,6 +227,7 @@
   .bill-strip span { font-size: 11px; color: var(--muted); letter-spacing: .08em; text-transform: uppercase; }
   .bill-sec { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin: 18px 0 8px; font-family: var(--mono); }
   .bill-spec { position: relative; height: 64px; margin: 14px 0 4px; }
+  .bill-spec .lead { position: absolute; width: 1px; background: var(--border-strong); transform: translateX(-50%); }
   .bill-spec .ax { position: absolute; top: 24px; left: 0; right: 0; border-top: 1px solid var(--border-strong); }
   .bill-spec .ax i { position: absolute; top: -16px; font: 10px var(--mono); color: var(--muted); font-style: normal; }
   .bill-spec .dot { position: absolute; top: 18px; width: 13px; height: 13px; border-radius: 50%; border: 2px solid var(--bg); transform: translateX(-50%); }
@@ -234,7 +235,7 @@
   .bill-spec .nm { position: absolute; top: 38px; font: 500 10px var(--mono); color: var(--muted); transform: translateX(-50%); white-space: nowrap; }
   .bill-grid { display: grid; grid-template-columns: 1fr 330px; gap: 26px; align-items: start; }
   @media (max-width: 1180px) { .bill-grid { grid-template-columns: 1fr; } }
-  #billmap { width: 100%; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); display: block; }
+  #billmap { width: 100%; height: auto; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); display: block; }
   .bill-legend { display: flex; gap: 16px; flex-wrap: wrap; font-size: 12px; color: var(--muted); margin-top: 10px; }
   .bill-legend i { display: inline-block; width: 18px; height: 0; border-top: 2px solid; vertical-align: middle; margin-right: 6px; }
   .bill-toggle { display: flex; gap: 10px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid var(--border); cursor: pointer; user-select: none; }
@@ -807,6 +808,26 @@
     }
     return s;
   }
+  // shared bill view-model for the centre (#bill) + side (#side) panes
+  function billModel() {
+    const info = billInfo(state.b.id);
+    if (!info) return null;
+    const legs = billLegs(info);
+    const demands = [...new Set(info.conds.map(r => r.demand))].map(id => ({ id, ...{ name: id, type: "" }, ...(DEMANDS[id] || {}) }));
+    state.b.ticked = state.b.ticked.filter(d => demands.some(x => x.id === d));
+    const active = state.b.ticked, on = new Set(active);
+    const proj = billProject(legs, active), byP = Object.fromEntries(proj.map(p => [p.id, p]));
+    return { info, legs, demands, active, on, proj, byP };
+  }
+  // tick/untick with exclusion: ticking D unticks older conflicting ticks first
+  function tickDemand(id, want) {
+    if (!want) state.b.ticked = state.b.ticked.filter(d => d !== id);
+    else {
+      const bad = t => (((DEMANDS[t] || {}).excludes || []).includes(id) || ((DEMANDS[id] || {}).excludes || []).includes(t));
+      state.b.ticked = [...state.b.ticked.filter(t => t !== id && !bad(t)), id];
+    }
+    render();
+  }
   function renderBillAside() {
     const groups = [...billGroups().entries()].map(([id, g]) => ({ id, info: billInfo(id) })).filter(x => x.info)
       .sort((a, b) => a.info.num.localeCompare(b.info.num));
@@ -817,32 +838,15 @@
     $("bill-explore").onclick = () => { state.mode = "explore"; state.b.id = null; render(); };
   }
   function renderBillSide() {
-    $side.innerHTML = `<div class="empty-state">The negotiation map is derived from statements on this bill and the conditions ledger. Tick a demand to preview who moves. Hover an edge for the quote. Click a legislator to open their profile.</div>`;
-  }
-  function renderBill() {
-    const wrap = $("bill"), info = billInfo(state.b.id);
-    if (!info) {
-      wrap.innerHTML = `<div class="empty-state" style="padding:24px">Bill not found in data. <span class="link" id="bill-missing-back">← back to Explore</span></div>`;
-      $("bill-missing-back").onclick = () => { state.mode = "explore"; state.b.id = null; render(); };
-      return;
-    }
-    const legs = billLegs(info);
-    const demands = [...new Set(info.conds.map(r => r.demand))].map(id => ({ id, ...{ name: id, type: "" }, ...(DEMANDS[id] || {}) }));
-    state.b.ticked = state.b.ticked.filter(d => demands.some(x => x.id === d));
-    const active = state.b.ticked, on = new Set(active);
-    const proj = billProject(legs, active), byP = Object.fromEntries(proj.map(p => [p.id, p]));
-    const sup = legs.filter(l => l.score !== null && l.score > .15).length;
-    const opp = legs.filter(l => l.score !== null && l.score < -.15).length;
-    const silent = legs.filter(l => l.score === null && l.conds.length).length;
-    const path = `${info.iss.catName} › ${info.iss.subName} › ${info.iss.name}`;
-    const dots = legs.filter(l => l.score !== null).map((l, k) =>
-      `<span class="dot${l.conds.length ? " cond" : ""}" title="${shortName(l.p.name)} · ${fmt(l.score)}" style="left:${(l.score + 1) / 2 * 100}%;background:${partyColor(l.p.party)}"></span><span class="nm" style="left:${(l.score + 1) / 2 * 100}%;${k % 2 ? "top:48px;" : ""}">${shortName(l.p.name)} ${fmt(l.score)}</span>`).join("");
-    // toggles honour excludes both ways, with a one-line explanation
-    const isDis = d => demands.some(t => t.id !== d.id && on.has(t.id) && (((DEMANDS[t.id] || {}).excludes || []).includes(d.id) || ((DEMANDS[d.id] || {}).excludes || []).includes(t.id)));
-    const conflict = demands.find(d => isDis(d));
+    const m = billModel();
+    if (!m) { $side.innerHTML = `<div class="empty-state">Bill not found in data.</div>`; return; }
+    const { demands, active, on, proj } = m;
+    // exclusion is symmetric: D disabled while a ticked demand lists D, or D lists a ticked one
+    const isDis = id => demands.some(t => t.id !== id && on.has(t.id) && (((DEMANDS[t.id] || {}).excludes || []).includes(id) || ((DEMANDS[id] || {}).excludes || []).includes(t.id)));
+    const conflict = demands.find(d => isDis(d.id));
     const blocker = conflict ? demands.find(t => on.has(t.id) && (((DEMANDS[t.id] || {}).excludes || []).includes(conflict.id) || ((DEMANDS[conflict.id] || {}).excludes || []).includes(t.id))) : null;
     const toggles = demands.map(d => {
-      const mine = info.conds.filter(r => r.demand === d.id);
+      const mine = m.info.conds.filter(r => r.demand === d.id);
       const sP = [...new Set(mine.filter(r => r.stance_if_met === "support").map(r => r.person))].map(pid => shortName(byId[pid].name));
       const oP = [...new Set(mine.filter(r => r.stance_if_met === "oppose").map(r => r.person))].map(pid => shortName(byId[pid].name));
       const who = [sP.length ? `stated by ${sP.join(", ")}` : "", oP.length ? `opposed by ${oP.join(", ")}` : ""].filter(Boolean).join(", ");
@@ -858,34 +862,61 @@
       : !moved.length ? `<li><span style="color:var(--muted)">Nobody moves under this package.</span></li>`
       : moved.map(p => `<li><div style="display:flex;justify-content:space-between;gap:8px"><span><b>${shortName(byId[p.id].name)}</b> <span style="color:var(--muted);font-size:11px">${seat(byId[p.id])} ${byId[p.id].party}</span></span><span style="font-family:var(--mono);font-size:12px"><span style="color:${arrowCls(p.base)}">${p.base}</span> → <span style="color:${arrowCls(p.proj)}">${p.proj}</span></span></div>${p.why ? `<div class="why">${p.why}.</div>` : ""}</li>`).join(""))
       + (active.length && still.length ? `<li><span style="color:var(--muted);font-size:12px">Unchanged · ${still.map(p => `${shortName(byId[p.id].name)} ${p.proj}`).join(" · ")}</span></li>` : "");
+    $side.innerHTML = `<div class="topic-sub">The negotiation map is derived from statements on this bill and the conditions ledger. Tick a demand to preview who moves. Hover an edge for the quote. Click a legislator to open their profile.</div>
+      <div class="bill-sec" style="margin-top:0">Try an amendment package</div>${toggles}
+      <div class="bill-warn" id="bill-warn" style="display:${blocker ? "block" : "none"}">${blocker ? `“${(DEMANDS[blocker.id] || {}).name || blocker.id}” excludes “${(DEMANDS[conflict.id] || {}).name || conflict.id}”, so it is disabled while “${(DEMANDS[blocker.id] || {}).name || blocker.id}” is ticked.` : ""}</div>
+      <div class="bill-sec" style="margin-top:18px">If this package passed · who moves</div>
+      <div class="bill-tally"><div><b style="color:var(--support)">${nS}${dlt(nS, bS)}</b><span>support</span></div><div><b style="color:var(--oppose)">${nO}${dlt(nO, bO)}</b><span>oppose</span></div><div><b>${nU}</b><span>unknown</span></div></div>
+      <ul class="bill-moves">${moves}</ul>
+      <div class="bill-read"><span class="k">Read-across</span><span>${billReadAcross(proj, active)}</span></div>`;
+    $side.querySelectorAll("input[data-d]").forEach(cb => cb.onchange = () => tickDemand(cb.dataset.d, cb.checked));
+  }
+  function renderBill() {
+    const wrap = $("bill"), info = billInfo(state.b.id);
+    if (!info) {
+      wrap.innerHTML = `<div class="empty-state" style="padding:24px">Bill not found in data. <span class="link" id="bill-missing-back">← back to Explore</span></div>`;
+      $("bill-missing-back").onclick = () => { state.mode = "explore"; state.b.id = null; render(); };
+      return;
+    }
+    const { legs, demands, active, on, proj, byP } = billModel();
+    const sup = legs.filter(l => l.score !== null && l.score > .15).length;
+    const opp = legs.filter(l => l.score !== null && l.score < -.15).length;
+    const silent = legs.filter(l => l.score === null && l.conds.length).length;
+    const path = `${info.iss.catName} › ${info.iss.subName} › ${info.iss.name}`;
+    // spectrum labels: sort by x; bump to the next of up to three rows on overlap; leader line past row one
+    const labTxt = l => `${shortName(l.p.name)} ${fmt(l.score)}`;
+    const labW = t => t.length * 0.85 + 1; // approx label width in % of spectrum width
+    const srows = [];
+    legs.filter(l => l.score !== null).sort((a, b) => a.score - b.score).forEach(l => {
+      const x = (l.score + 1) / 2 * 100, w = labW(labTxt(l));
+      let r = 0;
+      while (r < 3) {
+        const row = srows[r] || (srows[r] = []);
+        if (!row.some(o => Math.abs(o.x - x) < (o.w + w) / 2 + 0.5)) { row.push({ x, w, l }); break; }
+        r++;
+      }
+      if (r === 3) srows[2].push({ x, w, l });
+    });
+    const rowTop = [38, 50, 62], specH = 64 + Math.max(0, srows.length - 1) * 12;
+    const dots = srows.flatMap((row, r) => row.map(o =>
+      `<span class="dot${o.l.conds.length ? " cond" : ""}" title="${shortName(o.l.p.name)} · ${fmt(o.l.score)}" style="left:${o.x}%;background:${partyColor(o.l.p.party)}"></span>`
+      + (r > 0 ? `<span class="lead" style="left:${o.x}%;top:31px;height:${rowTop[r] - 31}px"></span>` : "")
+      + `<span class="nm" style="left:${o.x}%;top:${rowTop[r]}px">${labTxt(o.l)}</span>`)).join("");
+    const isDisMap = id => demands.some(t => t.id !== id && on.has(t.id) && (((DEMANDS[t.id] || {}).excludes || []).includes(id) || ((DEMANDS[id] || {}).excludes || []).includes(t.id)));
     wrap.innerHTML = `<div class="bill-wrap">
       <div class="crumbline"><a id="bill-back">← Explore</a> · ${path} · <span style="color:var(--text)">Bill</span></div>
       <h1>${info.num}${info.title ? ` · ${info.title}` : ""}</h1>
       <div class="bill-sub">${path} · ${info.stmts.length} statement${info.stmts.length === 1 ? "" : "s"} in data${info.latest ? ` · latest ${info.latest.date || "undated"}` : ""}</div>
       <div class="bill-strip"><div><b style="color:var(--support)">${sup}</b><span>support now</span></div><div><b style="color:var(--oppose)">${opp}</b><span>oppose now</span></div><div><b style="color:var(--accent)">${info.conds.length}</b><span>stated conditions</span></div><div><b>${silent}</b><span>member silent on it</span></div></div>
       <div class="bill-sec">Where they stand today · ◆ = has stated a condition</div>
-      <div class="bill-spec"><div class="ax"><i style="left:0">−1 oppose</i><i style="left:49%">0</i><i style="right:0">+1 support</i></div>${dots}</div>
+      <div class="bill-spec" style="height:${specH}px"><div class="ax"><i style="left:0">−1 oppose</i><i style="left:49%">0</i><i style="right:0">+1 support</i></div>${dots}</div>
       <div class="bill-sec">What it would take · negotiation map</div>
-      <div class="bill-sub" style="margin:0 0 6px">Tick demands to see who moves · hover an edge for the quote · click a legislator for their conditions.</div>
-      <div class="bill-grid"><div>
-        <svg id="billmap" viewBox="0 0 860 ${Math.max(400, 110 + legs.length * 96)}"></svg>
-        <div class="bill-legend"><span><i style="border-color:var(--support)"></i>supports <b>if</b> demand met</span><span><i style="border-color:var(--oppose)"></i>opposes <b>if</b> demand met</span><span><i style="border-color:var(--accent);border-top-style:dashed"></i>current stance, width = strength</span><span><i style="border-color:var(--oppose);border-top-style:dotted"></i>demands that exclude each other</span><span style="flex-basis:100%;margin-top:4px">node colour = party only · projected vote = the label under the name (<span style="background:var(--support);color:var(--bg);padding:0 4px">YES</span> <span style="background:var(--oppose);color:var(--bg);padding:0 4px">NO</span> <span style="border:1px solid var(--muted);color:var(--muted);padding:0 4px">UNKNOWN</span>); <span style="color:var(--accent)">was …</span> marks a vote the package changes</span></div>
-        <div class="bill-card" id="billcard"><div class="empty-state">Hover a legislator to see their stated conditions and how the current package affects them · click to open their profile.</div></div>
-      </div><div>
-        <div class="bill-sec" style="margin-top:0">Try an amendment package</div>${toggles}
-        <div class="bill-warn" id="bill-warn" style="display:${blocker ? "block" : "none"}">${blocker ? `“${(DEMANDS[blocker.id] || {}).name || blocker.id}” excludes “${(DEMANDS[conflict.id] || {}).name || conflict.id}”, so it is disabled while “${(DEMANDS[blocker.id] || {}).name || blocker.id}” is ticked.` : ""}</div>
-        <div class="bill-sec" style="margin-top:18px">If this package passed · who moves</div>
-        <div class="bill-tally"><div><b style="color:var(--support)">${nS}${dlt(nS, bS)}</b><span>support</span></div><div><b style="color:var(--oppose)">${nO}${dlt(nO, bO)}</b><span>oppose</span></div><div><b>${nU}</b><span>unknown</span></div></div>
-        <ul class="bill-moves">${moves}</ul>
-        <div class="bill-read"><span class="k">Read-across</span><span>${billReadAcross(proj, active)}</span></div>
-      </div></div>
+      <div class="bill-sub" style="margin:0 0 6px">Tick demands in the side pane to see who moves · hover an edge for the quote · click a legislator for their conditions.</div>
+      <svg id="billmap" viewBox="0 0 860 ${Math.max(400, 110 + legs.length * 96)}"></svg>
+      <div class="bill-legend"><span><i style="border-color:var(--support)"></i>supports <b>if</b> demand met</span><span><i style="border-color:var(--oppose)"></i>opposes <b>if</b> demand met</span><span><i style="border-color:var(--accent);border-top-style:dashed"></i>current stance, width = strength</span><span><i style="border-color:var(--oppose);border-top-style:dotted"></i>demands that exclude each other</span><span style="flex-basis:100%;margin-top:4px">node colour = party only · projected vote = the label under the name (<span style="background:var(--support);color:var(--bg);padding:0 4px">YES</span> <span style="background:var(--oppose);color:var(--bg);padding:0 4px">NO</span> <span style="border:1px solid var(--muted);color:var(--muted);padding:0 4px">UNKNOWN</span>); <span style="color:var(--accent)">was …</span> marks a vote the package changes</span></div>
+      <div class="bill-card" id="billcard"><div class="empty-state">Hover a legislator to see their stated conditions and how the current package affects them · click to open their profile.</div></div>
     </div>`;
     $("bill-back").onclick = () => { state.mode = "explore"; state.b.id = null; render(); };
-    wrap.querySelectorAll("input[data-d]").forEach(cb => cb.onchange = () => {
-      const id = cb.dataset.d;
-      state.b.ticked = cb.checked ? [...new Set([...state.b.ticked, id])] : state.b.ticked.filter(d => d !== id);
-      renderBill();
-    });
     // --- negotiation map svg ---
     const W = 860, H = Math.max(400, 110 + legs.length * 96), cy = H / 2;
     const svg = d3.select("#billmap");
@@ -944,7 +975,7 @@
     // demand nodes (click toggles the package)
     const nd = svg.append("g").selectAll("g").data(demands).join("g")
       .attr("transform", d => `translate(${demPos[d.id].x},${demPos[d.id].y})`).style("cursor", "pointer")
-      .on("click", (ev, d) => { if (isDis(d.id)) return; state.b.ticked = on.has(d.id) ? state.b.ticked.filter(x => x !== d.id) : [...state.b.ticked, d.id]; renderBill(); });
+      .on("click", (ev, d) => { if (isDisMap(d.id)) return; tickDemand(d.id, !on.has(d.id)); });
     nd.append("circle").attr("r", d => on.has(d.id) ? 11 : 9).attr("fill", d => on.has(d.id) ? ambC : "#0f1322").style("stroke", "var(--text)").attr("stroke-width", 1.5);
     nd.append("text").attr("y", -18).attr("text-anchor", "middle").style("font-size", "12px").style("fill", "var(--text)").style("font-weight", 600).text(d => d.name);
     nd.append("text").attr("y", 28).attr("text-anchor", "middle").style("font", "500 10px var(--mono)").style("fill", "var(--muted)")
