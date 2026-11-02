@@ -393,7 +393,7 @@
   }
   // With the cache, COMMITTEES is taxonomy filtered to the cache's committee ids (taxonomy order).
   let COMMITTEES = useCache ? taxonomy.committees.filter(c => graphRaw.committees.some(g => g.id === c.id)) : taxonomy.committees;
-  const PALETTE = ["#f59e0b", "#06b6d4", "#ec4899", "#84cc16", "#8b5cf6", "#f97316", "#14b8a6", "#e11d48", "#3b82f6", "#a3e635", "#d946ef", "#0ea5e9", "#facc15", "#22c55e", "#fb7185", "#2dd4bf", "#c084fc", "var(--accent)", "#60a5fa", "#4ade80"];
+  const PALETTE = ["#f59e0b", "#06b6d4", "#ec4899", "#84cc16", "#8b5cf6", "#f97316", "#14b8a6", "#e11d48", "#3b82f6", "#a3e635", "#d946ef", "#0ea5e9", "#facc15", "#22c55e", "#fb7185", "#2dd4bf", "#c084fc", "#f0b429", "#60a5fa", "#4ade80"];
   const CAT_HUE = Object.fromEntries(COMMITTEES.map((c, i) => [c.id, PALETTE[i % PALETTE.length]]));
   const SUBS = COMMITTEES.flatMap(c => (c.subcommittees.length ? c.subcommittees : [{ id: c.id, name: c.name, leaf: true }]).map(s => ({ ...s, cat: c.id, catName: c.name })));
   const subById = Object.fromEntries(SUBS.map(s => [s.id, s]));
@@ -1251,6 +1251,24 @@
 
 // ---------- EXPLORE ON CANVAS (2.2) ----------
   const cv = $("cv"), cx2 = cv.getContext("2d"), ehud = $("ehud"), ectl = $("ectl");
+  // Canvas cannot parse CSS var() — resolve design tokens to hex once at startup.
+  const _css = getComputedStyle(document.documentElement);
+  const _pick = (v, fb) => (v && v.trim() ? v.trim() : fb);
+  const PAL = {
+    support: _pick(_css.getPropertyValue("--support"), "#3fcf77"),
+    oppose: _pick(_css.getPropertyValue("--oppose"), "#e24a5a"),
+    neutral: _pick(_css.getPropertyValue("--neutral"), "#9aa3b2"),
+    D: _pick(_css.getPropertyValue("--party-d"), "#5b8cff"),
+    R: _pick(_css.getPropertyValue("--party-r"), "#ff9a7a"),
+    I: _pick(_css.getPropertyValue("--party-i"), "#b9bfcc"),
+    accent: _pick(_css.getPropertyValue("--accent"), "#f0b429"),
+    ink: _pick(_css.getPropertyValue("--text"), "#efe6d2"),
+    muted: _pick(_css.getPropertyValue("--muted"), "#aaa493"),
+    border: _pick(_css.getPropertyValue("--border"), "#2c3348"),
+    bg: _pick(_css.getPropertyValue("--bg"), "#0f1322")
+  };
+  const eColor = d => d === "support" ? PAL.support : d === "oppose" ? PAL.oppose : PAL.neutral;
+  const eParty = p => p === "D" ? PAL.D : p === "R" ? PAL.R : PAL.I;
   let E = null, E_sim = null, E_zoom = null;
   function E_finAngle(sid, fin, mid) { if (!sid || !fin.has(sid)) return 0; return Math.atan2(Math.sin(fin.get(sid) - mid), Math.cos(fin.get(sid) - mid)); }
   function E_legTip(p) {
@@ -1392,14 +1410,14 @@
     const byP = d3.group(E.agg, a => a.p);
     E.legs = PEOPLE.map(p => {
       const an = slot.get(p.id), rad = R0 * (.14 + .74 * Math.sqrt(E.legSpec.get(p.id) || 0));
-      const tx = cx + rad * Math.cos(an), ty = cy + rad * Math.sin(an), pv = prev.get(p.id);
-      return { ...p, kind: "leg", tx, ty, x: pv ? pv.x : cx + (Math.random() - .5) * 6, y: pv ? pv.y : cy + (Math.random() - .5) * 6, rank: (byP.get(p.id) || []).slice().sort((a, b) => b.heat - a.heat).map(a => a.t) };
+      const tx = cx + rad * Math.cos(an), ty = cy + rad * Math.sin(an);
+      return { ...p, kind: "leg", tx, ty, x: tx, y: ty, rank: (byP.get(p.id) || []).slice().sort((a, b) => b.heat - a.heat).map(a => a.t) };
     });
     E_placeAnchors(W, H);
+    E.lastW = W; E.lastH = H;
     if (E_sim) E_sim.stop();
-    E_sim = d3.forceSimulation(E.legs).force("x", d3.forceX(d => d.tx).strength(first ? .06 : .3)).force("y", d3.forceY(d => d.ty).strength(first ? .06 : .3)).force("collide", d3.forceCollide(3.9)).alphaDecay(first ? .025 : .06);
-    if (first) setTimeout(() => { if (E_sim) { E_sim.force("x").strength(.3); E_sim.force("y").strength(.3); } }, 900);
-    E_sim.on("tick", () => { if (state.mode === "explore") E_draw(); });
+    E_sim = d3.forceSimulation(E.legs).force("x", d3.forceX(d => d.tx).strength(.5)).force("y", d3.forceY(d => d.ty).strength(.5)).force("collide", d3.forceCollide(3.9)).stop();
+    for (let i = 0; i < 120; i++) E_sim.tick();
     (function tween() { if (!E || state.mode !== "explore") return; const busy = E_stepAngles(performance.now()); const s = E_size(); E_placeAnchors(s.W, s.H); E_draw(); if (busy) requestAnimationFrame(tween); })();
     E_draw();
   }
@@ -1444,7 +1462,7 @@
       if (!on) continue;
       const mx = (l.x + t.x) / 2, my = (l.y + t.y) / 2, qx = mx + (cx - mx) * .25, qy = my + (cy - my) * .25;
       cx2.globalAlpha = strong ? .75 : .07 + .2 * Math.abs(a.score);
-      cx2.strokeStyle = color(dirOf(a.score));
+      cx2.strokeStyle = eColor(dirOf(a.score));
       cx2.lineWidth = (strong ? heatW(Math.min(1, a.heat)) : heatW(Math.min(1, a.heat)) * .35) / sk;
       cx2.setLineDash(a.flip ? [4 / sk, 3 / sk] : []);
       cx2.beginPath(); cx2.moveTo(l.x, l.y); cx2.quadraticCurveTo(qx, qy, t.x, t.y); cx2.stroke();
@@ -1452,29 +1470,30 @@
       if (rows.length && (strong || hl)) {
         const [px, py] = E_qpt(l.x, l.y, qx, qy, t.x, t.y, .5);
         E.markers.push({ x: px, y: py, rows, score: a.score });
-        cx2.globalAlpha = .95; cx2.fillStyle = "var(--accent)";
+        cx2.globalAlpha = .95; cx2.fillStyle = PAL.accent;
         cx2.save(); cx2.translate(px, py); cx2.rotate(Math.PI / 4); const s = 4.5 / sk; cx2.fillRect(-s, -s, 2 * s, 2 * s); cx2.restore();
       }
     }
     cx2.setLineDash([]);
     const near = hl ? hl.set : focusT ? new Set(E.agg.filter(a => a.t === focusT).map(a => a.p)) : focusL ? new Set([focusL]) : null;
-    for (const l of E.legs) { cx2.globalAlpha = !E_visible(l) ? .06 : (!near || near.has(l.id) ? 1 : .13); E_circle(l.x, l.y, 3.6 / sk, partyColor(l.party)); }
+    for (const l of E.legs) { cx2.globalAlpha = !E_visible(l) ? .06 : (!near || near.has(l.id) ? 1 : .13); E_circle(l.x, l.y, 3.6 / sk, eParty(l.party)); }
     cx2.globalAlpha = 1;
     for (const l of E.legs) {
       if (!E_visible(l)) continue;
       const show = (E.query && l.name.toLowerCase().includes(E.query)) || (E.zt.k > 2.4 && (!near || near.has(l.id))) || l.id === focusL;
-      if (show) E_label(l.name.replace(/^(Rep|Sen)\. /, ""), l.x + 5 / E.zt.k, l.y + 3 / E.zt.k, "500 " + (11 / E.zt.k) + "px Public Sans", "#efe6d2", "left");
+      if (show) E_label(l.name.replace(/^(Rep|Sen)\. /, ""), l.x + 5 / E.zt.k, l.y + 3 / E.zt.k, "500 " + (11 / E.zt.k) + "px Public Sans", PAL.ink, "left");
     }
-    if (E.pinned && E.pinned.kind === "leg") { const pl = LB.get(E.pinned.id); if (pl && E_visible(pl)) { E_circle(pl.x, pl.y, 7 / sk, "none", "#efe6d2"); E_label(pl.name.replace(/^(Rep|Sen)\. /, ""), pl.x + 7 / E.zt.k, pl.y + 4 / E.zt.k, "600 " + (12 / E.zt.k) + "px Public Sans", "#efe6d2", "left"); } }
+    if (E.pinned && E.pinned.kind === "leg") { const pl = LB.get(E.pinned.id); if (pl && E_visible(pl)) { E_circle(pl.x, pl.y, 7 / sk, "none", PAL.ink); E_label(pl.name.replace(/^(Rep|Sen)\. /, ""), pl.x + 7 / E.zt.k, pl.y + 4 / E.zt.k, "600 " + (12 / E.zt.k) + "px Public Sans", PAL.ink, "left"); } }
     for (const a of E.anchors.values()) {
       const rr = a.kind === "com" ? (a.id === E.open ? 0 : 11 / sk) : 8 / sk;
-      if (rr) { cx2.globalAlpha = 1; E_circle(a.x, a.y, rr, a.col, "#0f1322"); }
-      const out = a.kind === "com" ? R0 + 36 : R0 + 20, lx = cx + out * Math.cos(a.am), ly = cy + out * Math.sin(a.am), al = Math.cos(a.am) > .2 ? "left" : Math.cos(a.am) < -.2 ? "right" : "center";
+      if (rr) { cx2.globalAlpha = 1; E_circle(a.x, a.y, rr, a.col, PAL.bg); }
+      const narrow = a.kind === "com" && (a.a1 - a.a0) < .18, ci = a.kind === "com" ? COMMITTEES.findIndex(c => c.id === a.id) : 0;
+      const out = a.kind === "com" ? R0 + (narrow ? (ci % 2 ? 36 : 54) : 36) : R0 + 20, lx = cx + out * Math.cos(a.am), ly = cy + out * Math.sin(a.am), al = Math.cos(a.am) > .2 ? "left" : Math.cos(a.am) < -.2 ? "right" : "center";
       cx2.globalAlpha = 1;
       if (a.kind === "com" && a.id === E.open) E_label(a.name + "  ·  click to collapse", cx + (R0 + 46) * Math.cos(a.am), cy + (R0 + 46) * Math.sin(a.am) + 4, "600 " + (12 / E.zt.k) + "px Public Sans", a.col, al);
-      else E_label(a.kind === "issue" && a.name.length > 34 ? a.name.slice(0, 32) + "…" : a.name, lx, ly + 4, (a.kind === "com" ? 600 : 500) + " " + ((a.kind === "com" ? 11 : 10) / E.zt.k) + "px Public Sans", "#efe6d2", al);
+      else E_label(a.kind === "issue" && a.name.length > 34 ? a.name.slice(0, 32) + "…" : a.name, lx, ly + 4, (a.kind === "com" ? 600 : 500) + " " + ((a.kind === "com" ? 11 : 10) / E.zt.k) + "px Public Sans", PAL.ink, al);
     }
-    if (fx && fx.x != null && fx.kind !== "com") { const base = (fx.kind === "leg" ? 6 : 14) / sk; cx2.globalAlpha = 1; E_circle(fx.x, fx.y, base, "none", "#efe6d2"); }
+    if (fx && fx.x != null && fx.kind !== "com") { const base = (fx.kind === "leg" ? 6 : 14) / sk; cx2.globalAlpha = 1; E_circle(fx.x, fx.y, base, "none", PAL.ink); }
     cx2.restore();
     E_drawMM(focusT, focusL);
     const drawn = focusT ? E.agg.filter(a => a.t === focusT).length : focusL ? E.agg.filter(a => a.p === focusL).length : null;
@@ -1557,20 +1576,20 @@
     const sc = focusT ? new Map(PEOPLE.map(p => [p.id, E_aggScore(p.id, focusT)])) : null;
     for (const s0 of states) {
       c.globalAlpha = E.stateF && E.stateF !== s0.st ? .25 : 1;
-      c.fillStyle = E.stateF === s0.st ? "#f0b429" : "#9aa3b2";
+      c.fillStyle = E.stateF === s0.st ? PAL.accent : PAL.neutral;
       c.font = "600 7px JetBrains Mono"; c.textAlign = "left";
       c.fillText(s0.st, s0.x + 1, s0.y + 6);
     }
     for (const cl of cells) {
       const dim = E.stateF && cl.st !== E.stateF;
-      let col = partyColor(cl.l.party);
-      if (sc) { const v = sc.get(cl.l.id); col = v === undefined ? "#2a3148" : color(dirOf(v)); }
+      let col = eParty(cl.l.party);
+      if (sc) { const v = sc.get(cl.l.id); col = v === undefined ? "#2a3148" : eColor(dirOf(v)); }
       c.globalAlpha = dim ? .15 : 1; c.fillStyle = col;
       c.fillRect(cl.x, cl.y, cl.w, cl.h);
     }
     c.globalAlpha = 1;
     const ring = focusL || (E.mmHover && E.mmHover.l.id);
-    if (ring) { const found = cells.find(cc => cc.l.id === ring); if (found) { c.strokeStyle = "#efe6d2"; c.lineWidth = 1.5; c.strokeRect(found.x - 1.5, found.y - 1.5, found.w + 3, found.h + 3); } }
+    if (ring) { const found = cells.find(cc => cc.l.id === ring); if (found) { c.strokeStyle = PAL.ink; c.lineWidth = 1.5; c.strokeRect(found.x - 1.5, found.y - 1.5, found.w + 3, found.h + 3); } }
     const modeEl = $("mmmode"), legEl = $("mmleg");
     if (modeEl) modeEl.textContent = mode ? "colour = stance on " + mode : "colour = party";
     if (legEl) legEl.innerHTML = (mode
@@ -1613,8 +1632,9 @@
   }
   function E_show() {
     cv.classList.add("on"); ectl.classList.add("on"); ehud.classList.add("on");
+    $hint.style.display = "none";
     if (!E || E.edges !== EDGES) E_init();
-    else E_size();
+    else { const _r = cv.getBoundingClientRect(); if (E.lastW && (Math.abs(_r.width - E.lastW) > 2 || Math.abs(_r.height - E.lastH) > 2)) E_build(false); else E_size(); }
     E.query = gs.value.trim().toLowerCase();
     E.query = E.query.length >= 2 && !/^\d{5}$/.test(E.query) ? E.query : "";
     E_draw();
@@ -1653,11 +1673,11 @@
     const list = state.mode === "list", prof = state.mode === "profile", bill = state.mode === "bill";
     $("table-wrap").style.display = list ? "block" : "none"; $("profile").style.display = prof ? "block" : "none"; $("bill").style.display = bill ? "block" : "none";
     svg.style("display", (list || prof || bill || state.mode === "explore") ? "none" : "block"); $("legend").style.display = list || prof || bill ? "none" : "flex";
-    if (list) { sim && sim.stop(); cv.classList.remove("on"); ectl.classList.remove("on"); ehud.classList.remove("on"); return renderTable(); }
-    if (prof) { sim && sim.stop(); cv.classList.remove("on"); ectl.classList.remove("on"); ehud.classList.remove("on"); return renderProfile(); }
-    if (bill) { sim && sim.stop(); cv.classList.remove("on"); ectl.classList.remove("on"); ehud.classList.remove("on"); return renderBill(); }
+    if (list) { sim && sim.stop(); cv.classList.remove("on"); ectl.classList.remove("on"); ehud.classList.remove("on");  $hint.style.display = ""; return renderTable(); }
+    if (prof) { sim && sim.stop(); cv.classList.remove("on"); ectl.classList.remove("on"); ehud.classList.remove("on");  $hint.style.display = ""; return renderProfile(); }
+    if (bill) { sim && sim.stop(); cv.classList.remove("on"); ectl.classList.remove("on"); ehud.classList.remove("on");  $hint.style.display = ""; return renderBill(); }
     g.selectAll("*").remove();
-    cv.classList.remove("on"); ectl.classList.remove("on"); ehud.classList.remove("on");
+        cv.classList.remove("on"); ectl.classList.remove("on"); ehud.classList.remove("on"); $hint.style.display = "";
     if (state.mode === "explore") { sim && sim.stop(); graphLinkSel = null; E_show(); return; }
     const { nodes, links } = buildGraphData(), { width, height } = svg.node().getBoundingClientRect();
     // (no per-node degree sizing in the focus view)
