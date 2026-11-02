@@ -262,6 +262,34 @@
   .bill-card .c .cdot { width: 9px; height: 9px; border-radius: 50%; margin-top: 6px; }
   .bill-card .c .q { font-family: var(--display); font-style: italic; color: var(--muted); }
   #bill .dim { opacity: .18 !important; }
+  /* global search (2.1) + Explore canvas (2.2) + minimap (2.4) */
+  .gsrch { position: relative; flex: 1; min-width: 220px; max-width: 480px; margin-left: auto; }
+  .gsrch input { width: 100%; background: var(--panel-2); border: 1px solid var(--border); color: var(--text); border-radius: 3px; padding: 7px 36px 7px 10px; font: inherit; font-size: 13px; outline: none; }
+  .gsrch input:focus { border-color: var(--accent); }
+  .gsrch kbd { position: absolute; right: 9px; top: 7px; font: 500 11px var(--mono); color: var(--muted); border: 1px solid var(--border); padding: 1px 6px; border-radius: 3px; }
+  .gsrch .dd { position: absolute; left: 0; right: 0; top: 100%; background: var(--panel); border: 1px solid var(--border); border-top: 0; z-index: 30; display: none; max-height: 420px; overflow: auto; }
+  .gsrch .it { display: grid; grid-template-columns: 14px 1fr auto; gap: 10px; padding: 8px 12px; cursor: pointer; border-top: 1px solid var(--border); align-items: center; }
+  .gsrch .it.on, .gsrch .it:hover { background: var(--panel-2); }
+  .gsrch .nm { font-weight: 600; } .gsrch .mt { font-size: 12px; color: var(--muted); } .gsrch .rt { font: 500 11px var(--mono); color: var(--muted); text-align: right; }
+  .gsrch .hd { padding: 6px 12px; font: 500 10px var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--accent); border-top: 1px solid var(--border); }
+  .gsrch mark { background: none; color: var(--accent); }
+  #cv { position: absolute; inset: 0 0 76px 0; width: 100%; height: auto; display: none; }
+  #cv.on { display: block; }
+  .ehud { position: absolute; top: 34px; right: 14px; font: 500 11px var(--mono); color: var(--muted); pointer-events: none; display: none; text-align: right; }
+  .ehud.on { display: block; }
+  .ehud b { color: var(--text); }
+  .ectl { position: absolute; left: 14px; right: 14px; bottom: 44px; display: none; gap: 10px; align-items: center; font-size: 13px; color: var(--muted); flex-wrap: wrap; }
+  .ectl.on { display: flex; }
+  .ectl input[type=range] { accent-color: var(--accent); }
+  .ectl label.ck { display: flex; gap: 4px; align-items: center; cursor: pointer; }
+  .ectl label.ck input { accent-color: var(--accent); }
+  .mmwrap { display: none; margin-bottom: 14px; }
+  #mm { width: 100%; height: 210px; display: block; background: var(--bg); border: 1px solid var(--border); cursor: pointer; }
+  .mmleg { font-size: 11.5px; color: var(--muted); margin-top: 4px; display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+  .mmleg .sq { display: inline-block; width: 9px; height: 9px; margin-right: 5px; vertical-align: baseline; }
+  .mmleg .chip { cursor: pointer; }
+  .splitbar { display: flex; height: 8px; margin: 3px 0 4px; border-radius: 3px; overflow: hidden; }
+  .splitbar i { display: block; height: 8px; }
   /* conditions markers (2.2): fixed-position what-if tooltip in existing tokens */
   .cond-tip { background: var(--panel-2); border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; font-size: 12px; }
   .cond-tip .cond-q { font-family: var(--display); font-style: italic; color: var(--muted); margin-top: 4px; font-size: 14px; line-height: 22px; }
@@ -273,6 +301,7 @@
   <header class="masthead">
     <a class="brand" href="#" id="brand"><img class="logo" src="assets/logo/owl-mark-64.png" alt=""><span class="wordmark">OWL</span><span class="tagline">Open Watch on Legislators</span></a>
     <nav class="modes" aria-label="Sections"><button id="m-explore">Explore</button><button id="m-focus">Issues</button><button id="m-list">Find</button><button id="m-profile">Legislators</button></nav>
+    <div class="gsrch"><input id="gs" type="text" autocomplete="off" placeholder="Find a legislator: name, state, district (CA-12) or ZIP" aria-label="Find a legislator"><kbd>/</kbd><div class="dd" id="dd"></div></div>
     <span class="crumb" id="crumb"></span>
     <span class="mock" id="mock" hidden>Mock data · fictional legislators</span>
     <span class="drop" id="drop" hidden></span>
@@ -280,6 +309,9 @@
   <aside id="aside"></aside>
   <section>
     <div class="hint" id="hint"></div>
+    <canvas id="cv"></canvas>
+    <div class="ehud" id="ehud"></div>
+    <div class="ectl" id="ectl"></div>
     <svg id="graph"></svg>
     <div id="table-wrap"></div>
     <div id="profile"></div>
@@ -308,7 +340,7 @@
   // paints from it immediately and fetches stances.json lazily in the
   // background; when absent (local dev) stances.json loads first as before.
   let stancesRaw = null, graphRaw = null;
-  try { graphRaw = await load("graph.json"); } catch { /* optional cache */ }
+  for (const base of ["./data/", DATA_BASE]) { try { const r = await fetch(`${base}graph.json`); if (r.ok) { graphRaw = await r.json(); break; } } catch { /* try next base */ } }
   // Resolved once per-edge statements (quotes, bills, sources) are attached.
   // Views that read them show a "loading statements…" line meanwhile.
   let STATEMENTS_READY, _stmtsResolve, statementsReady = false, stmtsFailed = false;
@@ -523,21 +555,29 @@
     const q = $("q"); q.oninput = () => { f.q = q.value; renderGraph(); renderSide(); const fe2 = filteredEdges(); $aside.querySelector(".stat").textContent = `${fe2.length} stances · ${new Set(fe2.map(e => e.from)).size} legislators · ${new Set(fe2.map(e => e.to)).size} issues`; };
   }
   function renderExploreSide() {
+    const mmHtml = `<div class="mmwrap" id="mmwrap" style="display:block"><div class="h" style="display:flex;justify-content:space-between;margin-top:0"><span>Map</span><span id="mmmode" style="color:var(--muted);letter-spacing:.06em"></span></div><canvas id="mm"></canvas><div class="mmleg" id="mmleg"></div></div>`;
+    if (E && E.pinned) {
+      $side.innerHTML = mmHtml + E_pinHtml(E.pinned);
+      const ob = $("open-issue");
+      if (ob) ob.onclick = () => { location.hash = "#/issue/" + ob.dataset.i; const i = issueById[ob.dataset.i]; if (i) { state.mode = "focus"; state.cat = i.cat; state.sub = i.sub; state.issue = i.id; state.person = null; render(); } };
+      E_mmBind();
+      return;
+    }
     const fe = filteredEdges();
     if (state.person && byId[state.person]) {
       const p = byId[state.person], mine = fe.filter(e => e.from === p.id).sort((a, b) => b.score - a.score);
       const sel = state.edge && mine.find(e => e.to === state.edge) || mine[0];
-      $side.innerHTML = `<div class="person-card"><div class="name">${title(p)}</div><div class="meta">${seat(p)} · ${p.party} · ${mine.length} stances in view</div>
+      $side.innerHTML = mmHtml + `<div class="person-card"><div class="name">${title(p)}</div><div class="meta">${seat(p)} · ${p.party} · ${mine.length} stances in view</div>
         ${mine.map(e => `<div class="stance-line ${sel === e ? "active" : ""}" data-issue="${e.to}"><div><div class="t">${issueById[e.to].name}</div><div class="c">${issueById[e.to].catName} › ${issueById[e.to].subName}</div></div><div class="score" style="color:${color(e.direction)}">${fmt(e.score)}</div></div>`).join("")}
         ${sel ? evidenceHtml(sel) : ""}<div style="margin-top:12px;display:flex;gap:8px"><button class="btn" id="back">← all legislators</button><button class="btn" data-open="${p.id}">Open profile →</button></div></div>`;
       $side.querySelectorAll(".stance-line").forEach(el => el.onclick = () => { state.edge = el.dataset.issue; renderSide(); });
-      $("back").onclick = () => { state.person = null; state.edge = null; render(); };
+      $("back").onclick = () => { state.person = null; state.edge = null; render(); }; E_mmBind();
       return;
     }
     const byP = {}; fe.forEach(e => (byP[e.from] ??= []).push(e));
     const rows = Object.entries(byP).sort((a, b) => b[1].length - a[1].length).map(([pid, es]) => { const p = byId[pid];
       return `<div class="row" data-id="${pid}"><div><div class="name">${title(p)}</div><div class="meta">${seat(p)} · ${p.party} · <span style="color:var(--support)">${es.filter(e => e.direction === "support").length} for</span> · <span style="color:var(--oppose)">${es.filter(e => e.direction === "oppose").length} against</span></div></div><div class="score">${es.length}</div></div>`; }).join("");
-    $side.innerHTML = `<div class="topic-sub">${fe.length} stances across ${Object.keys(byP).length} legislators. Click one to see their positions.</div>${rows || `<div class="empty-state">Nothing matches the filters.</div>`} ${conditionsPanel(state.issue)}`;
+    $side.innerHTML = mmHtml + `<div class="topic-sub">${fe.length} stances across ${Object.keys(byP).length} legislators. Click one to see their positions.</div>${rows || `<div class="empty-state">Nothing matches the filters.</div>`} ${conditionsPanel(state.issue)}`; E_mmBind();
     $side.querySelectorAll(".row").forEach(el => el.onclick = () => { state.person = el.dataset.id; state.edge = null; render(); });
   }
   const fmt = s => (s > 0 ? "+" : "") + s.toFixed(2);
@@ -589,9 +629,9 @@
   function bindCondChips() {
     $side.querySelectorAll(".cond-chip").forEach(ch => {
       const set = new Set((ch.dataset.people || "").split(" ").filter(Boolean)), issue = ch.dataset.issue;
-      ch.addEventListener("mouseenter", () => { if (!graphLinkSel) return;
+      ch.addEventListener("mouseenter", () => { if (state.mode === "explore" && E) { E.hl = { issue, set }; E_draw(); return; } if (!graphLinkSel) return;
         graphLinkSel.attr("stroke-opacity", l => l.e.to === issue ? (set.has(l.e.from) ? .95 : .08) : ((l.main ? .45 : .15) + Math.abs(l.e.score) * .45)); });
-      ch.addEventListener("mouseleave", () => { if (!graphLinkSel) return;
+      ch.addEventListener("mouseleave", () => { if (state.mode === "explore" && E) { if (E.hl && E.hl.issue === issue) { E.hl = null; E_draw(); } return; } if (!graphLinkSel) return;
         graphLinkSel.attr("stroke-opacity", l => (l.main ? .45 : .15) + Math.abs(l.e.score) * .45); });
     });
   }
@@ -1135,7 +1175,466 @@
     updateBillCard();
   }
 
-  // ---------- GRAPH ----------
+  // ---------- GLOBAL SEARCH (2.1) ----------
+  const STATE_NAMES = { AL: "Alabama", AK: "Alaska", AZ: "Arizona", AR: "Arkansas", CA: "California", CO: "Colorado", CT: "Connecticut", DE: "Delaware", FL: "Florida", GA: "Georgia", HI: "Hawaii", ID: "Idaho", IL: "Illinois", IN: "Indiana", IA: "Iowa", KS: "Kansas", KY: "Kentucky", LA: "Louisiana", ME: "Maine", MD: "Maryland", MA: "Massachusetts", MI: "Michigan", MN: "Minnesota", MS: "Mississippi", MO: "Missouri", MT: "Montana", NE: "Nebraska", NV: "Nevada", NH: "New Hampshire", NJ: "New Jersey", NM: "New Mexico", NY: "New York", NC: "North Carolina", ND: "North Dakota", OH: "Ohio", OK: "Oklahoma", OR: "Oregon", PA: "Pennsylvania", RI: "Rhode Island", SC: "South Carolina", SD: "South Dakota", TN: "Tennessee", TX: "Texas", UT: "Utah", VT: "Vermont", VA: "Virginia", WA: "Washington", WV: "West Virginia", WI: "Wisconsin", WY: "Wyoming" };
+  const TILE = { AK: [0, 0], ME: [11, 0], WI: [6, 1], VT: [10, 1], NH: [11, 1], WA: [1, 2], ID: [2, 2], MT: [3, 2], ND: [4, 2], MN: [5, 2], IL: [6, 2], MI: [7, 2], NY: [9, 2], MA: [10, 2], OR: [1, 3], NV: [2, 3], WY: [3, 3], SD: [4, 3], IA: [5, 3], IN: [6, 3], OH: [7, 3], PA: [8, 3], NJ: [9, 3], CT: [10, 3], RI: [11, 3], CA: [1, 4], UT: [2, 4], CO: [3, 4], NE: [4, 4], MO: [5, 4], KY: [6, 4], WV: [7, 4], VA: [8, 4], MD: [9, 4], DE: [10, 4], AZ: [2, 5], NM: [3, 5], KS: [4, 5], AR: [5, 5], TN: [6, 5], NC: [7, 5], SC: [8, 5], OK: [4, 6], LA: [5, 6], MS: [6, 6], AL: [7, 6], GA: [8, 6], HI: [0, 7], TX: [4, 7], FL: [9, 7] };
+  const seByL = d3.group(EDGES, e => e.from), seByI = d3.group(EDGES, e => e.to);
+  let ZIPS = null, zipsLoading = null;
+  function ensureZips() { if (ZIPS) return Promise.resolve(ZIPS); if (!zipsLoading) zipsLoading = fetch("assets/zip-to-district.json").then(r => { if (!r.ok) throw 0; return r.json(); }).then(j => (ZIPS = j)).catch(() => (ZIPS = {})); return zipsLoading; }
+  function topCommittee(p) { const per = new Map(); (seByL.get(p.id) || []).forEach(e => { const c = issueById[e.to].cat; per.set(c, (per.get(c) || 0) + .3 + e.heat); }); const best = [...per.entries()].sort((a, b) => b[1] - a[1])[0]; return best ? COMMITTEES.find(c => c.id === best[0]).name : "—"; }
+  const gs = $("gs"), dd = $("dd");
+  let gsResults = [], gsSel = 0;
+  function gsHl(t, q) { if (!q) return t; const i = t.toLowerCase().indexOf(q); return i < 0 ? t : t.slice(0, i) + "<mark>" + t.slice(i, i + q.length) + "</mark>" + t.slice(i + q.length); }
+  function gsSearch(raw) {
+    const q = raw.trim().toLowerCase();
+    if (!q) return { groups: [] };
+    const groups = [];
+    if (/^\d{5}$/.test(q)) {
+      const ds = (ZIPS || {})[q];
+      if (!ZIPS) groups.push({ h: `ZIP ${q}`, msg: "Loading ZIP table…" });
+      else if (ds === undefined) groups.push({ h: `ZIP ${q}`, msg: "Not in the ZIP table. Try a surname, a state, or a district (CA-12)." });
+      else if (!ds.length) groups.push({ h: `ZIP ${q}`, msg: "No voting House member (e.g. DC has a non-voting delegate)." });
+      else groups.push({ h: `ZIP ${q}` + (ds.length > 1 ? ` · spans ${ds.length} districts` : ""), items: PEOPLE.filter(p => ds.includes(p.district)) });
+      return { groups };
+    }
+    const dm = q.toUpperCase().match(/^([A-Z]{2})[- ]?(\d{1,2}|AL)$/);
+    if (dm) { const hit = PEOPLE.filter(p => p.district === `${dm[1]}-${dm[2]}`); if (hit.length) groups.push({ h: "District", items: hit }); }
+    const stHit = Object.entries(STATE_NAMES).find(([k, v]) => k.toLowerCase() === q || (v.toLowerCase().startsWith(q) && q.length >= 3));
+    if (stHit) { const members = PEOPLE.filter(p => p.state === stHit[0]); if (members.length) groups.push({ h: `${stHit[1]} · ${members.length} seat${members.length > 1 ? "s" : ""}`, items: members }); }
+    if (q.length >= 2) { const nm = PEOPLE.filter(p => p.name.toLowerCase().includes(q)); if (nm.length) groups.push({ h: "Name", items: nm }); }
+    return { groups };
+  }
+  function gsRender() {
+    const { groups } = gsSearch(gs.value);
+    gsResults = [];
+    const q = gs.value.trim().toLowerCase();
+    let h = "";
+    groups.forEach(g => {
+      h += `<div class="hd">${g.h}</div>`;
+      if (g.msg) { h += `<div class="it" style="cursor:default"><span></span><span class="mt">${g.msg}</span><span></span></div>`; return; }
+      g.items.slice(0, g.h === "Name" ? 8 : 12).forEach(p => {
+        const i = gsResults.length;
+        gsResults.push(p);
+        h += `<div class="it ${i === gsSel ? "on" : ""}" data-i="${i}"><span style="color:${partyColor(p.party)}">●</span><span><div class="nm">${gsHl(p.name, q.length >= 2 && !/^\d/.test(q) ? q : "")}</div><div class="mt">${p.party} · ${STATE_NAMES[p.state] || p.state} · talks most about ${topCommittee(p)}</div></span><span class="rt">${p.district || ""}</span></div>`;
+      });
+      if (g.items.length > (g.h === "Name" ? 8 : 12)) h += `<div class="it" style="cursor:default"><span></span><span class="mt">+ ${g.items.length - (g.h === "Name" ? 8 : 12)} more · keep typing to narrow</span><span></span></div>`;
+    });
+    if (q && !groups.length) h = `<div class="it" style="cursor:default"><span></span><span class="mt">No match. Try a surname, a state (texas), a district (CA-12) or a ZIP.</span><span></span></div>`;
+    dd.innerHTML = h;
+    dd.style.display = q ? "block" : "none";
+    dd.querySelectorAll(".it[data-i]").forEach(el => {
+      el.onmouseenter = () => { gsSel = +el.dataset.i; dd.querySelectorAll(".it").forEach(x => x.classList.toggle("on", x === el)); };
+      el.onclick = () => gsPick(gsResults[+el.dataset.i], false);
+    });
+    if (E) { E.query = q.length >= 2 && !/^\d{5}$/.test(q) ? q : ""; if (state.mode === "explore") E_draw(); }
+  }
+  function gsPick(p, toProfile) {
+    if (!p) return;
+    dd.style.display = "none";
+    gs.blur();
+    if (state.mode === "explore" && !toProfile && typeof window.E_fly === "function") window.E_fly(p.id);
+    else openProfile(p.id);
+    gs.value = p.name;
+  }
+  gs.addEventListener("input", () => { gsSel = 0; ensureZips().then(() => { if (document.activeElement === gs) gsRender(); }); gsRender(); });
+  gs.addEventListener("focus", () => { ensureZips().then(() => { if (document.activeElement === gs && gs.value) gsRender(); }); if (gs.value) gsRender(); });
+  gs.addEventListener("keydown", e => {
+    if (e.key === "ArrowDown") { gsSel = Math.min(gsResults.length - 1, gsSel + 1); gsRender(); e.preventDefault(); }
+    else if (e.key === "ArrowUp") { gsSel = Math.max(0, gsSel - 1); gsRender(); e.preventDefault(); }
+    else if (e.key === "Enter" && gsResults[gsSel]) { gsPick(gsResults[gsSel], e.shiftKey ? true : state.mode !== "explore"); }
+    else if (e.key === "Escape") { dd.style.display = "none"; gs.blur(); }
+  });
+  document.addEventListener("keydown", e => {
+    if (e.key === "/" && !/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement && document.activeElement.tagName || "") && document.activeElement !== gs) { e.preventDefault(); gs.focus(); gs.select(); }
+  });
+  document.addEventListener("click", e => { if (!e.target.closest(".gsrch")) dd.style.display = "none"; });
+
+// ---------- EXPLORE ON CANVAS (2.2) ----------
+  const cv = $("cv"), cx2 = cv.getContext("2d"), ehud = $("ehud"), ectl = $("ectl");
+  let E = null, E_sim = null, E_zoom = null;
+  function E_finAngle(sid, fin, mid) { if (!sid || !fin.has(sid)) return 0; return Math.atan2(Math.sin(fin.get(sid) - mid), Math.cos(fin.get(sid) - mid)); }
+  function E_legTip(p) {
+    const es = (seByL.get(p.id) || []).slice().sort((a, b) => b.heat - a.heat).slice(0, 4);
+    return `<b>${p.name}</b> · ${p.district || p.state} · ${p.party}<br>` + es.map(e => `<span style="color:${color(dirOf(e.score))}">${e.score > 0 ? "+" : ""}${e.score.toFixed(2)}</span> ${issueById[e.to].name}`).join("<br>") + `<div style="color:var(--muted);margin-top:3px">${(seByL.get(p.id) || []).length} issues on record</div>`;
+  }
+  function E_tip(ev, html) { condTip.style.display = "block"; condTip.style.left = (ev.clientX + 14) + "px"; condTip.style.top = (ev.clientY + 10) + "px"; condTip.innerHTML = html; }
+  function E_hideTip() { condTip.style.display = "none"; }
+  function E_legCard(p) {
+    const es = (seByL.get(p.id) || []).slice().sort((a, b) => b.heat - a.heat);
+    const partyName = p.party === "D" ? "Democrat" : p.party === "R" ? "Republican" : "Independent";
+    return `<div class="person-card"><div class="name">${title(p)}</div><div class="meta">${partyName} · ${seat(p)} · talks most about ${topCommittee(p)}</div>`
+      + es.slice(0, 6).map(e => `<div class="stance-line"><div><div class="t">${issueById[e.to].name}</div></div><div class="score" style="color:${color(e.direction)}">${fmt(e.score)}</div></div>`).join("")
+      + `<div class="meta" style="margin-top:6px">${es.length} issues on record</div><div style="margin-top:10px"><button class="btn" data-open="${p.id}">Open profile →</button></div></div>`;
+  }
+  function E_splitbar(rows) {
+    const s = rows.filter(r => r > .15).length, o = rows.filter(r => r < -.15).length, n = rows.length - s - o, t = rows.length || 1;
+    return `<div class="splitbar"><i style="width:${s / t * 100}%;background:var(--support)"></i><i style="width:${n / t * 100}%;background:var(--neutral)"></i><i style="width:${o / t * 100}%;background:var(--oppose)"></i></div><div class="row" style="cursor:default"><span><span style="color:var(--support)">${s} support</span> · <span style="color:var(--oppose)">${o} oppose</span> · ${n} neutral</span><span></span></div>`;
+  }
+  function E_issueHtml(id) {
+    const i = issueById[id];
+    if (!i) return "";
+    const es = seByI.get(id) || [];
+    const D = es.filter(e => byId[e.from].party === "D").map(e => e.score), R = es.filter(e => byId[e.from].party === "R").map(e => e.score);
+    return `<div class="h">Issue · ${i.catName}</div><h2 class="topic-title">${i.name}</h2><div class="topic-sub">${es.length} legislators on record. Click the issue again or empty space to unpin.</div>`
+      + `<div style="font-weight:600">All</div>` + E_splitbar(es.map(e => e.score))
+      + `<div style="font-weight:600;color:var(--party-d)">Democrats</div>` + E_splitbar(D)
+      + `<div style="font-weight:600;color:var(--party-r)">Republicans</div>` + E_splitbar(R)
+      + `<div style="margin-top:10px"><button class="btn" id="open-issue" data-i="${id}">Open issue page →</button></div><div class="topic-sub" style="margin-top:10px">Party splits live here; the graph never colours nodes by stance.</div>`
+      + conditionsPanel(id);
+  }
+  function E_pinHtml(n) {
+    if (n.kind === "leg") { const p = byId[n.id]; return p ? E_legCard(p) : ""; }
+    return E_issueHtml(n.id);
+  }
+  function E_size() {
+    const r = cv.getBoundingClientRect(), dpr = devicePixelRatio || 1;
+    const W = Math.max(300, r.width), H = Math.max(300, r.height);
+    cv.width = W * dpr; cv.height = H * dpr;
+    cx2.setTransform(dpr, 0, 0, dpr, 0, 0);
+    return { W, H };
+  }
+  function E_init() {
+    const comById = new Map(COMMITTEES.map(c => [c.id, c]));
+    const iCat = new Map(ISSUES.map(i => [i.id, i.cat]));
+    const spec = PEOPLE.map(p => {
+      const es = seByL.get(p.id) || [];
+      const hc = d3.rollup(es, v => d3.sum(v, e => .3 + e.heat), e => iCat.get(e.i !== undefined ? e.i : e.to));
+      const tot = d3.sum([...hc.values()]) || 1;
+      return (d3.max([...hc.values()]) || 0) / tot;
+    });
+    const sorted = spec.slice().sort((a, b) => a - b);
+    const rank = v => { let lo = 0, hi = sorted.length; while (lo < hi) { const m = (lo + hi) >> 1; if (sorted[m] < v) lo = m + 1; else hi = m; } return lo / sorted.length; };
+    const legSpec = new Map(PEOPLE.map((p, k) => [p.id, rank(spec[k])]));
+    const topCom = new Map(), secondCom = new Map();
+    PEOPLE.forEach(p => {
+      const per = new Map();
+      (seByL.get(p.id) || []).forEach(e => { const c = iCat.get(e.to); per.set(c, (per.get(c) || 0) + .3 + e.heat); });
+      const t = [...per.entries()].sort((x, y) => y[1] - x[1]);
+      topCom.set(p.id, t[0] ? t[0][0] : COMMITTEES[0].id);
+      secondCom.set(p.id, t[1] ? t[1][0] : null);
+    });
+    const comCount = new Map(COMMITTEES.map(c => [c.id, 0]));
+    topCom.forEach(c => comCount.set(c, (comCount.get(c) || 0) + 1));
+    const avgCount = PEOPLE.length / COMMITTEES.length;
+    const ang = new Map(COMMITTEES.map((c, ci) => { const span = 2 * Math.PI / COMMITTEES.length, a0 = -Math.PI / 2 + ci * span + .012, a1 = -Math.PI / 2 + (ci + 1) * span - .012; return [c.id, { a0, a1, t0: a0, t1: a1 }]; }));
+    E = { edges: EDGES, comById, iCat, legSpec, topCom, secondCom, comCount, avgCount, ang, open: null, K: 2, showD: true, showR: true, query: "", zt: d3.zoomIdentity, pinned: null, hover: null, stateF: null, mmHover: null, hl: null, legs: [], anchors: new Map(), agg: [], tweenStart: 0, markers: [], TW: 650 };
+    E_targets();
+    E_build(true);
+    ectl.innerHTML = `<label class="ck"><input type="checkbox" id="fD" checked> D</label><label class="ck"><input type="checkbox" id="fR" checked> R</label><span>edges per legislator</span><input type="range" id="eK" min="1" max="5" value="2"><b id="eKv">2</b><button class="btn" id="eRz">reset view</button>`;
+    $("fD").onchange = e => { E.showD = e.target.checked; E_draw(); };
+    $("fR").onchange = e => { E.showR = e.target.checked; E_draw(); };
+    $("eK").oninput = e => { E.K = +e.target.value; $("eKv").textContent = E.K; E_draw(); };
+    $("eRz").onclick = () => { E.pinned = null; E.hl = null; renderSide(); d3.select(cv).transition().duration(400).call(E_zoom.transform, d3.zoomIdentity); };
+    E_zoom = d3.zoom().scaleExtent([1, 8]).on("zoom", ev => { E.zt = ev.transform; E_draw(); });
+    d3.select(cv).call(E_zoom).on("dblclick.zoom", null);
+    cv.onmousemove = E_move;
+    cv.onclick = E_click;
+    cv.onmouseleave = () => { E.hover = null; E_hideTip(); E_draw(); };
+    E_size();
+  }
+  function E_targets() {
+    const w = COMMITTEES.map(c => {
+      const base = .55 + .9 * (E.comCount.get(c.id) || 0) / E.avgCount;
+      return c.id === E.open ? Math.max(base * 2.2, ISSUES.filter(i => i.cat === c.id).length * .5) : base;
+    });
+    const tw = d3.sum(w), gap = .012;
+    let a = -Math.PI / 2;
+    COMMITTEES.forEach((c, ci) => {
+      const span = w[ci] / tw * 2 * Math.PI, g = E.ang.get(c.id);
+      g.f0 = g.a0; g.f1 = g.a1; g.t0 = a + gap; g.t1 = a + span - gap; a += span;
+    });
+    E.tweenStart = performance.now();
+  }
+  function E_stepAngles(now) {
+    const p = Math.min(1, (now - E.tweenStart) / E.TW), e = d3.easeCubicInOut(p);
+    for (const g of E.ang.values()) { if (g.f0 === undefined) { g.a0 = g.t0; g.a1 = g.t1; continue; } g.a0 = g.f0 + (g.t0 - g.f0) * e; g.a1 = g.f1 + (g.t1 - g.f1) * e; }
+    return p < 1;
+  }
+  function E_placeAnchors(W, H) {
+    const R0 = Math.min(W, H) * .40, cx = W / 2, cy = H / 2;
+    E.anchors = new Map();
+    COMMITTEES.forEach(c => {
+      const g = E.ang.get(c.id), am = (g.a0 + g.a1) / 2;
+      E.anchors.set(c.id, { id: c.id, kind: "com", name: c.name, col: CAT_HUE[c.id], a0: g.a0, a1: g.a1, am, x: cx + R0 * Math.cos(am), y: cy + R0 * Math.sin(am) });
+      if (c.id === E.open) {
+        const ii = ISSUES.filter(i => i.cat === c.id);
+        ii.forEach((is, k) => {
+          const ak = g.a0 + (k + .5) / ii.length * (g.a1 - g.a0);
+          E.anchors.set(is.id, { ...is, kind: "issue", col: CAT_HUE[c.id], am: ak, x: cx + R0 * Math.cos(ak), y: cy + R0 * Math.sin(ak) });
+        });
+      }
+    });
+    E.R0 = R0;
+  }
+  function E_tgtOf(issueId) { const c = E.iCat.get(issueId); return c === E.open ? issueId : c; }
+  function E_build(first) {
+    E_targets();
+    const { W, H } = E_size();
+    const R0 = Math.min(W, H) * .40, cx = W / 2, cy = H / 2;
+    const fin = new Map();
+    COMMITTEES.forEach(c => { const g = E.ang.get(c.id); fin.set(c.id, (g.t0 + g.t1) / 2); if (c.id === E.open) { const ii = ISSUES.filter(i => i.cat === c.id); ii.forEach((is, k) => fin.set(is.id, g.t0 + (k + .5) / ii.length * (g.t1 - g.t0))); } });
+    const prev = new Map(E.legs.map(l => [l.id, l]));
+    const m = new Map();
+    EDGES.forEach(e => {
+      const t = E_tgtOf(e.to), k = e.from + "|" + t, a = m.get(k) || { p: e.from, t, sw: 0, ss: 0, heat: 0, flip: false, off: Math.random() };
+      a.sw += .3 + e.heat; a.ss += e.score * (.3 + e.heat); a.heat += e.heat; a.flip = a.flip || e.flip; m.set(k, a);
+    });
+    E.agg = [...m.values()].map(a => ({ ...a, score: a.ss / a.sw }));
+    const bySec = d3.group(PEOPLE, p => E.topCom.get(p.id)), slot = new Map();
+    bySec.forEach((members, cid) => {
+      const g = E.ang.get(cid), t0 = g ? g.t0 : 0, t1 = g ? g.t1 : 0, span = t1 - t0;
+      members.sort((x, y) => {
+        const ax = E_finAngle(E.secondCom.get(x.id), fin, (t0 + t1) / 2), ay = E_finAngle(E.secondCom.get(y.id), fin, (t0 + t1) / 2);
+        return ax - ay || (x.id < y.id ? -1 : 1);
+      });
+      members.forEach((l, i) => slot.set(l.id, t0 + span * .08 + span * .84 * (i + .5) / members.length));
+    });
+    const byP = d3.group(E.agg, a => a.p);
+    E.legs = PEOPLE.map(p => {
+      const an = slot.get(p.id), rad = R0 * (.14 + .74 * Math.sqrt(E.legSpec.get(p.id) || 0));
+      const tx = cx + rad * Math.cos(an), ty = cy + rad * Math.sin(an), pv = prev.get(p.id);
+      return { ...p, kind: "leg", tx, ty, x: pv ? pv.x : cx + (Math.random() - .5) * 6, y: pv ? pv.y : cy + (Math.random() - .5) * 6, rank: (byP.get(p.id) || []).slice().sort((a, b) => b.heat - a.heat).map(a => a.t) };
+    });
+    E_placeAnchors(W, H);
+    if (E_sim) E_sim.stop();
+    E_sim = d3.forceSimulation(E.legs).force("x", d3.forceX(d => d.tx).strength(first ? .06 : .3)).force("y", d3.forceY(d => d.ty).strength(first ? .06 : .3)).force("collide", d3.forceCollide(3.9)).alphaDecay(first ? .025 : .06);
+    if (first) setTimeout(() => { if (E_sim) { E_sim.force("x").strength(.3); E_sim.force("y").strength(.3); } }, 900);
+    E_sim.on("tick", () => { if (state.mode === "explore") E_draw(); });
+    (function tween() { if (!E || state.mode !== "explore") return; const busy = E_stepAngles(performance.now()); const s = E_size(); E_placeAnchors(s.W, s.H); E_draw(); if (busy) requestAnimationFrame(tween); })();
+    E_draw();
+  }
+
+  function E_visible(l) { return (l.party === "D" ? E.showD : l.party === "R" ? E.showR : true) && (!E.query || l.name.toLowerCase().includes(E.query)) && (!E.stateF || l.state === E.stateF); }
+  function E_qpt(x0, y0, qx, qy, x1, y1, t) { const u = 1 - t; return [u * u * x0 + 2 * u * t * qx + t * t * x1, u * u * y0 + 2 * u * t * qy + t * t * y1]; }
+  function E_condRows(p, t) {
+    if (E.comById.has(t)) { const out = []; ISSUES.filter(i => i.cat === t).forEach(i => (condByPI[p + "|" + i.id] || []).forEach(r => out.push(r))); return out; }
+    return condByPI[p + "|" + t] || [];
+  }
+  function E_circle(x, y, r, fill, stroke) { cx2.beginPath(); cx2.arc(x, y, r, 0, 2 * Math.PI); if (fill && fill !== "none") { cx2.fillStyle = fill; cx2.fill(); } if (stroke) { cx2.lineWidth = 1.5; cx2.strokeStyle = stroke; cx2.stroke(); } }
+  function E_label(t, x, y, f, c, al) { cx2.font = f; cx2.fillStyle = c; cx2.textAlign = al || "center"; cx2.fillText(t, x, y); }
+  function E_draw() {
+    if (!E) return;
+    const now = performance.now(), r = cv.getBoundingClientRect();
+    const W = Math.max(300, r.width), H = Math.max(300, r.height);
+    E_stepAngles(now);
+    E_placeAnchors(W, H);
+    cx2.save(); cx2.clearRect(0, 0, W, H); cx2.translate(E.zt.x, E.zt.y); cx2.scale(E.zt.k, E.zt.k);
+    const R0 = E.R0, cx = W / 2, cy = H / 2, sk = Math.sqrt(E.zt.k);
+    const LB = new Map(E.legs.map(l => [l.id, l]));
+    for (const a of E.anchors.values()) {
+      if (a.kind !== "com") continue;
+      cx2.globalAlpha = a.id === E.open ? .12 : .05; cx2.fillStyle = a.col;
+      cx2.beginPath(); cx2.moveTo(cx, cy); cx2.arc(cx, cy, R0 + 22, a.a0, a.a1); cx2.closePath(); cx2.fill();
+      cx2.globalAlpha = .95; cx2.strokeStyle = a.col; cx2.lineWidth = (a.id === E.open ? 5 : 3) / sk;
+      cx2.beginPath(); cx2.arc(cx, cy, R0 + 16, a.a0, a.a1); cx2.stroke();
+    }
+    const fx = E.hl ? null : (E.hover || E.pinned), fId = fx && fx.id;
+    const focusT = fx && (fx.kind === "com" || fx.kind === "issue") ? fId : null, focusL = fx && fx.kind === "leg" ? fId : null;
+    const hl = E.hl;
+    E.markers = [];
+    for (const a of E.agg) {
+      const l = LB.get(a.p), t = E.anchors.get(a.t);
+      if (!l || !t || !E_visible(l)) continue;
+      let on = false, strong = false;
+      if (hl && (hl.issue === a.t || (E.comById.has(a.t) && E.iCat.get(hl.issue) === a.t))) { on = hl.set.has(a.p); strong = on; }
+      else if (focusT) { on = a.t === focusT; strong = true; }
+      else if (focusL) { on = a.p === focusL; strong = true; }
+      else if (E.query) { on = true; strong = true; }
+      else { const rk = l.rank.indexOf(a.t); on = rk > -1 && rk < E.K; if (on && E.open && t.kind === "issue") on = rk < E.K + 2; }
+      if (!on) continue;
+      const mx = (l.x + t.x) / 2, my = (l.y + t.y) / 2, qx = mx + (cx - mx) * .25, qy = my + (cy - my) * .25;
+      cx2.globalAlpha = strong ? .75 : .07 + .2 * Math.abs(a.score);
+      cx2.strokeStyle = color(dirOf(a.score));
+      cx2.lineWidth = (strong ? heatW(Math.min(1, a.heat)) : heatW(Math.min(1, a.heat)) * .35) / sk;
+      cx2.setLineDash(a.flip ? [4 / sk, 3 / sk] : []);
+      cx2.beginPath(); cx2.moveTo(l.x, l.y); cx2.quadraticCurveTo(qx, qy, t.x, t.y); cx2.stroke();
+      const rows = E_condRows(a.p, a.t);
+      if (rows.length && (strong || hl)) {
+        const [px, py] = E_qpt(l.x, l.y, qx, qy, t.x, t.y, .5);
+        E.markers.push({ x: px, y: py, rows, score: a.score });
+        cx2.globalAlpha = .95; cx2.fillStyle = "var(--accent)";
+        cx2.save(); cx2.translate(px, py); cx2.rotate(Math.PI / 4); const s = 4.5 / sk; cx2.fillRect(-s, -s, 2 * s, 2 * s); cx2.restore();
+      }
+    }
+    cx2.setLineDash([]);
+    const near = hl ? hl.set : focusT ? new Set(E.agg.filter(a => a.t === focusT).map(a => a.p)) : focusL ? new Set([focusL]) : null;
+    for (const l of E.legs) { cx2.globalAlpha = !E_visible(l) ? .06 : (!near || near.has(l.id) ? 1 : .13); E_circle(l.x, l.y, 3.6 / sk, partyColor(l.party)); }
+    cx2.globalAlpha = 1;
+    for (const l of E.legs) {
+      if (!E_visible(l)) continue;
+      const show = (E.query && l.name.toLowerCase().includes(E.query)) || (E.zt.k > 2.4 && (!near || near.has(l.id))) || l.id === focusL;
+      if (show) E_label(l.name.replace(/^(Rep|Sen)\. /, ""), l.x + 5 / E.zt.k, l.y + 3 / E.zt.k, "500 " + (11 / E.zt.k) + "px Public Sans", "#efe6d2", "left");
+    }
+    if (E.pinned && E.pinned.kind === "leg") { const pl = LB.get(E.pinned.id); if (pl && E_visible(pl)) { E_circle(pl.x, pl.y, 7 / sk, "none", "#efe6d2"); E_label(pl.name.replace(/^(Rep|Sen)\. /, ""), pl.x + 7 / E.zt.k, pl.y + 4 / E.zt.k, "600 " + (12 / E.zt.k) + "px Public Sans", "#efe6d2", "left"); } }
+    for (const a of E.anchors.values()) {
+      const rr = a.kind === "com" ? (a.id === E.open ? 0 : 11 / sk) : 8 / sk;
+      if (rr) { cx2.globalAlpha = 1; E_circle(a.x, a.y, rr, a.col, "#0f1322"); }
+      const out = a.kind === "com" ? R0 + 36 : R0 + 20, lx = cx + out * Math.cos(a.am), ly = cy + out * Math.sin(a.am), al = Math.cos(a.am) > .2 ? "left" : Math.cos(a.am) < -.2 ? "right" : "center";
+      cx2.globalAlpha = 1;
+      if (a.kind === "com" && a.id === E.open) E_label(a.name + "  ·  click to collapse", cx + (R0 + 46) * Math.cos(a.am), cy + (R0 + 46) * Math.sin(a.am) + 4, "600 " + (12 / E.zt.k) + "px Public Sans", a.col, al);
+      else E_label(a.kind === "issue" && a.name.length > 34 ? a.name.slice(0, 32) + "…" : a.name, lx, ly + 4, (a.kind === "com" ? 600 : 500) + " " + ((a.kind === "com" ? 11 : 10) / E.zt.k) + "px Public Sans", "#efe6d2", al);
+    }
+    if (fx && fx.x != null && fx.kind !== "com") { const base = (fx.kind === "leg" ? 6 : 14) / sk; cx2.globalAlpha = 1; E_circle(fx.x, fx.y, base, "none", "#efe6d2"); }
+    cx2.restore();
+    E_drawMM(focusT, focusL);
+    const drawn = focusT ? E.agg.filter(a => a.t === focusT).length : focusL ? E.agg.filter(a => a.p === focusL).length : null;
+    ehud.innerHTML = `${E.legs.length} legislators · ${E.open ? "1 committee open" : COMMITTEES.length + " committees"} · <b>${drawn != null ? drawn + " edges of focus" : "top " + E.K + " edges/person"}</b> · zoom ×${E.zt.k.toFixed(1)}${E.zt.k > 2.4 ? " · names on" : " · scroll to zoom (names at ×2.4)"}`;
+  }
+  function E_nodeAt(x, y) {
+    let best = null;
+    for (const mk of E.markers) { const d = (mk.x - x) ** 2 + (mk.y - y) ** 2, rr = 9 / E.zt.k; if (d < rr * rr) return { kind: "cond", ...mk }; }
+    for (const n of [...E.legs, ...E.anchors.values()]) {
+      if (n.kind === "leg" && !E_visible(n)) continue;
+      if (n.kind === "com" && n.id === E.open) continue;
+      const d = (n.x - x) ** 2 + (n.y - y) ** 2, rr = (n.kind === "leg" ? 9 : 18) / E.zt.k;
+      if (d < rr * rr && (!best || d < best.d)) best = { n, d };
+    }
+    return best && best.n;
+  }
+  function E_move(ev) {
+    const r = cv.getBoundingClientRect();
+    const x = (ev.clientX - r.left - E.zt.x) / E.zt.k, y = (ev.clientY - r.top - E.zt.y) / E.zt.k;
+    const n = E_nodeAt(x, y);
+    if (n !== E.hover) { E.hover = n; E_draw(); }
+    if (!n) E_hideTip();
+    else if (n.kind === "cond") E_tip(ev, n.rows.map(row => `<div><b>${byId[row.person].name}</b> ${phrase(n.score, row)}<div class="cond-q">“${row.quote}”</div></div>`).join(`<hr style="border:0;border-top:1px solid var(--border);margin:6px 0">`));
+    else if (n.kind === "leg") E_tip(ev, E_legTip(n) + `<div style="color:var(--accent);margin-top:3px">click → profile</div>`);
+    else if (n.kind === "com") E_tip(ev, `<b>${n.name}</b><br>click to open its issues`);
+    else E_tip(ev, `<b>${n.name}</b><br>${(seByI.get(n.id) || []).length} legislators · click to pin`);
+  }
+  function E_click() {
+    const hov = E.hover;
+    if (!hov || hov.kind === "cond") { if (!hov) { E.pinned = null; E.hl = null; renderSide(); E_draw(); } return; }
+    if (hov.kind === "leg") { openProfile(hov.id); return; }
+    if (hov.kind === "com") { E.open = E.open === hov.id ? null : hov.id; E.hover = null; E.pinned = null; E_build(false); renderSide(); return; }
+    E.pinned = E.pinned && E.pinned.id === hov.id ? null : hov;
+    renderSide(); E_draw();
+  }
+  window.E_fly = function (id) {
+    if (!E) return;
+    const l = E.legs.find(x => x.id === id);
+    if (!l) return;
+    E.pinned = l; E.hover = null; E.hl = null;
+    renderSide();
+    d3.select(cv).transition().duration(850).ease(d3.easeCubicInOut).call(E_zoom.transform, d3.zoomIdentity.translate(cv.getBoundingClientRect().width / 2, cv.getBoundingClientRect().height / 2).scale(3.2).translate(-l.x, -l.y));
+    setTimeout(() => { if (state.mode === "explore") E_draw(); }, 900);
+  };
+  // ---------- LINKED MINIMAP (2.4) ----------
+  const mmEl = () => $("mm");
+  let E_mmRO = null;
+  function E_mmLayout() {
+    const mm = mmEl();
+    if (!mm) return null;
+    const r = mm.getBoundingClientRect(), dpr = devicePixelRatio || 1;
+    const MW = Math.max(200, r.width), MH = Math.max(120, r.height);
+    mm.width = MW * dpr; mm.height = MH * dpr;
+    const c = mm.getContext("2d");
+    c.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const cells = [], states = [], cols = 12, rows = 8, ts = Math.min((MW - 4) / cols, (MH - 4) / rows), ox = (MW - ts * cols) / 2, oy = (MH - ts * rows) / 2;
+    Object.entries(TILE).forEach(([st, [cc, rw]]) => {
+      const x0 = ox + cc * ts + 1, y0 = oy + rw * ts + 1, sz = ts - 2;
+      states.push({ st, x: x0, y: y0, s: sz });
+      const members = PEOPLE.filter(p => p.state === st), g = Math.ceil(Math.sqrt(Math.max(1, members.length))), cs = (sz - 7) / g;
+      members.forEach((l, k) => cells.push({ l, st, x: x0 + (k % g) * cs, y: y0 + 7 + Math.floor(k / g) * cs, w: Math.max(1, cs - .6), h: Math.max(1, cs - .6) }));
+    });
+    return { mm, c, cells, states, MW, MH };
+  }
+  function E_aggScore(lid, t) {
+    if (E.comById.has(t)) {
+      const iss = new Set(ISSUES.filter(i => i.cat === t).map(i => i.id));
+      const es = (seByL.get(lid) || []).filter(e => iss.has(e.to));
+      return es.length ? d3.mean(es, e => e.score) : undefined;
+    }
+    const es = (seByL.get(lid) || []).filter(e => e.to === t);
+    return es.length ? d3.mean(es, e => e.score) : undefined;
+  }
+  function E_drawMM(focusT, focusL) {
+    const mm = mmEl();
+    if (!mm || !E || !E.mm) return;
+    const { c, cells, states, MW, MH } = E.mm;
+    c.clearRect(0, 0, MW, MH);
+    const mode = focusT ? (E.comById.get(focusT) ? E.comById.get(focusT).name : (issueById[focusT] || {}).name) : null;
+    const sc = focusT ? new Map(PEOPLE.map(p => [p.id, E_aggScore(p.id, focusT)])) : null;
+    for (const s0 of states) {
+      c.globalAlpha = E.stateF && E.stateF !== s0.st ? .25 : 1;
+      c.fillStyle = E.stateF === s0.st ? "#f0b429" : "#9aa3b2";
+      c.font = "600 7px JetBrains Mono"; c.textAlign = "left";
+      c.fillText(s0.st, s0.x + 1, s0.y + 6);
+    }
+    for (const cl of cells) {
+      const dim = E.stateF && cl.st !== E.stateF;
+      let col = partyColor(cl.l.party);
+      if (sc) { const v = sc.get(cl.l.id); col = v === undefined ? "#2a3148" : color(dirOf(v)); }
+      c.globalAlpha = dim ? .15 : 1; c.fillStyle = col;
+      c.fillRect(cl.x, cl.y, cl.w, cl.h);
+    }
+    c.globalAlpha = 1;
+    const ring = focusL || (E.mmHover && E.mmHover.l.id);
+    if (ring) { const found = cells.find(cc => cc.l.id === ring); if (found) { c.strokeStyle = "#efe6d2"; c.lineWidth = 1.5; c.strokeRect(found.x - 1.5, found.y - 1.5, found.w + 3, found.h + 3); } }
+    const modeEl = $("mmmode"), legEl = $("mmleg");
+    if (modeEl) modeEl.textContent = mode ? "colour = stance on " + mode : "colour = party";
+    if (legEl) legEl.innerHTML = (mode
+      ? `<span><span class="sq" style="background:var(--support)"></span>supports</span><span><span class="sq" style="background:var(--oppose)"></span>opposes</span><span><span class="sq" style="background:var(--neutral)"></span>neutral</span><span><span class="sq" style="background:#2a3148"></span>no statement</span>`
+      : `<span><span class="sq" style="background:var(--party-d)"></span>D</span><span><span class="sq" style="background:var(--party-r)"></span>R</span><span>hover an issue or committee in the graph to recolour</span>`)
+      + (E.stateF ? ` <span class="chip" id="clrst">${STATE_NAMES[E.stateF]} only ✕</span>` : ` <span>click a state name to filter</span>`);
+    const clr = $("clrst");
+    if (clr) clr.onclick = () => { E.stateF = null; renderSide(); E_draw(); };
+  }
+  function E_mmBind() {
+    const mm = mmEl();
+    if (!mm || !E) return;
+    if (!E_mmRO) E_mmRO = new ResizeObserver(() => { if (!E || !$("mm")) return; E.mm = E_mmLayout(); E_draw(); });
+    E_mmRO.disconnect();
+    E.mm = E_mmLayout();
+    E_drawMM(E.hover && (E.hover.kind === "com" || E.hover.kind === "issue") ? E.hover.id : E.pinned && (E.pinned.kind === "com" || E.pinned.kind === "issue") ? E.pinned.id : null, null);
+    E_mmRO.observe(mm);
+    mm.onmousemove = ev => {
+      const r = mm.getBoundingClientRect(), x = ev.clientX - r.left, y = ev.clientY - r.top;
+      const cl = E.mm.cells.find(cc => x >= cc.x - .5 && x <= cc.x + cc.w + .5 && y >= cc.y - .5 && y <= cc.y + cc.h + .5);
+      const sl = !cl && E.mm.states.find(s0 => x >= s0.x && x <= s0.x + s0.s && y >= s0.y && y <= s0.y + 7);
+      mm.style.cursor = cl || sl ? "pointer" : "default";
+      if ((cl || null) !== E.mmHover) {
+        E.mmHover = cl || null;
+        const l = cl && E.legs.find(z => z.id === cl.l.id);
+        E.hover = l || null;
+        E_draw();
+      }
+      if (cl) E_tip(ev, `<b>${cl.l.name}</b><br>${cl.l.district || cl.l.state} · ${cl.l.party}<div style="color:var(--accent);margin-top:3px">click to fly to</div>`);
+      else if (sl) E_tip(ev, `<b>${STATE_NAMES[sl.st]}</b> · ${PEOPLE.filter(p => p.state === sl.st).length} seat${PEOPLE.filter(p => p.state === sl.st).length > 1 ? "s" : ""}<div style="color:var(--accent);margin-top:3px">click to show only this delegation</div>`);
+      else E_hideTip();
+    };
+    mm.onmouseleave = () => { E.mmHover = null; E.hover = null; E_hideTip(); E_draw(); };
+    mm.onclick = ev => {
+      const r = mm.getBoundingClientRect(), x = ev.clientX - r.left, y = ev.clientY - r.top;
+      if (E.mmHover) { window.E_fly(E.mmHover.l.id); return; }
+      const sl = E.mm.states.find(s0 => x >= s0.x && x <= s0.x + s0.s && y >= s0.y && y <= s0.y + s0.s);
+      if (sl) { E.stateF = E.stateF === sl.st ? null : sl.st; E_hideTip(); renderSide(); E_draw(); }
+    };
+  }
+  function E_show() {
+    cv.classList.add("on"); ectl.classList.add("on"); ehud.classList.add("on");
+    if (!E || E.edges !== EDGES) E_init();
+    else E_size();
+    E.query = gs.value.trim().toLowerCase();
+    E.query = E.query.length >= 2 && !/^\d{5}$/.test(E.query) ? E.query : "";
+    E_draw();
+    E_mmBind();
+  }
+  let E_cvRO = null;
+  function E_watch() {
+    if (!E_cvRO) E_cvRO = new ResizeObserver(() => {
+      if (state.mode !== "explore" || !E) return;
+      const r = cv.getBoundingClientRect();
+      if (Math.abs(r.width - (E.lastW || 0)) < 2 && Math.abs(r.height - (E.lastH || 0)) < 2) { E_draw(); return; }
+      E.lastW = r.width; E.lastH = r.height;
+      clearTimeout(E.rsT);
+      E.rsT = setTimeout(() => { if (state.mode !== "explore" || !E) return; E_build(false); }, 120);
+    });
+    E_cvRO.disconnect();
+    E_cvRO.observe(cv);
+  }
+
+// ---------- GRAPH ----------
   const svg = d3.select("#graph"), g = svg.append("g");
   svg.call(d3.zoom().scaleExtent([.3, 3]).on("zoom", ev => g.attr("transform", ev.transform)));
   let sim;
@@ -1147,34 +1646,36 @@
       return { nodes: [{ id: i.id, kind: "topic", name: i.name, main: true, cat: i.cat }, ...persons.map(id => ({ id, kind: "person", name: byId[id].name.replace(/^(Rep|Sen)\. /, "") })), ...topics.map(id => ({ id, kind: "topic", name: issueById[id].name, main: false, cat: issueById[id].cat }))],
         links: [...edges.map(e => ({ source: e.from, target: e.to, e, main: true })), ...other.map(e => ({ source: e.from, target: e.to, e, main: false }))] };
     }
-    const fe = filteredEdges(), persons = [...new Set(fe.map(e => e.from))], topics = [...new Set(fe.map(e => e.to))];
-    return { nodes: [...topics.map(id => ({ id, kind: "topic", name: issueById[id].name, main: true, cat: issueById[id].cat })), ...persons.map(id => ({ id, kind: "person", name: byId[id].name.replace(/^(Rep|Sen)\. /, "") }))], links: fe.map(e => ({ source: e.from, target: e.to, e, main: true })) };
+    return { nodes: [], links: [] };
+    // Explore renders on Canvas (E_show); this SVG force graph serves the focus view only.
   }
   function renderGraph() {
     const list = state.mode === "list", prof = state.mode === "profile", bill = state.mode === "bill";
     $("table-wrap").style.display = list ? "block" : "none"; $("profile").style.display = prof ? "block" : "none"; $("bill").style.display = bill ? "block" : "none";
-    svg.style("display", list || prof || bill ? "none" : "block"); $("legend").style.display = list || prof || bill ? "none" : "flex";
-    if (list) { sim && sim.stop(); return renderTable(); }
-    if (prof) { sim && sim.stop(); return renderProfile(); }
-    if (bill) { sim && sim.stop(); return renderBill(); }
+    svg.style("display", (list || prof || bill || state.mode === "explore") ? "none" : "block"); $("legend").style.display = list || prof || bill ? "none" : "flex";
+    if (list) { sim && sim.stop(); cv.classList.remove("on"); ectl.classList.remove("on"); ehud.classList.remove("on"); return renderTable(); }
+    if (prof) { sim && sim.stop(); cv.classList.remove("on"); ectl.classList.remove("on"); ehud.classList.remove("on"); return renderProfile(); }
+    if (bill) { sim && sim.stop(); cv.classList.remove("on"); ectl.classList.remove("on"); ehud.classList.remove("on"); return renderBill(); }
     g.selectAll("*").remove();
-    const { nodes, links } = buildGraphData(), { width, height } = svg.node().getBoundingClientRect(), explore = state.mode === "explore";
-    const deg = {}; links.forEach(l => { deg[l.source] = (deg[l.source] || 0) + 1; deg[l.target] = (deg[l.target] || 0) + 1; });
+    cv.classList.remove("on"); ectl.classList.remove("on"); ehud.classList.remove("on");
+    if (state.mode === "explore") { sim && sim.stop(); graphLinkSel = null; E_show(); return; }
+    const { nodes, links } = buildGraphData(), { width, height } = svg.node().getBoundingClientRect();
+    // (no per-node degree sizing in the focus view)
     sim && sim.stop();
     sim = d3.forceSimulation(nodes)
-      .force("link", d3.forceLink(links).id(d => d.id).distance(l => explore ? 90 : (l.main ? 150 : 110)).strength(l => l.main ? .7 : .25))
-      .force("charge", d3.forceManyBody().strength(explore ? -260 : -380)).force("center", d3.forceCenter(width / 2, height / 2)).force("collide", d3.forceCollide(d => d.kind === "topic" ? 40 : 22));
+      .force("link", d3.forceLink(links).id(d => d.id).distance(l => l.main ? 150 : 110).strength(l => l.main ? .7 : .25))
+      .force("charge", d3.forceManyBody().strength(-380)).force("center", d3.forceCenter(width / 2, height / 2)).force("collide", d3.forceCollide(d => d.kind === "topic" ? 40 : 22));
     const link = g.append("g").selectAll("line").data(links).join("line").attr("stroke", d => color(d.e.direction)).attr("stroke-width", d => heatW(d.e.heat)).attr("stroke-opacity", d => (d.main ? .45 : .15) + Math.abs(d.e.score) * .45).attr("stroke-dasharray", d => d.e.flip ? "7 4" : null);
     link.append("title").text(d => `${byId[d.e.from].name} on ${issueById[d.e.to].name}: ${d.e.direction} ${fmt(d.e.score)} · ${d.e.n} statement${d.e.n > 1 ? "s" : ""} · attention ${Math.round(d.e.heat * 100)}th pct${d.e.flip ? " · flipped" : ""}`);
     const node = g.append("g").selectAll("g").data(nodes).join("g").style("cursor", "pointer")
       .call(d3.drag().on("start", (ev, d) => { if (!ev.active) sim.alphaTarget(.3).restart(); d.fx = d.x; d.fy = d.y; }).on("drag", (ev, d) => { d.fx = ev.x; d.fy = ev.y; }).on("end", (ev, d) => { if (!ev.active) sim.alphaTarget(0); d.fx = null; d.fy = null; }))
-      .on("click", (ev, d) => { if (d.kind === "person") { openProfile(d.id); } else { const i = issueById[d.id]; if (explore || !d.main) { state.mode = "focus"; state.cat = i.cat; state.sub = i.sub; state.issue = i.id; state.person = null; render(); } } })
+      .on("click", (ev, d) => { if (d.kind === "person") { openProfile(d.id); } else { const i = issueById[d.id]; if (!d.main) { state.mode = "focus"; state.cat = i.cat; state.sub = i.sub; state.issue = i.id; state.person = null; render(); } } })
       .on("mouseenter", (ev, d) => highlight(d)).on("mouseleave", () => highlight(null));
-    node.filter(d => d.kind === "topic").append("circle").attr("r", d => explore ? 14 + Math.min(16, (deg[d.id] || 0) * 2) : 18).attr("fill", d => d.main ? CAT_HUE[d.cat] : "var(--border)").attr("fill-opacity", d => d.main ? .9 : 1).attr("stroke", d => d.main ? "#fff" : "var(--border-strong)").attr("stroke-width", 1.5);
+    node.filter(d => d.kind === "topic").append("circle").attr("r", 18).attr("fill", d => d.main ? CAT_HUE[d.cat] : "var(--border)").attr("fill-opacity", d => d.main ? .9 : 1).attr("stroke", d => d.main ? "#fff" : "var(--border-strong)").attr("stroke-width", 1.5);
     node.filter(d => d.kind === "person").append("circle").attr("r", d => state.person === d.id ? 14 : (byId[d.id].chamber === "senate" ? 11 : 9))
-      .attr("fill", d => { if (explore) return partyColor(byId[d.id].party); const e = links.find(l => l.main && (l.source.id ?? l.source) === d.id); return e ? color(e.e.direction) : "var(--neutral)"; })
+      .attr("fill", d => { const e = links.find(l => l.main && (l.source.id ?? l.source) === d.id); return e ? color(e.e.direction) : "var(--neutral)"; })
       .attr("stroke", d => state.person === d.id ? "#fff" : (byId[d.id].chamber === "senate" ? "var(--accent)" : "var(--bg)")).attr("stroke-width", 2);
-    node.append("text").attr("class", d => "node-label" + (d.kind === "topic" ? " topic" : "")).attr("text-anchor", "middle").attr("dy", d => d.kind === "topic" ? (explore ? 36 : 5) : 22).text(d => d.name);
+    node.append("text").attr("class", d => "node-label" + (d.kind === "topic" ? " topic" : "")).attr("text-anchor", "middle").attr("dy", d => d.kind === "topic" ? 5 : 22).text(d => d.name);
     // condition markers (2.2): amber diamond at the midpoint of edges with rows; existing edge styling untouched
     const condLinks = links.filter(l => (condByPI[l.e.from + "|" + l.e.to] || []).length);
     const markers = g.append("g").selectAll("path").data(condLinks).join("path")
@@ -1199,7 +1700,7 @@
     if (state.mode === "profile") { const p = byId[state.p.person]; $crumb.innerHTML = p ? `<b>${p.name}</b> · ${seat(p)}` : `<b>Legislators</b>`; $hint.textContent = ""; }
     else if (state.mode === "bill") { const info = statementsReady ? billInfo(state.b.id) : null; $crumb.innerHTML = info ? `<b>${info.num}</b> · ${info.title || "Bill"}` : `<b>Bill</b> · ${statementsReady ? "not found" : "loading statements…"}`; $hint.textContent = ""; }
     else if (state.mode === "list") { $crumb.innerHTML = `<b>Legislator list</b> · dropdown filters`; $hint.textContent = ""; }
-    else if (state.mode === "explore") { $crumb.innerHTML = `<b>All issues</b> · filtered view`; $hint.textContent = "Tick issues on the left to filter · hover to see connections · click an issue to focus · click a legislator to open their page"; }
+    else if (state.mode === "explore") { $crumb.innerHTML = `<b>All issues</b> · filtered view`; $hint.textContent = "Click a committee to open it in place · hover or pin to see all of a node's edges · scroll to zoom · / to search · click empty space to reset"; }
     else { const i = issueById[state.issue]; $crumb.innerHTML = i ? `<b>${i.catName}</b> › ${i.subName} › <b>${i.name}</b>` : "Pick an issue"; $hint.textContent = "Drag nodes · click a legislator to open their page · grey issues = what these legislators also talk about"; }
   }
   function renderAside() { ({ explore: renderExploreAside, focus: renderFocusAside, list: renderListAside, profile: renderProfileAside, bill: renderBillAside })[state.mode](); }
@@ -1220,7 +1721,8 @@
     if (m) { state.mode = "bill"; state.b.id = m[1]; state.b.ticked = []; state.b.sel = null; render(); }
   });
   render();
-  window.addEventListener("resize", renderGraph);
+  E_watch();
+  window.addEventListener("resize", () => { if (state.mode !== "explore") renderGraph(); });
 })();
 </script>
 </body>

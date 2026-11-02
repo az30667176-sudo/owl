@@ -10,12 +10,12 @@
 
 ## 2. Search, Explore on Canvas, fly-to, minimap
 
-- [ ] 2.1 Masthead search (port from `data/_site/search-sample.html` `search()`/`renderDD()`): `/` shortcut, groups ZIP / District / State / Name, arrow keys, Enter → profile. Add `apps/web/assets/zip-to-district.json` (see design decision 7) and a loader for it.
-- [ ] 2.2 Replace the SVG Explore with the Canvas option E (port `viewE` from the mock: ring, sector widths, open-in-place tween, member packing, top-K slider, hover/pin, zoom/pan, names at 2.4×, D/R filter, HUD line). Keep: ◆ markers on edges with conditions and the tooltip wording; the bill-grouped conditions side panel; "Open issue page →"; node click → profile. Remove the D3 force simulation and SVG graph code.
-- [ ] 2.3 Fly-to: `E_fly(id)` from search results and from the minimap; side card (party, district, strongest committee, top 6 issues, Open profile); click empty → restore.
-- [ ] 2.4 Minimap in the Explore side pane (port `drawMM`, tile grid table, state filter chip); recolour on issue/committee focus with labelled legend.
-- [ ] 2.5 ResizeObserver-driven sizing for the Canvas and the minimap (port `onResize`).
-- [ ] 2.6 Verify locally on real data: first paint < 2 s with `graph.json`; hover a committee → no stall; search `CA-12`, a surname, `tx`, a ZIP; fly-to; minimap recolour and state filter.
+- [x] 2.1 Masthead search (port from `data/_site/search-sample.html` `search()`/`renderDD()`): `/` shortcut, groups ZIP / District / State / Name, arrow keys, Enter → profile. Add `apps/web/assets/zip-to-district.json` (see design decision 7) and a loader for it.
+- [x] 2.2 Replace the SVG Explore with the Canvas option E (port `viewE` from the mock: ring, sector widths, open-in-place tween, member packing, top-K slider, hover/pin, zoom/pan, names at 2.4×, D/R filter, HUD line). Keep: ◆ markers on edges with conditions and the tooltip wording; the bill-grouped conditions side panel; "Open issue page →"; node click → profile. Remove the D3 force simulation and SVG graph code.
+- [x] 2.3 Fly-to: `E_fly(id)` from search results and from the minimap; side card (party, district, strongest committee, top 6 issues, Open profile); click empty → restore.
+- [x] 2.4 Minimap in the Explore side pane (port `drawMM`, tile grid table, state filter chip); recolour on issue/committee focus with labelled legend.
+- [x] 2.5 ResizeObserver-driven sizing for the Canvas and the minimap (port `onResize`).
+- [x] 2.6 Verify locally on real data: first paint < 2 s with `graph.json`; hover a committee → no stall; search `CA-12`, a surname, `tx`, a ZIP; fly-to; minimap recolour and state filter.
 
 ## 3. Issues directory, issue page, Bills tab
 
