@@ -1,0 +1,48 @@
+{
+  "id": "rec-billstatus-hr6644-119-20260115",
+  "content": "<other>: H.R. 6644 (119th Congress): 21st Century ROAD to Housing Act\nCosponsor: Rep. Pete Sessions\nCosponsor: Rep. Nydia M. Velázquez\nCosponsor: Rep. John W. Rose\nCosponsor: Rep. Brad Sherman\nCosponsor: Rep. Bryan Steil\nCosponsor: Rep. David Scott\nCosponsor: Rep. Marlin A. Stutzman\nCosponsor: Rep. Joyce Beatty\nCosponsor: Rep. Daniel Meuser\nCosponsor: Rep. Ayanna Pressley\nCosponsor: Rep. Young Kim\nCosponsor: Rep. Rashida Tlaib\nCosponsor: Rep. Andrew R. Garbarino\nCosponsor: Rep. Ritchie Torres\nCosponsor: Rep. Michael Lawler\nCosponsor: Rep. Sylvia R. Garcia\nCosponsor: Rep. Monica De La Cruz\nCosponsor: Rep. Brittany Pettersen\nCosponsor: Rep. Zachary Nunn\nCosponsor: Rep. Cleo Fields\nCosponsor: Rep. Maria Elvira Salazar\nCosponsor: Rep. Janelle S. Bynum\nCosponsor: Rep. Troy Downing\nCosponsor: Rep. Sam T. Liccardo\nCosponsor: Rep. Mike Haridopolos\nCosponsor: Rep. Jared Moskowitz\nCosponsor: Rep. Tim Moore\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/6644",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/6644",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-01-15",
+    "persons": [
+      "S000250",
+      "V000081",
+      "R000612",
+      "S000344",
+      "S001213",
+      "S001157",
+      "S001188",
+      "B001281",
+      "M001204",
+      "P000617",
+      "K000397",
+      "T000481",
+      "G000597",
+      "T000486",
+      "L000599",
+      "G000587",
+      "D000594",
+      "P000620",
+      "N000193",
+      "F000110",
+      "S000168",
+      "B001326",
+      "D000634",
+      "L000607",
+      "H001099",
+      "M001217",
+      "M001236"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/6644"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

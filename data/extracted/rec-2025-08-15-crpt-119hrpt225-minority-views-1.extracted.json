@@ -1,0 +1,36 @@
+{
+  "record_id": "rec-2025-08-15-crpt-119hrpt225-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:30:15.994Z",
+  "accepted": [
+    {
+      "person": "V000081",
+      "issue": "rural-small-business-and-manufacturing",
+      "date": "2025-08-15",
+      "score": 0.7,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "It is important for the Office to actively help small rural businesses deal with the challenges facing them today.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt225/html/CRPT-119hrpt225.htm",
+      "record_id": "rec-2025-08-15-crpt-119hrpt225-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote endorses active federal assistance to rural small businesses through the Office of Rural Affairs."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1220,
+    "prompt_tokens": 2845,
+    "total_tokens": 4065,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1115
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

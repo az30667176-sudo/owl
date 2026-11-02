@@ -1,0 +1,96 @@
+{
+  "record_id": "rec-2026-02-11-crpt-119hrpt495-supplemental-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:27:02.262Z",
+  "accepted": [
+    {
+      "person": "S000185",
+      "issue": "higher-education-and-student-aid",
+      "date": "2026-02-11",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats support efforts to improve college affordability for underrepresented students and unanimously voted in favor of H.R. 6472 at markup.",
+      "bill": "H.R. 6472 Territorial Student Access to Higher Education Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt495/html/CRPT-119hrpt495.htm",
+      "record_id": "rec-2026-02-11-crpt-119hrpt495-supplemental-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage states support and a favorable vote for legislation expanding college affordability."
+    },
+    {
+      "person": "B001278",
+      "issue": "higher-education-and-student-aid",
+      "date": "2026-02-11",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats support efforts to improve college affordability for underrepresented students and unanimously voted in favor of H.R. 6472 at markup.",
+      "bill": "H.R. 6472 Territorial Student Access to Higher Education Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt495/html/CRPT-119hrpt495.htm",
+      "record_id": "rec-2026-02-11-crpt-119hrpt495-supplemental-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage states support and a favorable vote for legislation expanding college affordability."
+    },
+    {
+      "person": "D000623",
+      "issue": "higher-education-and-student-aid",
+      "date": "2026-02-11",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats support efforts to improve college affordability for underrepresented students and unanimously voted in favor of H.R. 6472 at markup.",
+      "bill": "H.R. 6472 Territorial Student Access to Higher Education Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt495/html/CRPT-119hrpt495.htm",
+      "record_id": "rec-2026-02-11-crpt-119hrpt495-supplemental-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage states support and a favorable vote for legislation expanding college affordability."
+    },
+    {
+      "person": "H001081",
+      "issue": "higher-education-and-student-aid",
+      "date": "2026-02-11",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats support efforts to improve college affordability for underrepresented students and unanimously voted in favor of H.R. 6472 at markup.",
+      "bill": "H.R. 6472 Territorial Student Access to Higher Education Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt495/html/CRPT-119hrpt495.htm",
+      "record_id": "rec-2026-02-11-crpt-119hrpt495-supplemental-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage states support and a favorable vote for legislation expanding college affordability."
+    },
+    {
+      "person": "M001231",
+      "issue": "higher-education-and-student-aid",
+      "date": "2026-02-11",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats support efforts to improve college affordability for underrepresented students and unanimously voted in favor of H.R. 6472 at markup.",
+      "bill": "H.R. 6472 Territorial Student Access to Higher Education Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt495/html/CRPT-119hrpt495.htm",
+      "record_id": "rec-2026-02-11-crpt-119hrpt495-supplemental-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage states support and a favorable vote for legislation expanding college affordability."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1700,
+    "prompt_tokens": 3899,
+    "total_tokens": 5599,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1147
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

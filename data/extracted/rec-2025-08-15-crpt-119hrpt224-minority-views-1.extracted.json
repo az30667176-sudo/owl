@@ -1,0 +1,51 @@
+{
+  "record_id": "rec-2025-08-15-crpt-119hrpt224-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:27:25.332Z",
+  "accepted": [
+    {
+      "person": "V000081",
+      "issue": "sba-lending",
+      "date": "2025-08-15",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "As such, the loan level increases to the 7(a) program currently in H.R. 3174 remain far too imprudent to earn my support.",
+      "bill": "H.R. 3174",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt224/html/CRPT-119hrpt224.htm",
+      "record_id": "rec-2025-08-15-crpt-119hrpt224-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislator explicitly withholds support for the 7(a) loan level increases due to risk concerns."
+    },
+    {
+      "person": "V000081",
+      "issue": "sba-lending",
+      "date": "2025-08-15",
+      "score": 0.4,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "As I've stated, I am open to a discussion on increasing loan caps for manufacturers in the 504/CDC program and Committee staff has expressed that position to the majority staff on multiple occasions.",
+      "bill": "H.R. 3174",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt224/html/CRPT-119hrpt224.htm",
+      "record_id": "rec-2025-08-15-crpt-119hrpt224-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislator expresses openness to increasing loan caps for manufacturers under the 504/CDC program."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1554,
+    "prompt_tokens": 3857,
+    "total_tokens": 5411,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1282
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

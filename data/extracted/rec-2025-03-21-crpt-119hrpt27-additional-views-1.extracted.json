@@ -1,0 +1,72 @@
+{
+  "record_id": "rec-2025-03-21-crpt-119hrpt27-additional-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:29:45.317Z",
+  "accepted": [
+    {
+      "person": "R000606",
+      "issue": "israel-gaza-ceasefire-and-hostage-return",
+      "date": "2025-03-21",
+      "score": 0.7,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "We hope in the coming weeks that a ceasefire can be negotiated so that we will see the return of all the hostages to their families and an end to the gruesome violence and suffering.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt27/html/CRPT-119hrpt27.htm",
+      "record_id": "rec-2025-03-21-crpt-119hrpt27-additional-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote expresses support for negotiating a ceasefire tied to hostage return and ending violence."
+    },
+    {
+      "person": "R000606",
+      "issue": "immigration-enforcement",
+      "date": "2025-03-21",
+      "score": 1,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "No one affiliated with Hamas, nor anyone involved in the horrific attacks of October 7th, should be admissible to the United States or eligible for any immigration benefits, whatsoever.",
+      "bill": "H.R. 176",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt27/html/CRPT-119hrpt27.htm",
+      "record_id": "rec-2025-03-21-crpt-119hrpt27-additional-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote states unequivocal support for barring Hamas-affiliated noncitizens from admission and immigration benefits."
+    },
+    {
+      "person": "R000606",
+      "issue": "immigration-enforcement",
+      "date": "2025-03-21",
+      "score": -0.7,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Amending the INA to impose visa sanctions sets a dangerous precedent where new statutory language becomes necessary every time a new terrorist group emerges.",
+      "bill": "H.R. 176",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt27/html/CRPT-119hrpt27.htm",
+      "record_id": "rec-2025-03-21-crpt-119hrpt27-additional-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote opposes the bill's approach of amending the INA to impose visa sanctions as creating a dangerous precedent."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "israel-gaza-ceasefire-and-hostage-return",
+      "name": "Israel-Gaza Ceasefire and Hostage Return",
+      "parent": "hsfa"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 1994,
+    "prompt_tokens": 3007,
+    "total_tokens": 5001,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1642
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

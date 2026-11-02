@@ -1,0 +1,57 @@
+{
+  "record_id": "rec-2025-09-05-crpt-119hrpt236-dissenting-views-2",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:47:25.439Z",
+  "accepted": [
+    {
+      "person": "D000216",
+      "issue": "presidential-impoundment-authority",
+      "date": "2025-09-05",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "This action is unlawful, and the Government Accountability Office's 2018 legal opinion remains the correct view on the matter:",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt236/html/CRPT-119hrpt236.htm",
+      "record_id": "rec-2025-09-05-crpt-119hrpt236-dissenting-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage calls the pocket rescission unlawful and rejects presidential power to withhold appropriated funds."
+    },
+    {
+      "person": "H000874",
+      "issue": "presidential-impoundment-authority",
+      "date": "2025-09-05",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "This action is unlawful, and the Government Accountability Office's 2018 legal opinion remains the correct view on the matter:",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt236/html/CRPT-119hrpt236.htm",
+      "record_id": "rec-2025-09-05-crpt-119hrpt236-dissenting-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage calls the pocket rescission unlawful and rejects presidential power to withhold appropriated funds."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "presidential-impoundment-authority",
+      "name": "Presidential Impoundment Authority",
+      "parent": "hsbu"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 1547,
+    "prompt_tokens": 2949,
+    "total_tokens": 4496,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1326
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "rec-billstatus-hr1799-119-20250318",
+  "content": "<other>: H.R. 1799 (119th Congress): Financial Reporting Threshold Modernization Act\nCosponsor: Rep. Mike Collins\nCosponsor: Rep. Earl L. \"Buddy\" Carter\nCosponsor: Rep. Russ Fulcher\nCosponsor: Rep. Thomas Massie\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1799",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1799",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-18",
+    "persons": [
+      "C001129",
+      "C001103",
+      "F000469",
+      "M001184"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1799"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

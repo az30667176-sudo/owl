@@ -1,0 +1,36 @@
+{
+  "record_id": "rec-2025-10-31-crpt-119hrpt359-supplemental-views-2",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:45:30.357Z",
+  "accepted": [
+    {
+      "person": "N000015",
+      "issue": "health-programs-and-research",
+      "date": "2025-10-31",
+      "score": 0,
+      "direction": "neutral",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "analysis and findings were insufficient to provide conclusive evidence related to the quality of care beneficiaries received in the home.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt359/html/CRPT-119hrpt359.htm",
+      "record_id": "rec-2025-10-31-crpt-119hrpt359-supplemental-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage states evidence is inconclusive and calls for additional data rather than supporting or opposing the program."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1639,
+    "prompt_tokens": 4939,
+    "total_tokens": 6578,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1516
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

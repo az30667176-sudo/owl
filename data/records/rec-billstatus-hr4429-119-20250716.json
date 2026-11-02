@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr4429-119-20250716",
+  "content": "<other>: H.R. 4429 (119th Congress): Developing and Empowering our Aspiring Leaders Act of 2025\nSponsor: Rep. Ann Wagner\nSponsor: Rep. Ann Wagner\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/4429",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/4429",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-07-16",
+    "persons": [
+      "W000812",
+      "W000812"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/4429"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

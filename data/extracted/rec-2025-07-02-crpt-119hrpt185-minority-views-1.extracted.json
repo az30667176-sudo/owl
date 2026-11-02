@@ -1,0 +1,42 @@
+{
+  "record_id": "rec-2025-07-02-crpt-119hrpt185-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:30:13.468Z",
+  "accepted": [
+    {
+      "person": "P000034",
+      "issue": "national-coal-council-and-coal-advisory-policy",
+      "date": "2025-07-02",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "The majority wishes to enact a piece of legislation whose primary goal has already been accomplished. For the reasons stated above, I oppose this legislation.",
+      "bill": "H.R. 3015, the National Coal Council Reestablishment Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt185/html/CRPT-119hrpt185.htm",
+      "record_id": "rec-2025-07-02-crpt-119hrpt185-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislator explicitly states opposition to H.R. 3015 because its goal of reestablishing the National Coal Council has already been accomplished."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "national-coal-council-and-coal-advisory-policy",
+      "name": "National Coal Council and Coal Advisory Policy",
+      "parent": "hsif-energy"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 2067,
+    "prompt_tokens": 2982,
+    "total_tokens": 5049,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1899
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

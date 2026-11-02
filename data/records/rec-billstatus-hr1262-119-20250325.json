@@ -1,0 +1,37 @@
+{
+  "id": "rec-billstatus-hr1262-119-20250325",
+  "content": "<other>: H.R. 1262 (119th Congress): Mikaela Naylon Give Kids a Chance Act\nCosponsor: Rep. Kevin Kiley\nCosponsor: Rep. Jake Auchincloss\nCosponsor: Rep. Michael R. Turner\nCosponsor: Rep. Seth Moulton\nCosponsor: Rep. Austin Scott\nCosponsor: Rep. Mark Pocan\nCosponsor: Rep. Erin Houchin\nCosponsor: Rep. Sarah McBride\nCosponsor: Rep. Greg Landsman\nCosponsor: Rep. Mark Alford\nCosponsor: Rep. Ken Calvert\nCosponsor: Rep. George Latimer\nCosponsor: Rep. James C. Moylan\nCosponsor: Rep. Deborah K. Ross\nCosponsor: Rep. Tom Cole\nCosponsor: Rep. Sharice Davids\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1262",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1262",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-25",
+    "persons": [
+      "K000401",
+      "A000148",
+      "T000463",
+      "M001196",
+      "S001189",
+      "P000607",
+      "H001093",
+      "M001238",
+      "L000601",
+      "A000379",
+      "C000059",
+      "L000606",
+      "M001219",
+      "R000305",
+      "C001053",
+      "D000629"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1262"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

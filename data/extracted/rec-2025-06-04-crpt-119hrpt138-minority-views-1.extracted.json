@@ -1,0 +1,57 @@
+{
+  "record_id": "rec-2025-06-04-crpt-119hrpt138-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:25:40.654Z",
+  "accepted": [
+    {
+      "person": "L000562",
+      "issue": "district-of-columbia-governance",
+      "date": "2025-06-04",
+      "score": 1,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "because we strongly support local D.C. self-government.",
+      "bill": "H.R. 2096",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt138/html/CRPT-119hrpt138.htm",
+      "record_id": "rec-2025-06-04-crpt-119hrpt138-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote explicitly states strong support for D.C. self-government in opposition to the bill repealing local law."
+    },
+    {
+      "person": "L000562",
+      "issue": "police-accountability-and-discipline",
+      "date": "2025-06-04",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "there must be accountability and transparency for instances in which police officers violate their oath of office.",
+      "bill": "H.R. 2096",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt138/html/CRPT-119hrpt138.htm",
+      "record_id": "rec-2025-06-04-crpt-119hrpt138-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote directly endorses accountability and transparency for police misconduct addressed by the discipline provisions."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "police-accountability-and-discipline",
+      "name": "Police Accountability and Discipline",
+      "parent": "hsju-crime"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 2300,
+    "prompt_tokens": 4921,
+    "total_tokens": 7221,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2095
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

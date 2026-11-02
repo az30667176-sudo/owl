@@ -1,0 +1,29 @@
+{
+  "id": "rec-billstatus-hr176-119-20250103",
+  "content": "<other>: H.R. 176 (119th Congress): No Immigration Benefits for Hamas Terrorists Act of 2025\nSponsor: Rep. Tom McClintock\nCosponsor: Rep. Joe Wilson\nCosponsor: Rep. Claudia Tenney\nCosponsor: Rep. Ann Wagner\nCosponsor: Rep. Chuck Edwards\nCosponsor: Rep. Erin Houchin\nCosponsor: Rep. Wesley Hunt\nCosponsor: Rep. Jeff Crank\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/176",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/176",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-01-03",
+    "persons": [
+      "M001177",
+      "W000795",
+      "T000478",
+      "W000812",
+      "E000246",
+      "H001093",
+      "H001095",
+      "C001137"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/176"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

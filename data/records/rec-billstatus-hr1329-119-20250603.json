@@ -1,0 +1,25 @@
+{
+  "id": "rec-billstatus-hr1329-119-20250603",
+  "content": "<other>: H.R. 1329 (119th Congress): Smithsonian American Women’s History Museum Act\nCosponsor: Rep. Janice D. Schakowsky\nCosponsor: Rep. Marc A. Veasey\nCosponsor: Rep. Nydia M. Velázquez\nCosponsor: Rep. John J. McGuire III\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1329",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1329",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-06-03",
+    "persons": [
+      "S001145",
+      "V000131",
+      "V000081",
+      "M001239"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1329"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

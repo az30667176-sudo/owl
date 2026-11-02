@@ -1,0 +1,33 @@
+{
+  "id": "rec-billstatus-hr6047-119-20251117",
+  "content": "<other>: H.R. 6047 (119th Congress): Sharri Briley and Eric Edmundson Veterans Benefits Expansion Act of 2026\nSponsor: Rep. Tom Barrett\nCosponsor: Rep. Mike Bost\nCosponsor: Rep. Derrick Van Orden\nCosponsor: Rep. Juan Ciscomani\nCosponsor: Rep. Aumua Amata Coleman Radewagen\nCosponsor: Rep. Kimberlyn King-Hinds\nCosponsor: Rep. Richard Hudson\nCosponsor: Rep. Jennifer A. Kiggans\nCosponsor: Rep. J. French Hill\nCosponsor: Rep. Morgan Luttrell\nCosponsor: Rep. Robert J. Wittman\nCosponsor: Rep. Mariannette Miller-Meeks\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/6047",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/6047",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-11-17",
+    "persons": [
+      "B001321",
+      "B001295",
+      "V000135",
+      "C001133",
+      "R000600",
+      "K000404",
+      "H001067",
+      "K000399",
+      "H001072",
+      "L000603",
+      "W000804",
+      "M001215"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/6047"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

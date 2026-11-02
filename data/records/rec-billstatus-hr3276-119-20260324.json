@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr3276-119-20260324",
+  "content": "<other>: H.R. 3276 (119th Congress): Local Communities & Bird Habitat Stewardship Act of 2026\nCosponsor: Rep. Emanuel Cleaver\nCosponsor: Rep. Maxine Dexter\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/3276",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/3276",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-03-24",
+    "persons": [
+      "C001061",
+      "D000635"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/3276"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

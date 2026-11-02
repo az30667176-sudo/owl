@@ -1,0 +1,48 @@
+{
+  "id": "rec-billstatus-hr1329-119-20251218",
+  "content": "<other>: H.R. 1329 (119th Congress): Smithsonian American Women’s History Museum Act\nCosponsor: Rep. Emily Randall\nCosponsor: Rep. Kweisi Mfume\nCosponsor: Rep. Robert C. \"Bobby\" Scott\nCosponsor: Rep. Joe Neguse\nCosponsor: Rep. Tom Barrett\nCosponsor: Rep. Kim Schrier\nCosponsor: Rep. Glenn Ivey\nCosponsor: Rep. Marcy Kaptur\nCosponsor: Rep. Zoe Lofgren\nCosponsor: Rep. Steven Horsford\nCosponsor: Rep. Robin L. Kelly\nCosponsor: Rep. Deborah K. Ross\nCosponsor: Rep. Shri Thanedar\nCosponsor: Rep. Lizzie Fletcher\nCosponsor: Rep. Stacey E. Plaskett\nCosponsor: Rep. Mark Pocan\nCosponsor: Rep. Rosa L. DeLauro\nCosponsor: Rep. Mark Takano\nCosponsor: Rep. Gabe Evans\nCosponsor: Rep. Robert P. Bresnahan, Jr.\nCosponsor: Rep. Scott DesJarlais\nCosponsor: Rep. Aaron Bean\nCosponsor: Rep. Juan Ciscomani\nCosponsor: Rep. Mike Bost\nCosponsor: Rep. Kristen McDonald Rivet\nCosponsor: Rep. Darin LaHood\nCosponsor: Rep. April McClain Delaney\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1329",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1329",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-12-18",
+    "persons": [
+      "R000621",
+      "M000687",
+      "S000185",
+      "N000191",
+      "B001321",
+      "S001216",
+      "I000058",
+      "K000009",
+      "L000397",
+      "H001066",
+      "K000385",
+      "R000305",
+      "T000488",
+      "F000468",
+      "P000610",
+      "P000607",
+      "D000216",
+      "T000472",
+      "E000300",
+      "B001327",
+      "D000616",
+      "B001314",
+      "C001133",
+      "B001295",
+      "M001237",
+      "L000585",
+      "M001232"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1329"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

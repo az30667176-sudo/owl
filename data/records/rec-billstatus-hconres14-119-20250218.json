@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hconres14-119-20250218",
+  "content": "<other>: H. Con. Res. 14 (119th Congress): Establishing the congressional budget for the United States Government for fiscal year 2025 and setting forth the appropriate budgetary levels for fiscal years 2026 through 2034.\nSponsor: Rep. Jodey C. Arrington\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-concurrent-resolution/14",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-concurrent-resolution/14",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-18",
+    "persons": [
+      "A000375"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-concurrent-resolution/14"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

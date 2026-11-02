@@ -1,0 +1,96 @@
+{
+  "record_id": "rec-2026-02-20-crpt-119hrpt504-minority-views-2",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:47:43.358Z",
+  "accepted": [
+    {
+      "person": "S000185",
+      "issue": "retirement-and-employee-benefits",
+      "date": "2026-02-20",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "EBSA is vital to protecting the benefits owed to workers and their families.",
+      "bill": "H.R. 2958",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt504/html/CRPT-119hrpt504.htm",
+      "record_id": "rec-2026-02-20-crpt-119hrpt504-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage affirms support for protecting worker benefits administered by EBSA."
+    },
+    {
+      "person": "B001278",
+      "issue": "retirement-and-employee-benefits",
+      "date": "2026-02-20",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "EBSA is vital to protecting the benefits owed to workers and their families.",
+      "bill": "H.R. 2958",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt504/html/CRPT-119hrpt504.htm",
+      "record_id": "rec-2026-02-20-crpt-119hrpt504-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage affirms support for protecting worker benefits administered by EBSA."
+    },
+    {
+      "person": "D000623",
+      "issue": "retirement-and-employee-benefits",
+      "date": "2026-02-20",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "EBSA is vital to protecting the benefits owed to workers and their families.",
+      "bill": "H.R. 2958",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt504/html/CRPT-119hrpt504.htm",
+      "record_id": "rec-2026-02-20-crpt-119hrpt504-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage affirms support for protecting worker benefits administered by EBSA."
+    },
+    {
+      "person": "H001081",
+      "issue": "retirement-and-employee-benefits",
+      "date": "2026-02-20",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "EBSA is vital to protecting the benefits owed to workers and their families.",
+      "bill": "H.R. 2958",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt504/html/CRPT-119hrpt504.htm",
+      "record_id": "rec-2026-02-20-crpt-119hrpt504-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage affirms support for protecting worker benefits administered by EBSA."
+    },
+    {
+      "person": "L000602",
+      "issue": "retirement-and-employee-benefits",
+      "date": "2026-02-20",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "EBSA is vital to protecting the benefits owed to workers and their families.",
+      "bill": "H.R. 2958",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt504/html/CRPT-119hrpt504.htm",
+      "record_id": "rec-2026-02-20-crpt-119hrpt504-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage affirms support for protecting worker benefits administered by EBSA."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1813,
+    "prompt_tokens": 2852,
+    "total_tokens": 4665,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1365
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2289
+    }
+  },
+  "finish_reason": "stop"
+}

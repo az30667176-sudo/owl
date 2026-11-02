@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr7567-119-20260213",
+  "content": "<other>: H.R. 7567 (119th Congress): Farm, Food, and National Security Act of 2026\nSponsor: Rep. Glenn Thompson\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/7567",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/7567",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-02-13",
+    "persons": [
+      "T000467"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/7567"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

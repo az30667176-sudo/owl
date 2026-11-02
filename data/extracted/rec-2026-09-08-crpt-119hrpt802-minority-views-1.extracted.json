@@ -1,0 +1,141 @@
+{
+  "record_id": "rec-2026-09-08-crpt-119hrpt802-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:14:12.133Z",
+  "accepted": [
+    {
+      "person": "S000185",
+      "issue": "wages-and-labor-standards",
+      "date": "2026-09-08",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "thereby creating numerous carveouts and safe harbors to protect large franchisors from any liability for NLRA and FLSA violations their franchisees may make based on the franchisor's standards, policies, and direction. This bill risks allowing franchisors to coerce their franchisees into adopting potentially unlawful policies and practices",
+      "bill": "H.R. 5267, the American Franchise Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt802/html/CRPT-119hrpt802.htm",
+      "record_id": "rec-2026-09-08-crpt-119hrpt802-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage criticizes the bill for shielding franchisors from FLSA liability and risking unlawful practices, indicating support for strong wage standards."
+    },
+    {
+      "person": "S000185",
+      "issue": "labor-relations-and-unions",
+      "date": "2026-09-08",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "thereby creating numerous carveouts and safe harbors to protect large franchisors from any liability for NLRA and FLSA violations their franchisees may make based on the franchisor's standards, policies, and direction. This bill risks allowing franchisors to coerce their franchisees into adopting potentially unlawful policies and practices",
+      "bill": "H.R. 5267, the American Franchise Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt802/html/CRPT-119hrpt802.htm",
+      "record_id": "rec-2026-09-08-crpt-119hrpt802-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage criticizes the bill for shielding franchisors from NLRA liability and risking unlawful practices, indicating support for collective-bargaining protections."
+    },
+    {
+      "person": "B001278",
+      "issue": "wages-and-labor-standards",
+      "date": "2026-09-08",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "thereby creating numerous carveouts and safe harbors to protect large franchisors from any liability for NLRA and FLSA violations their franchisees may make based on the franchisor's standards, policies, and direction. This bill risks allowing franchisors to coerce their franchisees into adopting potentially unlawful policies and practices",
+      "bill": "H.R. 5267, the American Franchise Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt802/html/CRPT-119hrpt802.htm",
+      "record_id": "rec-2026-09-08-crpt-119hrpt802-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage criticizes the bill for shielding franchisors from FLSA liability and risking unlawful practices, indicating support for strong wage standards."
+    },
+    {
+      "person": "B001278",
+      "issue": "labor-relations-and-unions",
+      "date": "2026-09-08",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "thereby creating numerous carveouts and safe harbors to protect large franchisors from any liability for NLRA and FLSA violations their franchisees may make based on the franchisor's standards, policies, and direction. This bill risks allowing franchisors to coerce their franchisees into adopting potentially unlawful policies and practices",
+      "bill": "H.R. 5267, the American Franchise Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt802/html/CRPT-119hrpt802.htm",
+      "record_id": "rec-2026-09-08-crpt-119hrpt802-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage criticizes the bill for shielding franchisors from NLRA liability and risking unlawful practices, indicating support for collective-bargaining protections."
+    },
+    {
+      "person": "D000623",
+      "issue": "wages-and-labor-standards",
+      "date": "2026-09-08",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "thereby creating numerous carveouts and safe harbors to protect large franchisors from any liability for NLRA and FLSA violations their franchisees may make based on the franchisor's standards, policies, and direction. This bill risks allowing franchisors to coerce their franchisees into adopting potentially unlawful policies and practices",
+      "bill": "H.R. 5267, the American Franchise Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt802/html/CRPT-119hrpt802.htm",
+      "record_id": "rec-2026-09-08-crpt-119hrpt802-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage criticizes the bill for shielding franchisors from FLSA liability and risking unlawful practices, indicating support for strong wage standards."
+    },
+    {
+      "person": "D000623",
+      "issue": "labor-relations-and-unions",
+      "date": "2026-09-08",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "thereby creating numerous carveouts and safe harbors to protect large franchisors from any liability for NLRA and FLSA violations their franchisees may make based on the franchisor's standards, policies, and direction. This bill risks allowing franchisors to coerce their franchisees into adopting potentially unlawful policies and practices",
+      "bill": "H.R. 5267, the American Franchise Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt802/html/CRPT-119hrpt802.htm",
+      "record_id": "rec-2026-09-08-crpt-119hrpt802-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage criticizes the bill for shielding franchisors from NLRA liability and risking unlawful practices, indicating support for collective-bargaining protections."
+    },
+    {
+      "person": "G000606",
+      "issue": "wages-and-labor-standards",
+      "date": "2026-09-08",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "thereby creating numerous carveouts and safe harbors to protect large franchisors from any liability for NLRA and FLSA violations their franchisees may make based on the franchisor's standards, policies, and direction. This bill risks allowing franchisors to coerce their franchisees into adopting potentially unlawful policies and practices",
+      "bill": "H.R. 5267, the American Franchise Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt802/html/CRPT-119hrpt802.htm",
+      "record_id": "rec-2026-09-08-crpt-119hrpt802-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage criticizes the bill for shielding franchisors from FLSA liability and risking unlawful practices, indicating support for strong wage standards."
+    },
+    {
+      "person": "G000606",
+      "issue": "labor-relations-and-unions",
+      "date": "2026-09-08",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "thereby creating numerous carveouts and safe harbors to protect large franchisors from any liability for NLRA and FLSA violations their franchisees may make based on the franchisor's standards, policies, and direction. This bill risks allowing franchisors to coerce their franchisees into adopting potentially unlawful policies and practices",
+      "bill": "H.R. 5267, the American Franchise Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt802/html/CRPT-119hrpt802.htm",
+      "record_id": "rec-2026-09-08-crpt-119hrpt802-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage criticizes the bill for shielding franchisors from NLRA liability and risking unlawful practices, indicating support for collective-bargaining protections."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 3740,
+    "prompt_tokens": 5063,
+    "total_tokens": 8803,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2471
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

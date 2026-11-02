@@ -1,0 +1,39 @@
+{
+  "id": "rec-billstatus-hr842-119-20250324",
+  "content": "<other>: H.R. 842 (119th Congress): Nancy Gardner Sewell Medicare Multi-Cancer Early Detection Screening Coverage Act\nCosponsor: Rep. Scott Fitzgerald\nCosponsor: Rep. Teresa Leger Fernandez\nCosponsor: Rep. Glenn Thompson\nCosponsor: Rep. Zachary Nunn\nCosponsor: Rep. Sarah McBride\nCosponsor: Rep. Maria Elvira Salazar\nCosponsor: Rep. Kat Cammack\nCosponsor: Rep. Frank D. Lucas\nCosponsor: Rep. Abraham J. Hamadeh\nCosponsor: Rep. Ashley Hinson\nCosponsor: Rep. David Rouzer\nCosponsor: Rep. Kristen McDonald Rivet\nCosponsor: Rep. Jimmy Gomez\nCosponsor: Rep. Frank J. Mrvan\nCosponsor: Rep. Debbie Dingell\nCosponsor: Rep. Sheila Cherfilus-McCormick\nCosponsor: Rep. John B. Larson\nCosponsor: Rep. Kelly Morrison\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/842",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/842",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-24",
+    "persons": [
+      "F000471",
+      "L000273",
+      "T000467",
+      "N000193",
+      "M001238",
+      "S000168",
+      "C001039",
+      "L000491",
+      "H001098",
+      "H001091",
+      "R000603",
+      "M001237",
+      "G000585",
+      "M001214",
+      "D000624",
+      "C001127",
+      "L000557",
+      "M001234"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/842"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

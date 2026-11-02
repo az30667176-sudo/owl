@@ -1,0 +1,147 @@
+{
+  "record_id": "rec-2025-03-05-crpt-119hrpt14-minority-views-2",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:47:30.684Z",
+  "accepted": [
+    {
+      "person": "S000185",
+      "issue": "civil-rights-in-schools",
+      "date": "2025-03-05",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "It is important that we do not further such sentiments and cause unnecessary alarm and suspicion in school staff, parents and communities due to increased discrimination against students and teachers of Asian descent or that further fuel fear and xenophobia.",
+      "bill": "H.R. 1069",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt14/html/CRPT-119hrpt14.htm",
+      "record_id": "rec-2025-03-05-crpt-119hrpt14-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage supports protecting Asian students and teachers from discrimination fueled by the bill."
+    },
+    {
+      "person": "D000623",
+      "issue": "civil-rights-in-schools",
+      "date": "2025-03-05",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "It is important that we do not further such sentiments and cause unnecessary alarm and suspicion in school staff, parents and communities due to increased discrimination against students and teachers of Asian descent or that further fuel fear and xenophobia.",
+      "bill": "H.R. 1069",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt14/html/CRPT-119hrpt14.htm",
+      "record_id": "rec-2025-03-05-crpt-119hrpt14-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage supports protecting Asian students and teachers from discrimination fueled by the bill."
+    },
+    {
+      "person": "H001081",
+      "issue": "civil-rights-in-schools",
+      "date": "2025-03-05",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "It is important that we do not further such sentiments and cause unnecessary alarm and suspicion in school staff, parents and communities due to increased discrimination against students and teachers of Asian descent or that further fuel fear and xenophobia.",
+      "bill": "H.R. 1069",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt14/html/CRPT-119hrpt14.htm",
+      "record_id": "rec-2025-03-05-crpt-119hrpt14-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage supports protecting Asian students and teachers from discrimination fueled by the bill."
+    },
+    {
+      "person": "L000602",
+      "issue": "civil-rights-in-schools",
+      "date": "2025-03-05",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "It is important that we do not further such sentiments and cause unnecessary alarm and suspicion in school staff, parents and communities due to increased discrimination against students and teachers of Asian descent or that further fuel fear and xenophobia.",
+      "bill": "H.R. 1069",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt14/html/CRPT-119hrpt14.htm",
+      "record_id": "rec-2025-03-05-crpt-119hrpt14-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage supports protecting Asian students and teachers from discrimination fueled by the bill."
+    },
+    {
+      "person": "S000185",
+      "issue": "foreign-influence-in-k-12-schools",
+      "date": "2025-03-05",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "While the Majority claims that the Chinese government is infiltrating our school systems and brainwashing our children--or has the ability to do so if left unchecked--there is no such evidence.",
+      "bill": "H.R. 1069",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt14/html/CRPT-119hrpt14.htm",
+      "record_id": "rec-2025-03-05-crpt-119hrpt14-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage rejects the claim of Chinese infiltration used to justify restrictions in H.R. 1069."
+    },
+    {
+      "person": "D000623",
+      "issue": "foreign-influence-in-k-12-schools",
+      "date": "2025-03-05",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "While the Majority claims that the Chinese government is infiltrating our school systems and brainwashing our children--or has the ability to do so if left unchecked--there is no such evidence.",
+      "bill": "H.R. 1069",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt14/html/CRPT-119hrpt14.htm",
+      "record_id": "rec-2025-03-05-crpt-119hrpt14-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage rejects the claim of Chinese infiltration used to justify restrictions in H.R. 1069."
+    },
+    {
+      "person": "H001081",
+      "issue": "foreign-influence-in-k-12-schools",
+      "date": "2025-03-05",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "While the Majority claims that the Chinese government is infiltrating our school systems and brainwashing our children--or has the ability to do so if left unchecked--there is no such evidence.",
+      "bill": "H.R. 1069",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt14/html/CRPT-119hrpt14.htm",
+      "record_id": "rec-2025-03-05-crpt-119hrpt14-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage rejects the claim of Chinese infiltration used to justify restrictions in H.R. 1069."
+    },
+    {
+      "person": "L000602",
+      "issue": "foreign-influence-in-k-12-schools",
+      "date": "2025-03-05",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "While the Majority claims that the Chinese government is infiltrating our school systems and brainwashing our children--or has the ability to do so if left unchecked--there is no such evidence.",
+      "bill": "H.R. 1069",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt14/html/CRPT-119hrpt14.htm",
+      "record_id": "rec-2025-03-05-crpt-119hrpt14-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage rejects the claim of Chinese infiltration used to justify restrictions in H.R. 1069."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "foreign-influence-in-k-12-schools",
+      "name": "Foreign Influence in K-12 Schools",
+      "parent": "hsed-k12"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 3946,
+    "prompt_tokens": 3409,
+    "total_tokens": 7355,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2805
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

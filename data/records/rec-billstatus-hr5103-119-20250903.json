@@ -1,0 +1,24 @@
+{
+  "id": "rec-billstatus-hr5103-119-20250903",
+  "content": "<other>: H.R. 5103 (119th Congress): Make the District of Columbia Safe and Beautiful Act of 2025\nSponsor: Rep. John J. McGuire III\nSponsor: Rep. John J. McGuire III\nSponsor: Rep. John J. McGuire III\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/5103",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/5103",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-09-03",
+    "persons": [
+      "M001239",
+      "M001239",
+      "M001239"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/5103"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

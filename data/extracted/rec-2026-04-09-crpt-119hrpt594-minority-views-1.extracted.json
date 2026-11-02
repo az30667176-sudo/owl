@@ -1,0 +1,36 @@
+{
+  "record_id": "rec-2026-04-09-crpt-119hrpt594-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:27:37.184Z",
+  "accepted": [
+    {
+      "person": "P000034",
+      "issue": "environmental-regulation",
+      "date": "2026-04-09",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "We oppose H.R. 6409, the ``Foreign Emissions and Nonattainment Clarification for Economic Stability (FENCES) Act,'' which seeks to amend the Clean Air Act (CAA) to allow states to ignore international pollution and remove the ability of the Environmental Protection Agency (EPA) to impose sanctions on states that fail to make progress toward reducing air pollution.",
+      "bill": "H.R. 6409, the Foreign Emissions and Nonattainment Clarification for Economic Stability (FENCES) Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt594/html/CRPT-119hrpt594.htm",
+      "record_id": "rec-2026-04-09-crpt-119hrpt594-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote explicitly states opposition to the bill because it would weaken Clean Air Act enforcement."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1006,
+    "prompt_tokens": 3417,
+    "total_tokens": 4423,
+    "completion_tokens_details": {
+      "reasoning_tokens": 828
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

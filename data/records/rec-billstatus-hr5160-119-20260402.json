@@ -1,0 +1,25 @@
+{
+  "id": "rec-billstatus-hr5160-119-20260402",
+  "content": "<other>: H.R. 5160 (119th Congress): Stem Cell Therapeutic and Research Reauthorization Act of 2025\nCosponsor: Rep. Nicole Malliotakis\nCosponsor: Rep. Kathy Castor\nCosponsor: Rep. Andrew R. Garbarino\nCosponsor: Rep. Eleanor Holmes Norton\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/5160",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/5160",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-04-02",
+    "persons": [
+      "M000317",
+      "C001066",
+      "G000597",
+      "N000147"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/5160"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

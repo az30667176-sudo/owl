@@ -1,0 +1,111 @@
+{
+  "record_id": "rec-2025-02-10-crpt-119hrpt491-minority-views-2",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:47:26.608Z",
+  "accepted": [
+    {
+      "person": "S000185",
+      "issue": "retirement-and-employee-benefits",
+      "date": "2025-02-10",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For the reasons stated above, Committee Democrats unanimously opposed H.R. 2869 when the Committee on Education and Workforce considered it on September 17, 2025. We urge the House of Representatives to do the same.",
+      "bill": "H.R. 2869",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt491/html/CRPT-119hrpt491.htm",
+      "record_id": "rec-2025-02-10-crpt-119hrpt491-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers state unanimous opposition to H.R. 2869 and urge House opposition."
+    },
+    {
+      "person": "B001278",
+      "issue": "retirement-and-employee-benefits",
+      "date": "2025-02-10",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For the reasons stated above, Committee Democrats unanimously opposed H.R. 2869 when the Committee on Education and Workforce considered it on September 17, 2025. We urge the House of Representatives to do the same.",
+      "bill": "H.R. 2869",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt491/html/CRPT-119hrpt491.htm",
+      "record_id": "rec-2025-02-10-crpt-119hrpt491-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers state unanimous opposition to H.R. 2869 and urge House opposition."
+    },
+    {
+      "person": "A000370",
+      "issue": "retirement-and-employee-benefits",
+      "date": "2025-02-10",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For the reasons stated above, Committee Democrats unanimously opposed H.R. 2869 when the Committee on Education and Workforce considered it on September 17, 2025. We urge the House of Representatives to do the same.",
+      "bill": "H.R. 2869",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt491/html/CRPT-119hrpt491.htm",
+      "record_id": "rec-2025-02-10-crpt-119hrpt491-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers state unanimous opposition to H.R. 2869 and urge House opposition."
+    },
+    {
+      "person": "D000623",
+      "issue": "retirement-and-employee-benefits",
+      "date": "2025-02-10",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For the reasons stated above, Committee Democrats unanimously opposed H.R. 2869 when the Committee on Education and Workforce considered it on September 17, 2025. We urge the House of Representatives to do the same.",
+      "bill": "H.R. 2869",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt491/html/CRPT-119hrpt491.htm",
+      "record_id": "rec-2025-02-10-crpt-119hrpt491-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers state unanimous opposition to H.R. 2869 and urge House opposition."
+    },
+    {
+      "person": "H001081",
+      "issue": "retirement-and-employee-benefits",
+      "date": "2025-02-10",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For the reasons stated above, Committee Democrats unanimously opposed H.R. 2869 when the Committee on Education and Workforce considered it on September 17, 2025. We urge the House of Representatives to do the same.",
+      "bill": "H.R. 2869",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt491/html/CRPT-119hrpt491.htm",
+      "record_id": "rec-2025-02-10-crpt-119hrpt491-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers state unanimous opposition to H.R. 2869 and urge House opposition."
+    },
+    {
+      "person": "L000602",
+      "issue": "retirement-and-employee-benefits",
+      "date": "2025-02-10",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For the reasons stated above, Committee Democrats unanimously opposed H.R. 2869 when the Committee on Education and Workforce considered it on September 17, 2025. We urge the House of Representatives to do the same.",
+      "bill": "H.R. 2869",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt491/html/CRPT-119hrpt491.htm",
+      "record_id": "rec-2025-02-10-crpt-119hrpt491-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers state unanimous opposition to H.R. 2869 and urge House opposition."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 3136,
+    "prompt_tokens": 3366,
+    "total_tokens": 6502,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2253
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

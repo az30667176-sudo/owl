@@ -1,0 +1,108 @@
+{
+  "generated_at": "2026-11-02T07:48:11.085Z",
+  "staged": "human review required before merging into issues.json",
+  "issues": [
+    {
+      "id": "artificial-intelligence-regulation",
+      "name": "Artificial Intelligence Regulation",
+      "parent": "hsif-innovation",
+      "from": "rec-2025-05-20-crpt-119hrpt106-pt1-minority-views-9"
+    },
+    {
+      "id": "science-based-school-meal-nutrition-standards",
+      "name": "Science-Based School Meal Nutrition Standards",
+      "parent": "hsed-k12",
+      "from": "rec-2025-06-05-crpt-119hrpt142-minority-views-2"
+    },
+    {
+      "id": "renewable-energy-fees-on-federal-lands",
+      "name": "Renewable Energy Fees on Federal Lands",
+      "parent": "hsii-energy",
+      "from": "rec-2025-05-20-crpt-119hrpt106-pt1-dissenting-views-9"
+    },
+    {
+      "id": "clean-energy-tax-credits",
+      "name": "Clean Energy Tax Credits",
+      "parent": "hswm-tax",
+      "from": "rec-2025-05-20-crpt-119hrpt106-pt2-dissenting-views-2"
+    },
+    {
+      "id": "workplace-safety-and-osha-enforcement",
+      "name": "Workplace Safety and OSHA Enforcement",
+      "parent": "hsed-protections",
+      "from": "rec-2026-03-03-crpt-119hrpt538-minority-views-2"
+    },
+    {
+      "id": "professional-boxing-labor-and-contract-protections",
+      "name": "Professional Boxing Labor and Contract Protections",
+      "parent": "hsed-protections",
+      "from": "rec-2026-02-25-crpt-119hrpt524-additional-views-2"
+    },
+    {
+      "id": "college-athletics-compensation-framework",
+      "name": "College Athletics Compensation Framework",
+      "parent": "hsed-higher",
+      "from": "rec-2025-09-11-crpt-119hrpt270-pt2-minority-views-5"
+    },
+    {
+      "id": "health-plan-data-privacy",
+      "name": "Health Plan Data Privacy",
+      "parent": "hsed-help",
+      "from": "rec-2026-09-15-crpt-119hrpt826-minority-views-2"
+    },
+    {
+      "id": "defense-production-act-and-defense-industrial-base",
+      "name": "Defense Production Act and Defense Industrial Base",
+      "parent": "hsas-readiness",
+      "from": "rec-2026-04-15-crpt-119hrpt611-minority-views-2"
+    },
+    {
+      "id": "presidential-impoundment-authority",
+      "name": "Presidential Impoundment Authority",
+      "parent": "hsbu",
+      "from": "rec-2025-09-05-crpt-119hrpt236-dissenting-views-2"
+    },
+    {
+      "id": "foreign-influence-in-k-12-schools",
+      "name": "Foreign Influence in K-12 Schools",
+      "parent": "hsed-k12",
+      "from": "rec-2025-03-05-crpt-119hrpt14-minority-views-2"
+    },
+    {
+      "id": "war-powers-and-congressional-authorization",
+      "name": "War Powers and Congressional Authorization",
+      "parent": "hsas-readiness",
+      "from": "rec-2026-06-15-crpt-119hrpt698-additional-views-2"
+    },
+    {
+      "id": "theft-prevention-and-recovery-act",
+      "name": "Theft Prevention and Recovery Act",
+      "parent": "hsed-help",
+      "from": "rec-2026-03-03-crpt-119hrpt539-minority-views-2"
+    },
+    {
+      "id": "individual-and-corporate-tax-policy",
+      "name": "Individual and Corporate Tax Policy",
+      "parent": "hswm-tax",
+      "from": "rec-2025-05-20-crpt-119hrpt106-pt2-dissenting-views-3"
+    },
+    {
+      "id": "congressional-review-of-midnight-rules",
+      "name": "Congressional Review of Midnight Rules",
+      "parent": "hsgo-doge",
+      "from": "rec-2025-05-20-crpt-119hrpt106-pt1-minority-views-17"
+    },
+    {
+      "id": "child-nutrition-and-school-meals",
+      "name": "Child Nutrition and School Meals",
+      "parent": "hsed-k12",
+      "from": "rec-2025-06-05-crpt-119hrpt142-minority-views-3"
+    },
+    {
+      "id": "reproductive-health-and-autonomy",
+      "name": "Reproductive Health and Autonomy",
+      "parent": "hsed-help",
+      "from": "rec-2026-01-14-crpt-119hrpt447-minority-views-3"
+    }
+  ]
+}

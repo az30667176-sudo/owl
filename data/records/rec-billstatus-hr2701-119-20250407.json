@@ -1,0 +1,28 @@
+{
+  "id": "rec-billstatus-hr2701-119-20250407",
+  "content": "<other>: H.R. 2701 (119th Congress): Fallen Servicemembers Religious Heritage Restoration Act\nSponsor: Rep. Debbie Wasserman Schultz\nCosponsor: Rep. Max L. Miller\nCosponsor: Rep. Daniel S. Goldman\nCosponsor: Rep. Lois Frankel\nCosponsor: Rep. Bradley Scott Schneider\nCosponsor: Rep. Laura Friedman\nCosponsor: Rep. Josh Gottheimer\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2701",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2701",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-04-07",
+    "persons": [
+      "W000797",
+      "M001222",
+      "G000599",
+      "F000462",
+      "S001190",
+      "F000483",
+      "G000583"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2701"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

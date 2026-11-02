@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr5109-119-20260515",
+  "content": "<other>: H.R. 5109 (119th Congress): Transportation Worker Identification Credential Efficiency Act\nCosponsor: Rep. Daniel S. Goldman\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/5109",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/5109",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-05-15",
+    "persons": [
+      "G000599"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/5109"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

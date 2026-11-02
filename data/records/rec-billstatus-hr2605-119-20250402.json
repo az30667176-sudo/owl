@@ -1,0 +1,47 @@
+{
+  "id": "rec-billstatus-hr2605-119-20250402",
+  "content": "<other>: H.R. 2605 (119th Congress): SAVES Act\nSponsor: Rep. Morgan Luttrell\nCosponsor: Rep. Morgan McGarvey\nCosponsor: Rep. Juan Ciscomani\nCosponsor: Rep. Vern Buchanan\nCosponsor: Rep. Eleanor Holmes Norton\nCosponsor: Rep. Derrick Van Orden\nCosponsor: Rep. Gregory F. Murphy\nCosponsor: Rep. Donald G. Davis\nCosponsor: Rep. Claudia Tenney\nCosponsor: Rep. Wesley Hunt\nCosponsor: Rep. David G. Valadao\nCosponsor: Rep. Jason Crow\nCosponsor: Rep. Aumua Amata Coleman Radewagen\nCosponsor: Rep. John H. Rutherford\nCosponsor: Rep. Jennifer A. Kiggans\nCosponsor: Rep. Christopher R. Deluzio\nCosponsor: Rep. Nancy Mace\nCosponsor: Rep. Mariannette Miller-Meeks\nCosponsor: Rep. Steve Cohen\nCosponsor: Rep. Michael Lawler\nCosponsor: Rep. Michael A. Rulli\nCosponsor: Rep. Pete Stauber\nCosponsor: Rep. Craig A. Goldman\nCosponsor: Rep. August Pfluger\nCosponsor: Rep. Kimberlyn King-Hinds\nCosponsor: Rep. Nick LaLota\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2605",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2605",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-04-02",
+    "persons": [
+      "L000603",
+      "M001220",
+      "C001133",
+      "B001260",
+      "N000147",
+      "V000135",
+      "M001210",
+      "D000230",
+      "T000478",
+      "H001095",
+      "V000129",
+      "C001121",
+      "R000600",
+      "R000609",
+      "K000399",
+      "D000530",
+      "M000194",
+      "M001215",
+      "C001068",
+      "L000599",
+      "R000619",
+      "S001212",
+      "G000601",
+      "P000048",
+      "K000404",
+      "L000598"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2605"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

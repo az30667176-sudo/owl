@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr5910-119-20251216",
+  "content": "<other>: H.R. 5910 (119th Congress): To authorize leases of up to 99 years for land held in trust for federally recognized Indian Tribes.\nCosponsor: Rep. Yassamin Ansari\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/5910",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/5910",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-12-16",
+    "persons": [
+      "A000381"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/5910"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

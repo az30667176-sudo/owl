@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr1823-119-20250304",
+  "content": "<other>: H.R. 1823 (119th Congress): VA Budget Shortfall Accountability Act\nSponsor: Rep. Jack Bergman\nCosponsor: Rep. Mike Bost\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1823",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1823",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-04",
+    "persons": [
+      "B001301",
+      "B001295"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1823"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

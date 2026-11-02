@@ -1,0 +1,66 @@
+{
+  "record_id": "rec-2026-05-26-crpt-119hrpt669-supplemental-views-2",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:45:33.063Z",
+  "accepted": [
+    {
+      "person": "S000185",
+      "issue": "higher-education-and-student-aid",
+      "date": "2026-05-26",
+      "score": -0.7,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "we believe this legislation is not required in order for FSA to continue this work.",
+      "bill": "H.R. 7892",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt669/html/CRPT-119hrpt669.htm",
+      "record_id": "rec-2026-05-26-crpt-119hrpt669-supplemental-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Scott states the codification bill is unnecessary for continued fraud-prevention work."
+    },
+    {
+      "person": "S000185",
+      "issue": "higher-education-and-student-aid",
+      "date": "2026-05-26",
+      "score": -0.6,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "we believe the definition of reasonable suspicion must be narrowed to protect institutions and student populations from being politically targeted due to founded or unfounded concerns unrelated to identity fraud",
+      "bill": "H.R. 7892",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt669/html/CRPT-119hrpt669.htm",
+      "record_id": "rec-2026-05-26-crpt-119hrpt669-supplemental-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Scott calls for narrowing the reasonable-suspicion standard to protect institutions and students."
+    },
+    {
+      "person": "S000185",
+      "issue": "higher-education-and-student-aid",
+      "date": "2026-05-26",
+      "score": -0.6,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats expressed concerns that certain student populations may be disproportionately impacted by the proposed fraud detection framework.",
+      "bill": "H.R. 7892",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt669/html/CRPT-119hrpt669.htm",
+      "record_id": "rec-2026-05-26-crpt-119hrpt669-supplemental-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Scott expresses concern the framework could disproportionately harm certain student populations."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2169,
+    "prompt_tokens": 4799,
+    "total_tokens": 6968,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1863
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

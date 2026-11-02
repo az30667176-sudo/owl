@@ -1,0 +1,25 @@
+{
+  "id": "rec-2026-02-25-crpt-119hrpt532-minority-views-2",
+  "content": "<Rep. Maxine Waters, Rep. Al Green, Rep. Joyce Beatty, Rep. Rashida Tlaib, Rep. Sylvia R. Garcia, Rep. Nikema Williams>: \\17\\ FRED, Nominal Gross Domestic Product for United States (accessed Jan. 19, 2026); and FRED, Consumer Price Index for All Urban Wage Earners and Clerical Workers: All Items in U.S. City Average (accessed Jan. 19, 2026).\n\\18\\ Federal Register, FDIC Final Rule: Adjusting and Indexing Certain Regulatory Thresholds (Dec. 4, 2025).\n\\19\\ See Bank Policy Institute (BPI), Adjusting Regulatory Thresholds for Economic Growth (Sep. 9, 2024); BPI, The Economy Evolves Over Time--So Should Bank Regulations (Sep. 26, 2025).\n\\20\\ Better Markets, Letter to the House Financial Services Committee re Making Community Banking Great Again Principles (Feb. 20, 2025). For example, the FDIC developed a nuanced definition of community banking organizations that take into account a bank's business lines, foreign assets, deposit base, and geographic footprint, among other criteria that could provide a more tailored regulatory application than a blunt asset-size threshold. See FDIC, Community Banking Study (Dec. 2012), page 1-2.\nAdditionally, the use of nominal GDP as an indexing metric appears to be novel and untested in banking law; to the extent thresholds utilize an index, they often utilize inflation-based metrics. For example, the dollar threshold for exempting certain large-dollar consumer credit transactions from TILA is adjusted annually based on Consumer Price Index for Urban Wage Earners and Clerical Workers (CPI-W). Regulation CC, implementing the Expedited Funds Availability Act (``EFAA'') modifies thresholds relating to check hold periods utilizing CPI-W every 5 years. Indeed, the approach in this bill is more aggressive than what Trump's banking regulators have recently adopted for other regulatory thresholds. The FDIC recently adopted a final rule that changed numerous regulatory thresholds relating to bank filing procedures, audits, reporting requirements, Orderly Liquidation Authority, and more, however they based the changes on inflation instead of nominal GDP.\\21\\ In the final rule, the FDIC rejected industry arguments that nominal GDP should be used and explained:\n\\21\\ Federal Register, FDIC Final Rule: Adjusting and Indexing Certain Regulatory Thresholds (Dec. 4, 2025).\n``[T]here are several downsides to using GDP for\nthreshold adjustments. GDP is subject to business cycle\nfluctuations that may not always correspond with price\nlevel changes, such as in a ``stagflationary''\nenvironment where stagnant economic growth occurs\nsimultaneously with inflation. Relatedly, GDP in\ncertain cases may grow fast for a period of years,\nfollowed by a downturn marked by slow or negative\ngrowth. Additionally, GDP is a lagging indicator that\nis frequently revised, which may limit the accuracy and\ndurability of threshold adjustments. Finally, the\nintent behind many rules that use asset- based\nthresholds is to target banks of a certain size, rather\nthan a size relative to the broader economy; thus, if\nthe banking industry is growing quickly in real terms\nalongside a rapidly growing economy, banks are still\ngrowing for purposes of the relevant regulations.''\nAmericans for Financial Reform is opposed to H.R. 6553. Instead of focusing on helping community banks, this bill lets their bigger competitors off the hook from sensible safeguards that would ensure the larger risks that they pose to financial stability are fully accounted for.\nFor these reasons, we oppose H.R. 6553.\nSincerely,\nMaxine Waters,\nRanking Member.\nAl Green,\nJoyce Beatty,\nRashida Tlaib,\nSylvia R. Garcia,\nNikema Williams,\nMembers of Congress.",
+  "source": {
+    "url_link": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt532/html/CRPT-119hrpt532.htm",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-02-25",
+    "persons": [
+      "W000187",
+      "G000553",
+      "B001281",
+      "T000481",
+      "G000587",
+      "W000788"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/6553",
+      "https://www.congress.gov/bill/115th-congress/senate-bill/2155"
+    ]
+  }
+}

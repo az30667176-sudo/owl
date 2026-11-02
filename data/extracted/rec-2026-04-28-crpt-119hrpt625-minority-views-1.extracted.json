@@ -1,0 +1,36 @@
+{
+  "record_id": "rec-2026-04-28-crpt-119hrpt625-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:27:02.495Z",
+  "accepted": [
+    {
+      "person": "P000034",
+      "issue": "environmental-regulation",
+      "date": "2026-04-28",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "We oppose H.R. 161, the ``New Source Review Permitting Improvement Act,'' which amends the Clean Air Act (CAA) to allow increases in cancer causing pollution at facilities by manipulating how emissions are measured under the New Source Review (NSR) program, and creating sweeping exemptions for nearly every facility from having to install pollution controls.",
+      "bill": "H.R. 161, the ``New Source Review Permitting Improvement Act''",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt625/html/CRPT-119hrpt625.htm",
+      "record_id": "rec-2026-04-28-crpt-119hrpt625-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote explicitly opposes H.R. 161 because it would increase pollution and exempt facilities from installing pollution controls, indicating support for strong environmental regulation."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1279,
+    "prompt_tokens": 3582,
+    "total_tokens": 4861,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1083
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

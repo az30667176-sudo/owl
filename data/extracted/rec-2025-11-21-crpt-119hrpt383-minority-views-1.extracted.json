@@ -1,0 +1,51 @@
+{
+  "record_id": "rec-2025-11-21-crpt-119hrpt383-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:26:05.281Z",
+  "accepted": [
+    {
+      "person": "V000081",
+      "issue": "small-business-programs",
+      "date": "2025-11-21",
+      "score": 0.7,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "I acknowledge poorly crafted regulations can be onerous and burdensome for small businesses; however, it is important to find ways to balance the shared goal of minimizing the burdens and achieving the intended effects of regulations.",
+      "bill": "DUMP Red Tape Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt383/html/CRPT-119hrpt383.htm",
+      "record_id": "rec-2025-11-21-crpt-119hrpt383-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote supports balanced small-business regulation that minimizes burdens while preserving intended protections."
+    },
+    {
+      "person": "V000081",
+      "issue": "health-programs-and-research",
+      "date": "2025-11-21",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Similarly, Medicaid and health care cuts and tariffs are actively harming America's main streets by reducing the workforce and increasing operating costs.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt383/html/CRPT-119hrpt383.htm",
+      "record_id": "rec-2025-11-21-crpt-119hrpt383-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote states that Medicaid and health care cuts harm small businesses by reducing workforce and raising costs."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2324,
+    "prompt_tokens": 4474,
+    "total_tokens": 6798,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2104
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

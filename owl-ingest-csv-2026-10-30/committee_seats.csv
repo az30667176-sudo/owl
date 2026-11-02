@@ -1,0 +1,873 @@
+bioguide_id,name,party,state,committee_code,committee_name,role,rank,side
+T000467,Rep. Glenn Thompson,R,PA,HSAG,House Committee on Agriculture,chair,1,majority
+C001119,Rep. Angie Craig,D,MN,HSAG,House Committee on Agriculture,ranking,1,minority
+L000491,Rep. Frank D. Lucas,R,OK,HSAG,House Committee on Agriculture,member,2,majority
+C001059,Rep. Jim Costa,D,CA,HSAG,House Committee on Agriculture,member,2,minority
+S001189,Rep. Austin Scott,R,GA,HSAG,House Committee on Agriculture,member,3,majority
+M000312,Rep. James P. McGovern,D,MA,HSAG,House Committee on Agriculture,member,3,minority
+C001087,"Rep. Eric A. ""Rick"" Crawford",R,AR,HSAG,House Committee on Agriculture,member,4,majority
+A000370,Rep. Alma S. Adams,D,NC,HSAG,House Committee on Agriculture,member,4,minority
+D000616,Rep. Scott DesJarlais,R,TN,HSAG,House Committee on Agriculture,member,5,majority
+H001081,Rep. Jahana Hayes,D,CT,HSAG,House Committee on Agriculture,member,5,minority
+R000603,Rep. David Rouzer,R,NC,HSAG,House Committee on Agriculture,member,6,majority
+B001313,Rep. Shontel M. Brown,D,OH,HSAG,House Committee on Agriculture,member,6,minority
+K000388,Rep. Trent Kelly,R,MS,HSAG,House Committee on Agriculture,member,7,majority
+D000629,Rep. Sharice Davids,D,KS,HSAG,House Committee on Agriculture,member,7,minority
+B001298,Rep. Don Bacon,R,NE,HSAG,House Committee on Agriculture,member,8,majority
+S001226,Rep. Andrea Salinas,D,OR,HSAG,House Committee on Agriculture,member,8,minority
+B001295,Rep. Mike Bost,R,IL,HSAG,House Committee on Agriculture,member,9,majority
+D000230,Rep. Donald G. Davis,D,NC,HSAG,House Committee on Agriculture,member,9,minority
+J000301,Rep. Dusty Johnson,R,SD,HSAG,House Committee on Agriculture,member,10,majority
+T000487,Rep. Jill N. Tokuda,D,HI,HSAG,House Committee on Agriculture,member,10,minority
+B001307,Rep. James R. Baird,R,IN,HSAG,House Committee on Agriculture,member,11,majority
+B001315,Rep. Nikki Budzinski,D,IL,HSAG,House Committee on Agriculture,member,11,minority
+M000871,Rep. Tracey Mann,R,KS,HSAG,House Committee on Agriculture,member,12,majority
+S001225,Rep. Eric Sorensen,D,IL,HSAG,House Committee on Agriculture,member,12,minority
+F000446,Rep. Randy Feenstra,R,IA,HSAG,House Committee on Agriculture,member,13,majority
+V000136,Rep. Gabe Vasquez,D,NM,HSAG,House Committee on Agriculture,member,13,minority
+M001211,Rep. Mary E. Miller,R,IL,HSAG,House Committee on Agriculture,member,14,majority
+J000309,Rep. Jonathan L. Jackson,D,IL,HSAG,House Committee on Agriculture,member,14,minority
+M001212,Rep. Barry Moore,R,AL,HSAG,House Committee on Agriculture,member,15,majority
+T000488,Rep. Shri Thanedar,D,MI,HSAG,House Committee on Agriculture,member,15,minority
+C001039,Rep. Kat Cammack,R,FL,HSAG,House Committee on Agriculture,member,16,majority
+G000605,Rep. Adam Gray,D,CA,HSAG,House Committee on Agriculture,member,16,minority
+F000475,Rep. Brad Finstad,R,MN,HSAG,House Committee on Agriculture,member,17,majority
+M001237,Rep. Kristen McDonald Rivet,D,MI,HSAG,House Committee on Agriculture,member,17,minority
+R000612,Rep. John W. Rose,R,TN,HSAG,House Committee on Agriculture,member,18,majority
+F000481,Rep. Shomari Figures,D,AL,HSAG,House Committee on Agriculture,member,18,minority
+J000304,Rep. Ronny Jackson,R,TX,HSAG,House Committee on Agriculture,member,19,majority
+V000138,Rep. Eugene Simon Vindman,D,VA,HSAG,House Committee on Agriculture,member,19,minority
+D000594,Rep. Monica De La Cruz,R,TX,HSAG,House Committee on Agriculture,member,20,majority
+R000622,Rep. Josh Riley,D,NY,HSAG,House Committee on Agriculture,member,20,minority
+N000193,Rep. Zachary Nunn,R,IA,HSAG,House Committee on Agriculture,member,21,majority
+M001231,Rep. John W. Mannion,D,NY,HSAG,House Committee on Agriculture,member,21,minority
+V000135,Rep. Derrick Van Orden,R,WI,HSAG,House Committee on Agriculture,member,22,majority
+M001232,Rep. April McClain Delaney,D,MD,HSAG,House Committee on Agriculture,member,22,minority
+N000189,Rep. Dan Newhouse,R,WA,HSAG,House Committee on Agriculture,member,23,majority
+P000597,Rep. Chellie Pingree,D,ME,HSAG,House Committee on Agriculture,member,23,minority
+W000829,Rep. Tony Wied,R,WI,HSAG,House Committee on Agriculture,member,24,majority
+C001112,Rep. Salud O. Carbajal,D,CA,HSAG,House Committee on Agriculture,member,24,minority
+B001327,"Rep. Robert P. Bresnahan, Jr.",R,PA,HSAG,House Committee on Agriculture,member,25,majority
+M001233,Rep. Mark B. Messmer,R,IN,HSAG,House Committee on Agriculture,member,26,majority
+H001102,Rep. Mark Harris,R,NC,HSAG,House Committee on Agriculture,member,27,majority
+T000490,Rep. David J. Taylor,R,OH,HSAG,House Committee on Agriculture,member,28,majority
+V000129,Rep. David G. Valadao,R,CA,HSAG,House Committee on Agriculture,member,29,majority
+C001053,Rep. Tom Cole,R,OK,HSAP,House Committee on Appropriations,chair,1,majority
+D000216,Rep. Rosa L. DeLauro,D,CT,HSAP,House Committee on Appropriations,ranking,1,minority
+R000395,Rep. Harold Rogers,R,KY,HSAP,House Committee on Appropriations,member,2,majority
+H000874,Rep. Steny H. Hoyer,D,MD,HSAP,House Committee on Appropriations,member,2,minority
+A000055,Rep. Robert B. Aderholt,R,AL,HSAP,House Committee on Appropriations,member,3,majority
+K000009,Rep. Marcy Kaptur,D,OH,HSAP,House Committee on Appropriations,member,3,minority
+S001148,Rep. Michael K. Simpson,R,ID,HSAP,House Committee on Appropriations,member,4,majority
+C000537,Rep. James E. Clyburn,D,SC,HSAP,House Committee on Appropriations,member,4,minority
+C001051,Rep. John R. Carter,R,TX,HSAP,House Committee on Appropriations,member,5,majority
+B000490,"Rep. Sanford D. Bishop, Jr.",D,GA,HSAP,House Committee on Appropriations,member,5,minority
+C000059,Rep. Ken Calvert,R,CA,HSAP,House Committee on Appropriations,member,6,majority
+M001143,Rep. Betty McCollum,D,MN,HSAP,House Committee on Appropriations,member,6,minority
+D000600,Rep. Mario Diaz-Balart,R,FL,HSAP,House Committee on Appropriations,member,7,majority
+W000797,Rep. Debbie Wasserman Schultz,D,FL,HSAP,House Committee on Appropriations,member,7,minority
+W000809,Rep. Steve Womack,R,AR,HSAP,House Committee on Appropriations,member,8,majority
+C001063,Rep. Henry Cuellar,D,TX,HSAP,House Committee on Appropriations,member,8,minority
+F000459,"Rep. Charles J. ""Chuck"" Fleischmann",R,TN,HSAP,House Committee on Appropriations,member,9,majority
+P000597,Rep. Chellie Pingree,D,ME,HSAP,House Committee on Appropriations,member,9,minority
+J000295,Rep. David P. Joyce,R,OH,HSAP,House Committee on Appropriations,member,10,majority
+Q000023,Rep. Mike Quigley,D,IL,HSAP,House Committee on Appropriations,member,10,minority
+H001052,Rep. Andy Harris,R,MD,HSAP,House Committee on Appropriations,member,11,majority
+M001188,Rep. Grace Meng,D,NY,HSAP,House Committee on Appropriations,member,11,minority
+A000369,Rep. Mark E. Amodei,R,NV,HSAP,House Committee on Appropriations,member,12,majority
+P000607,Rep. Mark Pocan,D,WI,HSAP,House Committee on Appropriations,member,12,minority
+V000129,Rep. David G. Valadao,R,CA,HSAP,House Committee on Appropriations,member,13,majority
+A000371,Rep. Pete Aguilar,D,CA,HSAP,House Committee on Appropriations,member,13,minority
+N000189,Rep. Dan Newhouse,R,WA,HSAP,House Committee on Appropriations,member,14,majority
+F000462,Rep. Lois Frankel,D,FL,HSAP,House Committee on Appropriations,member,14,minority
+M001194,Rep. John R. Moolenaar,R,MI,HSAP,House Committee on Appropriations,member,15,majority
+W000822,Rep. Bonnie Watson Coleman,D,NJ,HSAP,House Committee on Appropriations,member,15,minority
+R000609,Rep. John H. Rutherford,R,FL,HSAP,House Committee on Appropriations,member,16,majority
+T000474,Rep. Norma J. Torres,D,CA,HSAP,House Committee on Appropriations,member,16,minority
+C001118,Rep. Ben Cline,R,VA,HSAP,House Committee on Appropriations,member,17,majority
+C001055,Rep. Ed Case,D,HI,HSAP,House Committee on Appropriations,member,17,minority
+R000610,Rep. Guy Reschenthaler,R,PA,HSAP,House Committee on Appropriations,member,18,majority
+E000297,Rep. Adriano Espaillat,D,NY,HSAP,House Committee on Appropriations,member,18,minority
+H001091,Rep. Ashley Hinson,R,IA,HSAP,House Committee on Appropriations,member,19,majority
+H001090,Rep. Josh Harder,D,CA,HSAP,House Committee on Appropriations,member,19,minority
+L000595,Rep. Julia Letlow,R,LA,HSAP,House Committee on Appropriations,member,20,majority
+U000040,Rep. Lauren Underwood,D,IL,HSAP,House Committee on Appropriations,member,20,minority
+C001115,Rep. Michael Cloud,R,TX,HSAP,House Committee on Appropriations,member,21,majority
+L000590,Rep. Susie Lee,D,NV,HSAP,House Committee on Appropriations,member,21,minority
+G000591,Rep. Michael Guest,R,MS,HSAP,House Committee on Appropriations,member,22,majority
+M001206,Rep. Joseph D. Morelle,D,NY,HSAP,House Committee on Appropriations,member,22,minority
+Z000018,Rep. Ryan K. Zinke,R,MT,HSAP,House Committee on Appropriations,member,23,majority
+L000593,Rep. Mike Levin,D,CA,HSAP,House Committee on Appropriations,member,23,minority
+C001116,Rep. Andrew S. Clyde,R,GA,HSAP,House Committee on Appropriations,member,24,majority
+D000631,Rep. Madeleine Dean,D,PA,HSAP,House Committee on Appropriations,member,24,minority
+B000740,Rep. Stephanie I. Bice,R,OK,HSAP,House Committee on Appropriations,member,25,majority
+E000299,Rep. Veronica Escobar,D,TX,HSAP,House Committee on Appropriations,member,25,minority
+F000472,Rep. Scott Franklin,R,FL,HSAP,House Committee on Appropriations,member,26,majority
+M001214,Rep. Frank J. Mrvan,D,IN,HSAP,House Committee on Appropriations,member,26,minority
+E000071,Rep. Jake Ellzey,R,TX,HSAP,House Committee on Appropriations,member,27,majority
+G000600,Rep. Marie Gluesenkamp Perez,D,WA,HSAP,House Committee on Appropriations,member,27,minority
+C001133,Rep. Juan Ciscomani,R,AZ,HSAP,House Committee on Appropriations,member,28,majority
+I000058,Rep. Glenn Ivey,D,MD,HSAP,House Committee on Appropriations,member,28,minority
+E000246,Rep. Chuck Edwards,R,NC,HSAP,House Committee on Appropriations,member,29,majority
+A000379,Rep. Mark Alford,R,MO,HSAP,House Committee on Appropriations,member,30,majority
+L000598,Rep. Nick LaLota,R,NY,HSAP,House Committee on Appropriations,member,31,majority
+S001220,Rep. Dale W. Strong,R,AL,HSAP,House Committee on Appropriations,member,32,majority
+M001228,Rep. Celeste Maloy,R,UT,HSAP,House Committee on Appropriations,member,33,majority
+M001235,Rep. Riley M. Moore,R,WV,HSAP,House Committee on Appropriations,member,34,majority
+S001229,Rep. Jefferson Shreve,R,IN,HSAP,House Committee on Appropriations,member,35,majority
+R000575,Rep. Mike Rogers,R,AL,HSAS,House Committee on Armed Services,chair,1,majority
+S000510,Rep. Adam Smith,D,WA,HSAS,House Committee on Armed Services,ranking,1,minority
+W000795,Rep. Joe Wilson,R,SC,HSAS,House Committee on Armed Services,member,2,majority
+C001069,Rep. Joe Courtney,D,CT,HSAS,House Committee on Armed Services,member,2,minority
+T000463,Rep. Michael R. Turner,R,OH,HSAS,House Committee on Armed Services,member,3,majority
+G000559,Rep. John Garamendi,D,CA,HSAS,House Committee on Armed Services,member,3,minority
+W000804,Rep. Robert J. Wittman,R,VA,HSAS,House Committee on Armed Services,member,4,majority
+N000188,Rep. Donald Norcross,D,NJ,HSAS,House Committee on Armed Services,member,4,minority
+S001189,Rep. Austin Scott,R,GA,HSAS,House Committee on Armed Services,member,5,majority
+M001196,Rep. Seth Moulton,D,MA,HSAS,House Committee on Armed Services,member,5,minority
+G000546,Rep. Sam Graves,R,MO,HSAS,House Committee on Armed Services,member,6,majority
+C001112,Rep. Salud O. Carbajal,D,CA,HSAS,House Committee on Armed Services,member,6,minority
+S001196,Rep. Elise M. Stefanik,R,NY,HSAS,House Committee on Armed Services,member,7,majority
+K000389,Rep. Ro Khanna,D,CA,HSAS,House Committee on Armed Services,member,7,minority
+D000616,Rep. Scott DesJarlais,R,TN,HSAS,House Committee on Armed Services,member,8,majority
+K000375,Rep. William R. Keating,D,MA,HSAS,House Committee on Armed Services,member,8,minority
+K000388,Rep. Trent Kelly,R,MS,HSAS,House Committee on Armed Services,member,9,majority
+H001085,Rep. Chrissy Houlahan,D,PA,HSAS,House Committee on Armed Services,member,9,minority
+B001298,Rep. Don Bacon,R,NE,HSAS,House Committee on Armed Services,member,10,majority
+C001121,Rep. Jason Crow,D,CO,HSAS,House Committee on Armed Services,member,10,minority
+B001301,Rep. Jack Bergman,R,MI,HSAS,House Committee on Armed Services,member,11,majority
+G000592,Rep. Jared F. Golden,D,ME,HSAS,House Committee on Armed Services,member,11,minority
+J000304,Rep. Ronny Jackson,R,TX,HSAS,House Committee on Armed Services,member,12,majority
+J000305,Rep. Sara Jacobs,D,CA,HSAS,House Committee on Armed Services,member,12,minority
+F000246,Rep. Pat Fallon,R,TX,HSAS,House Committee on Armed Services,member,13,majority
+S001159,Rep. Marilyn Strickland,D,WA,HSAS,House Committee on Armed Services,member,13,minority
+G000593,Rep. Carlos A. Gimenez,R,FL,HSAS,House Committee on Armed Services,member,14,majority
+R000579,Rep. Patrick Ryan,D,NY,HSAS,House Committee on Armed Services,member,14,minority
+M000194,Rep. Nancy Mace,R,SC,HSAS,House Committee on Armed Services,member,15,majority
+V000136,Rep. Gabe Vasquez,D,NM,HSAS,House Committee on Armed Services,member,15,minority
+F000475,Rep. Brad Finstad,R,MN,HSAS,House Committee on Armed Services,member,16,majority
+D000530,Rep. Christopher R. Deluzio,D,PA,HSAS,House Committee on Armed Services,member,16,minority
+L000603,Rep. Morgan Luttrell,R,TX,HSAS,House Committee on Armed Services,member,17,majority
+T000487,Rep. Jill N. Tokuda,D,HI,HSAS,House Committee on Armed Services,member,17,minority
+K000399,Rep. Jennifer A. Kiggans,R,VA,HSAS,House Committee on Armed Services,member,18,majority
+D000230,Rep. Donald G. Davis,D,NC,HSAS,House Committee on Armed Services,member,18,minority
+M001219,Rep. James C. Moylan,R,GU,HSAS,House Committee on Armed Services,member,19,majority
+C001123,"Rep. Gilbert Ray Cisneros, Jr.",D,CA,HSAS,House Committee on Armed Services,member,19,minority
+M001216,Rep. Cory Mills,R,FL,HSAS,House Committee on Armed Services,member,20,majority
+S001225,Rep. Eric Sorensen,D,IL,HSAS,House Committee on Armed Services,member,20,minority
+M001218,Rep. Richard McCormick,R,GA,HSAS,House Committee on Armed Services,member,21,majority
+G000604,Rep. Maggie Goodlander,D,NH,HSAS,House Committee on Armed Services,member,21,minority
+G000589,Rep. Lance Gooden,R,TX,HSAS,House Committee on Armed Services,member,22,majority
+E000301,Rep. Sarah Elfreth,D,MD,HSAS,House Committee on Armed Services,member,22,minority
+H001077,Rep. Clay Higgins,R,LA,HSAS,House Committee on Armed Services,member,23,majority
+W000830,Rep. George Whitesides,D,CA,HSAS,House Committee on Armed Services,member,23,minority
+V000135,Rep. Derrick Van Orden,R,WI,HSAS,House Committee on Armed Services,member,24,majority
+T000491,Rep. Derek Tran,D,CA,HSAS,House Committee on Armed Services,member,24,minority
+M001239,Rep. John J. McGuire III,R,VA,HSAS,House Committee on Armed Services,member,25,majority
+V000138,Rep. Eugene Simon Vindman,D,VA,HSAS,House Committee on Armed Services,member,25,minority
+H001101,Rep. Pat Harrigan,R,NC,HSAS,House Committee on Armed Services,member,26,majority
+B001324,Rep. Wesley Bell,D,MO,HSAS,House Committee on Armed Services,member,26,minority
+M001233,Rep. Mark B. Messmer,R,IN,HSAS,House Committee on Armed Services,member,27,majority
+C001136,"Rep. Herbert C. Conaway, Jr.",D,NJ,HSAS,House Committee on Armed Services,member,27,minority
+S001228,Rep. Derek Schmidt,R,KS,HSAS,House Committee on Armed Services,member,28,majority
+C001137,Rep. Jeff Crank,R,CO,HSAS,House Committee on Armed Services,member,29,majority
+H001098,Rep. Abraham J. Hamadeh,R,AZ,HSAS,House Committee on Armed Services,member,30,majority
+H001072,Rep. J. French Hill,R,AR,HSBA,House Committee on Financial Services,chair,1,majority
+W000187,Rep. Maxine Waters,D,CA,HSBA,House Committee on Financial Services,ranking,1,minority
+L000491,Rep. Frank D. Lucas,R,OK,HSBA,House Committee on Financial Services,member,2,majority
+V000081,Rep. Nydia M. Velázquez,D,NY,HSBA,House Committee on Financial Services,member,2,minority
+S000250,Rep. Pete Sessions,R,TX,HSBA,House Committee on Financial Services,member,3,majority
+S000344,Rep. Brad Sherman,D,CA,HSBA,House Committee on Financial Services,member,3,minority
+H001058,Rep. Bill Huizenga,R,MI,HSBA,House Committee on Financial Services,member,4,majority
+M001137,Rep. Gregory W. Meeks,D,NY,HSBA,House Committee on Financial Services,member,4,minority
+W000812,Rep. Ann Wagner,R,MO,HSBA,House Committee on Financial Services,member,5,majority
+L000562,Rep. Stephen F. Lynch,D,MA,HSBA,House Committee on Financial Services,member,5,minority
+B001282,Rep. Andy Barr,R,KY,HSBA,House Committee on Financial Services,member,6,majority
+G000553,Rep. Al Green,D,TX,HSBA,House Committee on Financial Services,member,6,minority
+W000816,Rep. Roger Williams,R,TX,HSBA,House Committee on Financial Services,member,7,majority
+C001061,Rep. Emanuel Cleaver,D,MO,HSBA,House Committee on Financial Services,member,7,minority
+E000294,Rep. Tom Emmer,R,MN,HSBA,House Committee on Financial Services,member,8,majority
+H001047,Rep. James A. Himes,D,CT,HSBA,House Committee on Financial Services,member,8,minority
+L000583,Rep. Barry Loudermilk,R,GA,HSBA,House Committee on Financial Services,member,9,majority
+F000454,Rep. Bill Foster,D,IL,HSBA,House Committee on Financial Services,member,9,minority
+D000626,Rep. Warren Davidson,R,OH,HSBA,House Committee on Financial Services,member,10,majority
+B001281,Rep. Joyce Beatty,D,OH,HSBA,House Committee on Financial Services,member,10,minority
+R000612,Rep. John W. Rose,R,TN,HSBA,House Committee on Financial Services,member,11,majority
+V000130,Rep. Juan Vargas,D,CA,HSBA,House Committee on Financial Services,member,11,minority
+S001213,Rep. Bryan Steil,R,WI,HSBA,House Committee on Financial Services,member,12,majority
+G000583,Rep. Josh Gottheimer,D,NJ,HSBA,House Committee on Financial Services,member,12,minority
+T000480,Rep. William R. Timmons IV,R,SC,HSBA,House Committee on Financial Services,member,13,majority
+G000581,Rep. Vicente Gonzalez,D,TX,HSBA,House Committee on Financial Services,member,13,minority
+S001188,Rep. Marlin A. Stutzman,R,IN,HSBA,House Committee on Financial Services,member,14,majority
+C001117,Rep. Sean Casten,D,IL,HSBA,House Committee on Financial Services,member,14,minority
+N000190,Rep. Ralph Norman,R,SC,HSBA,House Committee on Financial Services,member,15,majority
+P000617,Rep. Ayanna Pressley,D,MA,HSBA,House Committee on Financial Services,member,15,minority
+M001204,Rep. Daniel Meuser,R,PA,HSBA,House Committee on Financial Services,member,16,majority
+T000481,Rep. Rashida Tlaib,D,MI,HSBA,House Committee on Financial Services,member,16,minority
+K000397,Rep. Young Kim,R,CA,HSBA,House Committee on Financial Services,member,17,majority
+T000486,Rep. Ritchie Torres,D,NY,HSBA,House Committee on Financial Services,member,17,minority
+D000032,Rep. Byron Donalds,R,FL,HSBA,House Committee on Financial Services,member,18,majority
+G000587,Rep. Sylvia R. Garcia,D,TX,HSBA,House Committee on Financial Services,member,18,minority
+G000597,Rep. Andrew R. Garbarino,R,NY,HSBA,House Committee on Financial Services,member,19,majority
+W000788,Rep. Nikema Williams,D,GA,HSBA,House Committee on Financial Services,member,19,minority
+F000471,Rep. Scott Fitzgerald,R,WI,HSBA,House Committee on Financial Services,member,20,majority
+P000620,Rep. Brittany Pettersen,D,CO,HSBA,House Committee on Financial Services,member,20,minority
+F000474,Rep. Mike Flood,R,NE,HSBA,House Committee on Financial Services,member,21,majority
+F000110,Rep. Cleo Fields,D,LA,HSBA,House Committee on Financial Services,member,21,minority
+L000599,Rep. Michael Lawler,R,NY,HSBA,House Committee on Financial Services,member,22,majority
+B001326,Rep. Janelle S. Bynum,D,OR,HSBA,House Committee on Financial Services,member,22,minority
+D000594,Rep. Monica De La Cruz,R,TX,HSBA,House Committee on Financial Services,member,23,majority
+L000607,Rep. Sam T. Liccardo,D,CA,HSBA,House Committee on Financial Services,member,23,minority
+O000175,Rep. Andrew Ogles,R,TN,HSBA,House Committee on Financial Services,member,24,majority
+N000193,Rep. Zachary Nunn,R,IA,HSBA,House Committee on Financial Services,member,25,majority
+M001136,Rep. Lisa C. McClain,R,MI,HSBA,House Committee on Financial Services,member,26,majority
+S000168,Rep. Maria Elvira Salazar,R,FL,HSBA,House Committee on Financial Services,member,27,majority
+D000634,Rep. Troy Downing,R,MT,HSBA,House Committee on Financial Services,member,28,majority
+H001099,Rep. Mike Haridopolos,R,FL,HSBA,House Committee on Financial Services,member,29,majority
+M001236,Rep. Tim Moore,R,NC,HSBA,House Committee on Financial Services,member,30,majority
+A000375,Rep. Jodey C. Arrington,R,TX,HSBU,House Committee on the Budget,chair,1,majority
+B001296,Rep. Brendan F. Boyle,D,PA,HSBU,House Committee on the Budget,ranking,1,minority
+N000190,Rep. Ralph Norman,R,SC,HSBU,House Committee on the Budget,member,2,majority
+D000399,Rep. Lloyd Doggett,D,TX,HSBU,House Committee on the Budget,member,2,minority
+M001177,Rep. Tom McClintock,R,CA,HSBU,House Committee on the Budget,member,3,majority
+S000185,"Rep. Robert C. ""Bobby"" Scott",D,VA,HSBU,House Committee on the Budget,member,3,minority
+G000576,Rep. Glenn Grothman,R,WI,HSBU,House Committee on the Budget,member,4,majority
+P000608,Rep. Scott H. Peters,D,CA,HSBU,House Committee on the Budget,member,4,minority
+S001199,Rep. Lloyd Smucker,R,PA,HSBU,House Committee on the Budget,member,5,majority
+P000613,Rep. Jimmy Panetta,D,CA,HSBU,House Committee on the Budget,member,5,minority
+C001103,"Rep. Earl L. ""Buddy"" Carter",R,GA,HSBU,House Committee on the Budget,member,6,majority
+W000822,Rep. Bonnie Watson Coleman,D,NJ,HSBU,House Committee on the Budget,member,6,minority
+C001118,Rep. Ben Cline,R,VA,HSBU,House Committee on the Budget,member,7,majority
+P000610,Rep. Stacey E. Plaskett,D,VI,HSBU,House Committee on the Budget,member,7,minority
+B001301,Rep. Jack Bergman,R,MI,HSBU,House Committee on the Budget,member,8,majority
+E000299,Rep. Veronica Escobar,D,TX,HSBU,House Committee on the Budget,member,8,minority
+R000614,Rep. Chip Roy,R,TX,HSBU,House Committee on the Budget,member,9,majority
+O000173,Rep. Ilhan Omar,D,MN,HSBU,House Committee on the Budget,member,9,minority
+S001188,Rep. Marlin A. Stutzman,R,IN,HSBU,House Committee on the Budget,member,10,majority
+B001318,Rep. Becca Balint,D,VT,HSBU,House Committee on the Budget,member,10,minority
+M001213,Rep. Blake D. Moore,R,UT,HSBU,House Committee on the Budget,member,11,majority
+K000009,Rep. Marcy Kaptur,D,OH,HSBU,House Committee on the Budget,member,11,minority
+E000298,Rep. Ron Estes,R,KS,HSBU,House Committee on the Budget,member,12,majority
+J000298,Rep. Pramila Jayapal,D,WA,HSBU,House Committee on the Budget,member,12,minority
+B001317,Rep. Josh Brecheen,R,OK,HSBU,House Committee on the Budget,member,13,majority
+C001080,Rep. Judy Chu,D,CA,HSBU,House Committee on the Budget,member,13,minority
+O000019,Rep. Jay Obernolte,R,CA,HSBU,House Committee on the Budget,member,14,majority
+T000469,Rep. Paul Tonko,D,NY,HSBU,House Committee on the Budget,member,14,minority
+C001126,Rep. Mike Carey,R,OH,HSBU,House Committee on the Budget,member,15,majority
+M001220,Rep. Morgan McGarvey,D,KY,HSBU,House Committee on the Budget,member,15,minority
+E000246,Rep. Chuck Edwards,R,NC,HSBU,House Committee on the Budget,member,16,majority
+A000380,Rep. Gabe Amo,D,RI,HSBU,House Committee on the Budget,member,16,minority
+C001116,Rep. Andrew S. Clyde,R,GA,HSBU,House Committee on the Budget,member,17,majority
+H001093,Rep. Erin Houchin,R,IN,HSBU,House Committee on the Budget,member,18,majority
+M001240,Rep. Addison P. McDowell,R,NC,HSBU,House Committee on the Budget,member,19,majority
+G000603,Rep. Brandon Gill,R,TX,HSBU,House Committee on the Budget,member,20,majority
+M001236,Rep. Tim Moore,R,NC,HSBU,House Committee on the Budget,member,21,majority
+W000798,Rep. Tim Walberg,R,MI,HSED,House Committee on Education and Workforce,chair,1,majority
+S000185,"Rep. Robert C. ""Bobby"" Scott",D,VA,HSED,House Committee on Education and Workforce,ranking,1,minority
+W000795,Rep. Joe Wilson,R,SC,HSED,House Committee on Education and Workforce,member,2,majority
+C001069,Rep. Joe Courtney,D,CT,HSED,House Committee on Education and Workforce,member,2,minority
+F000450,Rep. Virginia Foxx,R,NC,HSED,House Committee on Education and Workforce,member,3,majority
+W000808,Rep. Frederica S. Wilson,D,FL,HSED,House Committee on Education and Workforce,member,3,minority
+T000467,Rep. Glenn Thompson,R,PA,HSED,House Committee on Education and Workforce,member,4,majority
+B001278,Rep. Suzanne Bonamici,D,OR,HSED,House Committee on Education and Workforce,member,4,minority
+G000576,Rep. Glenn Grothman,R,WI,HSED,House Committee on Education and Workforce,member,5,majority
+T000472,Rep. Mark Takano,D,CA,HSED,House Committee on Education and Workforce,member,5,minority
+S001196,Rep. Elise M. Stefanik,R,NY,HSED,House Committee on Education and Workforce,member,6,majority
+A000370,Rep. Alma S. Adams,D,NC,HSED,House Committee on Education and Workforce,member,6,minority
+A000372,Rep. Rick W. Allen,R,GA,HSED,House Committee on Education and Workforce,member,7,majority
+D000623,Rep. Mark DeSaulnier,D,CA,HSED,House Committee on Education and Workforce,member,7,minority
+C001108,Rep. James Comer,R,KY,HSED,House Committee on Education and Workforce,member,8,majority
+N000188,Rep. Donald Norcross,D,NJ,HSED,House Committee on Education and Workforce,member,8,minority
+O000086,Rep. Burgess Owens,R,UT,HSED,House Committee on Education and Workforce,member,9,majority
+M001208,Rep. Lucy McBath,D,GA,HSED,House Committee on Education and Workforce,member,9,minority
+M001136,Rep. Lisa C. McClain,R,MI,HSED,House Committee on Education and Workforce,member,10,majority
+H001081,Rep. Jahana Hayes,D,CT,HSED,House Committee on Education and Workforce,member,10,minority
+M001211,Rep. Mary E. Miller,R,IL,HSED,House Committee on Education and Workforce,member,11,majority
+O000173,Rep. Ilhan Omar,D,MN,HSED,House Committee on Education and Workforce,member,11,minority
+L000595,Rep. Julia Letlow,R,LA,HSED,House Committee on Education and Workforce,member,12,majority
+S001215,Rep. Haley M. Stevens,D,MI,HSED,House Committee on Education and Workforce,member,12,minority
+K000401,Rep. Kevin Kiley,I,CA,HSED,House Committee on Education and Workforce,member,13,majority
+C001131,Rep. Greg Casar,D,TX,HSED,House Committee on Education and Workforce,member,13,minority
+R000619,Rep. Michael A. Rulli,R,OH,HSED,House Committee on Education and Workforce,member,14,majority
+L000602,Rep. Summer L. Lee,D,PA,HSED,House Committee on Education and Workforce,member,14,minority
+M001219,Rep. James C. Moylan,R,GU,HSED,House Committee on Education and Workforce,member,15,majority
+M001231,Rep. John W. Mannion,D,NY,HSED,House Committee on Education and Workforce,member,15,minority
+O000177,"Rep. Robert F. Onder, Jr.",R,MO,HSED,House Committee on Education and Workforce,member,16,majority
+G000606,Rep. Adelita S. Grijalva,D,AZ,HSED,House Committee on Education and Workforce,member,16,minority
+M001230,Rep. Ryan Mackenzie,R,PA,HSED,House Committee on Education and Workforce,member,17,majority
+B001322,Rep. Michael Baumgartner,R,WA,HSED,House Committee on Education and Workforce,member,18,majority
+H001102,Rep. Mark Harris,R,NC,HSED,House Committee on Education and Workforce,member,19,majority
+M001233,Rep. Mark B. Messmer,R,IN,HSED,House Committee on Education and Workforce,member,20,majority
+F000484,Rep. Randy Fine,R,FL,HSED,House Committee on Education and Workforce,member,21,majority
+M001199,Rep. Brian J. Mast,R,FL,HSFA,House Committee on Foreign Affairs,chair,1,majority
+M001137,Rep. Gregory W. Meeks,D,NY,HSFA,House Committee on Foreign Affairs,ranking,1,minority
+S000522,Rep. Christopher H. Smith,R,NJ,HSFA,House Committee on Foreign Affairs,member,2,majority
+S000344,Rep. Brad Sherman,D,CA,HSFA,House Committee on Foreign Affairs,member,2,minority
+W000795,Rep. Joe Wilson,R,SC,HSFA,House Committee on Foreign Affairs,member,3,majority
+K000375,Rep. William R. Keating,D,MA,HSFA,House Committee on Foreign Affairs,member,3,minority
+M001157,Rep. Michael T. McCaul,R,TX,HSFA,House Committee on Foreign Affairs,member,4,majority
+B001287,Rep. Ami Bera,D,CA,HSFA,House Committee on Foreign Affairs,member,4,minority
+P000605,Rep. Scott Perry,R,PA,HSFA,House Committee on Foreign Affairs,member,5,majority
+C001091,Rep. Joaquin Castro,D,TX,HSFA,House Committee on Foreign Affairs,member,5,minority
+I000056,Rep. Darrell Issa,R,CA,HSFA,House Committee on Foreign Affairs,member,6,majority
+T000468,Rep. Dina Titus,D,NV,HSFA,House Committee on Foreign Affairs,member,6,minority
+B001309,Rep. Tim Burchett,R,TN,HSFA,House Committee on Foreign Affairs,member,7,majority
+L000582,Rep. Ted Lieu,D,CA,HSFA,House Committee on Foreign Affairs,member,7,minority
+B001282,Rep. Andy Barr,R,KY,HSFA,House Committee on Foreign Affairs,member,8,majority
+J000305,Rep. Sara Jacobs,D,CA,HSFA,House Committee on Foreign Affairs,member,8,minority
+J000304,Rep. Ronny Jackson,R,TX,HSFA,House Committee on Foreign Affairs,member,9,majority
+S001211,Rep. Greg Stanton,D,AZ,HSFA,House Committee on Foreign Affairs,member,9,minority
+K000397,Rep. Young Kim,R,CA,HSFA,House Committee on Foreign Affairs,member,10,majority
+M001217,Rep. Jared Moskowitz,D,FL,HSFA,House Committee on Foreign Affairs,member,10,minority
+S000168,Rep. Maria Elvira Salazar,R,FL,HSFA,House Committee on Foreign Affairs,member,11,majority
+J000309,Rep. Jonathan L. Jackson,D,IL,HSFA,House Committee on Foreign Affairs,member,11,minority
+H001058,Rep. Bill Huizenga,R,MI,HSFA,House Committee on Foreign Affairs,member,12,majority
+K000400,Rep. Sydney Kamlager-Dove,D,CA,HSFA,House Committee on Foreign Affairs,member,12,minority
+R000600,Rep. Aumua Amata Coleman Radewagen,R,AS,HSFA,House Committee on Foreign Affairs,member,13,majority
+C001059,Rep. Jim Costa,D,CA,HSFA,House Committee on Foreign Affairs,member,13,minority
+D000626,Rep. Warren Davidson,R,OH,HSFA,House Committee on Foreign Affairs,member,14,majority
+A000380,Rep. Gabe Amo,D,RI,HSFA,House Committee on Foreign Affairs,member,14,minority
+B001307,Rep. James R. Baird,R,IN,HSFA,House Committee on Foreign Affairs,member,15,majority
+M000687,Rep. Kweisi Mfume,D,MD,HSFA,House Committee on Foreign Affairs,member,15,minority
+K000398,"Rep. Thomas H. Kean, Jr.",R,NJ,HSFA,House Committee on Foreign Affairs,member,16,majority
+J000298,Rep. Pramila Jayapal,D,WA,HSFA,House Committee on Foreign Affairs,member,16,minority
+L000599,Rep. Michael Lawler,R,NY,HSFA,House Committee on Foreign Affairs,member,17,majority
+L000606,Rep. George Latimer,D,NY,HSFA,House Committee on Foreign Affairs,member,17,minority
+M001216,Rep. Cory Mills,R,FL,HSFA,House Committee on Foreign Affairs,member,18,majority
+O000176,"Rep. Johnny Olszewski, Jr.",D,MD,HSFA,House Committee on Foreign Affairs,member,18,minority
+S001224,Rep. Keith Self,R,TX,HSFA,House Committee on Foreign Affairs,member,19,majority
+J000310,Rep. Julie Johnson,D,TX,HSFA,House Committee on Foreign Affairs,member,19,minority
+Z000018,Rep. Ryan K. Zinke,R,MT,HSFA,House Committee on Foreign Affairs,member,20,majority
+M001238,Rep. Sarah McBride,D,DE,HSFA,House Committee on Foreign Affairs,member,20,minority
+M001219,Rep. James C. Moylan,R,GU,HSFA,House Committee on Foreign Affairs,member,21,majority
+S001190,Rep. Bradley Scott Schneider,D,IL,HSFA,House Committee on Foreign Affairs,member,21,minority
+L000596,Rep. Anna Paulina Luna,R,FL,HSFA,House Committee on Foreign Affairs,member,22,majority
+D000631,Rep. Madeleine Dean,D,PA,HSFA,House Committee on Foreign Affairs,member,22,minority
+B001325,Rep. Sheri Biggs,R,SC,HSFA,House Committee on Foreign Affairs,member,23,majority
+W000797,Rep. Debbie Wasserman Schultz,D,FL,HSFA,House Committee on Foreign Affairs,member,23,minority
+B001322,Rep. Michael Baumgartner,R,WA,HSFA,House Committee on Foreign Affairs,member,24,majority
+P000607,Rep. Mark Pocan,D,WI,HSFA,House Committee on Foreign Affairs,member,24,minority
+M001230,Rep. Ryan Mackenzie,R,PA,HSFA,House Committee on Foreign Affairs,member,25,majority
+B001324,Rep. Wesley Bell,D,MO,HSFA,House Committee on Foreign Affairs,member,25,minority
+F000484,Rep. Randy Fine,R,FL,HSFA,House Committee on Foreign Affairs,member,26,majority
+M001222,Rep. Max L. Miller,R,OH,HSFA,House Committee on Foreign Affairs,member,27,majority
+G000607,Rep. James Gallagher,R,CA,HSFA,House Committee on Foreign Affairs,member,28,majority
+C001108,Rep. James Comer,R,KY,HSGO,House Committee on Oversight and Government Reform,chair,1,majority
+G000598,Rep. Robert Garcia,D,CA,HSGO,House Committee on Oversight and Government Reform,ranking,1,minority
+J000289,Rep. Jim Jordan,R,OH,HSGO,House Committee on Oversight and Government Reform,member,2,majority
+N000147,Rep. Eleanor Holmes Norton,D,DC,HSGO,House Committee on Oversight and Government Reform,member,2,minority
+T000463,Rep. Michael R. Turner,R,OH,HSGO,House Committee on Oversight and Government Reform,member,3,majority
+L000562,Rep. Stephen F. Lynch,D,MA,HSGO,House Committee on Oversight and Government Reform,member,3,minority
+G000565,Rep. Paul A. Gosar,R,AZ,HSGO,House Committee on Oversight and Government Reform,member,4,majority
+K000391,Rep. Raja Krishnamoorthi,D,IL,HSGO,House Committee on Oversight and Government Reform,member,4,minority
+F000450,Rep. Virginia Foxx,R,NC,HSGO,House Committee on Oversight and Government Reform,member,5,majority
+K000389,Rep. Ro Khanna,D,CA,HSGO,House Committee on Oversight and Government Reform,member,5,minority
+G000576,Rep. Glenn Grothman,R,WI,HSGO,House Committee on Oversight and Government Reform,member,6,majority
+M000687,Rep. Kweisi Mfume,D,MD,HSGO,House Committee on Oversight and Government Reform,member,6,minority
+C001115,Rep. Michael Cloud,R,TX,HSGO,House Committee on Oversight and Government Reform,member,7,majority
+B001313,Rep. Shontel M. Brown,D,OH,HSGO,House Committee on Oversight and Government Reform,member,7,minority
+P000609,Rep. Gary J. Palmer,R,AL,HSGO,House Committee on Oversight and Government Reform,member,8,majority
+S001218,Rep. Melanie A. Stansbury,D,NM,HSGO,House Committee on Oversight and Government Reform,member,8,minority
+H001077,Rep. Clay Higgins,R,LA,HSGO,House Committee on Oversight and Government Reform,member,9,majority
+F000476,Rep. Maxwell Frost,D,FL,HSGO,House Committee on Oversight and Government Reform,member,9,minority
+S000250,Rep. Pete Sessions,R,TX,HSGO,House Committee on Oversight and Government Reform,member,10,majority
+C001131,Rep. Greg Casar,D,TX,HSGO,House Committee on Oversight and Government Reform,member,10,minority
+B001302,Rep. Andy Biggs,R,AZ,HSGO,House Committee on Oversight and Government Reform,member,11,majority
+C001130,Rep. Jasmine Crockett,D,TX,HSGO,House Committee on Oversight and Government Reform,member,11,minority
+M000194,Rep. Nancy Mace,R,SC,HSGO,House Committee on Oversight and Government Reform,member,12,majority
+R000621,Rep. Emily Randall,D,WA,HSGO,House Committee on Oversight and Government Reform,member,12,minority
+F000246,Rep. Pat Fallon,R,TX,HSGO,House Committee on Oversight and Government Reform,member,13,majority
+S001230,Rep. Suhas Subramanyam,D,VA,HSGO,House Committee on Oversight and Government Reform,member,13,minority
+D000032,Rep. Byron Donalds,R,FL,HSGO,House Committee on Oversight and Government Reform,member,14,majority
+A000381,Rep. Yassamin Ansari,D,AZ,HSGO,House Committee on Oversight and Government Reform,member,14,minority
+P000605,Rep. Scott Perry,R,PA,HSGO,House Committee on Oversight and Government Reform,member,15,majority
+B001324,Rep. Wesley Bell,D,MO,HSGO,House Committee on Oversight and Government Reform,member,15,minority
+T000480,Rep. William R. Timmons IV,R,SC,HSGO,House Committee on Oversight and Government Reform,member,16,majority
+S001231,Rep. Lateefah Simon,D,CA,HSGO,House Committee on Oversight and Government Reform,member,16,minority
+B001309,Rep. Tim Burchett,R,TN,HSGO,House Committee on Oversight and Government Reform,member,17,majority
+M001241,Rep. Dave Min,D,CA,HSGO,House Committee on Oversight and Government Reform,member,17,minority
+B000825,Rep. Lauren Boebert,R,CO,HSGO,House Committee on Oversight and Government Reform,member,18,majority
+W000831,Rep. James R. Walkinshaw,D,VA,HSGO,House Committee on Oversight and Government Reform,member,18,minority
+L000596,Rep. Anna Paulina Luna,R,FL,HSGO,House Committee on Oversight and Government Reform,member,19,majority
+M001245,Rep. Christian D. Menefee,D,TX,HSGO,House Committee on Oversight and Government Reform,member,19,minority
+L000600,Rep. Nicholas A. Langworthy,R,NY,HSGO,House Committee on Oversight and Government Reform,member,20,majority
+P000617,Rep. Ayanna Pressley,D,MA,HSGO,House Committee on Oversight and Government Reform,member,20,minority
+B001316,Rep. Eric Burlison,R,MO,HSGO,House Committee on Oversight and Government Reform,member,21,majority
+T000481,Rep. Rashida Tlaib,D,MI,HSGO,House Committee on Oversight and Government Reform,member,21,minority
+C001132,Rep. Elijah Crane,R,AZ,HSGO,House Committee on Oversight and Government Reform,member,22,majority
+J000311,Rep. Brian Jack,R,GA,HSGO,House Committee on Oversight and Government Reform,member,23,majority
+M001239,Rep. John J. McGuire III,R,VA,HSGO,House Committee on Oversight and Government Reform,member,24,majority
+G000603,Rep. Brandon Gill,R,TX,HSGO,House Committee on Oversight and Government Reform,member,25,majority
+M001218,Rep. Richard McCormick,R,GA,HSGO,House Committee on Oversight and Government Reform,member,26,majority
+S001213,Rep. Bryan Steil,R,WI,HSHA,House Committee on House Administration,chair,1,majority
+M001206,Rep. Joseph D. Morelle,D,NY,HSHA,House Committee on House Administration,ranking,1,minority
+L000583,Rep. Barry Loudermilk,R,GA,HSHA,House Committee on House Administration,member,2,majority
+S001185,Rep. Terri A. Sewell,D,AL,HSHA,House Committee on House Administration,member,2,minority
+G000568,Rep. H. Morgan Griffith,R,VA,HSHA,House Committee on House Administration,member,3,majority
+T000474,Rep. Norma J. Torres,D,CA,HSHA,House Committee on House Administration,member,3,minority
+M001210,Rep. Gregory F. Murphy,R,NC,HSHA,House Committee on House Administration,member,4,majority
+J000310,Rep. Julie Johnson,D,TX,HSHA,House Committee on House Administration,member,4,minority
+B000740,Rep. Stephanie I. Bice,R,OK,HSHA,House Committee on House Administration,member,5,majority
+C001126,Rep. Mike Carey,R,OH,HSHA,House Committee on House Administration,member,6,majority
+L000597,Rep. Laurel M. Lee,R,FL,HSHA,House Committee on House Administration,member,7,majority
+M001211,Rep. Mary E. Miller,R,IL,HSHA,House Committee on House Administration,member,8,majority
+G000597,Rep. Andrew R. Garbarino,R,NY,HSHM,House Committee on Homeland Security,chair,1,majority
+T000193,Rep. Bennie G. Thompson,D,MS,HSHM,House Committee on Homeland Security,ranking,1,minority
+M001157,Rep. Michael T. McCaul,R,TX,HSHM,House Committee on Homeland Security,member,2,majority
+C001110,Rep. J. Luis Correa,D,CA,HSHM,House Committee on Homeland Security,member,2,minority
+G000591,Rep. Michael Guest,R,MS,HSHM,House Committee on Homeland Security,member,3,majority
+T000488,Rep. Shri Thanedar,D,MI,HSHM,House Committee on Homeland Security,member,3,minority
+G000593,Rep. Carlos A. Gimenez,R,FL,HSHM,House Committee on Homeland Security,member,4,majority
+M001223,Rep. Seth Magaziner,D,RI,HSHM,House Committee on Homeland Security,member,4,minority
+P000048,Rep. August Pfluger,R,TX,HSHM,House Committee on Homeland Security,member,5,majority
+G000599,Rep. Daniel S. Goldman,D,NY,HSHM,House Committee on Homeland Security,member,5,minority
+L000603,Rep. Morgan Luttrell,R,TX,HSHM,House Committee on Homeland Security,member,6,majority
+R000617,Rep. Delia C. Ramirez,D,IL,HSHM,House Committee on Homeland Security,member,6,minority
+S001220,Rep. Dale W. Strong,R,AL,HSHM,House Committee on Homeland Security,member,7,majority
+K000402,Rep. Timothy M. Kennedy,D,NY,HSHM,House Committee on Homeland Security,member,7,minority
+B001317,Rep. Josh Brecheen,R,OK,HSHM,House Committee on Homeland Security,member,8,majority
+M001229,Rep. LaMonica McIver,D,NJ,HSHM,House Committee on Homeland Security,member,8,minority
+C001132,Rep. Elijah Crane,R,AZ,HSHM,House Committee on Homeland Security,member,9,majority
+J000310,Rep. Julie Johnson,D,TX,HSHM,House Committee on Homeland Security,member,9,minority
+L000598,Rep. Nick LaLota,R,NY,HSHM,House Committee on Homeland Security,member,10,majority
+H001103,Rep. Pablo José Hernández,D,PR,HSHM,House Committee on Homeland Security,member,10,minority
+O000175,Rep. Andrew Ogles,R,TN,HSHM,House Committee on Homeland Security,member,11,majority
+P000621,Rep. Nellie Pou,D,NJ,HSHM,House Committee on Homeland Security,member,11,minority
+B001325,Rep. Sheri Biggs,R,SC,HSHM,House Committee on Homeland Security,member,12,majority
+W000831,Rep. James R. Walkinshaw,D,VA,HSHM,House Committee on Homeland Security,member,12,minority
+E000300,Rep. Gabe Evans,R,CO,HSHM,House Committee on Homeland Security,member,13,majority
+M001246,Rep. Analilia Mejia,D,NJ,HSHM,House Committee on Homeland Security,member,13,minority
+M001230,Rep. Ryan Mackenzie,R,PA,HSHM,House Committee on Homeland Security,member,14,majority
+C001125,Rep. Troy A. Carter,D,LA,HSHM,House Committee on Homeland Security,member,14,minority
+K000405,Rep. Brad Knott,R,NC,HSHM,House Committee on Homeland Security,member,15,majority
+G000553,Rep. Al Green,D,TX,HSHM,House Committee on Homeland Security,member,15,minority
+F000480,Rep. Vince Fong,R,CA,HSHM,House Committee on Homeland Security,member,16,majority
+V000139,Rep. Matt Van Epps,R,TN,HSHM,House Committee on Homeland Security,member,17,majority
+J000295,Rep. David P. Joyce,R,OH,HSHM,House Committee on Homeland Security,member,18,majority
+G000558,Rep. Brett Guthrie,R,KY,HSIF,House Committee on Energy and Commerce,chair,1,majority
+P000034,"Rep. Frank Pallone, Jr.",D,NJ,HSIF,House Committee on Energy and Commerce,ranking,1,minority
+L000566,Rep. Robert E. Latta,R,OH,HSIF,House Committee on Energy and Commerce,member,2,majority
+D000197,Rep. Diana DeGette,D,CO,HSIF,House Committee on Energy and Commerce,member,2,minority
+G000568,Rep. H. Morgan Griffith,R,VA,HSIF,House Committee on Energy and Commerce,member,3,majority
+S001145,Rep. Janice D. Schakowsky,D,IL,HSIF,House Committee on Energy and Commerce,member,3,minority
+B001257,Rep. Gus M. Bilirakis,R,FL,HSIF,House Committee on Energy and Commerce,member,4,majority
+M001163,Rep. Doris O. Matsui,D,CA,HSIF,House Committee on Energy and Commerce,member,4,minority
+H001067,Rep. Richard Hudson,R,NC,HSIF,House Committee on Energy and Commerce,member,5,majority
+C001066,Rep. Kathy Castor,D,FL,HSIF,House Committee on Energy and Commerce,member,5,minority
+C001103,"Rep. Earl L. ""Buddy"" Carter",R,GA,HSIF,House Committee on Energy and Commerce,member,6,majority
+T000469,Rep. Paul Tonko,D,NY,HSIF,House Committee on Energy and Commerce,member,6,minority
+P000609,Rep. Gary J. Palmer,R,AL,HSIF,House Committee on Energy and Commerce,member,7,majority
+C001067,Rep. Yvette D. Clarke,D,NY,HSIF,House Committee on Energy and Commerce,member,7,minority
+D000628,Rep. Neal P. Dunn,R,FL,HSIF,House Committee on Energy and Commerce,member,8,majority
+R000599,Rep. Raul Ruiz,D,CA,HSIF,House Committee on Energy and Commerce,member,8,minority
+C001120,Rep. Dan Crenshaw,R,TX,HSIF,House Committee on Energy and Commerce,member,9,majority
+P000608,Rep. Scott H. Peters,D,CA,HSIF,House Committee on Energy and Commerce,member,9,minority
+J000302,Rep. John Joyce,R,PA,HSIF,House Committee on Energy and Commerce,member,10,majority
+D000624,Rep. Debbie Dingell,D,MI,HSIF,House Committee on Energy and Commerce,member,10,minority
+W000814,"Rep. Randy K. Weber, Sr.",R,TX,HSIF,House Committee on Energy and Commerce,member,11,majority
+V000131,Rep. Marc A. Veasey,D,TX,HSIF,House Committee on Energy and Commerce,member,11,minority
+A000372,Rep. Rick W. Allen,R,GA,HSIF,House Committee on Energy and Commerce,member,12,majority
+K000385,Rep. Robin L. Kelly,D,IL,HSIF,House Committee on Energy and Commerce,member,12,minority
+B001306,Rep. Troy Balderson,R,OH,HSIF,House Committee on Energy and Commerce,member,13,majority
+B001300,Rep. Nanette Diaz Barragán,D,CA,HSIF,House Committee on Energy and Commerce,member,13,minority
+F000469,Rep. Russ Fulcher,R,ID,HSIF,House Committee on Energy and Commerce,member,14,majority
+S001200,Rep. Darren Soto,D,FL,HSIF,House Committee on Energy and Commerce,member,14,minority
+P000048,Rep. August Pfluger,R,TX,HSIF,House Committee on Energy and Commerce,member,15,majority
+S001216,Rep. Kim Schrier,D,WA,HSIF,House Committee on Energy and Commerce,member,15,minority
+H001086,Rep. Diana Harshbarger,R,TN,HSIF,House Committee on Energy and Commerce,member,16,majority
+T000482,Rep. Lori Trahan,D,MA,HSIF,House Committee on Energy and Commerce,member,16,minority
+M001215,Rep. Mariannette Miller-Meeks,R,IA,HSIF,House Committee on Energy and Commerce,member,17,majority
+F000468,Rep. Lizzie Fletcher,D,TX,HSIF,House Committee on Energy and Commerce,member,17,minority
+C001039,Rep. Kat Cammack,R,FL,HSIF,House Committee on Energy and Commerce,member,18,majority
+O000172,Rep. Alexandria Ocasio-Cortez,D,NY,HSIF,House Committee on Energy and Commerce,member,18,minority
+O000019,Rep. Jay Obernolte,R,CA,HSIF,House Committee on Energy and Commerce,member,19,majority
+A000148,Rep. Jake Auchincloss,D,MA,HSIF,House Committee on Energy and Commerce,member,19,minority
+J000307,Rep. John James,R,MI,HSIF,House Committee on Energy and Commerce,member,20,majority
+C001125,Rep. Troy A. Carter,D,LA,HSIF,House Committee on Energy and Commerce,member,20,minority
+B000668,Rep. Cliff Bentz,R,OR,HSIF,House Committee on Energy and Commerce,member,21,majority
+M001226,Rep. Robert Menendez,D,NJ,HSIF,House Committee on Energy and Commerce,member,21,minority
+H001093,Rep. Erin Houchin,R,IN,HSIF,House Committee on Energy and Commerce,member,22,majority
+M001225,Rep. Kevin Mullin,D,CA,HSIF,House Committee on Energy and Commerce,member,22,minority
+F000478,Rep. Russell Fry,R,SC,HSIF,House Committee on Energy and Commerce,member,23,majority
+L000601,Rep. Greg Landsman,D,OH,HSIF,House Committee on Energy and Commerce,member,23,minority
+L000597,Rep. Laurel M. Lee,R,FL,HSIF,House Committee on Energy and Commerce,member,24,majority
+M001227,Rep. Jennifer L. McClellan,D,VA,HSIF,House Committee on Energy and Commerce,member,24,minority
+L000600,Rep. Nicholas A. Langworthy,R,NY,HSIF,House Committee on Energy and Commerce,member,25,majority
+K000398,"Rep. Thomas H. Kean, Jr.",R,NJ,HSIF,House Committee on Energy and Commerce,member,26,majority
+R000619,Rep. Michael A. Rulli,R,OH,HSIF,House Committee on Energy and Commerce,member,27,majority
+E000300,Rep. Gabe Evans,R,CO,HSIF,House Committee on Energy and Commerce,member,28,majority
+G000601,Rep. Craig A. Goldman,R,TX,HSIF,House Committee on Energy and Commerce,member,29,majority
+F000482,Rep. Julie Fedorchak,R,ND,HSIF,House Committee on Energy and Commerce,member,30,majority
+W000821,Rep. Bruce Westerman,R,AR,HSII,House Committee on Natural Resources,chair,1,majority
+H001068,Rep. Jared Huffman,D,CA,HSII,House Committee on Natural Resources,ranking,1,minority
+W000804,Rep. Robert J. Wittman,R,VA,HSII,House Committee on Natural Resources,member,2,majority
+N000191,Rep. Joe Neguse,D,CO,HSII,House Committee on Natural Resources,member,2,minority
+M001177,Rep. Tom McClintock,R,CA,HSII,House Committee on Natural Resources,member,3,majority
+L000273,Rep. Teresa Leger Fernandez,D,NM,HSII,House Committee on Natural Resources,member,3,minority
+G000565,Rep. Paul A. Gosar,R,AZ,HSII,House Committee on Natural Resources,member,4,majority
+S001218,Rep. Melanie A. Stansbury,D,NM,HSII,House Committee on Natural Resources,member,4,minority
+R000600,Rep. Aumua Amata Coleman Radewagen,R,AS,HSII,House Committee on Natural Resources,member,5,majority
+H001094,Rep. Val T. Hoyle,D,OR,HSII,House Committee on Natural Resources,member,5,minority
+W000806,Rep. Daniel Webster,R,FL,HSII,House Committee on Natural Resources,member,6,majority
+M001223,Rep. Seth Magaziner,D,RI,HSII,House Committee on Natural Resources,member,6,minority
+F000469,Rep. Russ Fulcher,R,ID,HSII,House Committee on Natural Resources,member,7,majority
+G000592,Rep. Jared F. Golden,D,ME,HSII,House Committee on Natural Resources,member,7,minority
+S001212,Rep. Pete Stauber,R,MN,HSII,House Committee on Natural Resources,member,8,majority
+M001241,Rep. Dave Min,D,CA,HSII,House Committee on Natural Resources,member,8,minority
+T000165,Rep. Thomas P. Tiffany,R,WI,HSII,House Committee on Natural Resources,member,9,majority
+D000635,Rep. Maxine Dexter,D,OR,HSII,House Committee on Natural Resources,member,9,minority
+B000825,Rep. Lauren Boebert,R,CO,HSII,House Committee on Natural Resources,member,10,majority
+H001103,Rep. Pablo José Hernández,D,PR,HSII,House Committee on Natural Resources,member,10,minority
+B000668,Rep. Cliff Bentz,R,OR,HSII,House Committee on Natural Resources,member,11,majority
+R000621,Rep. Emily Randall,D,WA,HSII,House Committee on Natural Resources,member,11,minority
+K000399,Rep. Jennifer A. Kiggans,R,VA,HSII,House Committee on Natural Resources,member,12,majority
+A000381,Rep. Yassamin Ansari,D,AZ,HSII,House Committee on Natural Resources,member,12,minority
+H001095,Rep. Wesley Hunt,R,TX,HSII,House Committee on Natural Resources,member,13,majority
+E000301,Rep. Sarah Elfreth,D,MD,HSII,House Committee on Natural Resources,member,13,minority
+C001129,Rep. Mike Collins,R,GA,HSII,House Committee on Natural Resources,member,14,majority
+G000605,Rep. Adam Gray,D,CA,HSII,House Committee on Natural Resources,member,14,minority
+H001096,Rep. Harriet M. Hageman,R,WY,HSII,House Committee on Natural Resources,member,15,majority
+R000620,Rep. Luz M. Rivas,D,CA,HSII,House Committee on Natural Resources,member,15,minority
+A000369,Rep. Mark E. Amodei,R,NV,HSII,House Committee on Natural Resources,member,16,majority
+G000606,Rep. Adelita S. Grijalva,D,AZ,HSII,House Committee on Natural Resources,member,16,minority
+W000798,Rep. Tim Walberg,R,MI,HSII,House Committee on Natural Resources,member,17,majority
+D000624,Rep. Debbie Dingell,D,MI,HSII,House Committee on Natural Resources,member,17,minority
+E000235,Rep. Mike Ezell,R,MS,HSII,House Committee on Natural Resources,member,18,majority
+S001200,Rep. Darren Soto,D,FL,HSII,House Committee on Natural Resources,member,18,minority
+M001228,Rep. Celeste Maloy,R,UT,HSII,House Committee on Natural Resources,member,19,majority
+B001285,Rep. Julia Brownley,D,CA,HSII,House Committee on Natural Resources,member,19,minority
+M001240,Rep. Addison P. McDowell,R,NC,HSII,House Committee on Natural Resources,member,20,majority
+L000590,Rep. Susie Lee,D,NV,HSII,House Committee on Natural Resources,member,20,minority
+C001137,Rep. Jeff Crank,R,CO,HSII,House Committee on Natural Resources,member,21,majority
+B001323,Rep. Nicholas J. Begich III,R,AK,HSII,House Committee on Natural Resources,member,22,majority
+H001100,Rep. Jeff Hurd,R,CO,HSII,House Committee on Natural Resources,member,23,majority
+K000403,Rep. Mike Kennedy,R,UT,HSII,House Committee on Natural Resources,member,24,majority
+D000634,Rep. Troy Downing,R,MT,HSII,House Committee on Natural Resources,member,25,majority
+C001087,"Rep. Eric A. ""Rick"" Crawford",R,AR,HLIG,House Permanent Select Committee on Intelligence,chair,1,majority
+H001047,Rep. James A. Himes,D,CT,HLIG,House Permanent Select Committee on Intelligence,ranking,1,minority
+S001196,Rep. Elise M. Stefanik,R,NY,HLIG,House Permanent Select Committee on Intelligence,member,2,majority
+C001072,Rep. André Carson,D,IN,HLIG,House Permanent Select Committee on Intelligence,member,2,minority
+K000388,Rep. Trent Kelly,R,MS,HLIG,House Permanent Select Committee on Intelligence,member,3,majority
+C001091,Rep. Joaquin Castro,D,TX,HLIG,House Permanent Select Committee on Intelligence,member,3,minority
+L000585,Rep. Darin LaHood,R,IL,HLIG,House Permanent Select Committee on Intelligence,member,4,majority
+K000391,Rep. Raja Krishnamoorthi,D,IL,HLIG,House Permanent Select Committee on Intelligence,member,4,minority
+F000466,Rep. Brian K. Fitzpatrick,R,PA,HLIG,House Permanent Select Committee on Intelligence,member,5,majority
+C001121,Rep. Jason Crow,D,CO,HLIG,House Permanent Select Committee on Intelligence,member,5,minority
+S001189,Rep. Austin Scott,R,GA,HLIG,House Permanent Select Committee on Intelligence,member,6,majority
+B001287,Rep. Ami Bera,D,CA,HLIG,House Permanent Select Committee on Intelligence,member,6,minority
+H001072,Rep. J. French Hill,R,AR,HLIG,House Permanent Select Committee on Intelligence,member,7,majority
+P000610,Rep. Stacey E. Plaskett,D,VI,HLIG,House Permanent Select Committee on Intelligence,member,7,minority
+C001120,Rep. Dan Crenshaw,R,TX,HLIG,House Permanent Select Committee on Intelligence,member,8,majority
+G000583,Rep. Josh Gottheimer,D,NJ,HLIG,House Permanent Select Committee on Intelligence,member,8,minority
+P000605,Rep. Scott Perry,R,PA,HLIG,House Permanent Select Committee on Intelligence,member,9,majority
+G000585,Rep. Jimmy Gomez,D,CA,HLIG,House Permanent Select Committee on Intelligence,member,9,minority
+J000304,Rep. Ronny Jackson,R,TX,HLIG,House Permanent Select Committee on Intelligence,member,10,majority
+H001085,Rep. Chrissy Houlahan,D,PA,HLIG,House Permanent Select Committee on Intelligence,member,10,minority
+W000812,Rep. Ann Wagner,R,MO,HLIG,House Permanent Select Committee on Intelligence,member,11,majority
+Q000023,Rep. Mike Quigley,D,IL,HLIG,House Permanent Select Committee on Intelligence,member,11,minority
+C001118,Rep. Ben Cline,R,VA,HLIG,House Permanent Select Committee on Intelligence,member,12,majority
+C001068,Rep. Steve Cohen,D,TN,HLIG,House Permanent Select Committee on Intelligence,member,12,minority
+S001214,Rep. W. Gregory Steube,R,FL,HLIG,House Permanent Select Committee on Intelligence,member,13,majority
+T000478,Rep. Claudia Tenney,R,NY,HLIG,House Permanent Select Committee on Intelligence,member,14,majority
+F000246,Rep. Pat Fallon,R,TX,HLIG,House Permanent Select Committee on Intelligence,member,15,majority
+J000289,Rep. Jim Jordan,R,OH,HSJU,House Committee on the Judiciary,chair,1,majority
+R000606,Rep. Jamie Raskin,D,MD,HSJU,House Committee on the Judiciary,ranking,1,minority
+I000056,Rep. Darrell Issa,R,CA,HSJU,House Committee on the Judiciary,member,2,majority
+N000002,Rep. Jerrold Nadler,D,NY,HSJU,House Committee on the Judiciary,member,2,minority
+B001302,Rep. Andy Biggs,R,AZ,HSJU,House Committee on the Judiciary,member,3,majority
+L000397,Rep. Zoe Lofgren,D,CA,HSJU,House Committee on the Judiciary,member,3,minority
+M001177,Rep. Tom McClintock,R,CA,HSJU,House Committee on the Judiciary,member,4,majority
+C001068,Rep. Steve Cohen,D,TN,HSJU,House Committee on the Judiciary,member,4,minority
+T000165,Rep. Thomas P. Tiffany,R,WI,HSJU,House Committee on the Judiciary,member,5,majority
+J000288,"Rep. Henry C. ""Hank"" Johnson, Jr.",D,GA,HSJU,House Committee on the Judiciary,member,5,minority
+M001184,Rep. Thomas Massie,R,KY,HSJU,House Committee on the Judiciary,member,6,majority
+L000582,Rep. Ted Lieu,D,CA,HSJU,House Committee on the Judiciary,member,6,minority
+R000614,Rep. Chip Roy,R,TX,HSJU,House Committee on the Judiciary,member,7,majority
+J000298,Rep. Pramila Jayapal,D,WA,HSJU,House Committee on the Judiciary,member,7,minority
+F000471,Rep. Scott Fitzgerald,R,WI,HSJU,House Committee on the Judiciary,member,8,majority
+C001110,Rep. J. Luis Correa,D,CA,HSJU,House Committee on the Judiciary,member,8,minority
+C001118,Rep. Ben Cline,R,VA,HSJU,House Committee on the Judiciary,member,9,majority
+S001205,Rep. Mary Gay Scanlon,D,PA,HSJU,House Committee on the Judiciary,member,9,minority
+G000589,Rep. Lance Gooden,R,TX,HSJU,House Committee on the Judiciary,member,10,majority
+N000191,Rep. Joe Neguse,D,CO,HSJU,House Committee on the Judiciary,member,10,minority
+V000133,Rep. Jefferson Van Drew,R,NJ,HSJU,House Committee on the Judiciary,member,11,majority
+M001208,Rep. Lucy McBath,D,GA,HSJU,House Committee on the Judiciary,member,11,minority
+N000026,Rep. Troy E. Nehls,R,TX,HSJU,House Committee on the Judiciary,member,12,majority
+R000305,Rep. Deborah K. Ross,D,NC,HSJU,House Committee on the Judiciary,member,12,minority
+M001212,Rep. Barry Moore,R,AL,HSJU,House Committee on the Judiciary,member,13,majority
+B001318,Rep. Becca Balint,D,VT,HSJU,House Committee on the Judiciary,member,13,minority
+H001096,Rep. Harriet M. Hageman,R,WY,HSJU,House Committee on the Judiciary,member,14,majority
+G000586,"Rep. Jesús G. ""Chuy"" García",D,IL,HSJU,House Committee on the Judiciary,member,14,minority
+L000597,Rep. Laurel M. Lee,R,FL,HSJU,House Committee on the Judiciary,member,15,majority
+K000400,Rep. Sydney Kamlager-Dove,D,CA,HSJU,House Committee on the Judiciary,member,15,minority
+H001095,Rep. Wesley Hunt,R,TX,HSJU,House Committee on the Judiciary,member,16,majority
+M001217,Rep. Jared Moskowitz,D,FL,HSJU,House Committee on the Judiciary,member,16,minority
+F000478,Rep. Russell Fry,R,SC,HSJU,House Committee on the Judiciary,member,17,majority
+G000599,Rep. Daniel S. Goldman,D,NY,HSJU,House Committee on the Judiciary,member,17,minority
+K000401,Rep. Kevin Kiley,I,CA,HSJU,House Committee on the Judiciary,member,18,majority
+C001130,Rep. Jasmine Crockett,D,TX,HSJU,House Committee on the Judiciary,member,18,minority
+G000576,Rep. Glenn Grothman,R,WI,HSJU,House Committee on the Judiciary,member,19,majority
+L000602,Rep. Summer L. Lee,D,PA,HSJU,House Committee on the Judiciary,member,19,minority
+K000405,Rep. Brad Knott,R,NC,HSJU,House Committee on the Judiciary,member,20,majority
+H001102,Rep. Mark Harris,R,NC,HSJU,House Committee on the Judiciary,member,21,majority
+O000177,"Rep. Robert F. Onder, Jr.",R,MO,HSJU,House Committee on the Judiciary,member,22,majority
+S001228,Rep. Derek Schmidt,R,KS,HSJU,House Committee on the Judiciary,member,23,majority
+G000603,Rep. Brandon Gill,R,TX,HSJU,House Committee on the Judiciary,member,24,majority
+B001322,Rep. Michael Baumgartner,R,WA,HSJU,House Committee on the Judiciary,member,25,majority
+G000546,Rep. Sam Graves,R,MO,HSPW,House Committee on Transportation and Infrastructure,chair,1,majority
+L000560,Rep. Rick Larsen,D,WA,HSPW,House Committee on Transportation and Infrastructure,ranking,1,minority
+C001087,"Rep. Eric A. ""Rick"" Crawford",R,AR,HSPW,House Committee on Transportation and Infrastructure,member,2,majority
+N000147,Rep. Eleanor Holmes Norton,D,DC,HSPW,House Committee on Transportation and Infrastructure,member,2,minority
+W000806,Rep. Daniel Webster,R,FL,HSPW,House Committee on Transportation and Infrastructure,member,3,majority
+N000002,Rep. Jerrold Nadler,D,NY,HSPW,House Committee on Transportation and Infrastructure,member,3,minority
+M001184,Rep. Thomas Massie,R,KY,HSPW,House Committee on Transportation and Infrastructure,member,4,majority
+G000559,Rep. John Garamendi,D,CA,HSPW,House Committee on Transportation and Infrastructure,member,4,minority
+P000605,Rep. Scott Perry,R,PA,HSPW,House Committee on Transportation and Infrastructure,member,5,majority
+J000288,"Rep. Henry C. ""Hank"" Johnson, Jr.",D,GA,HSPW,House Committee on Transportation and Infrastructure,member,5,minority
+B001291,Rep. Brian Babin,R,TX,HSPW,House Committee on Transportation and Infrastructure,member,6,majority
+C001072,Rep. André Carson,D,IN,HSPW,House Committee on Transportation and Infrastructure,member,6,minority
+R000603,Rep. David Rouzer,R,NC,HSPW,House Committee on Transportation and Infrastructure,member,7,majority
+T000468,Rep. Dina Titus,D,NV,HSPW,House Committee on Transportation and Infrastructure,member,7,minority
+B001295,Rep. Mike Bost,R,IL,HSPW,House Committee on Transportation and Infrastructure,member,8,majority
+H001068,Rep. Jared Huffman,D,CA,HSPW,House Committee on Transportation and Infrastructure,member,8,minority
+W000821,Rep. Bruce Westerman,R,AR,HSPW,House Committee on Transportation and Infrastructure,member,9,majority
+B001285,Rep. Julia Brownley,D,CA,HSPW,House Committee on Transportation and Infrastructure,member,9,minority
+M001199,Rep. Brian J. Mast,R,FL,HSPW,House Committee on Transportation and Infrastructure,member,10,majority
+W000808,Rep. Frederica S. Wilson,D,FL,HSPW,House Committee on Transportation and Infrastructure,member,10,minority
+S001212,Rep. Pete Stauber,R,MN,HSPW,House Committee on Transportation and Infrastructure,member,11,majority
+D000623,Rep. Mark DeSaulnier,D,CA,HSPW,House Committee on Transportation and Infrastructure,member,11,minority
+B001309,Rep. Tim Burchett,R,TN,HSPW,House Committee on Transportation and Infrastructure,member,12,majority
+C001112,Rep. Salud O. Carbajal,D,CA,HSPW,House Committee on Transportation and Infrastructure,member,12,minority
+J000301,Rep. Dusty Johnson,R,SD,HSPW,House Committee on Transportation and Infrastructure,member,13,majority
+S001211,Rep. Greg Stanton,D,AZ,HSPW,House Committee on Transportation and Infrastructure,member,13,minority
+V000133,Rep. Jefferson Van Drew,R,NJ,HSPW,House Committee on Transportation and Infrastructure,member,14,majority
+D000629,Rep. Sharice Davids,D,KS,HSPW,House Committee on Transportation and Infrastructure,member,14,minority
+N000026,Rep. Troy E. Nehls,R,TX,HSPW,House Committee on Transportation and Infrastructure,member,15,majority
+G000586,"Rep. Jesús G. ""Chuy"" García",D,IL,HSPW,House Committee on Transportation and Infrastructure,member,15,minority
+M000871,Rep. Tracey Mann,R,KS,HSPW,House Committee on Transportation and Infrastructure,member,16,majority
+P000614,Rep. Chris Pappas,D,NH,HSPW,House Committee on Transportation and Infrastructure,member,16,minority
+O000086,Rep. Burgess Owens,R,UT,HSPW,House Committee on Transportation and Infrastructure,member,17,majority
+M001196,Rep. Seth Moulton,D,MA,HSPW,House Committee on Transportation and Infrastructure,member,17,minority
+B001316,Rep. Eric Burlison,R,MO,HSPW,House Committee on Transportation and Infrastructure,member,18,majority
+S001159,Rep. Marilyn Strickland,D,WA,HSPW,House Committee on Transportation and Infrastructure,member,18,minority
+C001129,Rep. Mike Collins,R,GA,HSPW,House Committee on Transportation and Infrastructure,member,19,majority
+R000579,Rep. Patrick Ryan,D,NY,HSPW,House Committee on Transportation and Infrastructure,member,19,minority
+E000235,Rep. Mike Ezell,R,MS,HSPW,House Committee on Transportation and Infrastructure,member,20,majority
+H001094,Rep. Val T. Hoyle,D,OR,HSPW,House Committee on Transportation and Infrastructure,member,20,minority
+K000401,Rep. Kevin Kiley,I,CA,HSPW,House Committee on Transportation and Infrastructure,member,21,majority
+S001223,Rep. Emilia Strong Sykes,D,OH,HSPW,House Committee on Transportation and Infrastructure,member,21,minority
+F000480,Rep. Vince Fong,R,CA,HSPW,House Committee on Transportation and Infrastructure,member,22,majority
+S001221,Rep. Hillary J. Scholten,D,MI,HSPW,House Committee on Transportation and Infrastructure,member,22,minority
+W000829,Rep. Tony Wied,R,WI,HSPW,House Committee on Transportation and Infrastructure,member,23,majority
+F000477,Rep. Valerie P. Foushee,D,NC,HSPW,House Committee on Transportation and Infrastructure,member,23,minority
+B001321,Rep. Tom Barrett,R,MI,HSPW,House Committee on Transportation and Infrastructure,member,24,majority
+D000530,Rep. Christopher R. Deluzio,D,PA,HSPW,House Committee on Transportation and Infrastructure,member,24,minority
+B001323,Rep. Nicholas J. Begich III,R,AK,HSPW,House Committee on Transportation and Infrastructure,member,25,majority
+G000598,Rep. Robert Garcia,D,CA,HSPW,House Committee on Transportation and Infrastructure,member,25,minority
+B001327,"Rep. Robert P. Bresnahan, Jr.",R,PA,HSPW,House Committee on Transportation and Infrastructure,member,26,majority
+P000621,Rep. Nellie Pou,D,NJ,HSPW,House Committee on Transportation and Infrastructure,member,26,minority
+H001100,Rep. Jeff Hurd,R,CO,HSPW,House Committee on Transportation and Infrastructure,member,27,majority
+M001237,Rep. Kristen McDonald Rivet,D,MI,HSPW,House Committee on Transportation and Infrastructure,member,27,minority
+M001240,Rep. Addison P. McDowell,R,NC,HSPW,House Committee on Transportation and Infrastructure,member,28,majority
+F000483,Rep. Laura Friedman,D,CA,HSPW,House Committee on Transportation and Infrastructure,member,28,minority
+T000490,Rep. David J. Taylor,R,OH,HSPW,House Committee on Transportation and Infrastructure,member,29,majority
+G000602,Rep. Laura Gillen,D,NY,HSPW,House Committee on Transportation and Infrastructure,member,29,minority
+K000405,Rep. Brad Knott,R,NC,HSPW,House Committee on Transportation and Infrastructure,member,30,majority
+F000481,Rep. Shomari Figures,D,AL,HSPW,House Committee on Transportation and Infrastructure,member,30,minority
+K000404,Rep. Kimberlyn King-Hinds,R,MP,HSPW,House Committee on Transportation and Infrastructure,member,31,majority
+F000476,Rep. Maxwell Frost,D,FL,HSPW,House Committee on Transportation and Infrastructure,member,31,minority
+K000403,Rep. Mike Kennedy,R,UT,HSPW,House Committee on Transportation and Infrastructure,member,32,majority
+O000177,"Rep. Robert F. Onder, Jr.",R,MO,HSPW,House Committee on Transportation and Infrastructure,member,33,majority
+P000622,Rep. Jimmy Patronis,R,FL,HSPW,House Committee on Transportation and Infrastructure,member,34,majority
+F000485,Rep. Clay Fuller,R,GA,HSPW,House Committee on Transportation and Infrastructure,member,35,majority
+G000607,Rep. James Gallagher,R,CA,HSPW,House Committee on Transportation and Infrastructure,member,36,majority
+F000450,Rep. Virginia Foxx,R,NC,HSRU,House Committee on Rules,chair,1,majority
+M000312,Rep. James P. McGovern,D,MA,HSRU,House Committee on Rules,ranking,1,minority
+F000470,Rep. Michelle Fischbach,R,MN,HSRU,House Committee on Rules,member,2,majority
+S001205,Rep. Mary Gay Scanlon,D,PA,HSRU,House Committee on Rules,member,2,minority
+N000190,Rep. Ralph Norman,R,SC,HSRU,House Committee on Rules,member,3,majority
+N000191,Rep. Joe Neguse,D,CO,HSRU,House Committee on Rules,member,3,minority
+R000614,Rep. Chip Roy,R,TX,HSRU,House Committee on Rules,member,4,majority
+L000273,Rep. Teresa Leger Fernandez,D,NM,HSRU,House Committee on Rules,member,4,minority
+H001093,Rep. Erin Houchin,R,IN,HSRU,House Committee on Rules,member,5,majority
+L000600,Rep. Nicholas A. Langworthy,R,NY,HSRU,House Committee on Rules,member,6,majority
+S001189,Rep. Austin Scott,R,GA,HSRU,House Committee on Rules,member,7,majority
+G000568,Rep. H. Morgan Griffith,R,VA,HSRU,House Committee on Rules,member,8,majority
+J000311,Rep. Brian Jack,R,GA,HSRU,House Committee on Rules,member,9,majority
+W000816,Rep. Roger Williams,R,TX,HSSM,House Committee on Small Business,chair,1,majority
+V000081,Rep. Nydia M. Velázquez,D,NY,HSSM,House Committee on Small Business,ranking,1,minority
+S001212,Rep. Pete Stauber,R,MN,HSSM,House Committee on Small Business,member,2,majority
+M001220,Rep. Morgan McGarvey,D,KY,HSSM,House Committee on Small Business,member,2,minority
+M001204,Rep. Daniel Meuser,R,PA,HSSM,House Committee on Small Business,member,3,majority
+S001221,Rep. Hillary J. Scholten,D,MI,HSSM,House Committee on Small Business,member,3,minority
+V000134,Rep. Beth Van Duyne,R,TX,HSSM,House Committee on Small Business,member,4,majority
+M001229,Rep. LaMonica McIver,D,NJ,HSSM,House Committee on Small Business,member,4,minority
+E000071,Rep. Jake Ellzey,R,TX,HSSM,House Committee on Small Business,member,5,majority
+C001123,"Rep. Gilbert Ray Cisneros, Jr.",D,CA,HSSM,House Committee on Small Business,member,5,minority
+A000379,Rep. Mark Alford,R,MO,HSSM,House Committee on Small Business,member,6,majority
+M001234,Rep. Kelly Morrison,D,MN,HSSM,House Committee on Small Business,member,6,minority
+F000475,Rep. Brad Finstad,R,MN,HSSM,House Committee on Small Business,member,7,majority
+L000606,Rep. George Latimer,D,NY,HSSM,House Committee on Small Business,member,7,minority
+W000829,Rep. Tony Wied,R,WI,HSSM,House Committee on Small Business,member,8,majority
+T000491,Rep. Derek Tran,D,CA,HSSM,House Committee on Small Business,member,8,minority
+B001327,"Rep. Robert P. Bresnahan, Jr.",R,PA,HSSM,House Committee on Small Business,member,9,majority
+S001231,Rep. Lateefah Simon,D,CA,HSSM,House Committee on Small Business,member,9,minority
+J000311,Rep. Brian Jack,R,GA,HSSM,House Committee on Small Business,member,10,majority
+O000176,"Rep. Johnny Olszewski, Jr.",D,MD,HSSM,House Committee on Small Business,member,10,minority
+K000404,Rep. Kimberlyn King-Hinds,R,MP,HSSM,House Committee on Small Business,member,11,majority
+G000604,Rep. Maggie Goodlander,D,NH,HSSM,House Committee on Small Business,member,11,minority
+S001228,Rep. Derek Schmidt,R,KS,HSSM,House Committee on Small Business,member,12,majority
+M001246,Rep. Analilia Mejia,D,NJ,HSSM,House Committee on Small Business,member,12,minority
+P000622,Rep. Jimmy Patronis,R,FL,HSSM,House Committee on Small Business,member,13,majority
+F000485,Rep. Clay Fuller,R,GA,HSSM,House Committee on Small Business,member,14,majority
+G000591,Rep. Michael Guest,R,MS,HSSO,House Committee on Ethics,chair,1,majority
+D000623,Rep. Mark DeSaulnier,D,CA,HSSO,House Committee on Ethics,ranking,1,minority
+G000597,Rep. Andrew R. Garbarino,R,NY,HSSO,House Committee on Ethics,member,2,majority
+R000305,Rep. Deborah K. Ross,D,NC,HSSO,House Committee on Ethics,member,2,minority
+H001091,Rep. Ashley Hinson,R,IA,HSSO,House Committee on Ethics,member,3,majority
+I000058,Rep. Glenn Ivey,D,MD,HSSO,House Committee on Ethics,member,3,minority
+M001224,Rep. Nathaniel Moran,R,TX,HSSO,House Committee on Ethics,member,4,majority
+G000587,Rep. Sylvia R. Garcia,D,TX,HSSO,House Committee on Ethics,member,4,minority
+K000405,Rep. Brad Knott,R,NC,HSSO,House Committee on Ethics,member,5,majority
+S001230,Rep. Suhas Subramanyam,D,VA,HSSO,House Committee on Ethics,member,5,minority
+B001291,Rep. Brian Babin,R,TX,HSSY,"House Committee on Science, Space, and Technology",chair,1,majority
+L000397,Rep. Zoe Lofgren,D,CA,HSSY,"House Committee on Science, Space, and Technology",ranking,1,minority
+W000814,"Rep. Randy K. Weber, Sr.",R,TX,HSSY,"House Committee on Science, Space, and Technology",member,2,majority
+B001278,Rep. Suzanne Bonamici,D,OR,HSSY,"House Committee on Science, Space, and Technology",member,2,minority
+B001307,Rep. James R. Baird,R,IN,HSSY,"House Committee on Science, Space, and Technology",member,3,majority
+S001215,Rep. Haley M. Stevens,D,MI,HSSY,"House Committee on Science, Space, and Technology",member,3,minority
+W000806,Rep. Daniel Webster,R,FL,HSSY,"House Committee on Science, Space, and Technology",member,4,majority
+R000305,Rep. Deborah K. Ross,D,NC,HSSY,"House Committee on Science, Space, and Technology",member,4,minority
+O000019,Rep. Jay Obernolte,R,CA,HSSY,"House Committee on Science, Space, and Technology",member,5,majority
+S001226,Rep. Andrea Salinas,D,OR,HSSY,"House Committee on Science, Space, and Technology",member,5,minority
+F000459,"Rep. Charles J. ""Chuck"" Fleischmann",R,TN,HSSY,"House Committee on Science, Space, and Technology",member,6,majority
+F000477,Rep. Valerie P. Foushee,D,NC,HSSY,"House Committee on Science, Space, and Technology",member,6,minority
+I000056,Rep. Darrell Issa,R,CA,HSSY,"House Committee on Science, Space, and Technology",member,7,majority
+S001223,Rep. Emilia Strong Sykes,D,OH,HSSY,"House Committee on Science, Space, and Technology",member,7,minority
+T000478,Rep. Claudia Tenney,R,NY,HSSY,"House Committee on Science, Space, and Technology",member,8,majority
+A000380,Rep. Gabe Amo,D,RI,HSSY,"House Committee on Science, Space, and Technology",member,8,minority
+F000472,Rep. Scott Franklin,R,FL,HSSY,"House Committee on Science, Space, and Technology",member,9,majority
+S001230,Rep. Suhas Subramanyam,D,VA,HSSY,"House Committee on Science, Space, and Technology",member,9,minority
+M001218,Rep. Richard McCormick,R,GA,HSSY,"House Committee on Science, Space, and Technology",member,10,majority
+R000620,Rep. Luz M. Rivas,D,CA,HSSY,"House Committee on Science, Space, and Technology",member,10,minority
+C001129,Rep. Mike Collins,R,GA,HSSY,"House Committee on Science, Space, and Technology",member,11,majority
+M001238,Rep. Sarah McBride,D,DE,HSSY,"House Committee on Science, Space, and Technology",member,11,minority
+F000480,Rep. Vince Fong,R,CA,HSSY,"House Committee on Science, Space, and Technology",member,12,majority
+G000602,Rep. Laura Gillen,D,NY,HSSY,"House Committee on Science, Space, and Technology",member,12,minority
+R000603,Rep. David Rouzer,R,NC,HSSY,"House Committee on Science, Space, and Technology",member,13,majority
+W000830,Rep. George Whitesides,D,CA,HSSY,"House Committee on Science, Space, and Technology",member,13,minority
+S001224,Rep. Keith Self,R,TX,HSSY,"House Committee on Science, Space, and Technology",member,14,majority
+F000483,Rep. Laura Friedman,D,CA,HSSY,"House Committee on Science, Space, and Technology",member,14,minority
+H001101,Rep. Pat Harrigan,R,NC,HSSY,"House Committee on Science, Space, and Technology",member,15,majority
+M001232,Rep. April McClain Delaney,D,MD,HSSY,"House Committee on Science, Space, and Technology",member,15,minority
+B001325,Rep. Sheri Biggs,R,SC,HSSY,"House Committee on Science, Space, and Technology",member,16,majority
+R000622,Rep. Josh Riley,D,NY,HSSY,"House Committee on Science, Space, and Technology",member,16,minority
+H001100,Rep. Jeff Hurd,R,CO,HSSY,"House Committee on Science, Space, and Technology",member,17,majority
+M001245,Rep. Christian D. Menefee,D,TX,HSSY,"House Committee on Science, Space, and Technology",member,17,minority
+H001099,Rep. Mike Haridopolos,R,FL,HSSY,"House Committee on Science, Space, and Technology",member,18,majority
+F000454,Rep. Bill Foster,D,IL,HSSY,"House Committee on Science, Space, and Technology",member,18,minority
+K000403,Rep. Mike Kennedy,R,UT,HSSY,"House Committee on Science, Space, and Technology",member,19,majority
+B001323,Rep. Nicholas J. Begich III,R,AK,HSSY,"House Committee on Science, Space, and Technology",member,20,majority
+V000139,Rep. Matt Van Epps,R,TN,HSSY,"House Committee on Science, Space, and Technology",member,21,majority
+G000607,Rep. James Gallagher,R,CA,HSSY,"House Committee on Science, Space, and Technology",member,22,majority
+B001295,Rep. Mike Bost,R,IL,HSVR,House Committee on Veterans' Affairs,chair,1,majority
+T000472,Rep. Mark Takano,D,CA,HSVR,House Committee on Veterans' Affairs,ranking,1,minority
+R000600,Rep. Aumua Amata Coleman Radewagen,R,AS,HSVR,House Committee on Veterans' Affairs,member,2,majority
+B001285,Rep. Julia Brownley,D,CA,HSVR,House Committee on Veterans' Affairs,member,2,minority
+B001301,Rep. Jack Bergman,R,MI,HSVR,House Committee on Veterans' Affairs,member,3,majority
+P000614,Rep. Chris Pappas,D,NH,HSVR,House Committee on Veterans' Affairs,member,3,minority
+M000194,Rep. Nancy Mace,R,SC,HSVR,House Committee on Veterans' Affairs,member,4,majority
+M001220,Rep. Morgan McGarvey,D,KY,HSVR,House Committee on Veterans' Affairs,member,4,minority
+M001215,Rep. Mariannette Miller-Meeks,R,IA,HSVR,House Committee on Veterans' Affairs,member,5,majority
+R000617,Rep. Delia C. Ramirez,D,IL,HSVR,House Committee on Veterans' Affairs,member,5,minority
+M001210,Rep. Gregory F. Murphy,R,NC,HSVR,House Committee on Veterans' Affairs,member,6,majority
+B001315,Rep. Nikki Budzinski,D,IL,HSVR,House Committee on Veterans' Affairs,member,6,minority
+V000135,Rep. Derrick Van Orden,R,WI,HSVR,House Committee on Veterans' Affairs,member,7,majority
+K000402,Rep. Timothy M. Kennedy,D,NY,HSVR,House Committee on Veterans' Affairs,member,7,minority
+L000603,Rep. Morgan Luttrell,R,TX,HSVR,House Committee on Veterans' Affairs,member,8,majority
+D000635,Rep. Maxine Dexter,D,OR,HSVR,House Committee on Veterans' Affairs,member,8,minority
+C001133,Rep. Juan Ciscomani,R,AZ,HSVR,House Committee on Veterans' Affairs,member,9,majority
+C001136,"Rep. Herbert C. Conaway, Jr.",D,NJ,HSVR,House Committee on Veterans' Affairs,member,9,minority
+S001224,Rep. Keith Self,R,TX,HSVR,House Committee on Veterans' Affairs,member,10,majority
+M001234,Rep. Kelly Morrison,D,MN,HSVR,House Committee on Veterans' Affairs,member,10,minority
+K000399,Rep. Jennifer A. Kiggans,R,VA,HSVR,House Committee on Veterans' Affairs,member,11,majority
+G000604,Rep. Maggie Goodlander,D,NH,HSVR,House Committee on Veterans' Affairs,member,11,minority
+H001098,Rep. Abraham J. Hamadeh,R,AZ,HSVR,House Committee on Veterans' Affairs,member,12,majority
+K000404,Rep. Kimberlyn King-Hinds,R,MP,HSVR,House Committee on Veterans' Affairs,member,13,majority
+B001321,Rep. Tom Barrett,R,MI,HSVR,House Committee on Veterans' Affairs,member,14,majority
+S001195,Rep. Jason Smith,R,MO,HSWM,House Committee on Ways and Means,chair,1,majority
+N000015,Rep. Richard E. Neal,D,MA,HSWM,House Committee on Ways and Means,ranking,1,minority
+B001260,Rep. Vern Buchanan,R,FL,HSWM,House Committee on Ways and Means,member,2,majority
+D000399,Rep. Lloyd Doggett,D,TX,HSWM,House Committee on Ways and Means,member,2,minority
+S001172,Rep. Adrian Smith,R,NE,HSWM,House Committee on Ways and Means,member,3,majority
+T000460,Rep. Mike Thompson,D,CA,HSWM,House Committee on Ways and Means,member,3,minority
+K000376,Rep. Mike Kelly,R,PA,HSWM,House Committee on Ways and Means,member,4,majority
+L000557,Rep. John B. Larson,D,CT,HSWM,House Committee on Ways and Means,member,4,minority
+S001183,Rep. David Schweikert,R,AZ,HSWM,House Committee on Ways and Means,member,5,majority
+D000096,Rep. Danny K. Davis,D,IL,HSWM,House Committee on Ways and Means,member,5,minority
+L000585,Rep. Darin LaHood,R,IL,HSWM,House Committee on Ways and Means,member,6,majority
+S001156,Rep. Linda T. Sánchez,D,CA,HSWM,House Committee on Ways and Means,member,6,minority
+A000375,Rep. Jodey C. Arrington,R,TX,HSWM,House Committee on Ways and Means,member,7,majority
+S001185,Rep. Terri A. Sewell,D,AL,HSWM,House Committee on Ways and Means,member,7,minority
+E000298,Rep. Ron Estes,R,KS,HSWM,House Committee on Ways and Means,member,8,majority
+D000617,Rep. Suzan K. DelBene,D,WA,HSWM,House Committee on Ways and Means,member,8,minority
+S001199,Rep. Lloyd Smucker,R,PA,HSWM,House Committee on Ways and Means,member,9,majority
+C001080,Rep. Judy Chu,D,CA,HSWM,House Committee on Ways and Means,member,9,minority
+H001082,Rep. Kevin Hern,R,OK,HSWM,House Committee on Ways and Means,member,10,majority
+M001160,Rep. Gwen Moore,D,WI,HSWM,House Committee on Ways and Means,member,10,minority
+M001205,Rep. Carol D. Miller,R,WV,HSWM,House Committee on Ways and Means,member,11,majority
+B001296,Rep. Brendan F. Boyle,D,PA,HSWM,House Committee on Ways and Means,member,11,minority
+M001210,Rep. Gregory F. Murphy,R,NC,HSWM,House Committee on Ways and Means,member,12,majority
+B001292,"Rep. Donald S. Beyer, Jr.",D,VA,HSWM,House Committee on Ways and Means,member,12,minority
+K000392,Rep. David Kustoff,R,TN,HSWM,House Committee on Ways and Means,member,13,majority
+E000296,Rep. Dwight Evans,D,PA,HSWM,House Committee on Ways and Means,member,13,minority
+F000466,Rep. Brian K. Fitzpatrick,R,PA,HSWM,House Committee on Ways and Means,member,14,majority
+S001190,Rep. Bradley Scott Schneider,D,IL,HSWM,House Committee on Ways and Means,member,14,minority
+S001214,Rep. W. Gregory Steube,R,FL,HSWM,House Committee on Ways and Means,member,15,majority
+P000613,Rep. Jimmy Panetta,D,CA,HSWM,House Committee on Ways and Means,member,15,minority
+T000478,Rep. Claudia Tenney,R,NY,HSWM,House Committee on Ways and Means,member,16,majority
+G000585,Rep. Jimmy Gomez,D,CA,HSWM,House Committee on Ways and Means,member,16,minority
+F000470,Rep. Michelle Fischbach,R,MN,HSWM,House Committee on Ways and Means,member,17,majority
+H001066,Rep. Steven Horsford,D,NV,HSWM,House Committee on Ways and Means,member,17,minority
+M001213,Rep. Blake D. Moore,R,UT,HSWM,House Committee on Ways and Means,member,18,majority
+P000610,Rep. Stacey E. Plaskett,D,VI,HSWM,House Committee on Ways and Means,member,18,minority
+V000134,Rep. Beth Van Duyne,R,TX,HSWM,House Committee on Ways and Means,member,19,majority
+S001201,Rep. Thomas R. Suozzi,D,NY,HSWM,House Committee on Ways and Means,member,19,minority
+F000446,Rep. Randy Feenstra,R,IA,HSWM,House Committee on Ways and Means,member,20,majority
+M000317,Rep. Nicole Malliotakis,R,NY,HSWM,House Committee on Ways and Means,member,21,majority
+C001126,Rep. Mike Carey,R,OH,HSWM,House Committee on Ways and Means,member,22,majority
+Y000067,Rep. Rudy Yakym III,R,IN,HSWM,House Committee on Ways and Means,member,23,majority
+M001222,Rep. Max L. Miller,R,OH,HSWM,House Committee on Ways and Means,member,24,majority
+B001314,Rep. Aaron Bean,R,FL,HSWM,House Committee on Ways and Means,member,25,majority
+M001224,Rep. Nathaniel Moran,R,TX,HSWM,House Committee on Ways and Means,member,26,majority
+M001194,Rep. John R. Moolenaar,R,MI,HSZS,House Select Committee on the Strategic Competition Between the United States and the Chinese Communist Party,chair,1,majority
+K000389,Rep. Ro Khanna,D,CA,HSZS,House Select Committee on the Strategic Competition Between the United States and the Chinese Communist Party,ranking,1,minority
+W000804,Rep. Robert J. Wittman,R,VA,HSZS,House Select Committee on the Strategic Competition Between the United States and the Chinese Communist Party,member,2,majority
+K000391,Rep. Raja Krishnamoorthi,D,IL,HSZS,House Select Committee on the Strategic Competition Between the United States and the Chinese Communist Party,member,2,minority
+B001282,Rep. Andy Barr,R,KY,HSZS,House Select Committee on the Strategic Competition Between the United States and the Chinese Communist Party,member,3,majority
+C001066,Rep. Kathy Castor,D,FL,HSZS,House Select Committee on the Strategic Competition Between the United States and the Chinese Communist Party,member,3,minority
+N000189,Rep. Dan Newhouse,R,WA,HSZS,House Select Committee on the Strategic Competition Between the United States and the Chinese Communist Party,member,4,majority
+C001072,Rep. André Carson,D,IN,HSZS,House Select Committee on the Strategic Competition Between the United States and the Chinese Communist Party,member,4,minority
+L000585,Rep. Darin LaHood,R,IL,HSZS,House Select Committee on the Strategic Competition Between the United States and the Chinese Communist Party,member,5,majority
+M001196,Rep. Seth Moulton,D,MA,HSZS,House Select Committee on the Strategic Competition Between the United States and the Chinese Communist Party,member,5,minority
+D000628,Rep. Neal P. Dunn,R,FL,HSZS,House Select Committee on the Strategic Competition Between the United States and the Chinese Communist Party,member,6,majority
+S001215,Rep. Haley M. Stevens,D,MI,HSZS,House Select Committee on the Strategic Competition Between the United States and the Chinese Communist Party,member,6,minority
+J000301,Rep. Dusty Johnson,R,SD,HSZS,House Select Committee on the Strategic Competition Between the United States and the Chinese Communist Party,member,7,majority
+T000486,Rep. Ritchie Torres,D,NY,HSZS,House Select Committee on the Strategic Competition Between the United States and the Chinese Communist Party,member,7,minority
+H001091,Rep. Ashley Hinson,R,IA,HSZS,House Select Committee on the Strategic Competition Between the United States and the Chinese Communist Party,member,8,majority
+B001313,Rep. Shontel M. Brown,D,OH,HSZS,House Select Committee on the Strategic Competition Between the United States and the Chinese Communist Party,member,8,minority
+G000593,Rep. Carlos A. Gimenez,R,FL,HSZS,House Select Committee on the Strategic Competition Between the United States and the Chinese Communist Party,member,9,majority
+S001211,Rep. Greg Stanton,D,AZ,HSZS,House Select Committee on the Strategic Competition Between the United States and the Chinese Communist Party,member,9,minority
+B001257,Rep. Gus M. Bilirakis,R,FL,HSZS,House Select Committee on the Strategic Competition Between the United States and the Chinese Communist Party,member,10,majority
+T000487,Rep. Jill N. Tokuda,D,HI,HSZS,House Select Committee on the Strategic Competition Between the United States and the Chinese Communist Party,member,10,minority
+K000397,Rep. Young Kim,R,CA,HSZS,House Select Committee on the Strategic Competition Between the United States and the Chinese Communist Party,member,11,majority
+S001201,Rep. Thomas R. Suozzi,D,NY,HSZS,House Select Committee on the Strategic Competition Between the United States and the Chinese Communist Party,member,11,minority
+M001224,Rep. Nathaniel Moran,R,TX,HSZS,House Select Committee on the Strategic Competition Between the United States and the Chinese Communist Party,member,12,majority
+N000193,Rep. Zachary Nunn,R,IA,HSZS,House Select Committee on the Strategic Competition Between the United States and the Chinese Communist Party,member,13,majority
+L000583,Rep. Barry Loudermilk,R,GA,HSQJ,"House Select Subcommittee to Investigate the Remaining Questions Surrounding January 6, 2021",chair,1,majority
+G000568,Rep. H. Morgan Griffith,R,VA,HSQJ,"House Select Subcommittee to Investigate the Remaining Questions Surrounding January 6, 2021",member,2,majority
+C001130,Rep. Jasmine Crockett,D,TX,HSQJ,"House Select Subcommittee to Investigate the Remaining Questions Surrounding January 6, 2021",member,2,minority
+H001077,Rep. Clay Higgins,R,LA,HSQJ,"House Select Subcommittee to Investigate the Remaining Questions Surrounding January 6, 2021",member,3,majority
+M001217,Rep. Jared Moskowitz,D,FL,HSQJ,"House Select Subcommittee to Investigate the Remaining Questions Surrounding January 6, 2021",member,3,minority
+N000026,Rep. Troy E. Nehls,R,TX,HSQJ,"House Select Subcommittee to Investigate the Remaining Questions Surrounding January 6, 2021",member,4,majority
+H001096,Rep. Harriet M. Hageman,R,WY,HSQJ,"House Select Subcommittee to Investigate the Remaining Questions Surrounding January 6, 2021",member,5,majority

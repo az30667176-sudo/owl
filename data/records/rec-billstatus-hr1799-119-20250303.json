@@ -1,0 +1,26 @@
+{
+  "id": "rec-billstatus-hr1799-119-20250303",
+  "content": "<other>: H.R. 1799 (119th Congress): Financial Reporting Threshold Modernization Act\nSponsor: Rep. Barry Loudermilk\nCosponsor: Rep. Andy Barr\nCosponsor: Rep. Troy Downing\nCosponsor: Rep. Tim Moore\nSponsor: Rep. Barry Loudermilk\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1799",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1799",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-03",
+    "persons": [
+      "L000583",
+      "B001282",
+      "D000634",
+      "M001236",
+      "L000583"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1799"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

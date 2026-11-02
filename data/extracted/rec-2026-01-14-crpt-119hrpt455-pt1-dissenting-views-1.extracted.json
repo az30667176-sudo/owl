@@ -1,0 +1,81 @@
+{
+  "record_id": "rec-2026-01-14-crpt-119hrpt455-pt1-dissenting-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:27:20.763Z",
+  "accepted": [
+    {
+      "person": "H001068",
+      "issue": "district-of-columbia-governance",
+      "date": "2026-01-14",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "H.R. 5103 is part of House Republicans' broad and sweeping attack on Washington, D.C., home rule and self-governance.",
+      "bill": "H.R. 5103",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt455/html/CRPT-119hrpt455-pt1.htm",
+      "record_id": "rec-2026-01-14-crpt-119hrpt455-pt1-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Huffman characterizes the bill as an attack on D.C. home rule rather than park management."
+    },
+    {
+      "person": "H001068",
+      "issue": "gun-policy",
+      "date": "2026-01-14",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Putting more guns on the street is not the answer.",
+      "bill": "H.R. 5103",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt455/html/CRPT-119hrpt455-pt1.htm",
+      "record_id": "rec-2026-01-14-crpt-119hrpt455-pt1-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Huffman rejects the claim that more guns and concealed carry will lower crime."
+    },
+    {
+      "person": "H001068",
+      "issue": "immigration-enforcement",
+      "date": "2026-01-14",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "This is a blatant attempt to advance a divisive immigration crackdown, not a serious attempt to ``beautify'' the capital city or support parks and memorials.",
+      "bill": "H.R. 5103",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt455/html/CRPT-119hrpt455-pt1.htm",
+      "record_id": "rec-2026-01-14-crpt-119hrpt455-pt1-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Huffman opposes the commission's focus on maximizing immigration enforcement in D.C."
+    },
+    {
+      "person": "H001068",
+      "issue": "public-lands-and-parks",
+      "date": "2026-01-14",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The amendment also included funding to bolster staffing at the National Park Service in the region.",
+      "bill": "H.R. 5103",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt455/html/CRPT-119hrpt455-pt1.htm",
+      "record_id": "rec-2026-01-14-crpt-119hrpt455-pt1-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Huffman supports increased funding to address National Park Service staffing shortfalls."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1882,
+    "prompt_tokens": 3773,
+    "total_tokens": 5655,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1411
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

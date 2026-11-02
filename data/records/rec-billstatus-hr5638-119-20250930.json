@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr5638-119-20250930",
+  "content": "<other>: H.R. 5638 (119th Congress): Geothermal Royalty Reform Act\nSponsor: Rep. Mike Kennedy\nSponsor: Rep. Mike Kennedy\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/5638",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/5638",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-09-30",
+    "persons": [
+      "K000403",
+      "K000403"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/5638"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

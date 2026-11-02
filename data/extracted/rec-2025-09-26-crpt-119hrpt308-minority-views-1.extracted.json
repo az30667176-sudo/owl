@@ -1,0 +1,51 @@
+{
+  "record_id": "rec-2025-09-26-crpt-119hrpt308-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:28:51.481Z",
+  "accepted": [
+    {
+      "person": "T000472",
+      "issue": "veterans-education-and-employment",
+      "date": "2025-09-26",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "While we strongly support expanding educational access for our nation's veterans, we have concerns with some unintended consequences that H.R. 1458 may cause as currently drafted.",
+      "bill": "H.R. 1458",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt308/html/CRPT-119hrpt308.htm",
+      "record_id": "rec-2025-09-26-crpt-119hrpt308-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Takano states strong support for expanding educational access for veterans while raising concerns about the bill as drafted."
+    },
+    {
+      "person": "T000472",
+      "issue": "va-operations-and-oversight",
+      "date": "2025-09-26",
+      "score": 0.7,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Without strong and enforceable guardrails, the Department of Veterans Affairs will struggle to prevent waste, fraud, and abuse--at the expense of the very veterans we aim to serve.",
+      "bill": "H.R. 1458",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt308/html/CRPT-119hrpt308.htm",
+      "record_id": "rec-2025-09-26-crpt-119hrpt308-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Takano calls for strong enforceable guardrails so VA can prevent waste, fraud, and abuse in GI Bill programs."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2326,
+    "prompt_tokens": 3176,
+    "total_tokens": 5502,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2084
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

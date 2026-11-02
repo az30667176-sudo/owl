@@ -1,0 +1,42 @@
+{
+  "record_id": "rec-2025-09-11-crpt-119hrpt269-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:27:46.299Z",
+  "accepted": [
+    {
+      "person": "P000034",
+      "issue": "natural-gas-and-lng-exports",
+      "date": "2025-09-11",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The evidence is clear: unrestricted LNG exports would increase energy prices for Americans, on top of the nearly $300 in higher energy bills imposed by Republicans' Big Ugly Bill.",
+      "bill": "H.R. 1949",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt269/html/CRPT-119hrpt269.htm",
+      "record_id": "rec-2025-09-11-crpt-119hrpt269-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Pallone states unrestricted LNG exports raise domestic energy prices, supporting opposition to deregulating LNG exports."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "natural-gas-and-lng-exports",
+      "name": "Natural Gas and LNG Exports",
+      "parent": "hsif-energy"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 2351,
+    "prompt_tokens": 3583,
+    "total_tokens": 5934,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2196
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

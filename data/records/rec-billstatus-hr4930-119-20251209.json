@@ -1,0 +1,25 @@
+{
+  "id": "rec-billstatus-hr4930-119-20251209",
+  "content": "<other>: H.R. 4930 (119th Congress): To expand the sharing of information with respect to suspected violations of intellectual property rights in trade.\nCosponsor: Rep. Carol D. Miller\nCosponsor: Rep. Eugene Simon Vindman\nCosponsor: Rep. Mike Carey\nCosponsor: Rep. David Kustoff\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/4930",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/4930",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-12-09",
+    "persons": [
+      "M001205",
+      "V000138",
+      "C001126",
+      "K000392"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/4930"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

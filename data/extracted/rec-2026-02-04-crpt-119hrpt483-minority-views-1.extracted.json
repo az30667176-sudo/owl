@@ -1,0 +1,66 @@
+{
+  "record_id": "rec-2026-02-04-crpt-119hrpt483-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:28:20.208Z",
+  "accepted": [
+    {
+      "person": "P000034",
+      "issue": "energy-efficiency-standards",
+      "date": "2026-02-04",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "H.R. 4690, the ``Reliable Federal Infrastructure Act,'' would enable government waste and increase costs for taxpayers by repealing the phase out of fossil fuel-generated energy consumption in new and substantially renovated Federal buildings.",
+      "bill": "H.R. 4690, the Reliable Federal Infrastructure Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt483/html/CRPT-119hrpt483-pt1.htm",
+      "record_id": "rec-2026-02-04-crpt-119hrpt483-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Pallone opposes repealing the fossil-fuel phase-out for federal buildings, indicating support for federal building energy efficiency standards."
+    },
+    {
+      "person": "P000034",
+      "issue": "environmental-regulation",
+      "date": "2026-02-04",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The standards also slash planet-warming emissions and provide health benefits to Federal workers and neighboring communities through reduced air pollution.",
+      "bill": "H.R. 4690, the Reliable Federal Infrastructure Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt483/html/CRPT-119hrpt483-pt1.htm",
+      "record_id": "rec-2026-02-04-crpt-119hrpt483-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Pallone cites emissions reductions and reduced air pollution as benefits of the standards he supports."
+    },
+    {
+      "person": "P000034",
+      "issue": "electric-grid-reliability",
+      "date": "2026-02-04",
+      "score": 0.7,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Repealing the standards will increase costs and air pollution, as well as harm innovation and grid reliability.",
+      "bill": "H.R. 4690, the Reliable Federal Infrastructure Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt483/html/CRPT-119hrpt483-pt1.htm",
+      "record_id": "rec-2026-02-04-crpt-119hrpt483-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Pallone argues that repealing the standards would harm grid reliability, indicating support for reliability-enhancing efficiency measures."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1735,
+    "prompt_tokens": 3282,
+    "total_tokens": 5017,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1327
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "rec-billstatus-hr151-119-20250115",
+  "content": "<other>: H.R. 151 (119th Congress): Equal Representation Act of 2025\nCosponsor: Rep. Brad Knott\nCosponsor: Rep. Troy Downing\nCosponsor: Rep. Christopher H. Smith\nCosponsor: Rep. Dan Crenshaw\nCosponsor: Rep. Julie Fedorchak\nCosponsor: Rep. Darrell Issa\nCosponsor: Rep. Mary E. Miller\nCosponsor: Rep. Joe Wilson\nCosponsor: Rep. Diana Harshbarger\nCosponsor: Rep. Mark Alford\nCosponsor: Rep. Rick W. Allen\nCosponsor: Rep. Josh Brecheen\nCosponsor: Rep. Doug LaMalfa\nCosponsor: Rep. Glenn Grothman\nCosponsor: Rep. Thomas P. Tiffany\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/151",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/151",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-01-15",
+    "persons": [
+      "K000405",
+      "D000634",
+      "S000522",
+      "C001120",
+      "F000482",
+      "I000056",
+      "M001211",
+      "W000795",
+      "H001086",
+      "A000379",
+      "A000372",
+      "B001317",
+      "L000578",
+      "G000576",
+      "T000165"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/151"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

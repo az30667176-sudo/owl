@@ -1,0 +1,36 @@
+{
+  "record_id": "rec-2026-05-13-crpt-119hrpt650-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:30:38.994Z",
+  "accepted": [
+    {
+      "person": "G000598",
+      "issue": "district-of-columbia-governance",
+      "date": "2026-05-13",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The bill would violate D.C.'s right to self-government.",
+      "bill": "H.R. 3766",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt650/html/CRPT-119hrpt650.htm",
+      "record_id": "rec-2026-05-13-crpt-119hrpt650-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage asserts H.R. 3766 violates D.C.'s right to self-government, indicating strong support for D.C. autonomy."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1720,
+    "prompt_tokens": 2846,
+    "total_tokens": 4566,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1589
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "rec-billstatus-hr1190-119-20250211",
+  "content": "<other>: H.R. 1190 (119th Congress): Expanding Access to Capital for Rural Job Creators Act\nSponsor: Rep. Troy Downing\nCosponsor: Rep. Janelle S. Bynum\nCosponsor: Rep. Zachary Nunn\nCosponsor: Rep. Chris Pappas\nSponsor: Rep. Troy Downing\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1190",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1190",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-11",
+    "persons": [
+      "D000634",
+      "B001326",
+      "N000193",
+      "P000614",
+      "D000634"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1190"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

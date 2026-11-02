@@ -1,0 +1,38 @@
+{
+  "id": "rec-billstatus-hr1262-119-20250717",
+  "content": "<other>: H.R. 1262 (119th Congress): Mikaela Naylon Give Kids a Chance Act\nCosponsor: Rep. Tim Walberg\nCosponsor: Rep. Mark B. Messmer\nCosponsor: Rep. Troy A. Carter\nCosponsor: Rep. Marilyn Strickland\nCosponsor: Rep. Emilia Strong Sykes\nCosponsor: Rep. Sara Jacobs\nCosponsor: Rep. Sean Casten\nCosponsor: Rep. Alma S. Adams\nCosponsor: Rep. Eric Sorensen\nCosponsor: Rep. Adriano Espaillat\nCosponsor: Rep. April McClain Delaney\nCosponsor: Rep. Maxine Waters\nCosponsor: Rep. Robin L. Kelly\nCosponsor: Rep. Ami Bera\nCosponsor: Rep. Janice D. Schakowsky\nCosponsor: Rep. Bill Foster\nCosponsor: Rep. Jared Moskowitz\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1262",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1262",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-07-17",
+    "persons": [
+      "W000798",
+      "M001233",
+      "C001125",
+      "S001159",
+      "S001223",
+      "J000305",
+      "C001117",
+      "A000370",
+      "S001225",
+      "E000297",
+      "M001232",
+      "W000187",
+      "K000385",
+      "B001287",
+      "S001145",
+      "F000454",
+      "M001217"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1262"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

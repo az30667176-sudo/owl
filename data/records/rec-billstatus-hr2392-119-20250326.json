@@ -1,0 +1,34 @@
+{
+  "id": "rec-billstatus-hr2392-119-20250326",
+  "content": "<other>: H.R. 2392 (119th Congress): STABLE Act of 2025\nSponsor: Rep. Bryan Steil\nCosponsor: Rep. J. French Hill\nCosponsor: Rep. Ritchie Torres\nCosponsor: Rep. Tom Emmer\nCosponsor: Rep. Bill Huizenga\nCosponsor: Rep. Daniel Meuser\nCosponsor: Rep. Young Kim\nCosponsor: Rep. Tim Moore\nCosponsor: Rep. Troy Downing\nCosponsor: Rep. Mike Haridopolos\nCosponsor: Rep. Josh Gottheimer\nCosponsor: Rep. Sam T. Liccardo\nSponsor: Rep. Bryan Steil\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2392",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2392",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-26",
+    "persons": [
+      "S001213",
+      "H001072",
+      "T000486",
+      "E000294",
+      "H001058",
+      "M001204",
+      "K000397",
+      "M001236",
+      "D000634",
+      "H001099",
+      "G000583",
+      "L000607",
+      "S001213"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2392"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

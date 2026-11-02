@@ -1,0 +1,42 @@
+{
+  "record_id": "rec-2025-05-21-crpt-119hrpt111-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:30:23.416Z",
+  "accepted": [
+    {
+      "person": "V000081",
+      "issue": "sba-regulatory-budget-and-rulemaking",
+      "date": "2025-05-21",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "In sum, Committee Democrats opposed the measure because it is unworkable and would grind the legislative process to a halt.",
+      "bill": "H.R. 2965",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt111/html/CRPT-119hrpt111.htm",
+      "record_id": "rec-2025-05-21-crpt-119hrpt111-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage states direct opposition to the regulatory budget measure as unworkable."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "sba-regulatory-budget-and-rulemaking",
+      "name": "SBA Regulatory Budget and Rulemaking",
+      "parent": "hssm-oversight"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 2021,
+    "prompt_tokens": 2830,
+    "total_tokens": 4851,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1876
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

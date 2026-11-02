@@ -1,0 +1,27 @@
+{
+  "id": "rec-billstatus-hr3491-119-20250519",
+  "content": "<other>: H.R. 3491 (119th Congress): DeOndra Dixon INCLUDE Project Act of 2025\nSponsor: Rep. Diana DeGette\nCosponsor: Rep. Richard Hudson\nCosponsor: Rep. Rosa L. DeLauro\nCosponsor: Rep. Tom Cole\nCosponsor: Rep. Eleanor Holmes Norton\nCosponsor: Rep. Pete Stauber\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/3491",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/3491",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-05-19",
+    "persons": [
+      "D000197",
+      "H001067",
+      "D000216",
+      "C001053",
+      "N000147",
+      "S001212"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/3491"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

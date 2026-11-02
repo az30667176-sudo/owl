@@ -1,0 +1,39 @@
+{
+  "id": "rec-billstatus-hr8481-119-20260423",
+  "content": "<other>: H.R. 8481 (119th Congress): Kayleigh’s Law Act of 2026\nSponsor: Rep. Abraham J. Hamadeh\nCosponsor: Rep. Andy Biggs\nCosponsor: Rep. Tim Burchett\nCosponsor: Rep. David Schweikert\nCosponsor: Rep. David P. Joyce\nCosponsor: Rep. Troy Downing\nCosponsor: Rep. Brian Babin\nCosponsor: Rep. David J. Taylor\nCosponsor: Rep. Kimberlyn King-Hinds\nCosponsor: Rep. Gary J. Palmer\nCosponsor: Rep. Nancy Mace\nCosponsor: Rep. Marlin A. Stutzman\nCosponsor: Rep. Elijah Crane\nCosponsor: Rep. Paul A. Gosar\nCosponsor: Rep. Barry Moore\nCosponsor: Rep. Juan Ciscomani\nCosponsor: Rep. Daniel Meuser\nCosponsor: Rep. W. Gregory Steube\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/8481",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/8481",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-04-23",
+    "persons": [
+      "H001098",
+      "B001302",
+      "B001309",
+      "S001183",
+      "J000295",
+      "D000634",
+      "B001291",
+      "T000490",
+      "K000404",
+      "P000609",
+      "M000194",
+      "S001188",
+      "C001132",
+      "G000565",
+      "M001212",
+      "C001133",
+      "M001204",
+      "S001214"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/8481"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

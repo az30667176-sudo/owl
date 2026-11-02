@@ -1,0 +1,51 @@
+{
+  "record_id": "rec-2025-02-28-crpt-119hrpt7-dissenting-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:30:49.538Z",
+  "accepted": [
+    {
+      "person": "N000015",
+      "issue": "tax-administration-and-irs",
+      "date": "2025-02-28",
+      "score": 0.85,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The fact that this resolution would cost nearly $4 billion is a testament to the very need for these regulations.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt7/html/CRPT-119hrpt7.htm",
+      "record_id": "rec-2025-02-28-crpt-119hrpt7-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote expresses support for retaining IRS broker reporting regulations for cryptocurrency transactions."
+    },
+    {
+      "person": "N000015",
+      "issue": "digital-assets-and-fintech",
+      "date": "2025-02-28",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Not only would this let the more sophisticated cryptocurrency investors who use decentralized exchanges off the hook for tax reporting, it would likely encourage those who would otherwise transact on centralized exchanges (generally more friendly to retail investors) to move their transactions to decentralized exchanges, knowing that evading tax liability was easier when they do so.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt7/html/CRPT-119hrpt7.htm",
+      "record_id": "rec-2025-02-28-crpt-119hrpt7-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote supports maintaining reporting requirements for decentralized cryptocurrency exchanges and opposes exempting them."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1822,
+    "prompt_tokens": 2685,
+    "total_tokens": 4507,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1589
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

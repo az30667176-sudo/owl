@@ -1,0 +1,34 @@
+{
+  "id": "rec-billstatus-hr249-119-20250109",
+  "content": "<other>: H.R. 249 (119th Congress): To redesignate certain facilities at Paterson Great Falls National Historical Park in honor of Congressman Bill Pascrell, Jr.\nSponsor: Rep. Frank Pallone, Jr.\nCosponsor: Rep. Nellie Pou\nCosponsor: Rep. Donald Norcross\nCosponsor: Rep. Jefferson Van Drew\nCosponsor: Rep. Herbert C. Conaway, Jr.\nCosponsor: Rep. Christopher H. Smith\nCosponsor: Rep. Josh Gottheimer\nCosponsor: Rep. Thomas H. Kean, Jr.\nCosponsor: Rep. Robert Menendez\nCosponsor: Rep. LaMonica McIver\nCosponsor: Rep. Mikie Sherrill\nCosponsor: Rep. Bonnie Watson Coleman\nSponsor: Rep. Frank Pallone, Jr.\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/249",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/249",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-01-09",
+    "persons": [
+      "P000034",
+      "P000621",
+      "N000188",
+      "V000133",
+      "C001136",
+      "S000522",
+      "G000583",
+      "K000398",
+      "M001226",
+      "M001229",
+      "S001207",
+      "W000822",
+      "P000034"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/249"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

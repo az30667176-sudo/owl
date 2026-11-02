@@ -1,0 +1,24 @@
+{
+  "id": "rec-billstatus-hr5778-119-20251017",
+  "content": "<other>: H.R. 5778 (119th Congress): Improving SBA Engagement on Employee Ownership Act\nSponsor: Rep. LaMonica McIver\nCosponsor: Rep. Robert P. Bresnahan, Jr.\nCosponsor: Rep. Nydia M. Velázquez\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/5778",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/5778",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-10-17",
+    "persons": [
+      "M001229",
+      "B001327",
+      "V000081"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/5778"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "record_id": "rec-2025-09-09-crpt-119hrpt261-minority-views-2",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:46:54.014Z",
+  "accepted": [
+    {
+      "person": "T000472",
+      "issue": "veterans-housing-and-loans",
+      "date": "2025-09-09",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats support Committee Republicans' efforts to ensure that servicemembers do not encounter unwanted occupants of their property during periods of service, and Ranking Member Takano's substitute amendment provides legal clarity and education resources to better achieve those ends.",
+      "bill": "H.R. 2334",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt261/html/CRPT-119hrpt261.htm",
+      "record_id": "rec-2025-09-09-crpt-119hrpt261-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote expresses support for protecting servicemembers from unwanted occupants and for the substitute amendment to achieve that goal."
+    },
+    {
+      "person": "T000472",
+      "issue": "veterans-housing-and-loans",
+      "date": "2025-09-09",
+      "score": -0.7,
+      "direction": "oppose",
+      "linkage": "mid",
+      "llm_confidence": "high",
+      "quote": "Therefore, neither Rep. Mast's original bill nor Chairman Bost's A.N.S. have clear and substantive legal effect, and neither do they address the underlying problems they purport to solve.",
+      "bill": "H.R. 2334",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt261/html/CRPT-119hrpt261.htm",
+      "record_id": "rec-2025-09-09-crpt-119hrpt261-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote opposes the original bill and amendment as ineffective at addressing servicemember property occupation problems."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2112,
+    "prompt_tokens": 3635,
+    "total_tokens": 5747,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1853
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

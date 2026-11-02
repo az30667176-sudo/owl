@@ -1,0 +1,60 @@
+{
+  "id": "rec-billstatus-hr3492-119-20250519",
+  "content": "<other>: H.R. 3492 (119th Congress): Protect Children’s Innocence Act\nSponsor: Rep. Marjorie Taylor Greene\nCosponsor: Rep. Elijah Crane\nCosponsor: Rep. Brad Finstad\nCosponsor: Rep. Anna Paulina Luna\nCosponsor: Rep. Stephanie I. Bice\nCosponsor: Rep. Mary E. Miller\nCosponsor: Rep. Dan Crenshaw\nCosponsor: Rep. John J. McGuire III\nCosponsor: Rep. David Kustoff\nCosponsor: Rep. Andy Biggs\nCosponsor: Rep. Eric Burlison\nCosponsor: Rep. Claudia Tenney\nCosponsor: Rep. Clay Higgins\nCosponsor: Rep. Josh Brecheen\nCosponsor: Rep. Troy E. Nehls\nCosponsor: Rep. Randy K. Weber, Sr.\nCosponsor: Rep. Andy Harris\nCosponsor: Rep. Glenn Grothman\nCosponsor: Rep. Kevin Hern\nCosponsor: Rep. Mike Collins\nCosponsor: Rep. Andrew Ogles\nCosponsor: Rep. Brian Babin\nCosponsor: Rep. Andrew S. Clyde\nCosponsor: Rep. Monica De La Cruz\nCosponsor: Rep. Harriet M. Hageman\nCosponsor: Rep. Burgess Owens\nCosponsor: Rep. Gary J. Palmer\nCosponsor: Rep. William R. Timmons IV\nCosponsor: Rep. Ralph Norman\nCosponsor: Rep. Max L. Miller\nCosponsor: Rep. W. Gregory Steube\nCosponsor: Rep. Ronny Jackson\nCosponsor: Rep. Riley M. Moore\nCosponsor: Rep. James Comer\nCosponsor: Rep. Brandon Gill\nCosponsor: Rep. James R. Baird\nCosponsor: Rep. Addison P. McDowell\nCosponsor: Rep. Diana Harshbarger\nCosponsor: Rep. Lance Gooden\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/3492",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/3492",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-05-19",
+    "persons": [
+      "G000596",
+      "C001132",
+      "F000475",
+      "L000596",
+      "B000740",
+      "M001211",
+      "C001120",
+      "M001239",
+      "K000392",
+      "B001302",
+      "B001316",
+      "T000478",
+      "H001077",
+      "B001317",
+      "N000026",
+      "W000814",
+      "H001052",
+      "G000576",
+      "H001082",
+      "C001129",
+      "O000175",
+      "B001291",
+      "C001116",
+      "D000594",
+      "H001096",
+      "O000086",
+      "P000609",
+      "T000480",
+      "N000190",
+      "M001222",
+      "S001214",
+      "J000304",
+      "M001235",
+      "C001108",
+      "G000603",
+      "B001307",
+      "M001240",
+      "H001086",
+      "G000589"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/3492"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

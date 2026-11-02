@@ -1,0 +1,36 @@
+{
+  "id": "rec-billstatus-hr2184-119-20250318",
+  "content": "<other>: H.R. 2184 (119th Congress): Firearm Due Process Protection Act of 2025\nSponsor: Rep. Tom Emmer\nCosponsor: Rep. Aaron Bean\nCosponsor: Rep. Andy Biggs\nCosponsor: Rep. Mike Bost\nCosponsor: Rep. Earl L. \"Buddy\" Carter\nCosponsor: Rep. Mike Collins\nCosponsor: Rep. Byron Donalds\nCosponsor: Rep. Ron Estes\nCosponsor: Rep. Brad Finstad\nCosponsor: Rep. Charles J. \"Chuck\" Fleischmann\nCosponsor: Rep. Paul A. Gosar\nCosponsor: Rep. Ralph Norman\nCosponsor: Rep. Claudia Tenney\nCosponsor: Rep. William R. Timmons IV\nCosponsor: Rep. Guy Reschenthaler\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2184",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2184",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-18",
+    "persons": [
+      "E000294",
+      "B001314",
+      "B001302",
+      "B001295",
+      "C001103",
+      "C001129",
+      "D000032",
+      "E000298",
+      "F000475",
+      "F000459",
+      "G000565",
+      "N000190",
+      "T000478",
+      "T000480",
+      "R000610"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2184"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

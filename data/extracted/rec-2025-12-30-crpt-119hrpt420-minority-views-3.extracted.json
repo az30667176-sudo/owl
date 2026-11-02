@@ -1,0 +1,111 @@
+{
+  "record_id": "rec-2025-12-30-crpt-119hrpt420-minority-views-3",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:47:50.235Z",
+  "accepted": [
+    {
+      "person": "S000185",
+      "issue": "wages-and-labor-standards",
+      "date": "2025-12-30",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "If Congress seeks to take meaningful action to protect tipped employees, these bills should be prioritized, not H.R. 2312.",
+      "bill": "H.R. 2743",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt420/html/CRPT-119hrpt420.htm",
+      "record_id": "rec-2025-12-30-crpt-119hrpt420-minority-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage urges prioritizing the pro-worker wage bills over H.R. 2312, indicating support."
+    },
+    {
+      "person": "D000623",
+      "issue": "wages-and-labor-standards",
+      "date": "2025-12-30",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "If Congress seeks to take meaningful action to protect tipped employees, these bills should be prioritized, not H.R. 2312.",
+      "bill": "H.R. 2743",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt420/html/CRPT-119hrpt420.htm",
+      "record_id": "rec-2025-12-30-crpt-119hrpt420-minority-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage urges prioritizing the pro-worker wage bills over H.R. 2312, indicating support."
+    },
+    {
+      "person": "G000606",
+      "issue": "wages-and-labor-standards",
+      "date": "2025-12-30",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "If Congress seeks to take meaningful action to protect tipped employees, these bills should be prioritized, not H.R. 2312.",
+      "bill": "H.R. 2743",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt420/html/CRPT-119hrpt420.htm",
+      "record_id": "rec-2025-12-30-crpt-119hrpt420-minority-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage urges prioritizing the pro-worker wage bills over H.R. 2312, indicating support."
+    },
+    {
+      "person": "S000185",
+      "issue": "wages-and-labor-standards",
+      "date": "2025-12-30",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "For the reasons stated above, Committee Democrats unanimously opposed H.R. 2312 when the Committee on Education and Workforce considered it on November 20, 2025.",
+      "bill": "H.R. 2312",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt420/html/CRPT-119hrpt420.htm",
+      "record_id": "rec-2025-12-30-crpt-119hrpt420-minority-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage states unanimous opposition to H.R. 2312 in committee."
+    },
+    {
+      "person": "D000623",
+      "issue": "wages-and-labor-standards",
+      "date": "2025-12-30",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "For the reasons stated above, Committee Democrats unanimously opposed H.R. 2312 when the Committee on Education and Workforce considered it on November 20, 2025.",
+      "bill": "H.R. 2312",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt420/html/CRPT-119hrpt420.htm",
+      "record_id": "rec-2025-12-30-crpt-119hrpt420-minority-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage states unanimous opposition to H.R. 2312 in committee."
+    },
+    {
+      "person": "G000606",
+      "issue": "wages-and-labor-standards",
+      "date": "2025-12-30",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "For the reasons stated above, Committee Democrats unanimously opposed H.R. 2312 when the Committee on Education and Workforce considered it on November 20, 2025.",
+      "bill": "H.R. 2312",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt420/html/CRPT-119hrpt420.htm",
+      "record_id": "rec-2025-12-30-crpt-119hrpt420-minority-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage states unanimous opposition to H.R. 2312 in committee."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2833,
+    "prompt_tokens": 2844,
+    "total_tokens": 5677,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2055
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

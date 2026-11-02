@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr2978-119-20260423",
+  "content": "<other>: H.R. 2978 (119th Congress): GUARD Act\nCosponsor: Rep. Monica De La Cruz\nCosponsor: Rep. Suhas Subramanyam\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2978",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2978",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-04-23",
+    "persons": [
+      "D000594",
+      "S001230"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2978"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

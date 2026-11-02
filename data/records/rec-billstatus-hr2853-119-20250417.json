@@ -1,0 +1,28 @@
+{
+  "id": "rec-billstatus-hr2853-119-20250417",
+  "content": "<other>: H.R. 2853 (119th Congress): Combating Organized Retail Crime Act of 2025\nCosponsor: Rep. Marilyn Strickland\nCosponsor: Rep. Barry Moore\nCosponsor: Rep. Aaron Bean\nCosponsor: Rep. Rick W. Allen\nCosponsor: Rep. Tim Moore\nCosponsor: Rep. Chrissy Houlahan\nCosponsor: Rep. Mike Carey\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2853",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2853",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-04-17",
+    "persons": [
+      "S001159",
+      "M001212",
+      "B001314",
+      "A000372",
+      "M001236",
+      "H001085",
+      "C001126"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2853"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

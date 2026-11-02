@@ -1,0 +1,96 @@
+{
+  "record_id": "rec-2026-09-16-crpt-119hrpt833-minority-views-2",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:46:44.336Z",
+  "accepted": [
+    {
+      "person": "S000185",
+      "issue": "higher-education-and-student-aid",
+      "date": "2026-09-16",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For the reasons stated above, all Committee Democrats present unanimously opposed H.R. 5505 when the Committee on Education and Workforce considered it on June 25, 2026.",
+      "bill": "H.R. 5505",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt833/html/CRPT-119hrpt833.htm",
+      "record_id": "rec-2026-09-16-crpt-119hrpt833-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers state unanimous opposition to H.R. 5505 during committee consideration."
+    },
+    {
+      "person": "B001278",
+      "issue": "higher-education-and-student-aid",
+      "date": "2026-09-16",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For the reasons stated above, all Committee Democrats present unanimously opposed H.R. 5505 when the Committee on Education and Workforce considered it on June 25, 2026.",
+      "bill": "H.R. 5505",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt833/html/CRPT-119hrpt833.htm",
+      "record_id": "rec-2026-09-16-crpt-119hrpt833-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers state unanimous opposition to H.R. 5505 during committee consideration."
+    },
+    {
+      "person": "D000623",
+      "issue": "higher-education-and-student-aid",
+      "date": "2026-09-16",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For the reasons stated above, all Committee Democrats present unanimously opposed H.R. 5505 when the Committee on Education and Workforce considered it on June 25, 2026.",
+      "bill": "H.R. 5505",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt833/html/CRPT-119hrpt833.htm",
+      "record_id": "rec-2026-09-16-crpt-119hrpt833-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers state unanimous opposition to H.R. 5505 during committee consideration."
+    },
+    {
+      "person": "M001208",
+      "issue": "higher-education-and-student-aid",
+      "date": "2026-09-16",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For the reasons stated above, all Committee Democrats present unanimously opposed H.R. 5505 when the Committee on Education and Workforce considered it on June 25, 2026.",
+      "bill": "H.R. 5505",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt833/html/CRPT-119hrpt833.htm",
+      "record_id": "rec-2026-09-16-crpt-119hrpt833-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers state unanimous opposition to H.R. 5505 during committee consideration."
+    },
+    {
+      "person": "G000606",
+      "issue": "higher-education-and-student-aid",
+      "date": "2026-09-16",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For the reasons stated above, all Committee Democrats present unanimously opposed H.R. 5505 when the Committee on Education and Workforce considered it on June 25, 2026.",
+      "bill": "H.R. 5505",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt833/html/CRPT-119hrpt833.htm",
+      "record_id": "rec-2026-09-16-crpt-119hrpt833-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers state unanimous opposition to H.R. 5505 during committee consideration."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 3347,
+    "prompt_tokens": 4421,
+    "total_tokens": 7768,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2749
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

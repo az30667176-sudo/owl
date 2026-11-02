@@ -1,0 +1,26 @@
+{
+  "id": "rec-billstatus-hr6472-119-20251204",
+  "content": "<other>: H.R. 6472 (119th Congress): Territorial Student Access to Higher Education Act\nSponsor: Rep. James C. Moylan\nCosponsor: Rep. Aumua Amata Coleman Radewagen\nCosponsor: Rep. Kimberlyn King-Hinds\nCosponsor: Rep. Pablo José Hernández\nCosponsor: Rep. Stacey E. Plaskett\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/6472",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/6472",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-12-04",
+    "persons": [
+      "M001219",
+      "R000600",
+      "K000404",
+      "H001103",
+      "P000610"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/6472"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

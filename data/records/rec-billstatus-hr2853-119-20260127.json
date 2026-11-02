@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr2853-119-20260127",
+  "content": "<other>: H.R. 2853 (119th Congress): Combating Organized Retail Crime Act of 2025\nCosponsor: Rep. John Joyce\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2853",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2853",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-01-27",
+    "persons": [
+      "J000302"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2853"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

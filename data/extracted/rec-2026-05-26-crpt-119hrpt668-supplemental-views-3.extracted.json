@@ -1,0 +1,51 @@
+{
+  "record_id": "rec-2026-05-26-crpt-119hrpt668-supplemental-views-3",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:46:29.484Z",
+  "accepted": [
+    {
+      "person": "S000185",
+      "issue": "higher-education-and-student-aid",
+      "date": "2026-05-26",
+      "score": -0.8,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "We urge the House of Representatives to oppose H.R. 7891 unless there is a significant narrowing of enforcement authority, adjustments to the program review trigger, and wider consultation of higher education stakeholders.",
+      "bill": "H.R. 7891",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt668/html/CRPT-119hrpt668.htm",
+      "record_id": "rec-2026-05-26-crpt-119hrpt668-supplemental-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislator explicitly urges opposition to the bill unless enforcement authority is narrowed."
+    },
+    {
+      "person": "S000185",
+      "issue": "higher-education-and-student-aid",
+      "date": "2026-05-26",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "It is critical to protect federal student aid from waste, fraud, and abuse, including identity fraud by ghost students and fraud rings.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt668/html/CRPT-119hrpt668.htm",
+      "record_id": "rec-2026-05-26-crpt-119hrpt668-supplemental-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislator affirms the importance of protecting federal student aid from fraud and abuse."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1410,
+    "prompt_tokens": 4136,
+    "total_tokens": 5546,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1186
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

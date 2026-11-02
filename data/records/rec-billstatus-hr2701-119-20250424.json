@@ -1,0 +1,26 @@
+{
+  "id": "rec-billstatus-hr2701-119-20250424",
+  "content": "<other>: H.R. 2701 (119th Congress): Fallen Servicemembers Religious Heritage Restoration Act\nCosponsor: Rep. Brian K. Fitzpatrick\nCosponsor: Rep. Craig A. Goldman\nCosponsor: Rep. Thomas R. Suozzi\nCosponsor: Rep. Earl L. \"Buddy\" Carter\nCosponsor: Rep. Eleanor Holmes Norton\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2701",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2701",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-04-24",
+    "persons": [
+      "F000466",
+      "G000601",
+      "S001201",
+      "C001103",
+      "N000147"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2701"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

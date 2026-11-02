@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr7388-119-20260205",
+  "content": "<other>: H.R. 7388 (119th Congress): Smart Space Act of 2026\nSponsor: Rep. Eric Burlison\nSponsor: Rep. Eric Burlison\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/7388",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/7388",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-02-05",
+    "persons": [
+      "B001316",
+      "B001316"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/7388"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

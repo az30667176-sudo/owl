@@ -1,0 +1,27 @@
+{
+  "id": "rec-billstatus-hr2853-119-20250620",
+  "content": "<other>: H.R. 2853 (119th Congress): Combating Organized Retail Crime Act of 2025\nCosponsor: Rep. Randy K. Weber, Sr.\nCosponsor: Rep. Nellie Pou\nCosponsor: Rep. Andrea Salinas\nCosponsor: Rep. Maria Elvira Salazar\nCosponsor: Rep. Tim Burchett\nCosponsor: Rep. Brandon Gill\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2853",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2853",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-06-20",
+    "persons": [
+      "W000814",
+      "P000621",
+      "S001226",
+      "S000168",
+      "B001309",
+      "G000603"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2853"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

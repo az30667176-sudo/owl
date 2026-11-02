@@ -1,0 +1,25 @@
+{
+  "id": "rec-billstatus-hr1468-119-20250226",
+  "content": "<other>: H.R. 1468 (119th Congress): Protect America’s Innovation and Economic Security from CCP Act\nCosponsor: Rep. Jennifer A. Kiggans\nCosponsor: Rep. Rudy Yakym III\nCosponsor: Rep. Darin LaHood\nCosponsor: Rep. John H. Rutherford\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1468",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1468",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-26",
+    "persons": [
+      "K000399",
+      "Y000067",
+      "L000585",
+      "R000609"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1468"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

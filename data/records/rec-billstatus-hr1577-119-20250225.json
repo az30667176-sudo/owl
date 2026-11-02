@@ -1,0 +1,29 @@
+{
+  "id": "rec-billstatus-hr1577-119-20250225",
+  "content": "<other>: H.R. 1577 (119th Congress): Stop Fentanyl Money Laundering Act of 2025\nSponsor: Rep. Andrew Ogles\nCosponsor: Rep. Monica De La Cruz\nCosponsor: Rep. Daniel Meuser\nCosponsor: Rep. Zachary Nunn\nCosponsor: Rep. Young Kim\nCosponsor: Rep. Pete Sessions\nCosponsor: Rep. Cleo Fields\nSponsor: Rep. Andrew Ogles\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1577",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1577",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-25",
+    "persons": [
+      "O000175",
+      "D000594",
+      "M001204",
+      "N000193",
+      "K000397",
+      "S000250",
+      "F000110",
+      "O000175"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1577"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

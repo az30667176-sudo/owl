@@ -1,0 +1,41 @@
+{
+  "id": "rec-billstatus-hr1262-119-20250224",
+  "content": "<other>: H.R. 1262 (119th Congress): Mikaela Naylon Give Kids a Chance Act\nCosponsor: Rep. Robert J. Wittman\nCosponsor: Rep. Rick W. Allen\nCosponsor: Rep. Ryan K. Zinke\nCosponsor: Rep. Gabe Evans\nCosponsor: Rep. Clay Higgins\nCosponsor: Rep. Carlos A. Gimenez\nCosponsor: Rep. Carol D. Miller\nCosponsor: Rep. Ben Cline\nCosponsor: Rep. Pete Sessions\nCosponsor: Rep. Michael A. Rulli\nCosponsor: Rep. Kevin Mullin\nCosponsor: Rep. Darren Soto\nCosponsor: Rep. William R. Keating\nCosponsor: Rep. LaMonica McIver\nCosponsor: Rep. Ed Case\nCosponsor: Rep. Joaquin Castro\nCosponsor: Rep. Terri A. Sewell\nCosponsor: Rep. Debbie Wasserman Schultz\nCosponsor: Rep. Eleanor Holmes Norton\nCosponsor: Rep. Morgan McGarvey\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1262",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1262",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-24",
+    "persons": [
+      "W000804",
+      "A000372",
+      "Z000018",
+      "E000300",
+      "H001077",
+      "G000593",
+      "M001205",
+      "C001118",
+      "S000250",
+      "R000619",
+      "M001225",
+      "S001200",
+      "K000375",
+      "M001229",
+      "C001055",
+      "C001091",
+      "S001185",
+      "W000797",
+      "N000147",
+      "M001220"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1262"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

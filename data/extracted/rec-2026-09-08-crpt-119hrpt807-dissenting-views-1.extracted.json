@@ -1,0 +1,36 @@
+{
+  "record_id": "rec-2026-09-08-crpt-119hrpt807-dissenting-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:30:34.074Z",
+  "accepted": [
+    {
+      "person": "N000015",
+      "issue": "tax-administration-and-irs",
+      "date": "2026-09-08",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Thus, we should fully restore the IRS budget, including the IRA investment.",
+      "bill": "H.R. 7972, the Taxpayer Workforce Modernization Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt807/html/CRPT-119hrpt807.htm",
+      "record_id": "rec-2026-09-08-crpt-119hrpt807-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Neal calls for full restoration of IRS funding including the IRA investment, indicating support for IRS capacity."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1665,
+    "prompt_tokens": 2788,
+    "total_tokens": 4453,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1531
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

@@ -1,0 +1,81 @@
+{
+  "record_id": "rec-2026-06-26-crpt-119hrpt715-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:27:45.810Z",
+  "accepted": [
+    {
+      "person": "D000216",
+      "issue": "defense-appropriations",
+      "date": "2026-06-26",
+      "score": -0.7,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For all of these reasons, we cannot yet support the bill as it is currently drafted.",
+      "bill": "Fiscal Year 2027 Defense Appropriations Bill",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt715/html/CRPT-119hrpt715.htm",
+      "record_id": "rec-2026-06-26-crpt-119hrpt715-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers state they cannot support the defense appropriations bill in its current form."
+    },
+    {
+      "person": "M001143",
+      "issue": "defense-appropriations",
+      "date": "2026-06-26",
+      "score": -0.7,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For all of these reasons, we cannot yet support the bill as it is currently drafted.",
+      "bill": "Fiscal Year 2027 Defense Appropriations Bill",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt715/html/CRPT-119hrpt715.htm",
+      "record_id": "rec-2026-06-26-crpt-119hrpt715-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers state they cannot support the defense appropriations bill in its current form."
+    },
+    {
+      "person": "D000216",
+      "issue": "defense-authorization",
+      "date": "2026-06-26",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Every enacted Defense bill for the past eleven years has included funding for Ukraine and there remains broad Congressional support for the funding these programs. Therefore, we believe funding should be included.",
+      "bill": "Fiscal Year 2027 Defense Appropriations Bill",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt715/html/CRPT-119hrpt715.htm",
+      "record_id": "rec-2026-06-26-crpt-119hrpt715-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers express support for including military support funding for Ukraine."
+    },
+    {
+      "person": "M001143",
+      "issue": "defense-authorization",
+      "date": "2026-06-26",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Every enacted Defense bill for the past eleven years has included funding for Ukraine and there remains broad Congressional support for the funding these programs. Therefore, we believe funding should be included.",
+      "bill": "Fiscal Year 2027 Defense Appropriations Bill",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt715/html/CRPT-119hrpt715.htm",
+      "record_id": "rec-2026-06-26-crpt-119hrpt715-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers express support for including military support funding for Ukraine."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2510,
+    "prompt_tokens": 3514,
+    "total_tokens": 6024,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2089
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

@@ -1,0 +1,177 @@
+{
+  "record_id": "rec-2025-07-24-crpt-119hrpt215-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:27:00.293Z",
+  "accepted": [
+    {
+      "person": "D000216",
+      "issue": "interior-and-environment-appropriations",
+      "date": "2025-07-24",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "In its current form, this bill fails the American people by cutting environmental protection; shredding safeguards that protect our air, water, and endangered species; and allowing rampant corruption in the Executive Branch to go unchecked.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt215/html/CRPT-119hrpt215.htm",
+      "record_id": "rec-2025-07-24-crpt-119hrpt215-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage states the Interior bill fails the American people and lists harms, justifying opposition to the bill."
+    },
+    {
+      "person": "P000597",
+      "issue": "interior-and-environment-appropriations",
+      "date": "2025-07-24",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "In its current form, this bill fails the American people by cutting environmental protection; shredding safeguards that protect our air, water, and endangered species; and allowing rampant corruption in the Executive Branch to go unchecked.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt215/html/CRPT-119hrpt215.htm",
+      "record_id": "rec-2025-07-24-crpt-119hrpt215-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage states the Interior bill fails the American people and lists harms, justifying opposition to the bill."
+    },
+    {
+      "person": "D000216",
+      "issue": "water-infrastructure-and-quality",
+      "date": "2025-07-24",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Both Ranking Member DeLauro's amendment to restore State Revolving Funds and Representative Watson Coleman's to restore Environmental Justice funding failed along party lines.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt215/html/CRPT-119hrpt215.htm",
+      "record_id": "rec-2025-07-24-crpt-119hrpt215-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage notes an amendment to restore State Revolving Funds, indicating support for water infrastructure funding."
+    },
+    {
+      "person": "P000597",
+      "issue": "water-infrastructure-and-quality",
+      "date": "2025-07-24",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Both Ranking Member DeLauro's amendment to restore State Revolving Funds and Representative Watson Coleman's to restore Environmental Justice funding failed along party lines.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt215/html/CRPT-119hrpt215.htm",
+      "record_id": "rec-2025-07-24-crpt-119hrpt215-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage notes an amendment to restore State Revolving Funds, indicating support for water infrastructure funding."
+    },
+    {
+      "person": "D000216",
+      "issue": "environmental-regulation",
+      "date": "2025-07-24",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Finally, the bill includes 73 poison pill riders that cripple environmental protection, undermine climate change policies, and add to the national deficit.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt215/html/CRPT-119hrpt215.htm",
+      "record_id": "rec-2025-07-24-crpt-119hrpt215-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Criticizing riders that cripple environmental protection indicates support for environmental regulation."
+    },
+    {
+      "person": "P000597",
+      "issue": "environmental-regulation",
+      "date": "2025-07-24",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Finally, the bill includes 73 poison pill riders that cripple environmental protection, undermine climate change policies, and add to the national deficit.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt215/html/CRPT-119hrpt215.htm",
+      "record_id": "rec-2025-07-24-crpt-119hrpt215-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Criticizing riders that cripple environmental protection indicates support for environmental regulation."
+    },
+    {
+      "person": "D000216",
+      "issue": "public-lands-and-parks",
+      "date": "2025-07-24",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Taken together, these cuts have created a crisis that risks destroying the legacy of our national park system.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt215/html/CRPT-119hrpt215.htm",
+      "record_id": "rec-2025-07-24-crpt-119hrpt215-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Describing park funding cuts as a crisis risking the park system legacy indicates support for national parks."
+    },
+    {
+      "person": "P000597",
+      "issue": "public-lands-and-parks",
+      "date": "2025-07-24",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Taken together, these cuts have created a crisis that risks destroying the legacy of our national park system.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt215/html/CRPT-119hrpt215.htm",
+      "record_id": "rec-2025-07-24-crpt-119hrpt215-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Describing park funding cuts as a crisis risking the park system legacy indicates support for national parks."
+    },
+    {
+      "person": "D000216",
+      "issue": "arts-and-humanities-funding",
+      "date": "2025-07-24",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "it is critical that Congress assert its support for the NEA and NEH, but the bill cuts each endowment by $72 million or 35%.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt215/html/CRPT-119hrpt215.htm",
+      "record_id": "rec-2025-07-24-crpt-119hrpt215-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage calls congressional support for NEA and NEH critical and criticizes cuts, indicating support for arts funding."
+    },
+    {
+      "person": "P000597",
+      "issue": "arts-and-humanities-funding",
+      "date": "2025-07-24",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "it is critical that Congress assert its support for the NEA and NEH, but the bill cuts each endowment by $72 million or 35%.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt215/html/CRPT-119hrpt215.htm",
+      "record_id": "rec-2025-07-24-crpt-119hrpt215-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage calls congressional support for NEA and NEH critical and criticizes cuts, indicating support for arts funding."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "arts-and-humanities-funding",
+      "name": "Arts and Humanities Funding",
+      "parent": "hsap-interior"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 3144,
+    "prompt_tokens": 3743,
+    "total_tokens": 6887,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2099
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

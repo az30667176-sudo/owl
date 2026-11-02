@@ -1,0 +1,62 @@
+{
+  "record_id": "rec-2026-06-03-crpt-119hrpt683-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:29:02.370Z",
+  "accepted": [
+    {
+      "person": "G000598",
+      "issue": "inspector-general-independence-and-oversight",
+      "date": "2026-06-03",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats strongly oppose this legislation, which uses the facade of fraud prevention to undermine an entire ecosystem intended to hold the executive branch accountable.",
+      "bill": "H.R. 8312",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt683/html/CRPT-119hrpt683.htm",
+      "record_id": "rec-2026-06-03-crpt-119hrpt683-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Garcia as signer opposes H.R. 8312 because it would undermine CIGIE and the Inspector General oversight ecosystem."
+    },
+    {
+      "person": "G000598",
+      "issue": "pandemic-fraud-prevention-and-recovery",
+      "date": "2026-06-03",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats support creating a permanent home for the PRAC and giving it more power to coordinate and assist Offices of Inspector General in performing their functions",
+      "bill": "H.R. 8312",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt683/html/CRPT-119hrpt683.htm",
+      "record_id": "rec-2026-06-03-crpt-119hrpt683-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Garcia as signer supports establishing a permanent empowered home for PRAC to coordinate fraud oversight."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "inspector-general-independence-and-oversight",
+      "name": "Inspector General Independence and Oversight",
+      "parent": "hsgo-doge"
+    },
+    {
+      "id": "pandemic-fraud-prevention-and-recovery",
+      "name": "Pandemic Fraud Prevention and Recovery",
+      "parent": "hsgo-doge"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 2234,
+    "prompt_tokens": 3090,
+    "total_tokens": 5324,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1944
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

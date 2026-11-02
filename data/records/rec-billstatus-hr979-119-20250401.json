@@ -1,0 +1,35 @@
+{
+  "id": "rec-billstatus-hr979-119-20250401",
+  "content": "<other>: H.R. 979 (119th Congress): AM Radio for Every Vehicle Act of 2025\nCosponsor: Rep. Trent Kelly\nCosponsor: Rep. Sara Jacobs\nCosponsor: Rep. John W. Rose\nCosponsor: Rep. Burgess Owens\nCosponsor: Rep. Delia C. Ramirez\nCosponsor: Rep. Randy Feenstra\nCosponsor: Rep. Andrea Salinas\nCosponsor: Rep. Chellie Pingree\nCosponsor: Rep. Raul Ruiz\nCosponsor: Rep. Abraham J. Hamadeh\nCosponsor: Rep. Rick W. Allen\nCosponsor: Rep. Sharice Davids\nCosponsor: Rep. Troy E. Nehls\nCosponsor: Rep. Donald Norcross\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/979",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/979",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-04-01",
+    "persons": [
+      "K000388",
+      "J000305",
+      "R000612",
+      "O000086",
+      "R000617",
+      "F000446",
+      "S001226",
+      "P000597",
+      "R000599",
+      "H001098",
+      "A000372",
+      "D000629",
+      "N000026",
+      "N000188"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/979"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

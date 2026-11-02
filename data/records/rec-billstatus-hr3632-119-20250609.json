@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr3632-119-20250609",
+  "content": "<other>: H.R. 3632 (119th Congress): Power Plant Reliability Act of 2025\nCosponsor: Rep. Earl L. \"Buddy\" Carter\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/3632",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/3632",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-06-09",
+    "persons": [
+      "C001103"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/3632"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

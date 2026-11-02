@@ -1,0 +1,31 @@
+{
+  "id": "rec-billstatus-hr5267-119-20260324",
+  "content": "<other>: H.R. 5267 (119th Congress): American Franchise Act\nCosponsor: Rep. Tracey Mann\nCosponsor: Rep. Don Bacon\nCosponsor: Rep. Cleo Fields\nCosponsor: Rep. Elise M. Stefanik\nCosponsor: Rep. Scott DesJarlais\nCosponsor: Rep. Lance Gooden\nCosponsor: Rep. Jack Bergman\nCosponsor: Rep. Erin Houchin\nCosponsor: Rep. Austin Scott\nCosponsor: Rep. Dan Newhouse\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/5267",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/5267",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-03-24",
+    "persons": [
+      "M000871",
+      "B001298",
+      "F000110",
+      "S001196",
+      "D000616",
+      "G000589",
+      "B001301",
+      "H001093",
+      "S001189",
+      "N000189"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/5267"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

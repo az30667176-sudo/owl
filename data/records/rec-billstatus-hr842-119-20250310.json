@@ -1,0 +1,44 @@
+{
+  "id": "rec-billstatus-hr842-119-20250310",
+  "content": "<other>: H.R. 842 (119th Congress): Nancy Gardner Sewell Medicare Multi-Cancer Early Detection Screening Coverage Act\nCosponsor: Rep. Jay Obernolte\nCosponsor: Rep. Mike Ezell\nCosponsor: Rep. Kimberlyn King-Hinds\nCosponsor: Rep. Juan Ciscomani\nCosponsor: Rep. Morgan Luttrell\nCosponsor: Rep. Joe Wilson\nCosponsor: Rep. Mike Collins\nCosponsor: Rep. Mark B. Messmer\nCosponsor: Rep. Randy K. Weber, Sr.\nCosponsor: Rep. Young Kim\nCosponsor: Rep. Jennifer A. Kiggans\nCosponsor: Rep. W. Gregory Steube\nCosponsor: Rep. Jerrold Nadler\nCosponsor: Rep. Greg Landsman\nCosponsor: Rep. Marc A. Veasey\nCosponsor: Rep. Lori Trahan\nCosponsor: Rep. Mike Thompson\nCosponsor: Rep. Thomas R. Suozzi\nCosponsor: Rep. Nydia M. Velázquez\nCosponsor: Rep. Jahana Hayes\nCosponsor: Rep. Scott H. Peters\nCosponsor: Rep. Austin Scott\nCosponsor: Rep. Nikki Budzinski\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/842",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/842",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-10",
+    "persons": [
+      "O000019",
+      "E000235",
+      "K000404",
+      "C001133",
+      "L000603",
+      "W000795",
+      "C001129",
+      "M001233",
+      "W000814",
+      "K000397",
+      "K000399",
+      "S001214",
+      "N000002",
+      "L000601",
+      "V000131",
+      "T000482",
+      "T000460",
+      "S001201",
+      "V000081",
+      "H001081",
+      "P000608",
+      "S001189",
+      "B001315"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/842"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

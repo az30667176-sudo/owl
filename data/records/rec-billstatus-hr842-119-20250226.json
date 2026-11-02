@@ -1,0 +1,35 @@
+{
+  "id": "rec-billstatus-hr842-119-20250226",
+  "content": "<other>: H.R. 842 (119th Congress): Nancy Gardner Sewell Medicare Multi-Cancer Early Detection Screening Coverage Act\nCosponsor: Rep. Adrian Smith\nCosponsor: Rep. Steven Horsford\nCosponsor: Rep. J. French Hill\nCosponsor: Rep. Bradley Scott Schneider\nCosponsor: Rep. Michael K. Simpson\nCosponsor: Rep. James P. McGovern\nCosponsor: Rep. Ken Calvert\nCosponsor: Rep. Adam Smith\nCosponsor: Rep. Pat Fallon\nCosponsor: Rep. Norma J. Torres\nCosponsor: Rep. Tracey Mann\nCosponsor: Rep. Suzanne Bonamici\nCosponsor: Rep. William R. Timmons IV\nCosponsor: Rep. Jill N. Tokuda\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/842",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/842",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-26",
+    "persons": [
+      "S001172",
+      "H001066",
+      "H001072",
+      "S001190",
+      "S001148",
+      "M000312",
+      "C000059",
+      "S000510",
+      "F000246",
+      "T000474",
+      "M000871",
+      "B001278",
+      "T000480",
+      "T000487"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/842"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "rec-billstatus-hr3633-119-20250620",
+  "content": "<other>: H.R. 3633 (119th Congress): Digital Asset Market Clarity Act\nCosponsor: Rep. Zachary Nunn\nCosponsor: Rep. Michael Lawler\nCosponsor: Rep. Daniel Meuser\nCosponsor: Rep. Earl L. \"Buddy\" Carter\nCosponsor: Rep. Riley M. Moore\nCosponsor: Rep. Nicholas J. Begich III\nCosponsor: Rep. Kristen McDonald Rivet\nCosponsor: Rep. Shri Thanedar\nCosponsor: Rep. Mark B. Messmer\nCosponsor: Rep. Robert P. Bresnahan, Jr.\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/3633",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-06-20",
+    "persons": [
+      "N000193",
+      "L000599",
+      "M001204",
+      "C001103",
+      "M001235",
+      "B001323",
+      "M001237",
+      "T000488",
+      "M001233",
+      "B001327"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/3633"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

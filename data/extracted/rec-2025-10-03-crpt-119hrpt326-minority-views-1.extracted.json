@@ -1,0 +1,66 @@
+{
+  "record_id": "rec-2025-10-03-crpt-119hrpt326-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:30:47.249Z",
+  "accepted": [
+    {
+      "person": "G000598",
+      "issue": "criminal-sentencing",
+      "date": "2025-10-03",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "Mandatory minimum sentencing has fueled mass incarceration, failed to deter crime, and deepened racial disparities.",
+      "bill": "H.R. 5172, the so-called Strong Sentences for Safer D.C. Streets Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt326/html/CRPT-119hrpt326.htm",
+      "record_id": "rec-2025-10-03-crpt-119hrpt326-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote directly condemns mandatory minimum sentencing as harmful and ineffective, justifying opposition on sentencing policy."
+    },
+    {
+      "person": "G000598",
+      "issue": "district-of-columbia-governance",
+      "date": "2025-10-03",
+      "score": -0.8,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Yet again, this bill ignores the will of D.C. residents and the existing research on mandatory minimum sentencing.",
+      "bill": "H.R. 5172, the so-called Strong Sentences for Safer D.C. Streets Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt326/html/CRPT-119hrpt326.htm",
+      "record_id": "rec-2025-10-03-crpt-119hrpt326-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote opposes federal legislation for disregarding D.C. residents' will, addressing District governance autonomy."
+    },
+    {
+      "person": "G000598",
+      "issue": "law-enforcement-support",
+      "date": "2025-10-03",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "We need more police, more detectives, and more effective prosecutions, not longer sentences alone.",
+      "bill": "H.R. 5172, the so-called Strong Sentences for Safer D.C. Streets Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt326/html/CRPT-119hrpt326.htm",
+      "record_id": "rec-2025-10-03-crpt-119hrpt326-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote explicitly calls for more police, detectives, and prosecutions, indicating support for law enforcement resources."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1496,
+    "prompt_tokens": 2689,
+    "total_tokens": 4185,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1142
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

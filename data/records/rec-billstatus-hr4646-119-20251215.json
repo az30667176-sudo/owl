@@ -1,0 +1,24 @@
+{
+  "id": "rec-billstatus-hr4646-119-20251215",
+  "content": "<other>: H.R. 4646 (119th Congress): Whistleblower Protection Act of 2025\nCosponsor: Rep. Josh Gottheimer\nCosponsor: Rep. John W. Rose\nCosponsor: Rep. Daniel Meuser\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/4646",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/4646",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-12-15",
+    "persons": [
+      "G000583",
+      "R000612",
+      "M001204"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/4646"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr1455-119-20250221",
+  "content": "<other>: H.R. 1455 (119th Congress): ITS Codification Act\nSponsor: Rep. Earl L. \"Buddy\" Carter\nCosponsor: Rep. Brittany Pettersen\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1455",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1455",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-21",
+    "persons": [
+      "C001103",
+      "P000620"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1455"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "record_id": "rec-2025-03-21-crpt-119hrpt23-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:24:43.335Z",
+  "accepted": [
+    {
+      "person": "W000187",
+      "issue": "nuclear-energy-financing",
+      "date": "2025-03-21",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For all of these reasons, we also oppose H.R. 1474.",
+      "bill": "H.R. 1474",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt23/html/CRPT-119hrpt23.htm",
+      "record_id": "rec-2025-03-21-crpt-119hrpt23-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Explicit joint statement opposing the bill requiring MDBs to finance nuclear energy projects."
+    },
+    {
+      "person": "G000553",
+      "issue": "nuclear-energy-financing",
+      "date": "2025-03-21",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For all of these reasons, we also oppose H.R. 1474.",
+      "bill": "H.R. 1474",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt23/html/CRPT-119hrpt23.htm",
+      "record_id": "rec-2025-03-21-crpt-119hrpt23-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Explicit joint statement opposing the bill requiring MDBs to finance nuclear energy projects."
+    },
+    {
+      "person": "T000481",
+      "issue": "nuclear-energy-financing",
+      "date": "2025-03-21",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For all of these reasons, we also oppose H.R. 1474.",
+      "bill": "H.R. 1474",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt23/html/CRPT-119hrpt23.htm",
+      "record_id": "rec-2025-03-21-crpt-119hrpt23-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Explicit joint statement opposing the bill requiring MDBs to finance nuclear energy projects."
+    },
+    {
+      "person": "F000110",
+      "issue": "nuclear-energy-financing",
+      "date": "2025-03-21",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For all of these reasons, we also oppose H.R. 1474.",
+      "bill": "H.R. 1474",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt23/html/CRPT-119hrpt23.htm",
+      "record_id": "rec-2025-03-21-crpt-119hrpt23-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Explicit joint statement opposing the bill requiring MDBs to finance nuclear energy projects."
+    },
+    {
+      "person": "B001281",
+      "issue": "nuclear-energy-financing",
+      "date": "2025-03-21",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For all of these reasons, we also oppose H.R. 1474.",
+      "bill": "H.R. 1474",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt23/html/CRPT-119hrpt23.htm",
+      "record_id": "rec-2025-03-21-crpt-119hrpt23-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Explicit joint statement opposing the bill requiring MDBs to finance nuclear energy projects."
+    },
+    {
+      "person": "G000587",
+      "issue": "nuclear-energy-financing",
+      "date": "2025-03-21",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For all of these reasons, we also oppose H.R. 1474.",
+      "bill": "H.R. 1474",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt23/html/CRPT-119hrpt23.htm",
+      "record_id": "rec-2025-03-21-crpt-119hrpt23-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Explicit joint statement opposing the bill requiring MDBs to finance nuclear energy projects."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "nuclear-energy-financing",
+      "name": "Nuclear Energy Financing",
+      "parent": "hsba-natsec"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 1854,
+    "prompt_tokens": 5077,
+    "total_tokens": 6931,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1259
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

@@ -1,0 +1,177 @@
+{
+  "record_id": "rec-2026-08-27-crpt-119hrpt781-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:26:38.676Z",
+  "accepted": [
+    {
+      "person": "S000185",
+      "issue": "higher-education-and-student-aid",
+      "date": "2026-08-27",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats support the rights of college students to join fraternities, sororities, and other student organizations.",
+      "bill": "H.R. 2555, the Freedom of Association in Higher Education Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt781/html/CRPT-119hrpt781.htm",
+      "record_id": "rec-2026-08-27-crpt-119hrpt781-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote expressly states support for students' right to join single-sex social organizations."
+    },
+    {
+      "person": "S000185",
+      "issue": "transgender-student-rights-in-higher-education",
+      "date": "2026-08-27",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "However, the markup of H.R. 2555 needlessly inserted a poison pill (specifically language to discriminate against transgender individuals) into an otherwise bipartisan bill.",
+      "bill": "H.R. 2555, the Freedom of Association in Higher Education Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt781/html/CRPT-119hrpt781.htm",
+      "record_id": "rec-2026-08-27-crpt-119hrpt781-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote condemns language described as discriminating against transgender individuals."
+    },
+    {
+      "person": "B001278",
+      "issue": "higher-education-and-student-aid",
+      "date": "2026-08-27",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats support the rights of college students to join fraternities, sororities, and other student organizations.",
+      "bill": "H.R. 2555, the Freedom of Association in Higher Education Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt781/html/CRPT-119hrpt781.htm",
+      "record_id": "rec-2026-08-27-crpt-119hrpt781-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote expressly states support for students' right to join single-sex social organizations."
+    },
+    {
+      "person": "B001278",
+      "issue": "transgender-student-rights-in-higher-education",
+      "date": "2026-08-27",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "However, the markup of H.R. 2555 needlessly inserted a poison pill (specifically language to discriminate against transgender individuals) into an otherwise bipartisan bill.",
+      "bill": "H.R. 2555, the Freedom of Association in Higher Education Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt781/html/CRPT-119hrpt781.htm",
+      "record_id": "rec-2026-08-27-crpt-119hrpt781-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote condemns language described as discriminating against transgender individuals."
+    },
+    {
+      "person": "D000623",
+      "issue": "higher-education-and-student-aid",
+      "date": "2026-08-27",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats support the rights of college students to join fraternities, sororities, and other student organizations.",
+      "bill": "H.R. 2555, the Freedom of Association in Higher Education Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt781/html/CRPT-119hrpt781.htm",
+      "record_id": "rec-2026-08-27-crpt-119hrpt781-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote expressly states support for students' right to join single-sex social organizations."
+    },
+    {
+      "person": "D000623",
+      "issue": "transgender-student-rights-in-higher-education",
+      "date": "2026-08-27",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "However, the markup of H.R. 2555 needlessly inserted a poison pill (specifically language to discriminate against transgender individuals) into an otherwise bipartisan bill.",
+      "bill": "H.R. 2555, the Freedom of Association in Higher Education Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt781/html/CRPT-119hrpt781.htm",
+      "record_id": "rec-2026-08-27-crpt-119hrpt781-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote condemns language described as discriminating against transgender individuals."
+    },
+    {
+      "person": "M001231",
+      "issue": "higher-education-and-student-aid",
+      "date": "2026-08-27",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats support the rights of college students to join fraternities, sororities, and other student organizations.",
+      "bill": "H.R. 2555, the Freedom of Association in Higher Education Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt781/html/CRPT-119hrpt781.htm",
+      "record_id": "rec-2026-08-27-crpt-119hrpt781-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote expressly states support for students' right to join single-sex social organizations."
+    },
+    {
+      "person": "M001231",
+      "issue": "transgender-student-rights-in-higher-education",
+      "date": "2026-08-27",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "However, the markup of H.R. 2555 needlessly inserted a poison pill (specifically language to discriminate against transgender individuals) into an otherwise bipartisan bill.",
+      "bill": "H.R. 2555, the Freedom of Association in Higher Education Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt781/html/CRPT-119hrpt781.htm",
+      "record_id": "rec-2026-08-27-crpt-119hrpt781-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote condemns language described as discriminating against transgender individuals."
+    },
+    {
+      "person": "G000606",
+      "issue": "higher-education-and-student-aid",
+      "date": "2026-08-27",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats support the rights of college students to join fraternities, sororities, and other student organizations.",
+      "bill": "H.R. 2555, the Freedom of Association in Higher Education Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt781/html/CRPT-119hrpt781.htm",
+      "record_id": "rec-2026-08-27-crpt-119hrpt781-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote expressly states support for students' right to join single-sex social organizations."
+    },
+    {
+      "person": "G000606",
+      "issue": "transgender-student-rights-in-higher-education",
+      "date": "2026-08-27",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "However, the markup of H.R. 2555 needlessly inserted a poison pill (specifically language to discriminate against transgender individuals) into an otherwise bipartisan bill.",
+      "bill": "H.R. 2555, the Freedom of Association in Higher Education Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt781/html/CRPT-119hrpt781.htm",
+      "record_id": "rec-2026-08-27-crpt-119hrpt781-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote condemns language described as discriminating against transgender individuals."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "transgender-student-rights-in-higher-education",
+      "name": "Transgender Student Rights in Higher Education",
+      "parent": "hsed-higher"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 3457,
+    "prompt_tokens": 4268,
+    "total_tokens": 7725,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2089
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

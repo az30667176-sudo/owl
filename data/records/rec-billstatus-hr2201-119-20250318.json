@@ -1,0 +1,25 @@
+{
+  "id": "rec-billstatus-hr2201-119-20250318",
+  "content": "<other>: H.R. 2201 (119th Congress): Improving VA Training for Military Sexual Trauma Claims Act\nSponsor: Rep. Young Kim\nCosponsor: Rep. Nikki Budzinski\nCosponsor: Rep. Don Bacon\nCosponsor: Rep. Chrissy Houlahan\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2201",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2201",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-18",
+    "persons": [
+      "K000397",
+      "B001315",
+      "B001298",
+      "H001085"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2201"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

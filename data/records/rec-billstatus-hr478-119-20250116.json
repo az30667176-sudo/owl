@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr478-119-20250116",
+  "content": "<other>: H.R. 478 (119th Congress): Promoting New Bank Formation Act\nSponsor: Rep. Andy Barr\nSponsor: Rep. Andy Barr\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/478",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/478",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-01-16",
+    "persons": [
+      "B001282",
+      "B001282"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/478"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

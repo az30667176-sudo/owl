@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr4754-119-20250724",
+  "content": "<other>: H.R. 4754 (119th Congress): Department of the Interior, Environment, and Related Agencies Appropriations Act, 2026\nSponsor: Rep. Michael K. Simpson\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/4754",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/4754",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-07-24",
+    "persons": [
+      "S001148"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/4754"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr1737-119-20250227",
+  "content": "<other>: H.R. 1737 (119th Congress): To direct the Secretary of Commerce to submit to Congress a report containing an assessment of the value, cost, and feasibility of a trans-Atlantic submarine fiber optic cable connecting the contiguous United States, the United States Virgin Islands, Ghana, and Nigeria.\nSponsor: Rep. Stacey E. Plaskett\nCosponsor: Rep. Russ Fulcher\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1737",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1737",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-27",
+    "persons": [
+      "P000610",
+      "F000469"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1737"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

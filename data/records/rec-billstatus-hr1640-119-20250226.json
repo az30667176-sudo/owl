@@ -1,0 +1,30 @@
+{
+  "id": "rec-billstatus-hr1640-119-20250226",
+  "content": "<other>: H.R. 1640 (119th Congress): HEIRS Act of 2025\nSponsor: Rep. Nikema Williams\nCosponsor: Rep. Lizzie Fletcher\nCosponsor: Rep. Emanuel Cleaver\nCosponsor: Rep. Byron Donalds\nCosponsor: Rep. Sanford D. Bishop, Jr.\nCosponsor: Rep. Kweisi Mfume\nCosponsor: Rep. Eleanor Holmes Norton\nCosponsor: Rep. Rashida Tlaib\nSponsor: Rep. Nikema Williams\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1640",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1640",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-26",
+    "persons": [
+      "W000788",
+      "F000468",
+      "C001061",
+      "D000032",
+      "B000490",
+      "M000687",
+      "N000147",
+      "T000481",
+      "W000788"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1640"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

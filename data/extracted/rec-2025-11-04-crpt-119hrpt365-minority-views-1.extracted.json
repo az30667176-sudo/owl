@@ -1,0 +1,126 @@
+{
+  "record_id": "rec-2025-11-04-crpt-119hrpt365-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:26:42.773Z",
+  "accepted": [
+    {
+      "person": "W000187",
+      "issue": "bank-regulation",
+      "date": "2025-11-04",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The reforms in H.R. 5262 would likely accelerate consolidation trends for smaller banks and would do nothing to fix a broken merger review process that has allowed megabanks to consolidate market power while ripping off consumers for years.",
+      "bill": "H.R. 5262",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt365/html/CRPT-119hrpt365.htm",
+      "record_id": "rec-2025-11-04-crpt-119hrpt365-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage criticizes waiving competition review and warns of consolidation, indicating support for strong bank merger regulation."
+    },
+    {
+      "person": "V000081",
+      "issue": "bank-regulation",
+      "date": "2025-11-04",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The reforms in H.R. 5262 would likely accelerate consolidation trends for smaller banks and would do nothing to fix a broken merger review process that has allowed megabanks to consolidate market power while ripping off consumers for years.",
+      "bill": "H.R. 5262",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt365/html/CRPT-119hrpt365.htm",
+      "record_id": "rec-2025-11-04-crpt-119hrpt365-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage criticizes waiving competition review and warns of consolidation, indicating support for strong bank merger regulation."
+    },
+    {
+      "person": "L000562",
+      "issue": "bank-regulation",
+      "date": "2025-11-04",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The reforms in H.R. 5262 would likely accelerate consolidation trends for smaller banks and would do nothing to fix a broken merger review process that has allowed megabanks to consolidate market power while ripping off consumers for years.",
+      "bill": "H.R. 5262",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt365/html/CRPT-119hrpt365.htm",
+      "record_id": "rec-2025-11-04-crpt-119hrpt365-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage criticizes waiving competition review and warns of consolidation, indicating support for strong bank merger regulation."
+    },
+    {
+      "person": "G000553",
+      "issue": "bank-regulation",
+      "date": "2025-11-04",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The reforms in H.R. 5262 would likely accelerate consolidation trends for smaller banks and would do nothing to fix a broken merger review process that has allowed megabanks to consolidate market power while ripping off consumers for years.",
+      "bill": "H.R. 5262",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt365/html/CRPT-119hrpt365.htm",
+      "record_id": "rec-2025-11-04-crpt-119hrpt365-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage criticizes waiving competition review and warns of consolidation, indicating support for strong bank merger regulation."
+    },
+    {
+      "person": "B001281",
+      "issue": "bank-regulation",
+      "date": "2025-11-04",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The reforms in H.R. 5262 would likely accelerate consolidation trends for smaller banks and would do nothing to fix a broken merger review process that has allowed megabanks to consolidate market power while ripping off consumers for years.",
+      "bill": "H.R. 5262",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt365/html/CRPT-119hrpt365.htm",
+      "record_id": "rec-2025-11-04-crpt-119hrpt365-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage criticizes waiving competition review and warns of consolidation, indicating support for strong bank merger regulation."
+    },
+    {
+      "person": "T000481",
+      "issue": "bank-regulation",
+      "date": "2025-11-04",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The reforms in H.R. 5262 would likely accelerate consolidation trends for smaller banks and would do nothing to fix a broken merger review process that has allowed megabanks to consolidate market power while ripping off consumers for years.",
+      "bill": "H.R. 5262",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt365/html/CRPT-119hrpt365.htm",
+      "record_id": "rec-2025-11-04-crpt-119hrpt365-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage criticizes waiving competition review and warns of consolidation, indicating support for strong bank merger regulation."
+    },
+    {
+      "person": "G000587",
+      "issue": "bank-regulation",
+      "date": "2025-11-04",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The reforms in H.R. 5262 would likely accelerate consolidation trends for smaller banks and would do nothing to fix a broken merger review process that has allowed megabanks to consolidate market power while ripping off consumers for years.",
+      "bill": "H.R. 5262",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt365/html/CRPT-119hrpt365.htm",
+      "record_id": "rec-2025-11-04-crpt-119hrpt365-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage criticizes waiving competition review and warns of consolidation, indicating support for strong bank merger regulation."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2798,
+    "prompt_tokens": 4317,
+    "total_tokens": 7115,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1945
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

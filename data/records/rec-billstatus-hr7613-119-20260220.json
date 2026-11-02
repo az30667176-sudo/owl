@@ -1,0 +1,70 @@
+{
+  "id": "rec-billstatus-hr7613-119-20260220",
+  "content": "<other>: H.R. 7613 (119th Congress): ALERT Act\nSponsor: Rep. Sam Graves\nCosponsor: Rep. Rick Larsen\nCosponsor: Rep. Mike Rogers\nCosponsor: Rep. Adam Smith\nCosponsor: Rep. Troy E. Nehls\nCosponsor: Rep. André Carson\nCosponsor: Rep. Eric A. \"Rick\" Crawford\nCosponsor: Rep. David Rouzer\nCosponsor: Rep. Tracey Mann\nCosponsor: Rep. Mike Ezell\nCosponsor: Rep. Vince Fong\nCosponsor: Rep. Jeff Hurd\nCosponsor: Rep. Robert J. Wittman\nCosponsor: Rep. Jennifer A. Kiggans\nCosponsor: Rep. Richard McCormick\nCosponsor: Rep. Austin Scott\nCosponsor: Rep. Joe Wilson\nCosponsor: Rep. Joe Courtney\nCosponsor: Rep. Henry C. \"Hank\" Johnson, Jr.\nCosponsor: Rep. Julia Brownley\nCosponsor: Rep. Frederica S. Wilson\nCosponsor: Rep. Mark DeSaulnier\nCosponsor: Rep. Sharice Davids\nCosponsor: Rep. Laura Friedman\nCosponsor: Rep. Donald S. Beyer, Jr.\nCosponsor: Rep. Suhas Subramanyam\nCosponsor: Rep. Gilbert Ray Cisneros, Jr.\nCosponsor: Rep. Derek Tran\nCosponsor: Rep. Charles J. \"Chuck\" Fleischmann\nCosponsor: Rep. William R. Keating\nCosponsor: Rep. Shomari Figures\nCosponsor: Rep. Kimberlyn King-Hinds\nCosponsor: Rep. Wesley Bell\nCosponsor: Rep. Randy Fine\nCosponsor: Rep. John W. Rose\nCosponsor: Rep. John Garamendi\nCosponsor: Rep. Hillary J. Scholten\nCosponsor: Rep. Troy A. Carter\nCosponsor: Rep. Bonnie Watson Coleman\nCosponsor: Rep. Bruce Westerman\nCosponsor: Rep. Pete Stauber\nCosponsor: Rep. William R. Timmons IV\nCosponsor: Rep. Lance Gooden\nCosponsor: Rep. Burgess Owens\nCosponsor: Rep. Brian Babin\nCosponsor: Rep. Valerie P. Foushee\nCosponsor: Rep. Jefferson Van Drew\nCosponsor: Rep. Chrissy Houlahan\nSponsor: Rep. Sam Graves\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/7613",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/7613",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-02-20",
+    "persons": [
+      "G000546",
+      "L000560",
+      "R000575",
+      "S000510",
+      "N000026",
+      "C001072",
+      "C001087",
+      "R000603",
+      "M000871",
+      "E000235",
+      "F000480",
+      "H001100",
+      "W000804",
+      "K000399",
+      "M001218",
+      "S001189",
+      "W000795",
+      "C001069",
+      "J000288",
+      "B001285",
+      "W000808",
+      "D000623",
+      "D000629",
+      "F000483",
+      "B001292",
+      "S001230",
+      "C001123",
+      "T000491",
+      "F000459",
+      "K000375",
+      "F000481",
+      "K000404",
+      "B001324",
+      "F000484",
+      "R000612",
+      "G000559",
+      "S001221",
+      "C001125",
+      "W000822",
+      "W000821",
+      "S001212",
+      "T000480",
+      "G000589",
+      "O000086",
+      "B001291",
+      "F000477",
+      "V000133",
+      "H001085",
+      "G000546"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/7613"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "record_id": "rec-2025-02-28-crpt-119hrpt7-dissenting-views-2",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:31:09.473Z",
+  "accepted": [
+    {
+      "person": "N000015",
+      "issue": "tax-administration-and-irs",
+      "date": "2025-02-28",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The bill before us today would repeal sensible, and important, Treasury regulations ensuring that taxpayers meet their tax filing obligations, and do not skirt the law by selling cryptocurrency without reporting the gains.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt7/html/CRPT-119hrpt7.htm",
+      "record_id": "rec-2025-02-28-crpt-119hrpt7-dissenting-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Neal supports retaining Treasury tax-reporting requirements for cryptocurrency and opposes repealing them."
+    },
+    {
+      "person": "N000015",
+      "issue": "federal-budget-and-deficit",
+      "date": "2025-02-28",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "By repealing this regulation, Republicans are allowing taxpayers to raid the fisc of an additional $4 billion.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt7/html/CRPT-119hrpt7.htm",
+      "record_id": "rec-2025-02-28-crpt-119hrpt7-dissenting-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Neal opposes the repeal because it would lose revenue and increase the deficit."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2243,
+    "prompt_tokens": 2558,
+    "total_tokens": 4801,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2031
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

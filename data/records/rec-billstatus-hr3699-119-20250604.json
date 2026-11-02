@@ -1,0 +1,61 @@
+{
+  "id": "rec-billstatus-hr3699-119-20250604",
+  "content": "<other>: H.R. 3699 (119th Congress): Energy Choice Act\nSponsor: Rep. Nicholas A. Langworthy\nCosponsor: Rep. Michael Baumgartner\nCosponsor: Rep. Jack Bergman\nCosponsor: Rep. Mike Bost\nCosponsor: Rep. Robert P. Bresnahan, Jr.\nCosponsor: Rep. Ken Calvert\nCosponsor: Rep. Mike Carey\nCosponsor: Rep. Jeff Crank\nCosponsor: Rep. Chuck Edwards\nCosponsor: Rep. Jake Ellzey\nCosponsor: Rep. Brad Finstad\nCosponsor: Rep. Vicente Gonzalez\nCosponsor: Rep. Lance Gooden\nCosponsor: Rep. Pat Harrigan\nCosponsor: Rep. Clay Higgins\nCosponsor: Rep. Jeff Hurd\nCosponsor: Rep. Michael Lawler\nCosponsor: Rep. Ryan Mackenzie\nCosponsor: Rep. Nicole Malliotakis\nCosponsor: Rep. Addison P. McDowell\nCosponsor: Rep. Mark B. Messmer\nCosponsor: Rep. Daniel Meuser\nCosponsor: Rep. John R. Moolenaar\nCosponsor: Rep. Tim Moore\nCosponsor: Rep. Dan Newhouse\nCosponsor: Rep. August Pfluger\nCosponsor: Rep. John W. Rose\nCosponsor: Rep. Michael A. Rulli\nCosponsor: Rep. Jefferson Shreve\nCosponsor: Rep. Elise M. Stefanik\nCosponsor: Rep. Claudia Tenney\nCosponsor: Rep. Glenn Thompson\nCosponsor: Rep. David G. Valadao\nCosponsor: Rep. Tony Wied\nCosponsor: Rep. Roger Williams\nCosponsor: Rep. Ryan K. Zinke\nCosponsor: Rep. Darin LaHood\nCosponsor: Rep. Beth Van Duyne\nCosponsor: Rep. Tom McClintock\nCosponsor: Rep. Tracey Mann\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/3699",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/3699",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-06-04",
+    "persons": [
+      "L000600",
+      "B001322",
+      "B001301",
+      "B001295",
+      "B001327",
+      "C000059",
+      "C001126",
+      "C001137",
+      "E000246",
+      "E000071",
+      "F000475",
+      "G000581",
+      "G000589",
+      "H001101",
+      "H001077",
+      "H001100",
+      "L000599",
+      "M001230",
+      "M000317",
+      "M001240",
+      "M001233",
+      "M001204",
+      "M001194",
+      "M001236",
+      "N000189",
+      "P000048",
+      "R000612",
+      "R000619",
+      "S001229",
+      "S001196",
+      "T000478",
+      "T000467",
+      "V000129",
+      "W000829",
+      "W000816",
+      "Z000018",
+      "L000585",
+      "V000134",
+      "M001177",
+      "M000871"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/3699"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

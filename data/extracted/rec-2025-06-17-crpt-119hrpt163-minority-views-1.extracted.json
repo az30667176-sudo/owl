@@ -1,0 +1,36 @@
+{
+  "record_id": "rec-2025-06-17-crpt-119hrpt163-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:28:45.702Z",
+  "accepted": [
+    {
+      "person": "T000193",
+      "issue": "border-security",
+      "date": "2025-06-17",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "As reported out of committee, H.R. 275 could make American communities less safe by tipping off bad actors about law enforcement practices.",
+      "bill": "H.R. 275",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt163/html/CRPT-119hrpt163.htm",
+      "record_id": "rec-2025-06-17-crpt-119hrpt163-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote opposes mandatory public reporting of CBP operations because it would aid bad actors and reduce community safety."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1091,
+    "prompt_tokens": 3141,
+    "total_tokens": 4232,
+    "completion_tokens_details": {
+      "reasoning_tokens": 957
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

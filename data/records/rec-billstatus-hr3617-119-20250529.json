@@ -1,0 +1,24 @@
+{
+  "id": "rec-billstatus-hr3617-119-20250529",
+  "content": "<other>: H.R. 3617 (119th Congress): Securing America’s Critical Minerals Supply Act\nSponsor: Rep. John James\nCosponsor: Rep. Jay Obernolte\nCosponsor: Rep. Mariannette Miller-Meeks\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/3617",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/3617",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-05-29",
+    "persons": [
+      "J000307",
+      "O000019",
+      "M001215"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/3617"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

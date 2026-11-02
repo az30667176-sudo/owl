@@ -1,0 +1,368 @@
+{
+  "record_id": "rec-2025-09-11-crpt-119hrpt270-pt2-minority-views-5",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:46:56.347Z",
+  "accepted": [
+    {
+      "person": "S000185",
+      "issue": "college-athletics-compensation-framework",
+      "date": "2025-09-11",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats unanimously opposed H.R. 4312 when the Committee on Education and Workforce considered it on July 23, 2025.",
+      "bill": "H.R. 4312",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt270/html/CRPT-119hrpt270-pt2.htm",
+      "record_id": "rec-2025-09-11-crpt-119hrpt270-pt2-minority-views-5",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers jointly state unanimous opposition to H.R. 4312 in committee."
+    },
+    {
+      "person": "C001069",
+      "issue": "college-athletics-compensation-framework",
+      "date": "2025-09-11",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats unanimously opposed H.R. 4312 when the Committee on Education and Workforce considered it on July 23, 2025.",
+      "bill": "H.R. 4312",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt270/html/CRPT-119hrpt270-pt2.htm",
+      "record_id": "rec-2025-09-11-crpt-119hrpt270-pt2-minority-views-5",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers jointly state unanimous opposition to H.R. 4312 in committee."
+    },
+    {
+      "person": "W000808",
+      "issue": "college-athletics-compensation-framework",
+      "date": "2025-09-11",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats unanimously opposed H.R. 4312 when the Committee on Education and Workforce considered it on July 23, 2025.",
+      "bill": "H.R. 4312",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt270/html/CRPT-119hrpt270-pt2.htm",
+      "record_id": "rec-2025-09-11-crpt-119hrpt270-pt2-minority-views-5",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers jointly state unanimous opposition to H.R. 4312 in committee."
+    },
+    {
+      "person": "B001278",
+      "issue": "college-athletics-compensation-framework",
+      "date": "2025-09-11",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats unanimously opposed H.R. 4312 when the Committee on Education and Workforce considered it on July 23, 2025.",
+      "bill": "H.R. 4312",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt270/html/CRPT-119hrpt270-pt2.htm",
+      "record_id": "rec-2025-09-11-crpt-119hrpt270-pt2-minority-views-5",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers jointly state unanimous opposition to H.R. 4312 in committee."
+    },
+    {
+      "person": "T000472",
+      "issue": "college-athletics-compensation-framework",
+      "date": "2025-09-11",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats unanimously opposed H.R. 4312 when the Committee on Education and Workforce considered it on July 23, 2025.",
+      "bill": "H.R. 4312",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt270/html/CRPT-119hrpt270-pt2.htm",
+      "record_id": "rec-2025-09-11-crpt-119hrpt270-pt2-minority-views-5",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers jointly state unanimous opposition to H.R. 4312 in committee."
+    },
+    {
+      "person": "A000370",
+      "issue": "college-athletics-compensation-framework",
+      "date": "2025-09-11",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats unanimously opposed H.R. 4312 when the Committee on Education and Workforce considered it on July 23, 2025.",
+      "bill": "H.R. 4312",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt270/html/CRPT-119hrpt270-pt2.htm",
+      "record_id": "rec-2025-09-11-crpt-119hrpt270-pt2-minority-views-5",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers jointly state unanimous opposition to H.R. 4312 in committee."
+    },
+    {
+      "person": "D000623",
+      "issue": "college-athletics-compensation-framework",
+      "date": "2025-09-11",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats unanimously opposed H.R. 4312 when the Committee on Education and Workforce considered it on July 23, 2025.",
+      "bill": "H.R. 4312",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt270/html/CRPT-119hrpt270-pt2.htm",
+      "record_id": "rec-2025-09-11-crpt-119hrpt270-pt2-minority-views-5",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers jointly state unanimous opposition to H.R. 4312 in committee."
+    },
+    {
+      "person": "N000188",
+      "issue": "college-athletics-compensation-framework",
+      "date": "2025-09-11",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats unanimously opposed H.R. 4312 when the Committee on Education and Workforce considered it on July 23, 2025.",
+      "bill": "H.R. 4312",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt270/html/CRPT-119hrpt270-pt2.htm",
+      "record_id": "rec-2025-09-11-crpt-119hrpt270-pt2-minority-views-5",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers jointly state unanimous opposition to H.R. 4312 in committee."
+    },
+    {
+      "person": "M001208",
+      "issue": "college-athletics-compensation-framework",
+      "date": "2025-09-11",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats unanimously opposed H.R. 4312 when the Committee on Education and Workforce considered it on July 23, 2025.",
+      "bill": "H.R. 4312",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt270/html/CRPT-119hrpt270-pt2.htm",
+      "record_id": "rec-2025-09-11-crpt-119hrpt270-pt2-minority-views-5",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers jointly state unanimous opposition to H.R. 4312 in committee."
+    },
+    {
+      "person": "H001081",
+      "issue": "college-athletics-compensation-framework",
+      "date": "2025-09-11",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats unanimously opposed H.R. 4312 when the Committee on Education and Workforce considered it on July 23, 2025.",
+      "bill": "H.R. 4312",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt270/html/CRPT-119hrpt270-pt2.htm",
+      "record_id": "rec-2025-09-11-crpt-119hrpt270-pt2-minority-views-5",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers jointly state unanimous opposition to H.R. 4312 in committee."
+    },
+    {
+      "person": "O000173",
+      "issue": "college-athletics-compensation-framework",
+      "date": "2025-09-11",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats unanimously opposed H.R. 4312 when the Committee on Education and Workforce considered it on July 23, 2025.",
+      "bill": "H.R. 4312",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt270/html/CRPT-119hrpt270-pt2.htm",
+      "record_id": "rec-2025-09-11-crpt-119hrpt270-pt2-minority-views-5",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers jointly state unanimous opposition to H.R. 4312 in committee."
+    },
+    {
+      "person": "S001215",
+      "issue": "college-athletics-compensation-framework",
+      "date": "2025-09-11",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats unanimously opposed H.R. 4312 when the Committee on Education and Workforce considered it on July 23, 2025.",
+      "bill": "H.R. 4312",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt270/html/CRPT-119hrpt270-pt2.htm",
+      "record_id": "rec-2025-09-11-crpt-119hrpt270-pt2-minority-views-5",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers jointly state unanimous opposition to H.R. 4312 in committee."
+    },
+    {
+      "person": "C001131",
+      "issue": "college-athletics-compensation-framework",
+      "date": "2025-09-11",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats unanimously opposed H.R. 4312 when the Committee on Education and Workforce considered it on July 23, 2025.",
+      "bill": "H.R. 4312",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt270/html/CRPT-119hrpt270-pt2.htm",
+      "record_id": "rec-2025-09-11-crpt-119hrpt270-pt2-minority-views-5",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers jointly state unanimous opposition to H.R. 4312 in committee."
+    },
+    {
+      "person": "L000602",
+      "issue": "college-athletics-compensation-framework",
+      "date": "2025-09-11",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats unanimously opposed H.R. 4312 when the Committee on Education and Workforce considered it on July 23, 2025.",
+      "bill": "H.R. 4312",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt270/html/CRPT-119hrpt270-pt2.htm",
+      "record_id": "rec-2025-09-11-crpt-119hrpt270-pt2-minority-views-5",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers jointly state unanimous opposition to H.R. 4312 in committee."
+    },
+    {
+      "person": "M001231",
+      "issue": "college-athletics-compensation-framework",
+      "date": "2025-09-11",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats unanimously opposed H.R. 4312 when the Committee on Education and Workforce considered it on July 23, 2025.",
+      "bill": "H.R. 4312",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt270/html/CRPT-119hrpt270-pt2.htm",
+      "record_id": "rec-2025-09-11-crpt-119hrpt270-pt2-minority-views-5",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers jointly state unanimous opposition to H.R. 4312 in committee."
+    },
+    {
+      "person": "A000381",
+      "issue": "college-athletics-compensation-framework",
+      "date": "2025-09-11",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats unanimously opposed H.R. 4312 when the Committee on Education and Workforce considered it on July 23, 2025.",
+      "bill": "H.R. 4312",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt270/html/CRPT-119hrpt270-pt2.htm",
+      "record_id": "rec-2025-09-11-crpt-119hrpt270-pt2-minority-views-5",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers jointly state unanimous opposition to H.R. 4312 in committee."
+    },
+    {
+      "person": "A000381",
+      "issue": "civil-rights-in-schools",
+      "date": "2025-09-11",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "the Ansari amendment would have required these schools to maintain policies that, at a minimum, would require every employee of the athletic department to be trained to recognize sex discrimination and be a mandatory reporter of said discrimination.",
+      "bill": "H.R. 4312",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt270/html/CRPT-119hrpt270-pt2.htm",
+      "record_id": "rec-2025-09-11-crpt-119hrpt270-pt2-minority-views-5",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Ansari proposed requiring athletic department employees to be trained on sex discrimination as mandatory reporters."
+    }
+  ],
+  "rejected": [
+    {
+      "st": {
+        "person": "C001069",
+        "issue": "health-programs-and-research",
+        "new_issue": null,
+        "score": 0.8,
+        "direction": "support",
+        "linkage": "high",
+        "llm_confidence": "high",
+        "quote": "Amend Section 5(a)(2)(A) to extend the eligibility of college athletes to receive medical care for an injury incurred during the involvement of intercollegiate athletics from at least three years to 10 years following graduation or separation from an institution.",
+        "bill": "H.R. 4312",
+        "rationale": "Courtney proposed extending post-graduation medical coverage for injured college athletes from three to ten years."
+      },
+      "why": [
+        "quote not verbatim in text"
+      ]
+    },
+    {
+      "st": {
+        "person": "L000602",
+        "issue": "labor-relations-and-unions",
+        "new_issue": null,
+        "score": 0.8,
+        "direction": "support",
+        "linkage": "high",
+        "llm_confidence": "high",
+        "quote": "Strike section 9 to prohibit employee classification of college athletes under federal and state labor and employment law.",
+        "bill": "H.R. 4312",
+        "rationale": "Lee proposed striking the ban on employee classification to preserve labor and employment protections for athletes."
+      },
+      "why": [
+        "quote not verbatim in text"
+      ]
+    },
+    {
+      "st": {
+        "person": "A000370",
+        "issue": "civil-rights-in-schools",
+        "new_issue": null,
+        "score": 0.9,
+        "direction": "support",
+        "linkage": "high",
+        "llm_confidence": "high",
+        "quote": "Prohibit interstate intercollegiate athletic associations from discrimination on the basis of sex.",
+        "bill": "H.R. 4312",
+        "rationale": "Adams proposed prohibiting sex discrimination by interstate intercollegiate athletic associations."
+      },
+      "why": [
+        "quote not verbatim in text"
+      ]
+    },
+    {
+      "st": {
+        "person": "C001131",
+        "issue": "wages-and-labor-standards",
+        "new_issue": null,
+        "score": 0.8,
+        "direction": "support",
+        "linkage": "high",
+        "llm_confidence": "high",
+        "quote": "Strike Section 11(1) to preempt any state law, rule, regulation, requirement, standard, or other provision related to the compensation, payment, benefits, and employment status of college athletes.",
+        "bill": "H.R. 4312",
+        "rationale": "Casar proposed striking federal preemption to preserve state laws on athlete compensation and employment status."
+      },
+      "why": [
+        "quote not verbatim in text"
+      ]
+    },
+    {
+      "st": {
+        "person": "S000185",
+        "issue": "federal-courts",
+        "new_issue": null,
+        "score": 0.9,
+        "direction": "support",
+        "linkage": "high",
+        "llm_confidence": "high",
+        "quote": "Provide college athletes with a private right of action to enforce rights under the SCORE Act.",
+        "bill": "H.R. 4312",
+        "rationale": "Scott proposed giving college athletes a private right of action to enforce rights under the bill."
+      },
+      "why": [
+        "quote not verbatim in text"
+      ]
+    }
+  ],
+  "new_issues": [
+    {
+      "id": "college-athletics-compensation-framework",
+      "name": "College Athletics Compensation Framework",
+      "parent": "hsed-higher"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 6067,
+    "prompt_tokens": 4898,
+    "total_tokens": 10965,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3612
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

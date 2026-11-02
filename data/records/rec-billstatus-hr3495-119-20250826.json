@@ -1,0 +1,26 @@
+{
+  "id": "rec-billstatus-hr3495-119-20250826",
+  "content": "<other>: H.R. 3495 (119th Congress): Direct Seller and Real Estate Agent Harmonization Act\nCosponsor: Rep. Jack Bergman\nCosponsor: Rep. Nathaniel Moran\nCosponsor: Rep. Mark Alford\nCosponsor: Rep. Brad Sherman\nCosponsor: Rep. John R. Moolenaar\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/3495",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/3495",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-08-26",
+    "persons": [
+      "B001301",
+      "M001224",
+      "A000379",
+      "S000344",
+      "M001194"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/3495"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

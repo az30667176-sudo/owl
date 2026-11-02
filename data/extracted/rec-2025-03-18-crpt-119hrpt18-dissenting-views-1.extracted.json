@@ -1,0 +1,66 @@
+{
+  "record_id": "rec-2025-03-18-crpt-119hrpt18-dissenting-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:26:53.925Z",
+  "accepted": [
+    {
+      "person": "N000015",
+      "issue": "treasury-oversight",
+      "date": "2025-03-18",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "This Resolution of Inquiry (ROI) is an important step in ensuring Congress continues its important job of oversight over the Executive Branch.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt18/html/CRPT-119hrpt18.htm",
+      "record_id": "rec-2025-03-18-crpt-119hrpt18-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Neal endorses the ROI as necessary congressional oversight of executive access to Treasury systems."
+    },
+    {
+      "person": "N000015",
+      "issue": "tax-administration-and-irs",
+      "date": "2025-03-18",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Mr. Musk and members of DOGE are ignoring two federal privacy laws: (1) Section 6103 of the Internal Revenue Code and (2) the Privacy Act of 1974.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt18/html/CRPT-119hrpt18.htm",
+      "record_id": "rec-2025-03-18-crpt-119hrpt18-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Neal criticizes DOGE for violating Section 6103 confidentiality protections for taxpayer information."
+    },
+    {
+      "person": "N000015",
+      "issue": "federal-it-and-cybersecurity",
+      "date": "2025-03-18",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "No one should be rummaging around in the confidential information of private citizens at any agency where protected information resides.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt18/html/CRPT-119hrpt18.htm",
+      "record_id": "rec-2025-03-18-crpt-119hrpt18-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Neal opposes unauthorized access to confidential government-held personal information across agencies."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2372,
+    "prompt_tokens": 3770,
+    "total_tokens": 6142,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2065
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

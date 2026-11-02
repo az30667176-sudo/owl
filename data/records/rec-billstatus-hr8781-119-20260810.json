@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr8781-119-20260810",
+  "content": "<other>: H.R. 8781 (119th Congress): Title IX Clarification Act of 2026\nCosponsor: Rep. Ronny Jackson\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/8781",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/8781",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-08-10",
+    "persons": [
+      "J000304"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/8781"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

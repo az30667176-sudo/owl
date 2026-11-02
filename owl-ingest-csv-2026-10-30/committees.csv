@@ -1,0 +1,24 @@
+committee_code,committee_name,web_taxonomy_id,in_graph
+HSBU,House Committee on the Budget,hsbu,True
+HSWM,House Committee on Ways and Means,hswm,True
+HSHM,House Committee on Homeland Security,hshm,True
+HSED,House Committee on Education and Workforce,hsed,True
+HSHA,House Committee on House Administration,hsha,False
+HSBA,House Committee on Financial Services,hsba,True
+HSJU,House Committee on the Judiciary,hsju,True
+HSSM,House Committee on Small Business,hssm,True
+HSPW,House Committee on Transportation and Infrastructure,hspw,True
+HSGO,House Committee on Oversight and Government Reform,hsgo,True
+HSII,House Committee on Natural Resources,hsii,True
+HSIF,House Committee on Energy and Commerce,hsif,True
+HSVR,House Committee on Veterans' Affairs,hsvr,True
+HSAP,House Committee on Appropriations,hsap,True
+HSAG,House Committee on Agriculture,hsag,True
+HSSO,House Committee on Ethics,hsso,False
+HSAS,House Committee on Armed Services,hsas,True
+HLIG,House Permanent Select Committee on Intelligence,,True
+HSSY,"House Committee on Science, Space, and Technology",hssy,True
+HSFA,House Committee on Foreign Affairs,hsfa,True
+HSRU,House Committee on Rules,hsru,False
+HSZS,House Select Committee on the Strategic Competition Between the United States and the Chinese Communist Party,hszs,True
+HSQJ,"House Select Subcommittee to Investigate the Remaining Questions Surrounding January 6, 2021",hsqj,True

@@ -1,0 +1,36 @@
+{
+  "record_id": "rec-2026-03-24-crpt-119hrpt568-dissenting-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:25:15.741Z",
+  "accepted": [
+    {
+      "person": "H001068",
+      "issue": "wildlife-and-fisheries",
+      "date": "2026-03-24",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "H.R. 1897, as amended, would fundamentally weaken the authority and effectiveness of the Endangered Species Act (ESA).",
+      "bill": "H.R. 1897",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt568/html/CRPT-119hrpt568.htm",
+      "record_id": "rec-2026-03-24-crpt-119hrpt568-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Huffman criticizes the bill for weakening ESA authority and effectiveness, indicating support for strong species protections."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1756,
+    "prompt_tokens": 4534,
+    "total_tokens": 6290,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1619
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

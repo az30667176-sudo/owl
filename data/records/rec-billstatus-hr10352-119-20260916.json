@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr10352-119-20260916",
+  "content": "<other>: H.R. 10352 (119th Congress): 504 Program Level Flexibility Act\nCosponsor: Rep. Gilbert Ray Cisneros, Jr.\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/10352",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/10352",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-09-16",
+    "persons": [
+      "C001123"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/10352"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

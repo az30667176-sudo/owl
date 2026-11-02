@@ -1,0 +1,24 @@
+{
+  "id": "rec-billstatus-hr2247-119-20250321",
+  "content": "<other>: H.R. 2247 (119th Congress): Airmen Certificate Accessibility Act\nSponsor: Rep. Tim Burchett\nCosponsor: Rep. Tracey Mann\nSponsor: Rep. Tim Burchett\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2247",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2247",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-21",
+    "persons": [
+      "B001309",
+      "M000871",
+      "B001309"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2247"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

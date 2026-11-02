@@ -1,0 +1,452 @@
+bioguide_id,name,state,district,party,gender,since,status,left_date,committee_codes
+B001323,Rep. Nicholas J. Begich III,AK,AK-AL,R,M,2025,sitting,,HSII|HSPW|HSSY
+M001212,Rep. Barry Moore,AL,AL-01,R,M,2021,sitting,,HSAG|HSJU
+F000481,Rep. Shomari Figures,AL,AL-02,D,M,2025,sitting,,HSAG|HSPW
+R000575,Rep. Mike Rogers,AL,AL-03,R,M,2003,sitting,,HSAS
+A000055,Rep. Robert B. Aderholt,AL,AL-04,R,M,1997,sitting,,HSAP
+S001220,Rep. Dale W. Strong,AL,AL-05,R,M,2023,sitting,,HSAP|HSHM
+P000609,Rep. Gary J. Palmer,AL,AL-06,R,M,2015,sitting,,HSGO|HSIF
+S001185,Rep. Terri A. Sewell,AL,AL-07,D,F,2011,sitting,,HSHA|HSWM
+C001087,"Rep. Eric A. ""Rick"" Crawford",AR,AR-01,R,M,2011,sitting,,HLIG|HSAG|HSPW
+H001072,Rep. J. French Hill,AR,AR-02,R,M,2015,sitting,,HLIG|HSBA
+W000809,Rep. Steve Womack,AR,AR-03,R,M,2011,sitting,,HSAP
+W000821,Rep. Bruce Westerman,AR,AR-04,R,M,2015,sitting,,HSII|HSPW
+R000600,Rep. Aumua Amata Coleman Radewagen,AS,AS-AL,R,F,2015,sitting,,HSFA|HSII|HSVR
+S001183,Rep. David Schweikert,AZ,AZ-01,R,M,2011,sitting,,HSWM
+C001132,Rep. Elijah Crane,AZ,AZ-02,R,M,2023,sitting,,HSGO|HSHM
+A000381,Rep. Yassamin Ansari,AZ,AZ-03,D,F,2025,sitting,,HSGO|HSII
+S001211,Rep. Greg Stanton,AZ,AZ-04,D,M,2019,sitting,,HSFA|HSPW|HSZS
+B001302,Rep. Andy Biggs,AZ,AZ-05,R,M,2017,sitting,,HSGO|HSJU
+C001133,Rep. Juan Ciscomani,AZ,AZ-06,R,M,2023,sitting,,HSAP|HSVR
+G000606,Rep. Adelita S. Grijalva,AZ,AZ-07,D,F,2025,sitting,,HSED|HSII
+H001098,Rep. Abraham J. Hamadeh,AZ,AZ-08,R,M,2025,sitting,,HSAS|HSVR
+G000565,Rep. Paul A. Gosar,AZ,AZ-09,R,M,2011,sitting,,HSGO|HSII
+G000607,Rep. James Gallagher,CA,CA-01,R,M,2026,sitting,,HSFA|HSPW|HSSY
+H001068,Rep. Jared Huffman,CA,CA-02,D,M,2013,sitting,,HSII|HSPW
+K000401,Rep. Kevin Kiley,CA,CA-03,I,M,2023,sitting,,HSED|HSJU|HSPW
+T000460,Rep. Mike Thompson,CA,CA-04,D,M,1999,sitting,,HSWM
+M001177,Rep. Tom McClintock,CA,CA-05,R,M,2009,sitting,,HSBU|HSII|HSJU
+B001287,Rep. Ami Bera,CA,CA-06,D,M,2013,sitting,,HLIG|HSFA
+M001163,Rep. Doris O. Matsui,CA,CA-07,D,F,2005,sitting,,HSIF
+G000559,Rep. John Garamendi,CA,CA-08,D,M,2009,sitting,,HSAS|HSPW
+H001090,Rep. Josh Harder,CA,CA-09,D,M,2019,sitting,,HSAP
+D000623,Rep. Mark DeSaulnier,CA,CA-10,D,M,2015,sitting,,HSED|HSPW|HSSO
+P000197,Rep. Nancy Pelosi,CA,CA-11,D,F,1987,sitting,,
+S001231,Rep. Lateefah Simon,CA,CA-12,D,F,2025,sitting,,HSGO|HSSM
+G000605,Rep. Adam Gray,CA,CA-13,D,M,2025,sitting,,HSAG|HSII
+W000832,Rep. Aisha Wahab,CA,CA-14,D,F,2026,sitting,,
+M001225,Rep. Kevin Mullin,CA,CA-15,D,M,2023,sitting,,HSIF
+L000607,Rep. Sam T. Liccardo,CA,CA-16,D,M,2025,sitting,,HSBA
+K000389,Rep. Ro Khanna,CA,CA-17,D,M,2017,sitting,,HSAS|HSGO|HSZS
+L000397,Rep. Zoe Lofgren,CA,CA-18,D,F,1995,sitting,,HSJU|HSSY
+P000613,Rep. Jimmy Panetta,CA,CA-19,D,M,2017,sitting,,HSBU|HSWM
+F000480,Rep. Vince Fong,CA,CA-20,R,M,2024,sitting,,HSHM|HSPW|HSSY
+C001059,Rep. Jim Costa,CA,CA-21,D,M,2005,sitting,,HSAG|HSFA
+V000129,Rep. David G. Valadao,CA,CA-22,R,M,2013,sitting,,HSAG|HSAP
+O000019,Rep. Jay Obernolte,CA,CA-23,R,M,2021,sitting,,HSBU|HSIF|HSSY
+C001112,Rep. Salud O. Carbajal,CA,CA-24,D,M,2017,sitting,,HSAG|HSAS|HSPW
+R000599,Rep. Raul Ruiz,CA,CA-25,D,M,2013,sitting,,HSIF
+B001285,Rep. Julia Brownley,CA,CA-26,D,F,2013,sitting,,HSII|HSPW|HSVR
+W000830,Rep. George Whitesides,CA,CA-27,D,M,2025,sitting,,HSAS|HSSY
+C001080,Rep. Judy Chu,CA,CA-28,D,F,2009,sitting,,HSBU|HSWM
+R000620,Rep. Luz M. Rivas,CA,CA-29,D,F,2025,sitting,,HSII|HSSY
+F000483,Rep. Laura Friedman,CA,CA-30,D,F,2025,sitting,,HSPW|HSSY
+C001123,"Rep. Gilbert Ray Cisneros, Jr.",CA,CA-31,D,M,2019,sitting,,HSAS|HSSM
+S000344,Rep. Brad Sherman,CA,CA-32,D,M,1997,sitting,,HSBA|HSFA
+A000371,Rep. Pete Aguilar,CA,CA-33,D,M,2015,sitting,,HSAP
+G000585,Rep. Jimmy Gomez,CA,CA-34,D,M,2017,sitting,,HLIG|HSWM
+T000474,Rep. Norma J. Torres,CA,CA-35,D,F,2015,sitting,,HSAP|HSHA
+L000582,Rep. Ted Lieu,CA,CA-36,D,M,2015,sitting,,HSFA|HSJU
+K000400,Rep. Sydney Kamlager-Dove,CA,CA-37,D,F,2023,sitting,,HSFA|HSJU
+S001156,Rep. Linda T. Sánchez,CA,CA-38,D,F,2003,sitting,,HSWM
+T000472,Rep. Mark Takano,CA,CA-39,D,M,2013,sitting,,HSED|HSVR
+K000397,Rep. Young Kim,CA,CA-40,R,F,2021,sitting,,HSBA|HSFA|HSZS
+C000059,Rep. Ken Calvert,CA,CA-41,R,M,1993,sitting,,HSAP
+G000598,Rep. Robert Garcia,CA,CA-42,D,M,2023,sitting,,HSGO|HSPW
+W000187,Rep. Maxine Waters,CA,CA-43,D,F,1991,sitting,,HSBA
+B001300,Rep. Nanette Diaz Barragán,CA,CA-44,D,F,2017,sitting,,HSIF
+T000491,Rep. Derek Tran,CA,CA-45,D,M,2025,sitting,,HSAS|HSSM
+C001110,Rep. J. Luis Correa,CA,CA-46,D,M,2017,sitting,,HSHM|HSJU
+M001241,Rep. Dave Min,CA,CA-47,D,M,2025,sitting,,HSGO|HSII
+I000056,Rep. Darrell Issa,CA,CA-48,R,M,2001,sitting,,HSFA|HSJU|HSSY
+L000593,Rep. Mike Levin,CA,CA-49,D,M,2019,sitting,,HSAP
+P000608,Rep. Scott H. Peters,CA,CA-50,D,M,2013,sitting,,HSBU|HSIF
+J000305,Rep. Sara Jacobs,CA,CA-51,D,F,2021,sitting,,HSAS|HSFA
+V000130,Rep. Juan Vargas,CA,CA-52,D,M,2013,sitting,,HSBA
+D000197,Rep. Diana DeGette,CO,CO-01,D,F,1997,sitting,,HSIF
+N000191,Rep. Joe Neguse,CO,CO-02,D,M,2019,sitting,,HSII|HSJU|HSRU
+H001100,Rep. Jeff Hurd,CO,CO-03,R,M,2025,sitting,,HSII|HSPW|HSSY
+B000825,Rep. Lauren Boebert,CO,CO-04,R,F,2021,sitting,,HSGO|HSII
+C001137,Rep. Jeff Crank,CO,CO-05,R,M,2025,sitting,,HSAS|HSII
+C001121,Rep. Jason Crow,CO,CO-06,D,M,2019,sitting,,HLIG|HSAS
+P000620,Rep. Brittany Pettersen,CO,CO-07,D,F,2023,sitting,,HSBA
+E000300,Rep. Gabe Evans,CO,CO-08,R,M,2025,sitting,,HSHM|HSIF
+L000557,Rep. John B. Larson,CT,CT-01,D,M,1999,sitting,,HSWM
+C001069,Rep. Joe Courtney,CT,CT-02,D,M,2007,sitting,,HSAS|HSED
+D000216,Rep. Rosa L. DeLauro,CT,CT-03,D,F,1991,sitting,,HSAP
+H001047,Rep. James A. Himes,CT,CT-04,D,M,2009,sitting,,HLIG|HSBA
+H001081,Rep. Jahana Hayes,CT,CT-05,D,F,2019,sitting,,HSAG|HSED
+N000147,Rep. Eleanor Holmes Norton,DC,DC-AL,D,F,1991,sitting,,HSGO|HSPW
+M001238,Rep. Sarah McBride,DE,DE-AL,D,F,2025,sitting,,HSFA|HSSY
+P000622,Rep. Jimmy Patronis,FL,FL-01,R,M,2025,sitting,,HSPW|HSSM
+D000628,Rep. Neal P. Dunn,FL,FL-02,R,M,2017,sitting,,HSIF|HSZS
+C001039,Rep. Kat Cammack,FL,FL-03,R,F,2021,sitting,,HSAG|HSIF
+B001314,Rep. Aaron Bean,FL,FL-04,R,M,2023,sitting,,HSWM
+R000609,Rep. John H. Rutherford,FL,FL-05,R,M,2017,sitting,,HSAP
+F000484,Rep. Randy Fine,FL,FL-06,R,M,2025,sitting,,HSED|HSFA
+M001216,Rep. Cory Mills,FL,FL-07,R,M,2023,sitting,,HSAS|HSFA
+H001099,Rep. Mike Haridopolos,FL,FL-08,R,M,2025,sitting,,HSBA|HSSY
+S001200,Rep. Darren Soto,FL,FL-09,D,M,2017,sitting,,HSIF|HSII
+F000476,Rep. Maxwell Frost,FL,FL-10,D,M,2023,sitting,,HSGO|HSPW
+W000806,Rep. Daniel Webster,FL,FL-11,R,M,2011,sitting,,HSII|HSPW|HSSY
+B001257,Rep. Gus M. Bilirakis,FL,FL-12,R,M,2007,sitting,,HSIF|HSZS
+L000596,Rep. Anna Paulina Luna,FL,FL-13,R,F,2023,sitting,,HSFA|HSGO
+C001066,Rep. Kathy Castor,FL,FL-14,D,F,2007,sitting,,HSIF|HSZS
+L000597,Rep. Laurel M. Lee,FL,FL-15,R,F,2023,sitting,,HSHA|HSIF|HSJU
+B001260,Rep. Vern Buchanan,FL,FL-16,R,M,2007,sitting,,HSWM
+S001214,Rep. W. Gregory Steube,FL,FL-17,R,M,2019,sitting,,HLIG|HSWM
+F000472,Rep. Scott Franklin,FL,FL-18,R,M,2021,sitting,,HSAP|HSSY
+D000032,Rep. Byron Donalds,FL,FL-19,R,M,2021,sitting,,HSBA|HSGO
+M001199,Rep. Brian J. Mast,FL,FL-21,R,M,2017,sitting,,HSFA|HSPW
+F000462,Rep. Lois Frankel,FL,FL-22,D,F,2013,sitting,,HSAP
+M001217,Rep. Jared Moskowitz,FL,FL-23,D,M,2023,sitting,,HSFA|HSJU|HSQJ
+W000808,Rep. Frederica S. Wilson,FL,FL-24,D,F,2011,sitting,,HSED|HSPW
+W000797,Rep. Debbie Wasserman Schultz,FL,FL-25,D,F,2005,sitting,,HSAP|HSFA
+D000600,Rep. Mario Diaz-Balart,FL,FL-26,R,M,2003,sitting,,HSAP
+S000168,Rep. Maria Elvira Salazar,FL,FL-27,R,F,2021,sitting,,HSBA|HSFA
+G000593,Rep. Carlos A. Gimenez,FL,FL-28,R,M,2021,sitting,,HSAS|HSHM|HSZS
+C001103,"Rep. Earl L. ""Buddy"" Carter",GA,GA-01,R,M,2015,sitting,,HSBU|HSIF
+B000490,"Rep. Sanford D. Bishop, Jr.",GA,GA-02,D,M,1993,sitting,,HSAP
+J000311,Rep. Brian Jack,GA,GA-03,R,M,2025,sitting,,HSGO|HSRU|HSSM
+J000288,"Rep. Henry C. ""Hank"" Johnson, Jr.",GA,GA-04,D,M,2007,sitting,,HSJU|HSPW
+W000788,Rep. Nikema Williams,GA,GA-05,D,F,2021,sitting,,HSBA
+M001208,Rep. Lucy McBath,GA,GA-06,D,F,2019,sitting,,HSED|HSJU
+M001218,Rep. Richard McCormick,GA,GA-07,R,M,2023,sitting,,HSAS|HSGO|HSSY
+S001189,Rep. Austin Scott,GA,GA-08,R,M,2011,sitting,,HLIG|HSAG|HSAS|HSRU
+C001116,Rep. Andrew S. Clyde,GA,GA-09,R,M,2021,sitting,,HSAP|HSBU
+C001129,Rep. Mike Collins,GA,GA-10,R,M,2023,sitting,,HSII|HSPW|HSSY
+L000583,Rep. Barry Loudermilk,GA,GA-11,R,M,2015,sitting,,HSBA|HSHA|HSQJ
+A000372,Rep. Rick W. Allen,GA,GA-12,R,M,2015,sitting,,HSED|HSIF
+B001328,Rep. Everton Blair Jr.,GA,GA-13,D,M,2026,sitting,,
+F000485,Rep. Clay Fuller,GA,GA-14,R,M,2026,sitting,,HSPW|HSSM
+M001219,Rep. James C. Moylan,GU,GU-AL,R,M,2023,sitting,,HSAS|HSED|HSFA
+C001055,Rep. Ed Case,HI,HI-01,D,M,2003,sitting,,HSAP
+T000487,Rep. Jill N. Tokuda,HI,HI-02,D,F,2023,sitting,,HSAG|HSAS|HSZS
+M001215,Rep. Mariannette Miller-Meeks,IA,IA-01,R,F,2021,sitting,,HSIF|HSVR
+H001091,Rep. Ashley Hinson,IA,IA-02,R,F,2021,sitting,,HSAP|HSSO|HSZS
+N000193,Rep. Zachary Nunn,IA,IA-03,R,M,2023,sitting,,HSAG|HSBA|HSZS
+F000446,Rep. Randy Feenstra,IA,IA-04,R,M,2021,sitting,,HSAG|HSWM
+F000469,Rep. Russ Fulcher,ID,ID-01,R,M,2019,sitting,,HSIF|HSII
+S001148,Rep. Michael K. Simpson,ID,ID-02,R,M,1999,sitting,,HSAP
+J000309,Rep. Jonathan L. Jackson,IL,IL-01,D,M,2023,sitting,,HSAG|HSFA
+K000385,Rep. Robin L. Kelly,IL,IL-02,D,F,2013,sitting,,HSIF
+R000617,Rep. Delia C. Ramirez,IL,IL-03,D,F,2023,sitting,,HSHM|HSVR
+G000586,"Rep. Jesús G. ""Chuy"" García",IL,IL-04,D,M,2019,sitting,,HSJU|HSPW
+Q000023,Rep. Mike Quigley,IL,IL-05,D,M,2009,sitting,,HLIG|HSAP
+C001117,Rep. Sean Casten,IL,IL-06,D,M,2019,sitting,,HSBA
+D000096,Rep. Danny K. Davis,IL,IL-07,D,M,1997,sitting,,HSWM
+K000391,Rep. Raja Krishnamoorthi,IL,IL-08,D,M,2017,sitting,,HLIG|HSGO|HSZS
+S001145,Rep. Janice D. Schakowsky,IL,IL-09,D,F,1999,sitting,,HSIF
+S001190,Rep. Bradley Scott Schneider,IL,IL-10,D,M,2013,sitting,,HSFA|HSWM
+F000454,Rep. Bill Foster,IL,IL-11,D,M,2008,sitting,,HSBA|HSSY
+B001295,Rep. Mike Bost,IL,IL-12,R,M,2015,sitting,,HSAG|HSPW|HSVR
+B001315,Rep. Nikki Budzinski,IL,IL-13,D,F,2023,sitting,,HSAG|HSVR
+U000040,Rep. Lauren Underwood,IL,IL-14,D,F,2019,sitting,,HSAP
+M001211,Rep. Mary E. Miller,IL,IL-15,R,F,2021,sitting,,HSAG|HSED|HSHA
+L000585,Rep. Darin LaHood,IL,IL-16,R,M,2015,sitting,,HLIG|HSWM|HSZS
+S001225,Rep. Eric Sorensen,IL,IL-17,D,M,2023,sitting,,HSAG|HSAS
+M001214,Rep. Frank J. Mrvan,IN,IN-01,D,M,2021,sitting,,HSAP
+Y000067,Rep. Rudy Yakym III,IN,IN-02,R,M,2022,sitting,,HSWM
+S001188,Rep. Marlin A. Stutzman,IN,IN-03,R,M,2010,sitting,,HSBA|HSBU
+B001307,Rep. James R. Baird,IN,IN-04,R,M,2019,sitting,,HSAG|HSFA|HSSY
+S000929,Rep. Victoria Spartz,IN,IN-05,R,F,2021,sitting,,
+S001229,Rep. Jefferson Shreve,IN,IN-06,R,M,2025,sitting,,HSAP
+C001072,Rep. André Carson,IN,IN-07,D,M,2008,sitting,,HLIG|HSPW|HSZS
+M001233,Rep. Mark B. Messmer,IN,IN-08,R,M,2025,sitting,,HSAG|HSAS|HSED
+H001093,Rep. Erin Houchin,IN,IN-09,R,F,2023,sitting,,HSBU|HSIF|HSRU
+M000871,Rep. Tracey Mann,KS,KS-01,R,M,2021,sitting,,HSAG|HSPW
+S001228,Rep. Derek Schmidt,KS,KS-02,R,M,2025,sitting,,HSAS|HSJU|HSSM
+D000629,Rep. Sharice Davids,KS,KS-03,D,F,2019,sitting,,HSAG|HSPW
+E000298,Rep. Ron Estes,KS,KS-04,R,M,2017,sitting,,HSBU|HSWM
+C001108,Rep. James Comer,KY,KY-01,R,M,2016,sitting,,HSED|HSGO
+G000558,Rep. Brett Guthrie,KY,KY-02,R,M,2009,sitting,,HSIF
+M001220,Rep. Morgan McGarvey,KY,KY-03,D,M,2023,sitting,,HSBU|HSSM|HSVR
+M001184,Rep. Thomas Massie,KY,KY-04,R,M,2012,sitting,,HSJU|HSPW
+R000395,Rep. Harold Rogers,KY,KY-05,R,M,1981,sitting,,HSAP
+B001282,Rep. Andy Barr,KY,KY-06,R,M,2013,sitting,,HSBA|HSFA|HSZS
+S001176,Rep. Steve Scalise,LA,LA-01,R,M,2008,sitting,,
+C001125,Rep. Troy A. Carter,LA,LA-02,D,M,2021,sitting,,HSHM|HSIF
+H001077,Rep. Clay Higgins,LA,LA-03,R,M,2017,sitting,,HSAS|HSGO|HSQJ
+J000299,Rep. Mike Johnson,LA,LA-04,R,M,2017,sitting,,
+L000595,Rep. Julia Letlow,LA,LA-05,R,F,2021,sitting,,HSAP|HSED
+F000110,Rep. Cleo Fields,LA,LA-06,D,M,1993,sitting,,HSBA
+N000015,Rep. Richard E. Neal,MA,MA-01,D,M,1989,sitting,,HSWM
+M000312,Rep. James P. McGovern,MA,MA-02,D,M,1997,sitting,,HSAG|HSRU
+T000482,Rep. Lori Trahan,MA,MA-03,D,F,2019,sitting,,HSIF
+A000148,Rep. Jake Auchincloss,MA,MA-04,D,M,2021,sitting,,HSIF
+C001101,Rep. Katherine M. Clark,MA,MA-05,D,F,2013,sitting,,
+M001196,Rep. Seth Moulton,MA,MA-06,D,M,2015,sitting,,HSAS|HSPW|HSZS
+P000617,Rep. Ayanna Pressley,MA,MA-07,D,F,2019,sitting,,HSBA|HSGO
+L000562,Rep. Stephen F. Lynch,MA,MA-08,D,M,2001,sitting,,HSBA|HSGO
+K000375,Rep. William R. Keating,MA,MA-09,D,M,2011,sitting,,HSAS|HSFA
+H001052,Rep. Andy Harris,MD,MD-01,R,M,2011,sitting,,HSAP
+O000176,"Rep. Johnny Olszewski, Jr.",MD,MD-02,D,M,2025,sitting,,HSFA|HSSM
+E000301,Rep. Sarah Elfreth,MD,MD-03,D,F,2025,sitting,,HSAS|HSII
+I000058,Rep. Glenn Ivey,MD,MD-04,D,M,2023,sitting,,HSAP|HSSO
+H000874,Rep. Steny H. Hoyer,MD,MD-05,D,M,1981,sitting,,HSAP
+M001232,Rep. April McClain Delaney,MD,MD-06,D,F,2025,sitting,,HSAG|HSSY
+M000687,Rep. Kweisi Mfume,MD,MD-07,D,M,1987,sitting,,HSFA|HSGO
+R000606,Rep. Jamie Raskin,MD,MD-08,D,M,2017,sitting,,HSJU
+P000597,Rep. Chellie Pingree,ME,ME-01,D,F,2009,sitting,,HSAG|HSAP
+G000592,Rep. Jared F. Golden,ME,ME-02,D,M,2019,sitting,,HSAS|HSII
+B001301,Rep. Jack Bergman,MI,MI-01,R,M,2017,sitting,,HSAS|HSBU|HSVR
+M001194,Rep. John R. Moolenaar,MI,MI-02,R,M,2015,sitting,,HSAP|HSZS
+S001221,Rep. Hillary J. Scholten,MI,MI-03,D,F,2023,sitting,,HSPW|HSSM
+H001058,Rep. Bill Huizenga,MI,MI-04,R,M,2011,sitting,,HSBA|HSFA
+W000798,Rep. Tim Walberg,MI,MI-05,R,M,2007,sitting,,HSED|HSII
+D000624,Rep. Debbie Dingell,MI,MI-06,D,F,2015,sitting,,HSIF|HSII
+B001321,Rep. Tom Barrett,MI,MI-07,R,M,2025,sitting,,HSPW|HSVR
+M001237,Rep. Kristen McDonald Rivet,MI,MI-08,D,F,2025,sitting,,HSAG|HSPW
+M001136,Rep. Lisa C. McClain,MI,MI-09,R,F,2021,sitting,,HSBA|HSED
+J000307,Rep. John James,MI,MI-10,R,M,2023,sitting,,HSIF
+S001215,Rep. Haley M. Stevens,MI,MI-11,D,F,2019,sitting,,HSED|HSSY|HSZS
+T000481,Rep. Rashida Tlaib,MI,MI-12,D,F,2019,sitting,,HSBA|HSGO
+T000488,Rep. Shri Thanedar,MI,MI-13,D,M,2023,sitting,,HSAG|HSHM
+F000475,Rep. Brad Finstad,MN,MN-01,R,M,2022,sitting,,HSAG|HSAS|HSSM
+C001119,Rep. Angie Craig,MN,MN-02,D,F,2019,sitting,,HSAG
+M001234,Rep. Kelly Morrison,MN,MN-03,D,F,2025,sitting,,HSSM|HSVR
+M001143,Rep. Betty McCollum,MN,MN-04,D,F,2001,sitting,,HSAP
+O000173,Rep. Ilhan Omar,MN,MN-05,D,F,2019,sitting,,HSBU|HSED
+E000294,Rep. Tom Emmer,MN,MN-06,R,M,2015,sitting,,HSBA
+F000470,Rep. Michelle Fischbach,MN,MN-07,R,F,2021,sitting,,HSRU|HSWM
+S001212,Rep. Pete Stauber,MN,MN-08,R,M,2019,sitting,,HSII|HSPW|HSSM
+B001324,Rep. Wesley Bell,MO,MO-01,D,M,2025,sitting,,HSAS|HSFA|HSGO
+W000812,Rep. Ann Wagner,MO,MO-02,R,F,2013,sitting,,HLIG|HSBA
+O000177,"Rep. Robert F. Onder, Jr.",MO,MO-03,R,M,2025,sitting,,HSED|HSJU|HSPW
+A000379,Rep. Mark Alford,MO,MO-04,R,M,2023,sitting,,HSAP|HSSM
+C001061,Rep. Emanuel Cleaver,MO,MO-05,D,M,2005,sitting,,HSBA
+G000546,Rep. Sam Graves,MO,MO-06,R,M,2001,sitting,,HSAS|HSPW
+B001316,Rep. Eric Burlison,MO,MO-07,R,M,2023,sitting,,HSGO|HSPW
+S001195,Rep. Jason Smith,MO,MO-08,R,M,2013,sitting,,HSWM
+K000404,Rep. Kimberlyn King-Hinds,MP,MP-AL,R,F,2025,sitting,,HSPW|HSSM|HSVR
+K000388,Rep. Trent Kelly,MS,MS-01,R,M,2015,sitting,,HLIG|HSAG|HSAS
+T000193,Rep. Bennie G. Thompson,MS,MS-02,D,M,1993,sitting,,HSHM
+G000591,Rep. Michael Guest,MS,MS-03,R,M,2019,sitting,,HSAP|HSHM|HSSO
+E000235,Rep. Mike Ezell,MS,MS-04,R,M,2023,sitting,,HSII|HSPW
+Z000018,Rep. Ryan K. Zinke,MT,MT-01,R,M,2015,sitting,,HSAP|HSFA
+D000634,Rep. Troy Downing,MT,MT-02,R,M,2025,sitting,,HSBA|HSII
+D000230,Rep. Donald G. Davis,NC,NC-01,D,M,2023,sitting,,HSAG|HSAS
+R000305,Rep. Deborah K. Ross,NC,NC-02,D,F,2021,sitting,,HSJU|HSSO|HSSY
+M001210,Rep. Gregory F. Murphy,NC,NC-03,R,M,2019,sitting,,HSHA|HSVR|HSWM
+F000477,Rep. Valerie P. Foushee,NC,NC-04,D,F,2023,sitting,,HSPW|HSSY
+F000450,Rep. Virginia Foxx,NC,NC-05,R,F,2005,sitting,,HSED|HSGO|HSRU
+M001240,Rep. Addison P. McDowell,NC,NC-06,R,M,2025,sitting,,HSBU|HSII|HSPW
+R000603,Rep. David Rouzer,NC,NC-07,R,M,2015,sitting,,HSAG|HSPW|HSSY
+H001102,Rep. Mark Harris,NC,NC-08,R,M,2025,sitting,,HSAG|HSED|HSJU
+H001067,Rep. Richard Hudson,NC,NC-09,R,M,2013,sitting,,HSIF
+H001101,Rep. Pat Harrigan,NC,NC-10,R,M,2025,sitting,,HSAS|HSSY
+E000246,Rep. Chuck Edwards,NC,NC-11,R,M,2023,sitting,,HSAP|HSBU
+A000370,Rep. Alma S. Adams,NC,NC-12,D,F,2014,sitting,,HSAG|HSED
+K000405,Rep. Brad Knott,NC,NC-13,R,M,2025,sitting,,HSHM|HSJU|HSPW|HSSO
+M001236,Rep. Tim Moore,NC,NC-14,R,M,2025,sitting,,HSBA|HSBU
+F000482,Rep. Julie Fedorchak,ND,ND-AL,R,F,2025,sitting,,HSIF
+F000474,Rep. Mike Flood,NE,NE-01,R,M,2022,sitting,,HSBA
+B001298,Rep. Don Bacon,NE,NE-02,R,M,2017,sitting,,HSAG|HSAS
+S001172,Rep. Adrian Smith,NE,NE-03,R,M,2007,sitting,,HSWM
+P000614,Rep. Chris Pappas,NH,NH-01,D,M,2019,sitting,,HSPW|HSVR
+G000604,Rep. Maggie Goodlander,NH,NH-02,D,F,2025,sitting,,HSAS|HSSM|HSVR
+N000188,Rep. Donald Norcross,NJ,NJ-01,D,M,2014,sitting,,HSAS|HSED
+V000133,Rep. Jefferson Van Drew,NJ,NJ-02,R,M,2019,sitting,,HSJU|HSPW
+C001136,"Rep. Herbert C. Conaway, Jr.",NJ,NJ-03,D,M,2025,sitting,,HSAS|HSVR
+S000522,Rep. Christopher H. Smith,NJ,NJ-04,R,M,1981,sitting,,HSFA
+G000583,Rep. Josh Gottheimer,NJ,NJ-05,D,M,2017,sitting,,HLIG|HSBA
+P000034,"Rep. Frank Pallone, Jr.",NJ,NJ-06,D,M,1987,sitting,,HSIF
+K000398,"Rep. Thomas H. Kean, Jr.",NJ,NJ-07,R,M,2023,sitting,,HSFA|HSIF
+M001226,Rep. Robert Menendez,NJ,NJ-08,D,M,2023,sitting,,HSIF
+P000621,Rep. Nellie Pou,NJ,NJ-09,D,F,2025,sitting,,HSHM|HSPW
+M001229,Rep. LaMonica McIver,NJ,NJ-10,D,F,2024,sitting,,HSHM|HSSM
+M001246,Rep. Analilia Mejia,NJ,NJ-11,D,F,2026,sitting,,HSHM|HSSM
+W000822,Rep. Bonnie Watson Coleman,NJ,NJ-12,D,F,2015,sitting,,HSAP|HSBU
+S001218,Rep. Melanie A. Stansbury,NM,NM-01,D,F,2021,sitting,,HSGO|HSII
+V000136,Rep. Gabe Vasquez,NM,NM-02,D,M,2023,sitting,,HSAG|HSAS
+L000273,Rep. Teresa Leger Fernandez,NM,NM-03,D,F,2021,sitting,,HSII|HSRU
+T000468,Rep. Dina Titus,NV,NV-01,D,F,2009,sitting,,HSFA|HSPW
+A000369,Rep. Mark E. Amodei,NV,NV-02,R,M,2011,sitting,,HSAP|HSII
+L000590,Rep. Susie Lee,NV,NV-03,D,F,2019,sitting,,HSAP|HSII
+H001066,Rep. Steven Horsford,NV,NV-04,D,M,2013,sitting,,HSWM
+L000598,Rep. Nick LaLota,NY,NY-01,R,M,2023,sitting,,HSAP|HSHM
+G000597,Rep. Andrew R. Garbarino,NY,NY-02,R,M,2021,sitting,,HSBA|HSHM|HSSO
+S001201,Rep. Thomas R. Suozzi,NY,NY-03,D,M,2017,sitting,,HSWM|HSZS
+G000602,Rep. Laura Gillen,NY,NY-04,D,F,2025,sitting,,HSPW|HSSY
+M001137,Rep. Gregory W. Meeks,NY,NY-05,D,M,1997,sitting,,HSBA|HSFA
+M001188,Rep. Grace Meng,NY,NY-06,D,F,2013,sitting,,HSAP
+V000081,Rep. Nydia M. Velázquez,NY,NY-07,D,F,1993,sitting,,HSBA|HSSM
+J000294,Rep. Hakeem S. Jeffries,NY,NY-08,D,M,2013,sitting,,
+C001067,Rep. Yvette D. Clarke,NY,NY-09,D,F,2007,sitting,,HSIF
+G000599,Rep. Daniel S. Goldman,NY,NY-10,D,M,2023,sitting,,HSHM|HSJU
+M000317,Rep. Nicole Malliotakis,NY,NY-11,R,F,2021,sitting,,HSWM
+N000002,Rep. Jerrold Nadler,NY,NY-12,D,M,1992,sitting,,HSJU|HSPW
+E000297,Rep. Adriano Espaillat,NY,NY-13,D,M,2017,sitting,,HSAP
+O000172,Rep. Alexandria Ocasio-Cortez,NY,NY-14,D,F,2019,sitting,,HSIF
+T000486,Rep. Ritchie Torres,NY,NY-15,D,M,2021,sitting,,HSBA|HSZS
+L000606,Rep. George Latimer,NY,NY-16,D,M,2025,sitting,,HSFA|HSSM
+L000599,Rep. Michael Lawler,NY,NY-17,R,M,2023,sitting,,HSBA|HSFA
+R000579,Rep. Patrick Ryan,NY,NY-18,D,M,2022,sitting,,HSAS|HSPW
+R000622,Rep. Josh Riley,NY,NY-19,D,M,2025,sitting,,HSAG|HSSY
+T000469,Rep. Paul Tonko,NY,NY-20,D,M,2009,sitting,,HSBU|HSIF
+S001196,Rep. Elise M. Stefanik,NY,NY-21,R,F,2015,sitting,,HLIG|HSAS|HSED
+M001231,Rep. John W. Mannion,NY,NY-22,D,M,2025,sitting,,HSAG|HSED
+L000600,Rep. Nicholas A. Langworthy,NY,NY-23,R,M,2023,sitting,,HSGO|HSIF|HSRU
+T000478,Rep. Claudia Tenney,NY,NY-24,R,F,2017,sitting,,HLIG|HSSY|HSWM
+M001206,Rep. Joseph D. Morelle,NY,NY-25,D,M,2018,sitting,,HSAP|HSHA
+K000402,Rep. Timothy M. Kennedy,NY,NY-26,D,M,2024,sitting,,HSHM|HSVR
+L000601,Rep. Greg Landsman,OH,OH-01,D,M,2023,sitting,,HSIF
+T000490,Rep. David J. Taylor,OH,OH-02,R,M,2025,sitting,,HSAG|HSPW
+B001281,Rep. Joyce Beatty,OH,OH-03,D,F,2013,sitting,,HSBA
+J000289,Rep. Jim Jordan,OH,OH-04,R,M,2007,sitting,,HSGO|HSJU
+L000566,Rep. Robert E. Latta,OH,OH-05,R,M,2007,sitting,,HSIF
+R000619,Rep. Michael A. Rulli,OH,OH-06,R,M,2024,sitting,,HSED|HSIF
+M001222,Rep. Max L. Miller,OH,OH-07,R,M,2023,sitting,,HSFA|HSWM
+D000626,Rep. Warren Davidson,OH,OH-08,R,M,2016,sitting,,HSBA|HSFA
+K000009,Rep. Marcy Kaptur,OH,OH-09,D,F,1983,sitting,,HSAP|HSBU
+T000463,Rep. Michael R. Turner,OH,OH-10,R,M,2003,sitting,,HSAS|HSGO
+B001313,Rep. Shontel M. Brown,OH,OH-11,D,F,2021,sitting,,HSAG|HSGO|HSZS
+B001306,Rep. Troy Balderson,OH,OH-12,R,M,2018,sitting,,HSIF
+S001223,Rep. Emilia Strong Sykes,OH,OH-13,D,F,2023,sitting,,HSPW|HSSY
+J000295,Rep. David P. Joyce,OH,OH-14,R,M,2013,sitting,,HSAP|HSHM
+C001126,Rep. Mike Carey,OH,OH-15,R,M,2021,sitting,,HSBU|HSHA|HSWM
+H001082,Rep. Kevin Hern,OK,OK-01,R,M,2018,sitting,,HSWM
+B001317,Rep. Josh Brecheen,OK,OK-02,R,M,2023,sitting,,HSBU|HSHM
+L000491,Rep. Frank D. Lucas,OK,OK-03,R,M,1993,sitting,,HSAG|HSBA
+C001053,Rep. Tom Cole,OK,OK-04,R,M,2003,sitting,,HSAP
+B000740,Rep. Stephanie I. Bice,OK,OK-05,R,F,2021,sitting,,HSAP|HSHA
+B001278,Rep. Suzanne Bonamici,OR,OR-01,D,F,2012,sitting,,HSED|HSSY
+B000668,Rep. Cliff Bentz,OR,OR-02,R,M,2021,sitting,,HSIF|HSII
+D000635,Rep. Maxine Dexter,OR,OR-03,D,F,2025,sitting,,HSII|HSVR
+H001094,Rep. Val T. Hoyle,OR,OR-04,D,F,2023,sitting,,HSII|HSPW
+B001326,Rep. Janelle S. Bynum,OR,OR-05,D,F,2025,sitting,,HSBA
+S001226,Rep. Andrea Salinas,OR,OR-06,D,F,2023,sitting,,HSAG|HSSY
+F000466,Rep. Brian K. Fitzpatrick,PA,PA-01,R,M,2017,sitting,,HLIG|HSWM
+B001296,Rep. Brendan F. Boyle,PA,PA-02,D,M,2015,sitting,,HSBU|HSWM
+E000296,Rep. Dwight Evans,PA,PA-03,D,M,2016,sitting,,HSWM
+D000631,Rep. Madeleine Dean,PA,PA-04,D,F,2019,sitting,,HSAP|HSFA
+S001205,Rep. Mary Gay Scanlon,PA,PA-05,D,F,2018,sitting,,HSJU|HSRU
+H001085,Rep. Chrissy Houlahan,PA,PA-06,D,F,2019,sitting,,HLIG|HSAS
+M001230,Rep. Ryan Mackenzie,PA,PA-07,R,M,2025,sitting,,HSED|HSFA|HSHM
+B001327,"Rep. Robert P. Bresnahan, Jr.",PA,PA-08,R,M,2025,sitting,,HSAG|HSPW|HSSM
+M001204,Rep. Daniel Meuser,PA,PA-09,R,M,2019,sitting,,HSBA|HSSM
+P000605,Rep. Scott Perry,PA,PA-10,R,M,2013,sitting,,HLIG|HSFA|HSGO|HSPW
+S001199,Rep. Lloyd Smucker,PA,PA-11,R,M,2017,sitting,,HSBU|HSWM
+L000602,Rep. Summer L. Lee,PA,PA-12,D,F,2023,sitting,,HSED|HSJU
+J000302,Rep. John Joyce,PA,PA-13,R,M,2019,sitting,,HSIF
+R000610,Rep. Guy Reschenthaler,PA,PA-14,R,M,2019,sitting,,HSAP
+T000467,Rep. Glenn Thompson,PA,PA-15,R,M,2009,sitting,,HSAG|HSED
+K000376,Rep. Mike Kelly,PA,PA-16,R,M,2011,sitting,,HSWM
+D000530,Rep. Christopher R. Deluzio,PA,PA-17,D,M,2023,sitting,,HSAS|HSPW
+H001103,Rep. Pablo José Hernández,PR,PR-AL,D,M,2025,sitting,,HSHM|HSII
+A000380,Rep. Gabe Amo,RI,RI-01,D,M,2023,sitting,,HSBU|HSFA|HSSY
+M001223,Rep. Seth Magaziner,RI,RI-02,D,M,2023,sitting,,HSHM|HSII
+M000194,Rep. Nancy Mace,SC,SC-01,R,F,2021,sitting,,HSAS|HSGO|HSVR
+W000795,Rep. Joe Wilson,SC,SC-02,R,M,2001,sitting,,HSAS|HSED|HSFA
+B001325,Rep. Sheri Biggs,SC,SC-03,R,F,2025,sitting,,HSFA|HSHM|HSSY
+T000480,Rep. William R. Timmons IV,SC,SC-04,R,M,2019,sitting,,HSBA|HSGO
+N000190,Rep. Ralph Norman,SC,SC-05,R,M,2017,sitting,,HSBA|HSBU|HSRU
+C000537,Rep. James E. Clyburn,SC,SC-06,D,M,1993,sitting,,HSAP
+F000478,Rep. Russell Fry,SC,SC-07,R,M,2023,sitting,,HSIF|HSJU
+J000301,Rep. Dusty Johnson,SD,SD-AL,R,M,2019,sitting,,HSAG|HSPW|HSZS
+H001086,Rep. Diana Harshbarger,TN,TN-01,R,F,2021,sitting,,HSIF
+B001309,Rep. Tim Burchett,TN,TN-02,R,M,2019,sitting,,HSFA|HSGO|HSPW
+F000459,"Rep. Charles J. ""Chuck"" Fleischmann",TN,TN-03,R,M,2011,sitting,,HSAP|HSSY
+D000616,Rep. Scott DesJarlais,TN,TN-04,R,M,2011,sitting,,HSAG|HSAS
+O000175,Rep. Andrew Ogles,TN,TN-05,R,M,2023,sitting,,HSBA|HSHM
+R000612,Rep. John W. Rose,TN,TN-06,R,M,2019,sitting,,HSAG|HSBA
+V000139,Rep. Matt Van Epps,TN,TN-07,R,M,2025,sitting,,HSHM|HSSY
+K000392,Rep. David Kustoff,TN,TN-08,R,M,2017,sitting,,HSWM
+C001068,Rep. Steve Cohen,TN,TN-09,D,M,2007,sitting,,HLIG|HSJU
+M001224,Rep. Nathaniel Moran,TX,TX-01,R,M,2023,sitting,,HSSO|HSWM|HSZS
+C001120,Rep. Dan Crenshaw,TX,TX-02,R,M,2019,sitting,,HLIG|HSIF
+S001224,Rep. Keith Self,TX,TX-03,R,M,2023,sitting,,HSFA|HSSY|HSVR
+F000246,Rep. Pat Fallon,TX,TX-04,R,M,2021,sitting,,HLIG|HSAS|HSGO
+G000589,Rep. Lance Gooden,TX,TX-05,R,M,2019,sitting,,HSAS|HSJU
+E000071,Rep. Jake Ellzey,TX,TX-06,R,M,2021,sitting,,HSAP|HSSM
+F000468,Rep. Lizzie Fletcher,TX,TX-07,D,F,2019,sitting,,HSIF
+L000603,Rep. Morgan Luttrell,TX,TX-08,R,M,2023,sitting,,HSAS|HSHM|HSVR
+G000553,Rep. Al Green,TX,TX-09,D,M,2005,sitting,,HSBA|HSHM
+M001157,Rep. Michael T. McCaul,TX,TX-10,R,M,2005,sitting,,HSFA|HSHM
+P000048,Rep. August Pfluger,TX,TX-11,R,M,2021,sitting,,HSHM|HSIF
+G000601,Rep. Craig A. Goldman,TX,TX-12,R,M,2025,sitting,,HSIF
+J000304,Rep. Ronny Jackson,TX,TX-13,R,M,2021,sitting,,HLIG|HSAG|HSAS|HSFA
+W000814,"Rep. Randy K. Weber, Sr.",TX,TX-14,R,M,2013,sitting,,HSIF|HSSY
+D000594,Rep. Monica De La Cruz,TX,TX-15,R,F,2023,sitting,,HSAG|HSBA
+E000299,Rep. Veronica Escobar,TX,TX-16,D,F,2019,sitting,,HSAP|HSBU
+S000250,Rep. Pete Sessions,TX,TX-17,R,M,1997,sitting,,HSBA|HSGO
+M001245,Rep. Christian D. Menefee,TX,TX-18,D,M,2026,sitting,,HSGO|HSSY
+A000375,Rep. Jodey C. Arrington,TX,TX-19,R,M,2017,sitting,,HSBU|HSWM
+C001091,Rep. Joaquin Castro,TX,TX-20,D,M,2013,sitting,,HLIG|HSFA
+R000614,Rep. Chip Roy,TX,TX-21,R,M,2019,sitting,,HSBU|HSJU|HSRU
+N000026,Rep. Troy E. Nehls,TX,TX-22,R,M,2021,sitting,,HSJU|HSPW|HSQJ
+V000134,Rep. Beth Van Duyne,TX,TX-24,R,F,2021,sitting,,HSSM|HSWM
+W000816,Rep. Roger Williams,TX,TX-25,R,M,2013,sitting,,HSBA|HSSM
+G000603,Rep. Brandon Gill,TX,TX-26,R,M,2025,sitting,,HSBU|HSGO|HSJU
+C001115,Rep. Michael Cloud,TX,TX-27,R,M,2018,sitting,,HSAP|HSGO
+C001063,Rep. Henry Cuellar,TX,TX-28,D,M,2005,sitting,,HSAP
+G000587,Rep. Sylvia R. Garcia,TX,TX-29,D,F,2019,sitting,,HSBA|HSSO
+C001130,Rep. Jasmine Crockett,TX,TX-30,D,F,2023,sitting,,HSGO|HSJU|HSQJ
+C001051,Rep. John R. Carter,TX,TX-31,R,M,2003,sitting,,HSAP
+J000310,Rep. Julie Johnson,TX,TX-32,D,F,2025,sitting,,HSFA|HSHA|HSHM
+V000131,Rep. Marc A. Veasey,TX,TX-33,D,M,2013,sitting,,HSIF
+G000581,Rep. Vicente Gonzalez,TX,TX-34,D,M,2017,sitting,,HSBA
+C001131,Rep. Greg Casar,TX,TX-35,D,M,2023,sitting,,HSED|HSGO
+B001291,Rep. Brian Babin,TX,TX-36,R,M,2015,sitting,,HSPW|HSSY
+D000399,Rep. Lloyd Doggett,TX,TX-37,D,M,1995,sitting,,HSBU|HSWM
+H001095,Rep. Wesley Hunt,TX,TX-38,R,M,2023,sitting,,HSII|HSJU
+M001213,Rep. Blake D. Moore,UT,UT-01,R,M,2021,sitting,,HSBU|HSWM
+M001228,Rep. Celeste Maloy,UT,UT-02,R,F,2023,sitting,,HSAP|HSII
+K000403,Rep. Mike Kennedy,UT,UT-03,R,M,2025,sitting,,HSII|HSPW|HSSY
+O000086,Rep. Burgess Owens,UT,UT-04,R,M,2021,sitting,,HSED|HSPW
+W000804,Rep. Robert J. Wittman,VA,VA-01,R,M,2007,sitting,,HSAS|HSII|HSZS
+K000399,Rep. Jennifer A. Kiggans,VA,VA-02,R,F,2023,sitting,,HSAS|HSII|HSVR
+S000185,"Rep. Robert C. ""Bobby"" Scott",VA,VA-03,D,M,1993,sitting,,HSBU|HSED
+M001227,Rep. Jennifer L. McClellan,VA,VA-04,D,F,2023,sitting,,HSIF
+M001239,Rep. John J. McGuire III,VA,VA-05,R,M,2025,sitting,,HSAS|HSGO
+C001118,Rep. Ben Cline,VA,VA-06,R,M,2019,sitting,,HLIG|HSAP|HSBU|HSJU
+V000138,Rep. Eugene Simon Vindman,VA,VA-07,D,M,2025,sitting,,HSAG|HSAS
+B001292,"Rep. Donald S. Beyer, Jr.",VA,VA-08,D,M,2015,sitting,,HSWM
+G000568,Rep. H. Morgan Griffith,VA,VA-09,R,M,2011,sitting,,HSHA|HSIF|HSQJ|HSRU
+S001230,Rep. Suhas Subramanyam,VA,VA-10,D,M,2025,sitting,,HSGO|HSSO|HSSY
+W000831,Rep. James R. Walkinshaw,VA,VA-11,D,M,2025,sitting,,HSGO|HSHM
+P000610,Rep. Stacey E. Plaskett,VI,VI-AL,D,F,2015,sitting,,HLIG|HSBU|HSWM
+B001318,Rep. Becca Balint,VT,VT-AL,D,F,2023,sitting,,HSBU|HSJU
+D000617,Rep. Suzan K. DelBene,WA,WA-01,D,F,2012,sitting,,HSWM
+L000560,Rep. Rick Larsen,WA,WA-02,D,M,2001,sitting,,HSPW
+G000600,Rep. Marie Gluesenkamp Perez,WA,WA-03,D,F,2023,sitting,,HSAP
+N000189,Rep. Dan Newhouse,WA,WA-04,R,M,2015,sitting,,HSAG|HSAP|HSZS
+B001322,Rep. Michael Baumgartner,WA,WA-05,R,M,2025,sitting,,HSED|HSFA|HSJU
+R000621,Rep. Emily Randall,WA,WA-06,D,F,2025,sitting,,HSGO|HSII
+J000298,Rep. Pramila Jayapal,WA,WA-07,D,F,2017,sitting,,HSBU|HSFA|HSJU
+S001216,Rep. Kim Schrier,WA,WA-08,D,F,2019,sitting,,HSIF
+S000510,Rep. Adam Smith,WA,WA-09,D,M,1997,sitting,,HSAS
+S001159,Rep. Marilyn Strickland,WA,WA-10,D,F,2021,sitting,,HSAS|HSPW
+S001213,Rep. Bryan Steil,WI,WI-01,R,M,2019,sitting,,HSBA|HSHA
+P000607,Rep. Mark Pocan,WI,WI-02,D,M,2013,sitting,,HSAP|HSFA
+V000135,Rep. Derrick Van Orden,WI,WI-03,R,M,2023,sitting,,HSAG|HSAS|HSVR
+M001160,Rep. Gwen Moore,WI,WI-04,D,F,2005,sitting,,HSWM
+F000471,Rep. Scott Fitzgerald,WI,WI-05,R,M,2021,sitting,,HSBA|HSJU
+G000576,Rep. Glenn Grothman,WI,WI-06,R,M,2015,sitting,,HSBU|HSED|HSGO|HSJU
+T000165,Rep. Thomas P. Tiffany,WI,WI-07,R,M,2020,sitting,,HSII|HSJU
+W000829,Rep. Tony Wied,WI,WI-08,R,M,2024,sitting,,HSAG|HSPW|HSSM
+M001205,Rep. Carol D. Miller,WV,WV-01,R,F,2019,sitting,,HSWM
+M001235,Rep. Riley M. Moore,WV,WV-02,R,M,2025,sitting,,HSAP
+H001096,Rep. Harriet M. Hageman,WY,WY-AL,R,F,2023,sitting,,HSII|HSJU|HSQJ
+W000823,Rep. Michael Waltz,FL,FL-06,R,M,2019,departed,2025-01-20,
+T000489,Rep. Sylvester Turner,TX,TX-18,D,M,2025,departed,2025-03-04,
+G000551,Rep. Raúl M. Grijalva,AZ,AZ-07,D,M,2003,departed,2025-03-13,
+C001078,Rep. Gerald E. Connolly,VA,VA-11,D,M,2009,departed,2025-05-21,
+G000590,Rep. Mark E. Green,TN,TN-07,R,M,2019,departed,2025-07-21,
+S001207,Rep. Mikie Sherrill,NJ,NJ-11,D,F,2019,departed,2025-11-20,
+G000596,Rep. Marjorie Taylor Greene,GA,GA-14,R,F,2021,departed,2026-01-05,
+L000578,Rep. Doug LaMalfa,CA,CA-01,R,M,2013,departed,2026-01-05,
+S001193,Rep. Eric Swalwell,CA,CA-14,D,M,2013,departed,2026-04-14,
+G000594,Rep. Tony Gonzales,TX,TX-23,R,M,2021,departed,2026-04-14,
+C001127,Rep. Sheila Cherfilus-McCormick,FL,FL-20,D,F,2022,departed,2026-04-21,
+S001157,Rep. David Scott,GA,GA-13,D,M,2003,departed,2026-04-21,

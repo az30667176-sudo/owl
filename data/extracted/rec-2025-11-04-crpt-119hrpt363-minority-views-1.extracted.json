@@ -1,0 +1,126 @@
+{
+  "record_id": "rec-2025-11-04-crpt-119hrpt363-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:26:14.964Z",
+  "accepted": [
+    {
+      "person": "W000187",
+      "issue": "securities-and-capital-markets",
+      "date": "2025-11-04",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For these reasons, we oppose H.R. 3484.",
+      "bill": "H.R. 3484 Business Owners Protection Act of 2025",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt363/html/CRPT-119hrpt363.htm",
+      "record_id": "rec-2025-11-04-crpt-119hrpt363-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Opposition to repealing SEC fiduciary and arbitration authority reflects support for strong investor protections in securities markets."
+    },
+    {
+      "person": "V000081",
+      "issue": "securities-and-capital-markets",
+      "date": "2025-11-04",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For these reasons, we oppose H.R. 3484.",
+      "bill": "H.R. 3484 Business Owners Protection Act of 2025",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt363/html/CRPT-119hrpt363.htm",
+      "record_id": "rec-2025-11-04-crpt-119hrpt363-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Opposition to repealing SEC fiduciary and arbitration authority reflects support for strong investor protections in securities markets."
+    },
+    {
+      "person": "L000562",
+      "issue": "securities-and-capital-markets",
+      "date": "2025-11-04",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For these reasons, we oppose H.R. 3484.",
+      "bill": "H.R. 3484 Business Owners Protection Act of 2025",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt363/html/CRPT-119hrpt363.htm",
+      "record_id": "rec-2025-11-04-crpt-119hrpt363-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Opposition to repealing SEC fiduciary and arbitration authority reflects support for strong investor protections in securities markets."
+    },
+    {
+      "person": "G000553",
+      "issue": "securities-and-capital-markets",
+      "date": "2025-11-04",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For these reasons, we oppose H.R. 3484.",
+      "bill": "H.R. 3484 Business Owners Protection Act of 2025",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt363/html/CRPT-119hrpt363.htm",
+      "record_id": "rec-2025-11-04-crpt-119hrpt363-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Opposition to repealing SEC fiduciary and arbitration authority reflects support for strong investor protections in securities markets."
+    },
+    {
+      "person": "B001281",
+      "issue": "securities-and-capital-markets",
+      "date": "2025-11-04",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For these reasons, we oppose H.R. 3484.",
+      "bill": "H.R. 3484 Business Owners Protection Act of 2025",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt363/html/CRPT-119hrpt363.htm",
+      "record_id": "rec-2025-11-04-crpt-119hrpt363-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Opposition to repealing SEC fiduciary and arbitration authority reflects support for strong investor protections in securities markets."
+    },
+    {
+      "person": "T000481",
+      "issue": "securities-and-capital-markets",
+      "date": "2025-11-04",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For these reasons, we oppose H.R. 3484.",
+      "bill": "H.R. 3484 Business Owners Protection Act of 2025",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt363/html/CRPT-119hrpt363.htm",
+      "record_id": "rec-2025-11-04-crpt-119hrpt363-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Opposition to repealing SEC fiduciary and arbitration authority reflects support for strong investor protections in securities markets."
+    },
+    {
+      "person": "G000587",
+      "issue": "securities-and-capital-markets",
+      "date": "2025-11-04",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For these reasons, we oppose H.R. 3484.",
+      "bill": "H.R. 3484 Business Owners Protection Act of 2025",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt363/html/CRPT-119hrpt363.htm",
+      "record_id": "rec-2025-11-04-crpt-119hrpt363-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Opposition to repealing SEC fiduciary and arbitration authority reflects support for strong investor protections in securities markets."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2039,
+    "prompt_tokens": 4236,
+    "total_tokens": 6275,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1312
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

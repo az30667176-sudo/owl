@@ -1,0 +1,51 @@
+{
+  "record_id": "rec-2026-03-12-crpt-119hrpt541-dissenting-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:26:29.603Z",
+  "accepted": [
+    {
+      "person": "R000606",
+      "issue": "immigration-enforcement",
+      "date": "2026-03-12",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "It is an attempt to force every state and local government in America to turn every police officer into an agent of the Trump Administration's incompetent and dangerous immigration operations.",
+      "bill": "H.R. 7640, the so-called Shutdown Sanctuary Policies Act of 2026",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt541/html/CRPT-119hrpt541.htm",
+      "record_id": "rec-2026-03-12-crpt-119hrpt541-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote criticizes compelling state and local police to carry out federal immigration operations as dangerous, justifying opposition to expanded immigration enforcement."
+    },
+    {
+      "person": "R000606",
+      "issue": "law-enforcement-support",
+      "date": "2026-03-12",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "This bill would defund state and local police departments simply because they dare to require that all of their employees' time be used for enforcing state and local laws and keeping their communities safe according to state and local policy rather than the overwhelmingly unpopular policies of a federal department, in this case the chaotic lawlessness and incompetence of DHS.",
+      "bill": "H.R. 7640, the so-called Shutdown Sanctuary Policies Act of 2026",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt541/html/CRPT-119hrpt541.htm",
+      "record_id": "rec-2026-03-12-crpt-119hrpt541-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote opposes stripping federal funds from state and local police departments, indicating support for maintaining law enforcement funding."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1909,
+    "prompt_tokens": 3892,
+    "total_tokens": 5801,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1611
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

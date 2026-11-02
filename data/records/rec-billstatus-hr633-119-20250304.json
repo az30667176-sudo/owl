@@ -1,0 +1,27 @@
+{
+  "id": "rec-billstatus-hr633-119-20250304",
+  "content": "<other>: H.R. 633 (119th Congress): TAKE IT DOWN Act\nCosponsor: Rep. Ro Khanna\nCosponsor: Rep. Stephanie I. Bice\nCosponsor: Rep. Thomas H. Kean, Jr.\nCosponsor: Rep. Thomas R. Suozzi\nCosponsor: Rep. Craig A. Goldman\nCosponsor: Rep. Lauren Boebert\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/633",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/633",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-04",
+    "persons": [
+      "K000389",
+      "B000740",
+      "K000398",
+      "S001201",
+      "G000601",
+      "B000825"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/633"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

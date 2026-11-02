@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr3187-119-20250505",
+  "content": "<other>: H.R. 3187 (119th Congress): To require the Secretary of Agriculture to convey a parcel of property of the Forest Service to Perry County, Arkansas, and for other purposes.\nSponsor: Rep. J. French Hill\nSponsor: Rep. J. French Hill\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/3187",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/3187",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-05-05",
+    "persons": [
+      "H001072",
+      "H001072"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/3187"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

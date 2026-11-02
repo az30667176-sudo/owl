@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr7085-119-20260115",
+  "content": "<other>: H.R. 7085 (119th Congress): To amend the Securities Exchange Act of 1934 to repeal certain disclosure requirements related to conflict minerals, and for other purposes.\nSponsor: Rep. Bill Huizenga\nSponsor: Rep. Bill Huizenga\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/7085",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/7085",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-01-15",
+    "persons": [
+      "H001058",
+      "H001058"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/7085"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

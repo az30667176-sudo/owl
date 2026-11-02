@@ -1,0 +1,52 @@
+{
+  "id": "rec-billstatus-hr976-119-20250204",
+  "content": "<other>: H.R. 976 (119th Congress): 1071 Repeal to Protect Small Business Lending Act\nSponsor: Rep. Roger Williams\nCosponsor: Rep. Bill Huizenga\nCosponsor: Rep. Mike Flood\nCosponsor: Rep. Daniel Meuser\nCosponsor: Rep. Ann Wagner\nCosponsor: Rep. Monica De La Cruz\nCosponsor: Rep. Zachary Nunn\nCosponsor: Rep. Troy Downing\nCosponsor: Rep. Byron Donalds\nCosponsor: Rep. Mike Haridopolos\nCosponsor: Rep. Frank D. Lucas\nCosponsor: Rep. Andrew R. Garbarino\nCosponsor: Rep. Brad Finstad\nCosponsor: Rep. Tim Moore\nCosponsor: Rep. Andy Barr\nCosponsor: Rep. Mike Collins\nCosponsor: Rep. Warren Davidson\nCosponsor: Rep. David Kustoff\nCosponsor: Rep. Jack Bergman\nCosponsor: Rep. Claudia Tenney\nCosponsor: Rep. Ralph Norman\nCosponsor: Rep. Andrew Ogles\nCosponsor: Rep. Mike Ezell\nCosponsor: Rep. Rudy Yakym III\nCosponsor: Rep. Ronny Jackson\nCosponsor: Rep. Glenn Grothman\nCosponsor: Rep. Barry Loudermilk\nCosponsor: Rep. Brandon Gill\nCosponsor: Rep. David J. Taylor\nCosponsor: Rep. Beth Van Duyne\nSponsor: Rep. Roger Williams\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/976",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/976",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-04",
+    "persons": [
+      "W000816",
+      "H001058",
+      "F000474",
+      "M001204",
+      "W000812",
+      "D000594",
+      "N000193",
+      "D000634",
+      "D000032",
+      "H001099",
+      "L000491",
+      "G000597",
+      "F000475",
+      "M001236",
+      "B001282",
+      "C001129",
+      "D000626",
+      "K000392",
+      "B001301",
+      "T000478",
+      "N000190",
+      "O000175",
+      "E000235",
+      "Y000067",
+      "J000304",
+      "G000576",
+      "L000583",
+      "G000603",
+      "T000490",
+      "V000134",
+      "W000816"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/976"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

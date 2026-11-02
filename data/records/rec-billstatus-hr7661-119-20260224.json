@@ -1,0 +1,39 @@
+{
+  "id": "rec-billstatus-hr7661-119-20260224",
+  "content": "<other>: H.R. 7661 (119th Congress): Stop the Sexualization of Children Act\nSponsor: Rep. Mary E. Miller\nCosponsor: Rep. Troy Downing\nCosponsor: Rep. Randy Fine\nCosponsor: Rep. W. Gregory Steube\nCosponsor: Rep. Paul A. Gosar\nCosponsor: Rep. Andrew Ogles\nCosponsor: Rep. Harriet M. Hageman\nCosponsor: Rep. Marlin A. Stutzman\nCosponsor: Rep. Barry Moore\nCosponsor: Rep. Sheri Biggs\nCosponsor: Rep. Julia Letlow\nCosponsor: Rep. Claudia Tenney\nCosponsor: Rep. Chip Roy\nCosponsor: Rep. Warren Davidson\nCosponsor: Rep. Randy K. Weber, Sr.\nCosponsor: Rep. John W. Rose\nCosponsor: Rep. Burgess Owens\nCosponsor: Rep. Keith Self\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/7661",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/7661",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-02-24",
+    "persons": [
+      "M001211",
+      "D000634",
+      "F000484",
+      "S001214",
+      "G000565",
+      "O000175",
+      "H001096",
+      "S001188",
+      "M001212",
+      "B001325",
+      "L000595",
+      "T000478",
+      "R000614",
+      "D000626",
+      "W000814",
+      "R000612",
+      "O000086",
+      "S001224"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/7661"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

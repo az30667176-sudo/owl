@@ -1,0 +1,34 @@
+{
+  "id": "rec-billstatus-hr1262-119-20250801",
+  "content": "<other>: H.R. 1262 (119th Congress): Mikaela Naylon Give Kids a Chance Act\nCosponsor: Rep. Henry C. \"Hank\" Johnson, Jr.\nCosponsor: Rep. Nellie Pou\nCosponsor: Rep. Jesús G. \"Chuy\" García\nCosponsor: Rep. Nydia M. Velázquez\nCosponsor: Rep. Sarah Elfreth\nCosponsor: Rep. Maggie Goodlander\nCosponsor: Rep. Ro Khanna\nCosponsor: Rep. Kimberlyn King-Hinds\nCosponsor: Rep. Vern Buchanan\nCosponsor: Rep. Laurel M. Lee\nCosponsor: Rep. Craig A. Goldman\nCosponsor: Rep. Jasmine Crockett\nCosponsor: Rep. Haley M. Stevens\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1262",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1262",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-08-01",
+    "persons": [
+      "J000288",
+      "P000621",
+      "G000586",
+      "V000081",
+      "E000301",
+      "G000604",
+      "K000389",
+      "K000404",
+      "B001260",
+      "L000597",
+      "G000601",
+      "C001130",
+      "S001215"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1262"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "record_id": "rec-2026-05-22-crpt-119hrpt667-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:28:32.307Z",
+  "accepted": [
+    {
+      "person": "D000216",
+      "issue": "energy-and-water-appropriations",
+      "date": "2026-05-22",
+      "score": -0.8,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "Due to concerns about spending levels, harmful cuts to the clean energy economy and programs meant to prevent the spread of nuclear weapons, and partisan policy riders, we are unable to support the bill as written.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt667/html/CRPT-119hrpt667.htm",
+      "record_id": "rec-2026-05-22-crpt-119hrpt667-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislators state they cannot support the bill because of its spending levels, cuts, and riders."
+    },
+    {
+      "person": "K000009",
+      "issue": "energy-and-water-appropriations",
+      "date": "2026-05-22",
+      "score": -0.8,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "Due to concerns about spending levels, harmful cuts to the clean energy economy and programs meant to prevent the spread of nuclear weapons, and partisan policy riders, we are unable to support the bill as written.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt667/html/CRPT-119hrpt667.htm",
+      "record_id": "rec-2026-05-22-crpt-119hrpt667-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislators state they cannot support the bill because of its spending levels, cuts, and riders."
+    },
+    {
+      "person": "D000216",
+      "issue": "electric-grid-reliability",
+      "date": "2026-05-22",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "With energy prices rising, a $25 million cut for the Department of Energy's electricity and grid deployment programs harms our ability to modernize our aging grid and to drive down electricity prices.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt667/html/CRPT-119hrpt667.htm",
+      "record_id": "rec-2026-05-22-crpt-119hrpt667-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislators oppose the cut and support modernizing the grid to lower electricity prices."
+    },
+    {
+      "person": "K000009",
+      "issue": "electric-grid-reliability",
+      "date": "2026-05-22",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "With energy prices rising, a $25 million cut for the Department of Energy's electricity and grid deployment programs harms our ability to modernize our aging grid and to drive down electricity prices.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt667/html/CRPT-119hrpt667.htm",
+      "record_id": "rec-2026-05-22-crpt-119hrpt667-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislators oppose the cut and support modernizing the grid to lower electricity prices."
+    },
+    {
+      "person": "D000216",
+      "issue": "nuclear-nonproliferation",
+      "date": "2026-05-22",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "This bill threatens our national security by cutting funding for the Nuclear National Security Administration's Defense Nuclear Nonproliferation account by $282 million, or 12 percent.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt667/html/CRPT-119hrpt667.htm",
+      "record_id": "rec-2026-05-22-crpt-119hrpt667-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislators criticize the cut because it hampers efforts to secure nuclear material."
+    },
+    {
+      "person": "K000009",
+      "issue": "nuclear-nonproliferation",
+      "date": "2026-05-22",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "This bill threatens our national security by cutting funding for the Nuclear National Security Administration's Defense Nuclear Nonproliferation account by $282 million, or 12 percent.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt667/html/CRPT-119hrpt667.htm",
+      "record_id": "rec-2026-05-22-crpt-119hrpt667-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislators criticize the cut because it hampers efforts to secure nuclear material."
+    },
+    {
+      "person": "D000216",
+      "issue": "research-and-technology-transfer",
+      "date": "2026-05-22",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "To meet the challenges of the future, we need to be creative. We need to innovate, conduct research, and find solutions to problems before they erupt into crises.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt667/html/CRPT-119hrpt667.htm",
+      "record_id": "rec-2026-05-22-crpt-119hrpt667-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislators affirm support for innovation and research to address future challenges."
+    },
+    {
+      "person": "K000009",
+      "issue": "research-and-technology-transfer",
+      "date": "2026-05-22",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "To meet the challenges of the future, we need to be creative. We need to innovate, conduct research, and find solutions to problems before they erupt into crises.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt667/html/CRPT-119hrpt667.htm",
+      "record_id": "rec-2026-05-22-crpt-119hrpt667-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislators affirm support for innovation and research to address future challenges."
+    },
+    {
+      "person": "D000216",
+      "issue": "environmental-regulation",
+      "date": "2026-05-22",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Additionally, this bill would put our communities at risk by impeding the cleanup of radioactive waste left over from America's atomic weapons development.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt667/html/CRPT-119hrpt667.htm",
+      "record_id": "rec-2026-05-22-crpt-119hrpt667-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislators support cleanup of radioactive waste and oppose impeding it."
+    },
+    {
+      "person": "K000009",
+      "issue": "environmental-regulation",
+      "date": "2026-05-22",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Additionally, this bill would put our communities at risk by impeding the cleanup of radioactive waste left over from America's atomic weapons development.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt667/html/CRPT-119hrpt667.htm",
+      "record_id": "rec-2026-05-22-crpt-119hrpt667-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislators support cleanup of radioactive waste and oppose impeding it."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "nuclear-nonproliferation",
+      "name": "Nuclear Nonproliferation",
+      "parent": "hsap-energy"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 3144,
+    "prompt_tokens": 3275,
+    "total_tokens": 6419,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1915
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

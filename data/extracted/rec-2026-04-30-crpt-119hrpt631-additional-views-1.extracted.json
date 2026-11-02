@@ -1,0 +1,66 @@
+{
+  "record_id": "rec-2026-04-30-crpt-119hrpt631-additional-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:28:06.416Z",
+  "accepted": [
+    {
+      "person": "D000216",
+      "issue": "national-security-and-state-appropriations",
+      "date": "2026-04-30",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "It compounds the problem by cutting humanitarian aid while crises are worsening across Africa, Eastern Europe, and the Middle East.",
+      "bill": "Fiscal Year 2027 National Security, Department of State, and Related Programs Appropriations bill",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt631/html/CRPT-119hrpt631.htm",
+      "record_id": "rec-2026-04-30-crpt-119hrpt631-additional-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote criticizes cuts to humanitarian aid, indicating support for sustained funding for diplomacy and assistance."
+    },
+    {
+      "person": "F000462",
+      "issue": "national-security-and-state-appropriations",
+      "date": "2026-04-30",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "It compounds the problem by cutting humanitarian aid while crises are worsening across Africa, Eastern Europe, and the Middle East.",
+      "bill": "Fiscal Year 2027 National Security, Department of State, and Related Programs Appropriations bill",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt631/html/CRPT-119hrpt631.htm",
+      "record_id": "rec-2026-04-30-crpt-119hrpt631-additional-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote criticizes cuts to humanitarian aid, indicating support for sustained funding for diplomacy and assistance."
+    },
+    {
+      "person": "F000462",
+      "issue": "immigration-enforcement",
+      "date": "2026-04-30",
+      "score": -0.7,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "An amendment by Ranking Member Lois Frankel to restrict deportations to third countries without an individual's consent was rejected.",
+      "bill": "Fiscal Year 2027 National Security, Department of State, and Related Programs Appropriations bill",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt631/html/CRPT-119hrpt631.htm",
+      "record_id": "rec-2026-04-30-crpt-119hrpt631-additional-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote shows Frankel sought to limit third-country deportations without consent, opposing expansive enforcement."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2402,
+    "prompt_tokens": 3277,
+    "total_tokens": 5679,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2049
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

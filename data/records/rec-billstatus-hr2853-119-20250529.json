@@ -1,0 +1,34 @@
+{
+  "id": "rec-billstatus-hr2853-119-20250529",
+  "content": "<other>: H.R. 2853 (119th Congress): Combating Organized Retail Crime Act of 2025\nCosponsor: Rep. Roger Williams\nCosponsor: Rep. Brian K. Fitzpatrick\nCosponsor: Rep. Josh Gottheimer\nCosponsor: Rep. Tom Barrett\nCosponsor: Rep. Jefferson Van Drew\nCosponsor: Rep. Kweisi Mfume\nCosponsor: Rep. Michael Lawler\nCosponsor: Rep. Sam Graves\nCosponsor: Rep. Lucy McBath\nCosponsor: Rep. Kevin Kiley\nCosponsor: Rep. Ben Cline\nCosponsor: Rep. Gabe Evans\nCosponsor: Rep. Scott Franklin\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2853",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2853",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-05-29",
+    "persons": [
+      "W000816",
+      "F000466",
+      "G000583",
+      "B001321",
+      "V000133",
+      "M000687",
+      "L000599",
+      "G000546",
+      "M001208",
+      "K000401",
+      "C001118",
+      "E000300",
+      "F000472"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2853"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

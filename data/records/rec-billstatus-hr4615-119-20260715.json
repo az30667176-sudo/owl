@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr4615-119-20260715",
+  "content": "<other>: H.R. 4615 (119th Congress): Small Business Payment for Performance Act of 2026\nCosponsor: Rep. Angie Craig\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/4615",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/4615",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-07-15",
+    "persons": [
+      "C001119"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/4615"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

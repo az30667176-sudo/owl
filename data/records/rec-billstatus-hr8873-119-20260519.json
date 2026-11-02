@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr8873-119-20260519",
+  "content": "<other>: H.R. 8873 (119th Congress): Recover COVID Unemployment Fraud in Banks Act\nSponsor: Rep. Beth Van Duyne\nCosponsor: Rep. Thomas R. Suozzi\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/8873",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/8873",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-05-19",
+    "persons": [
+      "V000134",
+      "S001201"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/8873"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "rec-billstatus-hr5505-119-20250918",
+  "content": "<other>: H.R. 5505 (119th Congress): Equal Campus Access Act of 2026\nSponsor: Rep. Tim Walberg\nCosponsor: Rep. Randy K. Weber, Sr.\nCosponsor: Rep. Mary E. Miller\nCosponsor: Rep. Harriet M. Hageman\nCosponsor: Rep. Nathaniel Moran\nCosponsor: Rep. Robert B. Aderholt\nCosponsor: Rep. Robert F. Onder, Jr.\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/5505",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/5505",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-09-18",
+    "persons": [
+      "W000798",
+      "W000814",
+      "M001211",
+      "H001096",
+      "M001224",
+      "A000055",
+      "O000177"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/5505"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "record_id": "rec-2026-01-13-crpt-119hrpt444-minority-views-2",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:46:13.072Z",
+  "accepted": [
+    {
+      "person": "S000185",
+      "issue": "higher-education-and-student-aid",
+      "date": "2026-01-13",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The litmus test provision will result in a chilling effect setting in among accreditors, scaring them from taking an honest look at a school's claims as to its mission or the quality its programs, for fear they may wade into waters that could be considered controversial.",
+      "bill": "H.R. 2516",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt444/html/CRPT-119hrpt444.htm",
+      "record_id": "rec-2026-01-13-crpt-119hrpt444-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage opposes the bill's restriction because it would deter accreditors from evaluating mission and program quality."
+    },
+    {
+      "person": "B001278",
+      "issue": "higher-education-and-student-aid",
+      "date": "2026-01-13",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The litmus test provision will result in a chilling effect setting in among accreditors, scaring them from taking an honest look at a school's claims as to its mission or the quality its programs, for fear they may wade into waters that could be considered controversial.",
+      "bill": "H.R. 2516",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt444/html/CRPT-119hrpt444.htm",
+      "record_id": "rec-2026-01-13-crpt-119hrpt444-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage opposes the bill's restriction because it would deter accreditors from evaluating mission and program quality."
+    },
+    {
+      "person": "D000623",
+      "issue": "higher-education-and-student-aid",
+      "date": "2026-01-13",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The litmus test provision will result in a chilling effect setting in among accreditors, scaring them from taking an honest look at a school's claims as to its mission or the quality its programs, for fear they may wade into waters that could be considered controversial.",
+      "bill": "H.R. 2516",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt444/html/CRPT-119hrpt444.htm",
+      "record_id": "rec-2026-01-13-crpt-119hrpt444-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage opposes the bill's restriction because it would deter accreditors from evaluating mission and program quality."
+    },
+    {
+      "person": "L000602",
+      "issue": "higher-education-and-student-aid",
+      "date": "2026-01-13",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The litmus test provision will result in a chilling effect setting in among accreditors, scaring them from taking an honest look at a school's claims as to its mission or the quality its programs, for fear they may wade into waters that could be considered controversial.",
+      "bill": "H.R. 2516",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt444/html/CRPT-119hrpt444.htm",
+      "record_id": "rec-2026-01-13-crpt-119hrpt444-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage opposes the bill's restriction because it would deter accreditors from evaluating mission and program quality."
+    },
+    {
+      "person": "S000185",
+      "issue": "civil-rights-in-schools",
+      "date": "2026-01-13",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "H.R. 2516 requires accrediting bodies to allow institutions to compel students, employees, or independent contractors to adhere to a statement of faith or adhere to a religious code of conduct consistent with the stated religious mission or religious tenets of the organization, which could sweep so broadly as to implicate violations of civil rights laws and even campus safety laws.",
+      "bill": "H.R. 2516",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt444/html/CRPT-119hrpt444.htm",
+      "record_id": "rec-2026-01-13-crpt-119hrpt444-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage warns that the religious-institution provision risks violating civil rights and campus safety laws."
+    },
+    {
+      "person": "B001278",
+      "issue": "civil-rights-in-schools",
+      "date": "2026-01-13",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "H.R. 2516 requires accrediting bodies to allow institutions to compel students, employees, or independent contractors to adhere to a statement of faith or adhere to a religious code of conduct consistent with the stated religious mission or religious tenets of the organization, which could sweep so broadly as to implicate violations of civil rights laws and even campus safety laws.",
+      "bill": "H.R. 2516",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt444/html/CRPT-119hrpt444.htm",
+      "record_id": "rec-2026-01-13-crpt-119hrpt444-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage warns that the religious-institution provision risks violating civil rights and campus safety laws."
+    },
+    {
+      "person": "D000623",
+      "issue": "civil-rights-in-schools",
+      "date": "2026-01-13",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "H.R. 2516 requires accrediting bodies to allow institutions to compel students, employees, or independent contractors to adhere to a statement of faith or adhere to a religious code of conduct consistent with the stated religious mission or religious tenets of the organization, which could sweep so broadly as to implicate violations of civil rights laws and even campus safety laws.",
+      "bill": "H.R. 2516",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt444/html/CRPT-119hrpt444.htm",
+      "record_id": "rec-2026-01-13-crpt-119hrpt444-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage warns that the religious-institution provision risks violating civil rights and campus safety laws."
+    },
+    {
+      "person": "L000602",
+      "issue": "civil-rights-in-schools",
+      "date": "2026-01-13",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "H.R. 2516 requires accrediting bodies to allow institutions to compel students, employees, or independent contractors to adhere to a statement of faith or adhere to a religious code of conduct consistent with the stated religious mission or religious tenets of the organization, which could sweep so broadly as to implicate violations of civil rights laws and even campus safety laws.",
+      "bill": "H.R. 2516",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt444/html/CRPT-119hrpt444.htm",
+      "record_id": "rec-2026-01-13-crpt-119hrpt444-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage warns that the religious-institution provision risks violating civil rights and campus safety laws."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 3751,
+    "prompt_tokens": 4978,
+    "total_tokens": 8729,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2454
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

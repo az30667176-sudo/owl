@@ -1,0 +1,25 @@
+{
+  "id": "rec-billstatus-hr4467-119-20250716",
+  "content": "<other>: H.R. 4467 (119th Congress): Vicksburg National Military Park Boundary Modification Act\nSponsor: Rep. Bennie G. Thompson\nCosponsor: Rep. Trent Kelly\nCosponsor: Rep. Michael Guest\nSponsor: Rep. Bennie G. Thompson\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/4467",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/4467",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-07-16",
+    "persons": [
+      "T000193",
+      "K000388",
+      "G000591",
+      "T000193"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/4467"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

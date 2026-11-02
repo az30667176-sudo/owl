@@ -1,0 +1,24 @@
+{
+  "id": "rec-billstatus-hr3872-119-20250610",
+  "content": "<other>: H.R. 3872 (119th Congress): To amend the Mineral Leasing Act for Acquired Lands to make that Act applicable to hardrock minerals.\nSponsor: Rep. Pat Fallon\nCosponsor: Rep. Nathaniel Moran\nSponsor: Rep. Pat Fallon\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/3872",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/3872",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-06-10",
+    "persons": [
+      "F000246",
+      "M001224",
+      "F000246"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/3872"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

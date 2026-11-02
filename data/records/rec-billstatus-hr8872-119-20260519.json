@@ -1,0 +1,27 @@
+{
+  "id": "rec-billstatus-hr8872-119-20260519",
+  "content": "<other>: H.R. 8872 (119th Congress): Preventing Waste, Fraud, and Abuse in TANF Act\nSponsor: Rep. Mike Carey\nCosponsor: Rep. Jodey C. Arrington\nCosponsor: Rep. Aaron Bean\nCosponsor: Rep. Max L. Miller\nCosponsor: Rep. Adrian Smith\nCosponsor: Rep. Claudia Tenney\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/8872",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/8872",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-05-19",
+    "persons": [
+      "C001126",
+      "A000375",
+      "B001314",
+      "M001222",
+      "S001172",
+      "T000478"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/8872"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

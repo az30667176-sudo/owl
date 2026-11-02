@@ -1,0 +1,96 @@
+{
+  "record_id": "rec-2026-02-20-crpt-119hrpt506-minority-views-4",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:47:04.631Z",
+  "accepted": [
+    {
+      "person": "S000185",
+      "issue": "retirement-and-employee-benefits",
+      "date": "2026-02-20",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Instead of legitimizing these fake portable benefits programs, policymakers should be bolstering and expanding insurance-based portable benefits systems and ensuring those benefits are avalable to everyone who works for someone else, including app-based worker.",
+      "bill": "H.R. 1320",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt506/html/CRPT-119hrpt506.htm",
+      "record_id": "rec-2026-02-20-crpt-119hrpt506-minority-views-4",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage advocates bolstering and expanding insurance-based portable benefits to all workers including app-based workers."
+    },
+    {
+      "person": "B001278",
+      "issue": "retirement-and-employee-benefits",
+      "date": "2026-02-20",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Instead of legitimizing these fake portable benefits programs, policymakers should be bolstering and expanding insurance-based portable benefits systems and ensuring those benefits are avalable to everyone who works for someone else, including app-based worker.",
+      "bill": "H.R. 1320",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt506/html/CRPT-119hrpt506.htm",
+      "record_id": "rec-2026-02-20-crpt-119hrpt506-minority-views-4",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage advocates bolstering and expanding insurance-based portable benefits to all workers including app-based workers."
+    },
+    {
+      "person": "D000623",
+      "issue": "retirement-and-employee-benefits",
+      "date": "2026-02-20",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Instead of legitimizing these fake portable benefits programs, policymakers should be bolstering and expanding insurance-based portable benefits systems and ensuring those benefits are avalable to everyone who works for someone else, including app-based worker.",
+      "bill": "H.R. 1320",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt506/html/CRPT-119hrpt506.htm",
+      "record_id": "rec-2026-02-20-crpt-119hrpt506-minority-views-4",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage advocates bolstering and expanding insurance-based portable benefits to all workers including app-based workers."
+    },
+    {
+      "person": "H001081",
+      "issue": "retirement-and-employee-benefits",
+      "date": "2026-02-20",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Instead of legitimizing these fake portable benefits programs, policymakers should be bolstering and expanding insurance-based portable benefits systems and ensuring those benefits are avalable to everyone who works for someone else, including app-based worker.",
+      "bill": "H.R. 1320",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt506/html/CRPT-119hrpt506.htm",
+      "record_id": "rec-2026-02-20-crpt-119hrpt506-minority-views-4",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage advocates bolstering and expanding insurance-based portable benefits to all workers including app-based workers."
+    },
+    {
+      "person": "L000602",
+      "issue": "retirement-and-employee-benefits",
+      "date": "2026-02-20",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Instead of legitimizing these fake portable benefits programs, policymakers should be bolstering and expanding insurance-based portable benefits systems and ensuring those benefits are avalable to everyone who works for someone else, including app-based worker.",
+      "bill": "H.R. 1320",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt506/html/CRPT-119hrpt506.htm",
+      "record_id": "rec-2026-02-20-crpt-119hrpt506-minority-views-4",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage advocates bolstering and expanding insurance-based portable benefits to all workers including app-based workers."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1452,
+    "prompt_tokens": 3377,
+    "total_tokens": 4829,
+    "completion_tokens_details": {
+      "reasoning_tokens": 834
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "rec-billstatus-hr8205-119-20260512",
+  "content": "<other>: H.R. 8205 (119th Congress): Accelerating Access to Critical Therapies for ALS Reauthorization Act of 2026\nCosponsor: Rep. Tim Walberg\nCosponsor: Rep. Rashida Tlaib\nCosponsor: Rep. Randy K. Weber, Sr.\nCosponsor: Rep. Mike Thompson\nCosponsor: Rep. Mike Bost\nCosponsor: Rep. Paul Tonko\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/8205",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/8205",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-05-12",
+    "persons": [
+      "W000798",
+      "T000481",
+      "W000814",
+      "T000460",
+      "B001295",
+      "T000469"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/8205"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

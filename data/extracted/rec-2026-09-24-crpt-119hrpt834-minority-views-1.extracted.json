@@ -1,0 +1,36 @@
+{
+  "record_id": "rec-2026-09-24-crpt-119hrpt834-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:27:58.882Z",
+  "accepted": [
+    {
+      "person": "T000472",
+      "issue": "va-operations-and-oversight",
+      "date": "2026-09-24",
+      "score": -0.7,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "This Committee must focus on the recruitment and retention of this critical workforce, not on adding additional barriers.",
+      "bill": "H.R. 8052",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt834/html/CRPT-119hrpt834.htm",
+      "record_id": "rec-2026-09-24-crpt-119hrpt834-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote opposes adding certification barriers for VA sterile processing technicians and prioritizes recruitment and retention instead."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1253,
+    "prompt_tokens": 3292,
+    "total_tokens": 4545,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1122
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

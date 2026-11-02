@@ -1,0 +1,25 @@
+{
+  "id": "rec-billstatus-hr3486-119-20250519",
+  "content": "<other>: H.R. 3486 (119th Congress): Stop Illegal Entry Act of 2025\nSponsor: Rep. Stephanie I. Bice\nCosponsor: Rep. Brad Knott\nCosponsor: Rep. Ryan K. Zinke\nCosponsor: Rep. Derek Schmidt\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/3486",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/3486",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-05-19",
+    "persons": [
+      "B000740",
+      "K000405",
+      "Z000018",
+      "S001228"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/3486"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

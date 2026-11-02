@@ -1,0 +1,141 @@
+{
+  "record_id": "rec-2025-06-25-crpt-119hrpt169-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:28:25.096Z",
+  "accepted": [
+    {
+      "person": "W000187",
+      "issue": "securities-and-capital-markets",
+      "date": "2025-06-25",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "This bill poses risks to retail investors by exposing them to high-risk private funds that lack important investor protections and regulatory guardrails and are not required to disclose critical information.",
+      "bill": "H.R. 3383",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt169/html/CRPT-119hrpt169.htm",
+      "record_id": "rec-2025-06-25-crpt-119hrpt169-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage characterizes the bill as exposing retail investors to high-risk private funds lacking protections and disclosure."
+    },
+    {
+      "person": "V000081",
+      "issue": "securities-and-capital-markets",
+      "date": "2025-06-25",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "This bill poses risks to retail investors by exposing them to high-risk private funds that lack important investor protections and regulatory guardrails and are not required to disclose critical information.",
+      "bill": "H.R. 3383",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt169/html/CRPT-119hrpt169.htm",
+      "record_id": "rec-2025-06-25-crpt-119hrpt169-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage characterizes the bill as exposing retail investors to high-risk private funds lacking protections and disclosure."
+    },
+    {
+      "person": "L000562",
+      "issue": "securities-and-capital-markets",
+      "date": "2025-06-25",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "This bill poses risks to retail investors by exposing them to high-risk private funds that lack important investor protections and regulatory guardrails and are not required to disclose critical information.",
+      "bill": "H.R. 3383",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt169/html/CRPT-119hrpt169.htm",
+      "record_id": "rec-2025-06-25-crpt-119hrpt169-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage characterizes the bill as exposing retail investors to high-risk private funds lacking protections and disclosure."
+    },
+    {
+      "person": "G000553",
+      "issue": "securities-and-capital-markets",
+      "date": "2025-06-25",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "This bill poses risks to retail investors by exposing them to high-risk private funds that lack important investor protections and regulatory guardrails and are not required to disclose critical information.",
+      "bill": "H.R. 3383",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt169/html/CRPT-119hrpt169.htm",
+      "record_id": "rec-2025-06-25-crpt-119hrpt169-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage characterizes the bill as exposing retail investors to high-risk private funds lacking protections and disclosure."
+    },
+    {
+      "person": "B001281",
+      "issue": "securities-and-capital-markets",
+      "date": "2025-06-25",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "This bill poses risks to retail investors by exposing them to high-risk private funds that lack important investor protections and regulatory guardrails and are not required to disclose critical information.",
+      "bill": "H.R. 3383",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt169/html/CRPT-119hrpt169.htm",
+      "record_id": "rec-2025-06-25-crpt-119hrpt169-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage characterizes the bill as exposing retail investors to high-risk private funds lacking protections and disclosure."
+    },
+    {
+      "person": "T000481",
+      "issue": "securities-and-capital-markets",
+      "date": "2025-06-25",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "This bill poses risks to retail investors by exposing them to high-risk private funds that lack important investor protections and regulatory guardrails and are not required to disclose critical information.",
+      "bill": "H.R. 3383",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt169/html/CRPT-119hrpt169.htm",
+      "record_id": "rec-2025-06-25-crpt-119hrpt169-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage characterizes the bill as exposing retail investors to high-risk private funds lacking protections and disclosure."
+    },
+    {
+      "person": "G000587",
+      "issue": "securities-and-capital-markets",
+      "date": "2025-06-25",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "This bill poses risks to retail investors by exposing them to high-risk private funds that lack important investor protections and regulatory guardrails and are not required to disclose critical information.",
+      "bill": "H.R. 3383",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt169/html/CRPT-119hrpt169.htm",
+      "record_id": "rec-2025-06-25-crpt-119hrpt169-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage characterizes the bill as exposing retail investors to high-risk private funds lacking protections and disclosure."
+    },
+    {
+      "person": "W000788",
+      "issue": "securities-and-capital-markets",
+      "date": "2025-06-25",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "This bill poses risks to retail investors by exposing them to high-risk private funds that lack important investor protections and regulatory guardrails and are not required to disclose critical information.",
+      "bill": "H.R. 3383",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt169/html/CRPT-119hrpt169.htm",
+      "record_id": "rec-2025-06-25-crpt-119hrpt169-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage characterizes the bill as exposing retail investors to high-risk private funds lacking protections and disclosure."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2916,
+    "prompt_tokens": 3493,
+    "total_tokens": 6409,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1999
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

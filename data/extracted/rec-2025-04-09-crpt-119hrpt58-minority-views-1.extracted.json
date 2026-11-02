@@ -1,0 +1,36 @@
+{
+  "record_id": "rec-2025-04-09-crpt-119hrpt58-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:28:57.237Z",
+  "accepted": [
+    {
+      "person": "C001078",
+      "issue": "federal-workforce-and-ethics",
+      "date": "2025-04-09",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "Democrats stand in strong opposition to the Administration's efforts to illegally purge the nonpartisan workforce of the federal government.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt58/html/CRPT-119hrpt58.htm",
+      "record_id": "rec-2025-04-09-crpt-119hrpt58-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Connolly opposes the mass purge of nonpartisan federal employees, indicating strong support for federal workforce protections."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1336,
+    "prompt_tokens": 3054,
+    "total_tokens": 4390,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1204
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

@@ -1,0 +1,36 @@
+{
+  "record_id": "rec-2025-05-29-crpt-119hrpt114-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:28:16.729Z",
+  "accepted": [
+    {
+      "person": "P000034",
+      "issue": "health-programs-and-research",
+      "date": "2025-05-29",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "This historically bipartisan bill should have continued to earn bipartisan support",
+      "bill": "H.R. 2483, the SUPPORT for Patients and Communities Reauthorization Act of 2025",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt114/html/CRPT-119hrpt114-pt1.htm",
+      "record_id": "rec-2025-05-29-crpt-119hrpt114-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Pallone states the reauthorization bill should have retained bipartisan support, indicating support for the health programs."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2532,
+    "prompt_tokens": 3373,
+    "total_tokens": 5905,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2393
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "rec-billstatus-hr689-119-20250123",
+  "content": "<other>: H.R. 689 (119th Congress): FREE Act\nSponsor: Rep. Celeste Maloy\nCosponsor: Rep. Brad Finstad\nCosponsor: Rep. Blake D. Moore\nCosponsor: Rep. David G. Valadao\nCosponsor: Rep. Jodey C. Arrington\nCosponsor: Rep. Burgess Owens\nCosponsor: Rep. August Pfluger\nCosponsor: Rep. Juan Ciscomani\nCosponsor: Rep. Pete Stauber\nCosponsor: Rep. Michelle Fischbach\nCosponsor: Rep. Dan Newhouse\nCosponsor: Rep. Mike Collins\nCosponsor: Rep. James C. Moylan\nCosponsor: Rep. Rudy Yakym III\nCosponsor: Rep. Vince Fong\nCosponsor: Rep. Paul A. Gosar\nCosponsor: Rep. Russ Fulcher\nCosponsor: Rep. Mike Kennedy\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/689",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/689",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-01-23",
+    "persons": [
+      "M001228",
+      "F000475",
+      "M001213",
+      "V000129",
+      "A000375",
+      "O000086",
+      "P000048",
+      "C001133",
+      "S001212",
+      "F000470",
+      "N000189",
+      "C001129",
+      "M001219",
+      "Y000067",
+      "F000480",
+      "G000565",
+      "F000469",
+      "K000403"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/689"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

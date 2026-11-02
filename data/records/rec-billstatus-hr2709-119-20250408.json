@@ -1,0 +1,50 @@
+{
+  "id": "rec-billstatus-hr2709-119-20250408",
+  "content": "<other>: H.R. 2709 (119th Congress): Save Our Sequoias Act\nSponsor: Rep. Vince Fong\nCosponsor: Rep. Scott H. Peters\nCosponsor: Rep. Jim Costa\nCosponsor: Rep. Bruce Westerman\nCosponsor: Rep. Daniel Webster\nCosponsor: Rep. Jimmy Panetta\nCosponsor: Rep. Dan Newhouse\nCosponsor: Rep. John Garamendi\nCosponsor: Rep. David G. Valadao\nCosponsor: Rep. Sanford D. Bishop, Jr.\nCosponsor: Rep. Doug LaMalfa\nCosponsor: Rep. J. Luis Correa\nCosponsor: Rep. Young Kim\nCosponsor: Rep. John H. Rutherford\nCosponsor: Rep. Josh Harder\nCosponsor: Rep. Jay Obernolte\nCosponsor: Rep. Jared F. Golden\nCosponsor: Rep. Tom McClintock\nCosponsor: Rep. Juan Vargas\nCosponsor: Rep. Kevin Kiley\nCosponsor: Rep. Ami Bera\nCosponsor: Rep. Ken Calvert\nCosponsor: Rep. Steven Horsford\nCosponsor: Rep. Darrell Issa\nCosponsor: Rep. Cliff Bentz\nCosponsor: Rep. Russ Fulcher\nCosponsor: Rep. Blake D. Moore\nCosponsor: Rep. Susie Lee\nSponsor: Rep. Vince Fong\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2709",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2709",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-04-08",
+    "persons": [
+      "F000480",
+      "P000608",
+      "C001059",
+      "W000821",
+      "W000806",
+      "P000613",
+      "N000189",
+      "G000559",
+      "V000129",
+      "B000490",
+      "L000578",
+      "C001110",
+      "K000397",
+      "R000609",
+      "H001090",
+      "O000019",
+      "G000592",
+      "M001177",
+      "V000130",
+      "K000401",
+      "B001287",
+      "C000059",
+      "H001066",
+      "I000056",
+      "B000668",
+      "F000469",
+      "M001213",
+      "L000590",
+      "F000480"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2709"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

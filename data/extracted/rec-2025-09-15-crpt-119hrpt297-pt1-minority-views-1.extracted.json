@@ -1,0 +1,51 @@
+{
+  "record_id": "rec-2025-09-15-crpt-119hrpt297-pt1-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:26:33.248Z",
+  "accepted": [
+    {
+      "person": "P000034",
+      "issue": "water-infrastructure-and-quality",
+      "date": "2025-09-15",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "It would remove states' rights under section 401 of the Federal Water Pollution Control Act (commonly known as the Clean Water Act, or CWA) (33 U.S.C. 1341) to issue Water Quality Certificates to natural gas pipeline projects that discharge into their navigable waters.",
+      "bill": "H.R. 3668, the Improving Interagency Coordination for Pipeline Reviews Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt297/html/CRPT-119hrpt297-pt1.htm",
+      "record_id": "rec-2025-09-15-crpt-119hrpt297-pt1-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislator criticizes removing state Clean Water Act certification authority, indicating support for protecting state water quality standards."
+    },
+    {
+      "person": "P000034",
+      "issue": "electric-grid-reliability",
+      "date": "2025-09-15",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "It would involve substantial fixes to the way we plan, permit, and pay for our power grid, and would require the Trump Administration to cease its attacks on sources of clean energy.",
+      "bill": "H.R. 3668, the Improving Interagency Coordination for Pipeline Reviews Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt297/html/CRPT-119hrpt297-pt1.htm",
+      "record_id": "rec-2025-09-15-crpt-119hrpt297-pt1-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislator calls for substantial fixes to planning, permitting, and paying for the power grid, indicating support for grid improvement."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2385,
+    "prompt_tokens": 4093,
+    "total_tokens": 6478,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2060
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

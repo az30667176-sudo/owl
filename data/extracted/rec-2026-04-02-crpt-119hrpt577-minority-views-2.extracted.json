@@ -1,0 +1,66 @@
+{
+  "record_id": "rec-2026-04-02-crpt-119hrpt577-minority-views-2",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:46:17.678Z",
+  "accepted": [
+    {
+      "person": "T000472",
+      "issue": "veterans-housing-and-loans",
+      "date": "2026-04-02",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "With the increased 1.4 percent fee rate, the average veteran will pay an additional $8,460 in fees and interest (an additional $3,780 in fees plus an additional $4,680 in interest over the life of the loan, for a total of $8,460), for a total of $13,160 in fees and interest over the life of the loan.",
+      "bill": "H.R. 6047",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt577/html/CRPT-119hrpt577-pt1.htm",
+      "record_id": "rec-2026-04-02-crpt-119hrpt577-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Opposes raising IRRRL funding fees because it substantially increases costs for veteran homeowners."
+    },
+    {
+      "person": "T000472",
+      "issue": "veterans-benefits-and-compensation",
+      "date": "2026-04-02",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats highlighted numerous additional offsets that allowed for expansion of SMC and DIC without raising fees on active duty servicemembers or veterans.",
+      "bill": "H.R. 6047",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt577/html/CRPT-119hrpt577-pt1.htm",
+      "record_id": "rec-2026-04-02-crpt-119hrpt577-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Supports expanding SMC and DIC benefits without imposing higher loan fees on servicemembers and veterans."
+    },
+    {
+      "person": "T000472",
+      "issue": "veterans-health-care",
+      "date": "2026-04-02",
+      "score": 1,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "We believe that Congress should fund healthcare and benefits for veterans that have gone to war for this country.",
+      "bill": "H.R. 6047",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt577/html/CRPT-119hrpt577-pt1.htm",
+      "record_id": "rec-2026-04-02-crpt-119hrpt577-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "States direct support for federal funding of veterans healthcare and benefits."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2396,
+    "prompt_tokens": 4617,
+    "total_tokens": 7013,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1980
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

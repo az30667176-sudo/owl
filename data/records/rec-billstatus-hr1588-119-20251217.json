@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr1588-119-20251217",
+  "content": "<other>: H.R. 1588 (119th Congress): Facilitating DIGITAL Applications Act\nCosponsor: Rep. Greg Landsman\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1588",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1588",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-12-17",
+    "persons": [
+      "L000601"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1588"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

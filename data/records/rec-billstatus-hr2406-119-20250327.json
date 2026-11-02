@@ -1,0 +1,25 @@
+{
+  "id": "rec-billstatus-hr2406-119-20250327",
+  "content": "<other>: H.R. 2406 (119th Congress): National Oceanic and Atmospheric Administration Sexual Harassment and Assault Prevention Improvements Act of 2025\nSponsor: Rep. Suzanne Bonamici\nCosponsor: Rep. Maria Elvira Salazar\nCosponsor: Rep. Jared Huffman\nSponsor: Rep. Suzanne Bonamici\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2406",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2406",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-27",
+    "persons": [
+      "B001278",
+      "S000168",
+      "H001068",
+      "B001278"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2406"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

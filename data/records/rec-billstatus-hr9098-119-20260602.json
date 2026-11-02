@@ -1,0 +1,28 @@
+{
+  "id": "rec-billstatus-hr9098-119-20260602",
+  "content": "<other>: H.R. 9098 (119th Congress): Congressional Records Protection Act of 2026\nSponsor: Rep. Mike Kelly\nCosponsor: Rep. Lance Gooden\nCosponsor: Rep. Wesley Hunt\nCosponsor: Rep. Harriet M. Hageman\nCosponsor: Rep. Russell Fry\nCosponsor: Rep. Robert F. Onder, Jr.\nCosponsor: Rep. Jim Jordan\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/9098",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/9098",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-06-02",
+    "persons": [
+      "K000376",
+      "G000589",
+      "H001095",
+      "H001096",
+      "F000478",
+      "O000177",
+      "J000289"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/9098"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

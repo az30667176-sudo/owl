@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr1869-119-20250407",
+  "content": "<other>: H.R. 1869 (119th Congress): Protecting American Industry and Labor from International Trade Crimes Act of 2026\nCosponsor: Rep. William R. Timmons IV\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1869",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1869",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-04-07",
+    "persons": [
+      "T000480"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1869"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

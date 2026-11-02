@@ -1,0 +1,27 @@
+{
+  "id": "rec-billstatus-hr3699-119-20250926",
+  "content": "<other>: H.R. 3699 (119th Congress): Energy Choice Act\nCosponsor: Rep. Brian Jack\nCosponsor: Rep. Michael R. Turner\nCosponsor: Rep. Max L. Miller\nCosponsor: Rep. Mike Kelly\nCosponsor: Rep. Pat Fallon\nCosponsor: Rep. Carol D. Miller\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/3699",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/3699",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-09-26",
+    "persons": [
+      "J000311",
+      "T000463",
+      "M001222",
+      "K000376",
+      "F000246",
+      "M001205"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/3699"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

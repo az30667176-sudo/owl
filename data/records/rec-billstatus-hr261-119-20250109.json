@@ -1,0 +1,27 @@
+{
+  "id": "rec-billstatus-hr261-119-20250109",
+  "content": "<other>: H.R. 261 (119th Congress): Undersea Cable Protection Act of 2025\nSponsor: Rep. Earl L. \"Buddy\" Carter\nCosponsor: Rep. Neal P. Dunn\nCosponsor: Rep. Kat Cammack\nCosponsor: Rep. Jennifer A. Kiggans\nCosponsor: Rep. Russell Fry\nCosponsor: Rep. August Pfluger\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/261",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/261",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-01-09",
+    "persons": [
+      "C001103",
+      "D000628",
+      "C001039",
+      "K000399",
+      "F000478",
+      "P000048"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/261"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

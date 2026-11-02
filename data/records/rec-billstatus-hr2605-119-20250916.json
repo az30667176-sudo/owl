@@ -1,0 +1,26 @@
+{
+  "id": "rec-billstatus-hr2605-119-20250916",
+  "content": "<other>: H.R. 2605 (119th Congress): SAVES Act\nCosponsor: Rep. John J. McGuire III\nCosponsor: Rep. Nathaniel Moran\nCosponsor: Rep. Randy K. Weber, Sr.\nCosponsor: Rep. Henry Cuellar\nCosponsor: Rep. Tony Gonzales\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2605",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2605",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-09-16",
+    "persons": [
+      "M001239",
+      "M001224",
+      "W000814",
+      "C001063",
+      "G000594"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2605"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

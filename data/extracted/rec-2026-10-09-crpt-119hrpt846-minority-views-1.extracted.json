@@ -1,0 +1,36 @@
+{
+  "record_id": "rec-2026-10-09-crpt-119hrpt846-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:30:40.058Z",
+  "accepted": [
+    {
+      "person": "V000081",
+      "issue": "sba-lending",
+      "date": "2026-10-09",
+      "score": 0.7,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "mid",
+      "quote": "Ensuring all potential borrowers have all relevant information when struck by a disaster is important to ensure all those that can be helped are helped. This bill requires the SBA to establish standard procedures to ensure disaster outreach materials are consistent across field operations centers, and ensure information is accurate and current.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt846/html/CRPT-119hrpt846.htm",
+      "record_id": "rec-2026-10-09-crpt-119hrpt846-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage endorses consistent and accurate SBA disaster outreach information and describes the bill as requiring it."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1191,
+    "prompt_tokens": 2712,
+    "total_tokens": 3903,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1035
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

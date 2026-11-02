@@ -1,0 +1,24 @@
+{
+  "id": "rec-billstatus-hr1155-119-20250210",
+  "content": "<other>: H.R. 1155 (119th Congress): Recovery of Stolen Checks Act\nSponsor: Rep. Nicole Malliotakis\nCosponsor: Rep. Terri A. Sewell\nCosponsor: Rep. David Kustoff\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1155",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1155",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-10",
+    "persons": [
+      "M000317",
+      "S001185",
+      "K000392"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1155"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

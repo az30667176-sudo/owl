@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr5366-119-20260108",
+  "content": "<other>: H.R. 5366 (119th Congress): Doug LaMalfa Federal Disaster Tax Relief Certainty Act\nCosponsor: Rep. Jill N. Tokuda\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/5366",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/5366",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-01-08",
+    "persons": [
+      "T000487"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/5366"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "record_id": "rec-2026-07-15-crpt-119hrpt750-dissenting-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:28:14.086Z",
+  "accepted": [
+    {
+      "person": "M001206",
+      "issue": "election-administration",
+      "date": "2026-07-15",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats oppose H.R. 9368 because it would functionally eviscerate mail voting, needlessly burden millions of eligible American voters, and furthers President Trump's obsession with undermining the security and integrity of American elections in aid of Republican politicians.",
+      "bill": "H.R. 9368, the Voter ID Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt750/html/CRPT-119hrpt750.htm",
+      "record_id": "rec-2026-07-15-crpt-119hrpt750-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote states opposition to H.R. 9368 because it would restrict mail voting and burden eligible voters."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2362,
+    "prompt_tokens": 3295,
+    "total_tokens": 5657,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2195
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

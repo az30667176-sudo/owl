@@ -1,0 +1,36 @@
+{
+  "record_id": "rec-2025-03-24-crpt-119hrpt37-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:27:53.647Z",
+  "accepted": [
+    {
+      "person": "V000081",
+      "issue": "small-business-programs",
+      "date": "2025-03-24",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Expanding and protecting the WOSB program, as this bill will do, will allow agencies to better utilize and leverage it to bring more new small businesses--and their talent, innovation, and solutions--into the federal marketplace.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt37/html/CRPT-119hrpt37.htm",
+      "record_id": "rec-2025-03-24-crpt-119hrpt37-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote endorses the legislation for expanding and protecting the WOSB contracting program."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 981,
+    "prompt_tokens": 3384,
+    "total_tokens": 4365,
+    "completion_tokens_details": {
+      "reasoning_tokens": 838
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

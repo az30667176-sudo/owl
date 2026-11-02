@@ -1,0 +1,36 @@
+{
+  "record_id": "rec-2026-05-26-crpt-119hrpt669-supplemental-views-3",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:47:09.286Z",
+  "accepted": [
+    {
+      "person": "S000185",
+      "issue": "higher-education-and-student-aid",
+      "date": "2026-05-26",
+      "score": -0.8,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "As those negotiations produced no meaningful changes to the bill text, we cannot support this bill on the floor in its current form.",
+      "bill": "H.R. 7892",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt669/html/CRPT-119hrpt669.htm",
+      "record_id": "rec-2026-05-26-crpt-119hrpt669-supplemental-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislator states he cannot support the bill on the floor in its current form because negotiations produced no meaningful changes."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1702,
+    "prompt_tokens": 3288,
+    "total_tokens": 4990,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1562
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

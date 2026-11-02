@@ -1,0 +1,66 @@
+{
+  "record_id": "rec-2026-09-15-crpt-119hrpt832-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:27:26.275Z",
+  "accepted": [
+    {
+      "person": "T000472",
+      "issue": "va-operations-and-oversight",
+      "date": "2026-09-15",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The VA needs strong leadership from the Department level to direct and oversee the cross-agency collaboration needed to process these claims.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt832/html/CRPT-119hrpt832.htm",
+      "record_id": "rec-2026-09-15-crpt-119hrpt832-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote calls for stronger department-level direction and oversight of cross-agency claims processing."
+    },
+    {
+      "person": "T000472",
+      "issue": "va-technology-modernization",
+      "date": "2026-09-15",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "VA also needs an IT solution processing these claims. Emailing scanned documents back and forth between agencies only invites delays and failure into this process.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt832/html/CRPT-119hrpt832.htm",
+      "record_id": "rec-2026-09-15-crpt-119hrpt832-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote advocates for an IT solution to replace email-based document exchange for claims."
+    },
+    {
+      "person": "T000472",
+      "issue": "veterans-benefits-and-compensation",
+      "date": "2026-09-15",
+      "score": 0.7,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The bill directs VA to make payments promptly, but contains no resources to make that happen, no incentives to encourage VA leadership to focus on making it happen, and no penalties to motivate VA to correct itself when it fails to do so.",
+      "bill": "H.R. 7083",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt832/html/CRPT-119hrpt832.htm",
+      "record_id": "rec-2026-09-15-crpt-119hrpt832-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote supports prompt VA payments while criticizing the bill for lacking resources and incentives to achieve them."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 3022,
+    "prompt_tokens": 3605,
+    "total_tokens": 6627,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2693
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

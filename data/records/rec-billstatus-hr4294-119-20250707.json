@@ -1,0 +1,26 @@
+{
+  "id": "rec-billstatus-hr4294-119-20250707",
+  "content": "<other>: H.R. 4294 (119th Congress): MAWS Act of 2026\nSponsor: Rep. Sarah Elfreth\nCosponsor: Rep. Robert J. Wittman\nCosponsor: Rep. Jennifer A. Kiggans\nCosponsor: Rep. Steny H. Hoyer\nSponsor: Rep. Sarah Elfreth\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/4294",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/4294",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-07-07",
+    "persons": [
+      "E000301",
+      "W000804",
+      "K000399",
+      "H000874",
+      "E000301"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/4294"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

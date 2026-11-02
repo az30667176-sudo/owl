@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr5750-119-20251014",
+  "content": "<other>: H.R. 5750 (119th Congress): EQUALS Act of 2025\nSponsor: Rep. Brandon Gill\nSponsor: Rep. Brandon Gill\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/5750",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/5750",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-10-14",
+    "persons": [
+      "G000603",
+      "G000603"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/5750"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

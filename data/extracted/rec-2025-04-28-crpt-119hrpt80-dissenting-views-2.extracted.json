@@ -1,0 +1,36 @@
+{
+  "record_id": "rec-2025-04-28-crpt-119hrpt80-dissenting-views-2",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:47:35.003Z",
+  "accepted": [
+    {
+      "person": "R000606",
+      "issue": "gun-policy",
+      "date": "2025-04-28",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Because this bill creates unacceptable risks of a dangerous weapon being sold to or accessed by a person who may not legally have one, I must oppose this legislation in its current form and I urge my colleagues to do the same.",
+      "bill": "H.R. 2255 Federal Law Enforcement Officer Service Weapon Purchase Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt80/html/CRPT-119hrpt80.htm",
+      "record_id": "rec-2025-04-28-crpt-119hrpt80-dissenting-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislator explicitly states opposition to the legislation due to public-safety risks from firearm sales."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2446,
+    "prompt_tokens": 2971,
+    "total_tokens": 5417,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2308
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

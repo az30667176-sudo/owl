@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr2846-119-20250410",
+  "content": "<other>: H.R. 2846 (119th Congress): To amend title II of the Public Health Service Act to include as an additional right or privilege of commissioned officers of the Public Health Service (and their beneficiaries) certain leave provided under title 10, United States Code to commissioned officers of the Army (or their beneficiaries).\nSponsor: Rep. Chrissy Houlahan\nCosponsor: Rep. Don Bacon\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2846",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2846",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-04-10",
+    "persons": [
+      "H001085",
+      "B001298"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2846"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

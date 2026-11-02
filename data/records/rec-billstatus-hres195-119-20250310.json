@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hres195-119-20250310",
+  "content": "<other>: H. Res. 195 (119th Congress): Of inquiry requesting the President of the United States to furnish certain information to the House of Representatives relating to the operations of the Social Security Administration after January 20, 2025, including information on the Department of Government Efficiency's access to the Social Security Administration and to information in the possession of such Administration.\nCosponsor: Rep. Stephen F. Lynch\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-resolution/195",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-resolution/195",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-10",
+    "persons": [
+      "L000562"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-resolution/195"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

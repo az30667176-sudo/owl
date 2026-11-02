@@ -1,0 +1,27 @@
+{
+  "id": "rec-billstatus-hr4541-119-20250717",
+  "content": "<other>: H.R. 4541 (119th Congress): To reauthorize the Young Women’s Breast Health Education and Awareness Requires Learning Young Act of 2009.\nSponsor: Rep. Debbie Wasserman Schultz\nCosponsor: Rep. Mariannette Miller-Meeks\nCosponsor: Rep. Kathy Castor\nCosponsor: Rep. Brian K. Fitzpatrick\nCosponsor: Rep. Debbie Dingell\nCosponsor: Rep. Diana Harshbarger\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/4541",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-07-17",
+    "persons": [
+      "W000797",
+      "M001215",
+      "C001066",
+      "F000466",
+      "D000624",
+      "H001086"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/4541"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

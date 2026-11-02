@@ -1,0 +1,34 @@
+{
+  "id": "rec-billstatus-hr5517-119-20250919",
+  "content": "<other>: H.R. 5517 (119th Congress): Northern Border Security Enhancement and Review Act\nSponsor: Rep. Nicholas A. Langworthy\nCosponsor: Rep. Mark Alford\nCosponsor: Rep. Randy K. Weber, Sr.\nCosponsor: Rep. Michael Lawler\nCosponsor: Rep. Elise M. Stefanik\nCosponsor: Rep. Pete Stauber\nCosponsor: Rep. Michael K. Simpson\nCosponsor: Rep. Dan Crenshaw\nCosponsor: Rep. Claudia Tenney\nCosponsor: Rep. Ryan K. Zinke\nCosponsor: Rep. Anna Paulina Luna\nCosponsor: Rep. Jefferson Van Drew\nCosponsor: Rep. Nicholas J. Begich III\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/5517",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/5517",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-09-19",
+    "persons": [
+      "L000600",
+      "A000379",
+      "W000814",
+      "L000599",
+      "S001196",
+      "S001212",
+      "S001148",
+      "C001120",
+      "T000478",
+      "Z000018",
+      "L000596",
+      "V000133",
+      "B001323"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/5517"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

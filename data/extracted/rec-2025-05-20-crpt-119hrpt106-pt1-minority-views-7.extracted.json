@@ -1,0 +1,112 @@
+{
+  "record_id": "rec-2025-05-20-crpt-119hrpt106-pt1-minority-views-7",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:24:49.662Z",
+  "accepted": [
+    {
+      "person": "P000034",
+      "issue": "health-programs-and-research",
+      "date": "2025-05-20",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Republicans are intentionally and cruelly taking health care away from at least 13.7 million Americans and raising health care costs for millions more so they can give giant tax breaks to the ultra-rich that don't need them.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt106/html/CRPT-119hrpt106-pt1.htm",
+      "record_id": "rec-2025-05-20-crpt-119hrpt106-pt1-minority-views-7",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Pallone condemns cuts that remove health care and raise costs, indicating support for maintaining health programs."
+    },
+    {
+      "person": "P000034",
+      "issue": "clean-energy-and-energy-efficiency-funding",
+      "date": "2025-05-20",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "And the targeting of clean energy and energy efficiency offices again demonstrates a commitment to gutting domestic clean energy development and access to affordable energy.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt106/html/CRPT-119hrpt106-pt1.htm",
+      "record_id": "rec-2025-05-20-crpt-119hrpt106-pt1-minority-views-7",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Pallone criticizes rescissions targeting clean energy offices as gutting development, indicating support for funding."
+    },
+    {
+      "person": "P000034",
+      "issue": "pipeline-permitting-and-eminent-domain",
+      "date": "2025-05-20",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "granting FERC sweeping new powers to compel landowners to sell their land to developers of certain types of pipelines.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt106/html/CRPT-119hrpt106-pt1.htm",
+      "record_id": "rec-2025-05-20-crpt-119hrpt106-pt1-minority-views-7",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Pallone describes expanded FERC eminent domain powers negatively, indicating opposition to the policy."
+    },
+    {
+      "person": "P000034",
+      "issue": "liquefied-natural-gas-exports",
+      "date": "2025-05-20",
+      "score": -0.85,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Requiring any exporter to pay one million dollars and automatically deeming their LNG exports--regardless of whether they are to China or other geopolitical rivals--in the public interest is a threat to our national security.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt106/html/CRPT-119hrpt106-pt1.htm",
+      "record_id": "rec-2025-05-20-crpt-119hrpt106-pt1-minority-views-7",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Pallone calls automatic approval of LNG exports a national security threat, indicating opposition."
+    },
+    {
+      "person": "P000034",
+      "issue": "environmental-regulation",
+      "date": "2025-05-20",
+      "score": 0.85,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "If Subtitle A had been in effect at the time, New York would have had no choice but to issue a permit for the project, destroying New York's right to protect its citizens from pollution in its waterways.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt106/html/CRPT-119hrpt106-pt1.htm",
+      "record_id": "rec-2025-05-20-crpt-119hrpt106-pt1-minority-views-7",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Pallone defends state Clean Water Act authority to deny polluting projects, indicating support for environmental regulation."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "clean-energy-and-energy-efficiency-funding",
+      "name": "Clean Energy and Energy Efficiency Funding",
+      "parent": "hsif-energy"
+    },
+    {
+      "id": "pipeline-permitting-and-eminent-domain",
+      "name": "Pipeline Permitting and Eminent Domain",
+      "parent": "hsif-energy"
+    },
+    {
+      "id": "liquefied-natural-gas-exports",
+      "name": "Liquefied Natural Gas Exports",
+      "parent": "hsif-energy"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 2585,
+    "prompt_tokens": 4729,
+    "total_tokens": 7314,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2007
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

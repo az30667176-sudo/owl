@@ -1,0 +1,29 @@
+{
+  "id": "rec-billstatus-hr941-119-20250204",
+  "content": "<other>: H.R. 941 (119th Congress): Small LENDER Act\nSponsor: Rep. J. French Hill\nCosponsor: Rep. Daniel Meuser\nCosponsor: Rep. Ann Wagner\nCosponsor: Rep. Bill Huizenga\nCosponsor: Rep. William R. Timmons IV\nCosponsor: Rep. Tim Moore\nCosponsor: Rep. Roger Williams\nSponsor: Rep. J. French Hill\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/941",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/941",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-04",
+    "persons": [
+      "H001072",
+      "M001204",
+      "W000812",
+      "H001058",
+      "T000480",
+      "M001236",
+      "W000816",
+      "H001072"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/941"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

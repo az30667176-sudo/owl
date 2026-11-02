@@ -1,0 +1,57 @@
+{
+  "id": "rec-billstatus-hr1266-119-20250212",
+  "content": "<other>: H.R. 1266 (119th Congress): Combating Illicit Xylazine Act\nSponsor: Rep. Jimmy Panetta\nCosponsor: Rep. August Pfluger\nCosponsor: Rep. Gus M. Bilirakis\nCosponsor: Rep. Chris Pappas\nCosponsor: Rep. Scott Fitzgerald\nCosponsor: Rep. Deborah K. Ross\nCosponsor: Rep. Dan Crenshaw\nCosponsor: Rep. Josh Harder\nCosponsor: Rep. Suzan K. DelBene\nCosponsor: Rep. Mariannette Miller-Meeks\nCosponsor: Rep. Brittany Pettersen\nCosponsor: Rep. Yvette D. Clarke\nCosponsor: Rep. Christopher R. Deluzio\nCosponsor: Rep. Seth Magaziner\nCosponsor: Rep. Don Bacon\nCosponsor: Rep. Jay Obernolte\nCosponsor: Rep. Jim Costa\nCosponsor: Rep. Troy Balderson\nCosponsor: Rep. Nanette Diaz Barragán\nCosponsor: Rep. Juan Ciscomani\nCosponsor: Rep. Mike Carey\nCosponsor: Rep. Stephanie I. Bice\nCosponsor: Rep. Angie Craig\nCosponsor: Rep. Donald Norcross\nCosponsor: Rep. Vince Fong\nCosponsor: Rep. Claudia Tenney\nCosponsor: Rep. Brian K. Fitzpatrick\nCosponsor: Rep. Tim Burchett\nCosponsor: Rep. Madeleine Dean\nCosponsor: Rep. Steve Cohen\nCosponsor: Rep. Donald G. Davis\nCosponsor: Rep. J. Luis Correa\nCosponsor: Rep. Daniel Webster\nCosponsor: Rep. Mike Collins\nCosponsor: Rep. Thomas R. Suozzi\nCosponsor: Rep. Diana Harshbarger\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1266",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1266",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-12",
+    "persons": [
+      "P000613",
+      "P000048",
+      "B001257",
+      "P000614",
+      "F000471",
+      "R000305",
+      "C001120",
+      "H001090",
+      "D000617",
+      "M001215",
+      "P000620",
+      "C001067",
+      "D000530",
+      "M001223",
+      "B001298",
+      "O000019",
+      "C001059",
+      "B001306",
+      "B001300",
+      "C001133",
+      "C001126",
+      "B000740",
+      "C001119",
+      "N000188",
+      "F000480",
+      "T000478",
+      "F000466",
+      "B001309",
+      "D000631",
+      "C001068",
+      "D000230",
+      "C001110",
+      "W000806",
+      "C001129",
+      "S001201",
+      "H001086"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1266"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

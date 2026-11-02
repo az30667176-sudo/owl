@@ -1,0 +1,51 @@
+{
+  "record_id": "rec-2026-10-09-crpt-119hrpt844-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:29:59.998Z",
+  "accepted": [
+    {
+      "person": "V000081",
+      "issue": "china-and-international-finance",
+      "date": "2026-10-09",
+      "score": 0.7,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "When companies--especially in the P.R.C.--do not employ these practices, however, U.S. businesses of all sizes benefit tremendously from trade and collaboration.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt844/html/CRPT-119hrpt844.htm",
+      "record_id": "rec-2026-10-09-crpt-119hrpt844-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Velazquez asserts that U.S. businesses broadly benefit from trade and collaboration with P.R.C. partners when unfair practices are absent."
+    },
+    {
+      "person": "V000081",
+      "issue": "small-business-cyber-and-fraud",
+      "date": "2026-10-09",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "As part of its oversight duties, the Committee will closely monitor the implementation of this legislation, if enacted into law, to ensure that it is laser-focused on foreign conduct harming small businesses, and not on ethnicity or national origin.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt844/html/CRPT-119hrpt844.htm",
+      "record_id": "rec-2026-10-09-crpt-119hrpt844-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Velazquez supports oversight to focus enforcement on foreign conduct that harms small businesses rather than ethnicity or national origin."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2750,
+    "prompt_tokens": 3016,
+    "total_tokens": 5766,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2467
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

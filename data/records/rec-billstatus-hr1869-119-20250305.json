@@ -1,0 +1,55 @@
+{
+  "id": "rec-billstatus-hr1869-119-20250305",
+  "content": "<other>: H.R. 1869 (119th Congress): Protecting American Industry and Labor from International Trade Crimes Act of 2026\nSponsor: Rep. Ashley Hinson\nCosponsor: Rep. John R. Moolenaar\nCosponsor: Rep. Raja Krishnamoorthi\nCosponsor: Rep. Robert J. Wittman\nCosponsor: Rep. Glenn Ivey\nCosponsor: Rep. Darin LaHood\nCosponsor: Rep. Ted Lieu\nCosponsor: Rep. Kevin Kiley\nCosponsor: Rep. Rosa L. DeLauro\nCosponsor: Rep. Clay Higgins\nCosponsor: Rep. Deborah K. Ross\nCosponsor: Rep. Brad Finstad\nCosponsor: Rep. Haley M. Stevens\nCosponsor: Rep. Juan Ciscomani\nCosponsor: Rep. J. Luis Correa\nCosponsor: Rep. Mike Kelly\nCosponsor: Rep. André Carson\nCosponsor: Rep. Ben Cline\nCosponsor: Rep. Donald G. Davis\nCosponsor: Rep. Michael A. Rulli\nCosponsor: Rep. Seth Moulton\nCosponsor: Rep. Zachary Nunn\nCosponsor: Rep. Ro Khanna\nCosponsor: Rep. Carlos A. Gimenez\nCosponsor: Rep. Kathy Castor\nCosponsor: Rep. Nathaniel Moran\nCosponsor: Rep. Josh Gottheimer\nCosponsor: Rep. Dan Newhouse\nCosponsor: Rep. Susie Lee\nCosponsor: Rep. Debbie Dingell\nCosponsor: Rep. Donald Norcross\nCosponsor: Rep. Christopher R. Deluzio\nCosponsor: Rep. Ritchie Torres\nCosponsor: Rep. Jill N. Tokuda\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1869",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1869",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-05",
+    "persons": [
+      "H001091",
+      "M001194",
+      "K000391",
+      "W000804",
+      "I000058",
+      "L000585",
+      "L000582",
+      "K000401",
+      "D000216",
+      "H001077",
+      "R000305",
+      "F000475",
+      "S001215",
+      "C001133",
+      "C001110",
+      "K000376",
+      "C001072",
+      "C001118",
+      "D000230",
+      "R000619",
+      "M001196",
+      "N000193",
+      "K000389",
+      "G000593",
+      "C001066",
+      "M001224",
+      "G000583",
+      "N000189",
+      "L000590",
+      "D000624",
+      "N000188",
+      "D000530",
+      "T000486",
+      "T000487"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1869"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

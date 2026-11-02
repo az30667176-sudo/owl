@@ -1,0 +1,35 @@
+{
+  "id": "rec-billstatus-hr1181-119-20250218",
+  "content": "<other>: H.R. 1181 (119th Congress): Protecting Privacy in Purchases Act\nCosponsor: Rep. Addison P. McDowell\nCosponsor: Rep. Andy Biggs\nCosponsor: Rep. Darrell Issa\nCosponsor: Rep. Mark E. Green\nCosponsor: Rep. Jack Bergman\nCosponsor: Rep. Jodey C. Arrington\nCosponsor: Rep. Bill Huizenga\nCosponsor: Rep. Mike Kennedy\nCosponsor: Rep. Monica De La Cruz\nCosponsor: Rep. Joe Wilson\nCosponsor: Rep. Scott DesJarlais\nCosponsor: Rep. Andrew S. Clyde\nCosponsor: Rep. Nick LaLota\nCosponsor: Rep. Sam Graves\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1181",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1181",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-18",
+    "persons": [
+      "M001240",
+      "B001302",
+      "I000056",
+      "G000590",
+      "B001301",
+      "A000375",
+      "H001058",
+      "K000403",
+      "D000594",
+      "W000795",
+      "D000616",
+      "C001116",
+      "L000598",
+      "G000546"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1181"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

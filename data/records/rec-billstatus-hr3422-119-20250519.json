@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr3422-119-20250519",
+  "content": "<other>: H.R. 3422 (119th Congress): Promoting Opportunities for Non-Traditional Capital Formation Act\nCosponsor: Rep. Ann Wagner\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/3422",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/3422",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-05-19",
+    "persons": [
+      "W000812"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/3422"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

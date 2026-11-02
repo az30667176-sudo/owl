@@ -1,0 +1,28 @@
+{
+  "id": "rec-billstatus-hr178-119-20250103",
+  "content": "<other>: H.R. 178 (119th Congress): To require the Secretary of Agriculture to carry out activities to suppress wildfires, and for other purposes.\nSponsor: Rep. Tom McClintock\nCosponsor: Rep. Ken Calvert\nCosponsor: Rep. Doug LaMalfa\nCosponsor: Rep. Andy Biggs\nCosponsor: Rep. Pete Stauber\nCosponsor: Rep. Darrell Issa\nSponsor: Rep. Tom McClintock\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/178",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/178",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-01-03",
+    "persons": [
+      "M001177",
+      "C000059",
+      "L000578",
+      "B001302",
+      "S001212",
+      "I000056",
+      "M001177"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/178"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

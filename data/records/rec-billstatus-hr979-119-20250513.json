@@ -1,0 +1,28 @@
+{
+  "id": "rec-billstatus-hr979-119-20250513",
+  "content": "<other>: H.R. 979 (119th Congress): AM Radio for Every Vehicle Act of 2025\nCosponsor: Rep. Gilbert Ray Cisneros, Jr.\nCosponsor: Rep. Mary Gay Scanlon\nCosponsor: Rep. Erin Houchin\nCosponsor: Rep. Chrissy Houlahan\nCosponsor: Rep. Frederica S. Wilson\nCosponsor: Rep. Eric Swalwell\nCosponsor: Rep. Val T. Hoyle\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/979",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/979",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-05-13",
+    "persons": [
+      "C001123",
+      "S001205",
+      "H001093",
+      "H001085",
+      "W000808",
+      "S001193",
+      "H001094"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/979"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

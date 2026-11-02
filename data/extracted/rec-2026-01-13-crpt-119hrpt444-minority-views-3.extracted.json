@@ -1,0 +1,81 @@
+{
+  "record_id": "rec-2026-01-13-crpt-119hrpt444-minority-views-3",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:47:18.617Z",
+  "accepted": [
+    {
+      "person": "S000185",
+      "issue": "higher-education-and-student-aid",
+      "date": "2026-01-13",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "If enacted into law, H.R. 2516 will do nothing to improve the quality of higher education in America, and all serious analysis suggests the result will be exactly the opposite.",
+      "bill": "H.R. 2516",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt444/html/CRPT-119hrpt444.htm",
+      "record_id": "rec-2026-01-13-crpt-119hrpt444-minority-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote opposes H.R. 2516 on the grounds that it would harm higher education quality, indicating support for higher education standards."
+    },
+    {
+      "person": "B001278",
+      "issue": "higher-education-and-student-aid",
+      "date": "2026-01-13",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "If enacted into law, H.R. 2516 will do nothing to improve the quality of higher education in America, and all serious analysis suggests the result will be exactly the opposite.",
+      "bill": "H.R. 2516",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt444/html/CRPT-119hrpt444.htm",
+      "record_id": "rec-2026-01-13-crpt-119hrpt444-minority-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote opposes H.R. 2516 on the grounds that it would harm higher education quality, indicating support for higher education standards."
+    },
+    {
+      "person": "D000623",
+      "issue": "higher-education-and-student-aid",
+      "date": "2026-01-13",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "If enacted into law, H.R. 2516 will do nothing to improve the quality of higher education in America, and all serious analysis suggests the result will be exactly the opposite.",
+      "bill": "H.R. 2516",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt444/html/CRPT-119hrpt444.htm",
+      "record_id": "rec-2026-01-13-crpt-119hrpt444-minority-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote opposes H.R. 2516 on the grounds that it would harm higher education quality, indicating support for higher education standards."
+    },
+    {
+      "person": "L000602",
+      "issue": "higher-education-and-student-aid",
+      "date": "2026-01-13",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "If enacted into law, H.R. 2516 will do nothing to improve the quality of higher education in America, and all serious analysis suggests the result will be exactly the opposite.",
+      "bill": "H.R. 2516",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt444/html/CRPT-119hrpt444.htm",
+      "record_id": "rec-2026-01-13-crpt-119hrpt444-minority-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote opposes H.R. 2516 on the grounds that it would harm higher education quality, indicating support for higher education standards."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1863,
+    "prompt_tokens": 3252,
+    "total_tokens": 5115,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1354
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2289
+    }
+  },
+  "finish_reason": "stop"
+}

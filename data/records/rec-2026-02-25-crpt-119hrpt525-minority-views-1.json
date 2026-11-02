@@ -1,0 +1,27 @@
+{
+  "id": "rec-2026-02-25-crpt-119hrpt525-minority-views-1",
+  "content": "<Rep. Maxine Waters, Rep. Al Green, Rep. Bill Foster, Rep. Joyce Beatty, Rep. Rashida Tlaib, Rep. Sylvia R. Garcia, Rep. Nikema Williams>: This bill would make it easier for that private companies have thousands of investors and would otherwise be considered public to avoid providing disclosures about their business plans, potential risk factors, executive compensation, financials, and strategy and operations. This bill does this by amending the Exchange Act to exclude qualified institutional buyers and institutional accredited investors from the ``holders of record'' calculation, allowing these companies to simply not count thousands of individuals who own their company.\nUnder Exchange Act Section 12(g), as amended by the JOBS Act, an issuer generally must register a class of equity securities (and begin Exchange Act periodic reporting) once it exceeds $10 million in total assets and the class is ``held of record'' by 2,000 persons, or 500 persons who are not accredited investors. The SEC's counting rule, Rule 12g5-1, defines ``held of record'' by reference to who is identified as the owner on the issuer's records, and includes an anti-circumvention provision: if the issuer knows or has reason to know a holding form is used primarily to circumvent Section 12(g), beneficial owners are deemed record owners for the count.\nIn practice, however, this framework does not always capture real-world investor dispersion because modern ownership is heavily intermediated. Investors frequently hold shares in ``street name,'' meaning the broker or a ``nominee'' is the registered owner while the investor is only the beneficial owner. The SEC's own JOBS Act study explains that, under Rule 12g5-1, a single broker-dealer is counted as one holder of record even if it holds for multiple beneficial owners, so the majority of investors may not appear on an issuer's records and are not counted. As a result, issuers can have more than 2,000 beneficial owners but fewer than 2,000 holders of record and still trade in private secondary or OTC markets without triggering Exchange Act reporting. The same study flags the private-market special-purpose vehicle (SPV) dynamic directly: SPVs formed to pool investor funds and buy shares (often from former employees and early investors) can be treated as a single investor, meaning the issuer may show ``significantly fewer'' holders of record than the underlying investor base.\nH.R. 4130 would exacerbate these existing weaknesses further so that for purposes of Sec. 12(g), when counting ``persons'' for both relevant thresholds, issuers would not count any ``qualified institutional buyer'' or ``institutional accredited investor.'' Given that institutional intermediaries and institutional-sponsored vehicles are precisely the entities most likely to appear on a private company's cap tables as record holders (including in pooled and nominee structures that already compress numerous beneficial owners into a single line item), the bill would make it even easier for issuers to amass a large and economically diffuse investor base while remaining outside the Exchange Act's disclosure regime. The bill also makes SEC Section 36's general exemptive authority inapplicable to the new exclusions, limiting the SEC's ability to calibrate guardrails as market structure evolves.\nFor these reasons, we oppose H.R. 4130.\nSincerely,\nMaxine Waters,\nRanking Member.\nAl Green,\nBill Foster,\nJoyce Beatty,\nRashida Tlaib,\nSylvia R. Garcia,\nNikema Williams,\nMembers of Congress.",
+  "source": {
+    "url_link": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt525/html/CRPT-119hrpt525.htm",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-02-25",
+    "persons": [
+      "W000187",
+      "G000553",
+      "F000454",
+      "B001281",
+      "T000481",
+      "G000587",
+      "W000788"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/4130",
+      "https://www.congress.gov/bill/119th-congress/house-bill/2605",
+      "https://www.congress.gov/bill/119th-congress/house-bill/2799"
+    ]
+  }
+}

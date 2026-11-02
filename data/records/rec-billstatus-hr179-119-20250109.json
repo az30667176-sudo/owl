@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr179-119-20250109",
+  "content": "<other>: H.R. 179 (119th Congress): Proven Forest Management Act of 2025\nCosponsor: Rep. Ryan K. Zinke\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/179",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/179",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-01-09",
+    "persons": [
+      "Z000018"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/179"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr5167-119-20250908",
+  "content": "<other>: H.R. 5167 (119th Congress): Intelligence Authorization Act for Fiscal Year 2026\nSponsor: Rep. Eric A. \"Rick\" Crawford\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/5167",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/5167",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-09-08",
+    "persons": [
+      "C001087"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/5167"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

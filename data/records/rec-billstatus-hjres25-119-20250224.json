@@ -1,0 +1,24 @@
+{
+  "id": "rec-billstatus-hjres25-119-20250224",
+  "content": "<other>: H.J. Res. 25 (119th Congress): Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Internal Revenue Service relating to \"Gross Proceeds Reporting by Brokers That Regularly Provide Services Effectuating Digital Asset Sales\".\nCosponsor: Rep. Shri Thanedar\nCosponsor: Rep. Zachary Nunn\nCosponsor: Rep. David Kustoff\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-joint-resolution/25",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/25",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-24",
+    "persons": [
+      "T000488",
+      "N000193",
+      "K000392"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-joint-resolution/25"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

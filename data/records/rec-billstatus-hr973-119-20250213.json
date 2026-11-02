@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr973-119-20250213",
+  "content": "<other>: H.R. 973 (119th Congress): Setting Consumer Standards for Lithium-Ion Batteries Act\nCosponsor: Rep. Don Bacon\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/973",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/973",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-13",
+    "persons": [
+      "B001298"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/973"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

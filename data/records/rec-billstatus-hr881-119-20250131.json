@@ -1,0 +1,25 @@
+{
+  "id": "rec-billstatus-hr881-119-20250131",
+  "content": "<other>: H.R. 881 (119th Congress): DHS Restrictions on Confucius Institutes and Chinese Entities of Concern Act\nSponsor: Rep. August Pfluger\nCosponsor: Rep. Andrew R. Garbarino\nCosponsor: Rep. Gabe Evans\nCosponsor: Rep. Dale W. Strong\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/881",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/881",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-01-31",
+    "persons": [
+      "P000048",
+      "G000597",
+      "E000300",
+      "S001220"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/881"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

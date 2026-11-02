@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr7720-119-20260303",
+  "content": "<other>: H.R. 7720 (119th Congress): Child Care Payment Integrity and Fraud Accountability Act of 2026\nCosponsor: Rep. Joe Wilson\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/7720",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/7720",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-03-03",
+    "persons": [
+      "W000795"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/7720"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

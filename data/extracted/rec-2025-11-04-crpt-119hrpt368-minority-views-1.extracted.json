@@ -1,0 +1,111 @@
+{
+  "record_id": "rec-2025-11-04-crpt-119hrpt368-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:26:58.867Z",
+  "accepted": [
+    {
+      "person": "W000187",
+      "issue": "bank-regulation",
+      "date": "2025-11-04",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For these reasons, we oppose H.R. 5291.",
+      "bill": "H.R. 5291",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt368/html/CRPT-119hrpt368.htm",
+      "record_id": "rec-2025-11-04-crpt-119hrpt368-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers explicitly state opposition to the bill that would extend merchant banking holding periods."
+    },
+    {
+      "person": "V000081",
+      "issue": "bank-regulation",
+      "date": "2025-11-04",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For these reasons, we oppose H.R. 5291.",
+      "bill": "H.R. 5291",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt368/html/CRPT-119hrpt368.htm",
+      "record_id": "rec-2025-11-04-crpt-119hrpt368-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers explicitly state opposition to the bill that would extend merchant banking holding periods."
+    },
+    {
+      "person": "L000562",
+      "issue": "bank-regulation",
+      "date": "2025-11-04",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For these reasons, we oppose H.R. 5291.",
+      "bill": "H.R. 5291",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt368/html/CRPT-119hrpt368.htm",
+      "record_id": "rec-2025-11-04-crpt-119hrpt368-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers explicitly state opposition to the bill that would extend merchant banking holding periods."
+    },
+    {
+      "person": "G000553",
+      "issue": "bank-regulation",
+      "date": "2025-11-04",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For these reasons, we oppose H.R. 5291.",
+      "bill": "H.R. 5291",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt368/html/CRPT-119hrpt368.htm",
+      "record_id": "rec-2025-11-04-crpt-119hrpt368-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers explicitly state opposition to the bill that would extend merchant banking holding periods."
+    },
+    {
+      "person": "B001281",
+      "issue": "bank-regulation",
+      "date": "2025-11-04",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For these reasons, we oppose H.R. 5291.",
+      "bill": "H.R. 5291",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt368/html/CRPT-119hrpt368.htm",
+      "record_id": "rec-2025-11-04-crpt-119hrpt368-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers explicitly state opposition to the bill that would extend merchant banking holding periods."
+    },
+    {
+      "person": "T000481",
+      "issue": "bank-regulation",
+      "date": "2025-11-04",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For these reasons, we oppose H.R. 5291.",
+      "bill": "H.R. 5291",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt368/html/CRPT-119hrpt368.htm",
+      "record_id": "rec-2025-11-04-crpt-119hrpt368-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers explicitly state opposition to the bill that would extend merchant banking holding periods."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1383,
+    "prompt_tokens": 3825,
+    "total_tokens": 5208,
+    "completion_tokens_details": {
+      "reasoning_tokens": 872
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

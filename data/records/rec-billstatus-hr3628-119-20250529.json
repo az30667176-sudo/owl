@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr3628-119-20250529",
+  "content": "<other>: H.R. 3628 (119th Congress): State Planning for Reliability and Affordability Act\nSponsor: Rep. Gabe Evans\nCosponsor: Rep. Nicholas A. Langworthy\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/3628",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/3628",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-05-29",
+    "persons": [
+      "E000300",
+      "L000600"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/3628"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

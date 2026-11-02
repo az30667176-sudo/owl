@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr1-119-20250520",
+  "content": "<other>: H.R. 1 (119th Congress): An act to provide for reconciliation pursuant to title II of H. Con. Res. 14.\nSponsor: Rep. Jodey C. Arrington\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-05-20",
+    "persons": [
+      "A000375"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

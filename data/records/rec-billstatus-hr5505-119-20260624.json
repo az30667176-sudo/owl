@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr5505-119-20260624",
+  "content": "<other>: H.R. 5505 (119th Congress): Equal Campus Access Act of 2026\nCosponsor: Rep. Bill Huizenga\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/5505",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/5505",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-06-24",
+    "persons": [
+      "H001058"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/5505"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

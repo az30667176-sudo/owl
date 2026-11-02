@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr4478-119-20250717",
+  "content": "<other>: H.R. 4478 (119th Congress): TRUST Act of 2025\nSponsor: Rep. Tim Moore\nCosponsor: Rep. Ritchie Torres\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/4478",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/4478",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-07-17",
+    "persons": [
+      "M001236",
+      "T000486"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/4478"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

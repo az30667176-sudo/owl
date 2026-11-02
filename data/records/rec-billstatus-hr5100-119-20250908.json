@@ -1,0 +1,35 @@
+{
+  "id": "rec-billstatus-hr5100-119-20250908",
+  "content": "<other>: H.R. 5100 (119th Congress): To extend the SBIR and STTR programs, and for other purposes.\nCosponsor: Rep. Pete Stauber\nCosponsor: Rep. Daniel Meuser\nCosponsor: Rep. Beth Van Duyne\nCosponsor: Rep. Jake Ellzey\nCosponsor: Rep. Mark Alford\nCosponsor: Rep. Nick LaLota\nCosponsor: Rep. Brad Finstad\nCosponsor: Rep. Tony Wied\nCosponsor: Rep. Robert P. Bresnahan, Jr.\nCosponsor: Rep. Brian Jack\nCosponsor: Rep. Troy Downing\nCosponsor: Rep. Kimberlyn King-Hinds\nCosponsor: Rep. Jimmy Patronis\nCosponsor: Rep. Derek Schmidt\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/5100",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/5100",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-09-08",
+    "persons": [
+      "S001212",
+      "M001204",
+      "V000134",
+      "E000071",
+      "A000379",
+      "L000598",
+      "F000475",
+      "W000829",
+      "B001327",
+      "J000311",
+      "D000634",
+      "K000404",
+      "P000622",
+      "S001228"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/5100"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

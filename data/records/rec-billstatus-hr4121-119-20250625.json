@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr4121-119-20250625",
+  "content": "<other>: H.R. 4121 (119th Congress): Agriculture, Rural Development, Food and Drug Administration, and Related Agencies Appropriations Act, 2026\nSponsor: Rep. Andy Harris\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/4121",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/4121",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-06-25",
+    "persons": [
+      "H001052"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/4121"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "rec-billstatus-hr3179-119-20250505",
+  "content": "<other>: H.R. 3179 (119th Congress): To rename the Anahuac National Wildlife Refuge located in the State of Texas as the \"Jocelyn Nungaray National Wildlife Refuge\".\nSponsor: Rep. Brian Babin\nCosponsor: Rep. Tony Gonzales\nCosponsor: Rep. Dan Crenshaw\nCosponsor: Rep. Monica De La Cruz\nCosponsor: Rep. Wesley Hunt\nCosponsor: Rep. Troy E. Nehls\nCosponsor: Rep. Randy K. Weber, Sr.\nCosponsor: Rep. Michael Cloud\nCosponsor: Rep. August Pfluger\nCosponsor: Rep. Chip Roy\nCosponsor: Rep. Michael T. McCaul\nSponsor: Rep. Brian Babin\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/3179",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/3179",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-05-05",
+    "persons": [
+      "B001291",
+      "G000594",
+      "C001120",
+      "D000594",
+      "H001095",
+      "N000026",
+      "W000814",
+      "C001115",
+      "P000048",
+      "R000614",
+      "M001157",
+      "B001291"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/3179"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

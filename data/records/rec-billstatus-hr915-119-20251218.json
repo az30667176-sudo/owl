@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr915-119-20251218",
+  "content": "<other>: H.R. 915 (119th Congress): Small Business Technological Advancement Act\nCosponsor: Rep. Frank J. Mrvan\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/915",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/915",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-12-18",
+    "persons": [
+      "M001214"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/915"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

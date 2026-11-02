@@ -1,0 +1,36 @@
+{
+  "record_id": "rec-2025-04-28-crpt-119hrpt81-dissenting-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:28:12.604Z",
+  "accepted": [
+    {
+      "person": "R000606",
+      "issue": "gun-policy",
+      "date": "2025-04-28",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "I oppose H.R. 2243, the LEOSA Reform Act. In 2004, Congress passed the Law Enforcement Officer Safety Act (LEOSA), a law that allows both off-duty and retired law enforcement officers to carry concealed firearms irrespective of state law.",
+      "bill": "H.R. 2243, the LEOSA Reform Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt81/html/CRPT-119hrpt81.htm",
+      "record_id": "rec-2025-04-28-crpt-119hrpt81-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Raskin states opposition to legislation expanding concealed firearm carry for current and retired officers."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2099,
+    "prompt_tokens": 3364,
+    "total_tokens": 5463,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1937
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

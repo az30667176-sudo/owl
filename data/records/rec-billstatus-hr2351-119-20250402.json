@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr2351-119-20250402",
+  "content": "<other>: H.R. 2351 (119th Congress): To direct the Commandant of the Coast Guard to update the policy of the Coast Guard regarding the use of medication to treat drug overdose, and for other purposes.\nCosponsor: Rep. Laura Gillen\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2351",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2351",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-04-02",
+    "persons": [
+      "G000602"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2351"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

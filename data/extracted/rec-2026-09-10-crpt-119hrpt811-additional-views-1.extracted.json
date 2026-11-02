@@ -1,0 +1,51 @@
+{
+  "record_id": "rec-2026-09-10-crpt-119hrpt811-additional-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:30:00.235Z",
+  "accepted": [
+    {
+      "person": "H001068",
+      "issue": "federal-land-transfers",
+      "date": "2026-09-10",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Americans do not support the sale or transfer of public lands, and the Committee has a responsibility to fully vet these sweeping land disposals through the regular legislative process, ensure a fair return for taxpayers, and restore a genuine balance between economic development and permanent conservation.",
+      "bill": "H.R. 2317, the Northern Nevada Economic Development and Conservation Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt811/html/CRPT-119hrpt811-pt1.htm",
+      "record_id": "rec-2026-09-10-crpt-119hrpt811-additional-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote opposes sale or transfer of public lands and calls for vetting and balance, supporting an opposition score."
+    },
+    {
+      "person": "H001068",
+      "issue": "mining-and-mineral-resources",
+      "date": "2026-09-10",
+      "score": -0.8,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "This would facilitate a broad expansion of mining activity without any federal review or a guarantee of a fair return for the American taxpayer.",
+      "bill": "H.R. 2317, the Northern Nevada Economic Development and Conservation Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt811/html/CRPT-119hrpt811-pt1.htm",
+      "record_id": "rec-2026-09-10-crpt-119hrpt811-additional-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote criticizes expanded mining activity without review or fair taxpayer return, supporting an opposition score."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1491,
+    "prompt_tokens": 2906,
+    "total_tokens": 4397,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1226
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

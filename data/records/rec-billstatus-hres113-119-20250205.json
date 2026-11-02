@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hres113-119-20250205",
+  "content": "<other>: H. Res. 113 (119th Congress): Directing the Secretary of Homeland Security to transmit to the House of Representatives certain documents relating to Department of Homeland Security policies and activities related to the security of Department information and data and the recruitment and retention of its workforce.\nSponsor: Rep. Bennie G. Thompson\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-resolution/113",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-resolution/113",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-05",
+    "persons": [
+      "T000193"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-resolution/113"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

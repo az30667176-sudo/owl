@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr8121-119-20260326",
+  "content": "<other>: H.R. 8121 (119th Congress): To designate the Christiansted Bandstand at the Christiansted National Historic Site, St. Croix, Virgin Islands, as the \"Peter G. Thurland, Sr., Bandstand\".\nSponsor: Rep. Stacey E. Plaskett\nSponsor: Rep. Stacey E. Plaskett\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/8121",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/8121",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-03-26",
+    "persons": [
+      "P000610",
+      "P000610"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/8121"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

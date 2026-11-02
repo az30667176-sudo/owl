@@ -1,0 +1,36 @@
+{
+  "record_id": "rec-2025-12-30-crpt-119hrpt419-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:27:15.204Z",
+  "accepted": [
+    {
+      "person": "P000034",
+      "issue": "energy-efficiency-standards",
+      "date": "2025-12-30",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The Committee Minority believes it is important to support this standard and the crucial savings the standard will provide for these households.",
+      "bill": "H.R. 5184, the ``Affordable Housing Over Mandating Efficiency Standards Act,''",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt419/html/CRPT-119hrpt419.htm",
+      "record_id": "rec-2025-12-30-crpt-119hrpt419-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Pallone states support for DOE's manufactured-housing energy conservation standard and opposes H.R. 5184 which would nullify it, indicating support for energy efficiency standards."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1151,
+    "prompt_tokens": 3627,
+    "total_tokens": 4778,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1009
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

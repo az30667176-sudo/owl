@@ -1,0 +1,57 @@
+{
+  "record_id": "rec-2025-05-20-crpt-119hrpt106-pt2-dissenting-views-3",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:47:52.707Z",
+  "accepted": [
+    {
+      "person": "N000015",
+      "issue": "individual-and-corporate-tax-policy",
+      "date": "2025-05-20",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Hardworking Americans should not be asked to finance tax cuts for billionaires by sacrificing their health care, their food security, and crucial economic assistance.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt106/html/CRPT-119hrpt106-pt2.htm",
+      "record_id": "rec-2025-05-20-crpt-119hrpt106-pt2-dissenting-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Neal opposes funding tax cuts for high-income earners through cuts to health, food, and economic assistance."
+    },
+    {
+      "person": "N000015",
+      "issue": "federal-budget-and-deficit",
+      "date": "2025-05-20",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Together, we could have developed a product that provided tax relief for the bottom 98 percent of Americans, paid for responsibly.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt106/html/CRPT-119hrpt106-pt2.htm",
+      "record_id": "rec-2025-05-20-crpt-119hrpt106-pt2-dissenting-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Neal supports tax relief for most Americans only if offset and fiscally responsible."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "individual-and-corporate-tax-policy",
+      "name": "Individual and Corporate Tax Policy",
+      "parent": "hswm-tax"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 2074,
+    "prompt_tokens": 2497,
+    "total_tokens": 4571,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1815
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

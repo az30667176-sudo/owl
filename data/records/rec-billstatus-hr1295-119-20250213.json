@@ -1,0 +1,38 @@
+{
+  "id": "rec-billstatus-hr1295-119-20250213",
+  "content": "<other>: H.R. 1295 (119th Congress): Reorganizing Government Act of 2025\nSponsor: Rep. James Comer\nCosponsor: Rep. Byron Donalds\nCosponsor: Rep. Andy Biggs\nCosponsor: Rep. Marjorie Taylor Greene\nCosponsor: Rep. Brian Jack\nCosponsor: Rep. Brandon Gill\nCosponsor: Rep. Glenn Grothman\nCosponsor: Rep. Pat Fallon\nCosponsor: Rep. Elijah Crane\nCosponsor: Rep. Anna Paulina Luna\nCosponsor: Rep. Eric Burlison\nCosponsor: Rep. Nicholas A. Langworthy\nCosponsor: Rep. Pete Sessions\nCosponsor: Rep. Clay Higgins\nCosponsor: Rep. Lauren Boebert\nCosponsor: Rep. William R. Timmons IV\nSponsor: Rep. James Comer\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1295",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1295",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-13",
+    "persons": [
+      "C001108",
+      "D000032",
+      "B001302",
+      "G000596",
+      "J000311",
+      "G000603",
+      "G000576",
+      "F000246",
+      "C001132",
+      "L000596",
+      "B001316",
+      "L000600",
+      "S000250",
+      "H001077",
+      "B000825",
+      "T000480",
+      "C001108"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1295"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

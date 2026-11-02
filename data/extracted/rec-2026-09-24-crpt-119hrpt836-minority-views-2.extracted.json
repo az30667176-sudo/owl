@@ -1,0 +1,96 @@
+{
+  "record_id": "rec-2026-09-24-crpt-119hrpt836-minority-views-2",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:46:25.651Z",
+  "accepted": [
+    {
+      "person": "S000185",
+      "issue": "k-12-education",
+      "date": "2026-09-24",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "H.R. 4986 would harm all students by reducing school, district, and state awareness of school climate, mental health, and other issues and limit the ability of schools, districts, and states to support students in addressing their needs.",
+      "bill": "H.R. 4986",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt836/html/CRPT-119hrpt836.htm",
+      "record_id": "rec-2026-09-24-crpt-119hrpt836-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage states the bill would harm students and limit schools' ability to support them, justifying opposition."
+    },
+    {
+      "person": "B001278",
+      "issue": "k-12-education",
+      "date": "2026-09-24",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "H.R. 4986 would harm all students by reducing school, district, and state awareness of school climate, mental health, and other issues and limit the ability of schools, districts, and states to support students in addressing their needs.",
+      "bill": "H.R. 4986",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt836/html/CRPT-119hrpt836.htm",
+      "record_id": "rec-2026-09-24-crpt-119hrpt836-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage states the bill would harm students and limit schools' ability to support them, justifying opposition."
+    },
+    {
+      "person": "D000623",
+      "issue": "k-12-education",
+      "date": "2026-09-24",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "H.R. 4986 would harm all students by reducing school, district, and state awareness of school climate, mental health, and other issues and limit the ability of schools, districts, and states to support students in addressing their needs.",
+      "bill": "H.R. 4986",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt836/html/CRPT-119hrpt836.htm",
+      "record_id": "rec-2026-09-24-crpt-119hrpt836-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage states the bill would harm students and limit schools' ability to support them, justifying opposition."
+    },
+    {
+      "person": "M001231",
+      "issue": "k-12-education",
+      "date": "2026-09-24",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "H.R. 4986 would harm all students by reducing school, district, and state awareness of school climate, mental health, and other issues and limit the ability of schools, districts, and states to support students in addressing their needs.",
+      "bill": "H.R. 4986",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt836/html/CRPT-119hrpt836.htm",
+      "record_id": "rec-2026-09-24-crpt-119hrpt836-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage states the bill would harm students and limit schools' ability to support them, justifying opposition."
+    },
+    {
+      "person": "G000606",
+      "issue": "k-12-education",
+      "date": "2026-09-24",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "H.R. 4986 would harm all students by reducing school, district, and state awareness of school climate, mental health, and other issues and limit the ability of schools, districts, and states to support students in addressing their needs.",
+      "bill": "H.R. 4986",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt836/html/CRPT-119hrpt836.htm",
+      "record_id": "rec-2026-09-24-crpt-119hrpt836-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage states the bill would harm students and limit schools' ability to support them, justifying opposition."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 3117,
+    "prompt_tokens": 4839,
+    "total_tokens": 7956,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2474
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

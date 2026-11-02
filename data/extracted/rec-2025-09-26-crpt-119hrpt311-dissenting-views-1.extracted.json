@@ -1,0 +1,42 @@
+{
+  "record_id": "rec-2025-09-26-crpt-119hrpt311-dissenting-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:26:40.284Z",
+  "accepted": [
+    {
+      "person": "R000606",
+      "issue": "gender-affirming-care-for-minors",
+      "date": "2025-09-26",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "I oppose H.R. 3492, the so-called Protect Children's Innocence Act of 2025. This deeply troubling bill would make it a crime, punishable by up to ten years in prison, to provide gender-affirming healthcare to minors.",
+      "bill": "H.R. 3492 Protect Children's Innocence Act of 2025",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt311/html/CRPT-119hrpt311.htm",
+      "record_id": "rec-2025-09-26-crpt-119hrpt311-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Raskin opposes criminalizing gender-affirming care for minors, indicating support for continued access to such care."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "gender-affirming-care-for-minors",
+      "name": "Gender-Affirming Care for Minors",
+      "parent": "hsif-health"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 1850,
+    "prompt_tokens": 4125,
+    "total_tokens": 5975,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1660
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

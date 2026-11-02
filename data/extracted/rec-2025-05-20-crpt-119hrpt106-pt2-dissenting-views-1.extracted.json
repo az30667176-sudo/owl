@@ -1,0 +1,51 @@
+{
+  "record_id": "rec-2025-05-20-crpt-119hrpt106-pt2-dissenting-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:24:49.339Z",
+  "accepted": [
+    {
+      "person": "N000015",
+      "issue": "health-care-tax-policy",
+      "date": "2025-05-20",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "This bill represents a trillion-dollar giveaway to the ultra-wealthy and big corporations while ripping health care away from millions of hard-working Americans.",
+      "bill": "H. Con. Res. 14 ...",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt106/html/CRPT-119hrpt106-pt2.htm",
+      "record_id": "rec-2025-05-20-crpt-119hrpt106-pt2-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote criticizes taking health care away to fund tax cuts, indicating support for maintaining health care tax credits and coverage."
+    },
+    {
+      "person": "N000015",
+      "issue": "federal-budget-and-deficit",
+      "date": "2025-05-20",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Instead, it exploded the deficit, worsened inequality, and left everyday Americans behind.",
+      "bill": "H. Con. Res. 14 ...",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt106/html/CRPT-119hrpt106-pt2.htm",
+      "record_id": "rec-2025-05-20-crpt-119hrpt106-pt2-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote criticizes prior tax cuts for exploding the deficit, indicating support for deficit-conscious fiscal policy."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2363,
+    "prompt_tokens": 4757,
+    "total_tokens": 7120,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2101
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

@@ -1,0 +1,162 @@
+{
+  "record_id": "rec-2025-04-29-crpt-119hrpt84-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:05:02.915Z",
+  "accepted": [
+    {
+      "person": "S000185",
+      "issue": "abolition-of-the-department-of-education",
+      "date": "2025-04-29",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Nevertheless, his Administration is attempting to abolish the Department, with little apparent regard for the statutory duties Congress has placed on the Department and its officers.",
+      "bill": "H. Res. 237",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt84/html/CRPT-119hrpt84.htm",
+      "record_id": "rec-2025-04-29-crpt-119hrpt84-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote criticizes the Administration's attempt to abolish the Department as disregarding statutory duties, indicating opposition to abolition."
+    },
+    {
+      "person": "C001069",
+      "issue": "abolition-of-the-department-of-education",
+      "date": "2025-04-29",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Nevertheless, his Administration is attempting to abolish the Department, with little apparent regard for the statutory duties Congress has placed on the Department and its officers.",
+      "bill": "H. Res. 237",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt84/html/CRPT-119hrpt84.htm",
+      "record_id": "rec-2025-04-29-crpt-119hrpt84-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote criticizes the Administration's attempt to abolish the Department as disregarding statutory duties, indicating opposition to abolition."
+    },
+    {
+      "person": "W000808",
+      "issue": "abolition-of-the-department-of-education",
+      "date": "2025-04-29",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Nevertheless, his Administration is attempting to abolish the Department, with little apparent regard for the statutory duties Congress has placed on the Department and its officers.",
+      "bill": "H. Res. 237",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt84/html/CRPT-119hrpt84.htm",
+      "record_id": "rec-2025-04-29-crpt-119hrpt84-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote criticizes the Administration's attempt to abolish the Department as disregarding statutory duties, indicating opposition to abolition."
+    },
+    {
+      "person": "B001278",
+      "issue": "abolition-of-the-department-of-education",
+      "date": "2025-04-29",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Nevertheless, his Administration is attempting to abolish the Department, with little apparent regard for the statutory duties Congress has placed on the Department and its officers.",
+      "bill": "H. Res. 237",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt84/html/CRPT-119hrpt84.htm",
+      "record_id": "rec-2025-04-29-crpt-119hrpt84-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote criticizes the Administration's attempt to abolish the Department as disregarding statutory duties, indicating opposition to abolition."
+    },
+    {
+      "person": "T000472",
+      "issue": "abolition-of-the-department-of-education",
+      "date": "2025-04-29",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Nevertheless, his Administration is attempting to abolish the Department, with little apparent regard for the statutory duties Congress has placed on the Department and its officers.",
+      "bill": "H. Res. 237",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt84/html/CRPT-119hrpt84.htm",
+      "record_id": "rec-2025-04-29-crpt-119hrpt84-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote criticizes the Administration's attempt to abolish the Department as disregarding statutory duties, indicating opposition to abolition."
+    },
+    {
+      "person": "D000623",
+      "issue": "abolition-of-the-department-of-education",
+      "date": "2025-04-29",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Nevertheless, his Administration is attempting to abolish the Department, with little apparent regard for the statutory duties Congress has placed on the Department and its officers.",
+      "bill": "H. Res. 237",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt84/html/CRPT-119hrpt84.htm",
+      "record_id": "rec-2025-04-29-crpt-119hrpt84-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote criticizes the Administration's attempt to abolish the Department as disregarding statutory duties, indicating opposition to abolition."
+    },
+    {
+      "person": "H001081",
+      "issue": "abolition-of-the-department-of-education",
+      "date": "2025-04-29",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Nevertheless, his Administration is attempting to abolish the Department, with little apparent regard for the statutory duties Congress has placed on the Department and its officers.",
+      "bill": "H. Res. 237",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt84/html/CRPT-119hrpt84.htm",
+      "record_id": "rec-2025-04-29-crpt-119hrpt84-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote criticizes the Administration's attempt to abolish the Department as disregarding statutory duties, indicating opposition to abolition."
+    },
+    {
+      "person": "C001131",
+      "issue": "abolition-of-the-department-of-education",
+      "date": "2025-04-29",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Nevertheless, his Administration is attempting to abolish the Department, with little apparent regard for the statutory duties Congress has placed on the Department and its officers.",
+      "bill": "H. Res. 237",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt84/html/CRPT-119hrpt84.htm",
+      "record_id": "rec-2025-04-29-crpt-119hrpt84-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote criticizes the Administration's attempt to abolish the Department as disregarding statutory duties, indicating opposition to abolition."
+    },
+    {
+      "person": "M001231",
+      "issue": "abolition-of-the-department-of-education",
+      "date": "2025-04-29",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Nevertheless, his Administration is attempting to abolish the Department, with little apparent regard for the statutory duties Congress has placed on the Department and its officers.",
+      "bill": "H. Res. 237",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt84/html/CRPT-119hrpt84.htm",
+      "record_id": "rec-2025-04-29-crpt-119hrpt84-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote criticizes the Administration's attempt to abolish the Department as disregarding statutory duties, indicating opposition to abolition."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "abolition-of-the-department-of-education",
+      "name": "Abolition of the Department of Education",
+      "parent": "hsed-k12"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 4013,
+    "prompt_tokens": 5183,
+    "total_tokens": 9196,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2686
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "finish_reason": "stop"
+}

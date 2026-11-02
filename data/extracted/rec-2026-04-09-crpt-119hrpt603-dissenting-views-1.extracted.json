@@ -1,0 +1,57 @@
+{
+  "record_id": "rec-2026-04-09-crpt-119hrpt603-dissenting-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:26:40.280Z",
+  "accepted": [
+    {
+      "person": "R000606",
+      "issue": "immigration-enforcement",
+      "date": "2026-04-09",
+      "score": -0.8,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "I oppose H.R. 1071, the ``No Censors on Our Shores Act,'' as ordered reported by the Committee. This bill would create new and extremely vague and confusing inadmissibility and deportability grounds in our immigration laws.",
+      "bill": "H.R. 1071 No Censors on Our Shores Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt603/html/CRPT-119hrpt603.htm",
+      "record_id": "rec-2026-04-09-crpt-119hrpt603-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Raskin opposes creating new inadmissibility and deportability grounds, indicating opposition to expanding immigration enforcement."
+    },
+    {
+      "person": "R000606",
+      "issue": "freedom-of-speech-and-press-protections",
+      "date": "2026-04-09",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "the Trump Administration continues its vicious and, in many ways, unprecedented attack on Americans' freedom of speech and protest, freedom of assembly, freedom of the press, academic freedom and intellectual freedom right here at home.",
+      "bill": "H.R. 1071 No Censors on Our Shores Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt603/html/CRPT-119hrpt603.htm",
+      "record_id": "rec-2026-04-09-crpt-119hrpt603-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Raskin condemns attacks on freedom of speech, protest, assembly and press, indicating support for First Amendment protections."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "freedom-of-speech-and-press-protections",
+      "name": "Freedom of Speech and Press Protections",
+      "parent": "hsju-courts"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 1942,
+    "prompt_tokens": 3918,
+    "total_tokens": 5860,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1651
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

@@ -1,0 +1,72 @@
+{
+  "record_id": "rec-2026-01-27-crpt-119hrpt464-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:29:29.588Z",
+  "accepted": [
+    {
+      "person": "G000598",
+      "issue": "presidential-reorganization-authority",
+      "date": "2026-01-27",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "Democrats strongly oppose H.R. 1295, the so-called Reorganizing Government Act.",
+      "bill": "H.R. 1295, the so-called Reorganizing Government Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt464/html/CRPT-119hrpt464-pt1.htm",
+      "record_id": "rec-2026-01-27-crpt-119hrpt464-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislator explicitly states strong opposition to the bill granting reorganization authority."
+    },
+    {
+      "person": "G000598",
+      "issue": "social-security",
+      "date": "2026-01-27",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "mid",
+      "llm_confidence": "high",
+      "quote": "they would be forced to support a broad reorganization package that cuts or eliminates Social Security, Medicare, Medicaid, or other programs beloved by their constituents",
+      "bill": "H.R. 1295, the so-called Reorganizing Government Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt464/html/CRPT-119hrpt464-pt1.htm",
+      "record_id": "rec-2026-01-27-crpt-119hrpt464-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislator characterizes Social Security and related programs as beloved and frames cutting them as a harmful outcome to be opposed."
+    },
+    {
+      "person": "G000598",
+      "issue": "environmental-regulation",
+      "date": "2026-01-27",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "mid",
+      "llm_confidence": "high",
+      "quote": "Goodbye regulations that are protecting Americans from junk fees, air pollution, and lead in their drinking water.",
+      "bill": "H.R. 1295, the so-called Reorganizing Government Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt464/html/CRPT-119hrpt464-pt1.htm",
+      "record_id": "rec-2026-01-27-crpt-119hrpt464-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislator describes the regulations as protecting Americans, indicating support for retaining environmental and consumer protections."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "presidential-reorganization-authority",
+      "name": "Presidential Reorganization Authority",
+      "parent": "hsgo-doge"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 2792,
+    "prompt_tokens": 3020,
+    "total_tokens": 5812,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2389
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

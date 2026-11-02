@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr3709-119-20250604",
+  "content": "<other>: H.R. 3709 (119th Congress): Advancing the Mentor-Protégé Program for Small Financial Institutions Act\nSponsor: Rep. Joyce Beatty\nSponsor: Rep. Joyce Beatty\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/3709",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/3709",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-06-04",
+    "persons": [
+      "B001281",
+      "B001281"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/3709"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

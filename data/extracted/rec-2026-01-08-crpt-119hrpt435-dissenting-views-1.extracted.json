@@ -1,0 +1,51 @@
+{
+  "record_id": "rec-2026-01-08-crpt-119hrpt435-dissenting-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:28:09.054Z",
+  "accepted": [
+    {
+      "person": "H001068",
+      "issue": "public-lands-and-parks",
+      "date": "2026-01-08",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "H.R. 839 is an unnecessary attack on science-based conservation that would undermine voluntary, market-driven habitat protection in one of the most threatened ecosystems on the planet.",
+      "bill": "H.R. 839",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt435/html/CRPT-119hrpt435.htm",
+      "record_id": "rec-2026-01-08-crpt-119hrpt435-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote opposes H.R. 839 because it would undermine habitat protection, indicating strong support for public lands conservation."
+    },
+    {
+      "person": "H001068",
+      "issue": "wildlife-and-fisheries",
+      "date": "2026-01-08",
+      "score": 0.85,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The bill would jeopardize essential habitat for vulnerable species and block proven conservation tools that respect private property rights while addressing the biodiversity crisis facing grassland ecosystems.",
+      "bill": "H.R. 839",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt435/html/CRPT-119hrpt435.htm",
+      "record_id": "rec-2026-01-08-crpt-119hrpt435-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote opposes the bill for harming essential habitat for vulnerable species, indicating support for wildlife protection."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1491,
+    "prompt_tokens": 3324,
+    "total_tokens": 4815,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1257
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

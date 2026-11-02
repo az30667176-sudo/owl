@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr5517-119-20260803",
+  "content": "<other>: H.R. 5517 (119th Congress): Northern Border Security Enhancement and Review Act\nCosponsor: Rep. Chris Pappas\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/5517",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/5517",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-08-03",
+    "persons": [
+      "P000614"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/5517"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

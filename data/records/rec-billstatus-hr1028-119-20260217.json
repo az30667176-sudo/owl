@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr1028-119-20260217",
+  "content": "<other>: H.R. 1028 (119th Congress): Protection of Women in Olympic and Amateur Sports Act of 2026\nCosponsor: Rep. Jake Ellzey\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1028",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1028",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-02-17",
+    "persons": [
+      "E000071"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1028"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

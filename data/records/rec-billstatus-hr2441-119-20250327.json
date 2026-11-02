@@ -1,0 +1,26 @@
+{
+  "id": "rec-billstatus-hr2441-119-20250327",
+  "content": "<other>: H.R. 2441 (119th Congress): Improving Disclosure for Investors Act of 2025\nSponsor: Rep. Bill Huizenga\nCosponsor: Rep. Brad Sherman\nCosponsor: Rep. Bryan Steil\nCosponsor: Rep. Jake Auchincloss\nSponsor: Rep. Bill Huizenga\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2441",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2441",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-27",
+    "persons": [
+      "H001058",
+      "S000344",
+      "S001213",
+      "A000148",
+      "H001058"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2441"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr5713-119-20251021",
+  "content": "<other>: H.R. 5713 (119th Congress): Expedited Removal of Criminal Aliens Act\nCosponsor: Rep. Michael Cloud\nCosponsor: Rep. Anna Paulina Luna\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/5713",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/5713",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-10-21",
+    "persons": [
+      "C001115",
+      "L000596"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/5713"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "record_id": "rec-2026-04-21-crpt-119hrpt620-pt2-dissenting-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:26:27.667Z",
+  "accepted": [
+    {
+      "person": "C001119",
+      "issue": "supplemental-nutrition-assistance-program-snap",
+      "date": "2026-04-21",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "had Republicans not taken food out of the mouths of hungry Americans to pay for it.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt620/html/CRPT-119hrpt620-pt2.htm",
+      "record_id": "rec-2026-04-21-crpt-119hrpt620-pt2-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Expresses support for SNAP by condemning Republicans for taking food from hungry Americans to fund other priorities."
+    },
+    {
+      "person": "C001119",
+      "issue": "environmental-regulation",
+      "date": "2026-04-21",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The Republican farm bill includes a liability shield for giant chemical and pesticide corporations, depriving individuals--farmers and ordinary folk alike--of seeking legal recourse should they suffer ill health effects due to the use of or exposure to certain chemical products, including pesticides.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt620/html/CRPT-119hrpt620-pt2.htm",
+      "record_id": "rec-2026-04-21-crpt-119hrpt620-pt2-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Opposes pesticide liability shield and affirms health protections over corporate profits, supporting strong environmental regulation."
+    },
+    {
+      "person": "C001119",
+      "issue": "water-infrastructure-and-quality",
+      "date": "2026-04-21",
+      "score": 0.85,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "It exempts pesticide discharges into waterways from the Clean Water Act and Clean Air Act",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt620/html/CRPT-119hrpt620-pt2.htm",
+      "record_id": "rec-2026-04-21-crpt-119hrpt620-pt2-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Criticizes exempting pesticide discharges from Clean Water Act protections, supporting water quality protections."
+    },
+    {
+      "person": "C001119",
+      "issue": "forest-management-and-wildfire",
+      "date": "2026-04-21",
+      "score": -0.85,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The bill even mandates a return to the ``10 a.m. policy,'' blocking the use of beneficial fire to naturally remove flammable debris in the forests.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt620/html/CRPT-119hrpt620-pt2.htm",
+      "record_id": "rec-2026-04-21-crpt-119hrpt620-pt2-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Opposes codifying the 10 a.m. policy that blocks beneficial fire for forest management."
+    },
+    {
+      "person": "C001119",
+      "issue": "agricultural-conservation-programs",
+      "date": "2026-04-21",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "This cut erodes the investments made by the IRA and makes EQIP less accessible to farmers who would enroll in the program to improve the health of their land.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt620/html/CRPT-119hrpt620-pt2.htm",
+      "record_id": "rec-2026-04-21-crpt-119hrpt620-pt2-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Supports EQIP conservation program and opposes cuts that reduce farmer access."
+    },
+    {
+      "person": "C001119",
+      "issue": "farm-trade-and-food-safety",
+      "date": "2026-04-21",
+      "score": -0.8,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The preemption of these state initiatives hurts hog farmers who have already invested capital to bring their farms into compliance with said initiatives to sell into those premium markets.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt620/html/CRPT-119hrpt620-pt2.htm",
+      "record_id": "rec-2026-04-21-crpt-119hrpt620-pt2-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Opposes preempting California and Massachusetts pork standards because it harms compliant hog farmers."
+    },
+    {
+      "person": "C001119",
+      "issue": "biofuels-and-year-round-e15",
+      "date": "2026-04-21",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "the Republican majority missed a huge opportunity to expand domestic markets by passing permanent year-round E15.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt620/html/CRPT-119hrpt620-pt2.htm",
+      "record_id": "rec-2026-04-21-crpt-119hrpt620-pt2-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Supports permanent year-round E15 to expand domestic markets for farmers."
+    },
+    {
+      "person": "C001119",
+      "issue": "farm-trade-and-food-safety",
+      "date": "2026-04-21",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "It was frankly shocking to see an amendment to provide an additional $17 billion in farm aid dismissed by Republicans so nonchalantly.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt620/html/CRPT-119hrpt620-pt2.htm",
+      "record_id": "rec-2026-04-21-crpt-119hrpt620-pt2-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Supports additional farm aid for farmers suffering from tariffs and trade wars."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "supplemental-nutrition-assistance-program-snap",
+      "name": "Supplemental Nutrition Assistance Program (SNAP)",
+      "parent": "hsag-farm"
+    },
+    {
+      "id": "agricultural-conservation-programs",
+      "name": "Agricultural Conservation Programs",
+      "parent": "hsag-farm"
+    },
+    {
+      "id": "biofuels-and-year-round-e15",
+      "name": "Biofuels and Year-Round E15",
+      "parent": "hsag-farm"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 4420,
+    "prompt_tokens": 4142,
+    "total_tokens": 8562,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3443
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "rec-billstatus-hr2853-119-20250508",
+  "content": "<other>: H.R. 2853 (119th Congress): Combating Organized Retail Crime Act of 2025\nCosponsor: Rep. Don Bacon\nCosponsor: Rep. Kim Schrier\nCosponsor: Rep. Hillary J. Scholten\nCosponsor: Rep. Brad Finstad\nCosponsor: Rep. Kristen McDonald Rivet\nCosponsor: Rep. Robert F. Onder, Jr.\nCosponsor: Rep. Shomari Figures\nCosponsor: Rep. Eugene Simon Vindman\nCosponsor: Rep. Julia Brownley\nCosponsor: Rep. Tracey Mann\nCosponsor: Rep. John J. McGuire III\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2853",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2853",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-05-08",
+    "persons": [
+      "B001298",
+      "S001216",
+      "S001221",
+      "F000475",
+      "M001237",
+      "O000177",
+      "F000481",
+      "V000138",
+      "B001285",
+      "M000871",
+      "M001239"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2853"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "record_id": "rec-2025-03-21-crpt-119hrpt29-dissenting-views-2",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:26:52.427Z",
+  "accepted": [
+    {
+      "person": "N000015",
+      "issue": "treasury-oversight",
+      "date": "2025-03-21",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "This Resolution of Inquiry (ROI) is an important step in ensuring Congress continues its important job of oversight over the Executive Branch.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt29/html/CRPT-119hrpt29.htm",
+      "record_id": "rec-2025-03-21-crpt-119hrpt29-dissenting-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Neal endorses the resolution as necessary congressional oversight of executive access to Treasury systems."
+    },
+    {
+      "person": "N000015",
+      "issue": "tax-administration-and-irs",
+      "date": "2025-03-21",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "No one should be rummaging around in the confidential information of private citizens at any agency where protected information resides.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt29/html/CRPT-119hrpt29.htm",
+      "record_id": "rec-2025-03-21-crpt-119hrpt29-dissenting-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Neal supports maintaining confidentiality protections for taxpayer and other private information against unauthorized access."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2495,
+    "prompt_tokens": 3769,
+    "total_tokens": 6264,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2261
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "finish_reason": "stop"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr8168-119-20260330",
+  "content": "<other>: H.R. 8168 (119th Congress): Major Non-NATO Ally Terror Threat Assessment Act\nSponsor: Rep. Matt Van Epps\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/8168",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/8168",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-03-30",
+    "persons": [
+      "V000139"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/8168"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

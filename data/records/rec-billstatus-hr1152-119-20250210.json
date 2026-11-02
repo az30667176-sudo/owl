@@ -1,0 +1,27 @@
+{
+  "id": "rec-billstatus-hr1152-119-20250210",
+  "content": "<other>: H.R. 1152 (119th Congress): Electronic Filing and Payment Fairness Act\nSponsor: Rep. Darin LaHood\nCosponsor: Rep. Suzan K. DelBene\nCosponsor: Rep. Randy Feenstra\nCosponsor: Rep. Bradley Scott Schneider\nCosponsor: Rep. Brian K. Fitzpatrick\nCosponsor: Rep. Jimmy Panetta\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1152",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1152",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-10",
+    "persons": [
+      "L000585",
+      "D000617",
+      "F000446",
+      "S001190",
+      "F000466",
+      "P000613"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1152"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

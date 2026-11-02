@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr7834-119-20260827",
+  "content": "<other>: H.R. 7834 (119th Congress): Safe Cloud Storage Act\nCosponsor: Rep. Harriet M. Hageman\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/7834",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/7834",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-08-27",
+    "persons": [
+      "H001096"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/7834"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr1588-119-20250226",
+  "content": "<other>: H.R. 1588 (119th Congress): Facilitating DIGITAL Applications Act\nSponsor: Rep. Mariannette Miller-Meeks\nCosponsor: Rep. Debbie Dingell\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1588",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1588",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-26",
+    "persons": [
+      "M001215",
+      "D000624"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1588"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

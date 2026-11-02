@@ -1,0 +1,26 @@
+{
+  "id": "rec-billstatus-hr5267-119-20250926",
+  "content": "<other>: H.R. 5267 (119th Congress): American Franchise Act\nCosponsor: Rep. Stephanie I. Bice\nCosponsor: Rep. Virginia Foxx\nCosponsor: Rep. Michael Baumgartner\nCosponsor: Rep. David Kustoff\nCosponsor: Rep. Johnny Olszewski, Jr.\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/5267",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/5267",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-09-26",
+    "persons": [
+      "B000740",
+      "F000450",
+      "B001322",
+      "K000392",
+      "O000176"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/5267"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

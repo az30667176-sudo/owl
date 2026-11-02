@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr1469-119-20250519",
+  "content": "<other>: H.R. 1469 (119th Congress): Senior Security Act of 2025\nCosponsor: Rep. Zachary Nunn\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1469",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1469",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-05-19",
+    "persons": [
+      "N000193"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1469"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

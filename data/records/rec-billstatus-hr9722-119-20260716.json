@@ -1,0 +1,29 @@
+{
+  "id": "rec-billstatus-hr9722-119-20260716",
+  "content": "<other>: H.R. 9722 (119th Congress): Fair Treatment of Religious Organizations Act of 2026\nSponsor: Rep. Blake D. Moore\nCosponsor: Rep. Ben Cline\nCosponsor: Rep. Claudia Tenney\nCosponsor: Rep. Burgess Owens\nCosponsor: Rep. Nathaniel Moran\nCosponsor: Rep. Glenn Grothman\nCosponsor: Rep. Mike Kennedy\nCosponsor: Rep. Celeste Maloy\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/9722",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/9722",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-07-16",
+    "persons": [
+      "M001213",
+      "C001118",
+      "T000478",
+      "O000086",
+      "M001224",
+      "G000576",
+      "K000403",
+      "M001228"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/9722"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

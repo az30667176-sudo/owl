@@ -1,0 +1,36 @@
+{
+  "record_id": "rec-2025-12-12-crpt-119hrpt404-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:29:01.655Z",
+  "accepted": [
+    {
+      "person": "V000081",
+      "issue": "sba-lending",
+      "date": "2025-12-12",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The 504 Program Risk Oversight Act would provide Congress with the information it needs in order to fulfill its oversight responsibility by creating a federal statutory requirement for the SBA to conduct an annual risk analysis of the 504/CDC program",
+      "bill": "504 Program Risk Oversight Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt404/html/CRPT-119hrpt404.htm",
+      "record_id": "rec-2025-12-12-crpt-119hrpt404-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage endorses the bill as providing needed information for oversight of SBA lending."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 976,
+    "prompt_tokens": 3193,
+    "total_tokens": 4169,
+    "completion_tokens_details": {
+      "reasoning_tokens": 846
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

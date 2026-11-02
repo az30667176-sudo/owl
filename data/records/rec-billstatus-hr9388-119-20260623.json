@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr9388-119-20260623",
+  "content": "<other>: H.R. 9388 (119th Congress): One-Stop Pilot Program Extension Act\nSponsor: Rep. Carlos A. Gimenez\nCosponsor: Rep. Troy A. Carter\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/9388",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/9388",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-06-23",
+    "persons": [
+      "G000593",
+      "C001125"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/9388"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

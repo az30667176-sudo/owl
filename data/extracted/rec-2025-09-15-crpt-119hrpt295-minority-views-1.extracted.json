@@ -1,0 +1,51 @@
+{
+  "record_id": "rec-2025-09-15-crpt-119hrpt295-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:27:40.395Z",
+  "accepted": [
+    {
+      "person": "P000034",
+      "issue": "electric-grid-reliability",
+      "date": "2025-09-15",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "it would be a terrible mistake to only fix the interconnection process for certain types of generators, rather than advance broad-based solutions that benefit all commercially viable projects seeking to interconnect.",
+      "bill": "H.R. 1047, the GRID Power Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt295/html/CRPT-119hrpt295.htm",
+      "record_id": "rec-2025-09-15-crpt-119hrpt295-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote endorses broad-based interconnection improvements for all viable projects over selective fixes."
+    },
+    {
+      "person": "P000034",
+      "issue": "environmental-regulation",
+      "date": "2025-09-15",
+      "score": 0.7,
+      "direction": "support",
+      "linkage": "mid",
+      "llm_confidence": "high",
+      "quote": "This legislation is another component of Republicans' plan to wage all-out war on zero-carbon sources of electricity.",
+      "bill": "H.R. 1047, the GRID Power Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt295/html/CRPT-119hrpt295.htm",
+      "record_id": "rec-2025-09-15-crpt-119hrpt295-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote criticizes legislation for targeting zero-carbon electricity sources for adverse treatment."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1797,
+    "prompt_tokens": 3530,
+    "total_tokens": 5327,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1576
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

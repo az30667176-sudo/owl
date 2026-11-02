@@ -1,0 +1,50 @@
+{
+  "id": "rec-billstatus-hr2808-119-20250410",
+  "content": "<other>: H.R. 2808 (119th Congress): Homebuyers Privacy Protection Act\nSponsor: Rep. John W. Rose\nCosponsor: Rep. Ritchie Torres\nCosponsor: Rep. Andrew R. Garbarino\nCosponsor: Rep. Zachary Nunn\nCosponsor: Rep. Mark E. Amodei\nCosponsor: Rep. Gabe Amo\nCosponsor: Rep. Joe Neguse\nCosponsor: Rep. Eleanor Holmes Norton\nCosponsor: Rep. Andrew Ogles\nCosponsor: Rep. Bryan Steil\nCosponsor: Rep. Robert J. Wittman\nCosponsor: Rep. Frank D. Lucas\nCosponsor: Rep. Dusty Johnson\nCosponsor: Rep. William R. Timmons IV\nCosponsor: Rep. Jack Bergman\nCosponsor: Rep. Julia Brownley\nCosponsor: Rep. Thomas R. Suozzi\nCosponsor: Rep. John R. Moolenaar\nCosponsor: Rep. Emanuel Cleaver\nCosponsor: Rep. Stephanie I. Bice\nCosponsor: Rep. Cleo Fields\nCosponsor: Rep. Adrian Smith\nCosponsor: Rep. Scott Franklin\nCosponsor: Rep. David Kustoff\nCosponsor: Rep. Trent Kelly\nCosponsor: Rep. Brittany Pettersen\nCosponsor: Rep. Michael Guest\nCosponsor: Rep. Brian K. Fitzpatrick\nSponsor: Rep. John W. Rose\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2808",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2808",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-04-10",
+    "persons": [
+      "R000612",
+      "T000486",
+      "G000597",
+      "N000193",
+      "A000369",
+      "A000380",
+      "N000191",
+      "N000147",
+      "O000175",
+      "S001213",
+      "W000804",
+      "L000491",
+      "J000301",
+      "T000480",
+      "B001301",
+      "B001285",
+      "S001201",
+      "M001194",
+      "C001061",
+      "B000740",
+      "F000110",
+      "S001172",
+      "F000472",
+      "K000392",
+      "K000388",
+      "P000620",
+      "G000591",
+      "F000466",
+      "R000612"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2808"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "id": "rec-billstatus-hr2004-119-20250310",
+  "content": "<other>: H.R. 2004 (119th Congress): Tyler’s Law\nSponsor: Rep. Ted Lieu\nCosponsor: Rep. Robert E. Latta\nCosponsor: Rep. Sydney Kamlager-Dove\nCosponsor: Rep. Raúl M. Grijalva\nCosponsor: Rep. Dan Crenshaw\nCosponsor: Rep. Troy Balderson\nCosponsor: Rep. Juan Ciscomani\nCosponsor: Rep. David G. Valadao\nCosponsor: Rep. Michael Lawler\nCosponsor: Rep. Sharice Davids\nCosponsor: Rep. Eleanor Holmes Norton\nCosponsor: Rep. Raja Krishnamoorthi\nCosponsor: Rep. Sheila Cherfilus-McCormick\nCosponsor: Rep. Nanette Diaz Barragán\nCosponsor: Rep. Marc A. Veasey\nCosponsor: Rep. Dina Titus\nCosponsor: Rep. Sarah McBride\nCosponsor: Rep. Debbie Dingell\nCosponsor: Rep. Don Bacon\nCosponsor: Rep. Scott H. Peters\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2004",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2004",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-10",
+    "persons": [
+      "L000582",
+      "L000566",
+      "K000400",
+      "G000551",
+      "C001120",
+      "B001306",
+      "C001133",
+      "V000129",
+      "L000599",
+      "D000629",
+      "N000147",
+      "K000391",
+      "C001127",
+      "B001300",
+      "V000131",
+      "T000468",
+      "M001238",
+      "D000624",
+      "B001298",
+      "P000608"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2004"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

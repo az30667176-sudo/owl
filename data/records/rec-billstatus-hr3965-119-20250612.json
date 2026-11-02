@@ -1,0 +1,33 @@
+{
+  "id": "rec-billstatus-hr3965-119-20250612",
+  "content": "<other>: H.R. 3965 (119th Congress): PEARL Act\nSponsor: Rep. Tony Gonzales\nCosponsor: Rep. J. Luis Correa\nCosponsor: Rep. Michael T. McCaul\nCosponsor: Rep. Shri Thanedar\nCosponsor: Rep. Nicole Malliotakis\nCosponsor: Rep. Seth Magaziner\nCosponsor: Rep. Brian K. Fitzpatrick\nCosponsor: Rep. Jared Moskowitz\nCosponsor: Rep. Pete Stauber\nCosponsor: Rep. Donald G. Davis\nCosponsor: Rep. Monica De La Cruz\nCosponsor: Rep. Timothy M. Kennedy\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/3965",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/3965",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-06-12",
+    "persons": [
+      "G000594",
+      "C001110",
+      "M001157",
+      "T000488",
+      "M000317",
+      "M001223",
+      "F000466",
+      "M001217",
+      "S001212",
+      "D000230",
+      "D000594",
+      "K000402"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/3965"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

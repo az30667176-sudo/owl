@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr8290-119-20260415",
+  "content": "<other>: H.R. 8290 (119th Congress): China Exchange Rate Accountability Act of 2026\nSponsor: Rep. Pete Sessions\nSponsor: Rep. Pete Sessions\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/8290",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/8290",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-04-15",
+    "persons": [
+      "S000250",
+      "S000250"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/8290"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

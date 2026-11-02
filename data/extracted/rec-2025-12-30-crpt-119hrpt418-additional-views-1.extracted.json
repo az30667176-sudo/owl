@@ -1,0 +1,57 @@
+{
+  "record_id": "rec-2025-12-30-crpt-119hrpt418-additional-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:30:52.641Z",
+  "accepted": [
+    {
+      "person": "N000015",
+      "issue": "haiti-trade-preference-programs",
+      "date": "2025-12-30",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Considering the dire circumstances in Haiti and the Trump Administration's cruel trade policy, extending the Haiti preference programs for three years would provide certainty and significant tariff relief,",
+      "bill": "H.R. 6504",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt418/html/CRPT-119hrpt418.htm",
+      "record_id": "rec-2025-12-30-crpt-119hrpt418-additional-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Neal argues a three-year extension would provide certainty and tariff relief for Haiti and U.S. businesses."
+    },
+    {
+      "person": "N000015",
+      "issue": "wages-and-labor-standards",
+      "date": "2025-12-30",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Ways and Means Democrats remain committed to further strengthening the labor enforcement of Haiti programs and assisting Haiti in diversifying its exports to the United States.",
+      "bill": "H.R. 6504",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt418/html/CRPT-119hrpt418.htm",
+      "record_id": "rec-2025-12-30-crpt-119hrpt418-additional-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Neal states support for strengthening labor enforcement in the Haiti preference programs."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "haiti-trade-preference-programs",
+      "name": "Haiti Trade Preference Programs",
+      "parent": "hswm-oversight"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 2408,
+    "prompt_tokens": 2732,
+    "total_tokens": 5140,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2135
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

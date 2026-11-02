@@ -1,0 +1,28 @@
+{
+  "id": "rec-billstatus-hr1468-119-20250221",
+  "content": "<other>: H.R. 1468 (119th Congress): Protect America’s Innovation and Economic Security from CCP Act\nSponsor: Rep. Lance Gooden\nCosponsor: Rep. Thomas P. Tiffany\nCosponsor: Rep. Mike Kennedy\nCosponsor: Rep. Andrew Ogles\nCosponsor: Rep. Lauren Boebert\nCosponsor: Rep. Pat Fallon\nCosponsor: Rep. Ben Cline\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1468",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1468",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-21",
+    "persons": [
+      "G000589",
+      "T000165",
+      "K000403",
+      "O000175",
+      "B000825",
+      "F000246",
+      "C001118"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1468"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

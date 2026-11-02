@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr6698-119-20251212",
+  "content": "<other>: H.R. 6698 (119th Congress): Board of Veterans Appeals Annual Report Transparency Act of 2025\nSponsor: Rep. Keith Self\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/6698",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/6698",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-12-12",
+    "persons": [
+      "S001224"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/6698"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

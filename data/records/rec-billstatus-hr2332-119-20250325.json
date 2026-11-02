@@ -1,0 +1,36 @@
+{
+  "id": "rec-billstatus-hr2332-119-20250325",
+  "content": "<other>: H.R. 2332 (119th Congress): SHARE Act of 2026\nSponsor: Rep. Tracey Mann\nCosponsor: Rep. Joe Neguse\nCosponsor: Rep. Doug LaMalfa\nCosponsor: Rep. Donald G. Davis\nCosponsor: Rep. Dan Crenshaw\nCosponsor: Rep. Eleanor Holmes Norton\nCosponsor: Rep. Daniel Meuser\nCosponsor: Rep. Sam Graves\nCosponsor: Rep. Lauren Boebert\nCosponsor: Rep. Michael T. McCaul\nCosponsor: Rep. Stephanie I. Bice\nCosponsor: Rep. David G. Valadao\nCosponsor: Rep. Derek Schmidt\nCosponsor: Rep. Tony Wied\nSponsor: Rep. Tracey Mann\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2332",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2332",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-25",
+    "persons": [
+      "M000871",
+      "N000191",
+      "L000578",
+      "D000230",
+      "C001120",
+      "N000147",
+      "M001204",
+      "G000546",
+      "B000825",
+      "M001157",
+      "B000740",
+      "V000129",
+      "S001228",
+      "W000829",
+      "M000871"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2332"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

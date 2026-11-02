@@ -1,0 +1,43 @@
+{
+  "id": "rec-billstatus-hres186-119-20250304",
+  "content": "<other>: H. Res. 186 (119th Congress): Of inquiry requesting the President to transmit certain documents to the House of Representatives relating to the conflicts of interest of Elon Musk and related information.\nSponsor: Rep. Gerald E. Connolly\nCosponsor: Rep. Eleanor Holmes Norton\nCosponsor: Rep. Stephen F. Lynch\nCosponsor: Rep. Raja Krishnamoorthi\nCosponsor: Rep. Ro Khanna\nCosponsor: Rep. Kweisi Mfume\nCosponsor: Rep. Shontel M. Brown\nCosponsor: Rep. Melanie A. Stansbury\nCosponsor: Rep. Robert Garcia\nCosponsor: Rep. Maxwell Frost\nCosponsor: Rep. Summer L. Lee\nCosponsor: Rep. Greg Casar\nCosponsor: Rep. Jasmine Crockett\nCosponsor: Rep. Emily Randall\nCosponsor: Rep. Suhas Subramanyam\nCosponsor: Rep. Yassamin Ansari\nCosponsor: Rep. Wesley Bell\nCosponsor: Rep. Lateefah Simon\nCosponsor: Rep. Dave Min\nCosponsor: Rep. Ayanna Pressley\nCosponsor: Rep. Rashida Tlaib\nSponsor: Rep. Gerald E. Connolly\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-resolution/186",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-resolution/186",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-04",
+    "persons": [
+      "C001078",
+      "N000147",
+      "L000562",
+      "K000391",
+      "K000389",
+      "M000687",
+      "B001313",
+      "S001218",
+      "G000598",
+      "F000476",
+      "L000602",
+      "C001131",
+      "C001130",
+      "R000621",
+      "S001230",
+      "A000381",
+      "B001324",
+      "S001231",
+      "M001241",
+      "P000617",
+      "T000481",
+      "C001078"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-resolution/186"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

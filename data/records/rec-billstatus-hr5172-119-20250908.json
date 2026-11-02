@@ -1,0 +1,24 @@
+{
+  "id": "rec-billstatus-hr5172-119-20250908",
+  "content": "<other>: H.R. 5172 (119th Congress): Strong Sentences for Safer D.C. Streets Act of 2025\nSponsor: Rep. Andy Biggs\nCosponsor: Rep. Byron Donalds\nSponsor: Rep. Andy Biggs\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/5172",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/5172",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-09-08",
+    "persons": [
+      "B001302",
+      "D000032",
+      "B001302"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/5172"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

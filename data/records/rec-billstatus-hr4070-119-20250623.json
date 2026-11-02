@@ -1,0 +1,36 @@
+{
+  "id": "rec-billstatus-hr4070-119-20250623",
+  "content": "<other>: H.R. 4070 (119th Congress): Tren de Aragua Border Security Threat Assessment Act\nSponsor: Rep. Brad Knott\nCosponsor: Rep. Michael Guest\nCosponsor: Rep. Michael T. McCaul\nCosponsor: Rep. Andrew Ogles\nCosponsor: Rep. Elijah Crane\nCosponsor: Rep. Tony Gonzales\nCosponsor: Rep. Andrew R. Garbarino\nCosponsor: Rep. Ryan Mackenzie\nCosponsor: Rep. Dale W. Strong\nCosponsor: Rep. Mark E. Green\nCosponsor: Rep. Josh Brecheen\nCosponsor: Rep. Carlos A. Gimenez\nCosponsor: Rep. Gabe Evans\nCosponsor: Rep. Addison P. McDowell\nCosponsor: Rep. Clay Higgins\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/4070",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/4070",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-06-23",
+    "persons": [
+      "K000405",
+      "G000591",
+      "M001157",
+      "O000175",
+      "C001132",
+      "G000594",
+      "G000597",
+      "M001230",
+      "S001220",
+      "G000590",
+      "B001317",
+      "G000593",
+      "E000300",
+      "M001240",
+      "H001077"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/4070"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

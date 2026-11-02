@@ -1,0 +1,25 @@
+{
+  "id": "rec-billstatus-hr2159-119-20250314",
+  "content": "<other>: H.R. 2159 (119th Congress): Count the Crimes to Cut Act\nSponsor: Rep. Chip Roy\nCosponsor: Rep. Lucy McBath\nCosponsor: Rep. Andy Biggs\nCosponsor: Rep. Steve Cohen\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2159",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2159",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-14",
+    "persons": [
+      "R000614",
+      "M001208",
+      "B001302",
+      "C001068"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2159"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "rec-billstatus-hr1048-119-20250206",
+  "content": "<other>: H.R. 1048 (119th Congress): DETERRENT Act\nSponsor: Rep. Michael Baumgartner\nCosponsor: Rep. Mark B. Messmer\nCosponsor: Rep. Burgess Owens\nCosponsor: Rep. Rick W. Allen\nCosponsor: Rep. Kevin Kiley\nCosponsor: Rep. Tim Walberg\nCosponsor: Rep. Joe Wilson\nCosponsor: Rep. Michael A. Rulli\nCosponsor: Rep. Virginia Foxx\nCosponsor: Rep. Glenn Grothman\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1048",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1048",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-06",
+    "persons": [
+      "B001322",
+      "M001233",
+      "O000086",
+      "A000372",
+      "K000401",
+      "W000798",
+      "W000795",
+      "R000619",
+      "F000450",
+      "G000576"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1048"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

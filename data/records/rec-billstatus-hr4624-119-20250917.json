@@ -1,0 +1,24 @@
+{
+  "id": "rec-billstatus-hr4624-119-20250917",
+  "content": "<other>: H.R. 4624 (119th Congress): Muhammad Ali American Boxing Revival Act of 2026\nCosponsor: Rep. Christopher H. Smith\nCosponsor: Rep. Derek Schmidt\nCosponsor: Rep. Jefferson Van Drew\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/4624",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/4624",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-09-17",
+    "persons": [
+      "S000522",
+      "S001228",
+      "V000133"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/4624"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

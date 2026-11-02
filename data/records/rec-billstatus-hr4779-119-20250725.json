@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr4779-119-20250725",
+  "content": "<other>: H.R. 4779 (119th Congress): National Security, Department of State, and Related Programs Appropriations Act, 2026\nSponsor: Rep. Mario Diaz-Balart\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/4779",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/4779",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-07-25",
+    "persons": [
+      "D000600"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/4779"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

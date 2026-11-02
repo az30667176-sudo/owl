@@ -1,0 +1,39 @@
+{
+  "id": "rec-billstatus-hr979-119-20250212",
+  "content": "<other>: H.R. 979 (119th Congress): AM Radio for Every Vehicle Act of 2025\nCosponsor: Rep. Robert P. Bresnahan, Jr.\nCosponsor: Rep. Jim Costa\nCosponsor: Rep. Mike Rogers\nCosponsor: Rep. Betty McCollum\nCosponsor: Rep. Mike Flood\nCosponsor: Rep. Mike Bost\nCosponsor: Rep. Jennifer A. Kiggans\nCosponsor: Rep. John J. McGuire III\nCosponsor: Rep. Charles J. \"Chuck\" Fleischmann\nCosponsor: Rep. Chris Pappas\nCosponsor: Rep. Brad Finstad\nCosponsor: Rep. Jake Auchincloss\nCosponsor: Rep. William R. Keating\nCosponsor: Rep. Derrick Van Orden\nCosponsor: Rep. Mark E. Amodei\nCosponsor: Rep. Derek Schmidt\nCosponsor: Rep. Ken Calvert\nCosponsor: Rep. Kevin Mullin\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/979",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/979",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-12",
+    "persons": [
+      "B001327",
+      "C001059",
+      "R000575",
+      "M001143",
+      "F000474",
+      "B001295",
+      "K000399",
+      "M001239",
+      "F000459",
+      "P000614",
+      "F000475",
+      "A000148",
+      "K000375",
+      "V000135",
+      "A000369",
+      "S001228",
+      "C000059",
+      "M001225"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/979"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

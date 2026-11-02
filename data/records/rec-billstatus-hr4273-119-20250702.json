@@ -1,0 +1,25 @@
+{
+  "id": "rec-billstatus-hr4273-119-20250702",
+  "content": "<other>: H.R. 4273 (119th Congress): Over-the-Counter Monograph Drug User Fee Amendments\nSponsor: Rep. Robert E. Latta\nCosponsor: Rep. Diana DeGette\nCosponsor: Rep. Dan Crenshaw\nCosponsor: Rep. Debbie Dingell\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/4273",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/4273",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-07-02",
+    "persons": [
+      "L000566",
+      "D000197",
+      "C001120",
+      "D000624"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/4273"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

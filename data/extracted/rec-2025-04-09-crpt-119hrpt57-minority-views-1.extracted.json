@@ -1,0 +1,36 @@
+{
+  "record_id": "rec-2025-04-09-crpt-119hrpt57-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:28:37.381Z",
+  "accepted": [
+    {
+      "person": "C001078",
+      "issue": "federal-workforce-and-ethics",
+      "date": "2025-04-09",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Given Mr. Musk's expansive influence in the Trump Administration, the American people have a right to know about his conflicts of interest.",
+      "bill": "H. Res. 186",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt57/html/CRPT-119hrpt57.htm",
+      "record_id": "rec-2025-04-09-crpt-119hrpt57-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote asserts the public should be informed of Musk's conflicts, indicating support for federal ethics disclosure and oversight."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1457,
+    "prompt_tokens": 3153,
+    "total_tokens": 4610,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1319
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

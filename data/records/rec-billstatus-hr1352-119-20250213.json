@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr1352-119-20250213",
+  "content": "<other>: H.R. 1352 (119th Congress): To designate the General George C. Marshall House, in the Commonwealth of Virginia, as an affiliated area of the National Park System, and for other purposes.\nSponsor: Rep. Suhas Subramanyam\nSponsor: Rep. Suhas Subramanyam\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1352",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1352",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-13",
+    "persons": [
+      "S001230",
+      "S001230"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1352"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

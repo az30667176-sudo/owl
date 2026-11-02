@@ -1,0 +1,36 @@
+{
+  "record_id": "rec-2025-12-12-crpt-119hrpt407-dissenting-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:27:12.976Z",
+  "accepted": [
+    {
+      "person": "R000606",
+      "issue": "immigration-enforcement",
+      "date": "2025-12-12",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "mid",
+      "llm_confidence": "super_high",
+      "quote": "I oppose this legislation, and I urge my colleagues to do the same.",
+      "bill": "H.R. 4638",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt407/html/CRPT-119hrpt407.htm",
+      "record_id": "rec-2025-12-12-crpt-119hrpt407-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Raskin explicitly states opposition to the bill that would make harming a police animal a deportable offense without conviction."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1764,
+    "prompt_tokens": 3817,
+    "total_tokens": 5581,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1638
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

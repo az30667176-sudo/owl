@@ -1,0 +1,25 @@
+{
+  "id": "rec-billstatus-hr9501-119-20260629",
+  "content": "<other>: H.R. 9501 (119th Congress): AI Tax Integrity Act of 2026\nSponsor: Rep. Vern Buchanan\nCosponsor: Rep. Aaron Bean\nCosponsor: Rep. David Schweikert\nCosponsor: Rep. Steven Horsford\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/9501",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/9501",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-06-29",
+    "persons": [
+      "B001260",
+      "B001314",
+      "S001183",
+      "H001066"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/9501"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr2860-119-20250519",
+  "content": "<other>: H.R. 2860 (119th Congress): Northwest Straits Marine Conservation Initiative Reauthorization Act of 2025\nCosponsor: Rep. Marilyn Strickland\nCosponsor: Rep. Suzan K. DelBene\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2860",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2860",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-05-19",
+    "persons": [
+      "S001159",
+      "D000617"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2860"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

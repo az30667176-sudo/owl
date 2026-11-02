@@ -1,0 +1,36 @@
+{
+  "record_id": "rec-2026-01-07-crpt-119hrpt426-additional-views-2",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:29:58.005Z",
+  "accepted": [
+    {
+      "person": "L000557",
+      "issue": "social-security",
+      "date": "2026-01-07",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "we also introduced bill to stop `DOGE' from accessing [the] American people's data at SSA and also stop this Administration from shuttering field offices that seniors and disabled workers [rely] on.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt426/html/CRPT-119hrpt426.htm",
+      "record_id": "rec-2026-01-07-crpt-119hrpt426-additional-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Larson supports protecting SSA data and field offices by backing a bill to block DOGE access and office closures."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1976,
+    "prompt_tokens": 3031,
+    "total_tokens": 5007,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1833
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

@@ -1,0 +1,51 @@
+{
+  "record_id": "rec-2025-03-05-crpt-119hrpt11-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:27:19.562Z",
+  "accepted": [
+    {
+      "person": "T000193",
+      "issue": "federal-it-and-cybersecurity",
+      "date": "2025-03-05",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "To date, neither DHS nor the White House have provided sufficient information to Congress about how DOGE employees have been vetted, which information systems and data DOGE employees are accessing, or what DOGE employees are doing with the data they are accessing. It is an unacceptable security risk.",
+      "bill": "H. Res. 113",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt11/html/CRPT-119hrpt11.htm",
+      "record_id": "rec-2025-03-05-crpt-119hrpt11-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote characterizes DOGE access to DHS systems as an unacceptable security risk and calls for information on vetting and access."
+    },
+    {
+      "person": "T000193",
+      "issue": "federal-workforce-and-ethics",
+      "date": "2025-03-05",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Additionally, the resolution demands information about the security implications of the government-wide hiring freeze the President implemented on his first day in office, which has prevented the recruitment and onboarding of sought-after talent critical to homeland security.",
+      "bill": "H. Res. 113",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt11/html/CRPT-119hrpt11.htm",
+      "record_id": "rec-2025-03-05-crpt-119hrpt11-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote criticizes the hiring freeze for preventing recruitment of talent critical to homeland security."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2973,
+    "prompt_tokens": 3870,
+    "total_tokens": 6843,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2703
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

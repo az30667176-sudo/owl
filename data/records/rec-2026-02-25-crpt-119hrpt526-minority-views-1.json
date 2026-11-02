@@ -1,0 +1,33 @@
+{
+  "id": "rec-2026-02-25-crpt-119hrpt526-minority-views-1",
+  "content": "<Rep. Maxine Waters, Rep. Al Green, Rep. Bill Foster, Rep. Joyce Beatty, Rep. Rashida Tlaib, Rep. Sylvia R. Garcia, Rep. Nikema Williams>: This bill would allow for private companies to raise even more money without providing the full panoply of disclosures that our securities laws require for public issuers, to the detriment of investor and market transparency. It also encourages these companies to stay private for longer, rather than incentivizing them to eventually offer their securities to the broader public in an initial public offering (IPO). In practice, the bill expands Tier 2 of the Regulation A exemption for registering as a public company (referred to as ``Reg A+''), by raising the statutory public offering exemption limit from $50 million to $150 million in a 12-month period, and providing future adjustments for inflation. This would double the current limit of $75 million, which the SEC unilaterally increased in 2020 using its broad exemptive authority. While a higher Tier 2 ceiling may sound like a simple fix, the evidence suggests Regulation A's underutilization is not primarily driven by the current $75 million cap. Regulation A offerings are typically far smaller than the existing limit, and prior increases in the cap did not meaningfully change utilization. Small business advocates have argued for different sets of reforms to address existing contractions related to weak secondary-market liquidity, fixed compliance costs (audits and ongoing reporting), and ``intermediary gap'' (limited underwriting support; uncertainty around finders/marketing intermediaries).\nThe current cap of $75 million does not seem to be the reason why Regulation A is underutilized. SEC staff's decade lookback shows Regulation A remains modest relative to other exempt markets, and the typical reported proceeds are well below the Tier 2 ceiling (with medians in the low single-digit millions). In other words, many issuers appear constrained by other frictions long before they approach $75 million. The Commission increased Tier 2's maximum from $50 million to $75 million during Trump's first Administration with the effective date of 2021, yet the current SEC Chairman has since noted the market did not see a significant number of issuers take advantage of the higher ceiling, and overall counts declined in recent years. Small business advocates have discussed the following constraints:\n• Secondary-market ``exit:'' SEC staff find\nthat, for the majority of Regulation A offerings, a\nliquid secondary trading market does not exist; only\n\b2% of qualified offerings obtained an exchange listing\nin connection with the offering. Investors are\ntherefore often ``locked in,'' which predictably\ndampens primary-market demand.\n• Blue-sky and resale: SEC Commissioner Uyeda\nhas described today's regime as creating a ``Hotel\nCalifornia'' problem--investors can enter but struggle\nto exit--because resales can trigger multi-state blue-\nsky compliance and associated cost/complexity.\n• Regulation A carries material fixed costs,\nespecially for Tier 2: Tier 2 requires audited\nfinancial statements and ongoing reporting (annual,\nsemiannual, and current reports), which can be\ndisproportionate for small issuers trying to raise\nrelatively modest amounts--i.e., ``public-company-\nlike'' costs without reliable public-market liquidity\nbenefits.\n• The ``intermediary gap'' remains unresolved:\nSEC staff and leadership have emphasized that many\nofferings lack traditional underwriter support and are\nconducted on a best-efforts basis; the Commission\ncontinues to examine tailored approaches for\n``finders'' as a way to bridge the gap between friends-\nand-family capital and broker-dealer/VC-scale\nfinancings.\nDoubling the ceiling will likely lead to the Regulation A framework being used for financial companies, rather than operating companies, like real estate investment trusts (REITs), holding-companies, and shadow financing vehicles. SEC staff data show a heavy concentration of Regulation A financing in the financial sector (including holding companies, real estate issuers, and non-depository institutions), accounting for a large share of financing sought and an even larger share of proceeds reported raised. A $150 million ceiling would make that model more attractive at scale, increasing retail exposure to illiquid, complex products without the full investor protections and market discipline associated with registered public offerings.\nFor these reasons, we oppose H.R. 6541.\nSincerely,\nMaxine Waters,\nRanking Member.\nAl Green,\nBill Foster,\nJoyce Beatty,\nRashida Tlaib,\nSylvia R. Garcia,\nNikema Williams,\nMembers of Congress.",
+  "source": {
+    "url_link": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt526/html/CRPT-119hrpt526.htm",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-02-25",
+    "persons": [
+      "W000187",
+      "G000553",
+      "F000454",
+      "B001281",
+      "T000481",
+      "G000587",
+      "W000788"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/6541",
+      "https://www.congress.gov/bill/119th-congress/house-bill/10",
+      "https://www.congress.gov/bill/119th-congress/house-bill/2651",
+      "https://www.congress.gov/bill/119th-congress/house-bill/2799",
+      "https://www.congress.gov/bill/119th-congress/senate-bill/3710",
+      "https://www.congress.gov/bill/119th-congress/senate-bill/3916",
+      "https://www.congress.gov/bill/119th-congress/house-bill/4263",
+      "https://www.congress.gov/bill/119th-congress/house-bill/7834",
+      "https://www.congress.gov/bill/119th-congress/house-bill/9452"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr2400-119-20250327",
+  "content": "<other>: H.R. 2400 (119th Congress): Pit River Land Transfer Act of 2026\nSponsor: Rep. Doug LaMalfa\nSponsor: Rep. Doug LaMalfa\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2400",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2400",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-27",
+    "persons": [
+      "L000578",
+      "L000578"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2400"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

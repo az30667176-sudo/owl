@@ -1,0 +1,42 @@
+{
+  "record_id": "rec-2025-09-09-crpt-119hrpt261-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:25:58.381Z",
+  "accepted": [
+    {
+      "person": "T000472",
+      "issue": "servicemember-property-protections-from-adverse-possession",
+      "date": "2025-09-09",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Ranking Member Takano offered a substitute amendment to Chaiman Bost's amendment in the nature of a substitute (A.N.S) to H.R. 2334 at the full Committee markup, in order to clarify that the Servicemember's Civil Relief Act (SCRA) tolls the period of actual possession necessary to establish a claim to a servicemember's real property under the doctrine adverse possession.",
+      "bill": "H.R. 2334",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt261/html/CRPT-119hrpt261.htm",
+      "record_id": "rec-2025-09-09-crpt-119hrpt261-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Takano offered an amendment to codify SCRA tolling of adverse possession periods for servicemember property."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "servicemember-property-protections-from-adverse-possession",
+      "name": "Servicemember Property Protections from Adverse Possession",
+      "parent": "hsvr-economic"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 3860,
+    "prompt_tokens": 4797,
+    "total_tokens": 8657,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3650
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

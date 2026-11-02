@@ -1,0 +1,31 @@
+{
+  "id": "rec-2025-07-15-crpt-119hrpt204-minority-views-1",
+  "content": "<Rep. Maxine Waters, Rep. Nydia M. Velázquez, Rep. Gregory W. Meeks, Rep. David Scott, Rep. Al Green, Rep. Emanuel Cleaver, Rep. Bill Foster, Rep. Joyce Beatty, Rep. Juan Vargas, Rep. Rashida Tlaib, Rep. Sylvia R. Garcia>: H.R. 3672 would allow broker-dealers to provide their clients (i.e., retail and institutional investors) with ``research reports'' prepared by the broker-dealer itself without it qualifying as a general solicitation. This may give rise to fewer disclosures about the issuer of the securities and concerning conflicts of interest as broker-dealers often earn a commission on the sale of a security, therefore leading to investors receiving misleading or overly favorable advice about a particular investment.\nResearch reports are comprehensive documents prepared by financial analysts, researchers, or investment firms that evaluate and provide insights on specific securities (such as stocks, bonds, or other investment instruments).\\1\\ These reports aim to inform and help investors make informed decisions by offering an in-depth analysis of the financial health, operations, industry, and prospects of a company or security. Currently, a research report about a security that is offered by a broker-dealer qualifies as a ``general solicitation,'' unless the issuer is an emerging growth company (EGC).\\2\\ A general solicitation is a legal term in securities parlance for formally marketing a security to the general public.\\3\\ This bill expands the EGC research report carveout, which is a temporary 5 year exemption to help new public companies, to apply to all issuers; in other words, under this bill, broker-dealers would be able to offer research reports about any issuer without it counting as a general solicitation.\n\\1\\Investopedia, ``What is a Research Report? How They're Produced and Impact'' (Apr. 6, 2021).\n\\2\\Latham & Watkins, ``Client Alert: The JOBS Act: The 50 Most Frequently Asked Questions'' (accessed Jun. 5, 2025).\n\\3\\SEC, Capital Raising Building Blocks: General Solicitation (Aug. 30, 2024).\nThere are several significant issues with H.R. 3672: first, when something qualifies as a general solicitation, it triggers certain requirements that include (but are not limited to) the broker needing to provide investors with a prospectus containing a detailed description of business, risks factors, and a discussion of the company's financial condition by management.\\4\\ By exempting broker-dealer drafted research reports from counting as a general solicitation across the board, this bill deprives investors of important information and disclosures about the securities subject to the research report. Second, when these research reports are produced by the broker-dealer in house, there can be a conflict of interest in terms of what information they choose to include in these reports.\\5\\ This is because broker-dealers are often paid a commission when their clients buy or sell the security they are issuing the report on--and therefore is incentivized to draft the reports in a way that encourages their clients to purchase those securities.\\6\\\n\\4\\SEC, General solicitation--Rule 506(c) (Jun. 28, 2024).\n\\5\\Melanie Senter Lubin, Commissioner, Office of Attorney General, State of Maryland, Testimony before the House Financial Services Subcommittee on Capital Markets (April 19, 2023), at 32.\n\\6\\Alexander Thornton, Senior Director, Center for American Progress, Analysis of April 26, 2023, markup bills, on file, (April 21, 2023).\nFurthermore, Regulation Best Interest (or ``Reg BI''), which requires a broker-dealer to act in a client's best interest,\\7\\ does not apply to a broker-dealer drafted research report unless the report includes a specific recommendation to the client to buy the security in the report.\\8\\ In other words, a broker-drafted research report does not need to be drafted with investors' best interests in mind, and could therefore be written to contain biased or misleading information in order to encourage the investor purchase the security that is discussed in the report. Not to mention, investors will have fewer legal remedies against a broker when they make investment decisions in reliance on a product not covered by Reg BI (as would be the case with broker-drafted research reports under this bill).\n\\7\\SEC Rule 15l-1 under the Securities Exchange Act of 1934.\n\\8\\From the SEC's Reg BI Adopting Release (SEC Release No. 34- 86031, June 5, 2019): ``General communications that are not recommendations, such as television, radio, and billboard advertisements, and research reports that are not directed to a particular retail customer, are not subject to Regulation Best Interest.''\nA prior version of this bill was included as a provision in the large capital markets package H.R. 2799, which did not receive a single Democratic vote in either the Committee markup or on the House floor. It was also previously opposed by multiple investor advocate groups, including AARP, the North American Securities Administrators Association (NASAA), the Consumer Federation of America, Americans for Financial Reform, and Public Citizen.\nFor these reasons, we oppose H.R. 3672.\nSincerely,\nMaxine Waters,\nRanking Member.\nNydia M. Velazquez,\nGregory W. Meeks,\nDavid Scott,\nAl Green,\nEmanuel Cleaver, II,\nBill Foster,\nJoyce Beatty,\nJuan Vargas,\nRashida Tlaib,\nSylvia R. Garcia,\nMembers of Congress.",
+  "source": {
+    "url_link": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt204/html/CRPT-119hrpt204.htm",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-07-15",
+    "persons": [
+      "W000187",
+      "V000081",
+      "M001137",
+      "S001157",
+      "G000553",
+      "C001061",
+      "F000454",
+      "B001281",
+      "V000130",
+      "T000481",
+      "G000587"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/3672",
+      "https://www.congress.gov/bill/119th-congress/house-bill/2576",
+      "https://www.congress.gov/bill/119th-congress/house-bill/2799"
+    ]
+  }
+}

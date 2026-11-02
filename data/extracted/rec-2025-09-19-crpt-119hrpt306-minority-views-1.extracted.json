@@ -1,0 +1,57 @@
+{
+  "record_id": "rec-2025-09-19-crpt-119hrpt306-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:28:06.651Z",
+  "accepted": [
+    {
+      "person": "P000034",
+      "issue": "electric-grid-reliability",
+      "date": "2025-09-19",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "This is particularly concerning given the potential for clean energy coupled with energy storage to help utilities meet rapid load growth, a problem the majority claims it is trying to solve with this bill.",
+      "bill": "H.R. 3628, the ``State Planning For Reliability and Affordability Act,''",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt306/html/CRPT-119hrpt306.htm",
+      "record_id": "rec-2025-09-19-crpt-119hrpt306-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Pallone argues clean energy paired with storage can meet load growth, supporting an inclusive approach to reliability planning."
+    },
+    {
+      "person": "P000034",
+      "issue": "clean-energy-deployment",
+      "date": "2025-09-19",
+      "score": 0.85,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "H.R. 3628 is a disingenuous proposal that targets clean energy projects, doubles down on fossil fuels, and does not seriously attempt to address concerns of load growth or grid reliability.",
+      "bill": "H.R. 3628, the ``State Planning For Reliability and Affordability Act,''",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt306/html/CRPT-119hrpt306.htm",
+      "record_id": "rec-2025-09-19-crpt-119hrpt306-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Pallone opposes targeting clean energy and favoring fossil fuels, indicating support for clean energy deployment."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "clean-energy-deployment",
+      "name": "Clean Energy Deployment",
+      "parent": "hsif-energy"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 1998,
+    "prompt_tokens": 3314,
+    "total_tokens": 5312,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1681
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

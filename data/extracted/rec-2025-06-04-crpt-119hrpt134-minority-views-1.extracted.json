@@ -1,0 +1,126 @@
+{
+  "record_id": "rec-2025-06-04-crpt-119hrpt134-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:30:54.608Z",
+  "accepted": [
+    {
+      "person": "W000187",
+      "issue": "securities-and-capital-markets",
+      "date": "2025-06-04",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Democrats no longer support this bill--which would give the SEC broad discretion to amend the accredited investor definition--due to the current SEC's de-prioritization of investor protection and reduced independence from the current presidential administration.",
+      "bill": "H.R. 3348",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt134/html/CRPT-119hrpt134.htm",
+      "record_id": "rec-2025-06-04-crpt-119hrpt134-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage states withdrawal of support for the bill expanding SEC discretion over the accredited investor definition."
+    },
+    {
+      "person": "V000081",
+      "issue": "securities-and-capital-markets",
+      "date": "2025-06-04",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Democrats no longer support this bill--which would give the SEC broad discretion to amend the accredited investor definition--due to the current SEC's de-prioritization of investor protection and reduced independence from the current presidential administration.",
+      "bill": "H.R. 3348",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt134/html/CRPT-119hrpt134.htm",
+      "record_id": "rec-2025-06-04-crpt-119hrpt134-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage states withdrawal of support for the bill expanding SEC discretion over the accredited investor definition."
+    },
+    {
+      "person": "L000562",
+      "issue": "securities-and-capital-markets",
+      "date": "2025-06-04",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Democrats no longer support this bill--which would give the SEC broad discretion to amend the accredited investor definition--due to the current SEC's de-prioritization of investor protection and reduced independence from the current presidential administration.",
+      "bill": "H.R. 3348",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt134/html/CRPT-119hrpt134.htm",
+      "record_id": "rec-2025-06-04-crpt-119hrpt134-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage states withdrawal of support for the bill expanding SEC discretion over the accredited investor definition."
+    },
+    {
+      "person": "G000553",
+      "issue": "securities-and-capital-markets",
+      "date": "2025-06-04",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Democrats no longer support this bill--which would give the SEC broad discretion to amend the accredited investor definition--due to the current SEC's de-prioritization of investor protection and reduced independence from the current presidential administration.",
+      "bill": "H.R. 3348",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt134/html/CRPT-119hrpt134.htm",
+      "record_id": "rec-2025-06-04-crpt-119hrpt134-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage states withdrawal of support for the bill expanding SEC discretion over the accredited investor definition."
+    },
+    {
+      "person": "B001281",
+      "issue": "securities-and-capital-markets",
+      "date": "2025-06-04",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Democrats no longer support this bill--which would give the SEC broad discretion to amend the accredited investor definition--due to the current SEC's de-prioritization of investor protection and reduced independence from the current presidential administration.",
+      "bill": "H.R. 3348",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt134/html/CRPT-119hrpt134.htm",
+      "record_id": "rec-2025-06-04-crpt-119hrpt134-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage states withdrawal of support for the bill expanding SEC discretion over the accredited investor definition."
+    },
+    {
+      "person": "G000587",
+      "issue": "securities-and-capital-markets",
+      "date": "2025-06-04",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Democrats no longer support this bill--which would give the SEC broad discretion to amend the accredited investor definition--due to the current SEC's de-prioritization of investor protection and reduced independence from the current presidential administration.",
+      "bill": "H.R. 3348",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt134/html/CRPT-119hrpt134.htm",
+      "record_id": "rec-2025-06-04-crpt-119hrpt134-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage states withdrawal of support for the bill expanding SEC discretion over the accredited investor definition."
+    },
+    {
+      "person": "W000788",
+      "issue": "securities-and-capital-markets",
+      "date": "2025-06-04",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Democrats no longer support this bill--which would give the SEC broad discretion to amend the accredited investor definition--due to the current SEC's de-prioritization of investor protection and reduced independence from the current presidential administration.",
+      "bill": "H.R. 3348",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt134/html/CRPT-119hrpt134.htm",
+      "record_id": "rec-2025-06-04-crpt-119hrpt134-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage states withdrawal of support for the bill expanding SEC discretion over the accredited investor definition."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1773,
+    "prompt_tokens": 2757,
+    "total_tokens": 4530,
+    "completion_tokens_details": {
+      "reasoning_tokens": 913
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

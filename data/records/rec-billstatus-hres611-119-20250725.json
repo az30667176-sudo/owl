@@ -1,0 +1,27 @@
+{
+  "id": "rec-billstatus-hres611-119-20250725",
+  "content": "<other>: H. Res. 611 (119th Congress): Expressing the importance of accurate information for medical professionals treating pregnant women and their unborn children in the emergency department, and for informing the general public, and for other purposes.\nSponsor: Rep. Kat Cammack\nCosponsor: Rep. Robert F. Onder, Jr.\nCosponsor: Rep. Andy Harris\nCosponsor: Rep. Sheri Biggs\nCosponsor: Rep. Michelle Fischbach\nCosponsor: Rep. Christopher H. Smith\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-resolution/611",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-resolution/611",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-07-25",
+    "persons": [
+      "C001039",
+      "O000177",
+      "H001052",
+      "B001325",
+      "F000470",
+      "S000522"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-resolution/611"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

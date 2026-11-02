@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr3073-119-20250508",
+  "content": "<other>: H.R. 3073 (119th Congress): Shivwits Band of Paiutes Jurisdictional Clarity Act\nCosponsor: Rep. Mike Kennedy\nCosponsor: Rep. Burgess Owens\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/3073",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/3073",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-05-08",
+    "persons": [
+      "K000403",
+      "O000086"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/3073"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "rec-billstatus-hr1520-119-20250513",
+  "content": "<other>: H.R. 1520 (119th Congress): Charlotte Woodward Organ Transplant Discrimination Prevention Act\nCosponsor: Rep. Josh Harder\nCosponsor: Rep. Angie Craig\nCosponsor: Rep. Seth Magaziner\nCosponsor: Rep. Don Bacon\nCosponsor: Rep. Andrew R. Garbarino\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1520",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1520",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-05-13",
+    "persons": [
+      "H001090",
+      "C001119",
+      "M001223",
+      "B001298",
+      "G000597"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1520"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

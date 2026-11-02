@@ -1,0 +1,24 @@
+{
+  "id": "rec-billstatus-hr1442-119-20250218",
+  "content": "<other>: H.R. 1442 (119th Congress): To ban the sale of products with a high concentration of sodium nitrite to individuals, and for other purposes.\nSponsor: Rep. Lori Trahan\nCosponsor: Rep. Mike Carey\nCosponsor: Rep. Joe Neguse\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1442",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1442",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-18",
+    "persons": [
+      "T000482",
+      "C001126",
+      "N000191"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1442"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

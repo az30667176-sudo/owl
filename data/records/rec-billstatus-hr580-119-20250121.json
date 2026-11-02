@@ -1,0 +1,27 @@
+{
+  "id": "rec-billstatus-hr580-119-20250121",
+  "content": "<other>: H.R. 580 (119th Congress): Unfunded Mandates Accountability and Transparency Act of 2025\nSponsor: Rep. Virginia Foxx\nCosponsor: Rep. Henry Cuellar\nCosponsor: Rep. Jared F. Golden\nCosponsor: Rep. Ashley Hinson\nCosponsor: Rep. Pete Sessions\nSponsor: Rep. Virginia Foxx\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/580",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/580",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-01-21",
+    "persons": [
+      "F000450",
+      "C001063",
+      "G000592",
+      "H001091",
+      "S000250",
+      "F000450"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/580"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

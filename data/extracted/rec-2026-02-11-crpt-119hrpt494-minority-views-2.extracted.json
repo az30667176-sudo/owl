@@ -1,0 +1,111 @@
+{
+  "record_id": "rec-2026-02-11-crpt-119hrpt494-minority-views-2",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:46:30.048Z",
+  "accepted": [
+    {
+      "person": "S000185",
+      "issue": "wages-and-labor-standards",
+      "date": "2026-02-11",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "There is, simply, no evidence of any problem at all in these industries that requires an amendment of the nation's fundamental wage protection and child labor law.",
+      "bill": "H.R. 3495",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt494/html/CRPT-119hrpt494.htm",
+      "record_id": "rec-2026-02-11-crpt-119hrpt494-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage defends maintaining current FLSA wage protections and opposes amending them."
+    },
+    {
+      "person": "B001278",
+      "issue": "wages-and-labor-standards",
+      "date": "2026-02-11",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "There is, simply, no evidence of any problem at all in these industries that requires an amendment of the nation's fundamental wage protection and child labor law.",
+      "bill": "H.R. 3495",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt494/html/CRPT-119hrpt494.htm",
+      "record_id": "rec-2026-02-11-crpt-119hrpt494-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage defends maintaining current FLSA wage protections and opposes amending them."
+    },
+    {
+      "person": "A000370",
+      "issue": "wages-and-labor-standards",
+      "date": "2026-02-11",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "There is, simply, no evidence of any problem at all in these industries that requires an amendment of the nation's fundamental wage protection and child labor law.",
+      "bill": "H.R. 3495",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt494/html/CRPT-119hrpt494.htm",
+      "record_id": "rec-2026-02-11-crpt-119hrpt494-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage defends maintaining current FLSA wage protections and opposes amending them."
+    },
+    {
+      "person": "D000623",
+      "issue": "wages-and-labor-standards",
+      "date": "2026-02-11",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "There is, simply, no evidence of any problem at all in these industries that requires an amendment of the nation's fundamental wage protection and child labor law.",
+      "bill": "H.R. 3495",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt494/html/CRPT-119hrpt494.htm",
+      "record_id": "rec-2026-02-11-crpt-119hrpt494-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage defends maintaining current FLSA wage protections and opposes amending them."
+    },
+    {
+      "person": "H001081",
+      "issue": "wages-and-labor-standards",
+      "date": "2026-02-11",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "There is, simply, no evidence of any problem at all in these industries that requires an amendment of the nation's fundamental wage protection and child labor law.",
+      "bill": "H.R. 3495",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt494/html/CRPT-119hrpt494.htm",
+      "record_id": "rec-2026-02-11-crpt-119hrpt494-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage defends maintaining current FLSA wage protections and opposes amending them."
+    },
+    {
+      "person": "L000602",
+      "issue": "wages-and-labor-standards",
+      "date": "2026-02-11",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "There is, simply, no evidence of any problem at all in these industries that requires an amendment of the nation's fundamental wage protection and child labor law.",
+      "bill": "H.R. 3495",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt494/html/CRPT-119hrpt494.htm",
+      "record_id": "rec-2026-02-11-crpt-119hrpt494-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage defends maintaining current FLSA wage protections and opposes amending them."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2329,
+    "prompt_tokens": 4807,
+    "total_tokens": 7136,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1680
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

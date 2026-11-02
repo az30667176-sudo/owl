@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr2056-119-20250311",
+  "content": "<other>: H.R. 2056 (119th Congress): District of Columbia Federal Immigration Compliance Act of 2025\nSponsor: Rep. Clay Higgins\nSponsor: Rep. Clay Higgins\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2056",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2056",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-11",
+    "persons": [
+      "H001077",
+      "H001077"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2056"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

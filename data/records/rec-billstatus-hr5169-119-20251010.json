@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr5169-119-20251010",
+  "content": "<other>: H.R. 5169 (119th Congress): Retire through Ownership Act\nCosponsor: Rep. Lucy McBath\nCosponsor: Rep. Michael Baumgartner\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/5169",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/5169",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-10-10",
+    "persons": [
+      "M001208",
+      "B001322"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/5169"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

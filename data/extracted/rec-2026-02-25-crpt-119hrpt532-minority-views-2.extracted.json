@@ -1,0 +1,111 @@
+{
+  "record_id": "rec-2026-02-25-crpt-119hrpt532-minority-views-2",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:47:15.903Z",
+  "accepted": [
+    {
+      "person": "W000187",
+      "issue": "bank-regulation",
+      "date": "2026-02-25",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For these reasons, we oppose H.R. 6553.",
+      "bill": "H.R. 6553",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt532/html/CRPT-119hrpt532.htm",
+      "record_id": "rec-2026-02-25-crpt-119hrpt532-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislators explicitly state opposition to the bill addressing bank regulatory thresholds."
+    },
+    {
+      "person": "G000553",
+      "issue": "bank-regulation",
+      "date": "2026-02-25",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For these reasons, we oppose H.R. 6553.",
+      "bill": "H.R. 6553",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt532/html/CRPT-119hrpt532.htm",
+      "record_id": "rec-2026-02-25-crpt-119hrpt532-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislators explicitly state opposition to the bill addressing bank regulatory thresholds."
+    },
+    {
+      "person": "B001281",
+      "issue": "bank-regulation",
+      "date": "2026-02-25",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For these reasons, we oppose H.R. 6553.",
+      "bill": "H.R. 6553",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt532/html/CRPT-119hrpt532.htm",
+      "record_id": "rec-2026-02-25-crpt-119hrpt532-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislators explicitly state opposition to the bill addressing bank regulatory thresholds."
+    },
+    {
+      "person": "T000481",
+      "issue": "bank-regulation",
+      "date": "2026-02-25",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For these reasons, we oppose H.R. 6553.",
+      "bill": "H.R. 6553",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt532/html/CRPT-119hrpt532.htm",
+      "record_id": "rec-2026-02-25-crpt-119hrpt532-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislators explicitly state opposition to the bill addressing bank regulatory thresholds."
+    },
+    {
+      "person": "G000587",
+      "issue": "bank-regulation",
+      "date": "2026-02-25",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For these reasons, we oppose H.R. 6553.",
+      "bill": "H.R. 6553",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt532/html/CRPT-119hrpt532.htm",
+      "record_id": "rec-2026-02-25-crpt-119hrpt532-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislators explicitly state opposition to the bill addressing bank regulatory thresholds."
+    },
+    {
+      "person": "W000788",
+      "issue": "bank-regulation",
+      "date": "2026-02-25",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For these reasons, we oppose H.R. 6553.",
+      "bill": "H.R. 6553",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt532/html/CRPT-119hrpt532.htm",
+      "record_id": "rec-2026-02-25-crpt-119hrpt532-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislators explicitly state opposition to the bill addressing bank regulatory thresholds."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1872,
+    "prompt_tokens": 3224,
+    "total_tokens": 5096,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1373
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

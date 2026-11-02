@@ -1,0 +1,37 @@
+{
+  "id": "rec-billstatus-hr276-119-20250109",
+  "content": "<other>: H.R. 276 (119th Congress): Gulf of America Act\nSponsor: Rep. Marjorie Taylor Greene\nCosponsor: Rep. Mary E. Miller\nCosponsor: Rep. Barry Moore\nCosponsor: Rep. Claudia Tenney\nCosponsor: Rep. Mike Collins\nCosponsor: Rep. Randy K. Weber, Sr.\nCosponsor: Rep. Andrew Ogles\nCosponsor: Rep. Michael Lawler\nCosponsor: Rep. Mike Haridopolos\nCosponsor: Rep. W. Gregory Steube\nCosponsor: Rep. Brandon Gill\nCosponsor: Rep. Eric Burlison\nCosponsor: Rep. Brian Babin\nCosponsor: Rep. Michael A. Rulli\nCosponsor: Rep. Troy E. Nehls\nSponsor: Rep. Marjorie Taylor Greene\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/276",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/276",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-01-09",
+    "persons": [
+      "G000596",
+      "M001211",
+      "M001212",
+      "T000478",
+      "C001129",
+      "W000814",
+      "O000175",
+      "L000599",
+      "H001099",
+      "S001214",
+      "G000603",
+      "B001316",
+      "B001291",
+      "R000619",
+      "N000026",
+      "G000596"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/276"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

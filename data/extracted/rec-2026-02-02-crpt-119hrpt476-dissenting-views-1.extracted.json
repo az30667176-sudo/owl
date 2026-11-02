@@ -1,0 +1,51 @@
+{
+  "record_id": "rec-2026-02-02-crpt-119hrpt476-dissenting-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:30:17.563Z",
+  "accepted": [
+    {
+      "person": "N000015",
+      "issue": "gun-policy",
+      "date": "2026-02-02",
+      "score": -0.85,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "redefining ``firearm'' to exclude less-than-lethal projectile devices from background check requirements is of grave concern for public safety.",
+      "bill": "Innovate Less Lethal to De-Escalate Tax Modernization Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt476/html/CRPT-119hrpt476.htm",
+      "record_id": "rec-2026-02-02-crpt-119hrpt476-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Opposes excluding less-than-lethal projectile devices from background checks as a public-safety risk."
+    },
+    {
+      "person": "N000015",
+      "issue": "law-enforcement-support",
+      "date": "2026-02-02",
+      "score": 0.7,
+      "direction": "support",
+      "linkage": "mid",
+      "llm_confidence": "high",
+      "quote": "While we support good faith efforts to aid law enforcement with reducing the use of lethal force, this bill does not move towards that goal.",
+      "bill": "Innovate Less Lethal to De-Escalate Tax Modernization Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt476/html/CRPT-119hrpt476.htm",
+      "record_id": "rec-2026-02-02-crpt-119hrpt476-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Expresses support for good-faith efforts to aid law enforcement in reducing use of lethal force."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2420,
+    "prompt_tokens": 2895,
+    "total_tokens": 5315,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2150
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

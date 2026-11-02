@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr9722-119-20260723",
+  "content": "<other>: H.R. 9722 (119th Congress): Fair Treatment of Religious Organizations Act of 2026\nCosponsor: Rep. Ken Calvert\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/9722",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/9722",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-07-23",
+    "persons": [
+      "C000059"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/9722"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

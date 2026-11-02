@@ -1,0 +1,24 @@
+{
+  "id": "rec-billstatus-hr3491-119-20260303",
+  "content": "<other>: H.R. 3491 (119th Congress): DeOndra Dixon INCLUDE Project Act of 2025\nCosponsor: Rep. Suhas Subramanyam\nCosponsor: Rep. Jerrold Nadler\nCosponsor: Rep. James R. Walkinshaw\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/3491",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/3491",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-03-03",
+    "persons": [
+      "S001230",
+      "N000002",
+      "W000831"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/3491"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

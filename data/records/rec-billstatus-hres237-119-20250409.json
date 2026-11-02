@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hres237-119-20250409",
+  "content": "<other>: H. Res. 237 (119th Congress): Of inquiry requesting the President and directing the Secretary of Education to transmit, respectively, certain documents to the House of Representatives relating to the reduction in force and other downsizing measures at the Department of Education.\nCosponsor: Rep. Julia Brownley\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-resolution/237",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-resolution/237",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-04-09",
+    "persons": [
+      "B001285"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-resolution/237"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "record_id": "rec-2026-04-23-crpt-119hrpt622-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:28:15.718Z",
+  "accepted": [
+    {
+      "person": "D000216",
+      "issue": "military-construction-and-va-appropriations",
+      "date": "2026-04-23",
+      "score": 0.7,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The bill inadequately funds military construction and quality of life programs for our servicemembers by $9 billion when compared to the President's request.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt622/html/CRPT-119hrpt622.htm",
+      "record_id": "rec-2026-04-23-crpt-119hrpt622-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislator criticizes the bill as underfunding military construction and quality of life programs relative to the request."
+    },
+    {
+      "person": "W000797",
+      "issue": "military-construction-and-va-appropriations",
+      "date": "2026-04-23",
+      "score": 0.7,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The bill inadequately funds military construction and quality of life programs for our servicemembers by $9 billion when compared to the President's request.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt622/html/CRPT-119hrpt622.htm",
+      "record_id": "rec-2026-04-23-crpt-119hrpt622-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislator criticizes the bill as underfunding military construction and quality of life programs relative to the request."
+    },
+    {
+      "person": "D000216",
+      "issue": "va-technology-modernization",
+      "date": "2026-04-23",
+      "score": 0.7,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "For the Department of Veterans Affairs, health care is fully funded but there are deep cuts to programs like the Electronic Health Records Management program and construction programs.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt622/html/CRPT-119hrpt622.htm",
+      "record_id": "rec-2026-04-23-crpt-119hrpt622-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislator opposes cuts to the Electronic Health Records Management program, indicating support for VA technology funding."
+    },
+    {
+      "person": "W000797",
+      "issue": "va-technology-modernization",
+      "date": "2026-04-23",
+      "score": 0.7,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "For the Department of Veterans Affairs, health care is fully funded but there are deep cuts to programs like the Electronic Health Records Management program and construction programs.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt622/html/CRPT-119hrpt622.htm",
+      "record_id": "rec-2026-04-23-crpt-119hrpt622-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislator opposes cuts to the Electronic Health Records Management program, indicating support for VA technology funding."
+    },
+    {
+      "person": "D000216",
+      "issue": "veterans-health-care",
+      "date": "2026-04-23",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "These two provisions provide advance funding of $53.7 billion for the Toxic Exposures Fund (TEF), and includes a 25 percent withhold of the Secretary of Veterans Affairs budget until he testifies before the committee, significant improvements to the bill.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt622/html/CRPT-119hrpt622.htm",
+      "record_id": "rec-2026-04-23-crpt-119hrpt622-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislator describes advance funding for the Toxic Exposures Fund as a significant improvement, indicating support."
+    },
+    {
+      "person": "W000797",
+      "issue": "veterans-health-care",
+      "date": "2026-04-23",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "These two provisions provide advance funding of $53.7 billion for the Toxic Exposures Fund (TEF), and includes a 25 percent withhold of the Secretary of Veterans Affairs budget until he testifies before the committee, significant improvements to the bill.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt622/html/CRPT-119hrpt622.htm",
+      "record_id": "rec-2026-04-23-crpt-119hrpt622-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislator describes advance funding for the Toxic Exposures Fund as a significant improvement, indicating support."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2369,
+    "prompt_tokens": 3231,
+    "total_tokens": 5600,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1688
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

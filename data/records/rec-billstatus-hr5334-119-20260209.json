@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr5334-119-20260209",
+  "content": "<other>: H.R. 5334 (119th Congress): Lindsey O. Graham Sanctioning Russia and Iran Act of 2026\nCosponsor: Rep. Thomas H. Kean, Jr.\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/5334",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-02-09",
+    "persons": [
+      "K000398"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/5334"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

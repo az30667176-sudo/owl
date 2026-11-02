@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr1949-119-20250815",
+  "content": "<other>: H.R. 1949 (119th Congress): Unlocking our Domestic LNG Potential Act of 2025\nCosponsor: Rep. Michael Baumgartner\nCosponsor: Rep. Daniel Meuser\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1949",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1949",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-08-15",
+    "persons": [
+      "B001322",
+      "M001204"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1949"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

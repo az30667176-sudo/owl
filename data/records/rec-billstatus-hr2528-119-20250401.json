@@ -1,0 +1,30 @@
+{
+  "id": "rec-billstatus-hr2528-119-20250401",
+  "content": "<other>: H.R. 2528 (119th Congress): Association Health Plans Act\nSponsor: Rep. Tim Walberg\nCosponsor: Rep. Rick W. Allen\nCosponsor: Rep. Robert F. Onder, Jr.\nCosponsor: Rep. Dan Crenshaw\nCosponsor: Rep. Stephanie I. Bice\nCosponsor: Rep. Kevin Kiley\nCosponsor: Rep. Glenn Grothman\nCosponsor: Rep. Ryan Mackenzie\nCosponsor: Rep. Bill Huizenga\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2528",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2528",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-04-01",
+    "persons": [
+      "W000798",
+      "A000372",
+      "O000177",
+      "C001120",
+      "B000740",
+      "K000401",
+      "G000576",
+      "M001230",
+      "H001058"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2528"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

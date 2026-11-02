@@ -1,0 +1,51 @@
+{
+  "record_id": "rec-2025-10-03-crpt-119hrpt328-dissenting-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:27:57.571Z",
+  "accepted": [
+    {
+      "person": "H001068",
+      "issue": "wildlife-and-fisheries",
+      "date": "2025-10-03",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "H.R. 281 would prematurely strip federal protections from Greater Yellowstone Ecosystem (GLE) grizzly bears by mandating the reissuance of an outdated 2017 delisting rule, despite overwhelming scientific evidence that the species continues to face significant threats requiring federal oversight.",
+      "bill": "H.R. 281",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt328/html/CRPT-119hrpt328.htm",
+      "record_id": "rec-2025-10-03-crpt-119hrpt328-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislator opposes delisting and argues federal ESA protections remain necessary due to ongoing threats."
+    },
+    {
+      "person": "H001068",
+      "issue": "tribal-lands-and-sovereignty",
+      "date": "2025-10-03",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "H.R. 281 completely ignores federal trust responsibilities with Tribal nations and would eliminate meaningful Tribal consultation.",
+      "bill": "H.R. 281",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt328/html/CRPT-119hrpt328.htm",
+      "record_id": "rec-2025-10-03-crpt-119hrpt328-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislator criticizes the bill for disregarding federal trust responsibilities and tribal consultation."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1746,
+    "prompt_tokens": 3384,
+    "total_tokens": 5130,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1468
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

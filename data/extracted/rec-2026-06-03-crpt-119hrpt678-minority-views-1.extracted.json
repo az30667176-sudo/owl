@@ -1,0 +1,36 @@
+{
+  "record_id": "rec-2026-06-03-crpt-119hrpt678-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:30:01.607Z",
+  "accepted": [
+    {
+      "person": "V000081",
+      "issue": "sba-lending",
+      "date": "2026-06-03",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The Small Business Technological Act of 2025 would remove any uncertainty small businesses face and ensure that low-cost financing is available for the acquisition and use of digital tools.",
+      "bill": "The Small Business Technological Act of 2025",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt678/html/CRPT-119hrpt678.htm",
+      "record_id": "rec-2026-06-03-crpt-119hrpt678-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage endorses codifying 7(a) loan eligibility for digital tools as removing uncertainty and ensuring low-cost financing."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 883,
+    "prompt_tokens": 2912,
+    "total_tokens": 3795,
+    "completion_tokens_details": {
+      "reasoning_tokens": 755
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

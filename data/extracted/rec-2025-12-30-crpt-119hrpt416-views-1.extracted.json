@@ -1,0 +1,72 @@
+{
+  "record_id": "rec-2025-12-30-crpt-119hrpt416-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:30:20.612Z",
+  "accepted": [
+    {
+      "person": "N000015",
+      "issue": "africa-trade-and-agoa",
+      "date": "2025-12-30",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "it is more important than ever that Congress demonstrate its commitment to AGOA.",
+      "bill": "H.R. 6500",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt416/html/CRPT-119hrpt416.htm",
+      "record_id": "rec-2025-12-30-crpt-119hrpt416-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Neal states Congress should demonstrate commitment to AGOA, indicating support for reauthorizing the Africa trade program."
+    },
+    {
+      "person": "N000015",
+      "issue": "unemployment-and-work-programs",
+      "date": "2025-12-30",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "Certainly, TAA should have been included in H.R. 6500.",
+      "bill": "H.R. 6500",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt416/html/CRPT-119hrpt416.htm",
+      "record_id": "rec-2025-12-30-crpt-119hrpt416-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Neal explicitly supports including and by implication reauthorizing Trade Adjustment Assistance for workers affected by trade."
+    },
+    {
+      "person": "N000015",
+      "issue": "labor-relations-and-unions",
+      "date": "2025-12-30",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Ways and Means Democrats are committed to both AGOA and reauthorizing TAA and advancing policies that strengthen worker rights.",
+      "bill": "H.R. 6500",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt416/html/CRPT-119hrpt416.htm",
+      "record_id": "rec-2025-12-30-crpt-119hrpt416-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Neal expresses commitment to advancing policies that strengthen worker rights, indicating pro-worker-rights support."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "africa-trade-and-agoa",
+      "name": "Africa Trade and AGOA",
+      "parent": "hswm-tax"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 2340,
+    "prompt_tokens": 2872,
+    "total_tokens": 5212,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1978
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

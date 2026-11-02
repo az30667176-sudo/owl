@@ -1,0 +1,49 @@
+{
+  "id": "rec-billstatus-hr8205-119-20260709",
+  "content": "<other>: H.R. 8205 (119th Congress): Accelerating Access to Critical Therapies for ALS Reauthorization Act of 2026\nCosponsor: Rep. Carol D. Miller\nCosponsor: Rep. Jahana Hayes\nCosponsor: Rep. George Latimer\nCosponsor: Rep. Donald G. Davis\nCosponsor: Rep. Sarah McBride\nCosponsor: Rep. Josh Riley\nCosponsor: Rep. Herbert C. Conaway, Jr.\nCosponsor: Rep. Melanie A. Stansbury\nCosponsor: Rep. Deborah K. Ross\nCosponsor: Rep. Chellie Pingree\nCosponsor: Rep. James A. Himes\nCosponsor: Rep. Bonnie Watson Coleman\nCosponsor: Rep. Sean Casten\nCosponsor: Rep. Greg Landsman\nCosponsor: Rep. Adelita S. Grijalva\nCosponsor: Rep. Analilia Mejia\nCosponsor: Rep. John B. Larson\nCosponsor: Rep. Eric Sorensen\nCosponsor: Rep. Scott H. Peters\nCosponsor: Rep. Jonathan L. Jackson\nCosponsor: Rep. Alma S. Adams\nCosponsor: Rep. Nikki Budzinski\nCosponsor: Rep. Joyce Beatty\nCosponsor: Rep. Seth Magaziner\nCosponsor: Rep. Marcy Kaptur\nCosponsor: Rep. Troy A. Carter\nCosponsor: Rep. Thomas R. Suozzi\nCosponsor: Rep. Mary Gay Scanlon\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/8205",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/8205",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-07-09",
+    "persons": [
+      "M001205",
+      "H001081",
+      "L000606",
+      "D000230",
+      "M001238",
+      "R000622",
+      "C001136",
+      "S001218",
+      "R000305",
+      "P000597",
+      "H001047",
+      "W000822",
+      "C001117",
+      "L000601",
+      "G000606",
+      "M001246",
+      "L000557",
+      "S001225",
+      "P000608",
+      "J000309",
+      "A000370",
+      "B001315",
+      "B001281",
+      "M001223",
+      "K000009",
+      "C001125",
+      "S001201",
+      "S001205"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/8205"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

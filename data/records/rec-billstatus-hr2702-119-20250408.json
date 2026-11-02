@@ -1,0 +1,39 @@
+{
+  "id": "rec-billstatus-hr2702-119-20250408",
+  "content": "<other>: H.R. 2702 (119th Congress): FIRM Act\nSponsor: Rep. Andy Barr\nCosponsor: Rep. Ritchie Torres\nCosponsor: Rep. Lisa C. McClain\nCosponsor: Rep. Frank D. Lucas\nCosponsor: Rep. Barry Loudermilk\nCosponsor: Rep. John W. Rose\nCosponsor: Rep. Ann Wagner\nCosponsor: Rep. Marlin A. Stutzman\nCosponsor: Rep. William R. Timmons IV\nCosponsor: Rep. Scott Fitzgerald\nCosponsor: Rep. Tim Moore\nCosponsor: Rep. Mark B. Messmer\nCosponsor: Rep. Andrew Ogles\nCosponsor: Rep. Troy Downing\nCosponsor: Rep. Pete Sessions\nCosponsor: Rep. Doug LaMalfa\nCosponsor: Rep. Glenn Grothman\nSponsor: Rep. Andy Barr\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2702",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2702",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-04-08",
+    "persons": [
+      "B001282",
+      "T000486",
+      "M001136",
+      "L000491",
+      "L000583",
+      "R000612",
+      "W000812",
+      "S001188",
+      "T000480",
+      "F000471",
+      "M001236",
+      "M001233",
+      "O000175",
+      "D000634",
+      "S000250",
+      "L000578",
+      "G000576",
+      "B001282"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2702"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

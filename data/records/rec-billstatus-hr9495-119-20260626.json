@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr9495-119-20260626",
+  "content": "<other>: H.R. 9495 (119th Congress): Department of Defense Appropriations Act, 2027\nSponsor: Rep. Ken Calvert\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/9495",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/9495",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-06-26",
+    "persons": [
+      "C000059"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/9495"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -26,8 +26,8 @@ const DRY = args.includes("--dry");
 if (existsSync(resolve(ROOT, ".env"))) for (const line of readFileSync(resolve(ROOT, ".env"), "utf8").split(/\r?\n/)) {
   const m = /^([A-Z0-9_]+)=(.*)$/.exec(line.trim()); if (m && !process.env[m[1]]) process.env[m[1]] = m[2];
 }
-const KEY = process.env.MODEL_API_KEY;
-if (!KEY) { console.error("MODEL_API_KEY missing (put it in .env)"); process.exit(1); }
+const KEY = process.env.MUSE_API_KEY || process.env.MODEL_API_KEY;
+if (!KEY) { console.error("MUSE_API_KEY missing (put it in .env)"); process.exit(1); }
 
 const load = f => JSON.parse(readFileSync(resolve(DATA, f), "utf8"));
 const people = load("people.json").people, issues = load("issues.json").issues, taxonomy = load("taxonomy.json").committees, stances = load("stances.json").stances;

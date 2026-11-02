@@ -1,0 +1,66 @@
+{
+  "record_id": "rec-2025-05-19-crpt-119hrpt103-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:26:30.137Z",
+  "accepted": [
+    {
+      "person": "T000472",
+      "issue": "veterans-health-care",
+      "date": "2025-05-19",
+      "score": 0.7,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "While Democratic members appreciate the importance of the Staff Sergeant Parker Gordon Fox Suicide Prevention grant program in VA's overall suicide prevention strategy and generally support reauthorizing the program",
+      "bill": "H.R. 1969, No Wrong Door for Veterans Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt103/html/CRPT-119hrpt103.htm",
+      "record_id": "rec-2025-05-19-crpt-119hrpt103-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote expresses general support for reauthorizing the suicide prevention grant program."
+    },
+    {
+      "person": "T000472",
+      "issue": "veterans-health-care",
+      "date": "2025-05-19",
+      "score": -0.8,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "Specifically, we oppose language that would add ``health care providers'' as eligible grantees.",
+      "bill": "H.R. 1969, No Wrong Door for Veterans Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt103/html/CRPT-119hrpt103.htm",
+      "record_id": "rec-2025-05-19-crpt-119hrpt103-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote explicitly opposes expanding grant eligibility to health care providers."
+    },
+    {
+      "person": "T000472",
+      "issue": "va-operations-and-oversight",
+      "date": "2025-05-19",
+      "score": 0.7,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats agree that we must ensure grantees use the same protocol to conduct both baseline- and post-service mental health screenings of program participants to properly evaluate the effectiveness of this program.",
+      "bill": "H.R. 1969, No Wrong Door for Veterans Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt103/html/CRPT-119hrpt103.htm",
+      "record_id": "rec-2025-05-19-crpt-119hrpt103-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote supports requiring consistent screening protocols to enable program evaluation and oversight."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2660,
+    "prompt_tokens": 3967,
+    "total_tokens": 6627,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2321
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

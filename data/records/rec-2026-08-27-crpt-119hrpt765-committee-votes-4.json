@@ -1,0 +1,63 @@
+{
+  "id": "rec-2026-08-27-crpt-119hrpt765-committee-votes-4",
+  "content": "<other>: On: In compliance with the Rules of the House of Representatives, the following statement is made concerning the vote of the Committee on Ways and Means during the markup consideration of H.R. 9772, the ``Foreign Funding Transparency Act'' on July 22, 2026. H.R. 9772 was ordered favorably reported to th. Yea 23. Nay 18.\nMr. Smith (MO): yea\nMr. Neal: nay\nMr. Buchanan: not voting\nMr. Doggett: nay\nMr. Smith (NE): yea\nMr. Thompson: nay\nMr. Kelly: yea\nMr. Larson: nay\nMr. Schweikert: yea\nMr. Davis: nay\nMr. LaHood: yea\nMs. Sanchez: nay\nMr. Arrington: yea\nMs. Sewell: nay\nMr. Estes: yea\nMs. DelBene: nay\nMr. Smucker: yea\nMs. Chu: nay\nMr. Hern: yea\nMs. Moore (WI): nay\nMrs. Miller (WV): yea\nMr. Boyle: nay\nDr. Murphy: not voting\nMr. Beyer: nay\nMr. Kustoff: yea\nMr. Evans: nay\nMr. Fitzpatrick: yea\nMr. Schneider: nay\nMr. Steube: yea\nMr. Panetta: nay\nMs. Tenney: yea\nMr. Gomez: nay\nMrs. Fischbach: yea\nMr. Horsford: nay\nMr. Moore (UT): yea\nMs. Plaskett: not voting\nMs. Van Duyne: not voting\nMr. Suozzi: nay\nMr. Feenstra: yea\nMs. Malliotakis: yea\nMr. Carey: yea\nMr. Yakym: yea\nMr. Miller (OH): yea\nMr. Bean: yea\nMr. Moran: yea",
+  "source": {
+    "url_link": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt765/html/CRPT-119hrpt765.htm",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-07-22",
+    "persons": [
+      "S001195",
+      "N000015",
+      "B001260",
+      "D000399",
+      "S001172",
+      "T000460",
+      "K000376",
+      "L000557",
+      "S001183",
+      "D000096",
+      "L000585",
+      "S001156",
+      "A000375",
+      "S001185",
+      "E000298",
+      "D000617",
+      "S001199",
+      "C001080",
+      "H001082",
+      "M001160",
+      "M001205",
+      "B001296",
+      "M001210",
+      "B001292",
+      "K000392",
+      "E000296",
+      "F000466",
+      "S001190",
+      "S001214",
+      "P000613",
+      "T000478",
+      "G000585",
+      "F000470",
+      "H001066",
+      "M001213",
+      "P000610",
+      "V000134",
+      "S001201",
+      "F000446",
+      "M000317",
+      "C001126",
+      "Y000067",
+      "M001222",
+      "B001314",
+      "M001224"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/9772"
+    ]
+  }
+}

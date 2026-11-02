@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr301-119-20250109",
+  "content": "<other>: H.R. 301 (119th Congress): GEO Act\nSponsor: Rep. Celeste Maloy\nSponsor: Rep. Celeste Maloy\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/301",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/301",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-01-09",
+    "persons": [
+      "M001228",
+      "M001228"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/301"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

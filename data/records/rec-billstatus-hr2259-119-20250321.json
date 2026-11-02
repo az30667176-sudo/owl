@@ -1,0 +1,29 @@
+{
+  "id": "rec-billstatus-hr2259-119-20250321",
+  "content": "<other>: H.R. 2259 (119th Congress): National Strategy for School Security Act of 2025\nSponsor: Rep. Tony Gonzales\nCosponsor: Rep. Josh Gottheimer\nCosponsor: Rep. Michael Lawler\nCosponsor: Rep. Jared Moskowitz\nCosponsor: Rep. Gabe Evans\nCosponsor: Rep. Donald G. Davis\nCosponsor: Rep. Don Bacon\nCosponsor: Rep. Brian K. Fitzpatrick\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2259",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2259",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-21",
+    "persons": [
+      "G000594",
+      "G000583",
+      "L000599",
+      "M001217",
+      "E000300",
+      "D000230",
+      "B001298",
+      "F000466"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2259"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

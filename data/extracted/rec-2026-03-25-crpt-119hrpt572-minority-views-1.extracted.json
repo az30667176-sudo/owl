@@ -1,0 +1,141 @@
+{
+  "record_id": "rec-2026-03-25-crpt-119hrpt572-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:30:27.286Z",
+  "accepted": [
+    {
+      "person": "W000187",
+      "issue": "securities-and-capital-markets",
+      "date": "2026-03-25",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "H.R. 4171 is currently opposed by the North American Securities Administrators Association (NASAA) opposes this bill, and notably, was opposed in the 118th Congress by NASAA, along with the Consumer Federation of America (CFA), Americans for Financial Reform (AFR), Public Citizen, the Council of Institution Investors (CII), and the Center for American Progress. For these reasons, we oppose H.R. 4171.",
+      "bill": "H.R. 4171",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt572/html/CRPT-119hrpt572.htm",
+      "record_id": "rec-2026-03-25-crpt-119hrpt572-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers state opposition to H.R. 4171 which would create a micro-offering securities exemption without disclosure requirements."
+    },
+    {
+      "person": "V000081",
+      "issue": "securities-and-capital-markets",
+      "date": "2026-03-25",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "H.R. 4171 is currently opposed by the North American Securities Administrators Association (NASAA) opposes this bill, and notably, was opposed in the 118th Congress by NASAA, along with the Consumer Federation of America (CFA), Americans for Financial Reform (AFR), Public Citizen, the Council of Institution Investors (CII), and the Center for American Progress. For these reasons, we oppose H.R. 4171.",
+      "bill": "H.R. 4171",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt572/html/CRPT-119hrpt572.htm",
+      "record_id": "rec-2026-03-25-crpt-119hrpt572-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers state opposition to H.R. 4171 which would create a micro-offering securities exemption without disclosure requirements."
+    },
+    {
+      "person": "S000344",
+      "issue": "securities-and-capital-markets",
+      "date": "2026-03-25",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "H.R. 4171 is currently opposed by the North American Securities Administrators Association (NASAA) opposes this bill, and notably, was opposed in the 118th Congress by NASAA, along with the Consumer Federation of America (CFA), Americans for Financial Reform (AFR), Public Citizen, the Council of Institution Investors (CII), and the Center for American Progress. For these reasons, we oppose H.R. 4171.",
+      "bill": "H.R. 4171",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt572/html/CRPT-119hrpt572.htm",
+      "record_id": "rec-2026-03-25-crpt-119hrpt572-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers state opposition to H.R. 4171 which would create a micro-offering securities exemption without disclosure requirements."
+    },
+    {
+      "person": "G000553",
+      "issue": "securities-and-capital-markets",
+      "date": "2026-03-25",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "H.R. 4171 is currently opposed by the North American Securities Administrators Association (NASAA) opposes this bill, and notably, was opposed in the 118th Congress by NASAA, along with the Consumer Federation of America (CFA), Americans for Financial Reform (AFR), Public Citizen, the Council of Institution Investors (CII), and the Center for American Progress. For these reasons, we oppose H.R. 4171.",
+      "bill": "H.R. 4171",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt572/html/CRPT-119hrpt572.htm",
+      "record_id": "rec-2026-03-25-crpt-119hrpt572-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers state opposition to H.R. 4171 which would create a micro-offering securities exemption without disclosure requirements."
+    },
+    {
+      "person": "F000454",
+      "issue": "securities-and-capital-markets",
+      "date": "2026-03-25",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "H.R. 4171 is currently opposed by the North American Securities Administrators Association (NASAA) opposes this bill, and notably, was opposed in the 118th Congress by NASAA, along with the Consumer Federation of America (CFA), Americans for Financial Reform (AFR), Public Citizen, the Council of Institution Investors (CII), and the Center for American Progress. For these reasons, we oppose H.R. 4171.",
+      "bill": "H.R. 4171",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt572/html/CRPT-119hrpt572.htm",
+      "record_id": "rec-2026-03-25-crpt-119hrpt572-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers state opposition to H.R. 4171 which would create a micro-offering securities exemption without disclosure requirements."
+    },
+    {
+      "person": "B001281",
+      "issue": "securities-and-capital-markets",
+      "date": "2026-03-25",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "H.R. 4171 is currently opposed by the North American Securities Administrators Association (NASAA) opposes this bill, and notably, was opposed in the 118th Congress by NASAA, along with the Consumer Federation of America (CFA), Americans for Financial Reform (AFR), Public Citizen, the Council of Institution Investors (CII), and the Center for American Progress. For these reasons, we oppose H.R. 4171.",
+      "bill": "H.R. 4171",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt572/html/CRPT-119hrpt572.htm",
+      "record_id": "rec-2026-03-25-crpt-119hrpt572-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers state opposition to H.R. 4171 which would create a micro-offering securities exemption without disclosure requirements."
+    },
+    {
+      "person": "V000130",
+      "issue": "securities-and-capital-markets",
+      "date": "2026-03-25",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "H.R. 4171 is currently opposed by the North American Securities Administrators Association (NASAA) opposes this bill, and notably, was opposed in the 118th Congress by NASAA, along with the Consumer Federation of America (CFA), Americans for Financial Reform (AFR), Public Citizen, the Council of Institution Investors (CII), and the Center for American Progress. For these reasons, we oppose H.R. 4171.",
+      "bill": "H.R. 4171",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt572/html/CRPT-119hrpt572.htm",
+      "record_id": "rec-2026-03-25-crpt-119hrpt572-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers state opposition to H.R. 4171 which would create a micro-offering securities exemption without disclosure requirements."
+    },
+    {
+      "person": "G000587",
+      "issue": "securities-and-capital-markets",
+      "date": "2026-03-25",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "H.R. 4171 is currently opposed by the North American Securities Administrators Association (NASAA) opposes this bill, and notably, was opposed in the 118th Congress by NASAA, along with the Consumer Federation of America (CFA), Americans for Financial Reform (AFR), Public Citizen, the Council of Institution Investors (CII), and the Center for American Progress. For these reasons, we oppose H.R. 4171.",
+      "bill": "H.R. 4171",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt572/html/CRPT-119hrpt572.htm",
+      "record_id": "rec-2026-03-25-crpt-119hrpt572-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers state opposition to H.R. 4171 which would create a micro-offering securities exemption without disclosure requirements."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 3059,
+    "prompt_tokens": 2977,
+    "total_tokens": 6036,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1638
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

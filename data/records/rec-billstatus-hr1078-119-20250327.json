@@ -1,0 +1,26 @@
+{
+  "id": "rec-billstatus-hr1078-119-20250327",
+  "content": "<other>: H.R. 1078 (119th Congress): Respect State Housing Laws Act\nCosponsor: Rep. Charles J. \"Chuck\" Fleischmann\nCosponsor: Rep. Darren Soto\nCosponsor: Rep. Scott Fitzgerald\nCosponsor: Rep. Joe Wilson\nCosponsor: Rep. Daniel Webster\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1078",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1078",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-27",
+    "persons": [
+      "F000459",
+      "S001200",
+      "F000471",
+      "W000795",
+      "W000806"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1078"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

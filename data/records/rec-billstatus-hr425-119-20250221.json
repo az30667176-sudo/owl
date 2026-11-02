@@ -1,0 +1,25 @@
+{
+  "id": "rec-billstatus-hr425-119-20250221",
+  "content": "<other>: H.R. 425 (119th Congress): Repealing Big Brother Overreach Act\nCosponsor: Rep. Dan Newhouse\nCosponsor: Rep. Nathaniel Moran\nCosponsor: Rep. Tim Moore\nCosponsor: Rep. John R. Carter\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/425",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/425",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-21",
+    "persons": [
+      "N000189",
+      "M001224",
+      "M001236",
+      "C001051"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/425"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

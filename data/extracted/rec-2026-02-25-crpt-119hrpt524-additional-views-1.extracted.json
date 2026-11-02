@@ -1,0 +1,62 @@
+{
+  "record_id": "rec-2026-02-25-crpt-119hrpt524-additional-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:13:40.123Z",
+  "accepted": [
+    {
+      "person": "S000185",
+      "issue": "professional-boxing-health-and-safety",
+      "date": "2026-02-25",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Establishing a right for boxers under contract with a UBO to be able to challenge an assigned opponent that a boxer believes to be an unsafe mismatch.",
+      "bill": "H.R. 4624, the Muhammad Ali American Boxing Revival Act (MAABRA)",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt524/html/CRPT-119hrpt524-pt1.htm",
+      "record_id": "rec-2026-02-25-crpt-119hrpt524-additional-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage proposes creating a boxer right to challenge unsafe matchups as a further improvement to the bill."
+    },
+    {
+      "person": "S000185",
+      "issue": "professional-boxing-boxer-pay-and-benefits",
+      "date": "2026-02-25",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Indexing the minimum insurance premiums and bout payments to inflation.",
+      "bill": "H.R. 4624, the Muhammad Ali American Boxing Revival Act (MAABRA)",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt524/html/CRPT-119hrpt524-pt1.htm",
+      "record_id": "rec-2026-02-25-crpt-119hrpt524-additional-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage proposes indexing minimum insurance and bout payments to inflation as a further improvement to the bill."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "professional-boxing-health-and-safety",
+      "name": "Professional Boxing Health and Safety",
+      "parent": "hsed-protections"
+    },
+    {
+      "id": "professional-boxing-boxer-pay-and-benefits",
+      "name": "Professional Boxing Boxer Pay and Benefits",
+      "parent": "hsed-protections"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 3206,
+    "prompt_tokens": 4969,
+    "total_tokens": 8175,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2950
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "finish_reason": "stop"
+}

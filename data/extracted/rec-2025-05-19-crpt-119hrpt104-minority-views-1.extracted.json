@@ -1,0 +1,51 @@
+{
+  "record_id": "rec-2025-05-19-crpt-119hrpt104-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:26:50.061Z",
+  "accepted": [
+    {
+      "person": "T000472",
+      "issue": "veterans-housing-and-loans",
+      "date": "2025-05-19",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "Democratic Members of the Committee continue to call on VA to reinstate VASP\\6\\ (at least in the interim and until an alternative program is offered) and offer the program to these tens of thousands of borrowers.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt104/html/CRPT-119hrpt104.htm",
+      "record_id": "rec-2025-05-19-crpt-119hrpt104-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote calls for reinstating the VASP foreclosure-prevention program for delinquent VA borrowers."
+    },
+    {
+      "person": "T000472",
+      "issue": "veterans-housing-and-loans",
+      "date": "2025-05-19",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats recommend that the House Budget Committee not require further offsets for Fiscal Year 2027.",
+      "bill": "H.R. 1815 as amended",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt104/html/CRPT-119hrpt104.htm",
+      "record_id": "rec-2025-05-19-crpt-119hrpt104-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote supports continued grant per diem funding for homeless veteran providers without requiring an additional offset."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2067,
+    "prompt_tokens": 3871,
+    "total_tokens": 5938,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1796
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

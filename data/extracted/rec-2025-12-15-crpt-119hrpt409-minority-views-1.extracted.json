@@ -1,0 +1,111 @@
+{
+  "record_id": "rec-2025-12-15-crpt-119hrpt409-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:08:22.959Z",
+  "accepted": [
+    {
+      "person": "S000185",
+      "issue": "health-programs-and-research",
+      "date": "2025-12-15",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "This legislation would put comprehensive and affordable health care coverage for small businesses and workers at risk, create loopholes that undermine critical consumer protections, and raise costs across the broader health insurance market.",
+      "bill": "H.R. 2528, the Association Health Plans Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt409/html/CRPT-119hrpt409.htm",
+      "record_id": "rec-2025-12-15-crpt-119hrpt409-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage opposes the bill on grounds it threatens affordable comprehensive coverage, indicating support for health programs and protections."
+    },
+    {
+      "person": "C001069",
+      "issue": "health-programs-and-research",
+      "date": "2025-12-15",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "This legislation would put comprehensive and affordable health care coverage for small businesses and workers at risk, create loopholes that undermine critical consumer protections, and raise costs across the broader health insurance market.",
+      "bill": "H.R. 2528, the Association Health Plans Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt409/html/CRPT-119hrpt409.htm",
+      "record_id": "rec-2025-12-15-crpt-119hrpt409-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage opposes the bill on grounds it threatens affordable comprehensive coverage, indicating support for health programs and protections."
+    },
+    {
+      "person": "W000808",
+      "issue": "health-programs-and-research",
+      "date": "2025-12-15",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "This legislation would put comprehensive and affordable health care coverage for small businesses and workers at risk, create loopholes that undermine critical consumer protections, and raise costs across the broader health insurance market.",
+      "bill": "H.R. 2528, the Association Health Plans Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt409/html/CRPT-119hrpt409.htm",
+      "record_id": "rec-2025-12-15-crpt-119hrpt409-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage opposes the bill on grounds it threatens affordable comprehensive coverage, indicating support for health programs and protections."
+    },
+    {
+      "person": "B001278",
+      "issue": "health-programs-and-research",
+      "date": "2025-12-15",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "This legislation would put comprehensive and affordable health care coverage for small businesses and workers at risk, create loopholes that undermine critical consumer protections, and raise costs across the broader health insurance market.",
+      "bill": "H.R. 2528, the Association Health Plans Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt409/html/CRPT-119hrpt409.htm",
+      "record_id": "rec-2025-12-15-crpt-119hrpt409-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage opposes the bill on grounds it threatens affordable comprehensive coverage, indicating support for health programs and protections."
+    },
+    {
+      "person": "D000623",
+      "issue": "health-programs-and-research",
+      "date": "2025-12-15",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "This legislation would put comprehensive and affordable health care coverage for small businesses and workers at risk, create loopholes that undermine critical consumer protections, and raise costs across the broader health insurance market.",
+      "bill": "H.R. 2528, the Association Health Plans Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt409/html/CRPT-119hrpt409.htm",
+      "record_id": "rec-2025-12-15-crpt-119hrpt409-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage opposes the bill on grounds it threatens affordable comprehensive coverage, indicating support for health programs and protections."
+    },
+    {
+      "person": "G000606",
+      "issue": "health-programs-and-research",
+      "date": "2025-12-15",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "This legislation would put comprehensive and affordable health care coverage for small businesses and workers at risk, create loopholes that undermine critical consumer protections, and raise costs across the broader health insurance market.",
+      "bill": "H.R. 2528, the Association Health Plans Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt409/html/CRPT-119hrpt409.htm",
+      "record_id": "rec-2025-12-15-crpt-119hrpt409-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage opposes the bill on grounds it threatens affordable comprehensive coverage, indicating support for health programs and protections."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2914,
+    "prompt_tokens": 5128,
+    "total_tokens": 8042,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2157
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

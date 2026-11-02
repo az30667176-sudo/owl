@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr1731-119-20250227",
+  "content": "<other>: H.R. 1731 (119th Congress): Standard FEES Act\nSponsor: Rep. Gary J. Palmer\nCosponsor: Rep. Patrick Ryan\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1731",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1731",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-27",
+    "persons": [
+      "P000609",
+      "R000579"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1731"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

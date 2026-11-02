@@ -1,0 +1,96 @@
+{
+  "record_id": "rec-2026-01-21-crpt-119hrpt460-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:11:00.915Z",
+  "accepted": [
+    {
+      "person": "S000185",
+      "issue": "higher-education-and-student-aid",
+      "date": "2026-01-21",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Ideally these financial aid packages would be presented in a format that is standardized, allowing students to easily compare aid packages between institutions.",
+      "bill": "H.R. 6502, the College Financial Aid Clarity Act of 2025",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt460/html/CRPT-119hrpt460.htm",
+      "record_id": "rec-2026-01-21-crpt-119hrpt460-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote expresses support for standardized financial aid offer letters to enable comparison."
+    },
+    {
+      "person": "W000808",
+      "issue": "higher-education-and-student-aid",
+      "date": "2026-01-21",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Ideally these financial aid packages would be presented in a format that is standardized, allowing students to easily compare aid packages between institutions.",
+      "bill": "H.R. 6502, the College Financial Aid Clarity Act of 2025",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt460/html/CRPT-119hrpt460.htm",
+      "record_id": "rec-2026-01-21-crpt-119hrpt460-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote expresses support for standardized financial aid offer letters to enable comparison."
+    },
+    {
+      "person": "B001278",
+      "issue": "higher-education-and-student-aid",
+      "date": "2026-01-21",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Ideally these financial aid packages would be presented in a format that is standardized, allowing students to easily compare aid packages between institutions.",
+      "bill": "H.R. 6502, the College Financial Aid Clarity Act of 2025",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt460/html/CRPT-119hrpt460.htm",
+      "record_id": "rec-2026-01-21-crpt-119hrpt460-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote expresses support for standardized financial aid offer letters to enable comparison."
+    },
+    {
+      "person": "D000623",
+      "issue": "higher-education-and-student-aid",
+      "date": "2026-01-21",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Ideally these financial aid packages would be presented in a format that is standardized, allowing students to easily compare aid packages between institutions.",
+      "bill": "H.R. 6502, the College Financial Aid Clarity Act of 2025",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt460/html/CRPT-119hrpt460.htm",
+      "record_id": "rec-2026-01-21-crpt-119hrpt460-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote expresses support for standardized financial aid offer letters to enable comparison."
+    },
+    {
+      "person": "H001081",
+      "issue": "higher-education-and-student-aid",
+      "date": "2026-01-21",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Ideally these financial aid packages would be presented in a format that is standardized, allowing students to easily compare aid packages between institutions.",
+      "bill": "H.R. 6502, the College Financial Aid Clarity Act of 2025",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt460/html/CRPT-119hrpt460.htm",
+      "record_id": "rec-2026-01-21-crpt-119hrpt460-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote expresses support for standardized financial aid offer letters to enable comparison."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1702,
+    "prompt_tokens": 4956,
+    "total_tokens": 6658,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1134
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

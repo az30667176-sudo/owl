@@ -1,0 +1,24 @@
+{
+  "id": "rec-billstatus-hr2225-119-20250321",
+  "content": "<other>: H.R. 2225 (119th Congress): Access to Small Business Investor Capital Act\nCosponsor: Rep. David Scott\nCosponsor: Rep. Daniel Meuser\nCosponsor: Rep. Cleo Fields\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2225",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2225",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-21",
+    "persons": [
+      "S001157",
+      "M001204",
+      "F000110"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2225"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

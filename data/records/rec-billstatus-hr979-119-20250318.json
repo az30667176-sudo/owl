@@ -1,0 +1,35 @@
+{
+  "id": "rec-billstatus-hr979-119-20250318",
+  "content": "<other>: H.R. 979 (119th Congress): AM Radio for Every Vehicle Act of 2025\nCosponsor: Rep. Ryan K. Zinke\nCosponsor: Rep. Sanford D. Bishop, Jr.\nCosponsor: Rep. David Scott\nCosponsor: Rep. Mike Collins\nCosponsor: Rep. Pat Harrigan\nCosponsor: Rep. Chuck Edwards\nCosponsor: Rep. Cliff Bentz\nCosponsor: Rep. Alma S. Adams\nCosponsor: Rep. Kathy Castor\nCosponsor: Rep. Thomas H. Kean, Jr.\nCosponsor: Rep. Glenn Thompson\nCosponsor: Rep. Nikema Williams\nCosponsor: Rep. Maria Elvira Salazar\nCosponsor: Rep. Sarah McBride\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/979",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/979",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-18",
+    "persons": [
+      "Z000018",
+      "B000490",
+      "S001157",
+      "C001129",
+      "H001101",
+      "E000246",
+      "B000668",
+      "A000370",
+      "C001066",
+      "K000398",
+      "T000467",
+      "W000788",
+      "S000168",
+      "M001238"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/979"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

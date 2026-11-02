@@ -1,0 +1,81 @@
+{
+  "record_id": "rec-2026-01-07-crpt-119hrpt426-additional-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:29:47.583Z",
+  "accepted": [
+    {
+      "person": "N000015",
+      "issue": "treasury-oversight",
+      "date": "2026-01-07",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "By permanently requiring SSA to share its death records with the Department of Treasury's Do Not Pay system, H.R. 2716 will help prevent improper payments in other Federal programs-- a goal Ways and Means Democrats support.",
+      "bill": "H.R. 2716",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt426/html/CRPT-119hrpt426.htm",
+      "record_id": "rec-2026-01-07-crpt-119hrpt426-additional-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage explicitly states support for using Do Not Pay death-record sharing to prevent improper payments."
+    },
+    {
+      "person": "N000015",
+      "issue": "social-security",
+      "date": "2026-01-07",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "It is appalling that the Trump Administration's unconscionable weaponization of Social Security necessitates this provision, listing thousands of living people as dead in SSA's death records, threatening their financial livelihood and their ability to pursue the American dream. SSA must abide by this new prohibition.",
+      "bill": "H.R. 2716",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt426/html/CRPT-119hrpt426.htm",
+      "record_id": "rec-2026-01-07-crpt-119hrpt426-additional-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage endorses the prohibition on recording a death without evidence the individual is deceased."
+    },
+    {
+      "person": "N000015",
+      "issue": "federal-it-and-cybersecurity",
+      "date": "2026-01-07",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Ways and Means Democrats are fighting to protect Americans from having their personal Social Security information exploited, politicized, or bought and sold to the highest bidder.",
+      "bill": "H.R. 2716",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt426/html/CRPT-119hrpt426.htm",
+      "record_id": "rec-2026-01-07-crpt-119hrpt426-additional-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage states support for protecting confidential Social Security data from exploitation and politicization."
+    },
+    {
+      "person": "N000015",
+      "issue": "election-administration",
+      "date": "2026-01-07",
+      "score": -0.7,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The sweeping agreement allows the use of SSA data to check voters' citizenship, despite the fact that SSA's files include out-of-date, incomplete citizenship information (especially for naturalized citizens)",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt426/html/CRPT-119hrpt426.htm",
+      "record_id": "rec-2026-01-07-crpt-119hrpt426-additional-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage opposes using SSA records for voter citizenship checks because the data are incomplete and out-of-date."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 3020,
+    "prompt_tokens": 2953,
+    "total_tokens": 5973,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2474
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

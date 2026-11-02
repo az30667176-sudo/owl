@@ -1,0 +1,24 @@
+{
+  "id": "rec-billstatus-hr2267-119-20250321",
+  "content": "<other>: H.R. 2267 (119th Congress): NICS Data Reporting Act of 2026\nSponsor: Rep. Thomas Massie\nCosponsor: Rep. Ben Cline\nCosponsor: Rep. Victoria Spartz\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2267",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2267",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-21",
+    "persons": [
+      "M001184",
+      "C001118",
+      "S000929"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2267"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

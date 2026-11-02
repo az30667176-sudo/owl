@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr5291-119-20250915",
+  "content": "<other>: H.R. 5291 (119th Congress): Merchant Banking Modernization Act\nCosponsor: Rep. Josh Gottheimer\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/5291",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/5291",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-09-15",
+    "persons": [
+      "G000583"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/5291"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

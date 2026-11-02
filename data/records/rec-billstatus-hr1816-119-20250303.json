@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr1816-119-20250303",
+  "content": "<other>: H.R. 1816 (119th Congress): WOSB Accountability Act\nSponsor: Rep. Nydia M. Velázquez\nCosponsor: Rep. Nick LaLota\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1816",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1816",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-03",
+    "persons": [
+      "V000081",
+      "L000598"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1816"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

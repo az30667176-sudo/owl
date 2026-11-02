@@ -1,0 +1,24 @@
+{
+  "id": "rec-billstatus-hr4323-119-20250812",
+  "content": "<other>: H.R. 4323 (119th Congress): Trafficking Survivors Relief Act\nCosponsor: Rep. Debbie Dingell\nCosponsor: Rep. John H. Rutherford\nCosponsor: Rep. Keith Self\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/4323",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/4323",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-08-12",
+    "persons": [
+      "D000624",
+      "R000609",
+      "S001224"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/4323"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

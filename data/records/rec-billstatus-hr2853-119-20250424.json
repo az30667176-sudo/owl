@@ -1,0 +1,28 @@
+{
+  "id": "rec-billstatus-hr2853-119-20250424",
+  "content": "<other>: H.R. 2853 (119th Congress): Combating Organized Retail Crime Act of 2025\nCosponsor: Rep. Lance Gooden\nCosponsor: Rep. Carol D. Miller\nCosponsor: Rep. Scott H. Peters\nCosponsor: Rep. Pete Stauber\nCosponsor: Rep. Claudia Tenney\nCosponsor: Rep. Daniel Webster\nCosponsor: Rep. Scott DesJarlais\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2853",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2853",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-04-24",
+    "persons": [
+      "G000589",
+      "M001205",
+      "P000608",
+      "S001212",
+      "T000478",
+      "W000806",
+      "D000616"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2853"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

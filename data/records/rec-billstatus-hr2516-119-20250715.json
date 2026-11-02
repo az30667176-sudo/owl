@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr2516-119-20250715",
+  "content": "<other>: H.R. 2516 (119th Congress): Accreditation for College Excellence Act of 2025\nCosponsor: Rep. Randy Fine\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2516",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2516",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-07-15",
+    "persons": [
+      "F000484"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2516"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

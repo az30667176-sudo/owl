@@ -1,0 +1,28 @@
+{
+  "id": "rec-2026-09-01-crpt-119hrpt787-minority-views-1",
+  "content": "<Rep. Maxine Waters, Rep. Brad Sherman, Rep. Stephen F. Lynch, Rep. Bill Foster, Rep. Joyce Beatty, Rep. Rashida Tlaib, Rep. Sylvia R. Garcia, Rep. Cleo Fields>: This bill prohibits securities exchanges and members of exchanges from collecting or providing personally identifiable information (``PII'') data when complying with the Consolidated Audit Trail or ``CAT.'' The CAT was born partially out of the 2010 ``Flash Crash'' when markets plunged and then recovered inside the space of an hour, due primarily to aggressive selling orders executed by high-frequency trading algorithms that triggered a massive decline in market prices, temporarily erasing almost $1 trillion in market value. In the aftermath of this crash, the SEC adopted Rule 613 to create the CAT so that regulators would have a means to efficiently and accurately track activity throughout U.S. securities markets, and to ensure that regulators would be able to quickly access data they need to analyze market activity in response to major market events. According to Rule 613, the CAT's primary purpose is to expand the data available for regulators to reconstruct market animalities (such as the Flash Crash) and perform surveillance and investigations for illegal activities such as insider trading, wash sales, or manipulative practices. Rule 613 was finalized in 2012, and after nearly a decade of consideration of the plans put forth by SROs, the CAT database was largely implemented in 2021.\nSince its implementation, the CAT has enabled SEC staff to better understand the variables that lead to market volatility and investor harm, and the use of PII helps it to more quickly detect wrongdoing. PII also helps the agency to identify bad actors that the agency can then levy civil and administrative actions against, which in turn can reimburse investors for their losses. It is important to also note that this information is already routinely collected by registered broker-dealers, so the collection of this data is not new or onerous. The SEC has sophisticated systems and procedures in place to limit access to secure the sensitive data in CAT and significantly restricts the staff that may access this data.\nThe CAT is now needed more than ever, especially given the multiple market manipulative actions of the President\\20\\ and his decision to sell his market moving announcements through Truth Social to those who could use it to front-run investors and further manipulate the market.\\21\\ CAT will be critical, if not the only, tool at the hands of the SEC to deter, investigate, detect, and punish fraud including fraud related to the President's actions.\nThe scope of PII included in CAT has been narrowed significantly since implementation. In 2020, the SEC excluded from CAT the use of actual social security numbers (SSNs), Individual Taxpayer Identification Number (ITINs), and full birth dates. In 2025, the SEC issued an exemptive order further restricting the use of names, addresses, and birth years for U.S. persons. This bill would not only make the exemptive order permanent, it would extend the prohibition to all PII, including widely available information, such as that typically listed in a phone book (name, address, phone number), as well as valuable, anonymized information like IP addresses. This bill would therefore effectively eliminate CAT as a tool for identifying insider trading and market manipulation at the SEC. It would force the SEC to rely solely on piecemeal investigatory methods, such as subpoenas. Because the SEC already has in place means to limit access to sensitive PII, and because this data is already collected by registered broker-dealers, this bill does not effectively balance investors' privacy with the crucial need of the SEC to maintain safe and orderly markets and to safeguard them from manipulation and insider trading.\nFor these reasons, we oppose H.R. 1483.\nSincerely,\nMaxine Waters,\nRanking Member.\nBrad Sherman,\nStephen F. Lynch,\nBill Foster,\nJoyce Beatty,\nRashida Tlaib,\nSylvia R. Garcia,\nCleo Fields,\nMembers of Congress.",
+  "source": {
+    "url_link": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt787/html/CRPT-119hrpt787.htm",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-09-01",
+    "persons": [
+      "W000187",
+      "S000344",
+      "L000562",
+      "F000454",
+      "B001281",
+      "T000481",
+      "G000587",
+      "F000110"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1483",
+      "https://www.congress.gov/bill/119th-congress/house-bill/2039",
+      "https://www.congress.gov/bill/119th-congress/house-bill/4551"
+    ]
+  }
+}

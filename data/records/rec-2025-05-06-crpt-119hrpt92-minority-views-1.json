@@ -1,0 +1,33 @@
+{
+  "id": "rec-2025-05-06-crpt-119hrpt92-minority-views-1",
+  "content": "<Rep. Maxine Waters, Rep. Nydia M. Velázquez, Rep. Brad Sherman, Rep. David Scott, Rep. Stephen F. Lynch, Rep. Al Green, Rep. Emanuel Cleaver, Rep. Bill Foster, Rep. Joyce Beatty, Rep. Juan Vargas, Rep. Ayanna Pressley, Rep. Rashida Tlaib, Rep. Sylvia R. Garcia, Rep. Nikema Williams>: H.R. 1919 would immediately halt and prohibit the United States from exploring the potential benefits of a central bank digital currency (CBDC). A CBDC is a digital currency that is issued by a country's central bank and the value of which is pegged to the national currency. The two more prominent types of CBDCs are ``retail CBDCs'' and ``wholesale CBDCs.'' Retail CBDCs are made available to consumers, either directly from the Fed (``direct CBDC'') or through a bank or other financial institution (``intermediated or indirect CBDC'').\\1\\ A wholesale CBDC would not be available to the public but rather would only be available to banks and potentially other financial institutions, and likely would be used for interbank settlement or large cross-border payments.\n\\1\\Cato, A Breakdown of the Different CBDC Models (Feb. 10, 2023).\nH.R. 1919 would prohibit the Federal Reserve (Fed), particularly their 12 Federal Reserve Banks, from offering products or services directly to individuals; maintaining an account for individuals; or researching, testing, or issuing a retail CBDC, including indirectly through a financial institution or other intermediary. The bill's sweeping ban fails to accurately distinguish between retail and wholesale CBDCs. For example, while some of the bill's provisions focus on prohibiting a retail CBDC, the bill's new sense of Congress that the Fed lacks authority to issue any kind of CBDC, including wholesale CBDCs, would undermine opportunities to research, test, and issue wholesale CBDCs that could drastically reduce the costs of cross-border payments. For example, one study from JPMorgan Chase and Oliver Wyman found that global companies make more than $23 trillion in cross-border payments, roughly about 25% of global GDP. They estimate a wholesale CBDC network could save $100 billion a year, reducing the transaction costs from $120 billion to facilitate those cross-border payments to about $20 billion.\\2\\\n\\2\\Oliver Wyman, Unlocking $120 Billion Value In Cross-border Payments (Nov. 2021).\nFurthermore, H.R. 1919 would effectively prohibit the issuance of a CBDC in the U.S. before the U.S. has even had a chance to fully explore the benefits, challenges, and design options. As of April 2025, there are 134 countries and currency unions, representing 98% of global GDP, that are exploring a CBDC, which is up from 35 countries in May 2020.\\3\\ As other countries race ahead and compete to develop and implement CBDCs to harness what could prove to be critical in the evolving global financial landscape, this bill would keep the U.S. behind the starting line.\n\\3\\Atlantic Council, Central Bank Digital Currency Tracker (accessed March 5, 2025).\nTo the extent that cryptocurrencies offer certain benefits, a CBDC could also offer those same benefits while having a greater potential to gain broad public trust and utilization (especially after numerous digital assets have been used to defraud Americans), overcome challenges with regard to interchangeability, avoid volatility in value, and prioritize financial inclusion and consumer protection. CBDCs may also have the potential to provide faster payment transactions and lower transaction fees for consumers and small businesses.\nDuring the 118th Congress in a March 2023 full Committee hearing, when asked whether the Fed would need Congressional authorization to issue a CBDC, Fed Chair Jerome Powell distinguished between retail and wholesale CBDCs.\\4\\ He stated, ``we've always been talking about retail CBDC and [that's] something we would certainly need congressional approval for'' yet potential forms of wholesale CBDCs would be ``less clear.''\\5\\ Around this time, Rep. Emmer introduced H.R. 5403-- an earlier version of this bill (H.R. 1919). H.R. 5403 passed the House last Congress by a vote of 216-192.\n\\4\\House Committee on Financial Services, The Federal Reserve's Semi-Annual Monetary Policy Report, 118th Cong. (March 8, 2023).\n\\5\\House Committee on Financial Services, The Federal Reserve's Semi-Annual Monetary Policy Report, 118th Cong. (March 8, 2023).\nShortly after being inaugurated, on January 23rd President Trump issued an executive order on digital assets (EO).\\6\\ This EO prohibits CBDCs, including a restriction on any agency activity related to the creation of CBDCs. The EO utilizes similar language to the version of this bill from the 118th Congress.\\7\\ The EO bans any ``form of digital money or monetary value, denominated in the national unit of account, that is a direct liability of the central bank.''\\8\\ When read broadly, this could have sweeping ramifications for existing Fed programs, like FedNow.\n\\6\\White House, Strengthening American Leadership In Digital Financial Technology (Jan. 23, 2025).\n\\7\\Rep. Emmer, H.R. 5403--CBDC Anti-Surveillance State Act (accessed Feb. 10, 2025).\n\\8\\\nH.R. 1919 is opposed by the following groups: Public Citizen, Americas for Financial Reform, Raul Carrillo (Academic Fellow, Columbia Law School), Rohan Grey (Assistant Professor of Law, Willamette University College of Law).\nFor these reasons, we oppose H.R. 1919.\nSincerely,\nMaxine Waters,\nRanking Member.\nNydia M. Velazquez,\nBrad Sherman,\nDavid Scott,\nStephen F. Lynch,\nAl Green,\nEmanuel Cleaver, II,\nBill Foster,\nJoyce Beatty,\nJuan Vargas,\nAyanna Pressley,\nRashida Tlaib,\nSylvia R. Garcia,\nNikema Williams,\nMembers of Congress.",
+  "source": {
+    "url_link": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt92/html/CRPT-119hrpt92.htm",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-05-06",
+    "persons": [
+      "W000187",
+      "V000081",
+      "S000344",
+      "S001157",
+      "L000562",
+      "G000553",
+      "C001061",
+      "F000454",
+      "B001281",
+      "V000130",
+      "P000617",
+      "T000481",
+      "G000587",
+      "W000788"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1919",
+      "https://www.congress.gov/bill/119th-congress/house-bill/5403"
+    ]
+  }
+}

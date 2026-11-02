@@ -1,0 +1,66 @@
+{
+  "record_id": "rec-2026-09-15-crpt-119hrpt826-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:25:08.335Z",
+  "accepted": [
+    {
+      "person": "S000185",
+      "issue": "retirement-and-employee-benefits",
+      "date": "2026-09-15",
+      "score": -0.7,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats are therefore unable to support this legislation in its current form.",
+      "bill": "H.R. 9228, the Health Data Access, Transparency, and Affordability (Health DATA) Act of 2026",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt826/html/CRPT-119hrpt826.htm",
+      "record_id": "rec-2026-09-15-crpt-119hrpt826-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers state they cannot support H.R. 9228 because it lacks safeguards for appropriate data use and worker protections."
+    },
+    {
+      "person": "B001278",
+      "issue": "retirement-and-employee-benefits",
+      "date": "2026-09-15",
+      "score": -0.7,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats are therefore unable to support this legislation in its current form.",
+      "bill": "H.R. 9228, the Health Data Access, Transparency, and Affordability (Health DATA) Act of 2026",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt826/html/CRPT-119hrpt826.htm",
+      "record_id": "rec-2026-09-15-crpt-119hrpt826-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers state they cannot support H.R. 9228 because it lacks safeguards for appropriate data use and worker protections."
+    },
+    {
+      "person": "D000623",
+      "issue": "retirement-and-employee-benefits",
+      "date": "2026-09-15",
+      "score": -0.7,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats are therefore unable to support this legislation in its current form.",
+      "bill": "H.R. 9228, the Health Data Access, Transparency, and Affordability (Health DATA) Act of 2026",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt826/html/CRPT-119hrpt826.htm",
+      "record_id": "rec-2026-09-15-crpt-119hrpt826-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers state they cannot support H.R. 9228 because it lacks safeguards for appropriate data use and worker protections."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2123,
+    "prompt_tokens": 5017,
+    "total_tokens": 7140,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1753
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

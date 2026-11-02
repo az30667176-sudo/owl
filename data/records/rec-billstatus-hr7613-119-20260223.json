@@ -1,0 +1,28 @@
+{
+  "id": "rec-billstatus-hr7613-119-20260223",
+  "content": "<other>: H.R. 7613 (119th Congress): ALERT Act\nCosponsor: Rep. Daniel Webster\nCosponsor: Rep. Don Bacon\nCosponsor: Rep. Donald Norcross\nCosponsor: Rep. Seth Moulton\nCosponsor: Rep. Scott DesJarlais\nCosponsor: Rep. Kristen McDonald Rivet\nCosponsor: Rep. Mark Alford\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/7613",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/7613",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-02-23",
+    "persons": [
+      "W000806",
+      "B001298",
+      "N000188",
+      "M001196",
+      "D000616",
+      "M001237",
+      "A000379"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/7613"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

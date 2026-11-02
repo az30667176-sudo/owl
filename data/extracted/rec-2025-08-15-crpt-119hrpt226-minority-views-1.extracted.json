@@ -1,0 +1,51 @@
+{
+  "record_id": "rec-2025-08-15-crpt-119hrpt226-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:27:08.437Z",
+  "accepted": [
+    {
+      "person": "V000081",
+      "issue": "small-business-cyber-and-fraud",
+      "date": "2025-08-15",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Democrats on the Committee have supported full funding for the OIG to ensure the Office has the resources it needs to fully investigate the pandemic fraud.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt226/html/CRPT-119hrpt226.htm",
+      "record_id": "rec-2025-08-15-crpt-119hrpt226-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage states support for full OIG funding to investigate pandemic loan and grant fraud."
+    },
+    {
+      "person": "V000081",
+      "issue": "small-business-programs",
+      "date": "2025-08-15",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "It is important to note, that SBA requires proper funding and staffing.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt226/html/CRPT-119hrpt226.htm",
+      "record_id": "rec-2025-08-15-crpt-119hrpt226-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage states support for maintaining SBA funding and staffing for program oversight."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2032,
+    "prompt_tokens": 3966,
+    "total_tokens": 5998,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1805
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

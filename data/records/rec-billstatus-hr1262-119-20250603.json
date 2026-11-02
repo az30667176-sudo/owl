@@ -1,0 +1,28 @@
+{
+  "id": "rec-billstatus-hr1262-119-20250603",
+  "content": "<other>: H.R. 1262 (119th Congress): Mikaela Naylon Give Kids a Chance Act\nCosponsor: Rep. Stephanie I. Bice\nCosponsor: Rep. Juan Vargas\nCosponsor: Rep. Frederica S. Wilson\nCosponsor: Rep. Cleo Fields\nCosponsor: Rep. Maxwell Frost\nCosponsor: Rep. Eric Swalwell\nCosponsor: Rep. Paul Tonko\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1262",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1262",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-06-03",
+    "persons": [
+      "B000740",
+      "V000130",
+      "W000808",
+      "F000110",
+      "F000476",
+      "S001193",
+      "T000469"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1262"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

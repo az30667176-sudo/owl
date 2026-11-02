@@ -1,0 +1,53 @@
+{
+  "id": "rec-billstatus-hr309-119-20250109",
+  "content": "<other>: H.R. 309 (119th Congress): National Law Enforcement Officers Remembrance, Support, and Community Outreach Act\nSponsor: Rep. Troy E. Nehls\nCosponsor: Rep. Jimmy Panetta\nCosponsor: Rep. Pete Stauber\nCosponsor: Rep. Jim Costa\nCosponsor: Rep. Julia Brownley\nCosponsor: Rep. Doug LaMalfa\nCosponsor: Rep. Clay Higgins\nCosponsor: Rep. Shri Thanedar\nCosponsor: Rep. Nancy Mace\nCosponsor: Rep. David G. Valadao\nCosponsor: Rep. Brian Babin\nCosponsor: Rep. Juan Ciscomani\nCosponsor: Rep. Michael Lawler\nCosponsor: Rep. Mark E. Amodei\nCosponsor: Rep. Chris Pappas\nCosponsor: Rep. Mike Kelly\nCosponsor: Rep. Patrick Ryan\nCosponsor: Rep. Angie Craig\nCosponsor: Rep. Andrew R. Garbarino\nCosponsor: Rep. Randy K. Weber, Sr.\nCosponsor: Rep. Joe Neguse\nCosponsor: Rep. John R. Moolenaar\nCosponsor: Rep. Brian K. Fitzpatrick\nCosponsor: Rep. Dina Titus\nCosponsor: Rep. Ashley Hinson\nCosponsor: Rep. Sam Graves\nCosponsor: Rep. Richard Hudson\nCosponsor: Rep. Don Bacon\nCosponsor: Rep. Nick LaLota\nCosponsor: Rep. Michelle Fischbach\nCosponsor: Rep. Josh Gottheimer\nSponsor: Rep. Troy E. Nehls\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/309",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/309",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-01-09",
+    "persons": [
+      "N000026",
+      "P000613",
+      "S001212",
+      "C001059",
+      "B001285",
+      "L000578",
+      "H001077",
+      "T000488",
+      "M000194",
+      "V000129",
+      "B001291",
+      "C001133",
+      "L000599",
+      "A000369",
+      "P000614",
+      "K000376",
+      "R000579",
+      "C001119",
+      "G000597",
+      "W000814",
+      "N000191",
+      "M001194",
+      "F000466",
+      "T000468",
+      "H001091",
+      "G000546",
+      "H001067",
+      "B001298",
+      "L000598",
+      "F000470",
+      "G000583",
+      "N000026"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/309"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

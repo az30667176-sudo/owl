@@ -1,0 +1,41 @@
+{
+  "id": "rec-billstatus-hr1949-119-20250306",
+  "content": "<other>: H.R. 1949 (119th Congress): Unlocking our Domestic LNG Potential Act of 2025\nSponsor: Rep. August Pfluger\nCosponsor: Rep. John Joyce\nCosponsor: Rep. Julia Letlow\nCosponsor: Rep. Victoria Spartz\nCosponsor: Rep. Lauren Boebert\nCosponsor: Rep. Stephanie I. Bice\nCosponsor: Rep. Roger Williams\nCosponsor: Rep. Troy Balderson\nCosponsor: Rep. Craig A. Goldman\nCosponsor: Rep. Dan Crenshaw\nCosponsor: Rep. Randy K. Weber, Sr.\nCosponsor: Rep. Jodey C. Arrington\nCosponsor: Rep. Dan Newhouse\nCosponsor: Rep. Jake Ellzey\nCosponsor: Rep. Pete Sessions\nCosponsor: Rep. Brian Babin\nCosponsor: Rep. John R. Carter\nCosponsor: Rep. Clay Higgins\nCosponsor: Rep. Carol D. Miller\nCosponsor: Rep. Harriet M. Hageman\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1949",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1949",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-06",
+    "persons": [
+      "P000048",
+      "J000302",
+      "L000595",
+      "S000929",
+      "B000825",
+      "B000740",
+      "W000816",
+      "B001306",
+      "G000601",
+      "C001120",
+      "W000814",
+      "A000375",
+      "N000189",
+      "E000071",
+      "S000250",
+      "B001291",
+      "C001051",
+      "H001077",
+      "M001205",
+      "H001096"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1949"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -1,0 +1,87 @@
+issue_id,name,parent_subcommittee_id,committee_id,n_bills
+federal-land-transfers,Federal Land Transfers,hsii-lands,hsii,20
+public-lands-and-parks,Public Lands and Parks,hsii-lands,hsii,63
+forest-management-and-wildfire,Forest Management and Wildfire,hsii-lands,hsii,12
+wildlife-and-fisheries,Wildlife and Fisheries,hsii-water,hsii,27
+western-water-supply,Western Water Supply,hsii-water,hsii,14
+tribal-lands-and-sovereignty,Tribal Lands and Sovereignty,hsii-indian,hsii,27
+mining-and-mineral-resources,Mining and Mineral Resources,hsii-energy,hsii,16
+environmental-review-nepa,Environmental Review (NEPA),hsii-oversight,hsii,19
+bank-regulation,Bank Regulation,hsba-institutions,hsba,50
+financial-stability,Financial Stability,hsba-institutions,hsba,9
+securities-and-capital-markets,Securities and Capital Markets,hsba-capital,hsba,84
+corporate-disclosure-and-audit,Corporate Disclosure and Audit,hsba-capital,hsba,8
+small-business-capital-access,Small Business Capital Access,hsba-capital,hsba,5
+digital-assets-and-fintech,Digital Assets and Fintech,hsba-digital,hsba,10
+financial-crime-and-sanctions,Financial Crime and Sanctions,hsba-natsec,hsba,8
+china-and-international-finance,China and International Finance,hsba-natsec,hsba,13
+housing-finance,Housing Finance,hsba-housing,hsba,5
+electric-grid-reliability,Electric Grid Reliability,hsif-energy,hsif,25
+energy-efficiency-standards,Energy Efficiency Standards,hsif-energy,hsif,8
+broadband-and-spectrum,Broadband and Spectrum,hsif-comms,hsif,19
+online-platforms-and-data-privacy,Online Platforms and Data Privacy,hsif-comms,hsif,32
+health-programs-and-research,Health Programs and Research,hsif-health,hsif,25
+consumer-protection,Consumer Protection,hsif-innovation,hsif,19
+environmental-regulation,Environmental Regulation,hsif-environment,hsif,12
+higher-education-and-student-aid,Higher Education and Student Aid,hsed-higher,hsed,10
+k-12-education,K-12 Education,hsed-k12,hsed,24
+child-care,Child Care,hsed-k12,hsed,8
+civil-rights-in-schools,Civil Rights in Schools,hsed-k12,hsed,6
+wages-and-labor-standards,Wages and Labor Standards,hsed-protections,hsed,16
+retirement-and-employee-benefits,Retirement and Employee Benefits,hsed-help,hsed,11
+labor-relations-and-unions,Labor Relations and Unions,hsed-help,hsed,3
+veterans-health-care,Veterans Health Care,hsvr-health,hsvr,22
+veterans-benefits-and-compensation,Veterans Benefits and Compensation,hsvr-disability,hsvr,20
+veterans-education-and-employment,Veterans Education and Employment,hsvr-economic,hsvr,12
+veterans-housing-and-loans,Veterans Housing and Loans,hsvr-economic,hsvr,6
+va-technology-modernization,VA Technology Modernization,hsvr-tech,hsvr,4
+va-operations-and-oversight,VA Operations and Oversight,hsvr-oversight,hsvr,21
+tax-administration-and-irs,Tax Administration and IRS,hswm-tax,hswm,28
+disaster-tax-relief,Disaster Tax Relief,hswm-tax,hswm,3
+social-security,Social Security,hswm-ss,hswm,7
+child-welfare-and-foster-care,Child Welfare and Foster Care,hswm-welfare,hswm,13
+unemployment-and-work-programs,Unemployment and Work Programs,hswm-welfare,hswm,9
+health-care-tax-policy,Health Care Tax Policy,hswm-health,hswm,4
+treasury-oversight,Treasury Oversight,hswm-oversight,hswm,5
+sba-lending,SBA Lending,hssm-growth,hssm,27
+small-business-programs,Small Business Programs,hssm-innovation,hssm,40
+small-business-cyber-and-fraud,Small Business Cyber and Fraud,hssm-oversight,hssm,12
+rural-small-business-and-manufacturing,Rural Small Business and Manufacturing,hssm-rural,hssm,2
+aviation-safety,Aviation Safety,hspw-aviation,hspw,8
+highway-and-transit-safety,Highway and Transit Safety,hspw-highways,hspw,16
+water-infrastructure-and-quality,Water Infrastructure and Quality,hspw-water,hspw,14
+maritime-transportation,Maritime Transportation,hspw-coastguard,hspw,4
+public-buildings-and-emergency-management,Public Buildings and Emergency Management,hspw-econdev,hspw,12
+criminal-sentencing,Criminal Sentencing,hsju-crime,hsju,19
+gun-policy,Gun Policy,hsju-crime,hsju,5
+law-enforcement-support,Law Enforcement Support,hsju-crime,hsju,7
+immigration-enforcement,Immigration Enforcement,hsju-immigration,hsju,12
+federal-courts,Federal Courts,hsju-courts,hsju,7
+border-security,Border Security,hshm-border,hshm,8
+counterterrorism,Counterterrorism,hshm-ct,hshm,12
+aviation-and-transportation-security,Aviation and Transportation Security,hshm-transport,hshm,9
+cybersecurity,Cybersecurity,hshm-cyber,hshm,6
+emergency-management,Emergency Management,hshm-emergency,hshm,4
+dhs-workforce-and-operations,DHS Workforce and Operations,hshm-oversight,hshm,10
+district-of-columbia-governance,District of Columbia Governance,hsgo-law,hsgo,9
+federal-law-enforcement,Federal Law Enforcement,hsgo-law,hsgo,10
+federal-workforce-and-ethics,Federal Workforce and Ethics,hsgo-doge,hsgo,10
+federal-it-and-cybersecurity,Federal IT and Cybersecurity,hsgo-cyber,hsgo,2
+election-administration,Election Administration,hsha-elections,hsha,8
+house-operations,House Operations,hsha-modernization,hsha,9
+research-and-technology-transfer,Research and Technology Transfer,hssy-research,hssy,5
+federal-budget-and-deficit,Federal Budget and Deficit,hsbu,hsbu,3
+farm-trade-and-food-safety,Farm Trade and Food Safety,hsag-farm,hsag,3
+defense-authorization,Defense Authorization,hsas-readiness,hsas,3
+defense-appropriations,Defense Appropriations,hsap-defense,hsap,2
+homeland-security-appropriations,Homeland Security Appropriations,hsap-homeland,hsap,2
+energy-and-water-appropriations,Energy and Water Appropriations,hsap-energy,hsap,2
+interior-and-environment-appropriations,Interior and Environment Appropriations,hsap-interior,hsap,2
+labor-hhs-education-appropriations,"Labor, HHS, Education Appropriations",hsap-labor,hsap,2
+military-construction-and-va-appropriations,Military Construction and VA Appropriations,hsap-milcon,hsap,2
+transportation-and-hud-appropriations,Transportation and HUD Appropriations,hsap-thud,hsap,2
+agriculture-and-fda-appropriations,Agriculture and FDA Appropriations,hsap-ag,hsap,2
+commerce-justice-science-appropriations,"Commerce, Justice, Science Appropriations",hsap-cjs,hsap,2
+financial-services-appropriations,Financial Services Appropriations,hsap-fsgg,hsap,2
+legislative-branch-appropriations,Legislative Branch Appropriations,hsap-legislative,hsap,3
+national-security-and-state-appropriations,National Security and State Appropriations,hsap-state,hsap,2

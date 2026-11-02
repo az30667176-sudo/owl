@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr4284-119-20250702",
+  "content": "<other>: H.R. 4284 (119th Congress): Small Cemetery Conveyance Act\nSponsor: Rep. Teresa Leger Fernandez\nSponsor: Rep. Teresa Leger Fernandez\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/4284",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/4284",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-07-02",
+    "persons": [
+      "L000273",
+      "L000273"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/4284"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

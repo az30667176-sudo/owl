@@ -1,0 +1,36 @@
+{
+  "record_id": "rec-2025-04-28-crpt-119hrpt80-dissenting-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:25:06.772Z",
+  "accepted": [
+    {
+      "person": "R000606",
+      "issue": "gun-policy",
+      "date": "2025-04-28",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "I oppose H.R. 2255, the Federal Law Enforcement Officer Service Weapon Purchase Act.",
+      "bill": "H.R. 2255, the Federal Law Enforcement Officer Service Weapon Purchase Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt80/html/CRPT-119hrpt80.htm",
+      "record_id": "rec-2025-04-28-crpt-119hrpt80-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislator explicitly states opposition to the bill that would allow surplus firearm sales to officers."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 942,
+    "prompt_tokens": 4661,
+    "total_tokens": 5603,
+    "completion_tokens_details": {
+      "reasoning_tokens": 810
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

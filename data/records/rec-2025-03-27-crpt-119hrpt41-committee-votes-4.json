@@ -1,0 +1,63 @@
+{
+  "id": "rec-2025-03-27-crpt-119hrpt41-committee-votes-4",
+  "content": "<other>: On: H.R. 1155 was ordered favorably reported to the House of Representatives as amended by a roll call vote of 41 yeas to 0 nays (with a quorum being present). The vote was as follows:. Yea 41. Nay 0.\nMr. Smith (MO): yea\nMr. Neal: yea\nMr. Buchanan: yea\nMr. Doggett: yea\nMr. Smith (NE): yea\nMr. Thompson: yea\nMr. Kelly: not voting\nMr. Larson: yea\nMr. Schweikert: yea\nMr. Davis: yea\nMr. LaHood: yea\nMs. Sanchez: yea\nMr. Arrington: yea\nMs. Sewell: yea\nMr. Estes: yea\nMs. DelBene: yea\nMr. Smucker: yea\nMs. Chu: yea\nMr. Hern: yea\nMs. Moore (WI): yea\nMrs. Miller (WV): yea\nMr. Boyle: yea\nDr. Murphy: yea\nMr. Beyer: yea\nMr. Kustoff: yea\nMr. Evans: yea\nMr. Fitzpatrick: yea\nMr. Schneider: yea\nMr. Steube: not voting\nMr. Panetta: yea\nMs. Tenney: yea\nMr. Gomez: not voting\nMrs. Fischbach: not voting\nMr. Horsford: yea\nMr. Moore (UT): yea\nMs. Plaskett: yea\nMs. Van Duyne: yea\nMr. Suozzi: yea\nMr. Feenstra: yea\nMs. Malliotakis: yea\nMr. Carey: yea\nMr. Yakym: yea\nMr. Miller (OH): yea\nMr. Bean: yea\nMr. Moran: yea",
+  "source": {
+    "url_link": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt41/html/CRPT-119hrpt41.htm",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-12",
+    "persons": [
+      "S001195",
+      "N000015",
+      "B001260",
+      "D000399",
+      "S001172",
+      "T000460",
+      "K000376",
+      "L000557",
+      "S001183",
+      "D000096",
+      "L000585",
+      "S001156",
+      "A000375",
+      "S001185",
+      "E000298",
+      "D000617",
+      "S001199",
+      "C001080",
+      "H001082",
+      "M001160",
+      "M001205",
+      "B001296",
+      "M001210",
+      "B001292",
+      "K000392",
+      "E000296",
+      "F000466",
+      "S001190",
+      "S001214",
+      "P000613",
+      "T000478",
+      "G000585",
+      "F000470",
+      "H001066",
+      "M001213",
+      "P000610",
+      "V000134",
+      "S001201",
+      "F000446",
+      "M000317",
+      "C001126",
+      "Y000067",
+      "M001222",
+      "B001314",
+      "M001224"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1155"
+    ]
+  }
+}

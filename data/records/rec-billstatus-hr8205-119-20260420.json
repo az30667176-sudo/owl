@@ -1,0 +1,29 @@
+{
+  "id": "rec-billstatus-hr8205-119-20260420",
+  "content": "<other>: H.R. 8205 (119th Congress): Accelerating Access to Critical Therapies for ALS Reauthorization Act of 2026\nCosponsor: Rep. Don Bacon\nCosponsor: Rep. Steve Cohen\nCosponsor: Rep. Pete Sessions\nCosponsor: Rep. Adam Smith\nCosponsor: Rep. Jay Obernolte\nCosponsor: Rep. Madeleine Dean\nCosponsor: Rep. Tom Cole\nCosponsor: Rep. Valerie P. Foushee\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/8205",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/8205",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-04-20",
+    "persons": [
+      "B001298",
+      "C001068",
+      "S000250",
+      "S000510",
+      "O000019",
+      "D000631",
+      "C001053",
+      "F000477"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/8205"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

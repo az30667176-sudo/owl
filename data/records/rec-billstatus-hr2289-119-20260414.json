@@ -1,0 +1,29 @@
+{
+  "id": "rec-billstatus-hr2289-119-20260414",
+  "content": "<other>: H.R. 2289 (119th Congress): American Broadband Deployment Act of 2025\nCosponsor: Rep. Dan Crenshaw\nCosponsor: Rep. Rick W. Allen\nCosponsor: Rep. H. Morgan Griffith\nCosponsor: Rep. Robert E. Latta\nCosponsor: Rep. Erin Houchin\nCosponsor: Rep. Russell Fry\nCosponsor: Rep. Randy K. Weber, Sr.\nCosponsor: Rep. Craig A. Goldman\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2289",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2289",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-04-14",
+    "persons": [
+      "C001120",
+      "A000372",
+      "G000568",
+      "L000566",
+      "H001093",
+      "F000478",
+      "W000814",
+      "G000601"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2289"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

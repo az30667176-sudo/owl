@@ -1,0 +1,28 @@
+{
+  "id": "rec-billstatus-hr5729-119-20251010",
+  "content": "<other>: H.R. 5729 (119th Congress): North Rim Restoration Act\nSponsor: Rep. Elijah Crane\nCosponsor: Rep. Paul A. Gosar\nCosponsor: Rep. Celeste Maloy\nCosponsor: Rep. Andy Biggs\nCosponsor: Rep. Doug LaMalfa\nCosponsor: Rep. Thomas P. Tiffany\nSponsor: Rep. Elijah Crane\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/5729",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/5729",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-10-10",
+    "persons": [
+      "C001132",
+      "G000565",
+      "M001228",
+      "B001302",
+      "L000578",
+      "T000165",
+      "C001132"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/5729"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

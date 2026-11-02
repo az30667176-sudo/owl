@@ -1,0 +1,87 @@
+{
+  "record_id": "rec-2025-06-30-crpt-119hrpt178-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:26:34.724Z",
+  "accepted": [
+    {
+      "person": "D000216",
+      "issue": "legislative-branch-appropriations",
+      "date": "2025-06-30",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "The funding levels and divisive policy riders in the Legislative Branch bill are unworkable, and Democrats cannot support this bill.",
+      "bill": "Legislative Branch bill for the Fiscal Year 2026",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt178/html/CRPT-119hrpt178.htm",
+      "record_id": "rec-2025-06-30-crpt-119hrpt178-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signer states the funding levels and riders are unworkable and declares opposition to the bill."
+    },
+    {
+      "person": "E000297",
+      "issue": "legislative-branch-appropriations",
+      "date": "2025-06-30",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "The funding levels and divisive policy riders in the Legislative Branch bill are unworkable, and Democrats cannot support this bill.",
+      "bill": "Legislative Branch bill for the Fiscal Year 2026",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt178/html/CRPT-119hrpt178.htm",
+      "record_id": "rec-2025-06-30-crpt-119hrpt178-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signer states the funding levels and riders are unworkable and declares opposition to the bill."
+    },
+    {
+      "person": "D000216",
+      "issue": "daca-employment-eligibility-in-legislative-branch",
+      "date": "2025-06-30",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "we commend the Committee for including language that allows Deferred Action for Childhood Arrivals (DACA) Program participants to receive compensation as Legislative Branch employees.",
+      "bill": "Legislative Branch bill for the Fiscal Year 2026",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt178/html/CRPT-119hrpt178.htm",
+      "record_id": "rec-2025-06-30-crpt-119hrpt178-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signer praises inclusion of language allowing DACA participants to be compensated as Legislative Branch employees."
+    },
+    {
+      "person": "E000297",
+      "issue": "daca-employment-eligibility-in-legislative-branch",
+      "date": "2025-06-30",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "we commend the Committee for including language that allows Deferred Action for Childhood Arrivals (DACA) Program participants to receive compensation as Legislative Branch employees.",
+      "bill": "Legislative Branch bill for the Fiscal Year 2026",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt178/html/CRPT-119hrpt178.htm",
+      "record_id": "rec-2025-06-30-crpt-119hrpt178-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signer praises inclusion of language allowing DACA participants to be compensated as Legislative Branch employees."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "daca-employment-eligibility-in-legislative-branch",
+      "name": "DACA Employment Eligibility in Legislative Branch",
+      "parent": "hsju-immigration"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 3247,
+    "prompt_tokens": 3971,
+    "total_tokens": 7218,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2686
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

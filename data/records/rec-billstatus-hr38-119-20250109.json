@@ -1,0 +1,48 @@
+{
+  "id": "rec-billstatus-hr38-119-20250109",
+  "content": "<other>: H.R. 38 (119th Congress): Constitutional Concealed Carry Reciprocity Act of 2025\nCosponsor: Rep. Harold Rogers\nCosponsor: Rep. Monica De La Cruz\nCosponsor: Rep. Adrian Smith\nCosponsor: Rep. Andy Harris\nCosponsor: Rep. Jared F. Golden\nCosponsor: Rep. Gus M. Bilirakis\nCosponsor: Rep. Gabe Evans\nCosponsor: Rep. Thomas P. Tiffany\nCosponsor: Rep. Laurel M. Lee\nCosponsor: Rep. Tim Burchett\nCosponsor: Rep. Pat Fallon\nCosponsor: Rep. Pete Sessions\nCosponsor: Rep. Barry Loudermilk\nCosponsor: Rep. Daniel Webster\nCosponsor: Rep. Mark B. Messmer\nCosponsor: Rep. Riley M. Moore\nCosponsor: Rep. Eric Burlison\nCosponsor: Rep. Brad Knott\nCosponsor: Rep. Robert F. Onder, Jr.\nCosponsor: Rep. Bruce Westerman\nCosponsor: Rep. Cliff Bentz\nCosponsor: Rep. Tim Walberg\nCosponsor: Rep. Michael A. Rulli\nCosponsor: Rep. Troy Downing\nCosponsor: Rep. Mark Harris\nCosponsor: Rep. Michael Cloud\nCosponsor: Rep. Chuck Edwards\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/38",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/38",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-01-09",
+    "persons": [
+      "R000395",
+      "D000594",
+      "S001172",
+      "H001052",
+      "G000592",
+      "B001257",
+      "E000300",
+      "T000165",
+      "L000597",
+      "B001309",
+      "F000246",
+      "S000250",
+      "L000583",
+      "W000806",
+      "M001233",
+      "M001235",
+      "B001316",
+      "K000405",
+      "O000177",
+      "W000821",
+      "B000668",
+      "W000798",
+      "R000619",
+      "D000634",
+      "H001102",
+      "C001115",
+      "E000246"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/38"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

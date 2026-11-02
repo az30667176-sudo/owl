@@ -25,7 +25,7 @@ const opt = (n, d) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] :
 const MODEL = opt("--model", "muse-spark-1.3"), MERGE = args.includes("--merge");
 if (!recordPath) { console.error("usage: extract.mjs <record.json> [--merge]"); process.exit(1); }
 if (existsSync(resolve(ROOT, ".env"))) for (const line of readFileSync(resolve(ROOT, ".env"), "utf8").split(/\r?\n/)) { const m = /^([A-Z0-9_]+)=(.*)$/.exec(line.trim()); if (m && !process.env[m[1]]) process.env[m[1]] = m[2]; }
-const KEY = process.env.MODEL_API_KEY; if (!KEY) { console.error("MODEL_API_KEY missing"); process.exit(1); }
+const KEY = process.env.MUSE_API_KEY || process.env.MODEL_API_KEY; if (!KEY) { console.error("MUSE_API_KEY missing"); process.exit(1); }
 
 const load = f => JSON.parse(readFileSync(resolve(DATA, f), "utf8"));
 const taxonomy = load("taxonomy.json").committees, issuesFile = load("issues.json"), peopleFile = load("people.json"), stancesFile = load("stances.json");

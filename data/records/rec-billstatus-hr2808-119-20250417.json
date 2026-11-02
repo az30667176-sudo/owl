@@ -1,0 +1,24 @@
+{
+  "id": "rec-billstatus-hr2808-119-20250417",
+  "content": "<other>: H.R. 2808 (119th Congress): Homebuyers Privacy Protection Act\nCosponsor: Rep. Joyce Beatty\nCosponsor: Rep. Jason Crow\nCosponsor: Rep. Bennie G. Thompson\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2808",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2808",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-04-17",
+    "persons": [
+      "B001281",
+      "C001121",
+      "T000193"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2808"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

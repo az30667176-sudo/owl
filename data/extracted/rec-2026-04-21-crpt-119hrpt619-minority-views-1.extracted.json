@@ -1,0 +1,42 @@
+{
+  "record_id": "rec-2026-04-21-crpt-119hrpt619-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:28:28.428Z",
+  "accepted": [
+    {
+      "person": "G000598",
+      "issue": "census-citizenship-question-and-apportionment-exclusion",
+      "date": "2026-04-21",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "I strongly oppose this legislation, which dishonors our Constitution and the values of our nation.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt619/html/CRPT-119hrpt619.htm",
+      "record_id": "rec-2026-04-21-crpt-119hrpt619-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Garcia explicitly states strong opposition to legislation to add a citizenship question and exclude noncitizens from the apportionment count."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "census-citizenship-question-and-apportionment-exclusion",
+      "name": "Census citizenship question and apportionment exclusion",
+      "parent": "hsha-elections"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 2237,
+    "prompt_tokens": 3309,
+    "total_tokens": 5546,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2094
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

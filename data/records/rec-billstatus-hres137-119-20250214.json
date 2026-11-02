@@ -1,0 +1,27 @@
+{
+  "id": "rec-billstatus-hres137-119-20250214",
+  "content": "<other>: H. Res. 137 (119th Congress): Resolution designating the House Press Gallery (Rooms H-315, H-316, H-317, H-318, and H-319 in the United States Capitol) as the 'Frederick Douglass Press Gallery’\nSponsor: Rep. Byron Donalds\nCosponsor: Rep. André Carson\nCosponsor: Rep. Steven Horsford\nCosponsor: Rep. Wesley Hunt\nCosponsor: Rep. Burgess Owens\nSponsor: Rep. Byron Donalds\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-resolution/137",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-resolution/137",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-14",
+    "persons": [
+      "D000032",
+      "C001072",
+      "H001066",
+      "H001095",
+      "O000086",
+      "D000032"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-resolution/137"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "rec-billstatus-hr1329-119-20250304",
+  "content": "<other>: H.R. 1329 (119th Congress): Smithsonian American Women’s History Museum Act\nCosponsor: Rep. George Latimer\nCosponsor: Rep. Nancy Pelosi\nCosponsor: Rep. Jefferson Shreve\nCosponsor: Rep. Madeleine Dean\nCosponsor: Rep. Mike Ezell\nCosponsor: Rep. James R. Baird\nCosponsor: Rep. Glenn Thompson\nCosponsor: Rep. LaMonica McIver\nCosponsor: Rep. Paul Tonko\nCosponsor: Rep. Mark Alford\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1329",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1329",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-04",
+    "persons": [
+      "L000606",
+      "P000197",
+      "S001229",
+      "D000631",
+      "E000235",
+      "B001307",
+      "T000467",
+      "M001229",
+      "T000469",
+      "A000379"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1329"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

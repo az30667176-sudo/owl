@@ -1,0 +1,51 @@
+{
+  "record_id": "rec-2026-04-02-crpt-119hrpt577-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:10:46.831Z",
+  "accepted": [
+    {
+      "person": "T000472",
+      "issue": "veterans-benefits-and-compensation",
+      "date": "2026-04-02",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats strongly support the goals of increasing Special Monthly Compensation (SMC) for catastrophically injured servicemembers and raising Dependency and Indemnity Compensation (DIC) for surviving spouses and children of veterans and servicemembers.",
+      "bill": "H.R. 6047, the Sharri Briley and Eric Edmundson Veterans Benefits Expansion Act of 2025",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt577/html/CRPT-119hrpt577-pt1.htm",
+      "record_id": "rec-2026-04-02-crpt-119hrpt577-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage explicitly states strong support for increasing SMC and DIC benefits."
+    },
+    {
+      "person": "T000472",
+      "issue": "veterans-housing-and-loans",
+      "date": "2026-04-02",
+      "score": -0.8,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats oppose this fee due to the unreasonable cost imposed on veterans and its effects on those with distressed mortgages.",
+      "bill": "H.R. 6047, the Sharri Briley and Eric Edmundson Veterans Benefits Expansion Act of 2025",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt577/html/CRPT-119hrpt577-pt1.htm",
+      "record_id": "rec-2026-04-02-crpt-119hrpt577-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage explicitly opposes the increased IRRRL funding fee for VA home loans."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1838,
+    "prompt_tokens": 4893,
+    "total_tokens": 6731,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1535
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "finish_reason": "stop"
+}

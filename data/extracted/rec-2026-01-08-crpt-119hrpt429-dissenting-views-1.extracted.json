@@ -1,0 +1,36 @@
+{
+  "record_id": "rec-2026-01-08-crpt-119hrpt429-dissenting-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:28:31.677Z",
+  "accepted": [
+    {
+      "person": "H001068",
+      "issue": "forest-management-and-wildfire",
+      "date": "2026-01-08",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "According to the best available science and traditional ecological knowledge, well-managed fire on fire-evolved landscapes promotes healthy forests and reduces the frequency and severity of catastrophic wildfires.",
+      "bill": "H.R. 178",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt429/html/CRPT-119hrpt429-pt1.htm",
+      "record_id": "rec-2026-01-08-crpt-119hrpt429-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote endorses well-managed fire as promoting healthy forests and reducing catastrophic wildfire severity."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2051,
+    "prompt_tokens": 3190,
+    "total_tokens": 5241,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1912
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

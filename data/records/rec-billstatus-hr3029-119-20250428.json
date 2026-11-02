@@ -1,0 +1,24 @@
+{
+  "id": "rec-billstatus-hr3029-119-20250428",
+  "content": "<other>: H.R. 3029 (119th Congress): To amend the Research and Development, Competition, and Innovation Act to support nucleic acid screening, and for other purposes.\nSponsor: Rep. Andrea Salinas\nCosponsor: Rep. Richard McCormick\nSponsor: Rep. Andrea Salinas\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/3029",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/3029",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-04-28",
+    "persons": [
+      "S001226",
+      "M001218",
+      "S001226"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/3029"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "rec-billstatus-hr9496-119-20260629",
+  "content": "<other>: H.R. 9496 (119th Congress): End Tax Penalties on American Hostages Act\nSponsor: Rep. Claudia Tenney\nCosponsor: Rep. Dina Titus\nCosponsor: Rep. Donald S. Beyer, Jr.\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/9496",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/9496",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-06-29",
+    "persons": [
+      "T000478",
+      "T000468",
+      "B001292"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/9496"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

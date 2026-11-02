@@ -1,0 +1,36 @@
+{
+  "id": "rec-billstatus-hr5267-119-20250910",
+  "content": "<other>: H.R. 5267 (119th Congress): American Franchise Act\nSponsor: Rep. Kevin Hern\nCosponsor: Rep. Donald G. Davis\nCosponsor: Rep. Beth Van Duyne\nCosponsor: Rep. Hillary J. Scholten\nCosponsor: Rep. Chuck Edwards\nCosponsor: Rep. Jim Costa\nCosponsor: Rep. Mark Alford\nCosponsor: Rep. Adam Gray\nCosponsor: Rep. August Pfluger\nCosponsor: Rep. Henry Cuellar\nCosponsor: Rep. Nathaniel Moran\nCosponsor: Rep. Ami Bera\nCosponsor: Rep. Vicente Gonzalez\nCosponsor: Rep. Ryan Mackenzie\nSponsor: Rep. Kevin Hern\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/5267",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/5267",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-09-10",
+    "persons": [
+      "H001082",
+      "D000230",
+      "V000134",
+      "S001221",
+      "E000246",
+      "C001059",
+      "A000379",
+      "G000605",
+      "P000048",
+      "C001063",
+      "M001224",
+      "B001287",
+      "G000581",
+      "M001230",
+      "H001082"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/5267"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

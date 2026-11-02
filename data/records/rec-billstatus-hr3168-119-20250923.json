@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr3168-119-20250923",
+  "content": "<other>: H.R. 3168 (119th Congress): National Earthquake Hazards Reduction Program Reauthorization Act of 2025\nCosponsor: Rep. Suzan K. DelBene\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/3168",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/3168",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-09-23",
+    "persons": [
+      "D000617"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/3168"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

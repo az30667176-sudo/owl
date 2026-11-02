@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr517-119-20250116",
+  "content": "<other>: H.R. 517 (119th Congress): Filing Relief for Natural Disasters Act\nSponsor: Rep. David Kustoff\nCosponsor: Rep. Judy Chu\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/517",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/517",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-01-16",
+    "persons": [
+      "K000392",
+      "C001080"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/517"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

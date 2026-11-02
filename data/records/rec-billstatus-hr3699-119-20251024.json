@@ -1,0 +1,27 @@
+{
+  "id": "rec-billstatus-hr3699-119-20251024",
+  "content": "<other>: H.R. 3699 (119th Congress): Energy Choice Act\nCosponsor: Rep. John R. Carter\nCosponsor: Rep. Scott DesJarlais\nCosponsor: Rep. Tom Cole\nCosponsor: Rep. Andrew R. Garbarino\nCosponsor: Rep. Rick W. Allen\nCosponsor: Rep. Cory Mills\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/3699",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/3699",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-10-24",
+    "persons": [
+      "C001051",
+      "D000616",
+      "C001053",
+      "G000597",
+      "A000372",
+      "M001216"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/3699"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

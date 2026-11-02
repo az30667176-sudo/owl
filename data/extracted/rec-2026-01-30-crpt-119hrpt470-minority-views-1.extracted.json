@@ -1,0 +1,51 @@
+{
+  "record_id": "rec-2026-01-30-crpt-119hrpt470-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:27:01.739Z",
+  "accepted": [
+    {
+      "person": "P000034",
+      "issue": "energy-efficiency-standards",
+      "date": "2026-01-30",
+      "score": 1,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "Appliance standards are a crucial tool to lower costs for consumers, reduce planet-warming emissions, and help the U.S. meet rising demand in electricity growth from data centers.",
+      "bill": "H.R. 4626, the ``Don't Mess With My Home Appliances Act,''",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt470/html/CRPT-119hrpt470.htm",
+      "record_id": "rec-2026-01-30-crpt-119hrpt470-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote affirmatively endorses appliance efficiency standards as crucial for costs and demand."
+    },
+    {
+      "person": "P000034",
+      "issue": "electric-grid-reliability",
+      "date": "2026-01-30",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "DOE's appliance and equipment standards program promotes energy security and grid reliability and resiliency by reducing peak demand.",
+      "bill": "H.R. 4626, the ``Don't Mess With My Home Appliances Act,''",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt470/html/CRPT-119hrpt470.htm",
+      "record_id": "rec-2026-01-30-crpt-119hrpt470-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote states that efficiency standards support grid reliability and resiliency by reducing peak demand."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1868,
+    "prompt_tokens": 3631,
+    "total_tokens": 5499,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1628
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

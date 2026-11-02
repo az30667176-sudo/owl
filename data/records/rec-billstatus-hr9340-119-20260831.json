@@ -1,0 +1,25 @@
+{
+  "id": "rec-billstatus-hr9340-119-20260831",
+  "content": "<other>: H.R. 9340 (119th Congress): Ratepayer Protection Act\nCosponsor: Rep. Brad Finstad\nCosponsor: Rep. Jeff Crank\nCosponsor: Rep. Riley M. Moore\nCosponsor: Rep. Earl L. \"Buddy\" Carter\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/9340",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/9340",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-08-31",
+    "persons": [
+      "F000475",
+      "C001137",
+      "M001235",
+      "C001103"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/9340"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

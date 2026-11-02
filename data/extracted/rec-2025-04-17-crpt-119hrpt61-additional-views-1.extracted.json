@@ -1,0 +1,51 @@
+{
+  "record_id": "rec-2025-04-17-crpt-119hrpt61-additional-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:28:39.778Z",
+  "accepted": [
+    {
+      "person": "H001068",
+      "issue": "western-water-supply",
+      "date": "2025-04-17",
+      "score": 0.7,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Congress must ensure that federal water management balances agricultural, municipal, and industrial uses with environmental needs.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt61/html/CRPT-119hrpt61.htm",
+      "record_id": "rec-2025-04-17-crpt-119hrpt61-additional-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote advocates balanced federal water management including environmental needs, supporting action on western water supply."
+    },
+    {
+      "person": "H001068",
+      "issue": "wildlife-and-fisheries",
+      "date": "2025-04-17",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Addressing drought and climate change must be a priority, ensuring that species and ecosystems receive the water they need to survive.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt61/html/CRPT-119hrpt61.htm",
+      "record_id": "rec-2025-04-17-crpt-119hrpt61-additional-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote calls for prioritizing water for species and ecosystems, supporting protection of wildlife and habitat."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1499,
+    "prompt_tokens": 3117,
+    "total_tokens": 4616,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1268
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr7722-119-20260304",
+  "content": "<other>: H.R. 7722 (119th Congress): Child Care Integrity Monitoring Act of 2026\nCosponsor: Rep. Julia Letlow\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/7722",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/7722",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-03-04",
+    "persons": [
+      "L000595"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/7722"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

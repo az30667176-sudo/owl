@@ -1,0 +1,25 @@
+{
+  "id": "rec-billstatus-hr1479-119-20250221",
+  "content": "<other>: H.R. 1479 (119th Congress): Hotel Fees Transparency Act of 2025\nSponsor: Rep. Young Kim\nCosponsor: Rep. Kathy Castor\nCosponsor: Rep. Russell Fry\nCosponsor: Rep. Kevin Mullin\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1479",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1479",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-21",
+    "persons": [
+      "K000397",
+      "C001066",
+      "F000478",
+      "M001225"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1479"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

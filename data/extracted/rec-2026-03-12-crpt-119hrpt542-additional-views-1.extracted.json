@@ -1,0 +1,66 @@
+{
+  "record_id": "rec-2026-03-12-crpt-119hrpt542-additional-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:29:15.959Z",
+  "accepted": [
+    {
+      "person": "H001068",
+      "issue": "forest-management-and-wildfire",
+      "date": "2026-03-12",
+      "score": 0.7,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The changes incorporated into the ANS reflect a stronger, more balanced piece of legislation better equipped to support the ongoing restoration and recovery of our giant sequoias.",
+      "bill": "H.R. 2709, the Save Our Sequoias Act (SOS)",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt542/html/CRPT-119hrpt542-pt1.htm",
+      "record_id": "rec-2026-03-12-crpt-119hrpt542-additional-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote expresses approval of the amended bill as supporting sequoia restoration and recovery."
+    },
+    {
+      "person": "H001068",
+      "issue": "environmental-review-nepa",
+      "date": "2026-03-12",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "These bedrock environmental laws help guide federal projects, balance multiple objectives, and achieve long-term sustainability.",
+      "bill": "H.R. 2709, the Save Our Sequoias Act (SOS)",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt542/html/CRPT-119hrpt542-pt1.htm",
+      "record_id": "rec-2026-03-12-crpt-119hrpt542-additional-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote defends NEPA and other environmental compliance laws as beneficial for federal projects."
+    },
+    {
+      "person": "H001068",
+      "issue": "public-lands-and-parks",
+      "date": "2026-03-12",
+      "score": 0.7,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Our federal land management agencies, including the National Park Service and the U.S. Forest Service, require adequate funding and staffing to fulfill their congressionally mandated missions.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt542/html/CRPT-119hrpt542-pt1.htm",
+      "record_id": "rec-2026-03-12-crpt-119hrpt542-additional-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote calls for adequate funding and staffing for park and forest agencies to carry out their missions."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1615,
+    "prompt_tokens": 3057,
+    "total_tokens": 4672,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1281
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

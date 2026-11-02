@@ -1,0 +1,34 @@
+{
+  "id": "rec-billstatus-hr151-119-20250122",
+  "content": "<other>: H.R. 151 (119th Congress): Equal Representation Act of 2025\nCosponsor: Rep. Russell Fry\nCosponsor: Rep. Ben Cline\nCosponsor: Rep. Scott Franklin\nCosponsor: Rep. Ralph Norman\nCosponsor: Rep. Mike Ezell\nCosponsor: Rep. Mark Harris\nCosponsor: Rep. Pat Fallon\nCosponsor: Rep. Neal P. Dunn\nCosponsor: Rep. Brian Babin\nCosponsor: Rep. Randy K. Weber, Sr.\nCosponsor: Rep. Tom Cole\nCosponsor: Rep. Claudia Tenney\nCosponsor: Rep. Michael Baumgartner\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/151",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/151",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-01-22",
+    "persons": [
+      "F000478",
+      "C001118",
+      "F000472",
+      "N000190",
+      "E000235",
+      "H001102",
+      "F000246",
+      "D000628",
+      "B001291",
+      "W000814",
+      "C001053",
+      "T000478",
+      "B001322"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/151"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

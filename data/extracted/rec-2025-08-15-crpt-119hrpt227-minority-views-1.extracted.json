@@ -1,0 +1,51 @@
+{
+  "record_id": "rec-2025-08-15-crpt-119hrpt227-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:30:04.510Z",
+  "accepted": [
+    {
+      "person": "V000081",
+      "issue": "small-business-capital-access",
+      "date": "2025-08-15",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "it is necessary to update antiquated statutory constraints that limit participation in the SBIC program.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt227/html/CRPT-119hrpt227.htm",
+      "record_id": "rec-2025-08-15-crpt-119hrpt227-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislator states that updating statutory constraints is necessary to allow long-horizon investment in critical technologies through the SBIC program."
+    },
+    {
+      "person": "V000081",
+      "issue": "rural-small-business-and-manufacturing",
+      "date": "2025-08-15",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "it is important to provide utilization of ``bonus'' leverage upfront at the time of licensing, rather than a licensee requesting additional leverage midway through the investment period.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt227/html/CRPT-119hrpt227.htm",
+      "record_id": "rec-2025-08-15-crpt-119hrpt227-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislator supports providing bonus leverage at licensing to drive additional SBIC investment to small manufacturers and rural and underserved communities."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1131,
+    "prompt_tokens": 2832,
+    "total_tokens": 3963,
+    "completion_tokens_details": {
+      "reasoning_tokens": 877
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

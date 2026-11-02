@@ -1,0 +1,24 @@
+{
+  "id": "rec-billstatus-hr7436-119-20260209",
+  "content": "<other>: H.R. 7436 (119th Congress): Department of Homeland Security Intelligence and Analysis Training Act\nSponsor: Rep. Seth Magaziner\nCosponsor: Rep. August Pfluger\nCosponsor: Rep. Bennie G. Thompson\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/7436",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/7436",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-02-09",
+    "persons": [
+      "M001223",
+      "P000048",
+      "T000193"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/7436"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

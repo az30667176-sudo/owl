@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr4054-119-20250620",
+  "content": "<other>: H.R. 4054 (119th Congress): Accreditation Choice and Innovation Act\nSponsor: Rep. Randy Fine\nSponsor: Rep. Randy Fine\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/4054",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/4054",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-06-20",
+    "persons": [
+      "F000484",
+      "F000484"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/4054"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

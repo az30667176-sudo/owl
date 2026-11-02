@@ -1,0 +1,28 @@
+{
+  "id": "rec-billstatus-hr3699-119-20251017",
+  "content": "<other>: H.R. 3699 (119th Congress): Energy Choice Act\nCosponsor: Rep. Bryan Steil\nCosponsor: Rep. Harriet M. Hageman\nCosponsor: Rep. Frank D. Lucas\nCosponsor: Rep. Daniel Webster\nCosponsor: Rep. Virginia Foxx\nCosponsor: Rep. Brian Babin\nCosponsor: Rep. Sheri Biggs\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/3699",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/3699",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-10-17",
+    "persons": [
+      "S001213",
+      "H001096",
+      "L000491",
+      "W000806",
+      "F000450",
+      "B001291",
+      "B001325"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/3699"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

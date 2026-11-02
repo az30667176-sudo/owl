@@ -1,0 +1,36 @@
+{
+  "record_id": "rec-2025-11-25-crpt-119hrpt386-dissenting-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:26:48.417Z",
+  "accepted": [
+    {
+      "person": "H001068",
+      "issue": "mining-and-mineral-resources",
+      "date": "2025-11-25",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "The House should oppose H.R. 1366.",
+      "bill": "H.R. 1366, the Mining Regulatory Clarity Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt386/html/CRPT-119hrpt386.htm",
+      "record_id": "rec-2025-11-25-crpt-119hrpt386-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislator explicitly calls for the House to oppose the mining bill."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1071,
+    "prompt_tokens": 3735,
+    "total_tokens": 4806,
+    "completion_tokens_details": {
+      "reasoning_tokens": 950
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

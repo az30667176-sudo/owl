@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr2617-119-20250501",
+  "content": "<other>: H.R. 2617 (119th Congress): Say No to Indoctrination Act\nCosponsor: Rep. Rudy Yakym III\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2617",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2617",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-05-01",
+    "persons": [
+      "Y000067"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2617"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "id": "rec-billstatus-hr1041-119-20250206",
+  "content": "<other>: H.R. 1041 (119th Congress): Veterans 2nd Amendment Protection Act\nSponsor: Rep. Mike Bost\nCosponsor: Rep. Morgan Luttrell\nCosponsor: Rep. Jack Bergman\nCosponsor: Rep. Sheri Biggs\nCosponsor: Rep. Brad Finstad\nCosponsor: Rep. Darin LaHood\nCosponsor: Rep. Russ Fulcher\nCosponsor: Rep. Chuck Edwards\nCosponsor: Rep. Daniel Webster\nCosponsor: Rep. Don Bacon\nCosponsor: Rep. Ryan K. Zinke\nCosponsor: Rep. Sam Graves\nCosponsor: Rep. Dan Newhouse\nCosponsor: Rep. Nancy Mace\nCosponsor: Rep. Claudia Tenney\nCosponsor: Rep. Mark Alford\nCosponsor: Rep. Derrick Van Orden\nCosponsor: Rep. Richard Hudson\nCosponsor: Rep. Brett Guthrie\nCosponsor: Rep. Chip Roy\nCosponsor: Rep. Kat Cammack\nCosponsor: Rep. Mike Kelly\nCosponsor: Rep. John R. Moolenaar\nCosponsor: Rep. Randy Feenstra\nCosponsor: Rep. Gus M. Bilirakis\nCosponsor: Rep. Andy Harris\nCosponsor: Rep. Mariannette Miller-Meeks\nCosponsor: Rep. Brian Babin\nCosponsor: Rep. James R. Baird\nCosponsor: Rep. Barry Moore\nCosponsor: Rep. Jay Obernolte\nCosponsor: Rep. Mark E. Amodei\nCosponsor: Rep. Dan Crenshaw\nCosponsor: Rep. Mike Collins\nCosponsor: Rep. Abraham J. Hamadeh\nCosponsor: Rep. Glenn Grothman\nCosponsor: Rep. Ronny Jackson\nCosponsor: Rep. Pete Stauber\nCosponsor: Rep. Adrian Smith\nCosponsor: Rep. Michael A. Rulli\nCosponsor: Rep. Rudy Yakym III\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1041",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1041",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-06",
+    "persons": [
+      "B001295",
+      "L000603",
+      "B001301",
+      "B001325",
+      "F000475",
+      "L000585",
+      "F000469",
+      "E000246",
+      "W000806",
+      "B001298",
+      "Z000018",
+      "G000546",
+      "N000189",
+      "M000194",
+      "T000478",
+      "A000379",
+      "V000135",
+      "H001067",
+      "G000558",
+      "R000614",
+      "C001039",
+      "K000376",
+      "M001194",
+      "F000446",
+      "B001257",
+      "H001052",
+      "M001215",
+      "B001291",
+      "B001307",
+      "M001212",
+      "O000019",
+      "A000369",
+      "C001120",
+      "C001129",
+      "H001098",
+      "G000576",
+      "J000304",
+      "S001212",
+      "S001172",
+      "R000619",
+      "Y000067"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1041"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr410-119-20250115",
+  "content": "<other>: H.R. 410 (119th Congress): Alaska Native Vietnam Era Veterans Land Allotment Extension Act of 2025\nSponsor: Rep. Nicholas J. Begich III\nSponsor: Rep. Nicholas J. Begich III\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/410",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/410",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-01-15",
+    "persons": [
+      "B001323",
+      "B001323"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/410"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

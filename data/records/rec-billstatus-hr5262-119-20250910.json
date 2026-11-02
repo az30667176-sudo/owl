@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr5262-119-20250910",
+  "content": "<other>: H.R. 5262 (119th Congress): Bank Competition Modernization Act\nSponsor: Rep. Scott Fitzgerald\nSponsor: Rep. Scott Fitzgerald\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/5262",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/5262",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-09-10",
+    "persons": [
+      "F000471",
+      "F000471"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/5262"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

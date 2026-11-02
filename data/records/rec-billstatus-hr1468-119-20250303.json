@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr1468-119-20250303",
+  "content": "<other>: H.R. 1468 (119th Congress): Protect America’s Innovation and Economic Security from CCP Act\nCosponsor: Rep. Scott Franklin\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1468",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1468",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-03",
+    "persons": [
+      "F000472"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1468"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

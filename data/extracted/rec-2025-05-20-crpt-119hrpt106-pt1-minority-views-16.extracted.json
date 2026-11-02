@@ -1,0 +1,102 @@
+{
+  "record_id": "rec-2025-05-20-crpt-119hrpt106-pt1-minority-views-16",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:24:59.267Z",
+  "accepted": [
+    {
+      "person": "R000606",
+      "issue": "federal-budget-and-deficit",
+      "date": "2025-05-20",
+      "score": -0.85,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "With their budget reconciliation plan, House Republicans want to cut hundreds of billions of dollars from essential government programs and services that the American people rely on--Medicaid, food assistance for mothers and children, veterans' benefits, Meals on Wheels, and more--in order to pay for another giant tax break for billionaires.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt106/html/CRPT-119hrpt106-pt1.htm",
+      "record_id": "rec-2025-05-20-crpt-119hrpt106-pt1-minority-views-16",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote criticizes cutting essential programs to fund tax breaks, opposing the reconciliation budget approach."
+    },
+    {
+      "person": "R000606",
+      "issue": "immigration-enforcement",
+      "date": "2025-05-20",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "This bill is a blank check. It hands $81 billion to the Administration to do more of what we have already seen-- mistakenly deporting people to a foreign prison.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt106/html/CRPT-119hrpt106-pt1.htm",
+      "record_id": "rec-2025-05-20-crpt-119hrpt106-pt1-minority-views-16",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote directly opposes providing $81 billion for immigration enforcement in the bill."
+    },
+    {
+      "person": "R000606",
+      "issue": "federal-courts",
+      "date": "2025-05-20",
+      "score": 0.85,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "Instead of providing support for the judicial branch, this bill attempts to strip the courts of their power to hold the Administration in contempt when the President violates court orders, as he appears dangerously close to doing on so many fronts.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt106/html/CRPT-119hrpt106-pt1.htm",
+      "record_id": "rec-2025-05-20-crpt-119hrpt106-pt1-minority-views-16",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote supports judicial contempt power and opposes stripping courts of that authority."
+    },
+    {
+      "person": "R000606",
+      "issue": "law-enforcement-support",
+      "date": "2025-05-20",
+      "score": 0.85,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "These grants support local police in solving and preventing violent crime. They help the survivors of abuse and sexual assault navigate the legal system and connect them to the resources and support they need.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt106/html/CRPT-119hrpt106-pt1.htm",
+      "record_id": "rec-2025-05-20-crpt-119hrpt106-pt1-minority-views-16",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote affirms support for DOJ public safety grants for police, crime prevention and victims."
+    },
+    {
+      "person": "R000606",
+      "issue": "regulatory-review-and-congressional-approval",
+      "date": "2025-05-20",
+      "score": -0.85,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The supercharged REINS Act is buried in this bill. It would prevent the government from enforcing our civil rights, protecting workplace safety, and guarding against misconduct by banks and financial institutions.",
+      "bill": "H.R. 142 Regulations from the Executive in Need of Scrutiny (REINS) Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt106/html/CRPT-119hrpt106-pt1.htm",
+      "record_id": "rec-2025-05-20-crpt-119hrpt106-pt1-minority-views-16",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote opposes including the REINS Act because it would block civil rights, safety and financial regulation."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "regulatory-review-and-congressional-approval",
+      "name": "Regulatory Review and Congressional Approval",
+      "parent": "hsgo-doge"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 3296,
+    "prompt_tokens": 4889,
+    "total_tokens": 8185,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2595
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

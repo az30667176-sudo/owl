@@ -1,0 +1,96 @@
+{
+  "record_id": "rec-2026-02-20-crpt-119hrpt506-minority-views-2",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:46:10.280Z",
+  "accepted": [
+    {
+      "person": "S000185",
+      "issue": "wages-and-labor-standards",
+      "date": "2026-02-20",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Businesses would be encouraged to misclassify unskilled workers as independent contractors, given that the businesses could comfortably provide the necessary training without any worry of it being considered as evidence of the economic reality of the relationship.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt506/html/CRPT-119hrpt506.htm",
+      "record_id": "rec-2026-02-20-crpt-119hrpt506-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage warns the bill encourages misclassification and weakens employment tests, indicating support for strong wage and labor standards."
+    },
+    {
+      "person": "B001278",
+      "issue": "wages-and-labor-standards",
+      "date": "2026-02-20",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Businesses would be encouraged to misclassify unskilled workers as independent contractors, given that the businesses could comfortably provide the necessary training without any worry of it being considered as evidence of the economic reality of the relationship.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt506/html/CRPT-119hrpt506.htm",
+      "record_id": "rec-2026-02-20-crpt-119hrpt506-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage warns the bill encourages misclassification and weakens employment tests, indicating support for strong wage and labor standards."
+    },
+    {
+      "person": "D000623",
+      "issue": "wages-and-labor-standards",
+      "date": "2026-02-20",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Businesses would be encouraged to misclassify unskilled workers as independent contractors, given that the businesses could comfortably provide the necessary training without any worry of it being considered as evidence of the economic reality of the relationship.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt506/html/CRPT-119hrpt506.htm",
+      "record_id": "rec-2026-02-20-crpt-119hrpt506-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage warns the bill encourages misclassification and weakens employment tests, indicating support for strong wage and labor standards."
+    },
+    {
+      "person": "H001081",
+      "issue": "wages-and-labor-standards",
+      "date": "2026-02-20",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Businesses would be encouraged to misclassify unskilled workers as independent contractors, given that the businesses could comfortably provide the necessary training without any worry of it being considered as evidence of the economic reality of the relationship.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt506/html/CRPT-119hrpt506.htm",
+      "record_id": "rec-2026-02-20-crpt-119hrpt506-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage warns the bill encourages misclassification and weakens employment tests, indicating support for strong wage and labor standards."
+    },
+    {
+      "person": "L000602",
+      "issue": "wages-and-labor-standards",
+      "date": "2026-02-20",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Businesses would be encouraged to misclassify unskilled workers as independent contractors, given that the businesses could comfortably provide the necessary training without any worry of it being considered as evidence of the economic reality of the relationship.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt506/html/CRPT-119hrpt506.htm",
+      "record_id": "rec-2026-02-20-crpt-119hrpt506-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage warns the bill encourages misclassification and weakens employment tests, indicating support for strong wage and labor standards."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2545,
+    "prompt_tokens": 4812,
+    "total_tokens": 7357,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1932
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

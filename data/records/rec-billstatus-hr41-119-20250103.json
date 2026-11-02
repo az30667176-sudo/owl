@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr41-119-20250103",
+  "content": "<other>: H.R. 41 (119th Congress): Unrecognized Southeast Alaska Native Communities Recognition and Compensation Act\nSponsor: Rep. Nicholas J. Begich III\nSponsor: Rep. Nicholas J. Begich III\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/41",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/41",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-01-03",
+    "persons": [
+      "B001323",
+      "B001323"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/41"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

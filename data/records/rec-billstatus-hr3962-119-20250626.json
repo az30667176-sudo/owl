@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr3962-119-20250626",
+  "content": "<other>: H.R. 3962 (119th Congress): ESTUARIES Act\nCosponsor: Rep. Kathy Castor\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/3962",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/3962",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-06-26",
+    "persons": [
+      "C001066"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/3962"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

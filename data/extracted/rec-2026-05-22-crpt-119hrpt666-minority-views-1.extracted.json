@@ -1,0 +1,87 @@
+{
+  "record_id": "rec-2026-05-22-crpt-119hrpt666-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:29:18.738Z",
+  "accepted": [
+    {
+      "person": "D000216",
+      "issue": "legislative-branch-appropriations",
+      "date": "2026-05-22",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "These funding levels are insufficient to meet the operational and infrastructure needs of the Legislative Branch.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt666/html/CRPT-119hrpt666.htm",
+      "record_id": "rec-2026-05-22-crpt-119hrpt666-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote calls for higher funding for Legislative Branch operations and infrastructure."
+    },
+    {
+      "person": "E000297",
+      "issue": "legislative-branch-appropriations",
+      "date": "2026-05-22",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "These funding levels are insufficient to meet the operational and infrastructure needs of the Legislative Branch.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt666/html/CRPT-119hrpt666.htm",
+      "record_id": "rec-2026-05-22-crpt-119hrpt666-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote calls for higher funding for Legislative Branch operations and infrastructure."
+    },
+    {
+      "person": "D000216",
+      "issue": "gao-impoundment-control-act-enforcement-authority",
+      "date": "2026-05-22",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The inclusion of this provision undermines Congress's constitutional oversight authority by limiting GAO's longstanding independent enforcement role under the Impoundment Control Act",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt666/html/CRPT-119hrpt666.htm",
+      "record_id": "rec-2026-05-22-crpt-119hrpt666-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote opposes section 116 restricting GAO independent enforcement under the Impoundment Control Act."
+    },
+    {
+      "person": "E000297",
+      "issue": "gao-impoundment-control-act-enforcement-authority",
+      "date": "2026-05-22",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The inclusion of this provision undermines Congress's constitutional oversight authority by limiting GAO's longstanding independent enforcement role under the Impoundment Control Act",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt666/html/CRPT-119hrpt666.htm",
+      "record_id": "rec-2026-05-22-crpt-119hrpt666-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote opposes section 116 restricting GAO independent enforcement under the Impoundment Control Act."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "gao-impoundment-control-act-enforcement-authority",
+      "name": "GAO Impoundment Control Act Enforcement Authority",
+      "parent": "hsap-legislative"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 2947,
+    "prompt_tokens": 3073,
+    "total_tokens": 6020,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2458
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

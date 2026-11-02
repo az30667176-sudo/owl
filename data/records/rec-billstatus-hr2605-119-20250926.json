@@ -1,0 +1,30 @@
+{
+  "id": "rec-billstatus-hr2605-119-20250926",
+  "content": "<other>: H.R. 2605 (119th Congress): SAVES Act\nCosponsor: Rep. Ryan K. Zinke\nCosponsor: Rep. Michael T. McCaul\nCosponsor: Rep. Mike Ezell\nCosponsor: Rep. Brian Babin\nCosponsor: Rep. Jake Ellzey\nCosponsor: Rep. Mike Collins\nCosponsor: Rep. Roger Williams\nCosponsor: Rep. Pat Fallon\nCosponsor: Rep. Zachary Nunn\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2605",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2605",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-09-26",
+    "persons": [
+      "Z000018",
+      "M001157",
+      "E000235",
+      "B001291",
+      "E000071",
+      "C001129",
+      "W000816",
+      "F000246",
+      "N000193"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2605"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

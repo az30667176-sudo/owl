@@ -1,0 +1,37 @@
+{
+  "id": "rec-billstatus-hr1262-119-20250916",
+  "content": "<other>: H.R. 1262 (119th Congress): Mikaela Naylon Give Kids a Chance Act\nCosponsor: Rep. James A. Himes\nCosponsor: Rep. Veronica Escobar\nCosponsor: Rep. Johnny Olszewski, Jr.\nCosponsor: Rep. Adam Smith\nCosponsor: Rep. Linda T. Sánchez\nCosponsor: Rep. Emily Randall\nCosponsor: Rep. Chellie Pingree\nCosponsor: Rep. Rashida Tlaib\nCosponsor: Rep. Luz M. Rivas\nCosponsor: Rep. Kristen McDonald Rivet\nCosponsor: Rep. Laura Friedman\nCosponsor: Rep. Lance Gooden\nCosponsor: Rep. Randy Feenstra\nCosponsor: Rep. Sydney Kamlager-Dove\nCosponsor: Rep. Marie Gluesenkamp Perez\nCosponsor: Rep. Jared Huffman\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1262",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1262",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-09-16",
+    "persons": [
+      "H001047",
+      "E000299",
+      "O000176",
+      "S000510",
+      "S001156",
+      "R000621",
+      "P000597",
+      "T000481",
+      "R000620",
+      "M001237",
+      "F000483",
+      "G000589",
+      "F000446",
+      "K000400",
+      "G000600",
+      "H001068"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1262"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

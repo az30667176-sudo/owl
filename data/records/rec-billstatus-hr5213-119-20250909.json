@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr5213-119-20250909",
+  "content": "<other>: H.R. 5213 (119th Congress): No Federal Funds for Cashless Bail Act\nCosponsor: Rep. Troy E. Nehls\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/5213",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/5213",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-09-09",
+    "persons": [
+      "N000026"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/5213"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

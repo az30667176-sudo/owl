@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr4495-119-20250723",
+  "content": "<other>: H.R. 4495 (119th Congress): SBA Fraud Enforcement Extension Act\nCosponsor: Rep. Eugene Simon Vindman\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/4495",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/4495",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-07-23",
+    "persons": [
+      "V000138"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/4495"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

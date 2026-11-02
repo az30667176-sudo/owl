@@ -1,0 +1,37 @@
+{
+  "id": "rec-billstatus-hr7613-119-20260224",
+  "content": "<other>: H.R. 7613 (119th Congress): ALERT Act\nCosponsor: Rep. Trent Kelly\nCosponsor: Rep. Jefferson Shreve\nCosponsor: Rep. Marilyn Strickland\nCosponsor: Rep. John B. Larson\nCosponsor: Rep. Jeff Crank\nCosponsor: Rep. Mike Kennedy\nCosponsor: Rep. Jared Huffman\nCosponsor: Rep. Daniel S. Goldman\nCosponsor: Rep. Debbie Wasserman Schultz\nCosponsor: Rep. Kathy Castor\nCosponsor: Rep. Mike Bost\nCosponsor: Rep. Troy Balderson\nCosponsor: Rep. Nicholas J. Begich III\nCosponsor: Rep. Gus M. Bilirakis\nCosponsor: Rep. Lizzie Fletcher\nCosponsor: Rep. Gabe Evans\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/7613",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/7613",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-02-24",
+    "persons": [
+      "K000388",
+      "S001229",
+      "S001159",
+      "L000557",
+      "C001137",
+      "K000403",
+      "H001068",
+      "G000599",
+      "W000797",
+      "C001066",
+      "B001295",
+      "B001306",
+      "B001323",
+      "B001257",
+      "F000468",
+      "E000300"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/7613"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

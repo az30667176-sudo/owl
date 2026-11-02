@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr4460-119-20250716",
+  "content": "<other>: H.R. 4460 (119th Congress): SAFE Guidance Act\nSponsor: Rep. Daniel Meuser\nSponsor: Rep. Daniel Meuser\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/4460",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/4460",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-07-16",
+    "persons": [
+      "M001204",
+      "M001204"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/4460"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

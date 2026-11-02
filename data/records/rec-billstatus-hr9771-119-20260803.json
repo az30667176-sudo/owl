@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr9771-119-20260803",
+  "content": "<other>: H.R. 9771 (119th Congress): Stopping Foreign Influence in Elections Act of 2026\nCosponsor: Rep. Randy Fine\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/9771",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/9771",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-08-03",
+    "persons": [
+      "F000484"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/9771"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

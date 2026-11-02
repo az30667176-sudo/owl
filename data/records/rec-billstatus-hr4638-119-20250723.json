@@ -1,0 +1,36 @@
+{
+  "id": "rec-billstatus-hr4638-119-20250723",
+  "content": "<other>: H.R. 4638 (119th Congress): Federal Working Animal Protection Act\nSponsor: Rep. Ken Calvert\nCosponsor: Rep. Claudia Tenney\nCosponsor: Rep. Thomas P. Tiffany\nCosponsor: Rep. Daniel Webster\nCosponsor: Rep. Tom McClintock\nCosponsor: Rep. W. Gregory Steube\nCosponsor: Rep. Burgess Owens\nCosponsor: Rep. Darrell Issa\nCosponsor: Rep. Pat Harrigan\nCosponsor: Rep. Brian K. Fitzpatrick\nCosponsor: Rep. Vern Buchanan\nCosponsor: Rep. Dan Newhouse\nCosponsor: Rep. Michael A. Rulli\nCosponsor: Rep. Roger Williams\nCosponsor: Rep. Don Bacon\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/4638",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/4638",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-07-23",
+    "persons": [
+      "C000059",
+      "T000478",
+      "T000165",
+      "W000806",
+      "M001177",
+      "S001214",
+      "O000086",
+      "I000056",
+      "H001101",
+      "F000466",
+      "B001260",
+      "N000189",
+      "R000619",
+      "W000816",
+      "B001298"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/4638"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

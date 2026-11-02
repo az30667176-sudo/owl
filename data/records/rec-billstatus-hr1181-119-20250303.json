@@ -1,0 +1,32 @@
+{
+  "id": "rec-billstatus-hr1181-119-20250303",
+  "content": "<other>: H.R. 1181 (119th Congress): Protecting Privacy in Purchases Act\nCosponsor: Rep. Gus M. Bilirakis\nCosponsor: Rep. Pete Stauber\nCosponsor: Rep. Scott Franklin\nCosponsor: Rep. Tracey Mann\nCosponsor: Rep. Chuck Edwards\nCosponsor: Rep. Blake D. Moore\nCosponsor: Rep. Julia Letlow\nCosponsor: Rep. Ron Estes\nCosponsor: Rep. Paul A. Gosar\nCosponsor: Rep. Dale W. Strong\nCosponsor: Rep. Jefferson Shreve\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1181",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1181",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-03",
+    "persons": [
+      "B001257",
+      "S001212",
+      "F000472",
+      "M000871",
+      "E000246",
+      "M001213",
+      "L000595",
+      "E000298",
+      "G000565",
+      "S001220",
+      "S001229"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1181"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

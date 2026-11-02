@@ -1,0 +1,40 @@
+{
+  "id": "rec-billstatus-hres195-119-20250305",
+  "content": "<other>: H. Res. 195 (119th Congress): Of inquiry requesting the President of the United States to furnish certain information to the House of Representatives relating to the operations of the Social Security Administration after January 20, 2025, including information on the Department of Government Efficiency's access to the Social Security Administration and to information in the possession of such Administration.\nSponsor: Rep. John B. Larson\nCosponsor: Rep. Richard E. Neal\nCosponsor: Rep. Linda T. Sánchez\nCosponsor: Rep. Danny K. Davis\nCosponsor: Rep. Steven Horsford\nCosponsor: Rep. Terri A. Sewell\nCosponsor: Rep. Lloyd Doggett\nCosponsor: Rep. Judy Chu\nCosponsor: Rep. Gwen Moore\nCosponsor: Rep. Mike Thompson\nCosponsor: Rep. Dwight Evans\nCosponsor: Rep. Brendan F. Boyle\nCosponsor: Rep. Thomas R. Suozzi\nCosponsor: Rep. Donald S. Beyer, Jr.\nCosponsor: Rep. Jimmy Panetta\nCosponsor: Rep. Jimmy Gomez\nCosponsor: Rep. Suzan K. DelBene\nCosponsor: Rep. Bradley Scott Schneider\nCosponsor: Rep. Stacey E. Plaskett\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-resolution/195",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-resolution/195",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-05",
+    "persons": [
+      "L000557",
+      "N000015",
+      "S001156",
+      "D000096",
+      "H001066",
+      "S001185",
+      "D000399",
+      "C001080",
+      "M001160",
+      "T000460",
+      "E000296",
+      "B001296",
+      "S001201",
+      "B001292",
+      "P000613",
+      "G000585",
+      "D000617",
+      "S001190",
+      "P000610"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-resolution/195"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "record_id": "rec-2025-05-21-crpt-119hrpt109-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:25:39.082Z",
+  "accepted": [
+    {
+      "person": "V000081",
+      "issue": "federal-workforce-and-ethics",
+      "date": "2025-05-21",
+      "score": -0.85,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "H.R. 2027, the Returning SBA to Main Street Act, which would relocate 30 percent of SBA employees from headquarters to other parts of the country, is a Republican messaging bill that is just another assault on federal employees and harms our nation's 34 million small businesses.",
+      "bill": "H.R. 2027, the Returning SBA to Main Street Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt109/html/CRPT-119hrpt109.htm",
+      "record_id": "rec-2025-05-21-crpt-119hrpt109-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Velazquez opposes the bill's relocation requirement as an attack on federal employees."
+    },
+    {
+      "person": "V000081",
+      "issue": "labor-relations-and-unions",
+      "date": "2025-05-21",
+      "score": 0.75,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "According to the AFGE, for almost 150 years, under both Democratic and Republican administrations, Title 5 of the U.S. Code has mandated that federal worker--including those represented by unions like AFGE--faithfully carry out the laws of Congress and serve all Americans. President's Trump's Executive Order and this legislation open the door to abuse and retaliation.",
+      "bill": "H.R. 2027, the Returning SBA to Main Street Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt109/html/CRPT-119hrpt109.htm",
+      "record_id": "rec-2025-05-21-crpt-119hrpt109-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Velazquez defends federal collective bargaining protections against limits in the legislation."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2534,
+    "prompt_tokens": 4658,
+    "total_tokens": 7192,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2227
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "finish_reason": "stop"
+}

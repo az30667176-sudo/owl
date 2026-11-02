@@ -1,0 +1,29 @@
+{
+  "id": "rec-billstatus-hr2478-119-20250327",
+  "content": "<other>: H.R. 2478 (119th Congress): Financial Exploitation Prevention Act of 2025\nSponsor: Rep. Ann Wagner\nCosponsor: Rep. Josh Gottheimer\nCosponsor: Rep. Andrew R. Garbarino\nCosponsor: Rep. Bryan Steil\nCosponsor: Rep. Young Kim\nCosponsor: Rep. Marie Gluesenkamp Perez\nCosponsor: Rep. Michael Lawler\nSponsor: Rep. Ann Wagner\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2478",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2478",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-27",
+    "persons": [
+      "W000812",
+      "G000583",
+      "G000597",
+      "S001213",
+      "K000397",
+      "G000600",
+      "L000599",
+      "W000812"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2478"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

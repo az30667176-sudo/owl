@@ -1,0 +1,36 @@
+{
+  "record_id": "rec-2025-12-30-crpt-119hrpt417-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:28:56.797Z",
+  "accepted": [
+    {
+      "person": "P000034",
+      "issue": "energy-efficiency-standards",
+      "date": "2025-12-30",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The definition change proposed in the bill lends support to the Trump Administration's misguided efforts to weaken standards for showerheads, allowing for increased water and energy usage, which, in turn, will raise consumer utility bills.",
+      "bill": "H.R. 4593, the Saving Homeowners from Overregulation With Exceptional Rinsing Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt417/html/CRPT-119hrpt417.htm",
+      "record_id": "rec-2025-12-30-crpt-119hrpt417-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislator criticizes weakening showerhead efficiency standards because it would increase water and energy use and raise utility bills."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 877,
+    "prompt_tokens": 3221,
+    "total_tokens": 4098,
+    "completion_tokens_details": {
+      "reasoning_tokens": 726
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

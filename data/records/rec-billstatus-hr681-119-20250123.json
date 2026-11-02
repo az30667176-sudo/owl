@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr681-119-20250123",
+  "content": "<other>: H.R. 681 (119th Congress): To amend the Act of August 9, 1955 (commonly known as the “Long-Term Leasing Act”), to authorize leases of up to 99 years for land in the Mashpee Wampanoag Tribe Reservation and land held in trust for the Wampanoag Tribe of Gay Head (Aquinnah), and for other purposes\nSponsor: Rep. William R. Keating\nSponsor: Rep. William R. Keating\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/681",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/681",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-01-23",
+    "persons": [
+      "K000375",
+      "K000375"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/681"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

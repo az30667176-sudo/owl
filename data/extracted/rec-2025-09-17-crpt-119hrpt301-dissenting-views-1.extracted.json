@@ -1,0 +1,57 @@
+{
+  "record_id": "rec-2025-09-17-crpt-119hrpt301-dissenting-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:29:48.462Z",
+  "accepted": [
+    {
+      "person": "P000034",
+      "issue": "clean-energy-and-renewable-portfolio-standards",
+      "date": "2025-09-17",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "H.R. 3157 is a thinly veiled attack on clean energy and is duplicative of requirements already imposed by states.",
+      "bill": "H.R. 3157, the State Energy Accountability Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt301/html/CRPT-119hrpt301.htm",
+      "record_id": "rec-2025-09-17-crpt-119hrpt301-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Pallone characterizes the bill as an attack on clean energy standards and defends existing state standards as sufficient."
+    },
+    {
+      "person": "P000034",
+      "issue": "energy-efficiency-standards",
+      "date": "2025-09-17",
+      "score": 0.75,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "the Majority has spent the 119th Congress supporting policies that will increase consumer prices and increase demand on the grid, such as rescinding funding and gutting energy efficiency standards.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt301/html/CRPT-119hrpt301.htm",
+      "record_id": "rec-2025-09-17-crpt-119hrpt301-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Pallone criticizes gutting energy efficiency standards as increasing prices and grid demand, indicating support for the standards."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "clean-energy-and-renewable-portfolio-standards",
+      "name": "Clean Energy and Renewable Portfolio Standards",
+      "parent": "hsif-energy"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 2250,
+    "prompt_tokens": 3013,
+    "total_tokens": 5263,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2008
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

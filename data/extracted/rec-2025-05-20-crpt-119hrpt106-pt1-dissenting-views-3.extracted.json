@@ -1,0 +1,66 @@
+{
+  "record_id": "rec-2025-05-20-crpt-119hrpt106-pt1-dissenting-views-3",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:29:31.789Z",
+  "accepted": [
+    {
+      "person": "G000559",
+      "issue": "defense-appropriations",
+      "date": "2025-05-20",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "I cannot support providing reconciliation funds by taking food from school-aged children. Because of this, I am strongly opposed to the passage of the proposed reconciliation package.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt106/html/CRPT-119hrpt106-pt1.htm",
+      "record_id": "rec-2025-05-20-crpt-119hrpt106-pt1-dissenting-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote states strong opposition to the reconciliation package that provides additional defense funds."
+    },
+    {
+      "person": "G000559",
+      "issue": "defense-authorization",
+      "date": "2025-05-20",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The Sentinel program has spiraled into an 81% cost overrun, reaching $140.9 billion, with no clear strategic necessity.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt106/html/CRPT-119hrpt106-pt1.htm",
+      "record_id": "rec-2025-05-20-crpt-119hrpt106-pt1-dissenting-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote opposes funding the Sentinel nuclear program due to cost overruns and lack of strategic necessity."
+    },
+    {
+      "person": "G000559",
+      "issue": "immigration-enforcement",
+      "date": "2025-05-20",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "President Trump's use of military aircraft for immigration enforcement is deeply alarming, potentially unconstitutional, and a wasteful misuse of our military resources.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt106/html/CRPT-119hrpt106-pt1.htm",
+      "record_id": "rec-2025-05-20-crpt-119hrpt106-pt1-dissenting-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote directly opposes using military aircraft for immigration enforcement as alarming and wasteful."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2477,
+    "prompt_tokens": 2981,
+    "total_tokens": 5458,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2171
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

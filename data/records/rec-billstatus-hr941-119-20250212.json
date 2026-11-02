@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr941-119-20250212",
+  "content": "<other>: H.R. 941 (119th Congress): Small LENDER Act\nCosponsor: Rep. Mike Haridopolos\nCosponsor: Rep. Zachary Nunn\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/941",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/941",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-12",
+    "persons": [
+      "H001099",
+      "N000193"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/941"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

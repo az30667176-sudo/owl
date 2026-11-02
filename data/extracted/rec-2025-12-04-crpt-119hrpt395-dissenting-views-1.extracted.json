@@ -1,0 +1,51 @@
+{
+  "record_id": "rec-2025-12-04-crpt-119hrpt395-dissenting-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:26:02.243Z",
+  "accepted": [
+    {
+      "person": "H001068",
+      "issue": "environmental-review-nepa",
+      "date": "2025-12-04",
+      "score": 0.7,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats believe any reforms to NEPA must prioritize a permitting process that is efficient, effective, and accelerates clean energy development and other essential infrastructure, while respecting communities, public input, tribal sovereignty, and tribal consultation.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt395/html/CRPT-119hrpt395.htm",
+      "record_id": "rec-2025-12-04-crpt-119hrpt395-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Speaker states conditions for supporting NEPA reforms that preserve public input and tribal consultation while improving efficiency."
+    },
+    {
+      "person": "H001068",
+      "issue": "environmental-review-nepa",
+      "date": "2025-12-04",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The SPEED Act further undermines NEPA by shifting its focus away from informed, balanced decision-making.",
+      "bill": "SPEED Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt395/html/CRPT-119hrpt395.htm",
+      "record_id": "rec-2025-12-04-crpt-119hrpt395-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Speaker criticizes the SPEED Act for weakening NEPA's informed decision-making, indicating support for strong environmental review."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1773,
+    "prompt_tokens": 4030,
+    "total_tokens": 5803,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1552
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

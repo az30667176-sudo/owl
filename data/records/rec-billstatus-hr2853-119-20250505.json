@@ -1,0 +1,36 @@
+{
+  "id": "rec-billstatus-hr2853-119-20250505",
+  "content": "<other>: H.R. 2853 (119th Congress): Combating Organized Retail Crime Act of 2025\nCosponsor: Rep. Pat Harrigan\nCosponsor: Rep. Vern Buchanan\nCosponsor: Rep. Jeff Hurd\nCosponsor: Rep. Dale W. Strong\nCosponsor: Rep. Derek Schmidt\nCosponsor: Rep. Rudy Yakym III\nCosponsor: Rep. Robert Garcia\nCosponsor: Rep. Daniel Meuser\nCosponsor: Rep. Michael A. Rulli\nCosponsor: Rep. John R. Moolenaar\nCosponsor: Rep. Janelle S. Bynum\nCosponsor: Rep. Josh Harder\nCosponsor: Rep. Steve Cohen\nCosponsor: Rep. Laura Gillen\nCosponsor: Rep. Robert J. Wittman\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2853",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2853",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-05-05",
+    "persons": [
+      "H001101",
+      "B001260",
+      "H001100",
+      "S001220",
+      "S001228",
+      "Y000067",
+      "G000598",
+      "M001204",
+      "R000619",
+      "M001194",
+      "B001326",
+      "H001090",
+      "C001068",
+      "G000602",
+      "W000804"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2853"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

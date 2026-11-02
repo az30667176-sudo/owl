@@ -1,0 +1,28 @@
+{
+  "id": "rec-2026-03-25-crpt-119hrpt573-minority-views-1",
+  "content": "<Rep. Maxine Waters, Rep. Nydia M. Velázquez, Rep. Brad Sherman, Rep. Al Green, Rep. Bill Foster, Rep. Joyce Beatty, Rep. Juan Vargas, Rep. Sylvia R. Garcia>: This bill would preempt state ``blue sky'' laws for off-exchange, secondary trading for companies who make available certain current public information, including information required by Regulation A or SEC Rule 15c2-11. Blue sky laws are important state-level, anti-fraud regulations that require issuers of securities to register with the state securities commissioner and disclose important details of their offerings, and also creates liability for issuers by allowing investors to bring lawsuits against them for blue sky law violations. Preempting blue sky laws for these kinds of trades reduces the types of recourse investors have against private issuers, and also removes critical layers of oversight that protect retail investors from fraud and high-risk speculative schemes.\nThere are several reasons why this bill could be detrimental to investor protection. First, it would eliminate the protections of state-level ``merit reviews,'' which many state regulators conduct to ensure an offering is fair and equitable. Critically, state regulators can actually block a security from being sold if they think the company is a scam, compared to the rules for federally registered securities which generally allow any legal business to trade as long as they file the paperwork, regardless of how bad the investment is. By preempting these laws this bill would remove a vital safety net that prevents predatory investment structures from reaching unsophisticated retail investors in the secondary market. Additionally, the bill would increase the risk of pump and dump schemes, as state-level registration often serves as a deterrent to bad actors seeking to manipulate low-volume, off-exchange stocks. By removing state oversight for securities that only meet the lower transparency thresholds of Rule 15c2- 11 or Regulation A, the bill could inadvertently facilitate fraud in the over-the-counter markets where price manipulation is most prevalent. Finally, it would weaken the enforcement of local fraud violations, which state regulators are often the first responders to as they are closer to the victims and can act more quickly than the federal government. Preemption would strip states of their ability to set specific standards for secondary trading, potentially leaving local investors without recourse until a scheme becomes large enough to attract limited SEC resources.\nOf note, the Alabama State Securities Commissioner testified at the hearing that, ``this legislation is unnecessary given the deliberate and conscientious efforts by states to streamline certain processes while ensuring investors have the information they need to make informed decisions. Additionally, the bill ``would not solve the longstanding illiquidity problems in the Regulation A market as [. . .] secondary trading does not provide liquidity to the issuer but to the selling security holder.'' Further, the Reg A market ``still suffers from a lack of demand among other reasons because investors want to avoid high costs, high information asymmetries, and high investment minimums associated with these deals regardless of preemption.''<SUP>44</SUP>\nThis bill was previously included in H.R. 2799 in the 118th Congress and received near unanimous Democratic opposition on the House Floor. The North American Securities Administrators Association (NASAA) currently opposes this bill, and it was previously opposed in the 118th Congress by NASAA, along with Consumer Federation of America (CFA), Americans for Financial Reform (AFR), Public Citizen, Council of Institution Investors (CII), and the Center for American Progress.\nFor these reasons, we oppose H.R. 7127.\nSincerely,\nMaxine Waters,\nRanking Member.\nNydia M. Velazquez,\nBrad Sherman,\nAl Green,\nBill Foster,\nJoyce Beatty,\nJuan Vargas,\nSylvia R. Garcia,\nMembers of Congress.",
+  "source": {
+    "url_link": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt573/html/CRPT-119hrpt573.htm",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-03-25",
+    "persons": [
+      "W000187",
+      "V000081",
+      "S000344",
+      "G000553",
+      "F000454",
+      "B001281",
+      "V000130",
+      "G000587"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/7127",
+      "https://www.congress.gov/bill/119th-congress/house-bill/2506",
+      "https://www.congress.gov/bill/119th-congress/house-bill/2799"
+    ]
+  }
+}

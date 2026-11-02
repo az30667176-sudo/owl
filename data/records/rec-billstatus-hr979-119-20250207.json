@@ -1,0 +1,34 @@
+{
+  "id": "rec-billstatus-hr979-119-20250207",
+  "content": "<other>: H.R. 979 (119th Congress): AM Radio for Every Vehicle Act of 2025\nCosponsor: Rep. Daniel Meuser\nCosponsor: Rep. Richard Hudson\nCosponsor: Rep. Randy K. Weber, Sr.\nCosponsor: Rep. Mark Alford\nCosponsor: Rep. Nicholas A. Langworthy\nCosponsor: Rep. Frank D. Lucas\nCosponsor: Rep. Deborah K. Ross\nCosponsor: Rep. Doug LaMalfa\nCosponsor: Rep. Janice D. Schakowsky\nCosponsor: Rep. Darren Soto\nCosponsor: Rep. Marie Gluesenkamp Perez\nCosponsor: Rep. Jared F. Golden\nCosponsor: Rep. Don Bacon\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/979",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/979",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-07",
+    "persons": [
+      "M001204",
+      "H001067",
+      "W000814",
+      "A000379",
+      "L000600",
+      "L000491",
+      "R000305",
+      "L000578",
+      "S001145",
+      "S001200",
+      "G000600",
+      "G000592",
+      "B001298"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/979"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

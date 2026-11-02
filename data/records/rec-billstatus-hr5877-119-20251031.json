@@ -1,0 +1,26 @@
+{
+  "id": "rec-billstatus-hr5877-119-20251031",
+  "content": "<other>: H.R. 5877 (119th Congress): Combatting Money Laundering in Cyber Crime Act of 2025\nSponsor: Rep. Scott Fitzgerald\nCosponsor: Rep. Brittany Pettersen\nCosponsor: Rep. Zachary Nunn\nCosponsor: Rep. Brad Sherman\nSponsor: Rep. Scott Fitzgerald\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/5877",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/5877",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-10-31",
+    "persons": [
+      "F000471",
+      "P000620",
+      "N000193",
+      "S000344",
+      "F000471"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/5877"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "rec-billstatus-hr1069-119-20250206",
+  "content": "<other>: H.R. 1069 (119th Congress): PROTECT Our Kids Act\nSponsor: Rep. Kevin Hern\nCosponsor: Rep. Kevin Kiley\nSponsor: Rep. Kevin Hern\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1069",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1069",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-06",
+    "persons": [
+      "H001082",
+      "K000401",
+      "H001082"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1069"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

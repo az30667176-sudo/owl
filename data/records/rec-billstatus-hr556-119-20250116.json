@@ -1,0 +1,64 @@
+{
+  "id": "rec-billstatus-hr556-119-20250116",
+  "content": "<other>: H.R. 556 (119th Congress): Protecting Access for Hunters and Anglers Act\nSponsor: Rep. Robert J. Wittman\nCosponsor: Rep. John J. McGuire III\nCosponsor: Rep. Randy K. Weber, Sr.\nCosponsor: Rep. Austin Scott\nCosponsor: Rep. Monica De La Cruz\nCosponsor: Rep. Ann Wagner\nCosponsor: Rep. Aaron Bean\nCosponsor: Rep. Claudia Tenney\nCosponsor: Rep. Ken Calvert\nCosponsor: Rep. Ryan K. Zinke\nCosponsor: Rep. Pete Stauber\nCosponsor: Rep. Chuck Edwards\nCosponsor: Rep. Ralph Norman\nCosponsor: Rep. Tom McClintock\nCosponsor: Rep. Michael Guest\nCosponsor: Rep. Glenn Thompson\nCosponsor: Rep. John R. Moolenaar\nCosponsor: Rep. Mike Rogers\nCosponsor: Rep. Daniel Webster\nCosponsor: Rep. Brad Finstad\nCosponsor: Rep. Gregory F. Murphy\nCosponsor: Rep. Dan Newhouse\nCosponsor: Rep. Tim Walberg\nCosponsor: Rep. Barry Moore\nCosponsor: Rep. Andy Biggs\nCosponsor: Rep. Jennifer A. Kiggans\nCosponsor: Rep. Russ Fulcher\nCosponsor: Rep. Mike Bost\nCosponsor: Rep. Richard Hudson\nCosponsor: Rep. Harriet M. Hageman\nCosponsor: Rep. Lauren Boebert\nCosponsor: Rep. Ben Cline\nCosponsor: Rep. Earl L. \"Buddy\" Carter\nCosponsor: Rep. Thomas P. Tiffany\nCosponsor: Rep. Roger Williams\nCosponsor: Rep. Jack Bergman\nCosponsor: Rep. Troy Balderson\nCosponsor: Rep. Mark B. Messmer\nCosponsor: Rep. Michelle Fischbach\nCosponsor: Rep. Scott Fitzgerald\nCosponsor: Rep. Julia Letlow\nCosponsor: Rep. Charles J. \"Chuck\" Fleischmann\nSponsor: Rep. Robert J. Wittman\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/556",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/556",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-01-16",
+    "persons": [
+      "W000804",
+      "M001239",
+      "W000814",
+      "S001189",
+      "D000594",
+      "W000812",
+      "B001314",
+      "T000478",
+      "C000059",
+      "Z000018",
+      "S001212",
+      "E000246",
+      "N000190",
+      "M001177",
+      "G000591",
+      "T000467",
+      "M001194",
+      "R000575",
+      "W000806",
+      "F000475",
+      "M001210",
+      "N000189",
+      "W000798",
+      "M001212",
+      "B001302",
+      "K000399",
+      "F000469",
+      "B001295",
+      "H001067",
+      "H001096",
+      "B000825",
+      "C001118",
+      "C001103",
+      "T000165",
+      "W000816",
+      "B001301",
+      "B001306",
+      "M001233",
+      "F000470",
+      "F000471",
+      "L000595",
+      "F000459",
+      "W000804"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/556"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

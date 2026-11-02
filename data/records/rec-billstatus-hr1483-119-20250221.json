@@ -1,0 +1,26 @@
+{
+  "id": "rec-billstatus-hr1483-119-20250221",
+  "content": "<other>: H.R. 1483 (119th Congress): Protecting Investors’ Personally Identifiable Information Act\nSponsor: Rep. Barry Loudermilk\nCosponsor: Rep. Ann Wagner\nCosponsor: Rep. Daniel Meuser\nCosponsor: Rep. Bill Huizenga\nSponsor: Rep. Barry Loudermilk\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1483",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1483",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-21",
+    "persons": [
+      "L000583",
+      "W000812",
+      "M001204",
+      "H001058",
+      "L000583"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1483"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -35,6 +35,7 @@
   .modes button { background: transparent; border: 0; color: var(--muted); padding: 5px 12px; cursor: pointer; font: inherit; font-size: 12px; }
   .modes button.active { background: var(--accent); color: var(--on-accent); }
   header .mock { margin-left: auto; font-size: 11px; padding: 3px 8px; border: 1px solid var(--accent); color: var(--accent); border-radius: 999px; }
+  header .drop { font-size: 11px; padding: 3px 8px; border: 1px solid var(--border-strong); color: var(--muted); border-radius: 999px; }
   aside, section, .side { overflow: auto; }
   aside { border-right: 1px solid var(--border); background: var(--panel); padding: 10px 12px 24px; }
   .h { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 14px 4px 6px; display: flex; justify-content: space-between; }
@@ -274,6 +275,7 @@
     <nav class="modes" aria-label="Sections"><button id="m-explore">Explore</button><button id="m-focus">Issues</button><button id="m-list">Find</button><button id="m-profile">Legislators</button></nav>
     <span class="crumb" id="crumb"></span>
     <span class="mock" id="mock" hidden>Mock data · fictional legislators</span>
+    <span class="drop" id="drop" hidden></span>
   </header>
   <aside id="aside"></aside>
   <section>
@@ -329,6 +331,7 @@
   const nowOf = (p, i) => edgeScoreByPI[p + "|" + i] ?? null;
   document.getElementById("loading").remove();
   if ([issuesRaw, peopleRaw, stancesRaw].some(x => x._meta && x._meta.mock)) document.getElementById("mock").hidden = false;
+  { const drop = stancesRaw._meta?.drop || issuesRaw._meta?.drop; if (drop) { const el = document.getElementById("drop"); el.textContent = `data: ${drop}`; el.hidden = false; } }
 
   // ---------- model ----------
   const COMMITTEES = taxonomy.committees;

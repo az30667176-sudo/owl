@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr2701-119-20250626",
+  "content": "<other>: H.R. 2701 (119th Congress): Fallen Servicemembers Religious Heritage Restoration Act\nCosponsor: Rep. Juan Ciscomani\nCosponsor: Rep. Kim Schrier\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2701",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2701",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-06-26",
+    "persons": [
+      "C001133",
+      "S001216"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2701"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

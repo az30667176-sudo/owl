@@ -1,0 +1,25 @@
+{
+  "id": "rec-billstatus-hr2768-119-20250409",
+  "content": "<other>: H.R. 2768 (119th Congress): Benton MacKaye National Scenic Trail Feasibility Study Act of 2026\nSponsor: Rep. Charles J. \"Chuck\" Fleischmann\nCosponsor: Rep. Steve Cohen\nCosponsor: Rep. Chuck Edwards\nCosponsor: Rep. Lucy McBath\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2768",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2768",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-04-09",
+    "persons": [
+      "F000459",
+      "C001068",
+      "E000246",
+      "M001208"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2768"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

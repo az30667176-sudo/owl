@@ -1,0 +1,29 @@
+{
+  "id": "rec-billstatus-hr842-119-20250916",
+  "content": "<other>: H.R. 842 (119th Congress): Nancy Gardner Sewell Medicare Multi-Cancer Early Detection Screening Coverage Act\nCosponsor: Rep. Henry Cuellar\nCosponsor: Rep. Brian Babin\nCosponsor: Rep. James C. Moylan\nCosponsor: Rep. Jefferson Shreve\nCosponsor: Rep. Mike Levin\nCosponsor: Rep. Blake D. Moore\nCosponsor: Rep. Michael R. Turner\nCosponsor: Rep. Thomas H. Kean, Jr.\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/842",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/842",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-09-16",
+    "persons": [
+      "C001063",
+      "B001291",
+      "M001219",
+      "S001229",
+      "L000593",
+      "M001213",
+      "T000463",
+      "K000398"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/842"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

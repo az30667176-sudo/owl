@@ -1,0 +1,52 @@
+{
+  "id": "rec-billstatus-hr6955-119-20260107",
+  "content": "<other>: H.R. 6955 (119th Congress): Main Street Capital Access Act\nSponsor: Rep. J. French Hill\nCosponsor: Rep. Andy Barr\nCosponsor: Rep. Bill Huizenga\nCosponsor: Rep. Frank D. Lucas\nCosponsor: Rep. Pete Sessions\nCosponsor: Rep. Ann Wagner\nCosponsor: Rep. Roger Williams\nCosponsor: Rep. Tom Emmer\nCosponsor: Rep. Barry Loudermilk\nCosponsor: Rep. Warren Davidson\nCosponsor: Rep. John W. Rose\nCosponsor: Rep. Bryan Steil\nCosponsor: Rep. William R. Timmons IV\nCosponsor: Rep. Marlin A. Stutzman\nCosponsor: Rep. Ralph Norman\nCosponsor: Rep. Daniel Meuser\nCosponsor: Rep. Young Kim\nCosponsor: Rep. Byron Donalds\nCosponsor: Rep. Andrew R. Garbarino\nCosponsor: Rep. Scott Fitzgerald\nCosponsor: Rep. Mike Flood\nCosponsor: Rep. Michael Lawler\nCosponsor: Rep. Monica De La Cruz\nCosponsor: Rep. Andrew Ogles\nCosponsor: Rep. Zachary Nunn\nCosponsor: Rep. Lisa C. McClain\nCosponsor: Rep. Maria Elvira Salazar\nCosponsor: Rep. Troy Downing\nCosponsor: Rep. Mike Haridopolos\nCosponsor: Rep. Tim Moore\nSponsor: Rep. Andy Barr\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/6955",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/6955",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-01-07",
+    "persons": [
+      "H001072",
+      "B001282",
+      "H001058",
+      "L000491",
+      "S000250",
+      "W000812",
+      "W000816",
+      "E000294",
+      "L000583",
+      "D000626",
+      "R000612",
+      "S001213",
+      "T000480",
+      "S001188",
+      "N000190",
+      "M001204",
+      "K000397",
+      "D000032",
+      "G000597",
+      "F000471",
+      "F000474",
+      "L000599",
+      "D000594",
+      "O000175",
+      "N000193",
+      "M001136",
+      "S000168",
+      "D000634",
+      "H001099",
+      "M001236",
+      "B001282"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/6955"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

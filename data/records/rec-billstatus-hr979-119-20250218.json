@@ -1,0 +1,29 @@
+{
+  "id": "rec-billstatus-hr979-119-20250218",
+  "content": "<other>: H.R. 979 (119th Congress): AM Radio for Every Vehicle Act of 2025\nCosponsor: Rep. Laurel M. Lee\nCosponsor: Rep. Brittany Pettersen\nCosponsor: Rep. Jeff Crank\nCosponsor: Rep. Nathaniel Moran\nCosponsor: Rep. Michael T. McCaul\nCosponsor: Rep. Robert B. Aderholt\nCosponsor: Rep. Glenn Grothman\nCosponsor: Rep. Rudy Yakym III\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/979",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/979",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-18",
+    "persons": [
+      "L000597",
+      "P000620",
+      "C001137",
+      "M001224",
+      "M001157",
+      "A000055",
+      "G000576",
+      "Y000067"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/979"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

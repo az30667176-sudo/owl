@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr9203-119-20260624",
+  "content": "<other>: H.R. 9203 (119th Congress): Student Protection and University Accountability Act\nCosponsor: Rep. Josh Gottheimer\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/9203",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/9203",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-06-24",
+    "persons": [
+      "G000583"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/9203"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

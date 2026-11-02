@@ -1,0 +1,51 @@
+{
+  "record_id": "rec-2026-06-09-crpt-119hrpt692-dissenting-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:30:46.143Z",
+  "accepted": [
+    {
+      "person": "H001068",
+      "issue": "environmental-review-nepa",
+      "date": "2026-06-09",
+      "score": -0.6,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Unfortunately, this legislation is not a simple question of aligning federal permitting practices with federal investment priorities for national security.",
+      "bill": "H.R. 5929",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt692/html/CRPT-119hrpt692.htm",
+      "record_id": "rec-2026-06-09-crpt-119hrpt692-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The sentence rejects the framing of the bill as a benign alignment of permitting and investment priorities."
+    },
+    {
+      "person": "H001068",
+      "issue": "mining-and-mineral-resources",
+      "date": "2026-06-09",
+      "score": -0.7,
+      "direction": "oppose",
+      "linkage": "mid",
+      "llm_confidence": "high",
+      "quote": "The DPA is intended to fund projects important to national security, but this administration seems to be defining ``national security'' as whatever its industry allies want, whether it's to complete construction of President Trump's ballroom, to try and shut down offshore wind, or waive Endangered Species Act requirements for Big Oil in the Gulf of Mexico.",
+      "bill": "H.R. 5929",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt692/html/CRPT-119hrpt692.htm",
+      "record_id": "rec-2026-06-09-crpt-119hrpt692-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage criticizes expansive use of national-security authority to benefit industry allies in resource and development projects."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 3176,
+    "prompt_tokens": 2749,
+    "total_tokens": 5925,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2921
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

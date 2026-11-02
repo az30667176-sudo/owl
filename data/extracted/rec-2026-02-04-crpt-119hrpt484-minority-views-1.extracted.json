@@ -1,0 +1,66 @@
+{
+  "record_id": "rec-2026-02-04-crpt-119hrpt484-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:28:00.283Z",
+  "accepted": [
+    {
+      "person": "P000034",
+      "issue": "energy-efficiency-standards",
+      "date": "2026-02-04",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "This program helps low- and moderate-income households electrify their homes and access the benefits of clean and efficient technology, all while lowering their energy bills and reducing strain on the electric grid.",
+      "bill": "H.R. 4758, the Homeowner Energy Freedom Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt484/html/CRPT-119hrpt484.htm",
+      "record_id": "rec-2026-02-04-crpt-119hrpt484-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Pallone praises the rebate program for expanding access to efficient technology and lowering energy bills, indicating support for energy efficiency standards."
+    },
+    {
+      "person": "P000034",
+      "issue": "energy-efficiency-standards",
+      "date": "2026-02-04",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "There is a clear demand for qualified workers and workforce training in the industry, and H.R. 4758 removes this necessary and important funding.",
+      "bill": "H.R. 4758, the Homeowner Energy Freedom Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt484/html/CRPT-119hrpt484.htm",
+      "record_id": "rec-2026-02-04-crpt-119hrpt484-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Pallone describes contractor training grants as necessary and criticizes their removal, indicating support for energy efficiency workforce programs."
+    },
+    {
+      "person": "P000034",
+      "issue": "energy-efficiency-standards",
+      "date": "2026-02-04",
+      "score": 0.85,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Building energy code adoption assistance will help reduce emissions from residential and commercial building stock through energy code adoption, thus reducing energy consumed and lowering energy bills.",
+      "bill": "H.R. 4758, the Homeowner Energy Freedom Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt484/html/CRPT-119hrpt484.htm",
+      "record_id": "rec-2026-02-04-crpt-119hrpt484-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Pallone states that building energy code assistance reduces energy use and bills, indicating support for energy efficiency standards."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1945,
+    "prompt_tokens": 3316,
+    "total_tokens": 5261,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1520
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

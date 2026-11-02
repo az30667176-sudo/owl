@@ -1,0 +1,28 @@
+{
+  "id": "rec-billstatus-hr5267-119-20251119",
+  "content": "<other>: H.R. 5267 (119th Congress): American Franchise Act\nCosponsor: Rep. Mike Kelly\nCosponsor: Rep. Glenn Thompson\nCosponsor: Rep. Lloyd Smucker\nCosponsor: Rep. Tony Wied\nCosponsor: Rep. Mark E. Amodei\nCosponsor: Rep. Randy Feenstra\nCosponsor: Rep. Kimberlyn King-Hinds\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/5267",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/5267",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-11-19",
+    "persons": [
+      "K000376",
+      "T000467",
+      "S001199",
+      "W000829",
+      "A000369",
+      "F000446",
+      "K000404"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/5267"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

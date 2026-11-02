@@ -1,0 +1,36 @@
+{
+  "record_id": "rec-2025-12-17-crpt-119hrpt412-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:29:48.584Z",
+  "accepted": [
+    {
+      "person": "V000081",
+      "issue": "sba-lending",
+      "date": "2025-12-17",
+      "score": 0.7,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The Improving SBA Engagement on Employee Ownership Act would build on the steps the SBA took during the Biden Administration and improve the SBA's engagement with employee-owned businesses and cooperatives.",
+      "bill": "Improving SBA Engagement on Employee Ownership Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt412/html/CRPT-119hrpt412.htm",
+      "record_id": "rec-2025-12-17-crpt-119hrpt412-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage describes the bill as building on prior reforms and improving SBA engagement with employee-owned businesses."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2008,
+    "prompt_tokens": 3100,
+    "total_tokens": 5108,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1867
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

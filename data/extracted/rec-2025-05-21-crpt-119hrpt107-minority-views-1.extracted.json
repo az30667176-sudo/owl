@@ -1,0 +1,51 @@
+{
+  "record_id": "rec-2025-05-21-crpt-119hrpt107-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:27:08.833Z",
+  "accepted": [
+    {
+      "person": "V000081",
+      "issue": "sba-lending",
+      "date": "2025-05-21",
+      "score": -0.7,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "central questions regarding the legislation's text remain and therefore Democrats cannot support the legislation in its current form.",
+      "bill": "H.R. 2987, the Capping Excessive Awarding of SBLC Entrants Act, or CEASE Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt107/html/CRPT-119hrpt107.htm",
+      "record_id": "rec-2025-05-21-crpt-119hrpt107-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage states opposition to H.R. 2987 in its current form due to unresolved textual questions."
+    },
+    {
+      "person": "V000081",
+      "issue": "small-business-programs",
+      "date": "2025-05-21",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats believe the CA program needs to continue to grow and lenders with an interest in participating in the program need to be awarded a CA SBLC license, if they meet all the programmatic requirements for licensure.",
+      "bill": "H.R. 2987, the Capping Excessive Awarding of SBLC Entrants Act, or CEASE Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt107/html/CRPT-119hrpt107.htm",
+      "record_id": "rec-2025-05-21-crpt-119hrpt107-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage expresses support for continued growth and licensing of lenders in the Community Advantage program."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1837,
+    "prompt_tokens": 3832,
+    "total_tokens": 5669,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1571
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

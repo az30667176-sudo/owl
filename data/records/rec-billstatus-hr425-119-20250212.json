@@ -1,0 +1,25 @@
+{
+  "id": "rec-billstatus-hr425-119-20250212",
+  "content": "<other>: H.R. 425 (119th Congress): Repealing Big Brother Overreach Act\nCosponsor: Rep. Bruce Westerman\nCosponsor: Rep. Max L. Miller\nCosponsor: Rep. Scott DesJarlais\nCosponsor: Rep. Lance Gooden\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/425",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/425",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-12",
+    "persons": [
+      "W000821",
+      "M001222",
+      "D000616",
+      "G000589"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/425"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

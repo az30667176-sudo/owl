@@ -1,0 +1,147 @@
+{
+  "record_id": "rec-2026-02-25-crpt-119hrpt521-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:29:56.016Z",
+  "accepted": [
+    {
+      "person": "W000187",
+      "issue": "renter-protections-and-eviction-prevention",
+      "date": "2026-02-25",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "30-day eviction notices help reduce evictions, promote housing stability, and offset homelessness by providing renters with adequate notice and information about the reason for eviction.",
+      "bill": "H.R. 1078",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt521/html/CRPT-119hrpt521.htm",
+      "record_id": "rec-2026-02-25-crpt-119hrpt521-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage endorses 30-day eviction notices as reducing evictions and promoting housing stability."
+    },
+    {
+      "person": "G000553",
+      "issue": "renter-protections-and-eviction-prevention",
+      "date": "2026-02-25",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "30-day eviction notices help reduce evictions, promote housing stability, and offset homelessness by providing renters with adequate notice and information about the reason for eviction.",
+      "bill": "H.R. 1078",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt521/html/CRPT-119hrpt521.htm",
+      "record_id": "rec-2026-02-25-crpt-119hrpt521-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage endorses 30-day eviction notices as reducing evictions and promoting housing stability."
+    },
+    {
+      "person": "F000454",
+      "issue": "renter-protections-and-eviction-prevention",
+      "date": "2026-02-25",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "30-day eviction notices help reduce evictions, promote housing stability, and offset homelessness by providing renters with adequate notice and information about the reason for eviction.",
+      "bill": "H.R. 1078",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt521/html/CRPT-119hrpt521.htm",
+      "record_id": "rec-2026-02-25-crpt-119hrpt521-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage endorses 30-day eviction notices as reducing evictions and promoting housing stability."
+    },
+    {
+      "person": "B001281",
+      "issue": "renter-protections-and-eviction-prevention",
+      "date": "2026-02-25",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "30-day eviction notices help reduce evictions, promote housing stability, and offset homelessness by providing renters with adequate notice and information about the reason for eviction.",
+      "bill": "H.R. 1078",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt521/html/CRPT-119hrpt521.htm",
+      "record_id": "rec-2026-02-25-crpt-119hrpt521-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage endorses 30-day eviction notices as reducing evictions and promoting housing stability."
+    },
+    {
+      "person": "P000617",
+      "issue": "renter-protections-and-eviction-prevention",
+      "date": "2026-02-25",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "30-day eviction notices help reduce evictions, promote housing stability, and offset homelessness by providing renters with adequate notice and information about the reason for eviction.",
+      "bill": "H.R. 1078",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt521/html/CRPT-119hrpt521.htm",
+      "record_id": "rec-2026-02-25-crpt-119hrpt521-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage endorses 30-day eviction notices as reducing evictions and promoting housing stability."
+    },
+    {
+      "person": "T000481",
+      "issue": "renter-protections-and-eviction-prevention",
+      "date": "2026-02-25",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "30-day eviction notices help reduce evictions, promote housing stability, and offset homelessness by providing renters with adequate notice and information about the reason for eviction.",
+      "bill": "H.R. 1078",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt521/html/CRPT-119hrpt521.htm",
+      "record_id": "rec-2026-02-25-crpt-119hrpt521-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage endorses 30-day eviction notices as reducing evictions and promoting housing stability."
+    },
+    {
+      "person": "G000587",
+      "issue": "renter-protections-and-eviction-prevention",
+      "date": "2026-02-25",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "30-day eviction notices help reduce evictions, promote housing stability, and offset homelessness by providing renters with adequate notice and information about the reason for eviction.",
+      "bill": "H.R. 1078",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt521/html/CRPT-119hrpt521.htm",
+      "record_id": "rec-2026-02-25-crpt-119hrpt521-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage endorses 30-day eviction notices as reducing evictions and promoting housing stability."
+    },
+    {
+      "person": "W000788",
+      "issue": "renter-protections-and-eviction-prevention",
+      "date": "2026-02-25",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "30-day eviction notices help reduce evictions, promote housing stability, and offset homelessness by providing renters with adequate notice and information about the reason for eviction.",
+      "bill": "H.R. 1078",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt521/html/CRPT-119hrpt521.htm",
+      "record_id": "rec-2026-02-25-crpt-119hrpt521-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage endorses 30-day eviction notices as reducing evictions and promoting housing stability."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "renter-protections-and-eviction-prevention",
+      "name": "Renter Protections and Eviction Prevention",
+      "parent": "hsba-housing"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 2347,
+    "prompt_tokens": 3160,
+    "total_tokens": 5507,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1374
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

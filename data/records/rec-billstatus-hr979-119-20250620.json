@@ -1,0 +1,33 @@
+{
+  "id": "rec-billstatus-hr979-119-20250620",
+  "content": "<other>: H.R. 979 (119th Congress): AM Radio for Every Vehicle Act of 2025\nCosponsor: Rep. Roger Williams\nCosponsor: Rep. Mike Thompson\nCosponsor: Rep. Henry C. \"Hank\" Johnson, Jr.\nCosponsor: Rep. Ayanna Pressley\nCosponsor: Rep. James Comer\nCosponsor: Rep. Bill Huizenga\nCosponsor: Rep. Mark Harris\nCosponsor: Rep. Derek Tran\nCosponsor: Rep. Debbie Wasserman Schultz\nCosponsor: Rep. Pat Fallon\nCosponsor: Rep. Jimmy Patronis\nCosponsor: Rep. James R. Baird\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/979",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/979",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-06-20",
+    "persons": [
+      "W000816",
+      "T000460",
+      "J000288",
+      "P000617",
+      "C001108",
+      "H001058",
+      "H001102",
+      "T000491",
+      "W000797",
+      "F000246",
+      "P000622",
+      "B001307"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/979"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "rec-billstatus-hr7487-119-20260211",
+  "content": "<other>: H.R. 7487 (119th Congress): Rural Jobs and Hydropower Expansion Act\nSponsor: Rep. Lauren Boebert\nCosponsor: Rep. Adam Gray\nSponsor: Rep. Lauren Boebert\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/7487",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/7487",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-02-11",
+    "persons": [
+      "B000825",
+      "G000605",
+      "B000825"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/7487"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hres137-119-20250226",
+  "content": "<other>: H. Res. 137 (119th Congress): Resolution designating the House Press Gallery (Rooms H-315, H-316, H-317, H-318, and H-319 in the United States Capitol) as the 'Frederick Douglass Press Gallery’\nCosponsor: Rep. John James\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-resolution/137",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-resolution/137",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-26",
+    "persons": [
+      "J000307"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-resolution/137"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

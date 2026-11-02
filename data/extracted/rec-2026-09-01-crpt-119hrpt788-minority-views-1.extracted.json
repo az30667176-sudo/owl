@@ -1,0 +1,126 @@
+{
+  "record_id": "rec-2026-09-01-crpt-119hrpt788-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:25:58.367Z",
+  "accepted": [
+    {
+      "person": "W000187",
+      "issue": "consumer-protection",
+      "date": "2026-09-01",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "which is why we oppose this anti-consumer bill.",
+      "bill": "H.R. 5402",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt788/html/CRPT-119hrpt788.htm",
+      "record_id": "rec-2026-09-01-crpt-119hrpt788-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage explicitly states opposition to the bill on consumer-protection grounds."
+    },
+    {
+      "person": "L000562",
+      "issue": "consumer-protection",
+      "date": "2026-09-01",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "which is why we oppose this anti-consumer bill.",
+      "bill": "H.R. 5402",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt788/html/CRPT-119hrpt788.htm",
+      "record_id": "rec-2026-09-01-crpt-119hrpt788-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage explicitly states opposition to the bill on consumer-protection grounds."
+    },
+    {
+      "person": "F000454",
+      "issue": "consumer-protection",
+      "date": "2026-09-01",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "which is why we oppose this anti-consumer bill.",
+      "bill": "H.R. 5402",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt788/html/CRPT-119hrpt788.htm",
+      "record_id": "rec-2026-09-01-crpt-119hrpt788-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage explicitly states opposition to the bill on consumer-protection grounds."
+    },
+    {
+      "person": "B001281",
+      "issue": "consumer-protection",
+      "date": "2026-09-01",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "which is why we oppose this anti-consumer bill.",
+      "bill": "H.R. 5402",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt788/html/CRPT-119hrpt788.htm",
+      "record_id": "rec-2026-09-01-crpt-119hrpt788-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage explicitly states opposition to the bill on consumer-protection grounds."
+    },
+    {
+      "person": "T000481",
+      "issue": "consumer-protection",
+      "date": "2026-09-01",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "which is why we oppose this anti-consumer bill.",
+      "bill": "H.R. 5402",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt788/html/CRPT-119hrpt788.htm",
+      "record_id": "rec-2026-09-01-crpt-119hrpt788-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage explicitly states opposition to the bill on consumer-protection grounds."
+    },
+    {
+      "person": "G000587",
+      "issue": "consumer-protection",
+      "date": "2026-09-01",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "which is why we oppose this anti-consumer bill.",
+      "bill": "H.R. 5402",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt788/html/CRPT-119hrpt788.htm",
+      "record_id": "rec-2026-09-01-crpt-119hrpt788-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage explicitly states opposition to the bill on consumer-protection grounds."
+    },
+    {
+      "person": "F000110",
+      "issue": "consumer-protection",
+      "date": "2026-09-01",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "which is why we oppose this anti-consumer bill.",
+      "bill": "H.R. 5402",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt788/html/CRPT-119hrpt788.htm",
+      "record_id": "rec-2026-09-01-crpt-119hrpt788-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage explicitly states opposition to the bill on consumer-protection grounds."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1631,
+    "prompt_tokens": 4278,
+    "total_tokens": 5909,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1065
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

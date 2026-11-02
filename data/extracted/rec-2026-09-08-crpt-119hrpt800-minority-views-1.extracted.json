@@ -1,0 +1,66 @@
+{
+  "record_id": "rec-2026-09-08-crpt-119hrpt800-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:24:46.885Z",
+  "accepted": [
+    {
+      "person": "S000185",
+      "issue": "civil-rights-in-schools",
+      "date": "2026-09-08",
+      "score": -0.6,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "we have concerns about specific provisions in the bill that may increase the backlog of cases at OCR and could result in inequitable outcomes between complaints based in Title VI and other education civil rights cases.",
+      "bill": "H.R. 9203, the Student Protection and University Accountability Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt800/html/CRPT-119hrpt800.htm",
+      "record_id": "rec-2026-09-08-crpt-119hrpt800-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers express opposition to H.R. 9203 on the grounds it would increase OCR backlog and create inequitable Title VI outcomes."
+    },
+    {
+      "person": "D000623",
+      "issue": "civil-rights-in-schools",
+      "date": "2026-09-08",
+      "score": -0.6,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "we have concerns about specific provisions in the bill that may increase the backlog of cases at OCR and could result in inequitable outcomes between complaints based in Title VI and other education civil rights cases.",
+      "bill": "H.R. 9203, the Student Protection and University Accountability Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt800/html/CRPT-119hrpt800.htm",
+      "record_id": "rec-2026-09-08-crpt-119hrpt800-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers express opposition to H.R. 9203 on the grounds it would increase OCR backlog and create inequitable Title VI outcomes."
+    },
+    {
+      "person": "G000606",
+      "issue": "civil-rights-in-schools",
+      "date": "2026-09-08",
+      "score": -0.6,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "we have concerns about specific provisions in the bill that may increase the backlog of cases at OCR and could result in inequitable outcomes between complaints based in Title VI and other education civil rights cases.",
+      "bill": "H.R. 9203, the Student Protection and University Accountability Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt800/html/CRPT-119hrpt800.htm",
+      "record_id": "rec-2026-09-08-crpt-119hrpt800-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers express opposition to H.R. 9203 on the grounds it would increase OCR backlog and create inequitable Title VI outcomes."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2195,
+    "prompt_tokens": 5109,
+    "total_tokens": 7304,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1786
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

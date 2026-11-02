@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr8595-119-20260430",
+  "content": "<other>: H.R. 8595 (119th Congress): Making appropriations for national security, Department of State, and related programs for the fiscal year ending September 30, 2027, and for other purposes.\nSponsor: Rep. Mario Diaz-Balart\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/8595",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/8595",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-04-30",
+    "persons": [
+      "D000600"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/8595"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

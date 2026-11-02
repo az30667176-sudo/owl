@@ -1,0 +1,25 @@
+{
+  "id": "rec-billstatus-hr6893-119-20251218",
+  "content": "<other>: H.R. 6893 (119th Congress): Chesapeake Bay Watershed Advancement for Training, Education, Restoration, and Science (WATERS) Act\nSponsor: Rep. Robert C. \"Bobby\" Scott\nCosponsor: Rep. Robert J. Wittman\nCosponsor: Rep. Jennifer A. Kiggans\nCosponsor: Rep. Sarah Elfreth\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/6893",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/6893",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-12-18",
+    "persons": [
+      "S000185",
+      "W000804",
+      "K000399",
+      "E000301"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/6893"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

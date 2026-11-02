@@ -1,0 +1,24 @@
+{
+  "id": "rec-billstatus-hr1736-119-20250227",
+  "content": "<other>: H.R. 1736 (119th Congress): Generative AI Terrorism Risk Assessment Act\nSponsor: Rep. August Pfluger\nCosponsor: Rep. Michael Guest\nCosponsor: Rep. Gabe Evans\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1736",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1736",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-27",
+    "persons": [
+      "P000048",
+      "G000591",
+      "E000300"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1736"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

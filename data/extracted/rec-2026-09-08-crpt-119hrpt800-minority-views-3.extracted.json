@@ -1,0 +1,81 @@
+{
+  "record_id": "rec-2026-09-08-crpt-119hrpt800-minority-views-3",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:46:38.857Z",
+  "accepted": [
+    {
+      "person": "S000185",
+      "issue": "civil-rights-in-schools",
+      "date": "2026-09-08",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "As such, we cannot support H.R. 9203, and we would urge the House to oppose it as well.",
+      "bill": "H.R. 9203",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt800/html/CRPT-119hrpt800.htm",
+      "record_id": "rec-2026-09-08-crpt-119hrpt800-minority-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers state joint opposition to H.R. 9203 and urge its defeat."
+    },
+    {
+      "person": "D000623",
+      "issue": "civil-rights-in-schools",
+      "date": "2026-09-08",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "As such, we cannot support H.R. 9203, and we would urge the House to oppose it as well.",
+      "bill": "H.R. 9203",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt800/html/CRPT-119hrpt800.htm",
+      "record_id": "rec-2026-09-08-crpt-119hrpt800-minority-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers state joint opposition to H.R. 9203 and urge its defeat."
+    },
+    {
+      "person": "G000606",
+      "issue": "civil-rights-in-schools",
+      "date": "2026-09-08",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "As such, we cannot support H.R. 9203, and we would urge the House to oppose it as well.",
+      "bill": "H.R. 9203",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt800/html/CRPT-119hrpt800.htm",
+      "record_id": "rec-2026-09-08-crpt-119hrpt800-minority-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers state joint opposition to H.R. 9203 and urge its defeat."
+    },
+    {
+      "person": "S000185",
+      "issue": "labor-hhs-education-appropriations",
+      "date": "2026-09-08",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Rep. Scott offered an amendment that would authorize $280 million for OCR.",
+      "bill": "H.R. 9203",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt800/html/CRPT-119hrpt800.htm",
+      "record_id": "rec-2026-09-08-crpt-119hrpt800-minority-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Offering an amendment to authorize $280 million indicates support for increased OCR funding."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2052,
+    "prompt_tokens": 4023,
+    "total_tokens": 6075,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1647
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

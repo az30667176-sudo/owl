@@ -1,0 +1,72 @@
+{
+  "record_id": "rec-2025-09-11-crpt-119hrpt270-pt1-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:28:56.140Z",
+  "accepted": [
+    {
+      "person": "P000034",
+      "issue": "college-athlete-rights-and-ncaa-authority",
+      "date": "2025-09-11",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Instead of celebrating and building upon these hard fought successes won by athletes, H.R. 4312 returns power to the NCAA and the Conferences, providing them with unchecked authority to regulate every aspect of the college athletic experience, exempting them from the antitrust laws, and preempting state laws that protect athletes' interests.",
+      "bill": "H.R. 4312 Student Compensation and Opportunity Through Rights and Endorsements (SCORE) Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt270/html/CRPT-119hrpt270-pt1.htm",
+      "record_id": "rec-2025-09-11-crpt-119hrpt270-pt1-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage criticizes the bill for restoring unchecked NCAA authority with an antitrust exemption and preemption of athlete-protective state laws."
+    },
+    {
+      "person": "P000034",
+      "issue": "labor-relations-and-unions",
+      "date": "2025-09-11",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "if particular colleges do treat their college athletes like employees, H.R. 4312 will deny college athletes the benefits provided by federal and state law to employees, including the right to engage in collective bargaining and qualify for disability benefits.",
+      "bill": "H.R. 4312 Student Compensation and Opportunity Through Rights and Endorsements (SCORE) Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt270/html/CRPT-119hrpt270-pt1.htm",
+      "record_id": "rec-2025-09-11-crpt-119hrpt270-pt1-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage criticizes denying employee benefits and collective bargaining rights to college athletes who are treated as employees."
+    },
+    {
+      "person": "P000034",
+      "issue": "health-programs-and-research",
+      "date": "2025-09-11",
+      "score": 0.7,
+      "direction": "support",
+      "linkage": "mid",
+      "llm_confidence": "mid",
+      "quote": "H.R. 4312 only requires colleges with highly paid coaches to provide the required benefits, leaving the vast majority of college athletes, including a substantial percentage of Division I athletes, without any mandated health and safety protections.",
+      "bill": "H.R. 4312 Student Compensation and Opportunity Through Rights and Endorsements (SCORE) Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt270/html/CRPT-119hrpt270-pt1.htm",
+      "record_id": "rec-2025-09-11-crpt-119hrpt270-pt1-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage criticizes the bill for leaving most athletes without mandated health and safety protections, supporting broader health protections."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "college-athlete-rights-and-ncaa-authority",
+      "name": "College Athlete Rights and NCAA Authority",
+      "parent": "hsed-higher"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 3269,
+    "prompt_tokens": 3178,
+    "total_tokens": 6447,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2804
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

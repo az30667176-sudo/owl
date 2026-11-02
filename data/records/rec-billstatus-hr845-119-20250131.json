@@ -1,0 +1,54 @@
+{
+  "id": "rec-billstatus-hr845-119-20250131",
+  "content": "<other>: H.R. 845 (119th Congress): Pet and Livestock Protection Act\nSponsor: Rep. Lauren Boebert\nCosponsor: Rep. Thomas P. Tiffany\nCosponsor: Rep. Nicholas J. Begich III\nCosponsor: Rep. Jack Bergman\nCosponsor: Rep. Andy Biggs\nCosponsor: Rep. Cliff Bentz\nCosponsor: Rep. Jeff Crank\nCosponsor: Rep. Elijah Crane\nCosponsor: Rep. Troy Downing\nCosponsor: Rep. Tom Emmer\nCosponsor: Rep. Gabe Evans\nCosponsor: Rep. Scott Fitzgerald\nCosponsor: Rep. Brad Finstad\nCosponsor: Rep. Michelle Fischbach\nCosponsor: Rep. Russ Fulcher\nCosponsor: Rep. Paul A. Gosar\nCosponsor: Rep. Glenn Grothman\nCosponsor: Rep. Harriet M. Hageman\nCosponsor: Rep. Andy Harris\nCosponsor: Rep. Jeff Hurd\nCosponsor: Rep. Richard Hudson\nCosponsor: Rep. Mike Kennedy\nCosponsor: Rep. John R. Moolenaar\nCosponsor: Rep. Doug LaMalfa\nCosponsor: Rep. Dan Newhouse\nCosponsor: Rep. Troy E. Nehls\nCosponsor: Rep. Andrew Ogles\nCosponsor: Rep. Scott Perry\nCosponsor: Rep. Bryan Steil\nCosponsor: Rep. Pete Stauber\nCosponsor: Rep. Derrick Van Orden\nCosponsor: Rep. Tony Wied\nSponsor: Rep. Lauren Boebert\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/845",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/845",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-01-31",
+    "persons": [
+      "B000825",
+      "T000165",
+      "B001323",
+      "B001301",
+      "B001302",
+      "B000668",
+      "C001137",
+      "C001132",
+      "D000634",
+      "E000294",
+      "E000300",
+      "F000471",
+      "F000475",
+      "F000470",
+      "F000469",
+      "G000565",
+      "G000576",
+      "H001096",
+      "H001052",
+      "H001100",
+      "H001067",
+      "K000403",
+      "M001194",
+      "L000578",
+      "N000189",
+      "N000026",
+      "O000175",
+      "P000605",
+      "S001213",
+      "S001212",
+      "V000135",
+      "W000829",
+      "B000825"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/845"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

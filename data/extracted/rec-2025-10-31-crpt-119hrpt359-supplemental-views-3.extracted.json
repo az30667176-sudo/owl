@@ -1,0 +1,21 @@
+{
+  "record_id": "rec-2025-10-31-crpt-119hrpt359-supplemental-views-3",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:47:43.024Z",
+  "accepted": [],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1323,
+    "prompt_tokens": 2675,
+    "total_tokens": 3998,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1308
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop",
+  "raw_excerpt": "{\"statements\": []}"
+}

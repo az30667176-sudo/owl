@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr1319-119-20250721",
+  "content": "<other>: H.R. 1319 (119th Congress): Modern Worker Empowerment Act\nCosponsor: Rep. Mary E. Miller\nCosponsor: Rep. Julia Letlow\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1319",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1319",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-07-21",
+    "persons": [
+      "M001211",
+      "L000595"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1319"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

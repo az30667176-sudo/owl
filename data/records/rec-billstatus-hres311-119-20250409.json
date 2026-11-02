@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hres311-119-20250409",
+  "content": "<other>: H. Res. 311 (119th Congress): Dismissing the election contest relating to the office of Representative from the Thirtieth Congressional District of Texas.\nSponsor: Rep. Bryan Steil\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-resolution/311",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-resolution/311",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-04-09",
+    "persons": [
+      "S001213"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-resolution/311"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

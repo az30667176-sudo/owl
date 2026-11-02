@@ -1,0 +1,1690 @@
+bill_id,domain_id,domain_name,taxonomy,linkage,extraction_method,source_id
+hconres14-119,HSBU,House Committee on the Budget,house_committee,super_high,metadata,CRPT-119hrpt4
+hconres14-119,crs:economics-and-public-finance,Economics and Public Finance,crs_policy_area,super_high,metadata,BILLSTATUS-119hconres14
+hr1156-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt6
+hr1156-119,crs:labor-and-employment,Labor and Employment,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1156
+hjres25-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt7
+hjres25-119,crs:taxation,Taxation,crs_policy_area,super_high,metadata,BILLSTATUS-119hjres25
+hres114-119,HSHM,House Committee on Homeland Security,house_committee,super_high,metadata,CRPT-119hrpt10
+hres114-119,crs:government-operations-and-politics,Government Operations and Politics,crs_policy_area,super_high,metadata,BILLSTATUS-119hres114
+hres113-119,HSHM,House Committee on Homeland Security,house_committee,super_high,metadata,CRPT-119hrpt11
+hres113-119,crs:immigration,Immigration,crs_policy_area,super_high,metadata,BILLSTATUS-119hres113
+hr1005-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt12
+hr1005-119,crs:education,Education,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1005
+hr1049-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt13
+hr1049-119,crs:education,Education,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1049
+hr1069-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt14
+hr1069-119,crs:education,Education,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1069
+hr1048-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt16
+hr1048-119,crs:education,Education,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1048
+hres198-119,HSHA,House Committee on House Administration,house_committee,super_high,metadata,CRPT-119hrpt17
+hres198-119,crs:congress,Congress,crs_policy_area,super_high,metadata,BILLSTATUS-119hres198
+hres127-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt18
+hres127-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hres127
+hr747-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt19
+hr747-119,crs:international-affairs,International Affairs,crs_policy_area,super_high,metadata,BILLSTATUS-119hr747
+hr747-119,HSJU,House Committee on the Judiciary,house_committee,high,metadata,BILLSTATUS-119hr747
+hr747-119,HSGO,House Committee on Oversight and Government Reform,house_committee,high,metadata,BILLSTATUS-119hr747
+hr747-119,HSFA,House Committee on Foreign Affairs,house_committee,high,metadata,BILLSTATUS-119hr747
+hr910-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt20
+hr910-119,crs:international-affairs,International Affairs,crs_policy_area,super_high,metadata,BILLSTATUS-119hr910
+hr1549-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt21
+hr1549-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1549
+hr1577-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt22
+hr1577-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1577
+hr1474-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt23
+hr1474-119,crs:international-affairs,International Affairs,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1474
+hr1602-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt24
+hr1602-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1602
+hr1764-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt25
+hr1764-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1764
+hjres59-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt26
+hjres59-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hjres59
+hr176-119,HSJU,House Committee on the Judiciary,house_committee,super_high,metadata,CRPT-119hrpt27
+hr176-119,crs:immigration,Immigration,crs_policy_area,super_high,metadata,BILLSTATUS-119hr176
+hr1789-119,HSJU,House Committee on the Judiciary,house_committee,super_high,metadata,CRPT-119hrpt28
+hr1789-119,crs:law,Law,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1789
+hres195-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt29
+hres195-119,crs:social-welfare,Social Welfare,crs_policy_area,super_high,metadata,BILLSTATUS-119hres195
+hr875-119,HSJU,House Committee on the Judiciary,house_committee,super_high,metadata,CRPT-119hrpt30
+hr875-119,crs:immigration,Immigration,crs_policy_area,super_high,metadata,BILLSTATUS-119hr875
+hr1621-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt31
+hr1621-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1621
+hr1634-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt32
+hr1634-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1634
+hr1804-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt33
+hr1804-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1804
+hr787-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt34
+hr787-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr787
+hr789-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt35
+hr789-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr789
+hr1642-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt36
+hr1642-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1642
+hr1816-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt37
+hr1816-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1816
+hconres9-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt39
+hconres9-119,crs:congress,Congress,crs_policy_area,super_high,metadata,BILLSTATUS-119hconres9
+hr1526-119,HSJU,House Committee on the Judiciary,house_committee,super_high,metadata,CRPT-119hrpt40
+hr1526-119,crs:law,Law,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1526
+hr1155-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt41
+hr1155-119,crs:taxation,Taxation,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1155
+hr998-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt42
+hr998-119,crs:taxation,Taxation,crs_policy_area,super_high,metadata,BILLSTATUS-119hr998
+hr1491-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt43
+hr1491-119,crs:taxation,Taxation,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1491
+hr517-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt44
+hr517-119,crs:taxation,Taxation,crs_policy_area,super_high,metadata,BILLSTATUS-119hr517
+hr1152-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt45
+hr1152-119,crs:taxation,Taxation,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1152
+hr997-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt46
+hr997-119,crs:taxation,Taxation,crs_policy_area,super_high,metadata,BILLSTATUS-119hr997
+hr1450-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt47
+hr1450-119,crs:international-affairs,International Affairs,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1450
+hr1450-119,HSFA,House Committee on Foreign Affairs,house_committee,high,metadata,BILLSTATUS-119hr1450
+hr1716-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt48
+hr1716-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1716
+hr1716-119,HSFA,House Committee on Foreign Affairs,house_committee,high,metadata,BILLSTATUS-119hr1716
+hres308-119,HSHA,House Committee on House Administration,house_committee,super_high,metadata,CRPT-119hrpt51
+hres308-119,crs:congress,Congress,crs_policy_area,super_high,metadata,BILLSTATUS-119hres308
+hres309-119,HSHA,House Committee on House Administration,house_committee,super_high,metadata,CRPT-119hrpt52
+hres309-119,crs:congress,Congress,crs_policy_area,super_high,metadata,BILLSTATUS-119hres309
+hres310-119,HSHA,House Committee on House Administration,house_committee,super_high,metadata,CRPT-119hrpt53
+hres310-119,crs:congress,Congress,crs_policy_area,super_high,metadata,BILLSTATUS-119hres310
+hres311-119,HSHA,House Committee on House Administration,house_committee,super_high,metadata,CRPT-119hrpt54
+hres311-119,crs:congress,Congress,crs_policy_area,super_high,metadata,BILLSTATUS-119hres311
+hres312-119,HSHA,House Committee on House Administration,house_committee,super_high,metadata,CRPT-119hrpt55
+hres312-119,crs:congress,Congress,crs_policy_area,super_high,metadata,BILLSTATUS-119hres312
+hres186-119,HSGO,House Committee on Oversight and Government Reform,house_committee,super_high,metadata,CRPT-119hrpt57
+hres186-119,crs:government-operations-and-politics,Government Operations and Politics,crs_policy_area,super_high,metadata,BILLSTATUS-119hres186
+hres187-119,HSGO,House Committee on Oversight and Government Reform,house_committee,super_high,metadata,CRPT-119hrpt58
+hres187-119,crs:government-operations-and-politics,Government Operations and Politics,crs_policy_area,super_high,metadata,BILLSTATUS-119hres187
+hres5-119,HSGO,House Committee on Oversight and Government Reform,house_committee,super_high,metadata,CRPT-119hrpt59
+hres5-119,crs:congress,Congress,crs_policy_area,super_high,metadata,BILLSTATUS-119hres5
+hr331-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt60
+hr331-119,crs:water-resources-development,Water Resources Development,crs_policy_area,super_high,metadata,BILLSTATUS-119hr331
+hr1001-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt61
+hr1001-119,crs:water-resources-development,Water Resources Development,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1001
+hr249-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt62
+hr249-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr249
+hr2482-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt63
+hr2482-119,crs:science-technology-communications,"Science, Technology, Communications",crs_policy_area,super_high,metadata,BILLSTATUS-119hr2482
+hr2480-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt64
+hr2480-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2480
+hr2458-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt65
+hr2458-119,crs:science-technology-communications,"Science, Technology, Communications",crs_policy_area,super_high,metadata,BILLSTATUS-119hr2458
+hr1402-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt66
+hr1402-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1402
+hr1442-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt67
+hr1442-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1442
+hr2444-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt68
+hr2444-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2444
+hr617-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt69
+hr617-119,crs:arts-culture-religion,"Arts, Culture, Religion",crs_policy_area,super_high,metadata,BILLSTATUS-119hr617
+hr1664-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt70
+hr1664-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1664
+hr1479-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt71
+hr1479-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1479
+hr859-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt72
+hr859-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr859
+hr906-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt73
+hr906-119,crs:science-technology-communications,"Science, Technology, Communications",crs_policy_area,super_high,metadata,BILLSTATUS-119hr906
+hr2449-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt74
+hr2449-119,crs:science-technology-communications,"Science, Technology, Communications",crs_policy_area,super_high,metadata,BILLSTATUS-119hr2449
+hr866-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt75
+hr866-119,crs:science-technology-communications,"Science, Technology, Communications",crs_policy_area,super_high,metadata,BILLSTATUS-119hr866
+hr1721-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt76
+hr1721-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1721
+hr973-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt77
+hr973-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr973
+hr2399-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt78
+hr2399-119,crs:science-technology-communications,"Science, Technology, Communications",crs_policy_area,super_high,metadata,BILLSTATUS-119hr2399
+hr2240-119,HSJU,House Committee on the Judiciary,house_committee,super_high,metadata,CRPT-119hrpt79
+hr2240-119,crs:crime-and-law-enforcement,Crime and Law Enforcement,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2240
+hr2255-119,HSJU,House Committee on the Judiciary,house_committee,super_high,metadata,CRPT-119hrpt80
+hr2255-119,crs:crime-and-law-enforcement,Crime and Law Enforcement,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2255
+hr2243-119,HSJU,House Committee on the Judiciary,house_committee,super_high,metadata,CRPT-119hrpt81
+hr2243-119,crs:crime-and-law-enforcement,Crime and Law Enforcement,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2243
+hr633-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt82
+hr633-119,crs:science-technology-communications,"Science, Technology, Communications",crs_policy_area,super_high,metadata,BILLSTATUS-119hr633
+hres237-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt84
+hres237-119,crs:education,Education,crs_policy_area,super_high,metadata,BILLSTATUS-119hres237
+hr276-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt85
+hr276-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr276
+hr618-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt86
+hr618-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr618
+hr881-119,HSHM,House Committee on Homeland Security,house_committee,super_high,metadata,CRPT-119hrpt87
+hr881-119,crs:education,Education,crs_policy_area,super_high,metadata,BILLSTATUS-119hr881
+hr677-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt88
+hr677-119,crs:government-operations-and-politics,Government Operations and Politics,crs_policy_area,super_high,metadata,BILLSTATUS-119hr677
+hr478-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt90
+hr478-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr478
+hr976-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt91
+hr976-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr976
+hr1919-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt92
+hr1919-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1919
+hr2384-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt93
+hr2384-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2384
+hr2392-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt94
+hr2392-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2392
+hr1364-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt96
+hr1364-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1364
+hr217-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt97
+hr217-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr217
+hr2201-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt98
+hr2201-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2201
+hr658-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt99
+hr658-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr658
+hr1286-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt100
+hr1286-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1286
+hr1823-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt101
+hr1823-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1823
+hr1578-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt102
+hr1578-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1578
+hr1969-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt103
+hr1969-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1969
+hr1815-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt104
+hr1815-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1815
+hr1-119,HSBU,House Committee on the Budget,house_committee,super_high,metadata,CRPT-119hrpt106
+hr1-119,crs:economics-and-public-finance,Economics and Public Finance,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1
+hr2987-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt107
+hr2987-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2987
+hr1163-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt108
+hr1163-119,crs:government-operations-and-politics,Government Operations and Politics,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1163
+hr1163-119,HSJU,House Committee on the Judiciary,house_committee,high,metadata,BILLSTATUS-119hr1163
+hr2027-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt109
+hr2027-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2027
+hr2931-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt110
+hr2931-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2931
+hr2965-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt111
+hr2965-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2965
+hr2966-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt112
+hr2966-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2966
+hr2483-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt114
+hr2483-119,crs:health,Health,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2483
+hr2483-119,HSBA,House Committee on Financial Services,house_committee,high,metadata,BILLSTATUS-119hr2483
+hr2483-119,HSJU,House Committee on the Judiciary,house_committee,high,metadata,BILLSTATUS-119hr2483
+hr2483-119,HSED,House Committee on Education and Workforce,house_committee,high,metadata,BILLSTATUS-119hr2483
+hr3394-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt115
+hr3394-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3394
+hr3381-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt116
+hr3381-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3381
+hr3422-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt117
+hr3422-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3422
+hr3351-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt118
+hr3351-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3351
+hr3351-119,HSGO,House Committee on Oversight and Government Reform,house_committee,high,metadata,BILLSTATUS-119hr3351
+hr3343-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt119
+hr3343-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3343
+hr3357-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt120
+hr3357-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3357
+hr3301-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt121
+hr3301-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3301
+hr1190-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt122
+hr1190-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1190
+hr3352-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt123
+hr3352-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3352
+hr1469-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt124
+hr1469-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1469
+hr3382-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt125
+hr3382-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3382
+hr2225-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt126
+hr2225-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2225
+hr3339-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt127
+hr3339-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3339
+hr3395-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt128
+hr3395-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3395
+hr1713-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt129
+hr1713-119,crs:foreign-trade-and-international-finance,Foreign Trade and International Finance,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1713
+hr1713-119,HSFA,House Committee on Foreign Affairs,house_committee,high,metadata,BILLSTATUS-119hr1713
+hr1713-119,HSIF,House Committee on Energy and Commerce,house_committee,high,metadata,BILLSTATUS-119hr1713
+hr2056-119,HSGO,House Committee on Oversight and Government Reform,house_committee,super_high,metadata,CRPT-119hrpt131
+hr2056-119,crs:immigration,Immigration,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2056
+hr1900-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt132
+hr1900-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1900
+hr3323-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt133
+hr3323-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3323
+hr3348-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt134
+hr3348-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3348
+hr3380-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt135
+hr3380-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3380
+hr2441-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt136
+hr2441-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2441
+hr884-119,HSGO,House Committee on Oversight and Government Reform,house_committee,super_high,metadata,CRPT-119hrpt137
+hr884-119,crs:government-operations-and-politics,Government Operations and Politics,crs_policy_area,super_high,metadata,BILLSTATUS-119hr884
+hr2096-119,HSGO,House Committee on Oversight and Government Reform,house_committee,super_high,metadata,CRPT-119hrpt138
+hr2096-119,crs:crime-and-law-enforcement,Crime and Law Enforcement,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2096
+hr1948-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt139
+hr1948-119,crs:water-resources-development,Water Resources Development,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1948
+hr1373-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt140
+hr1373-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1373
+hr1182-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt141
+hr1182-119,crs:transportation-and-public-works,Transportation and Public Works,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1182
+hr649-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt142
+hr649-119,crs:agriculture-and-food,Agriculture and Food,crs_policy_area,super_high,metadata,BILLSTATUS-119hr649
+hr1041-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt143
+hr1041-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1041
+hr188-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt144
+hr188-119,crs:transportation-and-public-works,Transportation and Public Works,crs_policy_area,super_high,metadata,BILLSTATUS-119hr188
+hr2390-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt145
+hr2390-119,crs:transportation-and-public-works,Transportation and Public Works,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2390
+hr248-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt146
+hr248-119,crs:transportation-and-public-works,Transportation and Public Works,crs_policy_area,super_high,metadata,BILLSTATUS-119hr248
+hr2035-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt147
+hr2035-119,crs:transportation-and-public-works,Transportation and Public Works,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2035
+hr252-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt148
+hr252-119,crs:transportation-and-public-works,Transportation and Public Works,crs_policy_area,super_high,metadata,BILLSTATUS-119hr252
+hr2351-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt149
+hr2351-119,crs:transportation-and-public-works,Transportation and Public Works,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2351
+hres137-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt150
+hres137-119,crs:congress,Congress,crs_policy_area,super_high,metadata,BILLSTATUS-119hres137
+hr2481-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt153
+hr2481-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2481
+hr2269-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt154
+hr2269-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2269
+hr1737-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt155
+hr1737-119,crs:science-technology-communications,"Science, Technology, Communications",crs_policy_area,super_high,metadata,BILLSTATUS-119hr1737
+hr1679-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt156
+hr1679-119,crs:foreign-trade-and-international-finance,Foreign Trade and International Finance,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1679
+hr1770-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt157
+hr1770-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1770
+hr1767-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt158
+hr1767-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1767
+hr1520-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt159
+hr1520-119,crs:health,Health,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1520
+hr1082-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt160
+hr1082-119,crs:health,Health,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1082
+hr3944-119,HSAP,House Committee on Appropriations,house_committee,super_high,metadata,CRPT-119hrpt161
+hr3944-119,crs:economics-and-public-finance,Economics and Public Finance,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3944
+hr4016-119,HSAP,House Committee on Appropriations,house_committee,super_high,metadata,CRPT-119hrpt162
+hr4016-119,crs:economics-and-public-finance,Economics and Public Finance,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4016
+hr275-119,HSHM,House Committee on Homeland Security,house_committee,super_high,metadata,CRPT-119hrpt163
+hr275-119,crs:immigration,Immigration,crs_policy_area,super_high,metadata,BILLSTATUS-119hr275
+hr2702-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt164
+hr2702-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2702
+hr3230-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt165
+hr3230-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3230
+hr2808-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt166
+hr2808-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2808
+hr3633-119,HSAG,House Committee on Agriculture,house_committee,super_high,metadata,CRPT-119hrpt168
+hr3633-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3633
+hr3633-119,HSBA,House Committee on Financial Services,house_committee,high,metadata,BILLSTATUS-119hr3633
+hr3383-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt169
+hr3383-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3383
+hr3379-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt170
+hr3379-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3379
+hr2625-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt171
+hr2625-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2625
+hr4121-119,HSAP,House Committee on Appropriations,house_committee,super_high,metadata,CRPT-119hrpt172
+hr4121-119,crs:economics-and-public-finance,Economics and Public Finance,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4121
+hr4213-119,HSAP,House Committee on Appropriations,house_committee,super_high,metadata,CRPT-119hrpt173
+hr4213-119,crs:economics-and-public-finance,Economics and Public Finance,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4213
+hr1044-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt174
+hr1044-119,crs:water-resources-development,Water Resources Development,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1044
+hr1766-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt175
+hr1766-119,crs:science-technology-communications,"Science, Technology, Communications",crs_policy_area,super_high,metadata,BILLSTATUS-119hr1766
+hr1455-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt176
+hr1455-119,crs:science-technology-communications,"Science, Technology, Communications",crs_policy_area,super_high,metadata,BILLSTATUS-119hr1455
+hr1709-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt177
+hr1709-119,crs:science-technology-communications,"Science, Technology, Communications",crs_policy_area,super_high,metadata,BILLSTATUS-119hr1709
+hr4249-119,HSAP,House Committee on Appropriations,house_committee,super_high,metadata,CRPT-119hrpt178
+hr4249-119,crs:congress,Congress,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4249
+hr3898-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt180
+hr3898-119,crs:environmental-protection,Environmental Protection,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3898
+hr261-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt181
+hr261-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr261
+hr900-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt182
+hr900-119,crs:emergency-management,Emergency Management,crs_policy_area,super_high,metadata,BILLSTATUS-119hr900
+hr1043-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt183
+hr1043-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1043
+hr2037-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt184
+hr2037-119,crs:science-technology-communications,"Science, Technology, Communications",crs_policy_area,super_high,metadata,BILLSTATUS-119hr2037
+hr3015-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt185
+hr3015-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3015
+hr3062-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt186
+hr3062-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3062
+hr3062-119,HSII,House Committee on Natural Resources,house_committee,high,metadata,BILLSTATUS-119hr3062
+hr3062-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,high,metadata,BILLSTATUS-119hr3062
+hr131-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt187
+hr131-119,crs:water-resources-development,Water Resources Development,crs_policy_area,super_high,metadata,BILLSTATUS-119hr131
+hr410-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt188
+hr410-119,crs:native-americans,Native Americans,crs_policy_area,super_high,metadata,BILLSTATUS-119hr410
+hr504-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt189
+hr504-119,crs:native-americans,Native Americans,crs_policy_area,super_high,metadata,BILLSTATUS-119hr504
+hr504-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,high,metadata,BILLSTATUS-119hr504
+hr1729-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt190
+hr1729-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1729
+hr2316-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt191
+hr2316-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2316
+hr3179-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt192
+hr3179-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3179
+hr3657-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt193
+hr3657-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3657
+hr1717-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt194
+hr1717-119,crs:science-technology-communications,"Science, Technology, Communications",crs_policy_area,super_high,metadata,BILLSTATUS-119hr1717
+hr1618-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt195
+hr1618-119,crs:science-technology-communications,"Science, Technology, Communications",crs_policy_area,super_high,metadata,BILLSTATUS-119hr1618
+hr1765-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt196
+hr1765-119,crs:science-technology-communications,"Science, Technology, Communications",crs_policy_area,super_high,metadata,BILLSTATUS-119hr1765
+hr1765-119,HSFA,House Committee on Foreign Affairs,house_committee,high,metadata,BILLSTATUS-119hr1765
+hr820-119,HSHM,House Committee on Homeland Security,house_committee,super_high,metadata,CRPT-119hrpt197
+hr820-119,crs:transportation-and-public-works,Transportation and Public Works,crs_policy_area,super_high,metadata,BILLSTATUS-119hr820
+hr1327-119,HSHM,House Committee on Homeland Security,house_committee,super_high,metadata,CRPT-119hrpt198
+hr1327-119,crs:international-affairs,International Affairs,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1327
+hr3486-119,HSJU,House Committee on the Judiciary,house_committee,super_high,metadata,CRPT-119hrpt200
+hr3486-119,crs:immigration,Immigration,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3486
+hr225-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt201
+hr225-119,crs:housing-and-community-development,Housing and Community Development,crs_policy_area,super_high,metadata,BILLSTATUS-119hr225
+hr2835-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt202
+hr2835-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2835
+hr3645-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt203
+hr3645-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3645
+hr3672-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt204
+hr3672-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3672
+hr3709-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt205
+hr3709-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3709
+hr3716-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt206
+hr3716-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3716
+hr183-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt207
+hr183-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr183
+hr183-119,HSAG,House Committee on Agriculture,house_committee,high,metadata,BILLSTATUS-119hr183
+hr1917-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt210
+hr1917-119,crs:environmental-protection,Environmental Protection,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1917
+hr3937-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt211
+hr3937-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3937
+hr3937-119,HSAG,House Committee on Agriculture,house_committee,high,metadata,BILLSTATUS-119hr3937
+hr4552-119,HSAP,House Committee on Appropriations,house_committee,super_high,metadata,CRPT-119hrpt212
+hr4552-119,crs:economics-and-public-finance,Economics and Public Finance,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4552
+hr4553-119,HSAP,House Committee on Appropriations,house_committee,super_high,metadata,CRPT-119hrpt213
+hr4553-119,crs:economics-and-public-finance,Economics and Public Finance,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4553
+hr4275-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt214
+hr4275-119,crs:transportation-and-public-works,Transportation and Public Works,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4275
+hr4275-119,HSAS,House Committee on Armed Services,house_committee,high,metadata,BILLSTATUS-119hr4275
+hr4275-119,HSHM,House Committee on Homeland Security,house_committee,high,metadata,BILLSTATUS-119hr4275
+hr4754-119,HSAP,House Committee on Appropriations,house_committee,super_high,metadata,CRPT-119hrpt215
+hr4754-119,crs:economics-and-public-finance,Economics and Public Finance,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4754
+hr940-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt216
+hr940-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr940
+hr4779-119,HSAP,House Committee on Appropriations,house_committee,super_high,metadata,CRPT-119hrpt217
+hr4779-119,crs:international-affairs,International Affairs,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4779
+hr1860-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt220
+hr1860-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1860
+hr1107-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt221
+hr1107-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1107
+hr1608-119,HSHM,House Committee on Homeland Security,house_committee,super_high,metadata,CRPT-119hrpt222
+hr1608-119,crs:transportation-and-public-works,Transportation and Public Works,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1608
+hr4491-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt223
+hr4491-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4491
+hr3174-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt224
+hr3174-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3174
+hr4549-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt225
+hr4549-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4549
+hr4495-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt226
+hr4495-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4495
+hr2066-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt227
+hr2066-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2066
+hr980-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt228
+hr980-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr980
+hr1569-119,HSHM,House Committee on Homeland Security,house_committee,super_high,metadata,CRPT-119hrpt229
+hr1569-119,crs:immigration,Immigration,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1569
+hr2659-119,HSHM,House Committee on Homeland Security,house_committee,super_high,metadata,CRPT-119hrpt230
+hr2659-119,crs:science-technology-communications,"Science, Technology, Communications",crs_policy_area,super_high,metadata,BILLSTATUS-119hr2659
+hr3838-119,HSAS,House Committee on Armed Services,house_committee,super_high,metadata,CRPT-119hrpt231
+hr3838-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3838
+hr3838-119,HSGO,House Committee on Oversight and Government Reform,house_committee,high,metadata,BILLSTATUS-119hr3838
+hr3838-119,HLIG,House Permanent Select Committee on Intelligence,house_committee,high,metadata,BILLSTATUS-119hr3838
+hr3838-119,HSAP,House Committee on Appropriations,house_committee,high,metadata,BILLSTATUS-119hr3838
+hr3838-119,HSWM,House Committee on Ways and Means,house_committee,high,metadata,BILLSTATUS-119hr3838
+hr3838-119,HSFA,House Committee on Foreign Affairs,house_committee,high,metadata,BILLSTATUS-119hr3838
+hr3838-119,HSSM,House Committee on Small Business,house_committee,high,metadata,BILLSTATUS-119hr3838
+hr3838-119,HSJU,House Committee on the Judiciary,house_committee,high,metadata,BILLSTATUS-119hr3838
+hr3838-119,HSED,House Committee on Education and Workforce,house_committee,high,metadata,BILLSTATUS-119hr3838
+hr3838-119,HSHA,House Committee on House Administration,house_committee,high,metadata,BILLSTATUS-119hr3838
+hr3838-119,HSHM,House Committee on Homeland Security,house_committee,high,metadata,BILLSTATUS-119hr3838
+hr3838-119,HSIF,House Committee on Energy and Commerce,house_committee,high,metadata,BILLSTATUS-119hr3838
+hr3838-119,HSII,House Committee on Natural Resources,house_committee,high,metadata,BILLSTATUS-119hr3838
+hr3838-119,HSSY,"House Committee on Science, Space, and Technology",house_committee,high,metadata,BILLSTATUS-119hr3838
+hr3838-119,HSAG,House Committee on Agriculture,house_committee,high,metadata,BILLSTATUS-119hr3838
+hr3838-119,HSBA,House Committee on Financial Services,house_committee,high,metadata,BILLSTATUS-119hr3838
+hr3838-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,high,metadata,BILLSTATUS-119hr3838
+hr3838-119,HSBU,House Committee on the Budget,house_committee,high,metadata,BILLSTATUS-119hr3838
+hr3838-119,HSVR,House Committee on Veterans' Affairs,house_committee,high,metadata,BILLSTATUS-119hr3838
+hr4550-119,HSAG,House Committee on Agriculture,house_committee,super_high,metadata,CRPT-119hrpt233
+hr4550-119,crs:agriculture-and-food,Agriculture and Food,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4550
+hr3390-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt234
+hr3390-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3390
+hr3074-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt235
+hr3074-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3074
+hr5166-119,HSAP,House Committee on Appropriations,house_committee,super_high,metadata,CRPT-119hrpt236
+hr5166-119,crs:economics-and-public-finance,Economics and Public Finance,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5166
+hr3423-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt237
+hr3423-119,crs:transportation-and-public-works,Transportation and Public Works,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3423
+hr3424-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt238
+hr3424-119,crs:government-operations-and-politics,Government Operations and Politics,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3424
+hr3425-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt239
+hr3425-119,crs:government-operations-and-politics,Government Operations and Politics,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3425
+hr3426-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt240
+hr3426-119,crs:government-operations-and-politics,Government Operations and Politics,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3426
+hr3428-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt241
+hr3428-119,crs:water-resources-development,Water Resources Development,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3428
+hr2591-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt242
+hr2591-119,crs:transportation-and-public-works,Transportation and Public Works,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2591
+hr3055-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt243
+hr3055-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3055
+hr3055-119,HSVR,House Committee on Veterans' Affairs,house_committee,high,metadata,BILLSTATUS-119hr3055
+hr3055-119,HSAS,House Committee on Armed Services,house_committee,high,metadata,BILLSTATUS-119hr3055
+hr3446-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt244
+hr3446-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3446
+hr4423-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt245
+hr4423-119,crs:international-affairs,International Affairs,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4423
+hr4429-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt246
+hr4429-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4429
+hr4430-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt247
+hr4430-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4430
+hr4431-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt248
+hr4431-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4431
+hr4437-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt249
+hr4437-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4437
+hr4449-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt250
+hr4449-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4449
+hr4460-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt251
+hr4460-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4460
+hr4478-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt252
+hr4478-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4478
+hr4544-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt253
+hr4544-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4544
+hr3673-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt254
+hr3673-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3673
+hr2034-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt256
+hr2034-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2034
+hr3481-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt257
+hr3481-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3481
+hr2701-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt258
+hr2701-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2701
+hr3951-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt259
+hr3951-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3951
+hr3854-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt260
+hr3854-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3854
+hr2334-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt261
+hr2334-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2334
+hr3579-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt262
+hr3579-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3579
+hr3400-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt263
+hr3400-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3400
+hr3767-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt264
+hr3767-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3767
+hr5100-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt265
+hr5100-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5100
+hr5100-119,HSSY,"House Committee on Science, Space, and Technology",house_committee,high,metadata,BILLSTATUS-119hr5100
+hr4446-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt266
+hr4446-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4446
+hr3109-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt267
+hr3109-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3109
+hr3617-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt268
+hr3617-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3617
+hr1949-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt269
+hr1949-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1949
+hr4312-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt270
+hr4312-119,crs:sports-and-recreation,Sports and Recreation,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4312
+hr4312-119,HSED,House Committee on Education and Workforce,house_committee,high,metadata,BILLSTATUS-119hr4312
+hr5304-119,HSAP,House Committee on Appropriations,house_committee,super_high,metadata,CRPT-119hrpt271
+hr5304-119,crs:economics-and-public-finance,Economics and Public Finance,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5304
+hr5342-119,HSAP,House Committee on Appropriations,house_committee,super_high,metadata,CRPT-119hrpt272
+hr5342-119,crs:economics-and-public-finance,Economics and Public Finance,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5342
+hr3494-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt273
+hr3494-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3494
+hr2721-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt274
+hr2721-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2721
+hr3427-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt275
+hr3427-119,crs:environmental-protection,Environmental Protection,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3427
+hr528-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt276
+hr528-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr528
+hr528-119,HSAG,House Committee on Agriculture,house_committee,high,metadata,BILLSTATUS-119hr528
+hr655-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt277
+hr655-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr655
+hr831-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt278
+hr831-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr831
+hr972-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt279
+hr972-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr972
+hr1045-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt280
+hr1045-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1045
+hr1045-119,HSAG,House Committee on Agriculture,house_committee,high,metadata,BILLSTATUS-119hr1045
+hr1276-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt281
+hr1276-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1276
+hr1676-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt282
+hr1676-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1676
+hr1809-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt283
+hr1809-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1809
+hr2290-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt284
+hr2290-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2290
+hr2293-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt285
+hr2293-119,crs:animals,Animals,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2293
+hr2302-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt286
+hr2302-119,crs:native-americans,Native Americans,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2302
+hr2388-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt287
+hr2388-119,crs:native-americans,Native Americans,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2388
+hr2389-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt288
+hr2389-119,crs:native-americans,Native Americans,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2389
+hr2400-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt289
+hr2400-119,crs:native-americans,Native Americans,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2400
+hr2876-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt290
+hr2876-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2876
+hr3176-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt291
+hr3176-119,crs:emergency-management,Emergency Management,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3176
+hr3187-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt292
+hr3187-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3187
+hr3857-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt293
+hr3857-119,crs:water-resources-development,Water Resources Development,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3857
+hr4285-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt294
+hr4285-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4285
+hr1047-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt295
+hr1047-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1047
+hr4058-119,HSHM,House Committee on Homeland Security,house_committee,super_high,metadata,CRPT-119hrpt296
+hr4058-119,crs:emergency-management,Emergency Management,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4058
+hr3668-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt297
+hr3668-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3668
+hr3668-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,high,metadata,BILLSTATUS-119hr3668
+hr4273-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt300
+hr4273-119,crs:health,Health,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4273
+hr3157-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt301
+hr3157-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3157
+hr3616-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt302
+hr3616-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3616
+hr2791-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt303
+hr2791-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2791
+hr3638-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt304
+hr3638-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3638
+hr2954-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt305
+hr2954-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2954
+hr3628-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt306
+hr3628-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3628
+hr3632-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt307
+hr3632-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3632
+hr1458-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt308
+hr1458-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1458
+hr659-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt309
+hr659-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr659
+hr2605-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt310
+hr2605-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2605
+hr3492-119,HSJU,House Committee on the Judiciary,house_committee,super_high,metadata,CRPT-119hrpt311
+hr3492-119,crs:crime-and-law-enforcement,Crime and Law Enforcement,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3492
+hr4057-119,HSHM,House Committee on Homeland Security,house_committee,super_high,metadata,CRPT-119hrpt312
+hr4057-119,crs:immigration,Immigration,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4057
+hr4070-119,HSHM,House Committee on Homeland Security,house_committee,super_high,metadata,CRPT-119hrpt313
+hr4070-119,crs:immigration,Immigration,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4070
+hr3965-119,HSHM,House Committee on Homeland Security,house_committee,super_high,metadata,CRPT-119hrpt314
+hr3965-119,crs:immigration,Immigration,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3965
+hr5214-119,HSGO,House Committee on Oversight and Government Reform,house_committee,super_high,metadata,CRPT-119hrpt315
+hr5214-119,crs:crime-and-law-enforcement,Crime and Law Enforcement,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5214
+hr5179-119,HSGO,House Committee on Oversight and Government Reform,house_committee,super_high,metadata,CRPT-119hrpt316
+hr5179-119,crs:law,Law,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5179
+hr5107-119,HSGO,House Committee on Oversight and Government Reform,house_committee,super_high,metadata,CRPT-119hrpt317
+hr5107-119,crs:crime-and-law-enforcement,Crime and Law Enforcement,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5107
+hr5346-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt318
+hr5346-119,crs:taxation,Taxation,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5346
+hr501-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt319
+hr501-119,crs:emergency-management,Emergency Management,crs_policy_area,super_high,metadata,BILLSTATUS-119hr501
+hr744-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt320
+hr744-119,crs:emergency-management,Emergency Management,crs_policy_area,super_high,metadata,BILLSTATUS-119hr744
+hr3190-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt321
+hr3190-119,crs:international-affairs,International Affairs,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3190
+hr3190-119,HSJU,House Committee on the Judiciary,house_committee,high,metadata,BILLSTATUS-119hr3190
+hr3190-119,HSFA,House Committee on Foreign Affairs,house_committee,high,metadata,BILLSTATUS-119hr3190
+hr3419-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt322
+hr3419-119,crs:health,Health,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3419
+hr4071-119,HSHM,House Committee on Homeland Security,house_committee,super_high,metadata,CRPT-119hrpt323
+hr4071-119,crs:international-affairs,International Affairs,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4071
+hr4071-119,HSWM,House Committee on Ways and Means,house_committee,high,metadata,BILLSTATUS-119hr4071
+hr4346-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt324
+hr4346-119,crs:international-affairs,International Affairs,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4346
+hr2493-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt325
+hr2493-119,crs:health,Health,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2493
+hr5172-119,HSGO,House Committee on Oversight and Government Reform,house_committee,super_high,metadata,CRPT-119hrpt326
+hr5172-119,crs:crime-and-law-enforcement,Crime and Law Enforcement,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5172
+hr2846-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt327
+hr2846-119,crs:health,Health,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2846
+hr281-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt328
+hr281-119,crs:environmental-protection,Environmental Protection,crs_policy_area,super_high,metadata,BILLSTATUS-119hr281
+hr5348-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt329
+hr5348-119,crs:social-welfare,Social Welfare,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5348
+hr5284-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt330
+hr5284-119,crs:social-welfare,Social Welfare,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5284
+hr3302-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt331
+hr3302-119,crs:health,Health,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3302
+hr845-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt332
+hr845-119,crs:environmental-protection,Environmental Protection,crs_policy_area,super_high,metadata,BILLSTATUS-119hr845
+hr842-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt333
+hr842-119,crs:health,Health,crs_policy_area,super_high,metadata,BILLSTATUS-119hr842
+hr842-119,HSIF,House Committee on Energy and Commerce,house_committee,high,metadata,BILLSTATUS-119hr842
+hr2462-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt334
+hr2462-119,crs:agriculture-and-food,Agriculture and Food,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2462
+hr5349-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt335
+hr5349-119,crs:taxation,Taxation,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5349
+hr2267-119,HSJU,House Committee on the Judiciary,house_committee,super_high,metadata,CRPT-119hrpt336
+hr2267-119,crs:crime-and-law-enforcement,Crime and Law Enforcement,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2267
+hr38-119,HSJU,House Committee on the Judiciary,house_committee,super_high,metadata,CRPT-119hrpt337
+hr38-119,crs:crime-and-law-enforcement,Crime and Law Enforcement,crs_policy_area,super_high,metadata,BILLSTATUS-119hr38
+hr2184-119,HSJU,House Committee on the Judiciary,house_committee,super_high,metadata,CRPT-119hrpt338
+hr2184-119,crs:crime-and-law-enforcement,Crime and Law Enforcement,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2184
+hr3123-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt339
+hr3123-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3123
+hr3455-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt340
+hr3455-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3455
+hr5242-119,HSGO,House Committee on Oversight and Government Reform,house_committee,super_high,metadata,CRPT-119hrpt341
+hr5242-119,crs:crime-and-law-enforcement,Crime and Law Enforcement,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5242
+hr5163-119,HSGO,House Committee on Oversight and Government Reform,house_committee,super_high,metadata,CRPT-119hrpt342
+hr5163-119,crs:crime-and-law-enforcement,Crime and Law Enforcement,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5163
+hr647-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt343
+hr647-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr647
+hr1336-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt344
+hr1336-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1336
+hr4371-119,HSJU,House Committee on the Judiciary,house_committee,super_high,metadata,CRPT-119hrpt345
+hr4371-119,crs:crime-and-law-enforcement,Crime and Law Enforcement,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4371
+hr2159-119,HSJU,House Committee on the Judiciary,house_committee,super_high,metadata,CRPT-119hrpt346
+hr2159-119,crs:crime-and-law-enforcement,Crime and Law Enforcement,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2159
+hr4323-119,HSJU,House Committee on the Judiciary,house_committee,super_high,metadata,CRPT-119hrpt347
+hr4323-119,crs:crime-and-law-enforcement,Crime and Law Enforcement,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4323
+hr3483-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt348
+hr3483-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3483
+hr3834-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt349
+hr3834-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3834
+hr1663-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt350
+hr1663-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1663
+hr689-119,HSGO,House Committee on Oversight and Government Reform,house_committee,super_high,metadata,CRPT-119hrpt351
+hr689-119,crs:government-operations-and-politics,Government Operations and Politics,crs_policy_area,super_high,metadata,BILLSTATUS-119hr689
+hr1262-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt352
+hr1262-119,crs:health,Health,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1262
+hr2306-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt353
+hr2306-119,crs:government-operations-and-politics,Government Operations and Politics,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2306
+hr2815-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt354
+hr2815-119,crs:native-americans,Native Americans,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2815
+hr2916-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt355
+hr2916-119,crs:native-americans,Native Americans,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2916
+hr3692-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt356
+hr3692-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3692
+hr3872-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt357
+hr3872-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3872
+hr4256-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt358
+hr4256-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4256
+hr4313-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt359
+hr4313-119,crs:health,Health,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4313
+hr5345-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt360
+hr5345-119,crs:social-welfare,Social Welfare,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5345
+hr2478-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt361
+hr2478-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2478
+hr3234-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt362
+hr3234-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3234
+hr3484-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt363
+hr3484-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3484
+hr3682-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt364
+hr3682-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3682
+hr5262-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt365
+hr5262-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5262
+hr5270-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt366
+hr5270-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5270
+hr5276-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt367
+hr5276-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5276
+hr5291-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt368
+hr5291-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5291
+hr5317-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt369
+hr5317-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5317
+hr5344-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt370
+hr5344-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5344
+hr3812-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt371
+hr3812-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3812
+hr1736-119,HSHM,House Committee on Homeland Security,house_committee,super_high,metadata,CRPT-119hrpt373
+hr1736-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1736
+hr2212-119,HSHM,House Committee on Homeland Security,house_committee,super_high,metadata,CRPT-119hrpt374
+hr2212-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2212
+hr2261-119,HSHM,House Committee on Homeland Security,house_committee,super_high,metadata,CRPT-119hrpt375
+hr2261-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2261
+hr5062-119,HSHM,House Committee on Homeland Security,house_committee,super_high,metadata,CRPT-119hrpt376
+hr5062-119,crs:transportation-and-public-works,Transportation and Public Works,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5062
+hr5078-119,HSHM,House Committee on Homeland Security,house_committee,super_high,metadata,CRPT-119hrpt377
+hr5078-119,crs:science-technology-communications,"Science, Technology, Communications",crs_policy_area,super_high,metadata,BILLSTATUS-119hr5078
+hr2259-119,HSHM,House Committee on Homeland Security,house_committee,super_high,metadata,CRPT-119hrpt378
+hr2259-119,crs:education,Education,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2259
+hr979-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt379
+hr979-119,crs:science-technology-communications,"Science, Technology, Communications",crs_policy_area,super_high,metadata,BILLSTATUS-119hr979
+hr979-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,high,metadata,BILLSTATUS-119hr979
+hr979-119,HSHM,House Committee on Homeland Security,house_committee,high,metadata,BILLSTATUS-119hr979
+hr1669-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt381
+hr1669-119,crs:health,Health,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1669
+hr2319-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt382
+hr2319-119,crs:health,Health,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2319
+hr4305-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt383
+hr4305-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4305
+hr302-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt384
+hr302-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr302
+hr302-119,HSAG,House Committee on Agriculture,house_committee,high,metadata,BILLSTATUS-119hr302
+hr556-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt385
+hr556-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr556
+hr556-119,HSAG,House Committee on Agriculture,house_committee,high,metadata,BILLSTATUS-119hr556
+hr1366-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt386
+hr1366-119,crs:environmental-protection,Environmental Protection,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1366
+hr4090-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt387
+hr4090-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4090
+hr1531-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt388
+hr1531-119,crs:international-affairs,International Affairs,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1531
+hr1531-119,HSFA,House Committee on Foreign Affairs,house_committee,high,metadata,BILLSTATUS-119hr1531
+hr5167-119,HLIG,House Permanent Select Committee on Intelligence,house_committee,super_high,metadata,CRPT-119hrpt389
+hr5167-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5167
+hr1013-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt390
+hr1013-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1013
+hr4503-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt392
+hr4503-119,crs:environmental-protection,Environmental Protection,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4503
+hr573-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt393
+hr573-119,crs:environmental-protection,Environmental Protection,crs_policy_area,super_high,metadata,BILLSTATUS-119hr573
+hr3170-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt394
+hr3170-119,crs:government-operations-and-politics,Government Operations and Politics,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3170
+hr4776-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt395
+hr4776-119,crs:environmental-protection,Environmental Protection,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4776
+hr1098-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt396
+hr1098-119,crs:animals,Animals,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1098
+hr5131-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt397
+hr5131-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5131
+hr5131-119,HSAS,House Committee on Armed Services,house_committee,high,metadata,BILLSTATUS-119hr5131
+hr3620-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt398
+hr3620-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3620
+hr3620-119,HSIF,House Committee on Energy and Commerce,house_committee,high,metadata,BILLSTATUS-119hr3620
+hr3962-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt400
+hr3962-119,crs:environmental-protection,Environmental Protection,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3962
+hr4183-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt401
+hr4183-119,crs:transportation-and-public-works,Transportation and Public Works,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4183
+hr3496-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt402
+hr3496-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3496
+hr5764-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt403
+hr5764-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5764
+hr5788-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt404
+hr5788-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5788
+hr5784-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt405
+hr5784-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5784
+hr5763-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt406
+hr5763-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5763
+hr4638-119,HSJU,House Committee on the Judiciary,house_committee,super_high,metadata,CRPT-119hrpt407
+hr4638-119,crs:immigration,Immigration,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4638
+hr2571-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt408
+hr2571-119,crs:health,Health,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2571
+hr2528-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt409
+hr2528-119,crs:health,Health,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2528
+hr5778-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt412
+hr5778-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5778
+hr2270-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt413
+hr2270-119,crs:labor-and-employment,Labor and Employment,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2270
+hr4054-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt414
+hr4054-119,crs:education,Education,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4054
+hr4930-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt415
+hr4930-119,crs:foreign-trade-and-international-finance,Foreign Trade and International Finance,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4930
+hr6500-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt416
+hr6500-119,crs:economics-and-public-finance,Economics and Public Finance,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6500
+hr4593-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt417
+hr4593-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4593
+hr6504-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt418
+hr6504-119,crs:foreign-trade-and-international-finance,Foreign Trade and International Finance,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6504
+hr5184-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt419
+hr5184-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5184
+hr2312-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt420
+hr2312-119,crs:labor-and-employment,Labor and Employment,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2312
+hr2988-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt421
+hr2988-119,crs:labor-and-employment,Labor and Employment,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2988
+hr4366-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt422
+hr4366-119,crs:labor-and-employment,Labor and Employment,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4366
+hr2262-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt423
+hr2262-119,crs:labor-and-employment,Labor and Employment,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2262
+hr227-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt425
+hr227-119,crs:social-welfare,Social Welfare,crs_policy_area,super_high,metadata,BILLSTATUS-119hr227
+hr2716-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt426
+hr2716-119,crs:social-welfare,Social Welfare,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2716
+hr6495-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt427
+hr6495-119,crs:taxation,Taxation,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6495
+hr6506-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt428
+hr6506-119,crs:taxation,Taxation,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6506
+hr178-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt429
+hr178-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr178
+hr178-119,HSAG,House Committee on Agriculture,house_committee,high,metadata,BILLSTATUS-119hr178
+hr179-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt430
+hr179-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr179
+hr179-119,HSAG,House Committee on Agriculture,house_committee,high,metadata,BILLSTATUS-119hr179
+hr2250-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt431
+hr2250-119,crs:emergency-management,Emergency Management,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2250
+hr2250-119,HSSY,"House Committee on Science, Space, and Technology",house_committee,high,metadata,BILLSTATUS-119hr2250
+hr435-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt432
+hr435-119,crs:government-operations-and-politics,Government Operations and Politics,crs_policy_area,super_high,metadata,BILLSTATUS-119hr435
+hr435-119,HSAG,House Committee on Agriculture,house_committee,high,metadata,BILLSTATUS-119hr435
+hr435-119,HSGO,House Committee on Oversight and Government Reform,house_committee,high,metadata,BILLSTATUS-119hr435
+hr1110-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt433
+hr1110-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1110
+hr1110-119,HSAG,House Committee on Agriculture,house_committee,high,metadata,BILLSTATUS-119hr1110
+hr2405-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt434
+hr2405-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2405
+hr2405-119,HSAG,House Committee on Agriculture,house_committee,high,metadata,BILLSTATUS-119hr2405
+hr839-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt435
+hr839-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr839
+hr725-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt436
+hr725-119,crs:native-americans,Native Americans,crs_policy_area,super_high,metadata,BILLSTATUS-119hr725
+hr2860-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt437
+hr2860-119,crs:environmental-protection,Environmental Protection,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2860
+hr3168-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt438
+hr3168-119,crs:emergency-management,Emergency Management,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3168
+hr3168-119,HSSY,"House Committee on Science, Space, and Technology",house_committee,high,metadata,BILLSTATUS-119hr3168
+hr3168-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,high,metadata,BILLSTATUS-119hr3168
+hr1681-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt439
+hr1681-119,crs:science-technology-communications,"Science, Technology, Communications",crs_policy_area,super_high,metadata,BILLSTATUS-119hr1681
+hr1681-119,HSAG,House Committee on Agriculture,house_committee,high,metadata,BILLSTATUS-119hr1681
+hr1681-119,HSIF,House Committee on Energy and Commerce,house_committee,high,metadata,BILLSTATUS-119hr1681
+hr2616-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt441
+hr2616-119,crs:education,Education,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2616
+hr2617-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt442
+hr2617-119,crs:education,Education,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2617
+hr3453-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt443
+hr3453-119,crs:education,Education,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3453
+hr2516-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt444
+hr2516-119,crs:education,Education,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2516
+hr580-119,HSGO,House Committee on Oversight and Government Reform,house_committee,super_high,metadata,CRPT-119hrpt446
+hr580-119,crs:government-operations-and-politics,Government Operations and Politics,crs_policy_area,super_high,metadata,BILLSTATUS-119hr580
+hr580-119,HSJU,House Committee on the Judiciary,house_committee,high,metadata,BILLSTATUS-119hr580
+hr580-119,HSBU,House Committee on the Budget,house_committee,high,metadata,BILLSTATUS-119hr580
+hr580-119,HSRU,House Committee on Rules,house_committee,high,metadata,BILLSTATUS-119hr580
+hr6359-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt447
+hr6359-119,crs:education,Education,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6359
+hr5169-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt448
+hr5169-119,crs:labor-and-employment,Labor and Employment,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5169
+hr681-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt449
+hr681-119,crs:native-americans,Native Americans,crs_policy_area,super_high,metadata,BILLSTATUS-119hr681
+hr4386-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt450
+hr4386-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4386
+hr4386-119,HSAG,House Committee on Agriculture,house_committee,high,metadata,BILLSTATUS-119hr4386
+hr3903-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt451
+hr3903-119,crs:native-americans,Native Americans,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3903
+hr4467-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt452
+hr4467-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4467
+hr5910-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt453
+hr5910-119,crs:native-americans,Native Americans,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5910
+hr4284-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt454
+hr4284-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4284
+hr4284-119,HSAG,House Committee on Agriculture,house_committee,high,metadata,BILLSTATUS-119hr4284
+hr5103-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt455
+hr5103-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5103
+hr5103-119,HSGO,House Committee on Oversight and Government Reform,house_committee,high,metadata,BILLSTATUS-119hr5103
+hr5577-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt456
+hr5577-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5577
+hr6644-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt457
+hr6644-119,crs:housing-and-community-development,Housing and Community Development,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6644
+hr6644-119,HSVR,House Committee on Veterans' Affairs,house_committee,high,metadata,BILLSTATUS-119hr6644
+hr1723-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt458
+hr1723-119,crs:native-americans,Native Americans,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1723
+hr6502-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt460
+hr6502-119,crs:education,Education,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6502
+hr6498-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt461
+hr6498-119,crs:education,Education,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6498
+hr5183-119,HSGO,House Committee on Oversight and Government Reform,house_committee,super_high,metadata,CRPT-119hrpt463
+hr5183-119,crs:government-operations-and-politics,Government Operations and Politics,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5183
+hr5183-119,HSRU,House Committee on Rules,house_committee,high,metadata,BILLSTATUS-119hr5183
+hr1295-119,crs:government-operations-and-politics,Government Operations and Politics,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1295
+hr1295-119,HSRU,House Committee on Rules,house_committee,high,metadata,BILLSTATUS-119hr1295
+hr1295-119,HSGO,House Committee on Oversight and Government Reform,house_committee,high,metadata,BILLSTATUS-119hr1295
+hr6978-119,HSJU,House Committee on the Judiciary,house_committee,super_high,metadata,CRPT-119hrpt465
+hr6978-119,crs:immigration,Immigration,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6978
+hr3497-119,HSJU,House Committee on the Judiciary,house_committee,super_high,metadata,CRPT-119hrpt466
+hr3497-119,crs:crime-and-law-enforcement,Crime and Law Enforcement,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3497
+hr1958-119,HSJU,House Committee on the Judiciary,house_committee,super_high,metadata,CRPT-119hrpt467
+hr1958-119,crs:immigration,Immigration,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1958
+hres611-119,HSGO,House Committee on Oversight and Government Reform,house_committee,super_high,metadata,CRPT-119hrpt468
+hres611-119,crs:health,Health,crs_policy_area,super_high,metadata,BILLSTATUS-119hres611
+hres611-119,HSIF,House Committee on Energy and Commerce,house_committee,high,metadata,BILLSTATUS-119hres611
+hr4626-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt470
+hr4626-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4626
+hr2853-119,HSJU,House Committee on the Judiciary,house_committee,super_high,metadata,CRPT-119hrpt471
+hr2853-119,crs:crime-and-law-enforcement,Crime and Law Enforcement,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2853
+hr2189-119,HSJU,House Committee on the Judiciary,house_committee,super_high,metadata,CRPT-119hrpt472
+hr2189-119,crs:crime-and-law-enforcement,Crime and Law Enforcement,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2189
+hr6536-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt473
+hr6536-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6536
+hr6547-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt474
+hr6547-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6547
+hr6556-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt475
+hr6556-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6556
+hr4242-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt476
+hr4242-119,crs:taxation,Taxation,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4242
+hr2072-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt477
+hr2072-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2072
+hr7008-119,HSHA,House Committee on House Administration,house_committee,super_high,metadata,CRPT-119hrpt479
+hr7008-119,crs:congress,Congress,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7008
+hr1355-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt480
+hr1355-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1355
+hr3474-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt481
+hr3474-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3474
+hr3699-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt482
+hr3699-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3699
+hr4690-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt483
+hr4690-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4690
+hr4690-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,high,metadata,BILLSTATUS-119hr4690
+hr4758-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt484
+hr4758-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4758
+hr1343-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt485
+hr1343-119,crs:science-technology-communications,"Science, Technology, Communications",crs_policy_area,super_high,metadata,BILLSTATUS-119hr1343
+hr1588-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt486
+hr1588-119,crs:science-technology-communications,"Science, Technology, Communications",crs_policy_area,super_high,metadata,BILLSTATUS-119hr1588
+hr1588-119,HSAG,House Committee on Agriculture,house_committee,high,metadata,BILLSTATUS-119hr1588
+hr1588-119,HSII,House Committee on Natural Resources,house_committee,high,metadata,BILLSTATUS-119hr1588
+hr1665-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt487
+hr1665-119,crs:science-technology-communications,"Science, Technology, Communications",crs_policy_area,super_high,metadata,BILLSTATUS-119hr1665
+hr1665-119,HSAG,House Committee on Agriculture,house_committee,high,metadata,BILLSTATUS-119hr1665
+hr1665-119,HSII,House Committee on Natural Resources,house_committee,high,metadata,BILLSTATUS-119hr1665
+hr1731-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt488
+hr1731-119,crs:science-technology-communications,"Science, Technology, Communications",crs_policy_area,super_high,metadata,BILLSTATUS-119hr1731
+hr1731-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,high,metadata,BILLSTATUS-119hr1731
+hr2294-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt489
+hr2294-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2294
+hr2294-119,HSSY,"House Committee on Science, Space, and Technology",house_committee,high,metadata,BILLSTATUS-119hr2294
+hr2869-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt491
+hr2869-119,crs:labor-and-employment,Labor and Employment,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2869
+hr6392-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt492
+hr6392-119,crs:education,Education,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6392
+hr3495-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt494
+hr3495-119,crs:labor-and-employment,Labor and Employment,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3495
+hr6472-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt495
+hr6472-119,crs:education,Education,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6472
+hr2870-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt496
+hr2870-119,crs:labor-and-employment,Labor and Employment,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2870
+hr1028-119,HSJU,House Committee on the Judiciary,house_committee,super_high,metadata,CRPT-119hrpt497
+hr1028-119,crs:sports-and-recreation,Sports and Recreation,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1028
+hr7396-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt498
+hr7396-119,crs:native-americans,Native Americans,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7396
+hr7412-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt499
+hr7412-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7412
+hr7401-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt500
+hr7401-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7401
+hr390-119,HSSY,"House Committee on Science, Space, and Technology",house_committee,super_high,metadata,CRPT-119hrpt501
+hr390-119,crs:science-technology-communications,"Science, Technology, Communications",crs_policy_area,super_high,metadata,BILLSTATUS-119hr390
+hr2600-119,HSSY,"House Committee on Science, Space, and Technology",house_committee,super_high,metadata,CRPT-119hrpt502
+hr2600-119,crs:science-technology-communications,"Science, Technology, Communications",crs_policy_area,super_high,metadata,BILLSTATUS-119hr2600
+hr3679-119,HSSY,"House Committee on Science, Space, and Technology",house_committee,super_high,metadata,CRPT-119hrpt503
+hr3679-119,crs:science-technology-communications,"Science, Technology, Communications",crs_policy_area,super_high,metadata,BILLSTATUS-119hr3679
+hr2958-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt504
+hr2958-119,crs:labor-and-employment,Labor and Employment,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2958
+hr1319-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt505
+hr1319-119,crs:labor-and-employment,Labor and Employment,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1319
+hr1320-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt506
+hr1320-119,crs:labor-and-employment,Labor and Employment,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1320
+hr4307-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt507
+hr4307-119,crs:crime-and-law-enforcement,Crime and Law Enforcement,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4307
+hr6956-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt508
+hr6956-119,crs:taxation,Taxation,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6956
+hr6431-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt509
+hr6431-119,crs:taxation,Taxation,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6431
+hr4294-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt510
+hr4294-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4294
+hr6365-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt511
+hr6365-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6365
+hr3340-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt512
+hr3340-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3340
+hr2130-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt513
+hr2130-119,crs:native-americans,Native Americans,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2130
+hr3073-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt514
+hr3073-119,crs:native-americans,Native Americans,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3073
+hr5419-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt516
+hr5419-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5419
+hr5419-119,HSAG,House Committee on Agriculture,house_committee,high,metadata,BILLSTATUS-119hr5419
+hr1945-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt517
+hr1945-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1945
+hr2196-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt518
+hr2196-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2196
+hr755-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt519
+hr755-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr755
+hjres139-119,HSJU,House Committee on the Judiciary,house_committee,super_high,metadata,CRPT-119hrpt520
+hjres139-119,crs:economics-and-public-finance,Economics and Public Finance,crs_policy_area,super_high,metadata,BILLSTATUS-119hjres139
+hr1078-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt521
+hr1078-119,crs:housing-and-community-development,Housing and Community Development,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1078
+hr1181-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt522
+hr1181-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1181
+hr3959-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt523
+hr3959-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3959
+hr4624-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt524
+hr4624-119,crs:sports-and-recreation,Sports and Recreation,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4624
+hr4624-119,HSIF,House Committee on Energy and Commerce,house_committee,high,metadata,BILLSTATUS-119hr4624
+hr4130-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt525
+hr4130-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4130
+hr6541-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt526
+hr6541-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6541
+hr6544-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt527
+hr6544-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6544
+hr6546-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt528
+hr6546-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6546
+hr6550-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt529
+hr6550-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6550
+hr6551-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt530
+hr6551-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6551
+hr6552-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt531
+hr6552-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6552
+hr6553-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt532
+hr6553-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6553
+hr6554-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt533
+hr6554-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6554
+hr6555-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt534
+hr6555-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6555
+hr6570-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt535
+hr6570-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6570
+hr5254-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt536
+hr5254-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5254
+hr5729-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt537
+hr5729-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5729
+hr2844-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt538
+hr2844-119,crs:labor-and-employment,Labor and Employment,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2844
+hr2299-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt539
+hr2299-119,crs:labor-and-employment,Labor and Employment,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2299
+hr7640-119,HSJU,House Committee on the Judiciary,house_committee,super_high,metadata,CRPT-119hrpt541
+hr7640-119,crs:immigration,Immigration,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7640
+hr2709-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt542
+hr2709-119,crs:environmental-protection,Environmental Protection,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2709
+hr2709-119,HSAG,House Committee on Agriculture,house_committee,high,metadata,BILLSTATUS-119hr2709
+hr6380-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt543
+hr6380-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6380
+hconres73-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt544
+hconres73-119,crs:congress,Congress,crs_policy_area,super_high,metadata,BILLSTATUS-119hconres73
+hr6480-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt545
+hr6480-119,crs:government-operations-and-politics,Government Operations and Politics,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6480
+hr6267-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt546
+hr6267-119,crs:transportation-and-public-works,Transportation and Public Works,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6267
+hr5663-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt547
+hr5663-119,crs:transportation-and-public-works,Transportation and Public Works,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5663
+hr6618-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt548
+hr6618-119,crs:transportation-and-public-works,Transportation and Public Works,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6618
+hr6460-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt549
+hr6460-119,crs:transportation-and-public-works,Transportation and Public Works,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6460
+hr3410-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt550
+hr3410-119,crs:transportation-and-public-works,Transportation and Public Works,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3410
+hr2247-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt551
+hr2247-119,crs:transportation-and-public-works,Transportation and Public Works,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2247
+hr6427-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt552
+hr6427-119,crs:transportation-and-public-works,Transportation and Public Works,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6427
+hr6481-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt553
+hr6481-119,crs:government-operations-and-politics,Government Operations and Politics,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6481
+hr5713-119,HSJU,House Committee on the Judiciary,house_committee,super_high,metadata,CRPT-119hrpt555
+hr5713-119,crs:immigration,Immigration,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5713
+hr1799-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt556
+hr1799-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1799
+hr6967-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt557
+hr6967-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6967
+hr7056-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt558
+hr7056-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7056
+hres1007-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt559
+hres1007-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hres1007
+hr7085-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt560
+hr7085-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7085
+hr7128-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt561
+hr7128-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7128
+hr7388-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt562
+hr7388-119,crs:government-operations-and-politics,Government Operations and Politics,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7388
+hr7084-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt563
+hr7084-119,crs:transportation-and-public-works,Transportation and Public Works,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7084
+hr6422-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt564
+hr6422-119,crs:environmental-protection,Environmental Protection,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6422
+hr2474-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt565
+hr2474-119,crs:science-technology-communications,"Science, Technology, Communications",crs_policy_area,super_high,metadata,BILLSTATUS-119hr2474
+hr7376-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt566
+hr7376-119,crs:environmental-protection,Environmental Protection,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7376
+hr7342-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt567
+hr7342-119,crs:labor-and-employment,Labor and Employment,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7342
+hr7342-119,HSBA,House Committee on Financial Services,house_committee,high,metadata,BILLSTATUS-119hr7342
+hr1897-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt568
+hr1897-119,crs:environmental-protection,Environmental Protection,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1897
+hr2409-119,HSGO,House Committee on Oversight and Government Reform,house_committee,super_high,metadata,CRPT-119hrpt569
+hr2409-119,crs:government-operations-and-politics,Government Operations and Politics,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2409
+hr2071-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt571
+hr2071-119,crs:foreign-trade-and-international-finance,Foreign Trade and International Finance,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2071
+hr4171-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt572
+hr4171-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4171
+hr7127-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt573
+hr7127-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7127
+hr5201-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt574
+hr5201-119,crs:science-technology-communications,"Science, Technology, Communications",crs_policy_area,super_high,metadata,BILLSTATUS-119hr5201
+hr3482-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt576
+hr3482-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3482
+hr6047-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt577
+hr6047-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6047
+hr785-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt578
+hr785-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr785
+hr41-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt579
+hr41-119,crs:native-americans,Native Americans,crs_policy_area,super_high,metadata,BILLSTATUS-119hr41
+hr1352-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt580
+hr1352-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1352
+hr2252-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt581
+hr2252-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2252
+hr2768-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt582
+hr2768-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2768
+hr4463-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt583
+hr4463-119,crs:native-americans,Native Americans,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4463
+hr4684-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt584
+hr4684-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4684
+hr5682-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt585
+hr5682-119,crs:native-americans,Native Americans,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5682
+hr7720-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt586
+hr7720-119,crs:families,Families,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7720
+hr7721-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt587
+hr7721-119,crs:families,Families,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7721
+hr7722-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt588
+hr7722-119,crs:families,Families,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7722
+hr7723-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt589
+hr7723-119,crs:families,Families,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7723
+hr7724-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt590
+hr7724-119,crs:families,Families,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7724
+hr7725-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt591
+hr7725-119,crs:families,Families,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7725
+hr7726-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt592
+hr7726-119,crs:families,Families,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7726
+hr7677-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt593
+hr7677-119,crs:families,Families,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7677
+hr6409-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt594
+hr6409-119,crs:environmental-protection,Environmental Protection,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6409
+hr6387-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt595
+hr6387-119,crs:environmental-protection,Environmental Protection,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6387
+hr6398-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt596
+hr6398-119,crs:environmental-protection,Environmental Protection,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6398
+hr5200-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt597
+hr5200-119,crs:science-technology-communications,"Science, Technology, Communications",crs_policy_area,super_high,metadata,BILLSTATUS-119hr5200
+hr2076-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt598
+hr2076-119,crs:science-technology-communications,"Science, Technology, Communications",crs_policy_area,super_high,metadata,BILLSTATUS-119hr2076
+hr2347-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt599
+hr2347-119,crs:taxation,Taxation,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2347
+hr5334-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt600
+hr5334-119,crs:international-affairs,International Affairs,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5334
+hr6260-119,HSJU,House Committee on the Judiciary,house_committee,super_high,metadata,CRPT-119hrpt601
+hr6260-119,crs:crime-and-law-enforcement,Crime and Law Enforcement,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6260
+hr5625-119,HSJU,House Committee on the Judiciary,house_committee,super_high,metadata,CRPT-119hrpt602
+hr5625-119,crs:crime-and-law-enforcement,Crime and Law Enforcement,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5625
+hr1071-119,HSJU,House Committee on the Judiciary,house_committee,super_high,metadata,CRPT-119hrpt603
+hr1071-119,crs:immigration,Immigration,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1071
+hr5750-119,HSGO,House Committee on Oversight and Government Reform,house_committee,super_high,metadata,CRPT-119hrpt604
+hr5750-119,crs:government-operations-and-politics,Government Operations and Politics,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5750
+hr5366-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt605
+hr5366-119,crs:taxation,Taxation,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5366
+hr7959-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt606
+hr7959-119,crs:taxation,Taxation,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7959
+hr7971-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt607
+hr7971-119,crs:taxation,Taxation,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7971
+hr7613-119,HSAS,House Committee on Armed Services,house_committee,super_high,metadata,CRPT-119hrpt608
+hr7613-119,crs:transportation-and-public-works,Transportation and Public Works,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7613
+hr7613-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,high,metadata,BILLSTATUS-119hr7613
+hr7688-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt611
+hr7688-119,crs:government-operations-and-politics,Government Operations and Politics,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7688
+hr5877-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt612
+hr5877-119,crs:crime-and-law-enforcement,Crime and Law Enforcement,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5877
+hr5877-119,HSJU,House Committee on the Judiciary,house_committee,high,metadata,BILLSTATUS-119hr5877
+hr5587-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt613
+hr5587-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5587
+hr2289-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt614
+hr2289-119,crs:science-technology-communications,"Science, Technology, Communications",crs_policy_area,super_high,metadata,BILLSTATUS-119hr2289
+hr2289-119,HSII,House Committee on Natural Resources,house_committee,high,metadata,BILLSTATUS-119hr2289
+hr7386-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt615
+hr7386-119,crs:emergency-management,Emergency Management,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7386
+hr7022-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt616
+hr7022-119,crs:science-technology-communications,"Science, Technology, Communications",crs_policy_area,super_high,metadata,BILLSTATUS-119hr7022
+hr6955-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt617
+hr6955-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6955
+hr151-119,HSGO,House Committee on Oversight and Government Reform,house_committee,super_high,metadata,CRPT-119hrpt619
+hr151-119,crs:government-operations-and-politics,Government Operations and Politics,crs_policy_area,super_high,metadata,BILLSTATUS-119hr151
+hr7567-119,HSAG,House Committee on Agriculture,house_committee,super_high,metadata,CRPT-119hrpt620
+hr7567-119,crs:agriculture-and-food,Agriculture and Food,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7567
+hr1329-119,HSHA,House Committee on House Administration,house_committee,super_high,metadata,CRPT-119hrpt621
+hr1329-119,crs:arts-culture-religion,"Arts, Culture, Religion",crs_policy_area,super_high,metadata,BILLSTATUS-119hr1329
+hr1329-119,HSII,House Committee on Natural Resources,house_committee,high,metadata,BILLSTATUS-119hr1329
+hr8469-119,HSAP,House Committee on Appropriations,house_committee,super_high,metadata,CRPT-119hrpt622
+hr8469-119,crs:economics-and-public-finance,Economics and Public Finance,crs_policy_area,super_high,metadata,BILLSTATUS-119hr8469
+hr8495-119,HSAP,House Committee on Appropriations,house_committee,super_high,metadata,CRPT-119hrpt623
+hr8495-119,crs:economics-and-public-finance,Economics and Public Finance,crs_policy_area,super_high,metadata,BILLSTATUS-119hr8495
+hr6903-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt624
+hr6903-119,crs:families,Families,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6903
+hr6903-119,HSFA,House Committee on Foreign Affairs,house_committee,high,metadata,BILLSTATUS-119hr6903
+hr161-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt625
+hr161-119,crs:environmental-protection,Environmental Protection,crs_policy_area,super_high,metadata,BILLSTATUS-119hr161
+hr4214-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt626
+hr4214-119,crs:environmental-protection,Environmental Protection,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4214
+hr6373-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt627
+hr6373-119,crs:environmental-protection,Environmental Protection,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6373
+hr7266-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt629
+hr7266-119,crs:science-technology-communications,"Science, Technology, Communications",crs_policy_area,super_high,metadata,BILLSTATUS-119hr7266
+hr3726-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt630
+hr3726-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3726
+hr8595-119,HSAP,House Committee on Appropriations,house_committee,super_high,metadata,CRPT-119hrpt631
+hr8595-119,crs:economics-and-public-finance,Economics and Public Finance,crs_policy_area,super_high,metadata,BILLSTATUS-119hr8595
+hr8646-119,HSAP,House Committee on Appropriations,house_committee,super_high,metadata,CRPT-119hrpt632
+hr8646-119,crs:economics-and-public-finance,Economics and Public Finance,crs_policy_area,super_high,metadata,BILLSTATUS-119hr8646
+hr2137-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt633
+hr2137-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2137
+hr3863-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt634
+hr3863-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3863
+hr8365-119,HSJU,House Committee on the Judiciary,house_committee,super_high,metadata,CRPT-119hrpt635
+hr8365-119,crs:law,Law,crs_policy_area,super_high,metadata,BILLSTATUS-119hr8365
+hr8352-119,HSJU,House Committee on the Judiciary,house_committee,super_high,metadata,CRPT-119hrpt636
+hr8352-119,crs:law,Law,crs_policy_area,super_high,metadata,BILLSTATUS-119hr8352
+hr5213-119,HSJU,House Committee on the Judiciary,house_committee,super_high,metadata,CRPT-119hrpt637
+hr5213-119,crs:crime-and-law-enforcement,Crime and Law Enforcement,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5213
+hr7463-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt638
+hr7463-119,crs:families,Families,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7463
+hr7343-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt639
+hr7343-119,crs:labor-and-employment,Labor and Employment,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7343
+hr7529-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt640
+hr7529-119,crs:families,Families,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7529
+hr7655-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt641
+hr7655-119,crs:families,Families,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7655
+hr7995-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt642
+hr7995-119,crs:families,Families,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7995
+hr7432-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt643
+hr7432-119,crs:families,Families,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7432
+hr7432-119,HSBA,House Committee on Financial Services,house_committee,high,metadata,BILLSTATUS-119hr7432
+hr7257-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt644
+hr7257-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7257
+hr7258-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt645
+hr7258-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7258
+hr7305-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt646
+hr7305-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7305
+hr3766-119,HSGO,House Committee on Oversight and Government Reform,house_committee,super_high,metadata,CRPT-119hrpt650
+hr3766-119,crs:law,Law,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3766
+hr7082-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt651
+hr7082-119,crs:education,Education,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7082
+hr8845-119,HSAP,House Committee on Appropriations,house_committee,super_high,metadata,CRPT-119hrpt652
+hr8845-119,crs:economics-and-public-finance,Economics and Public Finance,crs_policy_area,super_high,metadata,BILLSTATUS-119hr8845
+hr301-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt654
+hr301-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr301
+hr398-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt655
+hr398-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr398
+hr1077-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt656
+hr1077-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1077
+hr1687-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt657
+hr1687-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1687
+hr3831-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt658
+hr3831-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3831
+hr5617-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt659
+hr5617-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5617
+hr5631-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt660
+hr5631-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5631
+hr5638-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt661
+hr5638-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5638
+hr5911-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt662
+hr5911-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5911
+hr6162-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt663
+hr6162-119,crs:native-americans,Native Americans,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6162
+hr7618-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt664
+hr7618-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7618
+hr7831-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt665
+hr7831-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7831
+hr9010-119,HSAP,House Committee on Appropriations,house_committee,super_high,metadata,CRPT-119hrpt666
+hr9010-119,crs:congress,Congress,crs_policy_area,super_high,metadata,BILLSTATUS-119hr9010
+hr9022-119,HSAP,House Committee on Appropriations,house_committee,super_high,metadata,CRPT-119hrpt667
+hr9022-119,crs:economics-and-public-finance,Economics and Public Finance,crs_policy_area,super_high,metadata,BILLSTATUS-119hr9022
+hr7891-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt668
+hr7891-119,crs:education,Education,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7891
+hr7892-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt669
+hr7892-119,crs:education,Education,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7892
+hr8872-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt670
+hr8872-119,crs:social-welfare,Social Welfare,crs_policy_area,super_high,metadata,BILLSTATUS-119hr8872
+hr8873-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt671
+hr8873-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr8873
+hr7086-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt672
+hr7086-119,crs:education,Education,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7086
+hr3922-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt673
+hr3922-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3922
+hr3922-119,HSAG,House Committee on Agriculture,house_committee,high,metadata,BILLSTATUS-119hr3922
+hr5694-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt674
+hr5694-119,crs:native-americans,Native Americans,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5694
+hr7250-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt675
+hr7250-119,crs:water-resources-development,Water Resources Development,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7250
+hr826-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt677
+hr826-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr826
+hr915-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt678
+hr915-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr915
+hr8880-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt679
+hr8880-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr8880
+hr8879-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt680
+hr8879-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr8879
+hr8881-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt681
+hr8881-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr8881
+hr8882-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt682
+hr8882-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr8882
+hr8312-119,HSGO,House Committee on Oversight and Government Reform,house_committee,super_high,metadata,CRPT-119hrpt683
+hr8312-119,crs:government-operations-and-politics,Government Operations and Politics,crs_policy_area,super_high,metadata,BILLSTATUS-119hr8312
+hr8464-119,HSGO,House Committee on Oversight and Government Reform,house_committee,super_high,metadata,CRPT-119hrpt684
+hr8464-119,crs:government-operations-and-politics,Government Operations and Politics,crs_policy_area,super_high,metadata,BILLSTATUS-119hr8464
+hr9170-119,HSAP,House Committee on Appropriations,house_committee,super_high,metadata,CRPT-119hrpt686
+hr9170-119,crs:economics-and-public-finance,Economics and Public Finance,crs_policy_area,super_high,metadata,BILLSTATUS-119hr9170
+hr9171-119,HSAP,House Committee on Appropriations,house_committee,super_high,metadata,CRPT-119hrpt687
+hr9171-119,crs:economics-and-public-finance,Economics and Public Finance,crs_policy_area,super_high,metadata,BILLSTATUS-119hr9171
+hr8463-119,HSGO,House Committee on Oversight and Government Reform,house_committee,super_high,metadata,CRPT-119hrpt688
+hr8463-119,crs:government-operations-and-politics,Government Operations and Politics,crs_policy_area,super_high,metadata,BILLSTATUS-119hr8463
+hr8463-119,HSWM,House Committee on Ways and Means,house_committee,high,metadata,BILLSTATUS-119hr8463
+hr6028-119,HSHA,House Committee on House Administration,house_committee,super_high,metadata,CRPT-119hrpt689
+hr6028-119,crs:congress,Congress,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6028
+hr6028-119,HSGO,House Committee on Oversight and Government Reform,house_committee,high,metadata,BILLSTATUS-119hr6028
+hr6028-119,HSJU,House Committee on the Judiciary,house_committee,high,metadata,BILLSTATUS-119hr6028
+hr1501-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt691
+hr1501-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1501
+hr5929-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt692
+hr5929-119,crs:environmental-protection,Environmental Protection,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5929
+hr4238-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt695
+hr4238-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4238
+hr4238-119,HSBU,House Committee on the Budget,house_committee,high,metadata,BILLSTATUS-119hr4238
+hr9260-119,HSAP,House Committee on Appropriations,house_committee,super_high,metadata,CRPT-119hrpt696
+hr9260-119,crs:economics-and-public-finance,Economics and Public Finance,crs_policy_area,super_high,metadata,BILLSTATUS-119hr9260
+hr9310-119,HSAP,House Committee on Appropriations,house_committee,super_high,metadata,CRPT-119hrpt697
+hr9310-119,crs:economics-and-public-finance,Economics and Public Finance,crs_policy_area,super_high,metadata,BILLSTATUS-119hr9310
+hr8800-119,HSAS,House Committee on Armed Services,house_committee,super_high,metadata,CRPT-119hrpt698
+hr8800-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr8800
+hr8800-119,HSGO,House Committee on Oversight and Government Reform,house_committee,high,metadata,BILLSTATUS-119hr8800
+hr8800-119,HLIG,House Permanent Select Committee on Intelligence,house_committee,high,metadata,BILLSTATUS-119hr8800
+hr8800-119,HSAP,House Committee on Appropriations,house_committee,high,metadata,BILLSTATUS-119hr8800
+hr8800-119,HSVR,House Committee on Veterans' Affairs,house_committee,high,metadata,BILLSTATUS-119hr8800
+hr8800-119,HSWM,House Committee on Ways and Means,house_committee,high,metadata,BILLSTATUS-119hr8800
+hr8800-119,HSSM,House Committee on Small Business,house_committee,high,metadata,BILLSTATUS-119hr8800
+hr8800-119,HSJU,House Committee on the Judiciary,house_committee,high,metadata,BILLSTATUS-119hr8800
+hr8800-119,HSED,House Committee on Education and Workforce,house_committee,high,metadata,BILLSTATUS-119hr8800
+hr8800-119,HSHM,House Committee on Homeland Security,house_committee,high,metadata,BILLSTATUS-119hr8800
+hr8800-119,HSIF,House Committee on Energy and Commerce,house_committee,high,metadata,BILLSTATUS-119hr8800
+hr8800-119,HSII,House Committee on Natural Resources,house_committee,high,metadata,BILLSTATUS-119hr8800
+hr8800-119,HSSY,"House Committee on Science, Space, and Technology",house_committee,high,metadata,BILLSTATUS-119hr8800
+hr8800-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,high,metadata,BILLSTATUS-119hr8800
+hr8800-119,HSBU,House Committee on the Budget,house_committee,high,metadata,BILLSTATUS-119hr8800
+hr1468-119,HSJU,House Committee on the Judiciary,house_committee,super_high,metadata,CRPT-119hrpt699
+hr1468-119,crs:crime-and-law-enforcement,Crime and Law Enforcement,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1468
+hr2675-119,HSJU,House Committee on the Judiciary,house_committee,super_high,metadata,CRPT-119hrpt700
+hr2675-119,crs:law,Law,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2675
+hr425-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt701
+hr425-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr425
+hr941-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt702
+hr941-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr941
+hr8290-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt703
+hr8290-119,crs:international-affairs,International Affairs,crs_policy_area,super_high,metadata,BILLSTATUS-119hr8290
+hr8671-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt704
+hr8671-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr8671
+hr2715-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt705
+hr2715-119,crs:health,Health,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2715
+hr2821-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt706
+hr2821-119,crs:health,Health,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2821
+hr2152-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt708
+hr2152-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2152
+hr2978-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt709
+hr2978-119,crs:crime-and-law-enforcement,Crime and Law Enforcement,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2978
+hr2978-119,HSJU,House Committee on the Judiciary,house_committee,high,metadata,BILLSTATUS-119hr2978
+hr5396-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt710
+hr5396-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5396
+hr8278-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt711
+hr8278-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr8278
+hr8286-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt712
+hr8286-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr8286
+hr4801-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt713
+hr4801-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4801
+hr8884-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt714
+hr8884-119,crs:social-welfare,Social Welfare,crs_policy_area,super_high,metadata,BILLSTATUS-119hr8884
+hr9495-119,HSAP,House Committee on Appropriations,house_committee,super_high,metadata,CRPT-119hrpt715
+hr9495-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr9495
+hr5498-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt716
+hr5498-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5498
+hr7890-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt717
+hr7890-119,crs:education,Education,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7890
+hr2804-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt719
+hr2804-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2804
+hr1493-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt720
+hr1493-119,crs:health,Health,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1493
+hr2001-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt721
+hr2001-119,crs:health,Health,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2001
+hr3491-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt722
+hr3491-119,crs:health,Health,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3491
+hr3747-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt723
+hr3747-119,crs:health,Health,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3747
+hr5160-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt724
+hr5160-119,crs:health,Health,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5160
+hr4348-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt725
+hr4348-119,crs:health,Health,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4348
+hr8209-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt726
+hr8209-119,crs:health,Health,crs_policy_area,super_high,metadata,BILLSTATUS-119hr8209
+hr7661-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt727
+hr7661-119,crs:education,Education,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7661
+hr7894-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt728
+hr7894-119,crs:education,Education,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7894
+hr7895-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt729
+hr7895-119,crs:health,Health,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7895
+hr7893-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt730
+hr7893-119,crs:education,Education,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7893
+hr8481-119,HSJU,House Committee on the Judiciary,house_committee,super_high,metadata,CRPT-119hrpt731
+hr8481-119,crs:crime-and-law-enforcement,Crime and Law Enforcement,crs_policy_area,super_high,metadata,BILLSTATUS-119hr8481
+hjres1-119,HSJU,House Committee on the Judiciary,house_committee,super_high,metadata,CRPT-119hrpt732
+hjres1-119,crs:law,Law,crs_policy_area,super_high,metadata,BILLSTATUS-119hjres1
+hr8205-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt733
+hr8205-119,crs:health,Health,crs_policy_area,super_high,metadata,BILLSTATUS-119hr8205
+hr6238-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt734
+hr6238-119,crs:health,Health,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6238
+hr8897-119,HSHM,House Committee on Homeland Security,house_committee,super_high,metadata,CRPT-119hrpt735
+hr8897-119,crs:transportation-and-public-works,Transportation and Public Works,crs_policy_area,super_high,metadata,BILLSTATUS-119hr8897
+hr7574-119,HSHM,House Committee on Homeland Security,house_committee,super_high,metadata,CRPT-119hrpt736
+hr7574-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7574
+hr8770-119,HSHM,House Committee on Homeland Security,house_committee,super_high,metadata,CRPT-119hrpt737
+hr8770-119,crs:transportation-and-public-works,Transportation and Public Works,crs_policy_area,super_high,metadata,BILLSTATUS-119hr8770
+hr8168-119,HSHM,House Committee on Homeland Security,house_committee,super_high,metadata,CRPT-119hrpt738
+hr8168-119,crs:international-affairs,International Affairs,crs_policy_area,super_high,metadata,BILLSTATUS-119hr8168
+hr9391-119,HSHM,House Committee on Homeland Security,house_committee,super_high,metadata,CRPT-119hrpt739
+hr9391-119,crs:transportation-and-public-works,Transportation and Public Works,crs_policy_area,super_high,metadata,BILLSTATUS-119hr9391
+hr9388-119,HSHM,House Committee on Homeland Security,house_committee,super_high,metadata,CRPT-119hrpt740
+hr9388-119,crs:transportation-and-public-works,Transportation and Public Works,crs_policy_area,super_high,metadata,BILLSTATUS-119hr9388
+hr9328-119,HSHM,House Committee on Homeland Security,house_committee,super_high,metadata,CRPT-119hrpt741
+hr9328-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr9328
+hr8535-119,HSHM,House Committee on Homeland Security,house_committee,super_high,metadata,CRPT-119hrpt742
+hr8535-119,crs:crime-and-law-enforcement,Crime and Law Enforcement,crs_policy_area,super_high,metadata,BILLSTATUS-119hr8535
+hr8874-119,HSHM,House Committee on Homeland Security,house_committee,super_high,metadata,CRPT-119hrpt743
+hr8874-119,crs:emergency-management,Emergency Management,crs_policy_area,super_high,metadata,BILLSTATUS-119hr8874
+hr3106-119,HSHM,House Committee on Homeland Security,house_committee,super_high,metadata,CRPT-119hrpt744
+hr3106-119,crs:emergency-management,Emergency Management,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3106
+hr3535-119,HSHA,House Committee on House Administration,house_committee,super_high,metadata,CRPT-119hrpt745
+hr3535-119,crs:government-operations-and-politics,Government Operations and Politics,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3535
+hr4541-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt746
+hr4541-119,crs:health,Health,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4541
+hr8720-119,HSHA,House Committee on House Administration,house_committee,super_high,metadata,CRPT-119hrpt747
+hr8720-119,crs:government-operations-and-politics,Government Operations and Politics,crs_policy_area,super_high,metadata,BILLSTATUS-119hr8720
+hr8684-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt748
+hr8684-119,crs:health,Health,crs_policy_area,super_high,metadata,BILLSTATUS-119hr8684
+hr9368-119,HSHA,House Committee on House Administration,house_committee,super_high,metadata,CRPT-119hrpt750
+hr9368-119,crs:government-operations-and-politics,Government Operations and Politics,crs_policy_area,super_high,metadata,BILLSTATUS-119hr9368
+hr3029-119,HSSY,"House Committee on Science, Space, and Technology",house_committee,super_high,metadata,CRPT-119hrpt751
+hr3029-119,crs:science-technology-communications,"Science, Technology, Communications",crs_policy_area,super_high,metadata,BILLSTATUS-119hr3029
+hr8790-119,HSSY,"House Committee on Science, Space, and Technology",house_committee,super_high,metadata,CRPT-119hrpt752
+hr8790-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr8790
+hr8790-119,HSII,House Committee on Natural Resources,house_committee,high,metadata,BILLSTATUS-119hr8790
+hr1703-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt753
+hr1703-119,crs:health,Health,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1703
+hr1703-119,HSWM,House Committee on Ways and Means,house_committee,high,metadata,BILLSTATUS-119hr1703
+hconres113-119,HSBU,House Committee on the Budget,house_committee,super_high,metadata,CRPT-119hrpt754
+hconres113-119,crs:economics-and-public-finance,Economics and Public Finance,crs_policy_area,super_high,metadata,BILLSTATUS-119hconres113
+hres1498-119,HSSO,House Committee on Ethics,house_committee,super_high,metadata,CRPT-119hrpt756
+hres1498-119,crs:congress,Congress,crs_policy_area,super_high,metadata,BILLSTATUS-119hres1498
+hr309-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt757
+hr309-119,crs:crime-and-law-enforcement,Crime and Law Enforcement,crs_policy_area,super_high,metadata,BILLSTATUS-119hr309
+hr3276-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt758
+hr3276-119,crs:environmental-protection,Environmental Protection,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3276
+hr8476-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt759
+hr8476-119,crs:education,Education,crs_policy_area,super_high,metadata,BILLSTATUS-119hr8476
+hr8476-119,HSJU,House Committee on the Judiciary,house_committee,high,metadata,BILLSTATUS-119hr8476
+hr3925-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt760
+hr3925-119,crs:native-americans,Native Americans,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3925
+hr2406-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt761
+hr2406-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2406
+hr2827-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt762
+hr2827-119,crs:native-americans,Native Americans,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2827
+hr6893-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt763
+hr6893-119,crs:environmental-protection,Environmental Protection,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6893
+hr7889-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt764
+hr7889-119,crs:water-resources-development,Water Resources Development,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7889
+hr9772-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt765
+hr9772-119,crs:taxation,Taxation,crs_policy_area,super_high,metadata,BILLSTATUS-119hr9772
+hr9436-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt766
+hr9436-119,crs:animals,Animals,crs_policy_area,super_high,metadata,BILLSTATUS-119hr9436
+hr741-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt767
+hr741-119,crs:native-americans,Native Americans,crs_policy_area,super_high,metadata,BILLSTATUS-119hr741
+hr741-119,HSIF,House Committee on Energy and Commerce,house_committee,high,metadata,BILLSTATUS-119hr741
+hr9771-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt768
+hr9771-119,crs:taxation,Taxation,crs_policy_area,super_high,metadata,BILLSTATUS-119hr9771
+hr726-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt769
+hr726-119,crs:native-americans,Native Americans,crs_policy_area,super_high,metadata,BILLSTATUS-119hr726
+hr1693-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt770
+hr1693-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1693
+hr4219-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt771
+hr4219-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4219
+hr5063-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt772
+hr5063-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5063
+hr5576-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt773
+hr5576-119,crs:environmental-protection,Environmental Protection,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5576
+hr6021-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt774
+hr6021-119,crs:native-americans,Native Americans,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6021
+hr7487-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt775
+hr7487-119,crs:water-resources-development,Water Resources Development,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7487
+hr8121-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt776
+hr8121-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr8121
+hr8454-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt777
+hr8454-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr8454
+hr8658-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt778
+hr8658-119,crs:native-americans,Native Americans,crs_policy_area,super_high,metadata,BILLSTATUS-119hr8658
+hr8658-119,HSIF,House Committee on Energy and Commerce,house_committee,high,metadata,BILLSTATUS-119hr8658
+hr9722-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt779
+hr9722-119,crs:taxation,Taxation,crs_policy_area,super_high,metadata,BILLSTATUS-119hr9722
+hr4795-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt780
+hr4795-119,crs:education,Education,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4795
+hr2555-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt781
+hr2555-119,crs:education,Education,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2555
+hr1869-119,HSJU,House Committee on the Judiciary,house_committee,super_high,metadata,CRPT-119hrpt782
+hr1869-119,crs:crime-and-law-enforcement,Crime and Law Enforcement,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1869
+hr7730-119,HSJU,House Committee on the Judiciary,house_committee,super_high,metadata,CRPT-119hrpt783
+hr7730-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7730
+hr625-119,HSJU,House Committee on the Judiciary,house_committee,super_high,metadata,CRPT-119hrpt784
+hr625-119,crs:law,Law,crs_policy_area,super_high,metadata,BILLSTATUS-119hr625
+hr4646-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt786
+hr4646-119,crs:housing-and-community-development,Housing and Community Development,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4646
+hr4646-119,HSGO,House Committee on Oversight and Government Reform,house_committee,high,metadata,BILLSTATUS-119hr4646
+hr1483-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt787
+hr1483-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1483
+hr5402-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt788
+hr5402-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5402
+hr8141-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt789
+hr8141-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr8141
+hr9330-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt790
+hr9330-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr9330
+hr7187-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt791
+hr7187-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7187
+hr9331-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt792
+hr9331-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr9331
+hr1640-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt793
+hr1640-119,crs:housing-and-community-development,Housing and Community Development,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1640
+hr9329-119,HSBA,House Committee on Financial Services,house_committee,super_high,metadata,CRPT-119hrpt794
+hr9329-119,crs:finance-and-financial-sector,Finance and Financial Sector,crs_policy_area,super_high,metadata,BILLSTATUS-119hr9329
+hr9497-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt795
+hr9497-119,crs:water-resources-development,Water Resources Development,crs_policy_area,super_high,metadata,BILLSTATUS-119hr9497
+hr5634-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt796
+hr5634-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5634
+hr9496-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt797
+hr9496-119,crs:taxation,Taxation,crs_policy_area,super_high,metadata,BILLSTATUS-119hr9496
+hr8781-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt798
+hr8781-119,crs:education,Education,crs_policy_area,super_high,metadata,BILLSTATUS-119hr8781
+hr9498-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt799
+hr9498-119,crs:taxation,Taxation,crs_policy_area,super_high,metadata,BILLSTATUS-119hr9498
+hr9203-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt800
+hr9203-119,crs:education,Education,crs_policy_area,super_high,metadata,BILLSTATUS-119hr9203
+hr9501-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt801
+hr9501-119,crs:taxation,Taxation,crs_policy_area,super_high,metadata,BILLSTATUS-119hr9501
+hr5267-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt802
+hr5267-119,crs:labor-and-employment,Labor and Employment,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5267
+hr9191-119,HSJU,House Committee on the Judiciary,house_committee,super_high,metadata,CRPT-119hrpt803
+hr9191-119,crs:government-operations-and-politics,Government Operations and Politics,crs_policy_area,super_high,metadata,BILLSTATUS-119hr9191
+hr7834-119,HSJU,House Committee on the Judiciary,house_committee,super_high,metadata,CRPT-119hrpt804
+hr7834-119,crs:crime-and-law-enforcement,Crime and Law Enforcement,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7834
+hr9098-119,HSJU,House Committee on the Judiciary,house_committee,super_high,metadata,CRPT-119hrpt805
+hr9098-119,crs:crime-and-law-enforcement,Crime and Law Enforcement,crs_policy_area,super_high,metadata,BILLSTATUS-119hr9098
+hr9499-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt806
+hr9499-119,crs:taxation,Taxation,crs_policy_area,super_high,metadata,BILLSTATUS-119hr9499
+hr7972-119,HSWM,House Committee on Ways and Means,house_committee,super_high,metadata,CRPT-119hrpt807
+hr7972-119,crs:taxation,Taxation,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7972
+hr9360-119,HSHA,House Committee on House Administration,house_committee,super_high,metadata,CRPT-119hrpt808
+hr9360-119,crs:government-operations-and-politics,Government Operations and Politics,crs_policy_area,super_high,metadata,BILLSTATUS-119hr9360
+hr9342-119,HSHA,House Committee on House Administration,house_committee,super_high,metadata,CRPT-119hrpt809
+hr9342-119,crs:congress,Congress,crs_policy_area,super_high,metadata,BILLSTATUS-119hr9342
+hr9342-119,HSGO,House Committee on Oversight and Government Reform,house_committee,high,metadata,BILLSTATUS-119hr9342
+hr4931-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt810
+hr4931-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4931
+hr2317-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt811
+hr2317-119,crs:public-lands-and-natural-resources,Public Lands and Natural Resources,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2317
+hr2317-119,HSAG,House Committee on Agriculture,house_committee,high,metadata,BILLSTATUS-119hr2317
+hr9327-119,HSHM,House Committee on Homeland Security,house_committee,super_high,metadata,CRPT-119hrpt812
+hr9327-119,crs:immigration,Immigration,crs_policy_area,super_high,metadata,BILLSTATUS-119hr9327
+hr9394-119,HSHM,House Committee on Homeland Security,house_committee,super_high,metadata,CRPT-119hrpt813
+hr9394-119,crs:emergency-management,Emergency Management,crs_policy_area,super_high,metadata,BILLSTATUS-119hr9394
+hr9340-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt814
+hr9340-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr9340
+hr7436-119,HSHM,House Committee on Homeland Security,house_committee,super_high,metadata,CRPT-119hrpt815
+hr7436-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7436
+hr1266-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt816
+hr1266-119,crs:crime-and-law-enforcement,Crime and Law Enforcement,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1266
+hr1266-119,HSJU,House Committee on the Judiciary,house_committee,high,metadata,BILLSTATUS-119hr1266
+hr2004-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt817
+hr2004-119,crs:health,Health,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2004
+hr9615-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt818
+hr9615-119,crs:environmental-protection,Environmental Protection,crs_policy_area,super_high,metadata,BILLSTATUS-119hr9615
+hr2140-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt819
+hr2140-119,crs:environmental-protection,Environmental Protection,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2140
+hr9617-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt820
+hr9617-119,crs:environmental-protection,Environmental Protection,crs_policy_area,super_high,metadata,BILLSTATUS-119hr9617
+hr9616-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt821
+hr9616-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr9616
+hr9339-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt822
+hr9339-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr9339
+hr9332-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt823
+hr9332-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr9332
+hr6633-119,HSIF,House Committee on Energy and Commerce,house_committee,super_high,metadata,CRPT-119hrpt824
+hr6633-119,crs:energy,Energy,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6633
+hr9228-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt826
+hr9228-119,crs:health,Health,crs_policy_area,super_high,metadata,BILLSTATUS-119hr9228
+hr5109-119,HSHM,House Committee on Homeland Security,house_committee,super_high,metadata,CRPT-119hrpt827
+hr5109-119,crs:transportation-and-public-works,Transportation and Public Works,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5109
+hr9382-119,HSHM,House Committee on Homeland Security,house_committee,super_high,metadata,CRPT-119hrpt828
+hr9382-119,crs:immigration,Immigration,crs_policy_area,super_high,metadata,BILLSTATUS-119hr9382
+hr7443-119,HSHM,House Committee on Homeland Security,house_committee,super_high,metadata,CRPT-119hrpt829
+hr7443-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7443
+hr5517-119,HSHM,House Committee on Homeland Security,house_committee,super_high,metadata,CRPT-119hrpt830
+hr5517-119,crs:immigration,Immigration,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5517
+hr7083-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt832
+hr7083-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7083
+hr5505-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt833
+hr5505-119,crs:education,Education,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5505
+hr8052-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt834
+hr8052-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr8052
+hr5436-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt835
+hr5436-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr5436
+hr4986-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt836
+hr4986-119,crs:education,Education,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4986
+hr2332-119,HSED,House Committee on Education and Workforce,house_committee,super_high,metadata,CRPT-119hrpt837
+hr2332-119,crs:government-operations-and-politics,Government Operations and Politics,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2332
+hr2332-119,HSJU,House Committee on the Judiciary,house_committee,high,metadata,BILLSTATUS-119hr2332
+hr6993-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt838
+hr6993-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6993
+hr2283-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt839
+hr2283-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr2283
+hr6698-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt840
+hr6698-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr6698
+hr7260-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt841
+hr7260-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7260
+hr7683-119,HSVR,House Committee on Veterans' Affairs,house_committee,super_high,metadata,CRPT-119hrpt842
+hr7683-119,crs:armed-forces-and-national-security,Armed Forces and National Security,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7683
+hr9718-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt843
+hr9718-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr9718
+hr10329-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt844
+hr10329-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr10329
+hr10353-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt845
+hr10353-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr10353
+hr10355-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt846
+hr10355-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr10355
+hr10371-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt847
+hr10371-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr10371
+hr10375-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt848
+hr10375-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr10375
+hr4615-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt849
+hr4615-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4615
+hr10352-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt850
+hr10352-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr10352
+hr10238-119,HSSM,House Committee on Small Business,house_committee,super_high,metadata,CRPT-119hrpt851
+hr10238-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr10238
+hr1382-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt852
+hr1382-119,crs:environmental-protection,Environmental Protection,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1382

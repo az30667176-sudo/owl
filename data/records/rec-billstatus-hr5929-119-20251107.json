@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr5929-119-20251107",
+  "content": "<other>: H.R. 5929 (119th Congress): Critical Minerals Supply Chain Resiliency Act of 2026\nSponsor: Rep. Andy Barr\nSponsor: Rep. Andy Barr\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/5929",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/5929",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-11-07",
+    "persons": [
+      "B001282",
+      "B001282"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/5929"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

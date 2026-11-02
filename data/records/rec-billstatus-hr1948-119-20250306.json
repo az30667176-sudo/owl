@@ -1,0 +1,32 @@
+{
+  "id": "rec-billstatus-hr1948-119-20250306",
+  "content": "<other>: H.R. 1948 (119th Congress): To authorize the International Boundary and Water Commission to accept funds for activities relating to wastewater treatment and flood control works, and for other purposes.\nSponsor: Rep. Scott H. Peters\nCosponsor: Rep. Juan Vargas\nCosponsor: Rep. Dan Crenshaw\nCosponsor: Rep. Sara Jacobs\nCosponsor: Rep. Derrick Van Orden\nCosponsor: Rep. Mike Levin\nCosponsor: Rep. Jake Ellzey\nCosponsor: Rep. Veronica Escobar\nCosponsor: Rep. Ryan K. Zinke\nCosponsor: Rep. Joaquin Castro\nSponsor: Rep. Scott H. Peters\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1948",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1948",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-06",
+    "persons": [
+      "P000608",
+      "V000130",
+      "C001120",
+      "J000305",
+      "V000135",
+      "L000593",
+      "E000071",
+      "E000299",
+      "Z000018",
+      "C001091",
+      "P000608"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1948"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

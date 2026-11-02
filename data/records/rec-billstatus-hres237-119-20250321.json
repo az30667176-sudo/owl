@@ -1,0 +1,36 @@
+{
+  "id": "rec-billstatus-hres237-119-20250321",
+  "content": "<other>: H. Res. 237 (119th Congress): Of inquiry requesting the President and directing the Secretary of Education to transmit, respectively, certain documents to the House of Representatives relating to the reduction in force and other downsizing measures at the Department of Education.\nSponsor: Rep. Robert C. \"Bobby\" Scott\nCosponsor: Rep. Joe Courtney\nCosponsor: Rep. Frederica S. Wilson\nCosponsor: Rep. Suzanne Bonamici\nCosponsor: Rep. Mark Takano\nCosponsor: Rep. Alma S. Adams\nCosponsor: Rep. Mark DeSaulnier\nCosponsor: Rep. Donald Norcross\nCosponsor: Rep. Lucy McBath\nCosponsor: Rep. Jahana Hayes\nCosponsor: Rep. Ilhan Omar\nCosponsor: Rep. Haley M. Stevens\nCosponsor: Rep. Greg Casar\nCosponsor: Rep. Summer L. Lee\nCosponsor: Rep. John W. Mannion\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-resolution/237",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-resolution/237",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-21",
+    "persons": [
+      "S000185",
+      "C001069",
+      "W000808",
+      "B001278",
+      "T000472",
+      "A000370",
+      "D000623",
+      "N000188",
+      "M001208",
+      "H001081",
+      "O000173",
+      "S001215",
+      "C001131",
+      "L000602",
+      "M001231"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-resolution/237"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

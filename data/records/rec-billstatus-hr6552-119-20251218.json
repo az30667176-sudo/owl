@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr6552-119-20251218",
+  "content": "<other>: H.R. 6552 (119th Congress): Bank-Fintech Partnership Enhancement Act\nCosponsor: Rep. Jared Moskowitz\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/6552",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/6552",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-12-18",
+    "persons": [
+      "M001217"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/6552"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

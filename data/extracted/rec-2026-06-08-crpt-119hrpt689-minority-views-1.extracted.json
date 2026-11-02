@@ -1,0 +1,42 @@
+{
+  "record_id": "rec-2026-06-08-crpt-119hrpt689-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:30:10.482Z",
+  "accepted": [
+    {
+      "person": "M001206",
+      "issue": "library-of-congress-copyright-office-and-gpo-governance",
+      "date": "2026-06-08",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "Committee Democrats support H.R. 6028, as amended, because it thoughtfully protects Congress's prerogatives, supports the interests of both USCO and LOC, as well as GPO, and preserves the sizeable economic and cultural obligations shared by all four.",
+      "bill": "H.R. 6028",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt689/html/CRPT-119hrpt689.htm",
+      "record_id": "rec-2026-06-08-crpt-119hrpt689-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote explicitly states support for the bill because it preserves congressional appointment and the legislative-branch status of LOC, USCO, and GPO."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "library-of-congress-copyright-office-and-gpo-governance",
+      "name": "Library of Congress, Copyright Office, and GPO Governance",
+      "parent": "hsap-legislative"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 1638,
+    "prompt_tokens": 2869,
+    "total_tokens": 4507,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1448
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

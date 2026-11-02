@@ -1,0 +1,36 @@
+{
+  "record_id": "rec-2026-10-09-crpt-119hrpt842-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:27:00.946Z",
+  "accepted": [
+    {
+      "person": "T000472",
+      "issue": "va-operations-and-oversight",
+      "date": "2026-10-09",
+      "score": -0.8,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Rather than improving accountability, this legislation would concentrate more power in the hands of political appointees, inviting greater political interference in VA's fiscal stewardship at the expense of veterans.",
+      "bill": "H.R. 7683",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt842/html/CRPT-119hrpt842.htm",
+      "record_id": "rec-2026-10-09-crpt-119hrpt842-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote opposes the bill because it would concentrate power in political appointees and increase political interference."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1947,
+    "prompt_tokens": 3681,
+    "total_tokens": 5628,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1816
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

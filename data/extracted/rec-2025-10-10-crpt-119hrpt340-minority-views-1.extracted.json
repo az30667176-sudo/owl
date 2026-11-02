@@ -1,0 +1,36 @@
+{
+  "record_id": "rec-2025-10-10-crpt-119hrpt340-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:29:16.740Z",
+  "accepted": [
+    {
+      "person": "T000472",
+      "issue": "va-technology-modernization",
+      "date": "2025-10-10",
+      "score": -0.7,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "the bill, as drafted, does not necessitate a well-rounded study and could push VA to adopt an unvetted technology that does not align with VA workflows and processes.",
+      "bill": "H.R. 3455",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt340/html/CRPT-119hrpt340.htm",
+      "record_id": "rec-2025-10-10-crpt-119hrpt340-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage opposes the bill as drafted because it could push VA to adopt unvetted blockchain technology."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1679,
+    "prompt_tokens": 3018,
+    "total_tokens": 4697,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1531
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

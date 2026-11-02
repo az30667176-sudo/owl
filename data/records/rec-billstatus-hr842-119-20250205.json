@@ -1,0 +1,33 @@
+{
+  "id": "rec-billstatus-hr842-119-20250205",
+  "content": "<other>: H.R. 842 (119th Congress): Nancy Gardner Sewell Medicare Multi-Cancer Early Detection Screening Coverage Act\nCosponsor: Rep. Carol D. Miller\nCosponsor: Rep. Sylvester Turner\nCosponsor: Rep. August Pfluger\nCosponsor: Rep. Morgan McGarvey\nCosponsor: Rep. Mike Carey\nCosponsor: Rep. Jared Moskowitz\nCosponsor: Rep. Dan Crenshaw\nCosponsor: Rep. Sanford D. Bishop, Jr.\nCosponsor: Rep. Brian K. Fitzpatrick\nCosponsor: Rep. Steve Cohen\nCosponsor: Rep. Troy Balderson\nCosponsor: Rep. Robert J. Wittman\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/842",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/842",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-05",
+    "persons": [
+      "M001205",
+      "T000489",
+      "P000048",
+      "M001220",
+      "C001126",
+      "M001217",
+      "C001120",
+      "B000490",
+      "F000466",
+      "C001068",
+      "B001306",
+      "W000804"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/842"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

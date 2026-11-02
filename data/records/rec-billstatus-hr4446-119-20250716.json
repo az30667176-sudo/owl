@@ -1,0 +1,25 @@
+{
+  "id": "rec-billstatus-hr4446-119-20250716",
+  "content": "<other>: H.R. 4446 (119th Congress): FAST VETS Act\nSponsor: Rep. Maxine Dexter\nCosponsor: Rep. Mark B. Messmer\nCosponsor: Rep. Morgan McGarvey\nCosponsor: Rep. Derrick Van Orden\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/4446",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/4446",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-07-16",
+    "persons": [
+      "D000635",
+      "M001233",
+      "M001220",
+      "V000135"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/4446"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

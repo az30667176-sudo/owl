@@ -1,0 +1,25 @@
+{
+  "id": "rec-billstatus-hr1181-119-20250226",
+  "content": "<other>: H.R. 1181 (119th Congress): Protecting Privacy in Purchases Act\nCosponsor: Rep. Ashley Hinson\nCosponsor: Rep. Tim Walberg\nCosponsor: Rep. Doug LaMalfa\nCosponsor: Rep. David Rouzer\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1181",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1181",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-26",
+    "persons": [
+      "H001091",
+      "W000798",
+      "L000578",
+      "R000603"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1181"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

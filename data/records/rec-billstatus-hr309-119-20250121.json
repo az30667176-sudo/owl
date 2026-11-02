@@ -1,0 +1,27 @@
+{
+  "id": "rec-billstatus-hr309-119-20250121",
+  "content": "<other>: H.R. 309 (119th Congress): National Law Enforcement Officers Remembrance, Support, and Community Outreach Act\nCosponsor: Rep. Michael Guest\nCosponsor: Rep. Barry Loudermilk\nCosponsor: Rep. Monica De La Cruz\nCosponsor: Rep. Greg Landsman\nCosponsor: Rep. Claudia Tenney\nCosponsor: Rep. Scott H. Peters\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/309",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/309",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-01-21",
+    "persons": [
+      "G000591",
+      "L000583",
+      "D000594",
+      "L000601",
+      "T000478",
+      "P000608"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/309"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

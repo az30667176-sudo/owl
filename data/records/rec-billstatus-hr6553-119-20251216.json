@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr6553-119-20251216",
+  "content": "<other>: H.R. 6553 (119th Congress): TIER Act of 2025\nCosponsor: Rep. Pete Sessions\nCosponsor: Rep. Zachary Nunn\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/6553",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/6553",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-12-16",
+    "persons": [
+      "S000250",
+      "N000193"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/6553"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

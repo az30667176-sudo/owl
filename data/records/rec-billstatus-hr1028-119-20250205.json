@@ -1,0 +1,51 @@
+{
+  "id": "rec-billstatus-hr1028-119-20250205",
+  "content": "<other>: H.R. 1028 (119th Congress): Protection of Women in Olympic and Amateur Sports Act of 2026\nSponsor: Rep. W. Gregory Steube\nCosponsor: Rep. Andrew S. Clyde\nCosponsor: Rep. Doug LaMalfa\nCosponsor: Rep. Mike Haridopolos\nCosponsor: Rep. Nancy Mace\nCosponsor: Rep. Tim Burchett\nCosponsor: Rep. Claudia Tenney\nCosponsor: Rep. Daniel Webster\nCosponsor: Rep. Troy E. Nehls\nCosponsor: Rep. Burgess Owens\nCosponsor: Rep. Mary E. Miller\nCosponsor: Rep. Harriet M. Hageman\nCosponsor: Rep. James R. Baird\nCosponsor: Rep. Chuck Edwards\nCosponsor: Rep. Monica De La Cruz\nCosponsor: Rep. Randy K. Weber, Sr.\nCosponsor: Rep. Ryan K. Zinke\nCosponsor: Rep. Russ Fulcher\nCosponsor: Rep. Brian Babin\nCosponsor: Rep. Troy Downing\nCosponsor: Rep. Robert B. Aderholt\nCosponsor: Rep. David Kustoff\nCosponsor: Rep. Vern Buchanan\nCosponsor: Rep. Andy Biggs\nCosponsor: Rep. Mark B. Messmer\nCosponsor: Rep. Mike Bost\nCosponsor: Rep. Derrick Van Orden\nCosponsor: Rep. John R. Carter\nCosponsor: Rep. William R. Timmons IV\nCosponsor: Rep. Paul A. Gosar\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1028",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1028",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-05",
+    "persons": [
+      "S001214",
+      "C001116",
+      "L000578",
+      "H001099",
+      "M000194",
+      "B001309",
+      "T000478",
+      "W000806",
+      "N000026",
+      "O000086",
+      "M001211",
+      "H001096",
+      "B001307",
+      "E000246",
+      "D000594",
+      "W000814",
+      "Z000018",
+      "F000469",
+      "B001291",
+      "D000634",
+      "A000055",
+      "K000392",
+      "B001260",
+      "B001302",
+      "M001233",
+      "B001295",
+      "V000135",
+      "C001051",
+      "T000480",
+      "G000565"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1028"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

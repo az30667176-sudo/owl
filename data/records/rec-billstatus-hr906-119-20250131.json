@@ -1,0 +1,25 @@
+{
+  "id": "rec-billstatus-hr906-119-20250131",
+  "content": "<other>: H.R. 906 (119th Congress): Foreign Adversary Communications Transparency Act\nSponsor: Rep. Robert J. Wittman\nCosponsor: Rep. Thomas H. Kean, Jr.\nCosponsor: Rep. Ro Khanna\nCosponsor: Rep. Kathy Castor\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/906",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/906",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-01-31",
+    "persons": [
+      "W000804",
+      "K000398",
+      "K000389",
+      "C001066"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/906"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

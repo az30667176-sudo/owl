@@ -1,0 +1,27 @@
+{
+  "id": "rec-billstatus-hr275-119-20250109",
+  "content": "<other>: H.R. 275 (119th Congress): Special Interest Alien Reporting Act of 2025\nSponsor: Rep. Marjorie Taylor Greene\nCosponsor: Rep. Mark E. Green\nCosponsor: Rep. Clay Higgins\nCosponsor: Rep. Elijah Crane\nCosponsor: Rep. Michael Guest\nCosponsor: Rep. Josh Brecheen\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/275",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/275",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-01-09",
+    "persons": [
+      "G000596",
+      "G000590",
+      "H001077",
+      "C001132",
+      "G000591",
+      "B001317"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/275"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

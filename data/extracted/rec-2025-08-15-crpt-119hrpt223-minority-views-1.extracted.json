@@ -1,0 +1,36 @@
+{
+  "record_id": "rec-2025-08-15-crpt-119hrpt223-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:29:49.104Z",
+  "accepted": [
+    {
+      "person": "V000081",
+      "issue": "small-business-cyber-and-fraud",
+      "date": "2025-08-15",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The SBA IT Modernization Report Act will address the underlying issues that GAO highlighted in its report by requiring the SBA to put in place policies, procedures and best practices for developing and deploying IT modernization projects.",
+      "bill": "SBA IT Modernization Report Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt223/html/CRPT-119hrpt223.htm",
+      "record_id": "rec-2025-08-15-crpt-119hrpt223-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage endorses the Act as requiring SBA to adopt best practices for IT modernization to address risk, cost, and security concerns."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1738,
+    "prompt_tokens": 3001,
+    "total_tokens": 4739,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1578
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

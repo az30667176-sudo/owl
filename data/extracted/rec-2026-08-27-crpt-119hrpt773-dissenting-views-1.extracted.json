@@ -1,0 +1,72 @@
+{
+  "record_id": "rec-2026-08-27-crpt-119hrpt773-dissenting-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:29:43.224Z",
+  "accepted": [
+    {
+      "person": "H001068",
+      "issue": "environmental-review-nepa",
+      "date": "2026-08-27",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "this bill would waive all NEPA review for certain exploration activities. It is far more appropriate for federal agencies to develop CEs rather than for members of Congress to create legislative exemptions to NEPA.",
+      "bill": "H.R. 5576",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt773/html/CRPT-119hrpt773.htm",
+      "record_id": "rec-2026-08-27-crpt-119hrpt773-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Huffman opposes legislatively waiving NEPA review for geothermal exploration and favors agency-developed categorical exclusions instead."
+    },
+    {
+      "person": "H001068",
+      "issue": "environmental-review-nepa",
+      "date": "2026-08-27",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Eliminating lease-sale-level NEPA analysis would short-circuit the way PEISs work.",
+      "bill": "H.R. 5576",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt773/html/CRPT-119hrpt773.htm",
+      "record_id": "rec-2026-08-27-crpt-119hrpt773-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Huffman supports retaining lease-sale-level NEPA analysis to supplement programmatic reviews."
+    },
+    {
+      "person": "H001068",
+      "issue": "geothermal-energy-leasing",
+      "date": "2026-08-27",
+      "score": 0.7,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "while Committee Democrats support efforts to identify priority areas for geothermal leasing and to conduct thorough programmatic environmental reviews",
+      "bill": "H.R. 5576",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt773/html/CRPT-119hrpt773.htm",
+      "record_id": "rec-2026-08-27-crpt-119hrpt773-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Huffman expresses support for identifying priority geothermal leasing areas with thorough programmatic review."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "geothermal-energy-leasing",
+      "name": "Geothermal Energy Leasing",
+      "parent": "hsii-energy"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 2360,
+    "prompt_tokens": 2971,
+    "total_tokens": 5331,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2038
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

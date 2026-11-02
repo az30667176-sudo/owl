@@ -1,0 +1,40 @@
+{
+  "id": "rec-billstatus-hres127-119-20250212",
+  "content": "<other>: H. Res. 127 (119th Congress): Of inquiry requesting the President and directing the Secretary of the Treasury to transmit, respectively, certain documents to the House of Representatives relating to the Department of Government Efficiency's access to the Treasury payment systems and confidential taxpayer information.\nSponsor: Rep. Lloyd Doggett\nCosponsor: Rep. Richard E. Neal\nCosponsor: Rep. Mike Thompson\nCosponsor: Rep. John B. Larson\nCosponsor: Rep. Danny K. Davis\nCosponsor: Rep. Linda T. Sánchez\nCosponsor: Rep. Terri A. Sewell\nCosponsor: Rep. Suzan K. DelBene\nCosponsor: Rep. Judy Chu\nCosponsor: Rep. Gwen Moore\nCosponsor: Rep. Brendan F. Boyle\nCosponsor: Rep. Donald S. Beyer, Jr.\nCosponsor: Rep. Dwight Evans\nCosponsor: Rep. Bradley Scott Schneider\nCosponsor: Rep. Jimmy Panetta\nCosponsor: Rep. Jimmy Gomez\nCosponsor: Rep. Steven Horsford\nCosponsor: Rep. Stacey E. Plaskett\nCosponsor: Rep. Thomas R. Suozzi\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-resolution/127",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-resolution/127",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-12",
+    "persons": [
+      "D000399",
+      "N000015",
+      "T000460",
+      "L000557",
+      "D000096",
+      "S001156",
+      "S001185",
+      "D000617",
+      "C001080",
+      "M001160",
+      "B001296",
+      "B001292",
+      "E000296",
+      "S001190",
+      "P000613",
+      "G000585",
+      "H001066",
+      "P000610",
+      "S001201"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-resolution/127"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

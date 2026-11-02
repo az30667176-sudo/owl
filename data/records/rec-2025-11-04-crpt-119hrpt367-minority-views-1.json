@@ -1,0 +1,26 @@
+{
+  "id": "rec-2025-11-04-crpt-119hrpt367-minority-views-1",
+  "content": "<Rep. Maxine Waters, Rep. Nydia M. Velázquez, Rep. Al Green, Rep. Joyce Beatty, Rep. Rashida Tlaib, Rep. Sylvia R. Garcia>: H.R. 527 amends the Economic Growth, Regulatory Relief, and Consumer Protection Act of 2018 (EGRRCPA) passed by Congress during Trump's first term to lower the statutory range for the community bank leverage ratio (CBLR) from 8-10% to 6-8% (note that a lower ratio permits higher leverage). The bill would also increase the asset threshold for banks eligible for the CBLR from a current cap of $10 billion in total assets to $15 billion, and includes a study examining further changes to increase participation. Trump's regulators previously set the CBLR at 9%, not 8%, and the ratio could decline further if Trump's regulators exempt instruments like Treasury securities from the calculation. Most community banks (83%) have over 9% CBLR, but are not utilizing the CBLR framework for other reasons.\nIn response to concerns that small banks faced unnecessary burdensome compliance requirements related to capital, Congress created the CBLR in Section 201 of the EGRRCPA.\\1\\ A bank with less than $10 billion in assets that meets certain risk-profile criteria has the option to meet a CBLR requirement instead of the existing, more complex risk-weighted capital requirements. Because most small banks currently hold enough capital to meet the CBLR option, this was thought to be a way to allow many small banks to simplify their capital-related requirements.\\2\\\n\\1\\P.L. 115-174.\n\\2\\CRS, Community Bank Leverage Ratio (CBLR): Background and Analysis of Bank Data (May 11, 2020).\nIn his first term, Trump's regulators set CBLR at 9% (Congress temporarily reduced CBLR to 8% during the pandemic before returning to 9%) and estimates have shown that roughly 83% of community banks exceeded a 9% leverage ratio. In 2023, roughly 1,700 community banks were utilizing CBLR, though another 2,000 banks also exceeded a 9% leverage ratio and were either disqualified for other reasons (e.g. off-balance sheet exposures) or chose not to opt-in.\\3\\ The bill's study could help identify what, if any, barriers exist, and what modifications could help well-capitalized community banks take advantage of the CBLR framework. However, that may be an area more prudent to focus on, instead of also reducing the CBLR to a range of 6-8% given that most community banks already have more than 9%.\n\\3\\S&P Global, Over 1,700 banks adopt community bank leverage ratio reporting standard in Q3 (Nov. 2023).\nMost community banks historically have been better capitalized compared to their larger peers, in part because at a smaller size, they don't have the benefits of scale or business line diversification. By significantly reducing the CBLR without study and analysis (something stakeholders demanded when Biden's regulators proposed bank capital reforms), this change could unnecessarily undermine the safety and soundness of thousands of community banks.\\4\\\n\\4\\See Jeremy Kress and Matthew Turk, Too Many to Fail: Against Community Bank Deregulation (2020); and Testimony of Graham Steele before FI hearing, Regulatory Overreach: The Price Tag on American Prosperity (Apr. 29, 2025).\nThere may be merit to increasing CBLR's asset threshold to a higher level to cover more banks since it has been 7 years since Congress first set the threshold. However, the bill increases the threshold from $10 billion to $15 billion, apparently utilizing the nominal GDP growth of roughly 48% between May 2018 when Congress first set the threshold and today. It may be more prudent to utilize inflation-adjusted numbers; for example, real GDP increased by roughly 17.5% over the same time period, implying a more modest threshold increase to $11.75 billion.\\5\\\n\\5\\BEA, Gross Domestic Product (accessed Sep. 14, 2025).\nAdvocacy groups like Americans for Financial Reform and Public Citizen oppose H.R. 5276.\nFor these reasons, we oppose H.R. 5276.\nSincerely,\nMaxine Waters,\nRanking Member.\nNydia M. Velazquez,\nAl Green,\nJoyce Beatty,\nRashida Tlaib,\nSylvia R. Garcia,\nMembers of Congress.",
+  "source": {
+    "url_link": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt367/html/CRPT-119hrpt367.htm",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-11-04",
+    "persons": [
+      "W000187",
+      "V000081",
+      "G000553",
+      "B001281",
+      "T000481",
+      "G000587"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/5276",
+      "https://www.congress.gov/bill/119th-congress/house-bill/527",
+      "https://www.congress.gov/bill/119th-congress/senate-bill/2155"
+    ]
+  }
+}

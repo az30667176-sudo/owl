@@ -1,0 +1,57 @@
+{
+  "record_id": "rec-2026-04-09-crpt-119hrpt601-dissenting-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:27:25.329Z",
+  "accepted": [
+    {
+      "person": "R000606",
+      "issue": "bail-reform-and-nonprofit-bail-funds",
+      "date": "2026-04-09",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "These organizations try to address the clear injustice that results when wealthy people walk free while poor people are held in jail pending trial for no reason other than their inability to pay the bail amount set by the judge.",
+      "bill": "H.R. 6260",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt601/html/CRPT-119hrpt601.htm",
+      "record_id": "rec-2026-04-09-crpt-119hrpt601-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote expresses support for nonprofit bail funds that help poor defendants obtain pretrial release."
+    },
+    {
+      "person": "R000606",
+      "issue": "law-enforcement-support",
+      "date": "2026-04-09",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "There is no question that we must address the root causes of violent crime and invest in proven solutions, such as community violence intervention and drug treatment, and support law enforcement with funding and other resources, as the Trump Administration has refused to do.",
+      "bill": "H.R. 6260",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt601/html/CRPT-119hrpt601.htm",
+      "record_id": "rec-2026-04-09-crpt-119hrpt601-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote calls for investing in proven solutions and supporting law enforcement with funding and resources."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "bail-reform-and-nonprofit-bail-funds",
+      "name": "Bail Reform and Nonprofit Bail Funds",
+      "parent": "hsju-crime"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 1947,
+    "prompt_tokens": 3591,
+    "total_tokens": 5538,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1688
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

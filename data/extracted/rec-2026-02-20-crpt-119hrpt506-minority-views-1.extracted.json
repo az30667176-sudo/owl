@@ -1,0 +1,102 @@
+{
+  "record_id": "rec-2026-02-20-crpt-119hrpt506-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:25:11.649Z",
+  "accepted": [
+    {
+      "person": "S000185",
+      "issue": "worker-classification-and-misclassification",
+      "date": "2026-02-20",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Instead of addressing any actual problem for workers and their families, the bill would advance a misguided agenda to distract public attention from poverty-level compensation and likely misclassification by unscrupulous companies.",
+      "bill": "H.R. 1320, the Modern Worker Security Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt506/html/CRPT-119hrpt506.htm",
+      "record_id": "rec-2026-02-20-crpt-119hrpt506-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage characterizes the bill as misguided and as distracting from low pay and misclassification."
+    },
+    {
+      "person": "B001278",
+      "issue": "worker-classification-and-misclassification",
+      "date": "2026-02-20",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Instead of addressing any actual problem for workers and their families, the bill would advance a misguided agenda to distract public attention from poverty-level compensation and likely misclassification by unscrupulous companies.",
+      "bill": "H.R. 1320, the Modern Worker Security Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt506/html/CRPT-119hrpt506.htm",
+      "record_id": "rec-2026-02-20-crpt-119hrpt506-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage characterizes the bill as misguided and as distracting from low pay and misclassification."
+    },
+    {
+      "person": "D000623",
+      "issue": "worker-classification-and-misclassification",
+      "date": "2026-02-20",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Instead of addressing any actual problem for workers and their families, the bill would advance a misguided agenda to distract public attention from poverty-level compensation and likely misclassification by unscrupulous companies.",
+      "bill": "H.R. 1320, the Modern Worker Security Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt506/html/CRPT-119hrpt506.htm",
+      "record_id": "rec-2026-02-20-crpt-119hrpt506-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage characterizes the bill as misguided and as distracting from low pay and misclassification."
+    },
+    {
+      "person": "H001081",
+      "issue": "worker-classification-and-misclassification",
+      "date": "2026-02-20",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Instead of addressing any actual problem for workers and their families, the bill would advance a misguided agenda to distract public attention from poverty-level compensation and likely misclassification by unscrupulous companies.",
+      "bill": "H.R. 1320, the Modern Worker Security Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt506/html/CRPT-119hrpt506.htm",
+      "record_id": "rec-2026-02-20-crpt-119hrpt506-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage characterizes the bill as misguided and as distracting from low pay and misclassification."
+    },
+    {
+      "person": "L000602",
+      "issue": "worker-classification-and-misclassification",
+      "date": "2026-02-20",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Instead of addressing any actual problem for workers and their families, the bill would advance a misguided agenda to distract public attention from poverty-level compensation and likely misclassification by unscrupulous companies.",
+      "bill": "H.R. 1320, the Modern Worker Security Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt506/html/CRPT-119hrpt506.htm",
+      "record_id": "rec-2026-02-20-crpt-119hrpt506-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage characterizes the bill as misguided and as distracting from low pay and misclassification."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "worker-classification-and-misclassification",
+      "name": "Worker Classification and Misclassification",
+      "parent": "hsed-protections"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 2177,
+    "prompt_tokens": 5079,
+    "total_tokens": 7256,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1509
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

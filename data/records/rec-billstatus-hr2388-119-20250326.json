@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr2388-119-20250326",
+  "content": "<other>: H.R. 2388 (119th Congress): Lower Elwha Klallam Tribe Project Lands Restoration Act\nSponsor: Rep. Emily Randall\nSponsor: Rep. Emily Randall\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2388",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2388",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-26",
+    "persons": [
+      "R000621",
+      "R000621"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2388"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

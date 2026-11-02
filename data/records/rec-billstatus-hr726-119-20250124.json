@@ -1,0 +1,24 @@
+{
+  "id": "rec-billstatus-hr726-119-20250124",
+  "content": "<other>: H.R. 726 (119th Congress): Crow Tribe Water Rights Settlement Amendments Act of 2025\nSponsor: Rep. Troy Downing\nCosponsor: Rep. Ryan K. Zinke\nSponsor: Rep. Troy Downing\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/726",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/726",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-01-24",
+    "persons": [
+      "D000634",
+      "Z000018",
+      "D000634"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/726"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

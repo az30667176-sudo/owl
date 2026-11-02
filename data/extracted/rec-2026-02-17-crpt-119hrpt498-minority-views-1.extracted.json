@@ -1,0 +1,36 @@
+{
+  "record_id": "rec-2026-02-17-crpt-119hrpt498-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:30:12.614Z",
+  "accepted": [
+    {
+      "person": "V000081",
+      "issue": "small-business-programs",
+      "date": "2026-02-17",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Statutorily authorizing the ONAA at the SBA will increase access to federal programs and services that support Native American entrepreneurs across the country and help Native Americans launch and grow small businesses, and in turn, promote economic development in their tribal communities.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt498/html/CRPT-119hrpt498.htm",
+      "record_id": "rec-2026-02-17-crpt-119hrpt498-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage endorses statutory authorization of ONAA as expanding support for Native entrepreneurs and tribal economic development."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 826,
+    "prompt_tokens": 2876,
+    "total_tokens": 3702,
+    "completion_tokens_details": {
+      "reasoning_tokens": 694
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

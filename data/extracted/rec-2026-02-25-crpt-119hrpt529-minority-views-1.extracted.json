@@ -1,0 +1,126 @@
+{
+  "record_id": "rec-2026-02-25-crpt-119hrpt529-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:29:38.010Z",
+  "accepted": [
+    {
+      "person": "W000187",
+      "issue": "financial-stability",
+      "date": "2026-02-25",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "global coordination in standard setting helps ensure financial companies don't migrate to jurisdictions with weaker standards, raising transmission risk concerns to the U.S. to the extent these entities engage in, or are otherwise connected to, cross-border financial activities.",
+      "bill": "H.R. 6550",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt529/html/CRPT-119hrpt529.htm",
+      "record_id": "rec-2026-02-25-crpt-119hrpt529-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage endorses international standard-setting as preventing a race to weaker standards and reducing transmission risk to the U.S."
+    },
+    {
+      "person": "G000553",
+      "issue": "financial-stability",
+      "date": "2026-02-25",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "global coordination in standard setting helps ensure financial companies don't migrate to jurisdictions with weaker standards, raising transmission risk concerns to the U.S. to the extent these entities engage in, or are otherwise connected to, cross-border financial activities.",
+      "bill": "H.R. 6550",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt529/html/CRPT-119hrpt529.htm",
+      "record_id": "rec-2026-02-25-crpt-119hrpt529-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage endorses international standard-setting as preventing a race to weaker standards and reducing transmission risk to the U.S."
+    },
+    {
+      "person": "F000454",
+      "issue": "financial-stability",
+      "date": "2026-02-25",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "global coordination in standard setting helps ensure financial companies don't migrate to jurisdictions with weaker standards, raising transmission risk concerns to the U.S. to the extent these entities engage in, or are otherwise connected to, cross-border financial activities.",
+      "bill": "H.R. 6550",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt529/html/CRPT-119hrpt529.htm",
+      "record_id": "rec-2026-02-25-crpt-119hrpt529-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage endorses international standard-setting as preventing a race to weaker standards and reducing transmission risk to the U.S."
+    },
+    {
+      "person": "B001281",
+      "issue": "financial-stability",
+      "date": "2026-02-25",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "global coordination in standard setting helps ensure financial companies don't migrate to jurisdictions with weaker standards, raising transmission risk concerns to the U.S. to the extent these entities engage in, or are otherwise connected to, cross-border financial activities.",
+      "bill": "H.R. 6550",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt529/html/CRPT-119hrpt529.htm",
+      "record_id": "rec-2026-02-25-crpt-119hrpt529-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage endorses international standard-setting as preventing a race to weaker standards and reducing transmission risk to the U.S."
+    },
+    {
+      "person": "T000481",
+      "issue": "financial-stability",
+      "date": "2026-02-25",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "global coordination in standard setting helps ensure financial companies don't migrate to jurisdictions with weaker standards, raising transmission risk concerns to the U.S. to the extent these entities engage in, or are otherwise connected to, cross-border financial activities.",
+      "bill": "H.R. 6550",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt529/html/CRPT-119hrpt529.htm",
+      "record_id": "rec-2026-02-25-crpt-119hrpt529-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage endorses international standard-setting as preventing a race to weaker standards and reducing transmission risk to the U.S."
+    },
+    {
+      "person": "G000587",
+      "issue": "financial-stability",
+      "date": "2026-02-25",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "global coordination in standard setting helps ensure financial companies don't migrate to jurisdictions with weaker standards, raising transmission risk concerns to the U.S. to the extent these entities engage in, or are otherwise connected to, cross-border financial activities.",
+      "bill": "H.R. 6550",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt529/html/CRPT-119hrpt529.htm",
+      "record_id": "rec-2026-02-25-crpt-119hrpt529-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage endorses international standard-setting as preventing a race to weaker standards and reducing transmission risk to the U.S."
+    },
+    {
+      "person": "W000788",
+      "issue": "financial-stability",
+      "date": "2026-02-25",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "global coordination in standard setting helps ensure financial companies don't migrate to jurisdictions with weaker standards, raising transmission risk concerns to the U.S. to the extent these entities engage in, or are otherwise connected to, cross-border financial activities.",
+      "bill": "H.R. 6550",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt529/html/CRPT-119hrpt529.htm",
+      "record_id": "rec-2026-02-25-crpt-119hrpt529-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage endorses international standard-setting as preventing a race to weaker standards and reducing transmission risk to the U.S."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 3936,
+    "prompt_tokens": 3185,
+    "total_tokens": 7121,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3069
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

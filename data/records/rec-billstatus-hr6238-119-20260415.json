@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr6238-119-20260415",
+  "content": "<other>: H.R. 6238 (119th Congress): NIH IMPROVE Act\nCosponsor: Rep. Eleanor Holmes Norton\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/6238",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/6238",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-04-15",
+    "persons": [
+      "N000147"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/6238"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

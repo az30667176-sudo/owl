@@ -1,0 +1,30 @@
+{
+  "id": "rec-billstatus-hr3633-119-20250529",
+  "content": "<other>: H.R. 3633 (119th Congress): Digital Asset Market Clarity Act\nSponsor: Rep. J. French Hill\nCosponsor: Rep. Glenn Thompson\nCosponsor: Rep. Angie Craig\nCosponsor: Rep. Tom Emmer\nCosponsor: Rep. Dusty Johnson\nCosponsor: Rep. Donald G. Davis\nCosponsor: Rep. Bryan Steil\nCosponsor: Rep. Ritchie Torres\nCosponsor: Rep. Warren Davidson\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/3633",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-05-29",
+    "persons": [
+      "H001072",
+      "T000467",
+      "C001119",
+      "E000294",
+      "J000301",
+      "D000230",
+      "S001213",
+      "T000486",
+      "D000626"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/3633"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "rec-billstatus-hr1676-119-20250227",
+  "content": "<other>: H.R. 1676 (119th Congress): Make SWAPs Efficient Act of 2025\nSponsor: Rep. Byron Donalds\nCosponsor: Rep. Jared Moskowitz\nSponsor: Rep. Byron Donalds\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1676",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1676",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-27",
+    "persons": [
+      "D000032",
+      "M001217",
+      "D000032"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1676"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

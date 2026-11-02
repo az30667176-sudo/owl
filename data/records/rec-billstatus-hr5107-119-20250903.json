@@ -1,0 +1,51 @@
+{
+  "id": "rec-billstatus-hr5107-119-20250903",
+  "content": "<other>: H.R. 5107 (119th Congress): Common-Sense Law Enforcement and Accountability Now in DC Act of 2025\nSponsor: Rep. Andrew S. Clyde\nCosponsor: Rep. Clay Higgins\nCosponsor: Rep. Pete Stauber\nCosponsor: Rep. Earl L. \"Buddy\" Carter\nCosponsor: Rep. Anna Paulina Luna\nCosponsor: Rep. Elijah Crane\nCosponsor: Rep. Lauren Boebert\nCosponsor: Rep. Chip Roy\nCosponsor: Rep. Mary E. Miller\nCosponsor: Rep. Sheri Biggs\nCosponsor: Rep. Diana Harshbarger\nCosponsor: Rep. Byron Donalds\nCosponsor: Rep. Brandon Gill\nCosponsor: Rep. Mark E. Amodei\nCosponsor: Rep. Troy E. Nehls\nCosponsor: Rep. Beth Van Duyne\nCosponsor: Rep. Tim Burchett\nCosponsor: Rep. Warren Davidson\nCosponsor: Rep. Aaron Bean\nCosponsor: Rep. Barry Moore\nCosponsor: Rep. Josh Brecheen\nCosponsor: Rep. Eric Burlison\nCosponsor: Rep. Paul A. Gosar\nCosponsor: Rep. Andy Biggs\nCosponsor: Rep. Keith Self\nCosponsor: Rep. Nicholas J. Begich III\nCosponsor: Rep. Andrew Ogles\nCosponsor: Rep. Henry Cuellar\nCosponsor: Rep. Jodey C. Arrington\nSponsor: Rep. Andrew S. Clyde\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/5107",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/5107",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-09-03",
+    "persons": [
+      "C001116",
+      "H001077",
+      "S001212",
+      "C001103",
+      "L000596",
+      "C001132",
+      "B000825",
+      "R000614",
+      "M001211",
+      "B001325",
+      "H001086",
+      "D000032",
+      "G000603",
+      "A000369",
+      "N000026",
+      "V000134",
+      "B001309",
+      "D000626",
+      "B001314",
+      "M001212",
+      "B001317",
+      "B001316",
+      "G000565",
+      "B001302",
+      "S001224",
+      "B001323",
+      "O000175",
+      "C001063",
+      "A000375",
+      "C001116"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/5107"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

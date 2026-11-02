@@ -1,0 +1,36 @@
+{
+  "record_id": "rec-2025-10-28-crpt-119hrpt351-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:30:25.961Z",
+  "accepted": [
+    {
+      "person": "G000598",
+      "issue": "environmental-review-nepa",
+      "date": "2025-10-28",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "We must maintain federal agencies' ability to thoroughly review permit applications to ensure that all proper measures are taken to protect our lands, air, and water under the rule of law.",
+      "bill": "H.R. 689, the Full Responsibility and Expedited Enforcement Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt351/html/CRPT-119hrpt351.htm",
+      "record_id": "rec-2025-10-28-crpt-119hrpt351-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote calls for maintaining thorough federal review of permit applications to protect lands, air, and water, indicating support for environmental review."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1481,
+    "prompt_tokens": 2752,
+    "total_tokens": 4233,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1324
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

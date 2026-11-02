@@ -1,0 +1,36 @@
+{
+  "record_id": "rec-2025-06-05-crpt-119hrpt143-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:26:21.202Z",
+  "accepted": [
+    {
+      "person": "T000472",
+      "issue": "gun-policy",
+      "date": "2025-06-05",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats continue to oppose this legislation. We will recommend the broader House reject the measure should it come to the floor of the full House for consideration.",
+      "bill": "H.R. 1041, the Veterans 2nd Amendment Protection Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt143/html/CRPT-119hrpt143.htm",
+      "record_id": "rec-2025-06-05-crpt-119hrpt143-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Takano opposes H.R. 1041 which would restrict VA reporting to NICS, favoring retention of existing firearm background-check restrictions."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1683,
+    "prompt_tokens": 4034,
+    "total_tokens": 5717,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1529
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "rec-billstatus-hr979-119-20250305",
+  "content": "<other>: H.R. 979 (119th Congress): AM Radio for Every Vehicle Act of 2025\nCosponsor: Rep. Greg Landsman\nCosponsor: Rep. Harold Rogers\nCosponsor: Rep. Gabe Vasquez\nCosponsor: Rep. Jimmy Gomez\nCosponsor: Rep. Dina Titus\nCosponsor: Rep. Steven Horsford\nCosponsor: Rep. Rashida Tlaib\nCosponsor: Rep. Christopher R. Deluzio\nCosponsor: Rep. Michelle Fischbach\nCosponsor: Rep. Mark B. Messmer\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/979",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/979",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-05",
+    "persons": [
+      "L000601",
+      "R000395",
+      "V000136",
+      "G000585",
+      "T000468",
+      "H001066",
+      "T000481",
+      "D000530",
+      "F000470",
+      "M001233"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/979"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

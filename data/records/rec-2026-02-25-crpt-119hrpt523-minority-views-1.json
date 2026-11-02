@@ -1,0 +1,25 @@
+{
+  "id": "rec-2026-02-25-crpt-119hrpt523-minority-views-1",
+  "content": "<Rep. Maxine Waters, Rep. Al Green, Rep. Joyce Beatty, Rep. Rashida Tlaib, Rep. Sylvia R. Garcia>: This bill would provide investors and our capital markets less information about fixed income products traded in the over-the-counter (OTC) markets, and unduly ties the hands of the SEC to address potential investor harms related to fixed income securities.\nAs a practical matter, H.R. 3959 excludes fixed income securities from SEC Rule 15c2-11. Rule 15c2-11 requires certain disclosures in the over-the-counter (OTC) markets and imposes requirements on broker-dealers who publish quotations in OTC markets. In 2021, the SEC expressed its view that Rule 15c2-11 applies to both equity and fixed income (i.e., debt) securities, including debt securities issued in reliance on Rule 144A. The financial community had previously understood this rule to only apply to equity securities.\nAfter pushback from industry, the SEC put forth a ``no-action'' letter that provided relief from complying with its new interpretation, subject to 7 specific criteria. The SEC staff's November 22, 2024, no-action letter is preferable to a blanket statutory exemption because it is calibrated and conditional rather than categorical. The bill would instead make Rule 15c2-11 inapplicable to all fixed-income quotations across the board, regardless of issuer type, information availability, or product complexity. By contrast, the no-action framework grants relief only where a broker-dealer can reasonably determine that the security or issuer fits specific criteria such as exchange-listed or current Exchange Act reporting issuers, 12g3-2(b) issuers, cases where current and publicly available information exists, and certain regulated banks and credit unions, ABS issuers, and foreign sovereign or guaranteed debt. This creates an investor-protection ``screen'' and helps ensure that relief is anchored to existing disclosure and information channels, including the Rule 144A information framework and relevant Corp Fin no-action positions. The no-action approach can be revised or withdrawn as markets evolve (the letter itself withdraws the prior 2022 letter), which is a key advantage over a statutory carveout that would be difficult to revisit quickly if quotation activity migrates into more opaque corners of the market, where manipulation risks are higher. Finally, the no action letter explicitly reinforces that relief from 15c2-11 does not diminish broker-dealers' obligations under the antifraud and antimanipulation provisions of the federal securities laws. The bill instead exempts, without conditions, all fixed income securities and other financial instruments that could be converted into fixed income securities.\nFor these reasons, we oppose H.R. 3959.\nSincerely,\nMaxine Waters,\nRanking Member.\nAl Green,\nJoyce Beatty,\nRashida Tlaib,\nSylvia R. Garcia,\nMembers of Congress.",
+  "source": {
+    "url_link": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt523/html/CRPT-119hrpt523.htm",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-02-25",
+    "persons": [
+      "W000187",
+      "G000553",
+      "B001281",
+      "T000481",
+      "G000587"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/3959",
+      "https://www.congress.gov/bill/119th-congress/senate-bill/3676",
+      "https://www.congress.gov/bill/119th-congress/house-bill/7092"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr5169-119-20250916",
+  "content": "<other>: H.R. 5169 (119th Congress): Retire through Ownership Act\nCosponsor: Rep. Chuck Edwards\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/5169",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/5169",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-09-16",
+    "persons": [
+      "E000246"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/5169"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

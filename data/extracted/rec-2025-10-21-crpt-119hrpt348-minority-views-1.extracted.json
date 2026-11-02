@@ -1,0 +1,51 @@
+{
+  "record_id": "rec-2025-10-21-crpt-119hrpt348-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:27:48.935Z",
+  "accepted": [
+    {
+      "person": "T000472",
+      "issue": "va-technology-modernization",
+      "date": "2025-10-21",
+      "score": -0.8,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "First, the policy to procure a new IT system to detect fraud is duplicative. Such functionality already exists at the Department of Veterans Affairs (VA) within the Program Integrity Tool (PIT), though its use has been paused to resolve issues with data integrity and accuracy of its claims assessments.",
+      "bill": "H.R. 3483",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt348/html/CRPT-119hrpt348.htm",
+      "record_id": "rec-2025-10-21-crpt-119hrpt348-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage opposes mandating a new fraud-detection IT system as duplicative of the existing Program Integrity Tool."
+    },
+    {
+      "person": "T000472",
+      "issue": "va-operations-and-oversight",
+      "date": "2025-10-21",
+      "score": -0.8,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Democratic Members fundamentally object to the raiding of the franchise fund, and through this amendment, pushed for the Majority to undertake the appropriate avenues for funding new IT projects through the traditional appropriations process.",
+      "bill": "H.R. 3483",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt348/html/CRPT-119hrpt348.htm",
+      "record_id": "rec-2025-10-21-crpt-119hrpt348-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage opposes using the VA franchise fund to pay for the IT system and favors traditional appropriations."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2272,
+    "prompt_tokens": 3439,
+    "total_tokens": 5711,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1963
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

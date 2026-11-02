@@ -1,0 +1,51 @@
+{
+  "record_id": "rec-2025-11-25-crpt-119hrpt385-dissenting-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:28:00.815Z",
+  "accepted": [
+    {
+      "person": "H001068",
+      "issue": "wildlife-and-fisheries",
+      "date": "2025-11-25",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "would undermine science-based wildlife conservation by prohibiting federal land managers from regulating lead ammunition and tackle--known pollutants that have devastated wildlife populations across the United States.",
+      "bill": "H.R. 556, the ``Protecting Access for Hunters and Anglers Act of 2025,''",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt385/html/CRPT-119hrpt385-pt1.htm",
+      "record_id": "rec-2025-11-25-crpt-119hrpt385-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote opposes prohibiting regulation of lead ammunition and tackle because they harm wildlife, indicating strong support for wildlife conservation."
+    },
+    {
+      "person": "H001068",
+      "issue": "public-lands-and-parks",
+      "date": "2025-11-25",
+      "score": 0.85,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Rather than supporting evidence-based land management, H.R. 556 would strip federal agencies of their fundamental authority to regulate pollutants on lands under their stewardship.",
+      "bill": "H.R. 556, the ``Protecting Access for Hunters and Anglers Act of 2025,''",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt385/html/CRPT-119hrpt385-pt1.htm",
+      "record_id": "rec-2025-11-25-crpt-119hrpt385-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote opposes removing federal agencies' authority to regulate pollutants on federal lands, indicating support for science-based public lands stewardship."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1312,
+    "prompt_tokens": 3335,
+    "total_tokens": 4647,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1037
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

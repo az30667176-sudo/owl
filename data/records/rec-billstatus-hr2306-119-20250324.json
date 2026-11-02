@@ -1,0 +1,28 @@
+{
+  "id": "rec-billstatus-hr2306-119-20250324",
+  "content": "<other>: H.R. 2306 (119th Congress): Adams Memorial-Great American Heroes Act\nSponsor: Rep. John R. Moolenaar\nCosponsor: Rep. Gerald E. Connolly\nCosponsor: Rep. Richard McCormick\nCosponsor: Rep. H. Morgan Griffith\nCosponsor: Rep. Stephen F. Lynch\nCosponsor: Rep. Seth Moulton\nSponsor: Rep. John R. Moolenaar\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2306",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2306",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-24",
+    "persons": [
+      "M001194",
+      "C001078",
+      "M001218",
+      "G000568",
+      "L000562",
+      "M001196",
+      "M001194"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2306"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

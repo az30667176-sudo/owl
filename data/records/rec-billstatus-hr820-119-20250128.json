@@ -1,0 +1,36 @@
+{
+  "id": "rec-billstatus-hr820-119-20250128",
+  "content": "<other>: H.R. 820 (119th Congress): Bottles and Breastfeeding Equipment Screening Enhancement Act\nSponsor: Rep. Eric Swalwell\nCosponsor: Rep. Maria Elvira Salazar\nCosponsor: Rep. Brittany Pettersen\nCosponsor: Rep. Anna Paulina Luna\nCosponsor: Rep. André Carson\nCosponsor: Rep. Bonnie Watson Coleman\nCosponsor: Rep. Brian K. Fitzpatrick\nCosponsor: Rep. Andrew R. Garbarino\nCosponsor: Rep. Raúl M. Grijalva\nCosponsor: Rep. Jennifer L. McClellan\nCosponsor: Rep. Timothy M. Kennedy\nCosponsor: Rep. LaMonica McIver\nCosponsor: Rep. Eleanor Holmes Norton\nCosponsor: Rep. Shri Thanedar\nCosponsor: Rep. Rashida Tlaib\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/820",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/820",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-01-28",
+    "persons": [
+      "S001193",
+      "S000168",
+      "P000620",
+      "L000596",
+      "C001072",
+      "W000822",
+      "F000466",
+      "G000597",
+      "G000551",
+      "M001227",
+      "K000402",
+      "M001229",
+      "N000147",
+      "T000488",
+      "T000481"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/820"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

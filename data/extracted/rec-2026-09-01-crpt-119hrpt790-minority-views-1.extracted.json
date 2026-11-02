@@ -1,0 +1,126 @@
+{
+  "record_id": "rec-2026-09-01-crpt-119hrpt790-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:27:37.912Z",
+  "accepted": [
+    {
+      "person": "W000187",
+      "issue": "consumer-protection",
+      "date": "2026-09-01",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "H.R. 9330, the Earned Wage Access Consumer Protection Act establishes a disclosure framework for so called ``Earned Wage Access'' advances but does not appropriately include consumer protections to protect the users of such products from abuse, such as any caps on the associated costs.",
+      "bill": "H.R. 9330, the Earned Wage Access Consumer Protection Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt790/html/CRPT-119hrpt790.htm",
+      "record_id": "rec-2026-09-01-crpt-119hrpt790-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers criticize the bill for failing to include adequate consumer protections such as caps on costs."
+    },
+    {
+      "person": "S000344",
+      "issue": "consumer-protection",
+      "date": "2026-09-01",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "H.R. 9330, the Earned Wage Access Consumer Protection Act establishes a disclosure framework for so called ``Earned Wage Access'' advances but does not appropriately include consumer protections to protect the users of such products from abuse, such as any caps on the associated costs.",
+      "bill": "H.R. 9330, the Earned Wage Access Consumer Protection Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt790/html/CRPT-119hrpt790.htm",
+      "record_id": "rec-2026-09-01-crpt-119hrpt790-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers criticize the bill for failing to include adequate consumer protections such as caps on costs."
+    },
+    {
+      "person": "L000562",
+      "issue": "consumer-protection",
+      "date": "2026-09-01",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "H.R. 9330, the Earned Wage Access Consumer Protection Act establishes a disclosure framework for so called ``Earned Wage Access'' advances but does not appropriately include consumer protections to protect the users of such products from abuse, such as any caps on the associated costs.",
+      "bill": "H.R. 9330, the Earned Wage Access Consumer Protection Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt790/html/CRPT-119hrpt790.htm",
+      "record_id": "rec-2026-09-01-crpt-119hrpt790-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers criticize the bill for failing to include adequate consumer protections such as caps on costs."
+    },
+    {
+      "person": "F000454",
+      "issue": "consumer-protection",
+      "date": "2026-09-01",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "H.R. 9330, the Earned Wage Access Consumer Protection Act establishes a disclosure framework for so called ``Earned Wage Access'' advances but does not appropriately include consumer protections to protect the users of such products from abuse, such as any caps on the associated costs.",
+      "bill": "H.R. 9330, the Earned Wage Access Consumer Protection Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt790/html/CRPT-119hrpt790.htm",
+      "record_id": "rec-2026-09-01-crpt-119hrpt790-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers criticize the bill for failing to include adequate consumer protections such as caps on costs."
+    },
+    {
+      "person": "B001281",
+      "issue": "consumer-protection",
+      "date": "2026-09-01",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "H.R. 9330, the Earned Wage Access Consumer Protection Act establishes a disclosure framework for so called ``Earned Wage Access'' advances but does not appropriately include consumer protections to protect the users of such products from abuse, such as any caps on the associated costs.",
+      "bill": "H.R. 9330, the Earned Wage Access Consumer Protection Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt790/html/CRPT-119hrpt790.htm",
+      "record_id": "rec-2026-09-01-crpt-119hrpt790-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers criticize the bill for failing to include adequate consumer protections such as caps on costs."
+    },
+    {
+      "person": "T000481",
+      "issue": "consumer-protection",
+      "date": "2026-09-01",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "H.R. 9330, the Earned Wage Access Consumer Protection Act establishes a disclosure framework for so called ``Earned Wage Access'' advances but does not appropriately include consumer protections to protect the users of such products from abuse, such as any caps on the associated costs.",
+      "bill": "H.R. 9330, the Earned Wage Access Consumer Protection Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt790/html/CRPT-119hrpt790.htm",
+      "record_id": "rec-2026-09-01-crpt-119hrpt790-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers criticize the bill for failing to include adequate consumer protections such as caps on costs."
+    },
+    {
+      "person": "G000587",
+      "issue": "consumer-protection",
+      "date": "2026-09-01",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "H.R. 9330, the Earned Wage Access Consumer Protection Act establishes a disclosure framework for so called ``Earned Wage Access'' advances but does not appropriately include consumer protections to protect the users of such products from abuse, such as any caps on the associated costs.",
+      "bill": "H.R. 9330, the Earned Wage Access Consumer Protection Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt790/html/CRPT-119hrpt790.htm",
+      "record_id": "rec-2026-09-01-crpt-119hrpt790-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signers criticize the bill for failing to include adequate consumer protections such as caps on costs."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2280,
+    "prompt_tokens": 3666,
+    "total_tokens": 5946,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1315
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

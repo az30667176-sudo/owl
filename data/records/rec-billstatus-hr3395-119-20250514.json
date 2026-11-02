@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr3395-119-20250514",
+  "content": "<other>: H.R. 3395 (119th Congress): Middle Market IPO Cost Act\nSponsor: Rep. James A. Himes\nSponsor: Rep. James A. Himes\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/3395",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/3395",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-05-14",
+    "persons": [
+      "H001047",
+      "H001047"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/3395"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

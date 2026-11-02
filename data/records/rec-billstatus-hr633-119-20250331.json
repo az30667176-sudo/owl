@@ -1,0 +1,25 @@
+{
+  "id": "rec-billstatus-hr633-119-20250331",
+  "content": "<other>: H.R. 633 (119th Congress): TAKE IT DOWN Act\nCosponsor: Rep. Robert P. Bresnahan, Jr.\nCosponsor: Rep. Pat Harrigan\nCosponsor: Rep. Nick LaLota\nCosponsor: Rep. Russ Fulcher\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/633",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/633",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-31",
+    "persons": [
+      "B001327",
+      "H001101",
+      "L000598",
+      "F000469"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/633"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

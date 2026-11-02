@@ -1,0 +1,25 @@
+{
+  "id": "rec-billstatus-hr6550-119-20251210",
+  "content": "<other>: H.R. 6550 (119th Congress): American FIRST Act of 2025\nSponsor: Rep. Barry Loudermilk\nCosponsor: Rep. Andy Barr\nCosponsor: Rep. Mike Flood\nSponsor: Rep. Barry Loudermilk\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/6550",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/6550",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-12-10",
+    "persons": [
+      "L000583",
+      "B001282",
+      "F000474",
+      "L000583"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/6550"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

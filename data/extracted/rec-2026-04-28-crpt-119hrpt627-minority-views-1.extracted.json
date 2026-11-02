@@ -1,0 +1,36 @@
+{
+  "record_id": "rec-2026-04-28-crpt-119hrpt627-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:28:20.027Z",
+  "accepted": [
+    {
+      "person": "P000034",
+      "issue": "environmental-regulation",
+      "date": "2026-04-28",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "We oppose H.R. 6373, the ``Air Permitting Improvements to Protect National Security Act of 2025,'' which allows the President to exempt certain polluting facilities from Clean Air Act (CAA) requirements, under the undefined guise of a ``national security interest.''",
+      "bill": "H.R. 6373, the ``Air Permitting Improvements to Protect National Security Act of 2025,''",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt627/html/CRPT-119hrpt627.htm",
+      "record_id": "rec-2026-04-28-crpt-119hrpt627-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Opposition to Clean Air Act exemptions indicates support for maintaining strong environmental regulation."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1233,
+    "prompt_tokens": 3219,
+    "total_tokens": 4452,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1074
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

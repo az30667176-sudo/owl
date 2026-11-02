@@ -1,0 +1,36 @@
+{
+  "record_id": "rec-2026-01-27-crpt-119hrpt467-dissenting-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:28:35.823Z",
+  "accepted": [
+    {
+      "person": "R000606",
+      "issue": "immigration-enforcement",
+      "date": "2026-01-27",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "low",
+      "llm_confidence": "high",
+      "quote": "I oppose this legislation, and I urge my colleagues to do the same.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt467/html/CRPT-119hrpt467.htm",
+      "record_id": "rec-2026-01-27-crpt-119hrpt467-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislator explicitly states opposition to the bill that would make fraud offenses deportable without a conviction."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1787,
+    "prompt_tokens": 3280,
+    "total_tokens": 5067,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1672
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

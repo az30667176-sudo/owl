@@ -1,0 +1,26 @@
+{
+  "id": "rec-billstatus-hr3484-119-20250519",
+  "content": "<other>: H.R. 3484 (119th Congress): Business Owners Protection Act of 2025\nSponsor: Rep. Andy Barr\nCosponsor: Rep. Tom Emmer\nCosponsor: Rep. Bruce Westerman\nCosponsor: Rep. Ashley Hinson\nSponsor: Rep. Andy Barr\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/3484",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/3484",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-05-19",
+    "persons": [
+      "B001282",
+      "E000294",
+      "W000821",
+      "H001091",
+      "B001282"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/3484"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

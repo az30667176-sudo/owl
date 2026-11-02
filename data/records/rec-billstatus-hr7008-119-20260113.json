@@ -1,0 +1,33 @@
+{
+  "id": "rec-billstatus-hr7008-119-20260113",
+  "content": "<other>: H.R. 7008 (119th Congress): Stop Insider Trading Act\nCosponsor: Rep. Nicholas J. Begich III\nCosponsor: Rep. Elijah Crane\nCosponsor: Rep. Darin LaHood\nCosponsor: Rep. Mike Rogers\nCosponsor: Rep. Claudia Tenney\nCosponsor: Rep. Brian J. Mast\nCosponsor: Rep. Paul A. Gosar\nCosponsor: Rep. Jake Ellzey\nCosponsor: Rep. Pat Fallon\nCosponsor: Rep. Nicholas A. Langworthy\nCosponsor: Rep. Troy Downing\nCosponsor: Rep. Daniel Webster\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/7008",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/7008",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-01-13",
+    "persons": [
+      "B001323",
+      "C001132",
+      "L000585",
+      "R000575",
+      "T000478",
+      "M001199",
+      "G000565",
+      "E000071",
+      "F000246",
+      "L000600",
+      "D000634",
+      "W000806"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/7008"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

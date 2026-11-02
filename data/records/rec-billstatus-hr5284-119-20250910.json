@@ -1,0 +1,25 @@
+{
+  "id": "rec-billstatus-hr5284-119-20250910",
+  "content": "<other>: H.R. 5284 (119th Congress): Claiming Age Clarity Act\nSponsor: Rep. Lloyd Smucker\nCosponsor: Rep. Donald S. Beyer, Jr.\nCosponsor: Rep. Aaron Bean\nCosponsor: Rep. Thomas R. Suozzi\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/5284",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/5284",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-09-10",
+    "persons": [
+      "S001199",
+      "B001292",
+      "B001314",
+      "S001201"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/5284"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

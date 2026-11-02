@@ -1,0 +1,26 @@
+{
+  "id": "rec-billstatus-hr1713-119-20250304",
+  "content": "<other>: H.R. 1713 (119th Congress): Agricultural Risk Review Act of 2025\nCosponsor: Rep. Jill N. Tokuda\nCosponsor: Rep. Andy Barr\nCosponsor: Rep. Zachary Nunn\nCosponsor: Rep. David Rouzer\nCosponsor: Rep. Monica De La Cruz\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1713",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1713",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-04",
+    "persons": [
+      "T000487",
+      "B001282",
+      "N000193",
+      "R000603",
+      "D000594"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1713"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

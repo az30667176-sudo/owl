@@ -1,0 +1,27 @@
+{
+  "id": "rec-billstatus-hr831-119-20250131",
+  "content": "<other>: H.R. 831 (119th Congress): Lower Colorado River Multi-Species Conservation Program Amendment Act of 2025\nSponsor: Rep. Ken Calvert\nCosponsor: Rep. Susie Lee\nCosponsor: Rep. Dina Titus\nCosponsor: Rep. Steven Horsford\nCosponsor: Rep. Greg Stanton\nSponsor: Rep. Ken Calvert\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/831",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/831",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-01-31",
+    "persons": [
+      "C000059",
+      "L000590",
+      "T000468",
+      "H001066",
+      "S001211",
+      "C000059"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/831"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "record_id": "rec-2026-10-01-crpt-119hrpt838-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:26:23.843Z",
+  "accepted": [
+    {
+      "person": "T000472",
+      "issue": "veterans-health-care",
+      "date": "2026-10-01",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "We strongly oppose this legislation because, if sufficient funds are not appropriated, it would siphon funds away from existing VA mental health treatment and research programs, by requiring VA to use existing funds appropriated for post-traumatic stress disorder (PTSD) research and general mental health services to fund these grant programs.",
+      "bill": "H.R. 6993",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt838/html/CRPT-119hrpt838.htm",
+      "record_id": "rec-2026-10-01-crpt-119hrpt838-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Takano opposes the bill because it would divert existing PTSD and mental health funds to the new grant programs."
+    },
+    {
+      "person": "T000472",
+      "issue": "va-operations-and-oversight",
+      "date": "2026-10-01",
+      "score": -0.8,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Further, the bill creates an inappropriate structure to administer one of the grant programs, by requiring VA to contract with a third-party entity to perform the inherently governmental responsibilities of allocating and overseeing the expenditure of grant funds.",
+      "bill": "H.R. 6993",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt838/html/CRPT-119hrpt838.htm",
+      "record_id": "rec-2026-10-01-crpt-119hrpt838-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Takano opposes requiring VA to use a third-party entity to allocate and oversee grant funds."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 3209,
+    "prompt_tokens": 3980,
+    "total_tokens": 7189,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2895
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

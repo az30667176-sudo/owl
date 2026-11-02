@@ -1,0 +1,19 @@
+{
+  "id": "rec-2026-06-03-crpt-119hrpt681-minority-views-1",
+  "content": "<Rep. Nydia M. Velázquez>: Artificial intelligence (AI) is technology that enables computers and machines to perform sophisticated tasks that model human reasoning and decision making, and it has the potential to revolutionize every aspect of our lives. Policy stakeholders have expressed interest in promoting government AI adoption to improve efficiency and enhance public services, with an eye to generative AI (GenAI) tools such as OpenAI's ChatGPT and Anthropic's Claude.\nHowever, like with consumer and business AI use, government AI use poses significant risks. First, as a result of the data and content used in AI training and fine-tuning, tools could make biased and discriminatory decisions, or steal intellectual property and content from unknowing creators. Second, errors in AI outputs could mislead entrepreneurs and direct them to break laws and regulations. Third, AI-generated deepfakes could be used for disinformation, fraud, and scams. Fourth, cybersecurity vulnerabilities and other safety issues in AI tools could render them open to adversarial attacks. Lastly, additional risks could emerge as AI evolves and gains added capabilities.\nThe operational, reputational, and legal harm caused by flaws in AI tools imprudently deployed by government agencies, like the U.S. Small Business Administration (SBA), can be steep, hurting the small businesses they serve. For instance, under Eric Adams's mayoralty, the City of New York deployed the first-of-its-kind MyCity chatbot, meant to answer questions about operating small businesses, City small business services, and regulatory compliance.\\1\\ But a subsequent press expose determined the chatbot was consistently encouraging users to break laws and regulations, and the current Mayor closed it as part of a broader cost-cutting effort, calling it ``unusable.''\\2\\\n\\1\\Transcript: Mayor Adams Releases First-of-Its-Kind Plan for Responsible Artificial Intelligence Use in NYC Government, City of N.Y. (Oct. 16, 2023), https://www.nyc.gov/office-of-the-mayor/news/782-23/ transcript-mayor-adams-releases-first-of-its-kind-plan-responsible-artificial-intelligence-use; Ethan Stark-Miller, Mayor Adams Rolls Out AI Action Plan, `Chatbot' to Assist Small Business Owners, AMNY (Oct. 16, 2023), https://www.amny.com/politics/mayor-adams-rolls-out-ai-action-plan-chatbot-to-assist-small-business-owners.\n\\2\\Colin Lecher & Katie Honan, Mamdani Targets `Unusable' AI Chatbot for Termination, The City (Jan. 30, 2026), https:// www.thecity.nyc/2026/01/30/mamdani-unusable-ai-chatbot-budget.\nShortly after the MyCity chatbot's launch, I led the now- Vice Ranking Member and 6 other Committee Democrats in writing the White House Office of Management and Budget (OMB) and U.S. Department of Commerce requesting they incorporate various commonsense considerations in their upcoming guidance on federal agencies' AI use.\\3\\\n\\3\\Letter from 8 Members of Congress to Shalanda Young, Dir., White House Off. of Mgmt. & Budget, & Gina Raimondo, Sec'y, U.S. Dep't of Com. (Dec. 13, 2023), https://democrats-smallbusiness.house.gov/ uploadedfiles/231213_sbc_ds_sb_ai_chatbot_letter_closed.pdf.\nNydia M. Velazquez,\nRanking Member.",
+  "source": {
+    "url_link": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt681/html/CRPT-119hrpt681.htm",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-06-03",
+    "persons": [
+      "V000081"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/8881"
+    ]
+  }
+}

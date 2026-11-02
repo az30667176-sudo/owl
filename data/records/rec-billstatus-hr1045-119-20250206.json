@@ -1,0 +1,26 @@
+{
+  "id": "rec-billstatus-hr1045-119-20250206",
+  "content": "<other>: H.R. 1045 (119th Congress): Utah Wildfire Research Institute Act of 2025\nSponsor: Rep. Mike Kennedy\nCosponsor: Rep. Burgess Owens\nCosponsor: Rep. Blake D. Moore\nCosponsor: Rep. Celeste Maloy\nSponsor: Rep. Mike Kennedy\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1045",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1045",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-06",
+    "persons": [
+      "K000403",
+      "O000086",
+      "M001213",
+      "M001228",
+      "K000403"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1045"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

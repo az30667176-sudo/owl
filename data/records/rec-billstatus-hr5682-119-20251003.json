@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr5682-119-20251003",
+  "content": "<other>: H.R. 5682 (119th Congress): To take certain land in the State of California into trust for the benefit of the Pechanga Band of Indians, and for other purposes.\nSponsor: Rep. Darrell Issa\nSponsor: Rep. Darrell Issa\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/5682",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/5682",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-10-03",
+    "persons": [
+      "I000056",
+      "I000056"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/5682"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

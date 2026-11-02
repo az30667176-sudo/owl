@@ -1,0 +1,51 @@
+{
+  "record_id": "rec-2026-06-29-crpt-119hrpt716-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:29:41.991Z",
+  "accepted": [
+    {
+      "person": "V000081",
+      "issue": "small-business-programs",
+      "date": "2026-06-29",
+      "score": -0.7,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "By directing SBA to provide information only on ICHRAs, without requiring information on the ACA Marketplace, creates a significant gap in the guidance available to small businesses.",
+      "bill": "H.R. 5498",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt716/html/CRPT-119hrpt716.htm",
+      "record_id": "rec-2026-06-29-crpt-119hrpt716-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote criticizes the bill's ICHRA-only SBA information mandate as creating a gap in guidance for small businesses."
+    },
+    {
+      "person": "V000081",
+      "issue": "health-programs-and-research",
+      "date": "2026-06-29",
+      "score": -0.8,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "ICHRAs will also make the marketplace risk pool sicker and increase premiums.",
+      "bill": "H.R. 5498",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt716/html/CRPT-119hrpt716.htm",
+      "record_id": "rec-2026-06-29-crpt-119hrpt716-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote directly opposes ICHRAs on the grounds they worsen the marketplace risk pool and raise premiums."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1782,
+    "prompt_tokens": 2979,
+    "total_tokens": 4761,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1523
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

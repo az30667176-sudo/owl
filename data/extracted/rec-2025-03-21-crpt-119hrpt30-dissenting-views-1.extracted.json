@@ -1,0 +1,36 @@
+{
+  "record_id": "rec-2025-03-21-crpt-119hrpt30-dissenting-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:26:08.919Z",
+  "accepted": [
+    {
+      "person": "R000606",
+      "issue": "immigration-enforcement",
+      "date": "2025-03-21",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "H.R. 875 is an overreaching and unnecessarily broad piece of legislation that would lead to absurd consequences and deportation for people who pose no threat to our country",
+      "bill": "H.R. 875",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt30/html/CRPT-119hrpt30.htm",
+      "record_id": "rec-2025-03-21-crpt-119hrpt30-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Raskin opposes expanding deportability to a single DUI offense as overbroad and harmful to legal immigrants."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1525,
+    "prompt_tokens": 4256,
+    "total_tokens": 5781,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1380
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

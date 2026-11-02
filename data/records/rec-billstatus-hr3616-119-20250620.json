@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr3616-119-20250620",
+  "content": "<other>: H.R. 3616 (119th Congress): Reliable Power Act\nCosponsor: Rep. Carol D. Miller\nCosponsor: Rep. Diana Harshbarger\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/3616",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/3616",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-06-20",
+    "persons": [
+      "M001205",
+      "H001086"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/3616"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

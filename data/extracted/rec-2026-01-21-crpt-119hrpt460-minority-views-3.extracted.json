@@ -1,0 +1,96 @@
+{
+  "record_id": "rec-2026-01-21-crpt-119hrpt460-minority-views-3",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:47:44.899Z",
+  "accepted": [
+    {
+      "person": "S000185",
+      "issue": "higher-education-and-student-aid",
+      "date": "2026-01-21",
+      "score": 0.7,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats generally support the idea of creating a standardized financial aid award letter.",
+      "bill": "H.R. 6502",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt460/html/CRPT-119hrpt460.htm",
+      "record_id": "rec-2026-01-21-crpt-119hrpt460-minority-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote expresses general support for standardized financial aid award letters."
+    },
+    {
+      "person": "W000808",
+      "issue": "higher-education-and-student-aid",
+      "date": "2026-01-21",
+      "score": 0.7,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats generally support the idea of creating a standardized financial aid award letter.",
+      "bill": "H.R. 6502",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt460/html/CRPT-119hrpt460.htm",
+      "record_id": "rec-2026-01-21-crpt-119hrpt460-minority-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote expresses general support for standardized financial aid award letters."
+    },
+    {
+      "person": "B001278",
+      "issue": "higher-education-and-student-aid",
+      "date": "2026-01-21",
+      "score": 0.7,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats generally support the idea of creating a standardized financial aid award letter.",
+      "bill": "H.R. 6502",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt460/html/CRPT-119hrpt460.htm",
+      "record_id": "rec-2026-01-21-crpt-119hrpt460-minority-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote expresses general support for standardized financial aid award letters."
+    },
+    {
+      "person": "D000623",
+      "issue": "higher-education-and-student-aid",
+      "date": "2026-01-21",
+      "score": 0.7,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats generally support the idea of creating a standardized financial aid award letter.",
+      "bill": "H.R. 6502",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt460/html/CRPT-119hrpt460.htm",
+      "record_id": "rec-2026-01-21-crpt-119hrpt460-minority-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote expresses general support for standardized financial aid award letters."
+    },
+    {
+      "person": "H001081",
+      "issue": "higher-education-and-student-aid",
+      "date": "2026-01-21",
+      "score": 0.7,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats generally support the idea of creating a standardized financial aid award letter.",
+      "bill": "H.R. 6502",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt460/html/CRPT-119hrpt460.htm",
+      "record_id": "rec-2026-01-21-crpt-119hrpt460-minority-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote expresses general support for standardized financial aid award letters."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1764,
+    "prompt_tokens": 2611,
+    "total_tokens": 4375,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1321
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

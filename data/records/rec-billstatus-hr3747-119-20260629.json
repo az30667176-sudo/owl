@@ -1,0 +1,36 @@
+{
+  "id": "rec-billstatus-hr3747-119-20260629",
+  "content": "<other>: H.R. 3747 (119th Congress): Accelerating Access to Dementia and Alzheimer’s Provider Training Act\nCosponsor: Rep. Sanford D. Bishop, Jr.\nCosponsor: Rep. Pablo José Hernández\nCosponsor: Rep. Emanuel Cleaver\nCosponsor: Rep. James P. McGovern\nCosponsor: Rep. Betty McCollum\nCosponsor: Rep. Deborah K. Ross\nCosponsor: Rep. Gwen Moore\nCosponsor: Rep. Eric Sorensen\nCosponsor: Rep. Janelle S. Bynum\nCosponsor: Rep. Steve Cohen\nCosponsor: Rep. Daniel S. Goldman\nCosponsor: Rep. Mike Quigley\nCosponsor: Rep. Ted Lieu\nCosponsor: Rep. Gus M. Bilirakis\nCosponsor: Rep. Neal P. Dunn\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/3747",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/3747",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-06-29",
+    "persons": [
+      "B000490",
+      "H001103",
+      "C001061",
+      "M000312",
+      "M001143",
+      "R000305",
+      "M001160",
+      "S001225",
+      "B001326",
+      "C001068",
+      "G000599",
+      "Q000023",
+      "L000582",
+      "B001257",
+      "D000628"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/3747"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr9391-119-20260623",
+  "content": "<other>: H.R. 9391 (119th Congress): Reimbursable Screening Services Program Extension Act of 2026\nSponsor: Rep. Andrew R. Garbarino\nCosponsor: Rep. Nellie Pou\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/9391",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/9391",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-06-23",
+    "persons": [
+      "G000597",
+      "P000621"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/9391"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

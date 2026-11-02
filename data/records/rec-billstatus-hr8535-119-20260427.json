@@ -1,0 +1,25 @@
+{
+  "id": "rec-billstatus-hr8535-119-20260427",
+  "content": "<other>: H.R. 8535 (119th Congress): Measuring Illicit Fentanyl Trafficking Act\nSponsor: Rep. James R. Walkinshaw\nCosponsor: Rep. Michael T. McCaul\nCosponsor: Rep. J. Luis Correa\nCosponsor: Rep. Michael Guest\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/8535",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/8535",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-04-27",
+    "persons": [
+      "W000831",
+      "M001157",
+      "C001110",
+      "G000591"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/8535"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

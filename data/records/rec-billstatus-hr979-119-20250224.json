@@ -1,0 +1,32 @@
+{
+  "id": "rec-billstatus-hr979-119-20250224",
+  "content": "<other>: H.R. 979 (119th Congress): AM Radio for Every Vehicle Act of 2025\nCosponsor: Rep. Joaquin Castro\nCosponsor: Rep. Joyce Beatty\nCosponsor: Rep. Nanette Diaz Barragán\nCosponsor: Rep. Jennifer L. McClellan\nCosponsor: Rep. Becca Balint\nCosponsor: Rep. Laura Gillen\nCosponsor: Rep. Teresa Leger Fernandez\nCosponsor: Rep. Adrian Smith\nCosponsor: Rep. Wesley Hunt\nCosponsor: Rep. Raúl M. Grijalva\nCosponsor: Rep. Seth Magaziner\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/979",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/979",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-24",
+    "persons": [
+      "C001091",
+      "B001281",
+      "B001300",
+      "M001227",
+      "B001318",
+      "G000602",
+      "L000273",
+      "S001172",
+      "H001095",
+      "G000551",
+      "M001223"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/979"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "id": "rec-billstatus-hr1958-119-20250306",
+  "content": "<other>: H.R. 1958 (119th Congress): Deporting Fraudsters Act of 2026\nSponsor: Rep. David J. Taylor\nCosponsor: Rep. Claudia Tenney\nCosponsor: Rep. Derek Schmidt\nCosponsor: Rep. Nancy Mace\nCosponsor: Rep. Robert F. Onder, Jr.\nCosponsor: Rep. Mark B. Messmer\nCosponsor: Rep. Robert E. Latta\nCosponsor: Rep. Mike Kennedy\nCosponsor: Rep. Sheri Biggs\nCosponsor: Rep. Brandon Gill\nCosponsor: Rep. John W. Rose\nCosponsor: Rep. Mike Haridopolos\nCosponsor: Rep. Brad Finstad\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1958",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1958",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-06",
+    "persons": [
+      "T000490",
+      "T000478",
+      "S001228",
+      "M000194",
+      "O000177",
+      "M001233",
+      "L000566",
+      "K000403",
+      "B001325",
+      "G000603",
+      "R000612",
+      "H001099",
+      "F000475"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1958"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

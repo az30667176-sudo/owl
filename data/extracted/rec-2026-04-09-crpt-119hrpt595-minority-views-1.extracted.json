@@ -1,0 +1,36 @@
+{
+  "record_id": "rec-2026-04-09-crpt-119hrpt595-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:27:42.705Z",
+  "accepted": [
+    {
+      "person": "P000034",
+      "issue": "environmental-regulation",
+      "date": "2026-04-09",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "We oppose H.R. 6387, the ``Fire Improvement and Reforming Exceptional Events (FIRE) Act,'' which seeks to amend the Clean Air Act (CAA) to artificially reduce reporting on the severity of air pollution and mask air pollution concerns by expanding the list of exceptional events that states can claim in demonstrating compliance with air quality standards.",
+      "bill": "H.R. 6387, the Fire Improvement and Reforming Exceptional Events (FIRE) Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt595/html/CRPT-119hrpt595.htm",
+      "record_id": "rec-2026-04-09-crpt-119hrpt595-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislator opposes expanding exceptional events because it would underreport pollution and leave communities breathing unhealthy air, indicating support for strong air-quality regulation."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2395,
+    "prompt_tokens": 3504,
+    "total_tokens": 5899,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2193
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

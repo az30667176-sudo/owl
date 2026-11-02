@@ -1,0 +1,26 @@
+{
+  "id": "rec-billstatus-hr1355-119-20250213",
+  "content": "<other>: H.R. 1355 (119th Congress): Weatherization Enhancement and Readiness Act of 2025\nSponsor: Rep. Paul Tonko\nCosponsor: Rep. Marcy Kaptur\nCosponsor: Rep. Josh Riley\nCosponsor: Rep. James C. Moylan\nCosponsor: Rep. Michael Lawler\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1355",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1355",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-13",
+    "persons": [
+      "T000469",
+      "K000009",
+      "R000622",
+      "M001219",
+      "L000599"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1355"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

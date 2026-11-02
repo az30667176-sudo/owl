@@ -1,0 +1,25 @@
+{
+  "id": "rec-billstatus-hr3410-119-20250514",
+  "content": "<other>: H.R. 3410 (119th Congress): Supersonic Aviation Modernization Act\nSponsor: Rep. Troy E. Nehls\nCosponsor: Rep. Sharice Davids\nCosponsor: Rep. David Rouzer\nSponsor: Rep. Troy E. Nehls\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/3410",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/3410",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-05-14",
+    "persons": [
+      "N000026",
+      "D000629",
+      "R000603",
+      "N000026"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/3410"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "record_id": "rec-2025-08-19-crpt-119hrpt231-additional-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:26:47.302Z",
+  "accepted": [
+    {
+      "person": "G000559",
+      "issue": "nuclear-modernization",
+      "date": "2025-08-19",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "I also must voice my concern about the committee's continued support for the Sentinel and plutonium modernization programs, further straining our nation's finances without a commensurate increase in stability or security.",
+      "bill": "National Defense Authorization Act for Fiscal Year 2026",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt231/html/CRPT-119hrpt231.htm",
+      "record_id": "rec-2025-08-19-crpt-119hrpt231-additional-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote directly opposes continued funding for Sentinel and plutonium modernization as fiscally straining without security benefit."
+    },
+    {
+      "person": "G000559",
+      "issue": "reproductive-healthcare-access",
+      "date": "2025-08-19",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "Every person, including our service members, deserves access to safe, affordable reproductive health services.",
+      "bill": "National Defense Authorization Act for Fiscal Year 2026",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt231/html/CRPT-119hrpt231.htm",
+      "record_id": "rec-2025-08-19-crpt-119hrpt231-additional-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote explicitly endorses universal access to safe affordable reproductive health services including for service members."
+    },
+    {
+      "person": "G000559",
+      "issue": "congressional-oversight-of-defense-spending",
+      "date": "2025-08-19",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "It is vital that Congress act to strengthen our ability to oversee spending, both to provide for national security and to prevent waste, fraud, and abuse of hard-earned taxpayer money.",
+      "bill": "H.R. 1 reconciliation package",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt231/html/CRPT-119hrpt231.htm",
+      "record_id": "rec-2025-08-19-crpt-119hrpt231-additional-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote calls for stronger congressional oversight of defense spending to prevent waste, fraud, and abuse."
+    },
+    {
+      "person": "G000559",
+      "issue": "military-nonpartisanship-and-domestic-use-restrictions",
+      "date": "2025-08-19",
+      "score": -0.85,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Our military should never be an instrument of personal or political power, and our servicemembers deserve better than to be used as political pawns.",
+      "bill": "National Defense Authorization Act for Fiscal Year 2026",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt231/html/CRPT-119hrpt231.htm",
+      "record_id": "rec-2025-08-19-crpt-119hrpt231-additional-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote opposes politicization of the military and use of servicemembers for personal or political power."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "nuclear-modernization",
+      "name": "Nuclear Modernization",
+      "parent": "hsas-readiness"
+    },
+    {
+      "id": "reproductive-healthcare-access",
+      "name": "Reproductive Healthcare Access",
+      "parent": "hsas-readiness"
+    },
+    {
+      "id": "congressional-oversight-of-defense-spending",
+      "name": "Congressional Oversight of Defense Spending",
+      "parent": "hsas-readiness"
+    },
+    {
+      "id": "military-nonpartisanship-and-domestic-use-restrictions",
+      "name": "Military Nonpartisanship and Domestic Use Restrictions",
+      "parent": "hsas-readiness"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 2625,
+    "prompt_tokens": 3799,
+    "total_tokens": 6424,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2128
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

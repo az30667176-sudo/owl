@@ -1,0 +1,36 @@
+{
+  "record_id": "rec-2025-03-21-crpt-119hrpt28-dissenting-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:24:41.869Z",
+  "accepted": [
+    {
+      "person": "R000606",
+      "issue": "federal-courts",
+      "date": "2025-03-21",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "H.R. 1789 would undermine our system of federalism and the rule of law simply to benefit President Trump and his cronies.",
+      "bill": "H.R. 1789, the Promptly Ending Political Prosecutions and Executive Retaliation Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt28/html/CRPT-119hrpt28.htm",
+      "record_id": "rec-2025-03-21-crpt-119hrpt28-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote opposes expanding federal removal jurisdiction because it would undermine federalism and the rule of law."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1464,
+    "prompt_tokens": 5092,
+    "total_tokens": 6556,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1312
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "rec-billstatus-hr755-119-20250128",
+  "content": "<other>: H.R. 755 (119th Congress): Critical Mineral Consistency Act of 2025\nSponsor: Rep. Juan Ciscomani\nCosponsor: Rep. Abraham J. Hamadeh\nCosponsor: Rep. Elijah Crane\nCosponsor: Rep. Dan Newhouse\nCosponsor: Rep. Eric Swalwell\nCosponsor: Rep. Susie Lee\nCosponsor: Rep. Greg Stanton\nCosponsor: Rep. Celeste Maloy\nCosponsor: Rep. Steven Horsford\nCosponsor: Rep. Brittany Pettersen\nCosponsor: Rep. Andy Biggs\nSponsor: Rep. Juan Ciscomani\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/755",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/755",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-01-28",
+    "persons": [
+      "C001133",
+      "H001098",
+      "C001132",
+      "N000189",
+      "S001193",
+      "L000590",
+      "S001211",
+      "M001228",
+      "H001066",
+      "P000620",
+      "B001302",
+      "C001133"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/755"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

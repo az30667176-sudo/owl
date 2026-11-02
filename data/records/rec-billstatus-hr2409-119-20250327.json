@@ -1,0 +1,26 @@
+{
+  "id": "rec-billstatus-hr2409-119-20250327",
+  "content": "<other>: H.R. 2409 (119th Congress): Guidance Clarity Act of 2025\nSponsor: Rep. Eric Burlison\nCosponsor: Rep. Jared F. Golden\nCosponsor: Rep. Donald G. Davis\nCosponsor: Rep. James Comer\nSponsor: Rep. Eric Burlison\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2409",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2409",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-27",
+    "persons": [
+      "B001316",
+      "G000592",
+      "D000230",
+      "C001108",
+      "B001316"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2409"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

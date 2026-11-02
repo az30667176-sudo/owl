@@ -1,0 +1,27 @@
+{
+  "id": "rec-billstatus-hr9340-119-20260827",
+  "content": "<other>: H.R. 9340 (119th Congress): Ratepayer Protection Act\nCosponsor: Rep. Ben Cline\nCosponsor: Rep. Brian K. Fitzpatrick\nCosponsor: Rep. Kristen McDonald Rivet\nCosponsor: Rep. Lauren Boebert\nCosponsor: Rep. Michael Lawler\nCosponsor: Rep. Beth Van Duyne\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/9340",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/9340",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-08-27",
+    "persons": [
+      "C001118",
+      "F000466",
+      "M001237",
+      "B000825",
+      "L000599",
+      "V000134"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/9340"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

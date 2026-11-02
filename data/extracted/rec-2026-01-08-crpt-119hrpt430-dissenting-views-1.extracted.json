@@ -1,0 +1,51 @@
+{
+  "record_id": "rec-2026-01-08-crpt-119hrpt430-dissenting-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:29:38.540Z",
+  "accepted": [
+    {
+      "person": "H001068",
+      "issue": "forest-management-and-wildfire",
+      "date": "2026-01-08",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "it is critical to have effective and active forest management to ensure that our National Forests are managed for multiple uses, including the protection of communities and the environment.",
+      "bill": "H.R. 179",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt430/html/CRPT-119hrpt430-pt1.htm",
+      "record_id": "rec-2026-01-08-crpt-119hrpt430-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote affirms support for effective and active forest management for multiple uses."
+    },
+    {
+      "person": "H001068",
+      "issue": "environmental-review-nepa",
+      "date": "2026-01-08",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "H.R. 179 contains redundant coordination requirements and would unnecessarily establish an exemption from standard NEPA practice.",
+      "bill": "H.R. 179",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt430/html/CRPT-119hrpt430-pt1.htm",
+      "record_id": "rec-2026-01-08-crpt-119hrpt430-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote criticizes the bill for creating an unnecessary exemption from standard NEPA practice, supporting NEPA protections."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1798,
+    "prompt_tokens": 2967,
+    "total_tokens": 4765,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1583
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

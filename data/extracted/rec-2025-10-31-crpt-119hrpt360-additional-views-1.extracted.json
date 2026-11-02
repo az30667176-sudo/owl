@@ -1,0 +1,66 @@
+{
+  "record_id": "rec-2025-10-31-crpt-119hrpt360-additional-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:30:01.880Z",
+  "accepted": [
+    {
+      "person": "L000557",
+      "issue": "social-security",
+      "date": "2025-10-31",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "and I still believe that this bill offers a commonsense solution.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt360/html/CRPT-119hrpt360.htm",
+      "record_id": "rec-2025-10-31-crpt-119hrpt360-additional-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Larson states continued support for legislation to improve SSA services for victims of identity theft."
+    },
+    {
+      "person": "L000557",
+      "issue": "federal-it-and-cybersecurity",
+      "date": "2025-10-31",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "I wrote Chairman Smith, demanding an immediate markup on our bill, ``Protecting Americans' Social Security Data Act'', our bill to block unvetted DOGE minions from accessing these sensitive records.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt360/html/CRPT-119hrpt360.htm",
+      "record_id": "rec-2025-10-31-crpt-119hrpt360-additional-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Larson advocates blocking unauthorized access to Social Security records to protect sensitive personal data."
+    },
+    {
+      "person": "L000557",
+      "issue": "federal-workforce-and-ethics",
+      "date": "2025-10-31",
+      "score": 0.7,
+      "direction": "support",
+      "linkage": "mid",
+      "llm_confidence": "high",
+      "quote": "The point of contact should be a real person, not an AI chatbot.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt360/html/CRPT-119hrpt360.htm",
+      "record_id": "rec-2025-10-31-crpt-119hrpt360-additional-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Larson supports staffing the SSA victim-assistance contact with human personnel rather than automation."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2599,
+    "prompt_tokens": 3035,
+    "total_tokens": 5634,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2314
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "rec-billstatus-hjres59-119-20250213",
+  "content": "<other>: H.J. Res. 59 (119th Congress): Disapproving the rule submitted by the Bureau of Consumer Financial Protection relating to \"Overdraft Lending: Very Large Financial Institutions\".\nSponsor: Rep. J. French Hill\nCosponsor: Rep. Daniel Meuser\nCosponsor: Rep. Andrew Ogles\nCosponsor: Rep. Ann Wagner\nCosponsor: Rep. Bill Huizenga\nCosponsor: Rep. William R. Timmons IV\nCosponsor: Rep. Tim Moore\nCosponsor: Rep. Mike Haridopolos\nCosponsor: Rep. Andy Barr\nCosponsor: Rep. Roger Williams\nCosponsor: Rep. Byron Donalds\nCosponsor: Rep. Maria Elvira Salazar\nCosponsor: Rep. Troy Downing\nCosponsor: Rep. Ralph Norman\nCosponsor: Rep. Glenn Grothman\nSponsor: Rep. J. French Hill\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-joint-resolution/59",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/59",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-13",
+    "persons": [
+      "H001072",
+      "M001204",
+      "O000175",
+      "W000812",
+      "H001058",
+      "T000480",
+      "M001236",
+      "H001099",
+      "B001282",
+      "W000816",
+      "D000032",
+      "S000168",
+      "D000634",
+      "N000190",
+      "G000576",
+      "H001072"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-joint-resolution/59"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

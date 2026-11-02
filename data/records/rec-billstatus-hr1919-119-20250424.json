@@ -1,0 +1,38 @@
+{
+  "id": "rec-billstatus-hr1919-119-20250424",
+  "content": "<other>: H.R. 1919 (119th Congress): Anti-CBDC Surveillance State Act\nCosponsor: Rep. Marlin A. Stutzman\nCosponsor: Rep. Brian Babin\nCosponsor: Rep. Troy E. Nehls\nCosponsor: Rep. Thomas H. Kean, Jr.\nCosponsor: Rep. Derrick Van Orden\nCosponsor: Rep. Gus M. Bilirakis\nCosponsor: Rep. Mike Kennedy\nCosponsor: Rep. Steve Womack\nCosponsor: Rep. Kevin Hern\nCosponsor: Rep. Pete Stauber\nCosponsor: Rep. John J. McGuire III\nCosponsor: Rep. Robert P. Bresnahan, Jr.\nCosponsor: Rep. Nicholas J. Begich III\nCosponsor: Rep. Austin Scott\nCosponsor: Rep. Chuck Edwards\nCosponsor: Rep. Brian Jack\nCosponsor: Rep. Mary E. Miller\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1919",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1919",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-04-24",
+    "persons": [
+      "S001188",
+      "B001291",
+      "N000026",
+      "K000398",
+      "V000135",
+      "B001257",
+      "K000403",
+      "W000809",
+      "H001082",
+      "S001212",
+      "M001239",
+      "B001327",
+      "B001323",
+      "S001189",
+      "E000246",
+      "J000311",
+      "M001211"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1919"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

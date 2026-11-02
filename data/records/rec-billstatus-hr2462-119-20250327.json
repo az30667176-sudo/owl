@@ -1,0 +1,37 @@
+{
+  "id": "rec-billstatus-hr2462-119-20250327",
+  "content": "<other>: H.R. 2462 (119th Congress): Black Vulture Relief Act\nSponsor: Rep. John W. Rose\nCosponsor: Rep. Darren Soto\nCosponsor: Rep. David Rouzer\nCosponsor: Rep. Mike Bost\nCosponsor: Rep. Mark B. Messmer\nCosponsor: Rep. Andy Barr\nCosponsor: Rep. Kevin Hern\nCosponsor: Rep. Jason Smith\nCosponsor: Rep. Scott Perry\nCosponsor: Rep. Stephanie I. Bice\nCosponsor: Rep. Daniel Meuser\nCosponsor: Rep. Lance Gooden\nCosponsor: Rep. Mark Alford\nCosponsor: Rep. Sam Graves\nCosponsor: Rep. Michael A. Rulli\nSponsor: Rep. John W. Rose\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2462",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2462",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-27",
+    "persons": [
+      "R000612",
+      "S001200",
+      "R000603",
+      "B001295",
+      "M001233",
+      "B001282",
+      "H001082",
+      "S001195",
+      "P000605",
+      "B000740",
+      "M001204",
+      "G000589",
+      "A000379",
+      "G000546",
+      "R000619",
+      "R000612"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2462"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

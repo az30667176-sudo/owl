@@ -1,0 +1,40 @@
+{
+  "id": "rec-billstatus-hr2071-119-20250311",
+  "content": "<other>: H.R. 2071 (119th Congress): Save Our Shrimpers Act\nSponsor: Rep. Troy E. Nehls\nCosponsor: Rep. Clay Higgins\nCosponsor: Rep. Vicente Gonzalez\nCosponsor: Rep. Troy A. Carter\nCosponsor: Rep. Nancy Mace\nCosponsor: Rep. Randy K. Weber, Sr.\nCosponsor: Rep. Gus M. Bilirakis\nCosponsor: Rep. Julia Letlow\nCosponsor: Rep. Anna Paulina Luna\nCosponsor: Rep. Gregory F. Murphy\nCosponsor: Rep. John H. Rutherford\nCosponsor: Rep. Byron Donalds\nCosponsor: Rep. Barry Moore\nCosponsor: Rep. Brian Babin\nCosponsor: Rep. Mike Ezell\nCosponsor: Rep. Michael Cloud\nCosponsor: Rep. Russell Fry\nCosponsor: Rep. Earl L. \"Buddy\" Carter\nSponsor: Rep. Troy E. Nehls\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2071",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2071",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-11",
+    "persons": [
+      "N000026",
+      "H001077",
+      "G000581",
+      "C001125",
+      "M000194",
+      "W000814",
+      "B001257",
+      "L000595",
+      "L000596",
+      "M001210",
+      "R000609",
+      "D000032",
+      "M001212",
+      "B001291",
+      "E000235",
+      "C001115",
+      "F000478",
+      "C001103",
+      "N000026"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2071"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

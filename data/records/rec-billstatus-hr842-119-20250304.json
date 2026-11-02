@@ -1,0 +1,41 @@
+{
+  "id": "rec-billstatus-hr842-119-20250304",
+  "content": "<other>: H.R. 842 (119th Congress): Nancy Gardner Sewell Medicare Multi-Cancer Early Detection Screening Coverage Act\nCosponsor: Rep. John H. Rutherford\nCosponsor: Rep. Michael Baumgartner\nCosponsor: Rep. Mike Haridopolos\nCosponsor: Rep. Aaron Bean\nCosponsor: Rep. Mike Rogers\nCosponsor: Rep. Charles J. \"Chuck\" Fleischmann\nCosponsor: Rep. Cliff Bentz\nCosponsor: Rep. Gabe Evans\nCosponsor: Rep. David G. Valadao\nCosponsor: Rep. Jimmy Panetta\nCosponsor: Rep. Emanuel Cleaver\nCosponsor: Rep. Eric Sorensen\nCosponsor: Rep. Salud O. Carbajal\nCosponsor: Rep. Dwight Evans\nCosponsor: Rep. Doris O. Matsui\nCosponsor: Rep. Robert Menendez\nCosponsor: Rep. Paul Tonko\nCosponsor: Rep. Julia Brownley\nCosponsor: Rep. Stephanie I. Bice\nCosponsor: Rep. Jake Auchincloss\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/842",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/842",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-04",
+    "persons": [
+      "R000609",
+      "B001322",
+      "H001099",
+      "B001314",
+      "R000575",
+      "F000459",
+      "B000668",
+      "E000300",
+      "V000129",
+      "P000613",
+      "C001061",
+      "S001225",
+      "C001112",
+      "E000296",
+      "M001163",
+      "M001226",
+      "T000469",
+      "B001285",
+      "B000740",
+      "A000148"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/842"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

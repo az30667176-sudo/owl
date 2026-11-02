@@ -1,0 +1,51 @@
+{
+  "record_id": "rec-2025-10-03-crpt-119hrpt329-supplemental-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:30:05.898Z",
+  "accepted": [
+    {
+      "person": "N000015",
+      "issue": "federal-it-and-cybersecurity",
+      "date": "2025-10-03",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "It is imperative Republicans join us in safeguarding Americans' data and seeking answers to the public's questions: why did the Trump Administration copy a file with the sensitive Social Security data of more than 300 million Americans into a vulnerable cloud environment, who has accessed it, and will the public ever know if a breach has occurred?",
+      "bill": "H.R. 5348",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt329/html/CRPT-119hrpt329.htm",
+      "record_id": "rec-2025-10-03-crpt-119hrpt329-supplemental-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Neal calls for safeguarding Americans' data and investigating the copying of Social Security data to a vulnerable cloud environment."
+    },
+    {
+      "person": "N000015",
+      "issue": "social-security",
+      "date": "2025-10-03",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Ways and Means Democrats are fighting to protect Americans from having their personal Social Security information politicized or bought and sold to the highest bidder, or their Social Security benefits put at risk.",
+      "bill": "H.R. 5348",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt329/html/CRPT-119hrpt329.htm",
+      "record_id": "rec-2025-10-03-crpt-119hrpt329-supplemental-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Neal expresses support for protecting Social Security information from misuse and protecting Social Security benefits from risk."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2168,
+    "prompt_tokens": 2908,
+    "total_tokens": 5076,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1903
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

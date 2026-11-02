@@ -1,0 +1,51 @@
+{
+  "record_id": "rec-2026-01-27-crpt-119hrpt463-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:27:51.297Z",
+  "accepted": [
+    {
+      "person": "G000598",
+      "issue": "district-of-columbia-governance",
+      "date": "2026-01-27",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Committee Democrats strongly oppose the dangerous District of Columbia Home Rule Improvement Act of 2025 (H.R. 5183). The bill would be more accurately titled the District of Columbia Home Rule Reduction Act of 2025.",
+      "bill": "H.R. 5183 District of Columbia Home Rule Improvement Act of 2025",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt463/html/CRPT-119hrpt463-pt1.htm",
+      "record_id": "rec-2026-01-27-crpt-119hrpt463-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage opposes H.R. 5183 because it would reduce D.C. home rule, indicating support for D.C. self-government."
+    },
+    {
+      "person": "G000598",
+      "issue": "district-of-columbia-governance",
+      "date": "2026-01-27",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "Instead of reducing D.C. home rule, Congress should eliminate Congress' authority to meddle in local D.C. matters by passing the D.C. statehood bill.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt463/html/CRPT-119hrpt463-pt1.htm",
+      "record_id": "rec-2026-01-27-crpt-119hrpt463-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage calls for ending congressional interference and passing D.C. statehood, indicating support for D.C. self-government."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2198,
+    "prompt_tokens": 3505,
+    "total_tokens": 5703,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1893
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

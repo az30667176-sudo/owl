@@ -1,0 +1,29 @@
+{
+  "id": "rec-billstatus-hr1262-119-20250520",
+  "content": "<other>: H.R. 1262 (119th Congress): Mikaela Naylon Give Kids a Chance Act\nCosponsor: Rep. Ritchie Torres\nCosponsor: Rep. Marc A. Veasey\nCosponsor: Rep. Summer L. Lee\nCosponsor: Rep. Josh Gottheimer\nCosponsor: Rep. Zachary Nunn\nCosponsor: Rep. Shomari Figures\nCosponsor: Rep. Suhas Subramanyam\nCosponsor: Rep. Yvette D. Clarke\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1262",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1262",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-05-20",
+    "persons": [
+      "T000486",
+      "V000131",
+      "L000602",
+      "G000583",
+      "N000193",
+      "F000481",
+      "S001230",
+      "C001067"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1262"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "record_id": "rec-2025-09-30-crpt-119hrpt317-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:30:26.014Z",
+  "accepted": [
+    {
+      "person": "G000598",
+      "issue": "district-of-columbia-governance",
+      "date": "2025-09-30",
+      "score": 1,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "It is not the place of Congress--which is not accountable to D.C. residents--to micromanage the District and act as some kind of super legislature, second-guessing their laws.",
+      "bill": "H.R. 1507",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt317/html/CRPT-119hrpt317.htm",
+      "record_id": "rec-2025-09-30-crpt-119hrpt317-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote asserts Congress should not override District laws, indicating strong support for D.C. self-governance."
+    },
+    {
+      "person": "G000598",
+      "issue": "law-enforcement-support",
+      "date": "2025-09-30",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The D.C. police reform legislation aimed at accountability for police officers who use excessive force or abuse their power. It increased transparency and provided stronger civilian oversight.",
+      "bill": "H.R. 1507",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt317/html/CRPT-119hrpt317.htm",
+      "record_id": "rec-2025-09-30-crpt-119hrpt317-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote praises police accountability, transparency, and civilian oversight measures as positive reforms."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2508,
+    "prompt_tokens": 2824,
+    "total_tokens": 5332,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2236
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

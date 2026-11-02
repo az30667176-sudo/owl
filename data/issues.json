@@ -1,21 +1,439 @@
 {
   "_meta": {
-    "description": "Level 3 of the taxonomy: concrete issues that stances attach to. Each issue belongs to exactly one subcommittee (or a committee id when that committee has no subcommittees). In production these are produced by the LLM stage (Muse Spark clusters bills/speeches into issues) and reviewed by humans.",
-    "mock": true
+    "description": "Seed level-3 issues from bill metadata (issues.csv). The model may propose more.",
+    "source": "owl-ingest CSV drop owl-ingest-csv-2026-10-30",
+    "drop": "owl-ingest-csv-2026-10-30"
   },
   "issues": [
-    { "id": "gun-policy", "name": "Gun Policy", "parent": "hsju-crime" },
-    { "id": "policing-reform", "name": "Policing & Reform", "parent": "hsju-constitution" },
-    { "id": "border-security", "name": "Border Security", "parent": "hshm-border" },
-    { "id": "daca-pathways", "name": "DACA / Pathways", "parent": "hsju-immigration" },
-    { "id": "data-centers", "name": "Data Centers", "parent": "hssy-research" },
-    { "id": "ai-regulation", "name": "AI Regulation", "parent": "hsju-courts" },
-    { "id": "renewables", "name": "Renewables", "parent": "hsii-energy" },
-    { "id": "nuclear", "name": "Nuclear", "parent": "hsif-energy" },
-    { "id": "drug-pricing", "name": "Drug Pricing", "parent": "hsif-health" },
-    { "id": "corporate-tax", "name": "Corporate Tax Rate", "parent": "hswm-tax" },
-    { "id": "china-tariffs", "name": "China Tariffs", "parent": "hswm-trade" },
-    { "id": "ukraine-aid", "name": "Ukraine Aid", "parent": "hsfa-europe" },
-    { "id": "mil-cyber", "name": "Military Cyber Budget", "parent": "hsas-cyber" }
+    {
+      "id": "federal-land-transfers",
+      "name": "Federal Land Transfers",
+      "parent": "hsii-lands"
+    },
+    {
+      "id": "public-lands-and-parks",
+      "name": "Public Lands and Parks",
+      "parent": "hsii-lands"
+    },
+    {
+      "id": "forest-management-and-wildfire",
+      "name": "Forest Management and Wildfire",
+      "parent": "hsii-lands"
+    },
+    {
+      "id": "wildlife-and-fisheries",
+      "name": "Wildlife and Fisheries",
+      "parent": "hsii-water"
+    },
+    {
+      "id": "western-water-supply",
+      "name": "Western Water Supply",
+      "parent": "hsii-water"
+    },
+    {
+      "id": "tribal-lands-and-sovereignty",
+      "name": "Tribal Lands and Sovereignty",
+      "parent": "hsii-indian"
+    },
+    {
+      "id": "mining-and-mineral-resources",
+      "name": "Mining and Mineral Resources",
+      "parent": "hsii-energy"
+    },
+    {
+      "id": "environmental-review-nepa",
+      "name": "Environmental Review (NEPA)",
+      "parent": "hsii-oversight"
+    },
+    {
+      "id": "bank-regulation",
+      "name": "Bank Regulation",
+      "parent": "hsba-institutions"
+    },
+    {
+      "id": "financial-stability",
+      "name": "Financial Stability",
+      "parent": "hsba-institutions"
+    },
+    {
+      "id": "securities-and-capital-markets",
+      "name": "Securities and Capital Markets",
+      "parent": "hsba-capital"
+    },
+    {
+      "id": "corporate-disclosure-and-audit",
+      "name": "Corporate Disclosure and Audit",
+      "parent": "hsba-capital"
+    },
+    {
+      "id": "small-business-capital-access",
+      "name": "Small Business Capital Access",
+      "parent": "hsba-capital"
+    },
+    {
+      "id": "digital-assets-and-fintech",
+      "name": "Digital Assets and Fintech",
+      "parent": "hsba-digital"
+    },
+    {
+      "id": "financial-crime-and-sanctions",
+      "name": "Financial Crime and Sanctions",
+      "parent": "hsba-natsec"
+    },
+    {
+      "id": "china-and-international-finance",
+      "name": "China and International Finance",
+      "parent": "hsba-natsec"
+    },
+    {
+      "id": "housing-finance",
+      "name": "Housing Finance",
+      "parent": "hsba-housing"
+    },
+    {
+      "id": "electric-grid-reliability",
+      "name": "Electric Grid Reliability",
+      "parent": "hsif-energy"
+    },
+    {
+      "id": "energy-efficiency-standards",
+      "name": "Energy Efficiency Standards",
+      "parent": "hsif-energy"
+    },
+    {
+      "id": "broadband-and-spectrum",
+      "name": "Broadband and Spectrum",
+      "parent": "hsif-comms"
+    },
+    {
+      "id": "online-platforms-and-data-privacy",
+      "name": "Online Platforms and Data Privacy",
+      "parent": "hsif-comms"
+    },
+    {
+      "id": "health-programs-and-research",
+      "name": "Health Programs and Research",
+      "parent": "hsif-health"
+    },
+    {
+      "id": "consumer-protection",
+      "name": "Consumer Protection",
+      "parent": "hsif-innovation"
+    },
+    {
+      "id": "environmental-regulation",
+      "name": "Environmental Regulation",
+      "parent": "hsif-environment"
+    },
+    {
+      "id": "higher-education-and-student-aid",
+      "name": "Higher Education and Student Aid",
+      "parent": "hsed-higher"
+    },
+    {
+      "id": "k-12-education",
+      "name": "K-12 Education",
+      "parent": "hsed-k12"
+    },
+    {
+      "id": "child-care",
+      "name": "Child Care",
+      "parent": "hsed-k12"
+    },
+    {
+      "id": "civil-rights-in-schools",
+      "name": "Civil Rights in Schools",
+      "parent": "hsed-k12"
+    },
+    {
+      "id": "wages-and-labor-standards",
+      "name": "Wages and Labor Standards",
+      "parent": "hsed-protections"
+    },
+    {
+      "id": "retirement-and-employee-benefits",
+      "name": "Retirement and Employee Benefits",
+      "parent": "hsed-help"
+    },
+    {
+      "id": "labor-relations-and-unions",
+      "name": "Labor Relations and Unions",
+      "parent": "hsed-help"
+    },
+    {
+      "id": "veterans-health-care",
+      "name": "Veterans Health Care",
+      "parent": "hsvr-health"
+    },
+    {
+      "id": "veterans-benefits-and-compensation",
+      "name": "Veterans Benefits and Compensation",
+      "parent": "hsvr-disability"
+    },
+    {
+      "id": "veterans-education-and-employment",
+      "name": "Veterans Education and Employment",
+      "parent": "hsvr-economic"
+    },
+    {
+      "id": "veterans-housing-and-loans",
+      "name": "Veterans Housing and Loans",
+      "parent": "hsvr-economic"
+    },
+    {
+      "id": "va-technology-modernization",
+      "name": "VA Technology Modernization",
+      "parent": "hsvr-tech"
+    },
+    {
+      "id": "va-operations-and-oversight",
+      "name": "VA Operations and Oversight",
+      "parent": "hsvr-oversight"
+    },
+    {
+      "id": "tax-administration-and-irs",
+      "name": "Tax Administration and IRS",
+      "parent": "hswm-tax"
+    },
+    {
+      "id": "disaster-tax-relief",
+      "name": "Disaster Tax Relief",
+      "parent": "hswm-tax"
+    },
+    {
+      "id": "social-security",
+      "name": "Social Security",
+      "parent": "hswm-ss"
+    },
+    {
+      "id": "child-welfare-and-foster-care",
+      "name": "Child Welfare and Foster Care",
+      "parent": "hswm-welfare"
+    },
+    {
+      "id": "unemployment-and-work-programs",
+      "name": "Unemployment and Work Programs",
+      "parent": "hswm-welfare"
+    },
+    {
+      "id": "health-care-tax-policy",
+      "name": "Health Care Tax Policy",
+      "parent": "hswm-health"
+    },
+    {
+      "id": "treasury-oversight",
+      "name": "Treasury Oversight",
+      "parent": "hswm-oversight"
+    },
+    {
+      "id": "sba-lending",
+      "name": "SBA Lending",
+      "parent": "hssm-growth"
+    },
+    {
+      "id": "small-business-programs",
+      "name": "Small Business Programs",
+      "parent": "hssm-innovation"
+    },
+    {
+      "id": "small-business-cyber-and-fraud",
+      "name": "Small Business Cyber and Fraud",
+      "parent": "hssm-oversight"
+    },
+    {
+      "id": "rural-small-business-and-manufacturing",
+      "name": "Rural Small Business and Manufacturing",
+      "parent": "hssm-rural"
+    },
+    {
+      "id": "aviation-safety",
+      "name": "Aviation Safety",
+      "parent": "hspw-aviation"
+    },
+    {
+      "id": "highway-and-transit-safety",
+      "name": "Highway and Transit Safety",
+      "parent": "hspw-highways"
+    },
+    {
+      "id": "water-infrastructure-and-quality",
+      "name": "Water Infrastructure and Quality",
+      "parent": "hspw-water"
+    },
+    {
+      "id": "maritime-transportation",
+      "name": "Maritime Transportation",
+      "parent": "hspw-coastguard"
+    },
+    {
+      "id": "public-buildings-and-emergency-management",
+      "name": "Public Buildings and Emergency Management",
+      "parent": "hspw-econdev"
+    },
+    {
+      "id": "criminal-sentencing",
+      "name": "Criminal Sentencing",
+      "parent": "hsju-crime"
+    },
+    {
+      "id": "gun-policy",
+      "name": "Gun Policy",
+      "parent": "hsju-crime"
+    },
+    {
+      "id": "law-enforcement-support",
+      "name": "Law Enforcement Support",
+      "parent": "hsju-crime"
+    },
+    {
+      "id": "immigration-enforcement",
+      "name": "Immigration Enforcement",
+      "parent": "hsju-immigration"
+    },
+    {
+      "id": "federal-courts",
+      "name": "Federal Courts",
+      "parent": "hsju-courts"
+    },
+    {
+      "id": "border-security",
+      "name": "Border Security",
+      "parent": "hshm-border"
+    },
+    {
+      "id": "counterterrorism",
+      "name": "Counterterrorism",
+      "parent": "hshm-ct"
+    },
+    {
+      "id": "aviation-and-transportation-security",
+      "name": "Aviation and Transportation Security",
+      "parent": "hshm-transport"
+    },
+    {
+      "id": "cybersecurity",
+      "name": "Cybersecurity",
+      "parent": "hshm-cyber"
+    },
+    {
+      "id": "emergency-management",
+      "name": "Emergency Management",
+      "parent": "hshm-emergency"
+    },
+    {
+      "id": "dhs-workforce-and-operations",
+      "name": "DHS Workforce and Operations",
+      "parent": "hshm-oversight"
+    },
+    {
+      "id": "district-of-columbia-governance",
+      "name": "District of Columbia Governance",
+      "parent": "hsgo-law"
+    },
+    {
+      "id": "federal-law-enforcement",
+      "name": "Federal Law Enforcement",
+      "parent": "hsgo-law"
+    },
+    {
+      "id": "federal-workforce-and-ethics",
+      "name": "Federal Workforce and Ethics",
+      "parent": "hsgo-doge"
+    },
+    {
+      "id": "federal-it-and-cybersecurity",
+      "name": "Federal IT and Cybersecurity",
+      "parent": "hsgo-cyber"
+    },
+    {
+      "id": "election-administration",
+      "name": "Election Administration",
+      "parent": "hsha-elections"
+    },
+    {
+      "id": "house-operations",
+      "name": "House Operations",
+      "parent": "hsha-modernization"
+    },
+    {
+      "id": "research-and-technology-transfer",
+      "name": "Research and Technology Transfer",
+      "parent": "hssy-research"
+    },
+    {
+      "id": "federal-budget-and-deficit",
+      "name": "Federal Budget and Deficit",
+      "parent": "hsbu"
+    },
+    {
+      "id": "farm-trade-and-food-safety",
+      "name": "Farm Trade and Food Safety",
+      "parent": "hsag-farm"
+    },
+    {
+      "id": "defense-authorization",
+      "name": "Defense Authorization",
+      "parent": "hsas-readiness"
+    },
+    {
+      "id": "defense-appropriations",
+      "name": "Defense Appropriations",
+      "parent": "hsap-defense"
+    },
+    {
+      "id": "homeland-security-appropriations",
+      "name": "Homeland Security Appropriations",
+      "parent": "hsap-homeland"
+    },
+    {
+      "id": "energy-and-water-appropriations",
+      "name": "Energy and Water Appropriations",
+      "parent": "hsap-energy"
+    },
+    {
+      "id": "interior-and-environment-appropriations",
+      "name": "Interior and Environment Appropriations",
+      "parent": "hsap-interior"
+    },
+    {
+      "id": "labor-hhs-education-appropriations",
+      "name": "Labor, HHS, Education Appropriations",
+      "parent": "hsap-labor"
+    },
+    {
+      "id": "military-construction-and-va-appropriations",
+      "name": "Military Construction and VA Appropriations",
+      "parent": "hsap-milcon"
+    },
+    {
+      "id": "transportation-and-hud-appropriations",
+      "name": "Transportation and HUD Appropriations",
+      "parent": "hsap-thud"
+    },
+    {
+      "id": "agriculture-and-fda-appropriations",
+      "name": "Agriculture and FDA Appropriations",
+      "parent": "hsap-ag"
+    },
+    {
+      "id": "commerce-justice-science-appropriations",
+      "name": "Commerce, Justice, Science Appropriations",
+      "parent": "hsap-cjs"
+    },
+    {
+      "id": "financial-services-appropriations",
+      "name": "Financial Services Appropriations",
+      "parent": "hsap-fsgg"
+    },
+    {
+      "id": "legislative-branch-appropriations",
+      "name": "Legislative Branch Appropriations",
+      "parent": "hsap-legislative"
+    },
+    {
+      "id": "national-security-and-state-appropriations",
+      "name": "National Security and State Appropriations",
+      "parent": "hsap-state"
+    }
   ]
 }

@@ -1,0 +1,81 @@
+{
+  "record_id": "rec-2025-07-21-crpt-119hrpt213-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:26:48.263Z",
+  "accepted": [
+    {
+      "person": "D000216",
+      "issue": "energy-and-water-appropriations",
+      "date": "2025-07-21",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Due to concerns about spending levels, harmful cuts to the clean energy economy, and partisan policy riders, we are unable to support the bill as written.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt213/html/CRPT-119hrpt213.htm",
+      "record_id": "rec-2025-07-21-crpt-119hrpt213-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislators state they cannot support the Energy and Water bill because of spending levels, clean energy cuts, and riders."
+    },
+    {
+      "person": "K000009",
+      "issue": "energy-and-water-appropriations",
+      "date": "2025-07-21",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Due to concerns about spending levels, harmful cuts to the clean energy economy, and partisan policy riders, we are unable to support the bill as written.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt213/html/CRPT-119hrpt213.htm",
+      "record_id": "rec-2025-07-21-crpt-119hrpt213-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislators state they cannot support the Energy and Water bill because of spending levels, clean energy cuts, and riders."
+    },
+    {
+      "person": "D000216",
+      "issue": "energy-efficiency-standards",
+      "date": "2025-07-21",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "This is a direct attack on the programs that lower energy bills for working families, create good-paying jobs in our communities, and keep America competitive.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt213/html/CRPT-119hrpt213.htm",
+      "record_id": "rec-2025-07-21-crpt-119hrpt213-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislators defend Energy Efficiency and Renewable Energy programs as lowering bills, creating jobs, and maintaining competitiveness."
+    },
+    {
+      "person": "K000009",
+      "issue": "energy-efficiency-standards",
+      "date": "2025-07-21",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "This is a direct attack on the programs that lower energy bills for working families, create good-paying jobs in our communities, and keep America competitive.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt213/html/CRPT-119hrpt213.htm",
+      "record_id": "rec-2025-07-21-crpt-119hrpt213-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The legislators defend Energy Efficiency and Renewable Energy programs as lowering bills, creating jobs, and maintaining competitiveness."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1897,
+    "prompt_tokens": 3781,
+    "total_tokens": 5678,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1470
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

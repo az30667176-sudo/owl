@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr9340-119-20260618",
+  "content": "<other>: H.R. 9340 (119th Congress): Ratepayer Protection Act\nSponsor: Rep. Gabe Evans\nCosponsor: Rep. Kathy Castor\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/9340",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/9340",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-06-18",
+    "persons": [
+      "E000300",
+      "C001066"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/9340"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr1082-119-20250206",
+  "content": "<other>: H.R. 1082 (119th Congress): Shandra Eisenga Human Cell and Tissue Product Safety Act\nSponsor: Rep. John R. Moolenaar\nCosponsor: Rep. Debbie Dingell\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1082",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1082",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-06",
+    "persons": [
+      "M001194",
+      "D000624"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1082"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

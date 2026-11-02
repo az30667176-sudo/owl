@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr8897-119-20260519",
+  "content": "<other>: H.R. 8897 (119th Congress): Improving Travel for American Families Act\nSponsor: Rep. Ryan Mackenzie\nCosponsor: Rep. Valerie P. Foushee\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/8897",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-05-19",
+    "persons": [
+      "M001230",
+      "F000477"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/8897"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

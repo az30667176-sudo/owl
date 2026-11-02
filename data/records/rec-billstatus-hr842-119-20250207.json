@@ -1,0 +1,35 @@
+{
+  "id": "rec-billstatus-hr842-119-20250207",
+  "content": "<other>: H.R. 842 (119th Congress): Nancy Gardner Sewell Medicare Multi-Cancer Early Detection Screening Coverage Act\nCosponsor: Rep. Darin LaHood\nCosponsor: Rep. Hillary J. Scholten\nCosponsor: Rep. David Schweikert\nCosponsor: Rep. LaMonica McIver\nCosponsor: Rep. Claudia Tenney\nCosponsor: Rep. Timothy M. Kennedy\nCosponsor: Rep. Rudy Yakym III\nCosponsor: Rep. Bonnie Watson Coleman\nCosponsor: Rep. Sam Graves\nCosponsor: Rep. Alma S. Adams\nCosponsor: Rep. Beth Van Duyne\nCosponsor: Rep. Brendan F. Boyle\nCosponsor: Rep. Mike Bost\nCosponsor: Rep. Eleanor Holmes Norton\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/842",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/842",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-07",
+    "persons": [
+      "L000585",
+      "S001221",
+      "S001183",
+      "M001229",
+      "T000478",
+      "K000402",
+      "Y000067",
+      "W000822",
+      "G000546",
+      "A000370",
+      "V000134",
+      "B001296",
+      "B001295",
+      "N000147"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/842"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

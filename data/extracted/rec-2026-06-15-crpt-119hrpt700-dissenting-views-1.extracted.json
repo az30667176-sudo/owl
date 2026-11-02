@@ -1,0 +1,42 @@
+{
+  "record_id": "rec-2026-06-15-crpt-119hrpt700-dissenting-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:29:32.103Z",
+  "accepted": [
+    {
+      "person": "R000606",
+      "issue": "third-party-litigation-funding",
+      "date": "2026-06-15",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "Third party litigation funding helps ensure that no person is denied their day in court due to financial barriers.",
+      "bill": "H.R. 2675 Protecting our Courts from Foreign Manipulation Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt700/html/CRPT-119hrpt700.htm",
+      "record_id": "rec-2026-06-15-crpt-119hrpt700-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Raskin praises third-party litigation funding as ensuring court access and opposes H.R. 2675 which would restrict it."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "third-party-litigation-funding",
+      "name": "Third Party Litigation Funding",
+      "parent": "hsju-courts"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 1606,
+    "prompt_tokens": 3016,
+    "total_tokens": 4622,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1471
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

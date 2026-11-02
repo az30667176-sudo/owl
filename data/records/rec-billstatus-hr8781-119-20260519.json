@@ -1,0 +1,26 @@
+{
+  "id": "rec-billstatus-hr8781-119-20260519",
+  "content": "<other>: H.R. 8781 (119th Congress): Title IX Clarification Act of 2026\nCosponsor: Rep. Daniel Webster\nCosponsor: Rep. Russell Fry\nCosponsor: Rep. Brad Finstad\nCosponsor: Rep. John W. Rose\nCosponsor: Rep. Pat Harrigan\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/8781",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/8781",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-05-19",
+    "persons": [
+      "W000806",
+      "F000478",
+      "F000475",
+      "R000612",
+      "H001101"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/8781"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

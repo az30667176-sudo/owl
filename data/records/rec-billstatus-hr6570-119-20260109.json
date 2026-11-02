@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr6570-119-20260109",
+  "content": "<other>: H.R. 6570 (119th Congress): Merger Agreement Approvals Clarity and Predictability Act\nCosponsor: Rep. Michael Lawler\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/6570",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/6570",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-01-09",
+    "persons": [
+      "L000599"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/6570"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

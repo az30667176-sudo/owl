@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr1569-119-20250401",
+  "content": "<other>: H.R. 1569 (119th Congress): CATCH Fentanyl Act\nCosponsor: Rep. Josh Gottheimer\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1569",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1569",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-04-01",
+    "persons": [
+      "G000583"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1569"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

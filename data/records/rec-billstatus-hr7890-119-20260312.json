@@ -1,0 +1,24 @@
+{
+  "id": "rec-billstatus-hr7890-119-20260312",
+  "content": "<other>: H.R. 7890 (119th Congress): Science of Reading Act of 2026\nSponsor: Rep. Erin Houchin\nCosponsor: Rep. John W. Mannion\nCosponsor: Rep. Kevin Kiley\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/7890",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/7890",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-03-12",
+    "persons": [
+      "H001093",
+      "M001231",
+      "K000401"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/7890"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

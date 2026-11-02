@@ -1,0 +1,27 @@
+{
+  "id": "rec-billstatus-hr425-119-20250819",
+  "content": "<other>: H.R. 425 (119th Congress): Repealing Big Brother Overreach Act\nCosponsor: Rep. Ben Cline\nCosponsor: Rep. Michael T. McCaul\nCosponsor: Rep. Nick LaLota\nCosponsor: Rep. Jefferson Van Drew\nCosponsor: Rep. Blake D. Moore\nCosponsor: Rep. Maria Elvira Salazar\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/425",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/425",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-08-19",
+    "persons": [
+      "C001118",
+      "M001157",
+      "L000598",
+      "V000133",
+      "M001213",
+      "S000168"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/425"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

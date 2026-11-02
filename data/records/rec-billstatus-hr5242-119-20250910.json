@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr5242-119-20250910",
+  "content": "<other>: H.R. 5242 (119th Congress): To repeal the Second Chance Amendment Act of 2022 and the Incarceration Reduction Amendment Act of 2016.\nSponsor: Rep. David Kustoff\nSponsor: Rep. David Kustoff\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/5242",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/5242",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-09-10",
+    "persons": [
+      "K000392",
+      "K000392"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/5242"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

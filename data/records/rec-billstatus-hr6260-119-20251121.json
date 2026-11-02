@@ -1,0 +1,25 @@
+{
+  "id": "rec-billstatus-hr6260-119-20251121",
+  "content": "<other>: H.R. 6260 (119th Congress): Keeping Violent Offenders Off Our Streets Act of 2025\nSponsor: Rep. Scott Fitzgerald\nCosponsor: Rep. Chip Roy\nCosponsor: Rep. Tony Wied\nCosponsor: Rep. Bryan Steil\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/6260",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/6260",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-11-21",
+    "persons": [
+      "F000471",
+      "R000614",
+      "W000829",
+      "S001213"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/6260"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

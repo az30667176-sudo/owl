@@ -1,0 +1,25 @@
+{
+  "id": "rec-billstatus-hr7730-119-20260226",
+  "content": "<other>: H.R. 7730 (119th Congress): Bankruptcy Threshold Adjustment Act\nSponsor: Rep. Ben Cline\nCosponsor: Rep. J. Luis Correa\nCosponsor: Rep. Laurel M. Lee\nCosponsor: Rep. Joe Neguse\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/7730",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/7730",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-02-26",
+    "persons": [
+      "C001118",
+      "C001110",
+      "L000597",
+      "N000191"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/7730"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

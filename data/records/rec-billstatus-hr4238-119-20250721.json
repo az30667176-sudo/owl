@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr4238-119-20250721",
+  "content": "<other>: H.R. 4238 (119th Congress): DLARA\nCosponsor: Rep. Jefferson Shreve\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/4238",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/4238",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-07-21",
+    "persons": [
+      "S001229"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/4238"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

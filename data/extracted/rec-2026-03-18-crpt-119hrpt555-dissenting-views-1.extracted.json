@@ -1,0 +1,36 @@
+{
+  "record_id": "rec-2026-03-18-crpt-119hrpt555-dissenting-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:27:14.891Z",
+  "accepted": [
+    {
+      "person": "R000606",
+      "issue": "immigration-enforcement",
+      "date": "2026-03-18",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "This is a dangerous bill that has the potential to act as a blunt instrument to conduct mass deportations and strip individuals of their rights to due process under the Constitution and even this Supreme Court's most recent rulings.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt555/html/CRPT-119hrpt555.htm",
+      "record_id": "rec-2026-03-18-crpt-119hrpt555-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote opposes legislation enabling mass deportations and removal of due process protections."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1117,
+    "prompt_tokens": 3685,
+    "total_tokens": 4802,
+    "completion_tokens_details": {
+      "reasoning_tokens": 994
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

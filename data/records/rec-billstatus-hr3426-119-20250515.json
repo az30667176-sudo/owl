@@ -1,0 +1,24 @@
+{
+  "id": "rec-billstatus-hr3426-119-20250515",
+  "content": "<other>: H.R. 3426 (119th Congress): Courthouse Affordability and Space Efficiency Act of 2025\nSponsor: Rep. Jefferson Shreve\nCosponsor: Rep. Eleanor Holmes Norton\nSponsor: Rep. Jefferson Shreve\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/3426",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/3426",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-05-15",
+    "persons": [
+      "S001229",
+      "N000147",
+      "S001229"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/3426"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

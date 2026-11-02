@@ -1,0 +1,51 @@
+{
+  "record_id": "rec-2025-03-18-crpt-119hrpt18-dissenting-views-2",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:28:32.521Z",
+  "accepted": [
+    {
+      "person": "N000015",
+      "issue": "federal-workforce-and-ethics",
+      "date": "2025-03-18",
+      "score": 1,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "what we are seeking today is simply transparency from the Trump Administration and DOGE as to what they have done behind closed doors at agencies that carry sensitive, personal information of every American taxpayer.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt18/html/CRPT-119hrpt18.htm",
+      "record_id": "rec-2025-03-18-crpt-119hrpt18-dissenting-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Neal states support for congressional oversight resolutions seeking transparency about DOGE access to sensitive taxpayer data."
+    },
+    {
+      "person": "N000015",
+      "issue": "social-security",
+      "date": "2025-03-18",
+      "score": 1,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Democrats are fighting to protect the 70 million Social Security beneficiaries from an out-of-control executive branch, and to protect the sensitive data of every American.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt18/html/CRPT-119hrpt18.htm",
+      "record_id": "rec-2025-03-18-crpt-119hrpt18-dissenting-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Neal expresses support for protecting Social Security beneficiaries from executive branch actions."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1558,
+    "prompt_tokens": 3160,
+    "total_tokens": 4718,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1306
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

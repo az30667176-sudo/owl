@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr4242-119-20251008",
+  "content": "<other>: H.R. 4242 (119th Congress): Innovate Less Lethal to De-Escalate Tax Modernization Act\nCosponsor: Rep. Ashley Hinson\nCosponsor: Rep. Beth Van Duyne\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/4242",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/4242",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-10-08",
+    "persons": [
+      "H001091",
+      "V000134"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/4242"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

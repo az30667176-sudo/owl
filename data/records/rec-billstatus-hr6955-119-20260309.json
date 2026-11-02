@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr6955-119-20260309",
+  "content": "<other>: H.R. 6955 (119th Congress): Main Street Capital Access Act\nCosponsor: Rep. Ken Calvert\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/6955",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/6955",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-03-09",
+    "persons": [
+      "C000059"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/6955"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

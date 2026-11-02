@@ -1,0 +1,62 @@
+{
+  "record_id": "rec-2026-02-04-crpt-119hrpt482-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:28:41.699Z",
+  "accepted": [
+    {
+      "person": "P000034",
+      "issue": "state-and-local-energy-authority",
+      "date": "2026-02-04",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The federal government has no business interfering in state and local efforts to keep communities safe.",
+      "bill": "H.R. 3699",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt482/html/CRPT-119hrpt482.htm",
+      "record_id": "rec-2026-02-04-crpt-119hrpt482-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote directly supports preserving state and local authority over energy and safety regulation against federal interference."
+    },
+    {
+      "person": "P000034",
+      "issue": "clean-energy-development",
+      "date": "2026-02-04",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Republicans should focus on stopping the President's attack on clean, cheap energy instead of limiting state and local officials' ability to enforce safety codes.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt482/html/CRPT-119hrpt482.htm",
+      "record_id": "rec-2026-02-04-crpt-119hrpt482-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote urges stopping attacks on clean energy, indicating support for clean energy development."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "state-and-local-energy-authority",
+      "name": "State and Local Energy Authority",
+      "parent": "hsif-energy"
+    },
+    {
+      "id": "clean-energy-development",
+      "name": "Clean Energy Development",
+      "parent": "hsif-energy"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 2893,
+    "prompt_tokens": 3298,
+    "total_tokens": 6191,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2679
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

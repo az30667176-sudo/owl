@@ -1,0 +1,32 @@
+{
+  "id": "rec-billstatus-hr1262-119-20250212",
+  "content": "<other>: H.R. 1262 (119th Congress): Mikaela Naylon Give Kids a Chance Act\nSponsor: Rep. Michael T. McCaul\nCosponsor: Rep. Gus M. Bilirakis\nCosponsor: Rep. Debbie Dingell\nCosponsor: Rep. Kim Schrier\nCosponsor: Rep. Diana Harshbarger\nCosponsor: Rep. Doris O. Matsui\nCosponsor: Rep. Dan Crenshaw\nCosponsor: Rep. Kathy Castor\nCosponsor: Rep. Mike Kelly\nCosponsor: Rep. Lori Trahan\nCosponsor: Rep. Randy K. Weber, Sr.\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1262",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1262",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-12",
+    "persons": [
+      "M001157",
+      "B001257",
+      "D000624",
+      "S001216",
+      "H001086",
+      "M001163",
+      "C001120",
+      "C001066",
+      "K000376",
+      "T000482",
+      "W000814"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1262"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

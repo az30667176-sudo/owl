@@ -1,0 +1,27 @@
+{
+  "id": "rec-billstatus-hr556-119-20250121",
+  "content": "<other>: H.R. 556 (119th Congress): Protecting Access for Hunters and Anglers Act\nCosponsor: Rep. Paul A. Gosar\nCosponsor: Rep. Burgess Owens\nCosponsor: Rep. Keith Self\nCosponsor: Rep. John R. Carter\nCosponsor: Rep. Glenn Grothman\nCosponsor: Rep. Sheri Biggs\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/556",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/556",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-01-21",
+    "persons": [
+      "G000565",
+      "O000086",
+      "S001224",
+      "C001051",
+      "G000576",
+      "B001325"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/556"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

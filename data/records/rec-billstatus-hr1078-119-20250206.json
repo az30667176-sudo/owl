@@ -1,0 +1,40 @@
+{
+  "id": "rec-billstatus-hr1078-119-20250206",
+  "content": "<other>: H.R. 1078 (119th Congress): Respect State Housing Laws Act\nSponsor: Rep. Barry Loudermilk\nCosponsor: Rep. Vicente Gonzalez\nCosponsor: Rep. Ralph Norman\nCosponsor: Rep. Andrew S. Clyde\nCosponsor: Rep. John H. Rutherford\nCosponsor: Rep. Andy Barr\nCosponsor: Rep. David Kustoff\nCosponsor: Rep. Tracey Mann\nCosponsor: Rep. Andrew Ogles\nCosponsor: Rep. Richard Hudson\nCosponsor: Rep. Scott Franklin\nCosponsor: Rep. Steve Womack\nCosponsor: Rep. Glenn Grothman\nCosponsor: Rep. Morgan Luttrell\nCosponsor: Rep. William R. Timmons IV\nCosponsor: Rep. Andy Biggs\nCosponsor: Rep. Pete Stauber\nCosponsor: Rep. Richard McCormick\nSponsor: Rep. Barry Loudermilk\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1078",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1078",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-06",
+    "persons": [
+      "L000583",
+      "G000581",
+      "N000190",
+      "C001116",
+      "R000609",
+      "B001282",
+      "K000392",
+      "M000871",
+      "O000175",
+      "H001067",
+      "F000472",
+      "W000809",
+      "G000576",
+      "L000603",
+      "T000480",
+      "B001302",
+      "S001212",
+      "M001218",
+      "L000583"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1078"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr4213-119-20250626",
+  "content": "<other>: H.R. 4213 (119th Congress): Department of Homeland Security Appropriations Act, 2026\nSponsor: Rep. Mark E. Amodei\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/4213",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/4213",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-06-26",
+    "persons": [
+      "A000369"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/4213"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

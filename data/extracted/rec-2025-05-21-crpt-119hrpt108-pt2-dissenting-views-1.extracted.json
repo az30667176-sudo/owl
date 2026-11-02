@@ -1,0 +1,57 @@
+{
+  "record_id": "rec-2025-05-21-crpt-119hrpt108-pt2-dissenting-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:28:02.808Z",
+  "accepted": [
+    {
+      "person": "R000606",
+      "issue": "small-business-regulatory-review",
+      "date": "2025-05-21",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "H.R. 1163, the Prove It Act of 2025, is yet another effort by the Republican Majority to hamstring federal agencies and undermine the rules that keep us all safe.",
+      "bill": "H.R. 1163 Prove It Act of 2025",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt108/html/CRPT-119hrpt108-pt2.htm",
+      "record_id": "rec-2025-05-21-crpt-119hrpt108-pt2-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote directly opposes the bill that would expand SBA regulatory review authority."
+    },
+    {
+      "person": "R000606",
+      "issue": "environmental-regulation",
+      "date": "2025-05-21",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "As a result, critical protections for clean air, clean water, safe food, and other lifesaving regulations, including those that protect small businesses, could all be dismantled with the stroke of a pen.",
+      "bill": "H.R. 1163 Prove It Act of 2025",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt108/html/CRPT-119hrpt108-pt2.htm",
+      "record_id": "rec-2025-05-21-crpt-119hrpt108-pt2-dissenting-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote expresses support for clean air, clean water, and food safety protections by warning against their dismantling."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "small-business-regulatory-review",
+      "name": "Small Business Regulatory Review",
+      "parent": "hssm-oversight"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 2586,
+    "prompt_tokens": 3518,
+    "total_tokens": 6104,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2320
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

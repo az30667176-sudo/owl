@@ -1,0 +1,29 @@
+{
+  "id": "rec-billstatus-hr1262-119-20250902",
+  "content": "<other>: H.R. 1262 (119th Congress): Mikaela Naylon Give Kids a Chance Act\nCosponsor: Rep. Mariannette Miller-Meeks\nCosponsor: Rep. David Kustoff\nCosponsor: Rep. Michael Cloud\nCosponsor: Rep. Robert Menendez\nCosponsor: Rep. Joe Neguse\nCosponsor: Rep. Daniel S. Goldman\nCosponsor: Rep. Mike Ezell\nCosponsor: Rep. Pat Harrigan\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1262",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1262",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-09-02",
+    "persons": [
+      "M001215",
+      "K000392",
+      "C001115",
+      "M001226",
+      "N000191",
+      "G000599",
+      "E000235",
+      "H001101"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1262"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

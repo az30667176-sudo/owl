@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr7889-119-20260406",
+  "content": "<other>: H.R. 7889 (119th Congress): AWRC Act of 2025\nCosponsor: Rep. Jennifer A. Kiggans\nCosponsor: Rep. April McClain Delaney\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/7889",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/7889",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-04-06",
+    "persons": [
+      "K000399",
+      "M001232"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/7889"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

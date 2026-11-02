@@ -1,0 +1,24 @@
+{
+  "id": "rec-billstatus-hr7128-119-20260122",
+  "content": "<other>: H.R. 7128 (119th Congress): TRIA Program Reauthorization Act of 2026\nCosponsor: Rep. Emanuel Cleaver\nCosponsor: Rep. Nydia M. Velázquez\nCosponsor: Rep. Ayanna Pressley\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/7128",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/7128",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-01-22",
+    "persons": [
+      "C001061",
+      "V000081",
+      "P000617"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/7128"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

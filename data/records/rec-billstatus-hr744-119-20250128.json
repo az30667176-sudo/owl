@@ -1,0 +1,31 @@
+{
+  "id": "rec-billstatus-hr744-119-20250128",
+  "content": "<other>: H.R. 744 (119th Congress): Disaster Management Costs Modernization Act\nSponsor: Rep. Joe Neguse\nCosponsor: Rep. Mike Ezell\nCosponsor: Rep. Josh Harder\nCosponsor: Rep. Greg Stanton\nCosponsor: Rep. Melanie A. Stansbury\nCosponsor: Rep. Suzanne Bonamici\nCosponsor: Rep. Pramila Jayapal\nCosponsor: Rep. Dina Titus\nCosponsor: Rep. Jamie Raskin\nSponsor: Rep. Joe Neguse\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/744",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/744",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-01-28",
+    "persons": [
+      "N000191",
+      "E000235",
+      "H001090",
+      "S001211",
+      "S001218",
+      "B001278",
+      "J000298",
+      "T000468",
+      "R000606",
+      "N000191"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/744"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

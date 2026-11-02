@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr839-119-20250131",
+  "content": "<other>: H.R. 839 (119th Congress): No FED in West Texas Act\nSponsor: Rep. Jodey C. Arrington\nSponsor: Rep. Jodey C. Arrington\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/839",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/839",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-01-31",
+    "persons": [
+      "A000375",
+      "A000375"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/839"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

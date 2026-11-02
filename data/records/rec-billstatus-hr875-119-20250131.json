@@ -1,0 +1,41 @@
+{
+  "id": "rec-billstatus-hr875-119-20250131",
+  "content": "<other>: H.R. 875 (119th Congress): Jeremy and Angel Seay and Sergeant Brandon Mendoza Protect Our Communities from DUIs Act of 2025\nSponsor: Rep. Barry Moore\nCosponsor: Rep. Eric Burlison\nCosponsor: Rep. Troy Downing\nCosponsor: Rep. Paul A. Gosar\nCosponsor: Rep. Harriet M. Hageman\nCosponsor: Rep. Nancy Mace\nCosponsor: Rep. Daniel Meuser\nCosponsor: Rep. Troy E. Nehls\nCosponsor: Rep. Andrew Ogles\nCosponsor: Rep. Derek Schmidt\nCosponsor: Rep. Keith Self\nCosponsor: Rep. Jefferson Van Drew\nCosponsor: Rep. Randy K. Weber, Sr.\nCosponsor: Rep. Scott Franklin\nCosponsor: Rep. Darrell Issa\nCosponsor: Rep. Mary E. Miller\nCosponsor: Rep. Lance Gooden\nCosponsor: Rep. Mark Harris\nCosponsor: Rep. Randy Feenstra\nCosponsor: Rep. Brandon Gill\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/875",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/875",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-01-31",
+    "persons": [
+      "M001212",
+      "B001316",
+      "D000634",
+      "G000565",
+      "H001096",
+      "M000194",
+      "M001204",
+      "N000026",
+      "O000175",
+      "S001228",
+      "S001224",
+      "V000133",
+      "W000814",
+      "F000472",
+      "I000056",
+      "M001211",
+      "G000589",
+      "H001102",
+      "F000446",
+      "G000603"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/875"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

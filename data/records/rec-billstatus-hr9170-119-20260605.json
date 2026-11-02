@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr9170-119-20260605",
+  "content": "<other>: H.R. 9170 (119th Congress): Transportation, Housing and Urban Development, and Related Agencies Appropriations Act, 2027\nSponsor: Rep. Steve Womack\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/9170",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/9170",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-06-05",
+    "persons": [
+      "W000809"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/9170"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

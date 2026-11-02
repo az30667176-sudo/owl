@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr9310-119-20260612",
+  "content": "<other>: H.R. 9310 (119th Congress): Department of Homeland Security Appropriations Act, 2027\nSponsor: Rep. Mark E. Amodei\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/9310",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/9310",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-06-12",
+    "persons": [
+      "A000369"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/9310"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

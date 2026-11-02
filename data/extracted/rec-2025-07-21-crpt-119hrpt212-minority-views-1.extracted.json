@@ -1,0 +1,51 @@
+{
+  "record_id": "rec-2025-07-21-crpt-119hrpt212-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:26:32.067Z",
+  "accepted": [
+    {
+      "person": "D000216",
+      "issue": "transportation-and-hud-appropriations",
+      "date": "2025-07-21",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "This bill represents a step in the wrong direction for America. The Republican majority's Fiscal Year 2026 appropriations bill for the Subcommittee on Transportation, Housing and Urban Development and Related Agencies (T-HUD) cuts discretionary spending by $6 million, or 6 percent, for critical transportation, housing, and community development programs.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt212/html/CRPT-119hrpt212.htm",
+      "record_id": "rec-2025-07-21-crpt-119hrpt212-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage characterizes the FY2026 T-HUD appropriations bill as the wrong direction and criticizes its spending cuts."
+    },
+    {
+      "person": "C000537",
+      "issue": "transportation-and-hud-appropriations",
+      "date": "2025-07-21",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "This bill represents a step in the wrong direction for America. The Republican majority's Fiscal Year 2026 appropriations bill for the Subcommittee on Transportation, Housing and Urban Development and Related Agencies (T-HUD) cuts discretionary spending by $6 million, or 6 percent, for critical transportation, housing, and community development programs.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt212/html/CRPT-119hrpt212.htm",
+      "record_id": "rec-2025-07-21-crpt-119hrpt212-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage characterizes the FY2026 T-HUD appropriations bill as the wrong direction and criticizes its spending cuts."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2312,
+    "prompt_tokens": 3887,
+    "total_tokens": 6199,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2003
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

@@ -1,0 +1,66 @@
+{
+  "record_id": "rec-2025-03-05-crpt-119hrpt13-minority-views-2",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:46:55.070Z",
+  "accepted": [
+    {
+      "person": "S000185",
+      "issue": "k-12-education",
+      "date": "2025-03-05",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For the reasons stated above, we urge the House of Representatives to oppose H.R. 1049.",
+      "bill": "H.R. 1049",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt13/html/CRPT-119hrpt13.htm",
+      "record_id": "rec-2025-03-05-crpt-119hrpt13-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage explicitly urges opposition to H.R. 1049."
+    },
+    {
+      "person": "D000623",
+      "issue": "k-12-education",
+      "date": "2025-03-05",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For the reasons stated above, we urge the House of Representatives to oppose H.R. 1049.",
+      "bill": "H.R. 1049",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt13/html/CRPT-119hrpt13.htm",
+      "record_id": "rec-2025-03-05-crpt-119hrpt13-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage explicitly urges opposition to H.R. 1049."
+    },
+    {
+      "person": "L000602",
+      "issue": "k-12-education",
+      "date": "2025-03-05",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For the reasons stated above, we urge the House of Representatives to oppose H.R. 1049.",
+      "bill": "H.R. 1049",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt13/html/CRPT-119hrpt13.htm",
+      "record_id": "rec-2025-03-05-crpt-119hrpt13-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage explicitly urges opposition to H.R. 1049."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2245,
+    "prompt_tokens": 3939,
+    "total_tokens": 6184,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1962
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

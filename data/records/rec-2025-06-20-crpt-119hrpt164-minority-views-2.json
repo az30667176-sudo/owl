@@ -1,0 +1,32 @@
+{
+  "id": "rec-2025-06-20-crpt-119hrpt164-minority-views-2",
+  "content": "<Rep. Maxine Waters, Rep. Nydia M. Velázquez, Rep. Stephen F. Lynch, Rep. Al Green, Rep. Emanuel Cleaver, Rep. Bill Foster, Rep. Joyce Beatty, Rep. Juan Vargas, Rep. Rashida Tlaib, Rep. Sylvia R. Garcia, Rep. Nikema Williams>: \\18\\See AFR et al, Letter to Senate Banking Committee re FIRM Act (Mar. 13, 2025).\nFor these reasons, we oppose H.R. 2702.\nSincerely,\nMaxine Waters,\nRanking Member.\nNydia M. Velazquez,\nStephen F. Lynch,\nAl Green,\nEmanuel Cleaver, II,\nBill Foster,\nJoyce Beatty,\nJuan Vargas,\nRashida Tlaib,\nSylvia R. Garcia,\nNikema Williams,\nMembers of Congress.",
+  "source": {
+    "url_link": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt164/html/CRPT-119hrpt164.htm",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-06-20",
+    "persons": [
+      "W000187",
+      "V000081",
+      "L000562",
+      "G000553",
+      "C001061",
+      "F000454",
+      "B001281",
+      "V000130",
+      "T000481",
+      "G000587",
+      "W000788"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2702",
+      "https://www.congress.gov/bill/119th-congress/senate-bill/875",
+      "https://www.congress.gov/bill/119th-congress/house-bill/2706",
+      "https://www.congress.gov/bill/119th-congress/senate-bill/4619"
+    ]
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "record_id": "rec-2026-06-02-crpt-119hrpt672-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:24:47.865Z",
+  "accepted": [
+    {
+      "person": "S000185",
+      "issue": "k-12-education",
+      "date": "2026-06-02",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "H.R. 7086 would make these changes at the expense of transparency, accountability, and oversight, as well as by taking funding away from charter school classrooms and students.",
+      "bill": "H.R. 7086, the Equitable Access to School Facilities Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt672/html/CRPT-119hrpt672.htm",
+      "record_id": "rec-2026-06-02-crpt-119hrpt672-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage defends classroom funding and accountability in charter schools by opposing changes that divert funds and reduce oversight."
+    },
+    {
+      "person": "B001278",
+      "issue": "k-12-education",
+      "date": "2026-06-02",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "H.R. 7086 would make these changes at the expense of transparency, accountability, and oversight, as well as by taking funding away from charter school classrooms and students.",
+      "bill": "H.R. 7086, the Equitable Access to School Facilities Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt672/html/CRPT-119hrpt672.htm",
+      "record_id": "rec-2026-06-02-crpt-119hrpt672-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage defends classroom funding and accountability in charter schools by opposing changes that divert funds and reduce oversight."
+    },
+    {
+      "person": "A000370",
+      "issue": "k-12-education",
+      "date": "2026-06-02",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "H.R. 7086 would make these changes at the expense of transparency, accountability, and oversight, as well as by taking funding away from charter school classrooms and students.",
+      "bill": "H.R. 7086, the Equitable Access to School Facilities Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt672/html/CRPT-119hrpt672.htm",
+      "record_id": "rec-2026-06-02-crpt-119hrpt672-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage defends classroom funding and accountability in charter schools by opposing changes that divert funds and reduce oversight."
+    },
+    {
+      "person": "D000623",
+      "issue": "k-12-education",
+      "date": "2026-06-02",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "H.R. 7086 would make these changes at the expense of transparency, accountability, and oversight, as well as by taking funding away from charter school classrooms and students.",
+      "bill": "H.R. 7086, the Equitable Access to School Facilities Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt672/html/CRPT-119hrpt672.htm",
+      "record_id": "rec-2026-06-02-crpt-119hrpt672-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage defends classroom funding and accountability in charter schools by opposing changes that divert funds and reduce oversight."
+    },
+    {
+      "person": "G000606",
+      "issue": "k-12-education",
+      "date": "2026-06-02",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "H.R. 7086 would make these changes at the expense of transparency, accountability, and oversight, as well as by taking funding away from charter school classrooms and students.",
+      "bill": "H.R. 7086, the Equitable Access to School Facilities Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt672/html/CRPT-119hrpt672.htm",
+      "record_id": "rec-2026-06-02-crpt-119hrpt672-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage defends classroom funding and accountability in charter schools by opposing changes that divert funds and reduce oversight."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2369,
+    "prompt_tokens": 4974,
+    "total_tokens": 7343,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1656
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

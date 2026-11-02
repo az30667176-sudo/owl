@@ -1,0 +1,29 @@
+{
+  "id": "rec-2025-06-25-crpt-119hrpt170-minority-views-1",
+  "content": "<Rep. Maxine Waters, Rep. Nydia M. Velázquez, Rep. Stephen F. Lynch, Rep. Al Green, Rep. Emanuel Cleaver, Rep. Bill Foster, Rep. Joyce Beatty, Rep. Juan Vargas, Rep. Rashida Tlaib, Rep. Sylvia R. Garcia, Rep. Nikema Williams>: This bill, previously referred to as CAMELS Rating Modernization Act, would require the Federal Financial Institutions Examination Council (FFIEC) to develop recommendations and modify their implementation of the CAMELS ratings framework, where depository institutions are given composite and component exam ratings for Capital adequacy, Asset quality, Management, Earnings, Liquidity, and Sensitivity to market risk (CAMELS).\\1\\ In doing so, regulators would either have to eliminate the management component or limit its use. The bill also eliminates the consideration of management with respect to certain provisions of the Bank Holding Company Act, including with respect to acquiring other banks and expanding the bank's financial activities. This will significantly diminish the ability to hold bank management accountable for their actions.\n\\1\\Federal Reserve Bank of St. Louis, The ABCs of CAMELS (Jul. 23, 2018).\nWhile large banks argue the management component is too subjective, being able to fully assess the adequacy of a bank's management capabilities, especially of a large, complex entity that enjoys several Federal benefits (deposit insurance, access to Fed discount window, access to Fed payment systems, etc.) has always been key to the safe and sound operation of a bank. Moreover, it is difficult for Congress or the public to assess whether bank examiners are being fair and consistent with the ratings they give for management or any aspect of the CAMELS ratings since these are confidential supervisory information. To improve accountability, some have proposed publicly releasing CAMELS ratings, including on a delay.\\2\\\n\\2\\See Aaron Klein, Why bank regulators should make their secret ratings public, Brookings (Feb. 27, 2020); Karen Petrou, Make Camels Ratings Public Already, American Banker (May 17, 2016); FSC, In Advance of Wells Fargo Hearings, Waters and Green Release Investigative Report Exposing Failures of Megabank's Management, Board, and Regulators (Mar. 4, 2020).\nIn the aftermath of Silicon Valley Bank's failure in 2023 that required regulators to invoke the systemic risk exception to prevent contagion from spreading into a larger financial crisis, the GAO conducted a review of the regulator's supervision of the bank at the request of former Chairman McHenry and Ranking Member Waters.\\3\\ GAO found that Fed examiners gave SVB many ``2'' ratings between 2018-2022, but by 2022, examiners gave the bank a ``3'' rating for mismanagement.\\4\\ GAO and others found that these problems should have been escalated faster to ensure the bank promptly addressed its management failures.\\5\\ If this bill were in place before then, examiners may have downplayed management problems if they focused exclusively on quantifiable data.\n\\3\\GAO, Bank Regulation: Preliminary Review of Agency Actions Related to March 2023 Bank Failures (Apr. 28, 2023).\n\\4\\Id.\n\\5\\GAO, Bank Supervision: More Timely Escalation of Supervisory Action Needed (Mar. 6, 2024).\nConsumer groups like Americans for Financial Reform (AFR) and Public Citizen are opposed to the bill. Moreover, a former Treasury official expressed strong concerns in recent testimony, saying ``A bank's managerial character and capacity has long been a foundational basis for evaluating whether a bank is worthy of receiving a charter or federal deposit insurance. . . . These factors may not be precisely quantifiable in the way a bank's capital ratio can be calculated, but we have seen time and again that public perception and confidence and sound management affect the stability of banks and the entire banking system . . .''\\6\\\n\\6\\Testimony of The Honorable Graham Steele, former Treasury Assistant Secretary for Financial Institutions before FSC hearing entitled, ``Regulatory Overreach: The Price Tag on American Prosperity'' (Apr. 29, 2025).\nDuring the debate, Ranking Member Waters offered an amendment to exempt megabanks over $1 trillion that a Federal regulator found in the past 10 years that the bank violated a federal law or regulation, and that they found the bank harmed more than 1 million consumers. This would ensure large banks like Wells Fargo, for example, that have been found to have repeatedly mismanaged their operations and repeatedly violated the law, resulting in extensive consumer harm, would continue to have their management scrutinized by bank regulators. This amendment was rejected by Republicans.\nFor these reasons, we oppose H.R. 3379.\nSincerely,\nMaxine Waters,\nRanking Member.\nNydia M. Velazquez,\nStephen F. Lynch,\nAl Green,\nEmanuel Cleaver, II,\nBill Foster,\nJoyce Beatty,\nJuan Vargas,\nRashida Tlaib,\nSylvia R. Garcia,\nNikema Williams,\nMembers of Congress.",
+  "source": {
+    "url_link": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt170/html/CRPT-119hrpt170.htm",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-06-25",
+    "persons": [
+      "W000187",
+      "V000081",
+      "L000562",
+      "G000553",
+      "C001061",
+      "F000454",
+      "B001281",
+      "V000130",
+      "T000481",
+      "G000587",
+      "W000788"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/3379"
+    ]
+  }
+}

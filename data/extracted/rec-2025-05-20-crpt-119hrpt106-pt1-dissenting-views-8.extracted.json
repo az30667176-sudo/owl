@@ -1,0 +1,81 @@
+{
+  "record_id": "rec-2025-05-20-crpt-119hrpt106-pt1-dissenting-views-8",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:45:36.698Z",
+  "accepted": [
+    {
+      "person": "H001068",
+      "issue": "mining-and-mineral-resources",
+      "date": "2025-05-20",
+      "score": -0.8,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Neither of the mining sections in this scorched-earth giveaway to polluters would bring common sense to our woefully antiquated General Mining Act of 1872.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt106/html/CRPT-119hrpt106-pt1.htm",
+      "record_id": "rec-2025-05-20-crpt-119hrpt106-pt1-dissenting-views-8",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage criticizes the mining provisions as a polluter giveaway that fails to reform mining law."
+    },
+    {
+      "person": "H001068",
+      "issue": "public-lands-and-parks",
+      "date": "2025-05-20",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The Boundary Waters in Northeastern Minnesota is a pristine wilderness. It is a treasure beloved by countless Americans and is the most visited Wilderness Area in the country.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt106/html/CRPT-119hrpt106-pt1.htm",
+      "record_id": "rec-2025-05-20-crpt-119hrpt106-pt1-dissenting-views-8",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage affirms the value of the Boundary Waters Wilderness Area in opposing mining leases nearby."
+    },
+    {
+      "person": "H001068",
+      "issue": "mining-and-mineral-resources",
+      "date": "2025-05-20",
+      "score": -0.8,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "the U.S. Forest Service concluded sulfide-ore copper mining--which is significantly different from the taconite mining the region is used to--could result in ``extreme'' and ``serious and irreparable harm'' in the watershed of this Wilderness Area.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt106/html/CRPT-119hrpt106-pt1.htm",
+      "record_id": "rec-2025-05-20-crpt-119hrpt106-pt1-dissenting-views-8",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage cites severe environmental harm to oppose sulfide-ore copper mining in the watershed."
+    },
+    {
+      "person": "H001068",
+      "issue": "environmental-review-nepa",
+      "date": "2025-05-20",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "In effect, this section allows well-financed project sponsors to buy a one-year EIS (or a six-month EA) and immunity from lawsuits and judicial or administrative accountability",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt106/html/CRPT-119hrpt106-pt1.htm",
+      "record_id": "rec-2025-05-20-crpt-119hrpt106-pt1-dissenting-views-8",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage criticizes the pay-to-play provision for undermining adequate NEPA review and accountability."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2554,
+    "prompt_tokens": 4831,
+    "total_tokens": 7385,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2105
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "finish_reason": "stop"
+}

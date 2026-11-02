@@ -1,0 +1,36 @@
+{
+  "record_id": "rec-2025-10-14-crpt-119hrpt342-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:30:01.672Z",
+  "accepted": [
+    {
+      "person": "G000598",
+      "issue": "district-of-columbia-governance",
+      "date": "2025-10-14",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "super_high",
+      "llm_confidence": "high",
+      "quote": "Democrats strongly oppose H.R. 5163, a bill to fine and criminalize the homeless in the District of Columbia.",
+      "bill": "H.R. 5163",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt342/html/CRPT-119hrpt342.htm",
+      "record_id": "rec-2025-10-14-crpt-119hrpt342-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote explicitly opposes a bill to fine and jail homeless people in D.C., supporting the negative score."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1711,
+    "prompt_tokens": 2925,
+    "total_tokens": 4636,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1589
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

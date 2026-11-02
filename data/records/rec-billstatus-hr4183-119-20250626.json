@@ -1,0 +1,25 @@
+{
+  "id": "rec-billstatus-hr4183-119-20250626",
+  "content": "<other>: H.R. 4183 (119th Congress): Federal Maritime Commission Reauthorization Act of 2025\nSponsor: Rep. Dusty Johnson\nCosponsor: Rep. John Garamendi\nCosponsor: Rep. Mike Ezell\nCosponsor: Rep. Salud O. Carbajal\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/4183",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/4183",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-06-26",
+    "persons": [
+      "J000301",
+      "G000559",
+      "E000235",
+      "C001112"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/4183"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

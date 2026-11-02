@@ -1,0 +1,24 @@
+{
+  "id": "rec-billstatus-hr787-119-20250128",
+  "content": "<other>: H.R. 787 (119th Congress): Plain Language in Contracting Act\nSponsor: Rep. Nick LaLota\nCosponsor: Rep. Derek Tran\nCosponsor: Rep. Shri Thanedar\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/787",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/787",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-01-28",
+    "persons": [
+      "L000598",
+      "T000491",
+      "T000488"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/787"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

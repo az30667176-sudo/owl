@@ -1,0 +1,27 @@
+{
+  "id": "rec-billstatus-hr302-119-20250109",
+  "content": "<other>: H.R. 302 (119th Congress): Water Rights Protection Act\nSponsor: Rep. Celeste Maloy\nCosponsor: Rep. Blake D. Moore\nCosponsor: Rep. Russ Fulcher\nCosponsor: Rep. Andy Biggs\nCosponsor: Rep. Ron Estes\nSponsor: Rep. Celeste Maloy\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/302",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/302",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-01-09",
+    "persons": [
+      "M001228",
+      "M001213",
+      "F000469",
+      "B001302",
+      "E000298",
+      "M001228"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/302"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

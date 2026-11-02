@@ -1,0 +1,29 @@
+{
+  "id": "rec-billstatus-hr1262-119-20250311",
+  "content": "<other>: H.R. 1262 (119th Congress): Mikaela Naylon Give Kids a Chance Act\nCosponsor: Rep. John J. McGuire III\nCosponsor: Rep. Tracey Mann\nCosponsor: Rep. Jennifer A. Kiggans\nCosponsor: Rep. Teresa Leger Fernandez\nCosponsor: Rep. Mike Quigley\nCosponsor: Rep. Emanuel Cleaver\nCosponsor: Rep. Claudia Tenney\nCosponsor: Rep. Raja Krishnamoorthi\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1262",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1262",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-03-11",
+    "persons": [
+      "M001239",
+      "M000871",
+      "K000399",
+      "L000273",
+      "Q000023",
+      "C001061",
+      "T000478",
+      "K000391"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1262"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

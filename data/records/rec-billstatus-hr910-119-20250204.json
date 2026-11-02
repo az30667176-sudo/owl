@@ -1,0 +1,24 @@
+{
+  "id": "rec-billstatus-hr910-119-20250204",
+  "content": "<other>: H.R. 910 (119th Congress): Taiwan Non-Discrimination Act of 2025\nSponsor: Rep. Young Kim\nCosponsor: Rep. Al Green\nSponsor: Rep. Young Kim\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/910",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/910",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-04",
+    "persons": [
+      "K000397",
+      "G000553",
+      "K000397"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/910"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

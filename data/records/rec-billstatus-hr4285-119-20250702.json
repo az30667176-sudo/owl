@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr4285-119-20250702",
+  "content": "<other>: H.R. 4285 (119th Congress): STARS Act\nSponsor: Rep. Celeste Maloy\nSponsor: Rep. Celeste Maloy\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/4285",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/4285",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-07-02",
+    "persons": [
+      "M001228",
+      "M001228"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/4285"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

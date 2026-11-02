@@ -1,0 +1,31 @@
+{
+  "id": "rec-billstatus-hr4312-119-20250710",
+  "content": "<other>: H.R. 4312 (119th Congress): SCORE Act\nSponsor: Rep. Gus M. Bilirakis\nCosponsor: Rep. Janelle S. Bynum\nCosponsor: Rep. Brett Guthrie\nCosponsor: Rep. Tim Walberg\nCosponsor: Rep. Jim Jordan\nCosponsor: Rep. Shomari Figures\nCosponsor: Rep. Lisa C. McClain\nCosponsor: Rep. Scott Fitzgerald\nCosponsor: Rep. Russell Fry\nSponsor: Rep. Gus M. Bilirakis\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/4312",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/4312",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-07-10",
+    "persons": [
+      "B001257",
+      "B001326",
+      "G000558",
+      "W000798",
+      "J000289",
+      "F000481",
+      "M001136",
+      "F000471",
+      "F000478",
+      "B001257"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/4312"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

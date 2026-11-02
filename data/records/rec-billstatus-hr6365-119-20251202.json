@@ -1,0 +1,30 @@
+{
+  "id": "rec-billstatus-hr6365-119-20251202",
+  "content": "<other>: H.R. 6365 (119th Congress): Wintergreen Emergency Egress Act\nSponsor: Rep. John J. McGuire III\nCosponsor: Rep. Robert J. Wittman\nCosponsor: Rep. Jennifer L. McClellan\nCosponsor: Rep. H. Morgan Griffith\nCosponsor: Rep. Eugene Simon Vindman\nCosponsor: Rep. Ben Cline\nCosponsor: Rep. James R. Walkinshaw\nCosponsor: Rep. Jennifer A. Kiggans\nSponsor: Rep. John J. McGuire III\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/6365",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/6365",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-12-02",
+    "persons": [
+      "M001239",
+      "W000804",
+      "M001227",
+      "G000568",
+      "V000138",
+      "C001118",
+      "W000831",
+      "K000399",
+      "M001239"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/6365"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

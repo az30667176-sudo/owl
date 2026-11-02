@@ -1,0 +1,42 @@
+{
+  "record_id": "rec-2025-12-30-crpt-119hrpt418-additional-views-2",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:28:51.931Z",
+  "accepted": [
+    {
+      "person": "P000610",
+      "issue": "haiti-hope-help-trade-preferences",
+      "date": "2025-12-30",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Given the cascading job losses and extreme security crisis, Haiti cannot afford to wait any longer for reauthorization of the vital program.",
+      "bill": "Haiti Economic Lift Program Extension Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt418/html/CRPT-119hrpt418.htm",
+      "record_id": "rec-2025-12-30-crpt-119hrpt418-additional-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The speaker calls HOPE/HELP vital and says reauthorization cannot wait, indicating strong support for extension."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "haiti-hope-help-trade-preferences",
+      "name": "Haiti HOPE/HELP Trade Preferences",
+      "parent": "hsfa"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 1796,
+    "prompt_tokens": 3152,
+    "total_tokens": 4948,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1648
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

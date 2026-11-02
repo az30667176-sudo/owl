@@ -1,0 +1,24 @@
+{
+  "id": "rec-billstatus-hr425-119-20250224",
+  "content": "<other>: H.R. 425 (119th Congress): Repealing Big Brother Overreach Act\nCosponsor: Rep. Mike Carey\nCosponsor: Rep. Gabe Evans\nCosponsor: Rep. Randy Feenstra\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/425",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/425",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-24",
+    "persons": [
+      "C001126",
+      "E000300",
+      "F000446"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/425"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr9022-119-20260522",
+  "content": "<other>: H.R. 9022 (119th Congress): Energy and Water Development and Related Agencies Appropriations Act, 2027\nSponsor: Rep. Charles J. \"Chuck\" Fleischmann\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/9022",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/9022",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-05-22",
+    "persons": [
+      "F000459"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/9022"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "record_id": "rec-2026-05-26-crpt-119hrpt669-supplemental-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:24:45.528Z",
+  "accepted": [
+    {
+      "person": "S000185",
+      "issue": "higher-education-and-student-aid",
+      "date": "2026-05-26",
+      "score": -0.6,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "While, in theory, the framework proposed under the bill would help mitigate identity fraud in student aid, Committee Democrats have concerns around the necessity of the legislation and potential weaponization new oversight mechanisms to target specific institutions.",
+      "bill": "H.R. 7892, the No Aid for Ghost Students Act of 2026",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt669/html/CRPT-119hrpt669.htm",
+      "record_id": "rec-2026-05-26-crpt-119hrpt669-supplemental-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage expresses concern about the necessity of the legislation and risk of weaponization, indicating opposition to the bill as drafted."
+    },
+    {
+      "person": "S000185",
+      "issue": "higher-education-and-student-aid",
+      "date": "2026-05-26",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "It is critical for Office of Federal Student Aid (FSA) to prevent any waste, fraud, and abuse of the federal student aid system.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt669/html/CRPT-119hrpt669.htm",
+      "record_id": "rec-2026-05-26-crpt-119hrpt669-supplemental-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The sentence endorses preventing waste, fraud, and abuse in federal student aid, indicating support for fraud prevention."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1996,
+    "prompt_tokens": 5074,
+    "total_tokens": 7070,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1703
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

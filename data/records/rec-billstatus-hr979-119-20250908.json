@@ -1,0 +1,26 @@
+{
+  "id": "rec-billstatus-hr979-119-20250908",
+  "content": "<other>: H.R. 979 (119th Congress): AM Radio for Every Vehicle Act of 2025\nCosponsor: Rep. Madeleine Dean\nCosponsor: Rep. Russ Fulcher\nCosponsor: Rep. Jonathan L. Jackson\nCosponsor: Rep. Adam Smith\nCosponsor: Rep. Barry Moore\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/979",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/979",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-09-08",
+    "persons": [
+      "D000631",
+      "F000469",
+      "J000309",
+      "S000510",
+      "M001212"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/979"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

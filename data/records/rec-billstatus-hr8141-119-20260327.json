@@ -1,0 +1,24 @@
+{
+  "id": "rec-billstatus-hr8141-119-20260327",
+  "content": "<other>: H.R. 8141 (119th Congress): Fair Credit Reporting Reseller Accuracy Act\nSponsor: Rep. Michael Lawler\nCosponsor: Rep. Josh Gottheimer\nSponsor: Rep. Michael Lawler\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/8141",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/8141",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-03-27",
+    "persons": [
+      "L000599",
+      "G000583",
+      "L000599"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/8141"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "rec-billstatus-hr1569-119-20250225",
+  "content": "<other>: H.R. 1569 (119th Congress): CATCH Fentanyl Act\nSponsor: Rep. Clay Higgins\nCosponsor: Rep. Seth Magaziner\nCosponsor: Rep. Carlos A. Gimenez\nCosponsor: Rep. Daniel S. Goldman\nCosponsor: Rep. Mark E. Green\nCosponsor: Rep. Mike Haridopolos\nCosponsor: Rep. Donald G. Davis\nCosponsor: Rep. Cleo Fields\nCosponsor: Rep. Gabe Evans\nCosponsor: Rep. Josh Riley\nCosponsor: Rep. Angie Craig\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1569",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1569",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-25",
+    "persons": [
+      "H001077",
+      "M001223",
+      "G000593",
+      "G000599",
+      "G000590",
+      "H001099",
+      "D000230",
+      "F000110",
+      "E000300",
+      "R000622",
+      "C001119"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1569"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

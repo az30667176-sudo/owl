@@ -1,0 +1,51 @@
+{
+  "record_id": "rec-2026-02-20-crpt-119hrpt499-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:28:44.150Z",
+  "accepted": [
+    {
+      "person": "V000081",
+      "issue": "financial-services-appropriations",
+      "date": "2026-02-20",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The single most effective action that can be taken to help the OIG recover funds is to ensure that they have adequate funding.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt499/html/CRPT-119hrpt499.htm",
+      "record_id": "rec-2026-02-20-crpt-119hrpt499-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Velazquez argues the SBA OIG needs sufficient funding to pursue fraud investigations and recoveries."
+    },
+    {
+      "person": "V000081",
+      "issue": "small-business-cyber-and-fraud",
+      "date": "2026-02-20",
+      "score": -0.6,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "mid",
+      "quote": "While the ``Put America on Commission Act 2026'' would establish a mechanism to report fraud to SBA, there are already ways for individuals to report potential fraud.",
+      "bill": "H.R. 7129 Put America on Commission Act 2026",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt499/html/CRPT-119hrpt499.htm",
+      "record_id": "rec-2026-02-20-crpt-119hrpt499-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Velazquez suggests the bill's new fraud-reporting mechanism is duplicative of existing OIG and other reporting channels."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2649,
+    "prompt_tokens": 3385,
+    "total_tokens": 6034,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2417
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

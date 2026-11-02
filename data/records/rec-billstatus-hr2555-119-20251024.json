@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr2555-119-20251024",
+  "content": "<other>: H.R. 2555 (119th Congress): Freedom of Association in Higher Education Act of 2026\nCosponsor: Rep. Blake D. Moore\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2555",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2555",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-10-24",
+    "persons": [
+      "M001213"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2555"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

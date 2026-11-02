@@ -1,0 +1,26 @@
+{
+  "id": "rec-billstatus-hr1642-119-20250226",
+  "content": "<other>: H.R. 1642 (119th Congress): Connecting Small Businesses with Career and Technical Education Graduates Act of 2025\nSponsor: Rep. Roger Williams\nCosponsor: Rep. Johnny Olszewski, Jr.\nCosponsor: Rep. Robert P. Bresnahan, Jr.\nCosponsor: Rep. Derek Tran\nCosponsor: Rep. Tony Wied\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1642",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1642",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-26",
+    "persons": [
+      "W000816",
+      "O000176",
+      "B001327",
+      "T000491",
+      "W000829"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1642"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

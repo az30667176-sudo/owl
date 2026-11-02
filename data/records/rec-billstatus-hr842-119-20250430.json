@@ -1,0 +1,58 @@
+{
+  "id": "rec-billstatus-hr842-119-20250430",
+  "content": "<other>: H.R. 842 (119th Congress): Nancy Gardner Sewell Medicare Multi-Cancer Early Detection Screening Coverage Act\nCosponsor: Rep. Ann Wagner\nCosponsor: Rep. Vern Buchanan\nCosponsor: Rep. Michael Cloud\nCosponsor: Rep. Herbert C. Conaway, Jr.\nCosponsor: Rep. Jared F. Golden\nCosponsor: Rep. Mark Pocan\nCosponsor: Rep. Shomari Figures\nCosponsor: Rep. Marilyn Strickland\nCosponsor: Rep. Kweisi Mfume\nCosponsor: Rep. Henry C. \"Hank\" Johnson, Jr.\nCosponsor: Rep. Ritchie Torres\nCosponsor: Rep. Deborah K. Ross\nCosponsor: Rep. Seth Moulton\nCosponsor: Rep. Lois Frankel\nCosponsor: Rep. Madeleine Dean\nCosponsor: Rep. Stephen F. Lynch\nCosponsor: Rep. Brad Sherman\nCosponsor: Rep. André Carson\nCosponsor: Rep. Andrea Salinas\nCosponsor: Rep. Maxine Waters\nCosponsor: Rep. Jim Costa\nCosponsor: Rep. Eric Swalwell\nCosponsor: Rep. Lucy McBath\nCosponsor: Rep. Shri Thanedar\nCosponsor: Rep. Josh Gottheimer\nCosponsor: Rep. Julie Johnson\nCosponsor: Rep. Suhas Subramanyam\nCosponsor: Rep. George Latimer\nCosponsor: Rep. Chrissy Houlahan\nCosponsor: Rep. Ted Lieu\nCosponsor: Rep. April McClain Delaney\nCosponsor: Rep. John Garamendi\nCosponsor: Rep. Gilbert Ray Cisneros, Jr.\nCosponsor: Rep. Joseph D. Morelle\nCosponsor: Rep. John W. Mannion\nCosponsor: Rep. Becca Balint\nCosponsor: Rep. Greg Stanton\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/842",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/842",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-04-30",
+    "persons": [
+      "W000812",
+      "B001260",
+      "C001115",
+      "C001136",
+      "G000592",
+      "P000607",
+      "F000481",
+      "S001159",
+      "M000687",
+      "J000288",
+      "T000486",
+      "R000305",
+      "M001196",
+      "F000462",
+      "D000631",
+      "L000562",
+      "S000344",
+      "C001072",
+      "S001226",
+      "W000187",
+      "C001059",
+      "S001193",
+      "M001208",
+      "T000488",
+      "G000583",
+      "J000310",
+      "S001230",
+      "L000606",
+      "H001085",
+      "L000582",
+      "M001232",
+      "G000559",
+      "C001123",
+      "M001206",
+      "M001231",
+      "B001318",
+      "S001211"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/842"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

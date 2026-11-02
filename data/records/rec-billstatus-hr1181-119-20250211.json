@@ -1,0 +1,49 @@
+{
+  "id": "rec-billstatus-hr1181-119-20250211",
+  "content": "<other>: H.R. 1181 (119th Congress): Protecting Privacy in Purchases Act\nSponsor: Rep. Riley M. Moore\nCosponsor: Rep. Andy Barr\nCosponsor: Rep. Richard Hudson\nCosponsor: Rep. Aaron Bean\nCosponsor: Rep. Ben Cline\nCosponsor: Rep. Scott Perry\nCosponsor: Rep. Beth Van Duyne\nCosponsor: Rep. Brett Guthrie\nCosponsor: Rep. Mike Collins\nCosponsor: Rep. Brad Finstad\nCosponsor: Rep. Barry Moore\nCosponsor: Rep. Daniel Webster\nCosponsor: Rep. Michael Guest\nCosponsor: Rep. Michael A. Rulli\nCosponsor: Rep. Roger Williams\nCosponsor: Rep. Clay Higgins\nCosponsor: Rep. Mike Bost\nCosponsor: Rep. Claudia Tenney\nCosponsor: Rep. Derek Schmidt\nCosponsor: Rep. Tim Moore\nCosponsor: Rep. Dan Newhouse\nCosponsor: Rep. James Comer\nCosponsor: Rep. Steve Womack\nCosponsor: Rep. John W. Rose\nCosponsor: Rep. Rudy Yakym III\nCosponsor: Rep. Brandon Gill\nCosponsor: Rep. John H. Rutherford\nSponsor: Rep. Elise M. Stefanik\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1181",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1181",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-02-11",
+    "persons": [
+      "M001235",
+      "B001282",
+      "H001067",
+      "B001314",
+      "C001118",
+      "P000605",
+      "V000134",
+      "G000558",
+      "C001129",
+      "F000475",
+      "M001212",
+      "W000806",
+      "G000591",
+      "R000619",
+      "W000816",
+      "H001077",
+      "B001295",
+      "T000478",
+      "S001228",
+      "M001236",
+      "N000189",
+      "C001108",
+      "W000809",
+      "R000612",
+      "Y000067",
+      "G000603",
+      "R000609",
+      "S001196"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1181"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

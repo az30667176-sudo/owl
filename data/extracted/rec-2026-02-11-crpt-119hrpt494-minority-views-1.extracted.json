@@ -1,0 +1,111 @@
+{
+  "record_id": "rec-2026-02-11-crpt-119hrpt494-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:12:19.018Z",
+  "accepted": [
+    {
+      "person": "S000185",
+      "issue": "wages-and-labor-standards",
+      "date": "2026-02-11",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "By categorically excluding these occupations from FLSA, this bill would threaten the independence of legitimate independent contractors and imperil the protections of low-wage workers in call centers.",
+      "bill": "H.R. 3495, the Direct Seller and Real Estate Agent Harmonization Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt494/html/CRPT-119hrpt494.htm",
+      "record_id": "rec-2026-02-11-crpt-119hrpt494-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote criticizes excluding occupations from FLSA coverage as threatening protections, indicating support for wage-and-hour standards."
+    },
+    {
+      "person": "B001278",
+      "issue": "wages-and-labor-standards",
+      "date": "2026-02-11",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "By categorically excluding these occupations from FLSA, this bill would threaten the independence of legitimate independent contractors and imperil the protections of low-wage workers in call centers.",
+      "bill": "H.R. 3495, the Direct Seller and Real Estate Agent Harmonization Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt494/html/CRPT-119hrpt494.htm",
+      "record_id": "rec-2026-02-11-crpt-119hrpt494-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote criticizes excluding occupations from FLSA coverage as threatening protections, indicating support for wage-and-hour standards."
+    },
+    {
+      "person": "A000370",
+      "issue": "wages-and-labor-standards",
+      "date": "2026-02-11",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "By categorically excluding these occupations from FLSA, this bill would threaten the independence of legitimate independent contractors and imperil the protections of low-wage workers in call centers.",
+      "bill": "H.R. 3495, the Direct Seller and Real Estate Agent Harmonization Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt494/html/CRPT-119hrpt494.htm",
+      "record_id": "rec-2026-02-11-crpt-119hrpt494-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote criticizes excluding occupations from FLSA coverage as threatening protections, indicating support for wage-and-hour standards."
+    },
+    {
+      "person": "D000623",
+      "issue": "wages-and-labor-standards",
+      "date": "2026-02-11",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "By categorically excluding these occupations from FLSA, this bill would threaten the independence of legitimate independent contractors and imperil the protections of low-wage workers in call centers.",
+      "bill": "H.R. 3495, the Direct Seller and Real Estate Agent Harmonization Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt494/html/CRPT-119hrpt494.htm",
+      "record_id": "rec-2026-02-11-crpt-119hrpt494-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote criticizes excluding occupations from FLSA coverage as threatening protections, indicating support for wage-and-hour standards."
+    },
+    {
+      "person": "H001081",
+      "issue": "wages-and-labor-standards",
+      "date": "2026-02-11",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "By categorically excluding these occupations from FLSA, this bill would threaten the independence of legitimate independent contractors and imperil the protections of low-wage workers in call centers.",
+      "bill": "H.R. 3495, the Direct Seller and Real Estate Agent Harmonization Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt494/html/CRPT-119hrpt494.htm",
+      "record_id": "rec-2026-02-11-crpt-119hrpt494-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote criticizes excluding occupations from FLSA coverage as threatening protections, indicating support for wage-and-hour standards."
+    },
+    {
+      "person": "L000602",
+      "issue": "wages-and-labor-standards",
+      "date": "2026-02-11",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "By categorically excluding these occupations from FLSA, this bill would threaten the independence of legitimate independent contractors and imperil the protections of low-wage workers in call centers.",
+      "bill": "H.R. 3495, the Direct Seller and Real Estate Agent Harmonization Act",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt494/html/CRPT-119hrpt494.htm",
+      "record_id": "rec-2026-02-11-crpt-119hrpt494-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote criticizes excluding occupations from FLSA coverage as threatening protections, indicating support for wage-and-hour standards."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1785,
+    "prompt_tokens": 5196,
+    "total_tokens": 6981,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1010
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "rec-billstatus-hr1262-119-20250926",
+  "content": "<other>: H.R. 1262 (119th Congress): Mikaela Naylon Give Kids a Chance Act\nCosponsor: Rep. Blake D. Moore\nCosponsor: Rep. Richard McCormick\nCosponsor: Rep. Steve Womack\nCosponsor: Rep. Jack Bergman\nCosponsor: Rep. Wesley Bell\nCosponsor: Rep. Judy Chu\nCosponsor: Rep. Susie Lee\nCosponsor: Rep. George Whitesides\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/1262",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/1262",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-09-26",
+    "persons": [
+      "M001213",
+      "M001218",
+      "W000809",
+      "B001301",
+      "B001324",
+      "C001080",
+      "L000590",
+      "W000830"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/1262"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

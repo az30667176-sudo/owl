@@ -1,0 +1,27 @@
+{
+  "id": "rec-billstatus-hr5160-119-20250904",
+  "content": "<other>: H.R. 5160 (119th Congress): Stem Cell Therapeutic and Research Reauthorization Act of 2025\nSponsor: Rep. Christopher H. Smith\nCosponsor: Rep. Doris O. Matsui\nCosponsor: Rep. Gus M. Bilirakis\nCosponsor: Rep. Chellie Pingree\nCosponsor: Rep. Claudia Tenney\nCosponsor: Rep. Kweisi Mfume\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/5160",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/5160",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-09-04",
+    "persons": [
+      "S000522",
+      "M001163",
+      "B001257",
+      "P000597",
+      "T000478",
+      "M000687"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/5160"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

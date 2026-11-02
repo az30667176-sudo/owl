@@ -1,0 +1,23 @@
+{
+  "id": "rec-billstatus-hr8463-119-20260603",
+  "content": "<other>: H.R. 8463 (119th Congress): Pre-Payment Fraud Prevention and Treasury Data Access Act\nCosponsor: Rep. Robert Garcia\nCosponsor: Rep. Ken Calvert\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/8463",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/8463",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-06-03",
+    "persons": [
+      "G000598",
+      "C000059"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/8463"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

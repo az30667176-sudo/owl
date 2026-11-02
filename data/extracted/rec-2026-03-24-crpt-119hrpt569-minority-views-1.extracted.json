@@ -1,0 +1,42 @@
+{
+  "record_id": "rec-2026-03-24-crpt-119hrpt569-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:31:01.684Z",
+  "accepted": [
+    {
+      "person": "G000598",
+      "issue": "federal-regulatory-guidance-and-procedure",
+      "date": "2026-03-24",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "Democrats strongly oppose H.R. 2409, which would require all guidance statements to explicitly state on the first page that they do not have the force of law.",
+      "bill": "H.R. 2409",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt569/html/CRPT-119hrpt569.htm",
+      "record_id": "rec-2026-03-24-crpt-119hrpt569-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage explicitly states strong opposition to H.R. 2409 requiring a disclaimer on guidance documents."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "federal-regulatory-guidance-and-procedure",
+      "name": "Federal Regulatory Guidance and Procedure",
+      "parent": "hsgo-doge"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 1624,
+    "prompt_tokens": 2537,
+    "total_tokens": 4161,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1467
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

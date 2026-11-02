@@ -1,0 +1,51 @@
+{
+  "record_id": "rec-2026-10-13-crpt-119hrpt851-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:29:32.210Z",
+  "accepted": [
+    {
+      "person": "V000081",
+      "issue": "small-business-cyber-and-fraud",
+      "date": "2026-10-13",
+      "score": 0.7,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "The SBA, in consultation with other relevant federal entities, could be better utilized to provide assistance to small businesses on cybersecurity and technology use and adaptation, as well as disseminating information and resources.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt851/html/CRPT-119hrpt851.htm",
+      "record_id": "rec-2026-10-13-crpt-119hrpt851-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Speaker supports expanding SBA assistance to small businesses for cybersecurity and technology adaptation."
+    },
+    {
+      "person": "V000081",
+      "issue": "small-business-programs",
+      "date": "2026-10-13",
+      "score": 0.6,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "it is also widely acknowledged that CMMC is a costly, burdensome regulation that will act as a barrier to entry for small firms seeking to enter the defense industrial base and will likely accelerate the ongoing exodus of small businesses from the federal market.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt851/html/CRPT-119hrpt851.htm",
+      "record_id": "rec-2026-10-13-crpt-119hrpt851-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "Speaker criticizes CMMC as costly and burdensome for small firms, supporting protection of small business federal contracting participation."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2462,
+    "prompt_tokens": 3031,
+    "total_tokens": 5493,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2186
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

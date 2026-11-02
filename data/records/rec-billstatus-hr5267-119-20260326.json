@@ -1,0 +1,29 @@
+{
+  "id": "rec-billstatus-hr5267-119-20260326",
+  "content": "<other>: H.R. 5267 (119th Congress): American Franchise Act\nCosponsor: Rep. William R. Timmons IV\nCosponsor: Rep. Dusty Johnson\nCosponsor: Rep. Ron Estes\nCosponsor: Rep. Trent Kelly\nCosponsor: Rep. Darin LaHood\nCosponsor: Rep. Joe Wilson\nCosponsor: Rep. Gary J. Palmer\nCosponsor: Rep. Zachary Nunn\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/5267",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/5267",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-03-26",
+    "persons": [
+      "T000480",
+      "J000301",
+      "E000298",
+      "K000388",
+      "L000585",
+      "W000795",
+      "P000609",
+      "N000193"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/5267"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

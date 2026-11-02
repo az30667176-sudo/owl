@@ -1,0 +1,32 @@
+{
+  "id": "rec-billstatus-hr5625-119-20250930",
+  "content": "<other>: H.R. 5625 (119th Congress): Cashless Bail Reporting Act\nSponsor: Rep. Mark Harris\nCosponsor: Rep. Andy Biggs\nCosponsor: Rep. Chip Roy\nCosponsor: Rep. David J. Taylor\nCosponsor: Rep. Gregory F. Murphy\nCosponsor: Rep. Josh Brecheen\nCosponsor: Rep. Mary E. Miller\nCosponsor: Rep. Ralph Norman\nCosponsor: Rep. Chuck Edwards\nCosponsor: Rep. Sheri Biggs\nCosponsor: Rep. Keith Self\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/5625",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/5625",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-09-30",
+    "persons": [
+      "H001102",
+      "B001302",
+      "R000614",
+      "T000490",
+      "M001210",
+      "B001317",
+      "M001211",
+      "N000190",
+      "E000246",
+      "B001325",
+      "S001224"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/5625"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

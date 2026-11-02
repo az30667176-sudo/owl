@@ -1,0 +1,27 @@
+{
+  "id": "rec-billstatus-hr633-119-20250122",
+  "content": "<other>: H.R. 633 (119th Congress): TAKE IT DOWN Act\nSponsor: Rep. Maria Elvira Salazar\nCosponsor: Rep. Madeleine Dean\nCosponsor: Rep. August Pfluger\nCosponsor: Rep. Debbie Dingell\nCosponsor: Rep. Vern Buchanan\nCosponsor: Rep. Stacey E. Plaskett\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/633",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/633",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-01-22",
+    "persons": [
+      "S000168",
+      "D000631",
+      "P000048",
+      "D000624",
+      "B001260",
+      "P000610"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/633"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

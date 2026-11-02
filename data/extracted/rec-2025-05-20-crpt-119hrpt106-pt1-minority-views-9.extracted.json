@@ -1,0 +1,87 @@
+{
+  "record_id": "rec-2025-05-20-crpt-119hrpt106-pt1-minority-views-9",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:45:40.189Z",
+  "accepted": [
+    {
+      "person": "P000034",
+      "issue": "environmental-regulation",
+      "date": "2025-05-20",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Sections 42201 and 42301 propose to repeal clean vehicle standards finalized by EPA and the National Highway Traffic Safety Administration (NHTSA), jeopardizing air quality and domestic manufacturing, giving a leg up to the fossil fuel industry.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt106/html/CRPT-119hrpt106-pt1.htm",
+      "record_id": "rec-2025-05-20-crpt-119hrpt106-pt1-minority-views-9",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage criticizes repeal of clean vehicle standards as harming air quality, indicating support for environmental protections."
+    },
+    {
+      "person": "P000034",
+      "issue": "broadband-and-spectrum",
+      "date": "2025-05-20",
+      "score": 0.7,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "while Congressional Democrats agree that failure to make additional spectrum available for commercial wireless use risks our nation falling behind our global counterparts, particularly China,",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt106/html/CRPT-119hrpt106-pt1.htm",
+      "record_id": "rec-2025-05-20-crpt-119hrpt106-pt1-minority-views-9",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage states agreement that additional commercial spectrum is needed to maintain U.S. leadership."
+    },
+    {
+      "person": "P000034",
+      "issue": "artificial-intelligence-regulation",
+      "date": "2025-05-20",
+      "score": -0.9,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "This provision is a gift to Big Tech and extraordinarily harmful to all Americans.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt106/html/CRPT-119hrpt106-pt1.htm",
+      "record_id": "rec-2025-05-20-crpt-119hrpt106-pt1-minority-views-9",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage condemns the 10-year moratorium on state AI enforcement as harmful and favoring Big Tech."
+    },
+    {
+      "person": "P000034",
+      "issue": "health-programs-and-research",
+      "date": "2025-05-20",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Taken together, Subtitle D eviscerates health coverage, state budget flexibility, and provider payments, and will have a catastrophic effect on our economy, jobs, and Americans' health and well-being as the nation heads toward an increasingly likely Trump recession.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt106/html/CRPT-119hrpt106-pt1.htm",
+      "record_id": "rec-2025-05-20-crpt-119hrpt106-pt1-minority-views-9",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage condemns Subtitle D for eviscerating health coverage, indicating support for Medicaid and related health programs."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "artificial-intelligence-regulation",
+      "name": "Artificial Intelligence Regulation",
+      "parent": "hsif-innovation"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 3185,
+    "prompt_tokens": 4582,
+    "total_tokens": 7767,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2731
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "rec-billstatus-hr7721-119-20260226",
+  "content": "<other>: H.R. 7721 (119th Congress): CRACKDOWN Act of 2026\nSponsor: Rep. Glenn Grothman\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/7721",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/7721",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-02-26",
+    "persons": [
+      "G000576"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/7721"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

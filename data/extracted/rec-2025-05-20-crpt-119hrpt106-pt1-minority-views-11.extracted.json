@@ -1,0 +1,81 @@
+{
+  "record_id": "rec-2025-05-20-crpt-119hrpt106-pt1-minority-views-11",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:46:06.078Z",
+  "accepted": [
+    {
+      "person": "P000034",
+      "issue": "health-programs-and-research",
+      "date": "2025-05-20",
+      "score": 0.85,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Millions of Medicaid beneficiaries would be left without the ability to seek care from their provider of choice solely because of the Republicans' hostility towards Planned Parenthood and the ability for women to seek comprehensive reproductive health care.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt106/html/CRPT-119hrpt106-pt1.htm",
+      "record_id": "rec-2025-05-20-crpt-119hrpt106-pt1-minority-views-11",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage criticizes prohibiting Medicaid funding for Planned Parenthood as removing beneficiaries' provider choice for preventive and reproductive care."
+    },
+    {
+      "person": "P000034",
+      "issue": "health-programs-and-research",
+      "date": "2025-05-20",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "Section 44133 would further devastate states' ability to shore up providers that will see a dramatic increase in uncompensated care due to this reconciliation bill, by preventing states from directing managed care plans to make payments to providers at the same levels they are permitted to make them today.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt106/html/CRPT-119hrpt106-pt1.htm",
+      "record_id": "rec-2025-05-20-crpt-119hrpt106-pt1-minority-views-11",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage opposes limits on Medicaid provider taxes and directed payments as crippling state Medicaid financing and provider payments."
+    },
+    {
+      "person": "P000034",
+      "issue": "health-programs-and-research",
+      "date": "2025-05-20",
+      "score": 0.8,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "Section 44201 will make it more difficult for individuals to enroll in coverage in the ACA Marketplace, will take away coverage from eligible individuals, and will increase consumers' health care costs.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt106/html/CRPT-119hrpt106-pt1.htm",
+      "record_id": "rec-2025-05-20-crpt-119hrpt106-pt1-minority-views-11",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage opposes ACA Marketplace enrollment restrictions and cost increases as causing coverage loss and higher costs."
+    },
+    {
+      "person": "P000034",
+      "issue": "health-programs-and-research",
+      "date": "2025-05-20",
+      "score": 0.85,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "Section 44301 is a giant gift for the pharmaceutical industry, resulting in continued higher prescription drug costs for the American people.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt106/html/CRPT-119hrpt106-pt1.htm",
+      "record_id": "rec-2025-05-20-crpt-119hrpt106-pt1-minority-views-11",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The passage opposes weakening the Medicare Drug Price Negotiation Program as raising prescription drug costs for beneficiaries and taxpayers."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 2482,
+    "prompt_tokens": 4578,
+    "total_tokens": 7060,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2009
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

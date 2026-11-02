@@ -1,0 +1,45 @@
+{
+  "id": "rec-billstatus-hr8781-119-20260513",
+  "content": "<other>: H.R. 8781 (119th Congress): Title IX Clarification Act of 2026\nSponsor: Rep. Jodey C. Arrington\nCosponsor: Rep. Troy Downing\nCosponsor: Rep. Richard McCormick\nCosponsor: Rep. Russ Fulcher\nCosponsor: Rep. Christopher H. Smith\nCosponsor: Rep. Mike Bost\nCosponsor: Rep. Claudia Tenney\nCosponsor: Rep. Sheri Biggs\nCosponsor: Rep. Barry Moore\nCosponsor: Rep. Michael A. Rulli\nCosponsor: Rep. W. Gregory Steube\nCosponsor: Rep. August Pfluger\nCosponsor: Rep. Pete Stauber\nCosponsor: Rep. Earl L. \"Buddy\" Carter\nCosponsor: Rep. Michael K. Simpson\nCosponsor: Rep. Thomas Massie\nCosponsor: Rep. Brian Babin\nCosponsor: Rep. Diana Harshbarger\nCosponsor: Rep. Riley M. Moore\nCosponsor: Rep. Adrian Smith\nCosponsor: Rep. Addison P. McDowell\nCosponsor: Rep. Julie Fedorchak\nCosponsor: Rep. Tracey Mann\nSponsor: Rep. Jodey C. Arrington\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/8781",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/8781",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2026-05-13",
+    "persons": [
+      "A000375",
+      "D000634",
+      "M001218",
+      "F000469",
+      "S000522",
+      "B001295",
+      "T000478",
+      "B001325",
+      "M001212",
+      "R000619",
+      "S001214",
+      "P000048",
+      "S001212",
+      "C001103",
+      "S001148",
+      "M001184",
+      "B001291",
+      "H001086",
+      "M001235",
+      "S001172",
+      "M001240",
+      "F000482",
+      "M000871",
+      "A000375"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/8781"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

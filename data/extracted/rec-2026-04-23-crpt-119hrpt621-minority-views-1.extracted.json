@@ -1,0 +1,57 @@
+{
+  "record_id": "rec-2026-04-23-crpt-119hrpt621-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:29:27.492Z",
+  "accepted": [
+    {
+      "person": "M001206",
+      "issue": "public-lands-and-parks",
+      "date": "2026-04-23",
+      "score": 0.9,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "The Smithsonian American Women's History Museum is long overdue and deserves a place on the National Mall.",
+      "bill": "H.R. 1329",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt621/html/CRPT-119hrpt621-pt1.htm",
+      "record_id": "rec-2026-04-23-crpt-119hrpt621-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote directly endorses siting the Women's History Museum on the National Mall."
+    },
+    {
+      "person": "M001206",
+      "issue": "smithsonian-curatorial-independence",
+      "date": "2026-04-23",
+      "score": 0.85,
+      "direction": "support",
+      "linkage": "high",
+      "llm_confidence": "high",
+      "quote": "It inserts a politically charged, ideological poison pill intended to dictate what the museum can and cannot say about women's history, undermining curatorial independence.",
+      "bill": null,
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt621/html/CRPT-119hrpt621-pt1.htm",
+      "record_id": "rec-2026-04-23-crpt-119hrpt621-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The quote criticizes ideological constraints on museum content as undermining curatorial independence."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [
+    {
+      "id": "smithsonian-curatorial-independence",
+      "name": "Smithsonian Curatorial Independence",
+      "parent": "hsha-modernization"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 2887,
+    "prompt_tokens": 3050,
+    "total_tokens": 5937,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2635
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

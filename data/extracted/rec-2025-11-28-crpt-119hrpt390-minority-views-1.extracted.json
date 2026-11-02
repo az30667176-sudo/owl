@@ -1,0 +1,126 @@
+{
+  "record_id": "rec-2025-11-28-crpt-119hrpt390-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T07:25:52.300Z",
+  "accepted": [
+    {
+      "person": "W000187",
+      "issue": "securities-and-capital-markets",
+      "date": "2025-11-28",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For these reasons, we oppose H.R. 1013.",
+      "bill": "H.R. 1013",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt390/html/CRPT-119hrpt390.htm",
+      "record_id": "rec-2025-11-28-crpt-119hrpt390-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signer explicitly states opposition to the bill deregulating sale of unregistered securities to 403(b) plans."
+    },
+    {
+      "person": "V000081",
+      "issue": "securities-and-capital-markets",
+      "date": "2025-11-28",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For these reasons, we oppose H.R. 1013.",
+      "bill": "H.R. 1013",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt390/html/CRPT-119hrpt390.htm",
+      "record_id": "rec-2025-11-28-crpt-119hrpt390-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signer explicitly states opposition to the bill deregulating sale of unregistered securities to 403(b) plans."
+    },
+    {
+      "person": "L000562",
+      "issue": "securities-and-capital-markets",
+      "date": "2025-11-28",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For these reasons, we oppose H.R. 1013.",
+      "bill": "H.R. 1013",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt390/html/CRPT-119hrpt390.htm",
+      "record_id": "rec-2025-11-28-crpt-119hrpt390-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signer explicitly states opposition to the bill deregulating sale of unregistered securities to 403(b) plans."
+    },
+    {
+      "person": "G000553",
+      "issue": "securities-and-capital-markets",
+      "date": "2025-11-28",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For these reasons, we oppose H.R. 1013.",
+      "bill": "H.R. 1013",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt390/html/CRPT-119hrpt390.htm",
+      "record_id": "rec-2025-11-28-crpt-119hrpt390-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signer explicitly states opposition to the bill deregulating sale of unregistered securities to 403(b) plans."
+    },
+    {
+      "person": "T000481",
+      "issue": "securities-and-capital-markets",
+      "date": "2025-11-28",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For these reasons, we oppose H.R. 1013.",
+      "bill": "H.R. 1013",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt390/html/CRPT-119hrpt390.htm",
+      "record_id": "rec-2025-11-28-crpt-119hrpt390-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signer explicitly states opposition to the bill deregulating sale of unregistered securities to 403(b) plans."
+    },
+    {
+      "person": "G000587",
+      "issue": "securities-and-capital-markets",
+      "date": "2025-11-28",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For these reasons, we oppose H.R. 1013.",
+      "bill": "H.R. 1013",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt390/html/CRPT-119hrpt390.htm",
+      "record_id": "rec-2025-11-28-crpt-119hrpt390-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signer explicitly states opposition to the bill deregulating sale of unregistered securities to 403(b) plans."
+    },
+    {
+      "person": "W000788",
+      "issue": "securities-and-capital-markets",
+      "date": "2025-11-28",
+      "score": -1,
+      "direction": "oppose",
+      "linkage": "high",
+      "llm_confidence": "super_high",
+      "quote": "For these reasons, we oppose H.R. 1013.",
+      "bill": "H.R. 1013",
+      "source": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt390/html/CRPT-119hrpt390.htm",
+      "record_id": "rec-2025-11-28-crpt-119hrpt390-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "rationale": "The signer explicitly states opposition to the bill deregulating sale of unregistered securities to 403(b) plans."
+    }
+  ],
+  "rejected": [],
+  "new_issues": [],
+  "usage": {
+    "completion_tokens": 1761,
+    "prompt_tokens": 4555,
+    "total_tokens": 6316,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1090
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    }
+  },
+  "finish_reason": "stop"
+}

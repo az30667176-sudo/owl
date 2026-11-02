@@ -1,0 +1,27 @@
+{
+  "id": "rec-billstatus-hr281-119-20250109",
+  "content": "<other>: H.R. 281 (119th Congress): Grizzly Bear State Management Act\nSponsor: Rep. Harriet M. Hageman\nCosponsor: Rep. Ryan K. Zinke\nCosponsor: Rep. Russ Fulcher\nCosponsor: Rep. Pete Stauber\nCosponsor: Rep. Troy Downing\nSponsor: Rep. Harriet M. Hageman\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/281",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/281",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-01-09",
+    "persons": [
+      "H001096",
+      "Z000018",
+      "F000469",
+      "S001212",
+      "D000634",
+      "H001096"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/281"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}

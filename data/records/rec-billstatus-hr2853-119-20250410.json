@@ -1,0 +1,41 @@
+{
+  "id": "rec-billstatus-hr2853-119-20250410",
+  "content": "<other>: H.R. 2853 (119th Congress): Combating Organized Retail Crime Act of 2025\nSponsor: Rep. David P. Joyce\nCosponsor: Rep. Susie Lee\nCosponsor: Rep. David G. Valadao\nCosponsor: Rep. Dina Titus\nCosponsor: Rep. Michael Baumgartner\nCosponsor: Rep. Bradley Scott Schneider\nCosponsor: Rep. Laurel M. Lee\nCosponsor: Rep. J. Luis Correa\nCosponsor: Rep. Brad Knott\nCosponsor: Rep. Joe Neguse\nCosponsor: Rep. Nick LaLota\nCosponsor: Rep. Joseph D. Morelle\nCosponsor: Rep. Mark E. Amodei\nCosponsor: Rep. Salud O. Carbajal\nCosponsor: Rep. Juan Ciscomani\nCosponsor: Rep. Henry Cuellar\nCosponsor: Rep. Troy E. Nehls\nCosponsor: Rep. Jim Costa\nCosponsor: Rep. Nicole Malliotakis\nCosponsor: Rep. Jimmy Panetta\nTranscribed from congress.gov BILLSTATUS data; see https://www.congress.gov/bill/119th-congress/house-bill/2853",
+  "source": {
+    "url_link": "https://www.congress.gov/bill/119th-congress/house-bill/2853",
+    "media_type": "gov",
+    "media_name": "usgov",
+    "transcript": "official_transcript"
+  },
+  "hints": {
+    "date": "2025-04-10",
+    "persons": [
+      "J000295",
+      "L000590",
+      "V000129",
+      "T000468",
+      "B001322",
+      "S001190",
+      "L000597",
+      "C001110",
+      "K000405",
+      "N000191",
+      "L000598",
+      "M001206",
+      "A000369",
+      "C001112",
+      "C001133",
+      "C001063",
+      "N000026",
+      "C001059",
+      "M000317",
+      "P000613"
+    ],
+    "bill_urls": [
+      "https://www.congress.gov/bill/119th-congress/house-bill/2853"
+    ]
+  },
+  "_meta": {
+    "description": "Deterministic transcription of congress.gov BILLSTATUS sponsorship data (not report prose). The process stage should skip rec-billstatus-* records: their facts are already in stances.json."
+  }
+}
