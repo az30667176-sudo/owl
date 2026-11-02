@@ -1676,6 +1676,16 @@
       const base = .55 + .9 * (E.comCount.get(c.id) || 0) / E.avgCount;
       return c.id === E.open ? Math.max(base * 2.2, ISSUES.filter(i => i.cat === c.id).length * .5) : base;
     });
+    if (E.open) {
+      const oi = COMMITTEES.findIndex(c => c.id === E.open);
+      if (oi > -1) {
+        const n = ISSUES.filter(i => i.cat === E.open).length;
+        const others = w.reduce((a, v, i) => i === oi ? a : a + v, 0) || 1;
+        const share0 = w[oi] / (w[oi] + others);
+        const s = Math.min(0.45, Math.max(share0, 0.18 + n * 0.008));
+        w[oi] = others * s / (1 - s);
+      }
+    }
     const tw = d3.sum(w), gap = .012;
     let a = -Math.PI / 2;
     COMMITTEES.forEach((c, ci) => {
@@ -1689,8 +1699,31 @@
     for (const g of E.ang.values()) { if (g.f0 === undefined) { g.a0 = g.t0; g.a1 = g.t1; continue; } g.a0 = g.f0 + (g.t0 - g.f0) * e; g.a1 = g.f1 + (g.t1 - g.f1) * e; }
     return p < 1;
   }
+  function E_wrapLabel(name, limit) {
+    if (name.length <= limit) return [name];
+    const cut = name.lastIndexOf(" ", limit);
+    if (cut < 0) return [name];
+    return [name.slice(0, cut), name.slice(cut + 1)];
+  }
+  function E_truncIssue(name) { return name.length > 26 ? name.slice(0, 25) + "…" : name; }
+  function E_ringRadius(W, H) {
+    cx2.font = "600 11px Public Sans";
+    let labelWidth = 0, maxLines = 1;
+    COMMITTEES.forEach(c => {
+      const lines = E_wrapLabel(c.name, 22);
+      maxLines = Math.max(maxLines, lines.length);
+      lines.forEach(ln => { labelWidth = Math.max(labelWidth, cx2.measureText(ln).width); });
+    });
+    const labelAllowance = maxLines * 12;
+    return Math.max(40, Math.min((W - 2 * (labelWidth + 24)) / 2, (H - 2 * (labelAllowance + 24)) / 2) * 0.98);
+  }
+  function E_fitX(lx, tw, al, W) {
+    if (al === "left") return Math.min(Math.max(lx, 4), Math.max(4, W - 4 - tw));
+    if (al === "right") return Math.max(Math.min(lx, W - 4), Math.min(W - 4, 4 + tw));
+    return Math.min(Math.max(lx, tw / 2 + 4), Math.max(tw / 2 + 4, W - tw / 2 - 4));
+  }
   function E_placeAnchors(W, H) {
-    const R0 = Math.min(W, H) * .40, cx = W / 2, cy = H / 2;
+    const R0 = E_ringRadius(W, H), cx = W / 2, cy = H / 2;
     E.anchors = new Map();
     COMMITTEES.forEach(c => {
       const g = E.ang.get(c.id), am = (g.a0 + g.a1) / 2;
@@ -1709,7 +1742,7 @@
   function E_build(first) {
     E_targets();
     const { W, H } = E_size();
-    const R0 = Math.min(W, H) * .40, cx = W / 2, cy = H / 2;
+    const R0 = E_ringRadius(W, H), cx = W / 2, cy = H / 2;
     const fin = new Map();
     COMMITTEES.forEach(c => { const g = E.ang.get(c.id); fin.set(c.id, (g.t0 + g.t1) / 2); if (c.id === E.open) { const ii = ISSUES.filter(i => i.cat === c.id); ii.forEach((is, k) => fin.set(is.id, g.t0 + (k + .5) / ii.length * (g.t1 - g.t0))); } });
     const prev = new Map(E.legs.map(l => [l.id, l]));
@@ -1806,14 +1839,54 @@
       if (show) E_label(l.name.replace(/^(Rep|Sen)\. /, ""), l.x + 5 / E.zt.k, l.y + 3 / E.zt.k, "500 " + (11 / E.zt.k) + "px Public Sans", PAL.ink, "left");
     }
     if (E.pinned && E.pinned.kind === "leg") { const pl = LB.get(E.pinned.id); if (pl && E_visible(pl)) { E_circle(pl.x, pl.y, 7 / sk, "none", PAL.ink); E_label(pl.name.replace(/^(Rep|Sen)\. /, ""), pl.x + 7 / E.zt.k, pl.y + 4 / E.zt.k, "600 " + (12 / E.zt.k) + "px Public Sans", PAL.ink, "left"); } }
+    const drawnBoxes = [];
+    { const oc = E.open ? E.anchors.get(E.open) : null;
+      if (oc) {
+        const alO = Math.cos(oc.am) > .2 ? "left" : Math.cos(oc.am) < -.2 ? "right" : "center";
+        const fO = "600 " + (12 / E.zt.k) + "px Public Sans";
+        cx2.font = fO;
+        const tO = oc.name + "  ·  click to collapse", twO = cx2.measureText(tO).width;
+        const pxO = E_fitX(cx + (R0 + 72) * Math.cos(oc.am), twO, alO, W);
+        const pyO = Math.min(Math.max(cy + (R0 + 72) * Math.sin(oc.am) + 4, 10), H - 4);
+        cx2.globalAlpha = 1;
+        E_label(tO, pxO, pyO, fO, oc.col, alO);
+        const thO = 14 / E.zt.k, xO = alO === "left" ? pxO : alO === "right" ? pxO - twO : pxO - twO / 2;
+        drawnBoxes.push({ x0: xO, x1: xO + twO, y0: pyO - thO / 2, y1: pyO + thO / 2 });
+      } }
+    let issueIdx = 0;
+    const openCount = E.open ? ISSUES.filter(i => i.cat === E.open).length : 0;
+    const cull = openCount > 12;
     for (const a of E.anchors.values()) {
       const rr = a.kind === "com" ? (a.id === E.open ? 0 : 11 / sk) : 8 / sk;
       if (rr) { cx2.globalAlpha = 1; E_circle(a.x, a.y, rr, a.col, PAL.bg); }
       const narrow = a.kind === "com" && (a.a1 - a.a0) < .18, ci = a.kind === "com" ? COMMITTEES.findIndex(c => c.id === a.id) : 0;
-      const out = a.kind === "com" ? R0 + (narrow ? (ci % 2 ? 36 : 54) : 36) : R0 + 20, lx = cx + out * Math.cos(a.am), ly = cy + out * Math.sin(a.am), al = Math.cos(a.am) > .2 ? "left" : Math.cos(a.am) < -.2 ? "right" : "center";
+      const al = Math.cos(a.am) > .2 ? "left" : Math.cos(a.am) < -.2 ? "right" : "center";
       cx2.globalAlpha = 1;
-      if (a.kind === "com" && a.id === E.open) E_label(a.name + "  ·  click to collapse", cx + (R0 + 46) * Math.cos(a.am), cy + (R0 + 46) * Math.sin(a.am) + 4, "600 " + (12 / E.zt.k) + "px Public Sans", a.col, al);
-      else E_label(a.kind === "issue" && a.name.length > 34 ? a.name.slice(0, 32) + "…" : a.name, lx, ly + 4, (a.kind === "com" ? 600 : 500) + " " + ((a.kind === "com" ? 11 : 10) / E.zt.k) + "px Public Sans", PAL.ink, al);
+      if (a.kind === "com" && a.id === E.open) {
+        /* open-committee label drawn pre-loop and seeded into drawnBoxes */
+      } else if (a.kind === "com") {
+        const out = R0 + (narrow ? (ci % 2 ? 36 : 54) : 36);
+        const lx = cx + out * Math.cos(a.am), ly = cy + out * Math.sin(a.am);
+        const lines = E_wrapLabel(a.name, 22), f = "600 " + (11 / E.zt.k) + "px Public Sans", lh = 12 / E.zt.k;
+        cx2.font = f;
+        const y0 = Math.min(Math.max(ly + 4 - (lines.length - 1) * lh / 2, 10 + (lines.length - 1) * lh / 2), H - 4 - (lines.length - 1) * lh / 2);
+        lines.forEach((ln, li) => {
+          const tw = cx2.measureText(ln).width;
+          E_label(ln, E_fitX(lx, tw, al, W), y0 + (li - (lines.length - 1) / 2) * lh, f, PAL.ink, al);
+        });
+      } else {
+        const outI = R0 + [20, 38, 56][issueIdx++ % 3];
+        const ix = cx + outI * Math.cos(a.am), iy = cy + outI * Math.sin(a.am);
+        const t = E_truncIssue(a.name), f = "500 " + (10 / E.zt.k) + "px Public Sans";
+        cx2.font = f;
+        const tw = cx2.measureText(t).width, th = 12 / E.zt.k;
+        const px = E_fitX(ix, tw, al, W), py = Math.min(Math.max(iy + 4, 10), H - 4);
+        const x0 = al === "left" ? px : al === "right" ? px - tw : px - tw / 2;
+        const box = { x0: x0, x1: x0 + tw, y0: py - th / 2, y1: py + th / 2 };
+        if (cull && drawnBoxes.some(b => box.x0 < b.x1 && box.x1 > b.x0 && box.y0 < b.y1 && box.y1 > b.y0)) continue;
+        drawnBoxes.push(box);
+        E_label(t, px, py, f, PAL.ink, al);
+      }
     }
     if (fx && fx.x != null && fx.kind !== "com") { const base = (fx.kind === "leg" ? 6 : 14) / sk; cx2.globalAlpha = 1; E_circle(fx.x, fx.y, base, "none", PAL.ink); }
     cx2.restore();
