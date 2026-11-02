@@ -69,6 +69,7 @@
   .group .subs { padding-left: 24px; }
   .stat { font-size: 12px; color: var(--muted); margin: 10px 4px 0; }
   section { position: relative; }
+  #stage { overflow: hidden; }
   svg { width: 100%; height: 100%; display: block; }
   .legend { position: absolute; left: 14px; bottom: 12px; display: flex; gap: 14px; font-size: 12px; color: var(--muted); background: rgba(23,26,33,.85); padding: 6px 10px; border-radius: 8px; border: 1px solid var(--border); }
   .legend i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px; vertical-align: -1px; }
@@ -274,8 +275,8 @@
   .isec { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin: 22px 0 8px; font-family: var(--mono); }
   .orbwrap { position: relative; }
   .ohud { position: absolute; top: 6px; left: 8px; font: 500 11px var(--mono); color: var(--muted); pointer-events: none; }
-  #orbit { width: 100%; height: 560px; display: block; background: radial-gradient(ellipse at 50% 60%, #1f2538 0%, var(--bg) 70%); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-  #imap { width: 100%; height: 330px; display: block; background: var(--bg); border: 1px solid var(--border); }
+  #orbit { width: 100%; height: 560px; display: block; max-width: 100%; background: radial-gradient(ellipse at 50% 60%, #1f2538 0%, var(--bg) 70%); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  #imap { width: 100%; height: 330px; display: block; max-width: 100%; background: var(--bg); border: 1px solid var(--border); }
   .idir { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 4px 28px; }
   .idc { border-top: 1px solid var(--border); padding: 10px 0; }
   .idc h3 { font-family: var(--display); font-weight: 600; font-size: 15px; margin: 0 0 6px; display: flex; gap: 8px; align-items: center; }
@@ -309,7 +310,7 @@
   .gsrch .nm { font-weight: 600; } .gsrch .mt { font-size: 12px; color: var(--muted); } .gsrch .rt { font: 500 11px var(--mono); color: var(--muted); text-align: right; }
   .gsrch .hd { padding: 6px 12px; font: 500 10px var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--accent); border-top: 1px solid var(--border); }
   .gsrch mark { background: none; color: var(--accent); }
-  #cv { position: absolute; top: 0; left: 0; right: 0; bottom: 76px; display: none; }
+  #cv { position: absolute; top: 0; left: 0; display: none; max-width: 100%; }
   #cv.on { display: block; }
   .ehud { position: absolute; left: 14px; bottom: 84px; font: 500 11px var(--mono); color: var(--muted); pointer-events: none; display: none; text-align: left; }
   .ehud.on { display: block; }
@@ -320,7 +321,7 @@
   .ectl label.ck { display: flex; gap: 4px; align-items: center; cursor: pointer; }
   .ectl label.ck input { accent-color: var(--accent); }
   .mmwrap { display: none; margin-bottom: 14px; }
-  #mm { width: 100%; height: 210px; display: block; background: var(--bg); border: 1px solid var(--border); cursor: pointer; }
+  #mm { width: 100%; height: 210px; display: block; max-width: 100%; background: var(--bg); border: 1px solid var(--border); cursor: pointer; }
   .mmleg { font-size: 11.5px; color: var(--muted); margin-top: 4px; display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
   .mmleg .sq { display: inline-block; width: 9px; height: 9px; margin-right: 5px; vertical-align: baseline; }
   .mmleg .chip { cursor: pointer; }
@@ -343,7 +344,7 @@
     <span class="drop" id="drop" hidden></span>
   </header>
   <aside id="aside"></aside>
-  <section>
+  <section id="stage">
     <div class="hint" id="hint"></div>
     <canvas id="cv"></canvas>
     <div class="ehud" id="ehud"></div>
@@ -806,8 +807,9 @@
   // issue halo: concentric half-rings, one per kind of action; right half = for, left half = against.
   // A dot is a member (party colour — node colour encodes party only). Arc length filled = how many. No invented spectrum.
   function I_orbit(id, es) {
-    const cv2 = $("orbit"), dpr = devicePixelRatio || 1, r = cv2.getBoundingClientRect(), W2 = r.width, H2 = r.height;
-    cv2.width = W2 * dpr; cv2.height = H2 * dpr;
+    const cv2 = $("orbit"), dpr = devicePixelRatio || 1, W2 = Math.max(320, (cv2.parentElement && cv2.parentElement.clientWidth) || cv2.getBoundingClientRect().width || 320), H2 = 560;
+    cv2.style.width = W2 + "px"; cv2.style.height = H2 + "px";
+    cv2.width = Math.round(W2 * dpr); cv2.height = Math.round(H2 * dpr);
     const c2 = cv2.getContext("2d"); c2.setTransform(dpr, 0, 0, dpr, 0, 0);
     // draw helpers bound to THIS canvas (the Explore canvas has its own)
     const circle = (x, y, rr, fill, stroke) => { c2.beginPath(); c2.arc(x, y, rr, 0, 2 * Math.PI); if (fill && fill !== "none") { c2.fillStyle = fill; c2.fill(); } if (stroke) { c2.lineWidth = 1.5; c2.strokeStyle = stroke; c2.stroke(); } };
@@ -889,8 +891,9 @@
   }
   // district tile map renderer shared by the issue page (colour = stance on this issue; grey = no statement)
   function I_tilemap(cv2, colorOf, onPick) {
-    const dpr = devicePixelRatio || 1, r = cv2.getBoundingClientRect(), W2 = r.width, H2 = r.height;
-    cv2.width = W2 * dpr; cv2.height = H2 * dpr;
+    const dpr = devicePixelRatio || 1, W2 = Math.max(320, (cv2.parentElement && cv2.parentElement.clientWidth) || cv2.getBoundingClientRect().width || 320), H2 = 330;
+    cv2.style.width = W2 + "px"; cv2.style.height = H2 + "px";
+    cv2.width = Math.round(W2 * dpr); cv2.height = Math.round(H2 * dpr);
     const c2 = cv2.getContext("2d"); c2.setTransform(dpr, 0, 0, dpr, 0, 0);
     const cells = [], sts = [], ts = Math.min((W2 - 6) / 12, (H2 - 6) / 8), ox = (W2 - ts * 12) / 2, oy = (H2 - ts * 8) / 2;
     Object.entries(TILE).forEach(([st, [c, rw]]) => {
@@ -1607,11 +1610,26 @@
     if (n.kind === "leg") { const p = byId[n.id]; return p ? E_legCard(p) : ""; }
     return E_issueHtml(n.id);
   }
+  // Size the Explore canvas from the centre pane, never from the canvas itself.
+  // Reading the canvas's own rect and writing it back is a feedback loop: each
+  // resize fires the observer, which resizes again, until the canvas is tens of
+  // millions of px wide and nothing renders.
+  function E_paneSize() {
+    const pane = $("stage");
+    const W = Math.max(320, (pane && pane.clientWidth) || 0);
+    let chrome = 0;
+    [ectl, ehud, $("legend"), $("hint")].forEach(el => { if (el && el.getClientRects().length) chrome += el.offsetHeight || 0; });
+    chrome = Math.max(76, chrome + 16);
+    const H = Math.max(320, ((pane && pane.clientHeight) || 0) - chrome);
+    return { W, H };
+  }
   function E_size() {
-    const r = cv.getBoundingClientRect(), dpr = devicePixelRatio || 1;
-    const W = Math.max(300, r.width), H = Math.max(300, r.height);
-    cv.width = W * dpr; cv.height = H * dpr;
+    const dpr = devicePixelRatio || 1;
+    const { W, H } = E_paneSize();
+    cv.style.width = W + "px"; cv.style.height = H + "px";
+    cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
     cx2.setTransform(dpr, 0, 0, dpr, 0, 0);
+    if (E) { E.lastW = W; E.lastH = H; }
     return { W, H };
   }
   function E_init() {
@@ -1735,8 +1753,9 @@
   function E_label(t, x, y, f, c, al) { cx2.font = f; cx2.fillStyle = c; cx2.textAlign = al || "center"; cx2.fillText(t, x, y); }
   function E_draw() {
     if (!E) return;
-    const now = performance.now(), r = cv.getBoundingClientRect();
-    const W = Math.max(300, r.width), H = Math.max(300, r.height);
+    const now = performance.now();
+    if (!E.lastW) E_size();
+    const W = E.lastW, H = E.lastH;
     E_stepAngles(now);
     E_placeAnchors(W, H);
     cx2.save(); cx2.clearRect(0, 0, W, H); cx2.translate(E.zt.x, E.zt.y); cx2.scale(E.zt.k, E.zt.k);
@@ -1847,9 +1866,10 @@
   function E_mmLayout() {
     const mm = mmEl();
     if (!mm) return null;
-    const r = mm.getBoundingClientRect(), dpr = devicePixelRatio || 1;
-    const MW = Math.max(200, r.width), MH = Math.max(120, r.height);
-    mm.width = MW * dpr; mm.height = MH * dpr;
+    const dpr = devicePixelRatio || 1;
+    const MW = Math.max(200, (mm.parentElement && mm.parentElement.clientWidth) || mm.getBoundingClientRect().width || 200), MH = 210;
+    mm.style.width = MW + "px"; mm.style.height = MH + "px";
+    mm.width = Math.round(MW * dpr); mm.height = Math.round(MH * dpr);
     const c = mm.getContext("2d");
     c.setTransform(dpr, 0, 0, dpr, 0, 0);
     const cells = [], states = [], cols = 12, rows = 8, ts = Math.min((MW - 4) / cols, (MH - 4) / rows), ox = (MW - ts * cols) / 2, oy = (MH - ts * rows) / 2;
@@ -1905,11 +1925,16 @@
   function E_mmBind() {
     const mm = mmEl();
     if (!mm || !E) return;
-    if (!E_mmRO) E_mmRO = new ResizeObserver(() => { if (!E || !$("mm")) return; E.mm = E_mmLayout(); E_draw(); });
+    if (!E_mmRO) E_mmRO = new ResizeObserver(() => {
+      if (!E || !$("mm")) return;
+      const _w = ($("mm").parentElement && $("mm").parentElement.clientWidth) || 0;
+      if (E.mm && Math.abs(_w - E.mm.MW) < 2) return;
+      E.mm = E_mmLayout(); E_draw();
+    });
     E_mmRO.disconnect();
     E.mm = E_mmLayout();
     E_drawMM(E.hover && (E.hover.kind === "com" || E.hover.kind === "issue") ? E.hover.id : E.pinned && (E.pinned.kind === "com" || E.pinned.kind === "issue") ? E.pinned.id : null, null);
-    E_mmRO.observe(mm);
+    E_mmRO.observe(mm.parentElement || mm);
     mm.onmousemove = ev => {
       const r = mm.getBoundingClientRect(), x = ev.clientX - r.left, y = ev.clientY - r.top;
       const cl = E.mm.cells.find(cc => x >= cc.x - .5 && x <= cc.x + cc.w + .5 && y >= cc.y - .5 && y <= cc.y + cc.h + .5);
@@ -1937,7 +1962,7 @@
     cv.classList.add("on"); ectl.classList.add("on"); ehud.classList.add("on");
     $hint.style.display = "none";
     if (!E || E.edges !== EDGES) E_init();
-    else { const _r = cv.getBoundingClientRect(); if (E.lastW && (Math.abs(_r.width - E.lastW) > 2 || Math.abs(_r.height - E.lastH) > 2)) E_build(false); else E_size(); }
+    else { const _s = E_paneSize(); if (E.lastW && (Math.abs(_s.W - E.lastW) > 2 || Math.abs(_s.H - E.lastH) > 2)) E_build(false); else E_size(); }
     E.query = gs.value.trim().toLowerCase();
     E.query = E.query.length >= 2 && !/^\d{5}$/.test(E.query) ? E.query : "";
     E_draw();
@@ -1947,14 +1972,13 @@
   function E_watch() {
     if (!E_cvRO) E_cvRO = new ResizeObserver(() => {
       if (state.mode !== "explore" || !E) return;
-      const r = cv.getBoundingClientRect();
-      if (Math.abs(r.width - (E.lastW || 0)) < 2 && Math.abs(r.height - (E.lastH || 0)) < 2) { E_draw(); return; }
-      E.lastW = r.width; E.lastH = r.height;
+      const s = E_paneSize();
+      if (Math.abs(s.W - (E.lastW || 0)) < 2 && Math.abs(s.H - (E.lastH || 0)) < 2) return;
       clearTimeout(E.rsT);
       E.rsT = setTimeout(() => { if (state.mode !== "explore" || !E) return; E_build(false); }, 120);
     });
     E_cvRO.disconnect();
-    E_cvRO.observe(cv);
+    E_cvRO.observe($("stage"));
   }
 
 /* ---------- GRAPH (focus SVG force graph) removed in 3.5; Explore renders on Canvas, centre panes below ----------
