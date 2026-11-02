@@ -28,6 +28,6 @@
 
 ## 4. Verify and deploy
 
-- [ ] 4.1 `node packages/contract/validate.mjs data --records data/records` → OK (nothing under data/ changed).
-- [ ] 4.2 Local run from repo root on the real data: all tabs, search, fly-to, minimap, issue page, bills, bill page, profile; temporarily rename `graph.json` away → identical rendering from `stances.json`.
-- [ ] 4.3 Commits by Muse Code with trailer `Co-Authored-By: Muse Code <noreply@meta.com>`; push; Pages run green; live site loads `graph.json` (check the network tab: no 20 MB fetch before first paint).
+- [x] 4.1 `node packages/contract/validate.mjs data --records data/records` → OK (nothing under data/ changed).
+- [x] 4.2 Local run from repo root on the real data: all tabs, search, fly-to, minimap, issue page, bills, bill page, profile; temporarily rename `graph.json` away → identical rendering from `stances.json`.
+- [x] 4.3 Commits by Muse Code with trailer `Co-Authored-By: Muse Code <noreply@meta.com>`; push; Pages run green; live site loads `graph.json` (check the network tab: no 20 MB fetch before first paint).
