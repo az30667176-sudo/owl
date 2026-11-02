@@ -2,11 +2,11 @@
 
 ## 1. Fast load: derived graph cache + lazy statements
 
-- [ ] 1.1 Create `apps/web/lib/derive.mjs` exporting `deriveEdges(statements, people, issues, now)` that reproduces the current in-page aggregation exactly (CONF_W weights, score, n, first/last, flip, salience → heat percentile, latest quote/bill/source) plus `kindOf(statement)` and per-edge kind counts `[sponsored, cosponsored, yea, nay, views, spokeN, spokeMeanScore]`.
-- [ ] 1.2 Create `apps/web/build/graph.mjs <dataDir> <outFile>`: loads the contract-B files, calls `deriveEdges`, writes the compact `graph.json` (shape in design.md decision 1, indices into `people`/`issues` arrays, bills from statement bill strings with counts, `meta: {statements, maxDate, builtAt}`).
-- [ ] 1.3 `.github/workflows/pages.yml`: after validation, `node apps/web/build/graph.mjs data _site/data/graph.json`. Add `apps/web/data/graph.json` and `_site/` to `.gitignore` if not already.
-- [ ] 1.4 `apps/web/index.html` loader: fetch `graph.json` first (optional); when present build COMMITTEES/ISSUES/PEOPLE/EDGES from it and render; fetch `stances.json` in the background and resolve a `STATEMENTS_READY` promise; when absent, load `stances.json` as today and derive with the same inlined code as `derive.mjs` (copy, with a comment pointing at the module). Views that need quotes await `STATEMENTS_READY` and show "loading statements…" until then.
-- [ ] 1.5 Verify: `node apps/web/build/graph.mjs data /tmp/graph.json` → 8,576 edges; a small script compares edge scores/heat/flip from the cache with the browser derivation (run `derive.mjs` on `data/` twice via the two entry points) → identical.
+- [x] 1.1 Create `apps/web/lib/derive.mjs` exporting `deriveEdges(statements, people, issues, now)` that reproduces the current in-page aggregation exactly (CONF_W weights, score, n, first/last, flip, salience → heat percentile, latest quote/bill/source) plus `kindOf(statement)` and per-edge kind counts `[sponsored, cosponsored, yea, nay, views, spokeN, spokeMeanScore]`.
+- [x] 1.2 Create `apps/web/build/graph.mjs <dataDir> <outFile>`: loads the contract-B files, calls `deriveEdges`, writes the compact `graph.json` (shape in design.md decision 1, indices into `people`/`issues` arrays, bills from statement bill strings with counts, `meta: {statements, maxDate, builtAt}`).
+- [x] 1.3 `.github/workflows/pages.yml`: after validation, `node apps/web/build/graph.mjs data _site/data/graph.json`. Add `apps/web/data/graph.json` and `_site/` to `.gitignore` if not already.
+- [x] 1.4 `apps/web/index.html` loader: fetch `graph.json` first (optional); when present build COMMITTEES/ISSUES/PEOPLE/EDGES from it and render; fetch `stances.json` in the background and resolve a `STATEMENTS_READY` promise; when absent, load `stances.json` as today and derive with the same inlined code as `derive.mjs` (copy, with a comment pointing at the module). Views that need quotes await `STATEMENTS_READY` and show "loading statements…" until then.
+- [x] 1.5 Verify: `node apps/web/build/graph.mjs data /tmp/graph.json` → 8,576 edges; a small script compares edge scores/heat/flip from the cache with the browser derivation (run `derive.mjs` on `data/` twice via the two entry points) → identical.
 
 ## 2. Search, Explore on Canvas, fly-to, minimap
 

@@ -300,9 +300,22 @@
   // Data lives in <repo>/data. GitHub Pages copies it next to this page; local dev serves the repo root.
   const DATA_BASE = (await fetch("./data/people.json", { method: "HEAD" }).then(r => r.ok).catch(() => false)) ? "./data/" : "../../data/";
   const load = async f => { const r = await fetch(`${DATA_BASE}${f}`); if (!r.ok) throw new Error(`${f}: ${r.status}`); return r.json(); };
-  let taxonomy, issuesRaw, peopleRaw, stancesRaw, summariesRaw = { summaries: {} };
-  try { [taxonomy, issuesRaw, peopleRaw, stancesRaw] = await Promise.all(["taxonomy.json", "issues.json", "people.json", "stances.json"].map(load)); }
+  let taxonomy, issuesRaw, peopleRaw, summariesRaw = { summaries: {} };
+  try { [taxonomy, issuesRaw, peopleRaw] = await Promise.all(["taxonomy.json", "issues.json", "people.json"].map(load)); }
   catch (e) { document.getElementById("loading").textContent = "Could not load data/*.json — serve this folder over http (see data/README.md). " + e.message; return; }
+  // Derived graph cache (fast load): graph.json is written at deploy time by
+  // apps/web/build/graph.mjs from the contract-B files. When present the app
+  // paints from it immediately and fetches stances.json lazily in the
+  // background; when absent (local dev) stances.json loads first as before.
+  let stancesRaw = null, graphRaw = null;
+  try { graphRaw = await load("graph.json"); } catch { /* optional cache */ }
+  // Resolved once per-edge statements (quotes, bills, sources) are attached.
+  // Views that read them show a "loading statements…" line meanwhile.
+  let STATEMENTS_READY, _stmtsResolve, statementsReady = false, stmtsFailed = false;
+  STATEMENTS_READY = new Promise(res => _stmtsResolve = res);
+  const stmtsNote = () => statementsReady ? "" : stmtsFailed
+    ? `<div class="empty-state">Could not load stances.json — quotes unavailable.</div>`
+    : `<div class="empty-state">loading statements…</div>`;
   try { summariesRaw = await load("summaries.json"); } catch { /* optional file */ }
   const SUMMARIES = summariesRaw.summaries || {};
   // conditions ledger (optional; missing or empty = app behaves exactly as before)
@@ -330,37 +343,115 @@
   const condShort = (nowScore, row) => phrase(nowScore, row).replace(/^[^·]*· /, "").replace(/^(<b[^>]*>)?(\w)/, (m, t, c) => (t || "") + c.toUpperCase());
   const nowOf = (p, i) => edgeScoreByPI[p + "|" + i] ?? null;
   document.getElementById("loading").remove();
-  if ([issuesRaw, peopleRaw, stancesRaw].some(x => x._meta && x._meta.mock)) document.getElementById("mock").hidden = false;
-  { const drop = stancesRaw._meta?.drop || issuesRaw._meta?.drop; if (drop) { const el = document.getElementById("drop"); el.textContent = `data: ${drop}`; el.hidden = false; } }
+  function updateBadges() {
+    if ([issuesRaw, peopleRaw, stancesRaw].some(x => x && x._meta && x._meta.mock)) document.getElementById("mock").hidden = false;
+    { const drop = stancesRaw?._meta?.drop || issuesRaw._meta?.drop; if (drop) { const el = document.getElementById("drop"); el.textContent = `data: ${drop}`; el.hidden = false; } }
+  }
+  updateBadges();
 
   // ---------- model ----------
-  const COMMITTEES = taxonomy.committees;
+  // Cache adoption is validated: any shape mismatch falls back to stances.json.
+  let useCache = !!graphRaw;
+  if (useCache) {
+    try {
+      if (!Array.isArray(graphRaw.committees) || !Array.isArray(graphRaw.issues) || !Array.isArray(graphRaw.people) || !Array.isArray(graphRaw.edges)) throw new Error("bad cache shape");
+      const _ip = new Set(peopleRaw.people.map(p => p.id)), _ii = new Set(issuesRaw.issues.map(i => i.id));
+      if (!graphRaw.people.every(r => _ip.has(r[4])) || !graphRaw.issues.every(r => _ii.has(r[2]))) throw new Error("stale cache ids");
+    } catch { useCache = false; graphRaw = null; }
+  }
+  // With the cache, COMMITTEES is taxonomy filtered to the cache's committee ids (taxonomy order).
+  let COMMITTEES = useCache ? taxonomy.committees.filter(c => graphRaw.committees.some(g => g.id === c.id)) : taxonomy.committees;
   const PALETTE = ["#f59e0b", "#06b6d4", "#ec4899", "#84cc16", "#8b5cf6", "#f97316", "#14b8a6", "#e11d48", "#3b82f6", "#a3e635", "#d946ef", "#0ea5e9", "#facc15", "#22c55e", "#fb7185", "#2dd4bf", "#c084fc", "var(--accent)", "#60a5fa", "#4ade80"];
   const CAT_HUE = Object.fromEntries(COMMITTEES.map((c, i) => [c.id, PALETTE[i % PALETTE.length]]));
   const SUBS = COMMITTEES.flatMap(c => (c.subcommittees.length ? c.subcommittees : [{ id: c.id, name: c.name, leaf: true }]).map(s => ({ ...s, cat: c.id, catName: c.name })));
   const subById = Object.fromEntries(SUBS.map(s => [s.id, s]));
-  const ISSUES = issuesRaw.issues.filter(i => subById[i.parent] || console.warn("issue with unknown parent dropped:", i)).map(i => ({ ...i, sub: i.parent, subName: subById[i.parent].name, cat: subById[i.parent].cat, catName: subById[i.parent].catName }));
+  const issueRawById = Object.fromEntries(issuesRaw.issues.map(i => [i.id, i]));
+  const personRawById = Object.fromEntries(peopleRaw.people.map(p => [p.id, p]));
+  const ISSUES = useCache
+    ? graphRaw.issues.map(([name, comIdx, id]) => { const raw = issueRawById[id], com = COMMITTEES[comIdx]; return { ...raw, name, sub: raw.parent, subName: subById[raw.parent].name, cat: com.id, catName: com.name }; })
+    : issuesRaw.issues.filter(i => subById[i.parent] || console.warn("issue with unknown parent dropped:", i)).map(i => ({ ...i, sub: i.parent, subName: subById[i.parent].name, cat: subById[i.parent].cat, catName: subById[i.parent].catName }));
   const issueById = Object.fromEntries(ISSUES.map(i => [i.id, i]));
-  const PEOPLE = peopleRaw.people; const byId = Object.fromEntries(PEOPLE.map(p => [p.id, p]));
+  const PEOPLE = useCache
+    ? graphRaw.people.map(([name, party, pstate, district, id]) => ({ ...personRawById[id], name, party, state: pstate, district }))
+    : peopleRaw.people;
+  const byId = Object.fromEntries(PEOPLE.map(p => [p.id, p]));
   // One row per statement in the data; aggregate to one edge per (person, issue).
   const CONF = ["low", "mid", "high", "super_high"], CONF_W = { low: .4, mid: .7, high: 1, super_high: 1.2 };
   const dirOf = s => s > 0.15 ? "support" : s < -0.15 ? "oppose" : "neutral";
-  const STATEMENTS = stancesRaw.stances.filter(s => (byId[s.person] && issueById[s.issue]) || console.warn("statement with unknown person/issue dropped:", s));
-  const stById = Object.fromEntries(STATEMENTS.filter(s => s.statement_id).map(s => [s.statement_id, s]));
+  // Action-kind inference (isolated for deletion when the contract gains kind).
+  // Keep in sync with apps/web/lib/derive.mjs.
+  const kindOf = st => {
+    if (st.model === "owl-ingest-metadata") return st.score >= 1 ? "sponsored" : "cosponsored";
+    if (st.model === "owl-ingest-rule") {
+      if (String(st.rationale || "").startsWith("Signed")) return "views";
+      if (st.score === 0) return "notvoting";
+      return st.score > 0 ? "yea" : "nay";
+    }
+    return "speech";
+  };
+  // Inlined copy of deriveEdges from apps/web/lib/derive.mjs — keep in sync.
+  // Fallback path when graph.json is absent; scoring changes apply in both places.
+  const deriveEdgesInline = (statements, now) => {
+    const heatOf = s => { const days = s.date ? (now - new Date(s.date)) / 864e5 : 365; return Math.pow(2, -Math.max(0, days) / 180); };
+    const edges = [...d3.group(statements, s => s.person + "|" + s.issue).values()].map(list => {
+      const st = [...list].sort((a, b) => String(a.date || "").localeCompare(String(b.date || "")));
+      const w = st.map(s => CONF_W[s.llm_confidence] || .7), score = st.reduce((a, s, i) => a + s.score * w[i], 0) / w.reduce((a, b) => a + b, 0);
+      const latest = st[st.length - 1], dirs = st.map(s => s.direction);
+      const counts = { sponsored: 0, cosponsored: 0, yea: 0, nay: 0, views: 0 };
+      let spokeN = 0, spokeSum = 0;
+      st.forEach(s => { const k = kindOf(s); if (k === "speech") { spokeN += 1; spokeSum += s.score; } else if (k in counts) counts[k] += 1; });
+      return { from: latest.person, to: latest.issue, score, direction: dirOf(score), n: st.length, statements: st, salience: st.reduce((a, s) => a + heatOf(s), 0),
+        linkage: CONF[Math.max(...st.map(s => CONF.indexOf(s.linkage)))], llm_confidence: CONF[Math.max(...st.map(s => CONF.indexOf(s.llm_confidence)))],
+        flip: new Set(dirs.filter(d => d !== "neutral")).size > 1, first: st[0].date, last: latest.date,
+        quote: latest.quote, bill: latest.bill, source: latest.source, model: latest.model,
+        kind: [counts.sponsored, counts.cosponsored, counts.yea, counts.nay, counts.views, spokeN, spokeN ? spokeSum / spokeN : 0] };
+    });
+    { const sorted = edges.map(e => e.salience).sort((a, b) => a - b); edges.forEach(e => e.heat = sorted.length > 1 ? sorted.indexOf(e.salience) / (sorted.length - 1) : 1); } // global percentile 0..1
+    return edges;
+  };
   // Salience ("heat"): how much a legislator talks about an issue, not which side.
   // sum over statements of 2^(-age_days/180). All sources are official records, so no venue weighting. Mock data uses the newest statement date as "today" so the demo is stable.
-  const NOW = stancesRaw._meta?.mock ? d3.max(STATEMENTS, s => new Date(s.date || 0)) : new Date();
-  const heatOf = s => { const days = s.date ? (NOW - new Date(s.date)) / 864e5 : 365; return Math.pow(2, -Math.max(0, days) / 180); };
-  const EDGES = [...d3.group(STATEMENTS, s => s.person + "|" + s.issue).values()].map(list => {
-    const st = [...list].sort((a, b) => String(a.date || "").localeCompare(String(b.date || "")));
-    const w = st.map(s => CONF_W[s.llm_confidence] || .7), score = st.reduce((a, s, i) => a + s.score * w[i], 0) / w.reduce((a, b) => a + b, 0);
-    const latest = st[st.length - 1], dirs = st.map(s => s.direction);
-    return { from: latest.person, to: latest.issue, score, direction: dirOf(score), n: st.length, statements: st, salience: st.reduce((a, s) => a + heatOf(s), 0),
-      linkage: CONF[Math.max(...st.map(s => CONF.indexOf(s.linkage)))], llm_confidence: CONF[Math.max(...st.map(s => CONF.indexOf(s.llm_confidence)))],
-      flip: new Set(dirs.filter(d => d !== "neutral")).size > 1, first: st[0].date, last: latest.date,
-      quote: latest.quote, bill: latest.bill, source: latest.source, model: latest.model };
-  });
-  { const sorted = EDGES.map(e => e.salience).sort((a, b) => a - b); EDGES.forEach(e => e.heat = sorted.length > 1 ? sorted.indexOf(e.salience) / (sorted.length - 1) : 1); } // global percentile 0..1
+  const stmtsOf = raw => raw.stances.filter(s => (byId[s.person] && issueById[s.issue]) || console.warn("statement with unknown person/issue dropped:", s));
+  const nowFor = raw => raw._meta?.mock ? d3.max(raw.stances, s => new Date(s.date || 0)) : new Date();
+  let STATEMENTS = [], stById = {}, EDGES = [];
+  // Fill statements, salience and headline fields on cache-built edges once stances arrive.
+  function attachStatements(raw) {
+    stancesRaw = raw;
+    STATEMENTS = stmtsOf(raw);
+    stById = Object.fromEntries(STATEMENTS.filter(s => s.statement_id).map(s => [s.statement_id, s]));
+    const NOW = nowFor(raw);
+    const heatOf = s => { const days = s.date ? (NOW - new Date(s.date)) / 864e5 : 365; return Math.pow(2, -Math.max(0, days) / 180); };
+    const byKey = new Map();
+    STATEMENTS.forEach(s => { const k = s.person + "|" + s.issue; if (!byKey.has(k)) byKey.set(k, []); byKey.get(k).push(s); });
+    EDGES.forEach(e => {
+      const st = (byKey.get(e.from + "|" + e.to) || []).sort((a, b) => String(a.date || "").localeCompare(String(b.date || "")));
+      e.statements = st;
+      e.salience = st.reduce((a, s) => a + heatOf(s), 0);
+      if (!st.length) return;
+      const latest = st[st.length - 1];
+      e.first = st[0].date; e.last = latest.date;
+      e.quote = latest.quote; e.bill = latest.bill; e.source = latest.source; e.model = latest.model;
+      e.linkage = CONF[Math.max(...st.map(s => CONF.indexOf(s.linkage)))];
+      e.llm_confidence = CONF[Math.max(...st.map(s => CONF.indexOf(s.llm_confidence)))];
+    });
+  }
+  if (!useCache) {
+    try { stancesRaw = await load("stances.json"); }
+    catch (e) { document.getElementById("loading").textContent = "Could not load data/*.json — serve this folder over http (see data/README.md). " + e.message; return; }
+    STATEMENTS = stmtsOf(stancesRaw);
+    stById = Object.fromEntries(STATEMENTS.filter(s => s.statement_id).map(s => [s.statement_id, s]));
+    EDGES = deriveEdgesInline(STATEMENTS, nowFor(stancesRaw));
+    statementsReady = true; _stmtsResolve();
+  } else {
+    EDGES = graphRaw.edges.map(([pIdx, iIdx, score, heat, flip, n, kind]) => ({
+      from: PEOPLE[pIdx].id, to: ISSUES[iIdx].id, score, direction: dirOf(score), n,
+      flip: flip === 1, heat, kind, statements: [],
+      salience: 0, linkage: null, llm_confidence: null,
+      first: null, last: null, quote: null, bill: null, source: null, model: null }));
+    load("stances.json").then(
+      raw => { attachStatements(raw); statementsReady = true; _stmtsResolve(); updateBadges(); render(); },
+      () => { stmtsFailed = true; _stmtsResolve(); render(); });
+  }
   const heatW = h => 1 + h * 5; // edge width from heat percentile
   const edgeScoreByPI = Object.fromEntries(EDGES.map(e => [e.from + "|" + e.to, e.score]));
   const STATES = [...new Set(PEOPLE.map(p => p.state))].sort();
@@ -398,7 +489,7 @@
   // ---------- EXPLORE ----------
   function filteredEdges() {
     const f = state.f, q = f.q.trim().toLowerCase();
-    return EDGES.filter(e => f.issues.has(e.to) && personOk(byId[e.from], f) && f.dirs.has(e.direction) && CONF.indexOf(e.llm_confidence) >= f.minConf
+    return EDGES.filter(e => f.issues.has(e.to) && personOk(byId[e.from], f) && f.dirs.has(e.direction) && (e.llm_confidence ? CONF.indexOf(e.llm_confidence) : 9) >= f.minConf
       && (!q || byId[e.from].name.toLowerCase().includes(q) || issueById[e.to].name.toLowerCase().includes(q)));
   }
   function renderExploreAside() {
@@ -463,11 +554,11 @@
   function evidenceHtml(e, hlId) {
     const i = issueById[e.to], st = e.statements;
     const head = `<div style="font-weight:600">${title(byId[e.from])} on ${i.name}</div><div style="font-size:11px;color:var(--muted)">${i.catName} › ${i.subName}</div>
-      <div class="tags" style="margin-top:6px"><span class="tag" style="color:${color(e.direction)}">${e.direction} · ${fmt(e.score)}</span><span class="tag">${e.n} statement${e.n > 1 ? "s" : ""}</span><span class="tag" title="attention: recency-weighted statement count, percentile across all edges">🔥 ${Math.round(e.heat * 100)}th pct</span>${e.flip ? `<span class="tag" style="border-color:var(--accent);color:var(--accent)">⟲ flipped</span>` : ""}<span class="tag c-${e.llm_confidence}">confidence: ${e.llm_confidence}</span></div>
-      ${e.n > 1 ? `<div style="margin-top:8px;font-size:11px;color:var(--muted)">direction over time</div>${ribbon(st, 300)}` : ""}`;
+      <div class="tags" style="margin-top:6px"><span class="tag" style="color:${color(e.direction)}">${e.direction} · ${fmt(e.score)}</span><span class="tag">${e.n} statement${e.n > 1 ? "s" : ""}</span><span class="tag" title="attention: recency-weighted statement count, percentile across all edges">🔥 ${Math.round(e.heat * 100)}th pct</span>${e.flip ? `<span class="tag" style="border-color:var(--accent);color:var(--accent)">⟲ flipped</span>` : ""}<span class="tag c-${e.llm_confidence || "…"}">confidence: ${e.llm_confidence || "…"}</span></div>
+      ${e.n > 1 && statementsReady ? `<div style="margin-top:8px;font-size:11px;color:var(--muted)">direction over time</div>${ribbon(st, 300)}` : ""}`;
     const items = [...st].reverse().map(s => `<div class="stmt ${hlId && s.statement_id === hlId ? "hl" : ""}" style="margin-top:10px;padding-top:10px;border-top:1px solid var(--border)"><div style="font-size:11px;color:var(--muted)">${s.statement_id ? `<span class="tag" style="padding:0 5px">${s.statement_id.replace(/^st0*/, "#")}</span> · ` : ""}${s.date || "undated"} · <span style="color:${color(s.direction)}">${s.direction} ${fmt(s.score)}</span> · <span class="tag c-${s.llm_confidence}" style="padding:0 5px">${s.llm_confidence}</span></div>
       <blockquote>“${s.quote}”</blockquote><div style="font-size:12px;color:var(--muted)">${s.bill && billId(s.bill) ? `<a class="link" href="#/bill/${billId(s.bill)}">${s.bill} ↗</a>` : (s.bill || "")} · linkage ${s.linkage} · ${s.model || ""}</div><a href="${s.source}" target="_blank" rel="noopener">source ↗</a></div>`).join("");
-    return `<div class="evidence">${head}${items}</div>`;
+    return `<div class="evidence">${head}${statementsReady ? items : stmtsNote()}</div>`;
   }
 
   // bill-grouped demand panel (2.3): "What it would take" for one issue; "" when the issue has no rows
@@ -492,7 +583,7 @@
         return `<button class="chip cond-chip" data-issue="${issueId}" data-demand="${d}" data-bill="${id}" data-people="${mine.map(r => r.person).join(" ")}" style="display:block;width:100%;text-align:left;margin:6px 0"><div style="font-weight:600">${def.name || d}</div><div style="font-size:11px;color:var(--muted)">${def.type || ""} · wins ${wins} · loses ${loses}</div><div style="font-size:12px;margin-top:4px">${lines}</div></button>`; }).join("");
       return `<div style="margin-top:12px;border-top:1px solid var(--border);padding-top:10px"><div style="font-weight:700">${num}${title ? ` <span style="font-weight:400;color:var(--muted)">${title}</span>` : ""}</div><a href="#/bill/${id}" style="color:var(--accent);font-size:12px">bill page ↗</a>${chips}</div>`;
     }).join("");
-    return `<div class="h" style="margin-top:16px">What it would take</div>${groups}`;
+    return `<div class="h" style="margin-top:16px">What it would take</div>${groups}${statementsReady ? "" : stmtsNote()}`;
   }
   // chip hover: edges of the chip's legislators on this issue go full opacity, other edges of the issue dim; leaving restores
   function bindCondChips() {
@@ -532,7 +623,7 @@
     const L = state.l;
     return EDGES.filter(e => { const p = byId[e.from], i = issueById[e.to];
       return (!L.chamber || p.chamber === L.chamber) && (!L.state || p.state === L.state) && (!L.cat || i.cat === L.cat) && (!L.sub || i.sub === L.sub) && (!L.issue || e.to === L.issue)
-        && (!L.dir || e.direction === L.dir) && (!L.party || p.party === L.party) && (!L.gender || p.gender === L.gender) && CONF.indexOf(e.llm_confidence) >= L.minConf; })
+        && (!L.dir || e.direction === L.dir) && (!L.party || p.party === L.party) && (!L.gender || p.gender === L.gender) && (e.llm_confidence ? CONF.indexOf(e.llm_confidence) : 9) >= L.minConf; })
       .map(e => ({ e, p: byId[e.from], i: issueById[e.to] }));
   }
   function renderListAside() {
@@ -562,11 +653,11 @@
     const th = (k, label) => `<th data-k="${k}" class="${L.sort === k ? "sorted" : ""}">${label}${L.sort === k ? (L.desc ? " ↓" : " ↑") : ""}</th>`;
     wrap.innerHTML = `<div class="toolbar"><span>${rows.length} stances · ${new Set(rows.map(r => r.p.id)).size} legislators</span><button class="btn" id="csv">Export CSV</button></div>
       <table><thead><tr>${th("name", "Legislator")}${th("state", "District")}${th("party", "Party")}${th("gender", "Gender")}${th("issue", "Issue")}<th>Committee</th><th>Stance</th>${th("score", "Score")}${th("n", "Stmts")}${th("conf", "Confidence")}<th>Latest quote</th></tr></thead>
-      <tbody>${rows.map((r, k) => `<tr data-i="${k}" class="${L.sel === r.e ? "active" : ""}"><td><b>${r.p.name}</b></td><td>${seat(r.p)}</td><td><span class="pill ${r.p.party}">${r.p.party}</span></td><td>${r.p.gender}</td><td>${r.i.name}<div style="font-size:11px;color:var(--muted)">${r.i.subName}</div></td><td style="color:var(--muted)">${r.i.catName}</td><td><span class="pill ${r.e.direction}">${r.e.direction}</span></td><td class="score" style="color:${color(r.e.direction)}">${fmt(r.e.score)}</td><td style="text-align:center">${r.e.n}${r.e.flip ? ' <span style="color:var(--accent)" title="position changed over time">⟲</span>' : ""}</td><td><span class="tag c-${r.e.llm_confidence}">${r.e.llm_confidence}</span></td><td class="quote" title="${r.e.quote.replace(/"/g, "&quot;")}">“${r.e.quote}”</td></tr>`).join("") || `<tr><td colspan="11" class="empty-state">No legislators match.</td></tr>`}</tbody></table>`;
+      <tbody>${rows.map((r, k) => `<tr data-i="${k}" class="${L.sel === r.e ? "active" : ""}"><td><b>${r.p.name}</b></td><td>${seat(r.p)}</td><td><span class="pill ${r.p.party}">${r.p.party}</span></td><td>${r.p.gender}</td><td>${r.i.name}<div style="font-size:11px;color:var(--muted)">${r.i.subName}</div></td><td style="color:var(--muted)">${r.i.catName}</td><td><span class="pill ${r.e.direction}">${r.e.direction}</span></td><td class="score" style="color:${color(r.e.direction)}">${fmt(r.e.score)}</td><td style="text-align:center">${r.e.n}${r.e.flip ? ' <span style="color:var(--accent)" title="position changed over time">⟲</span>' : ""}</td><td><span class="tag c-${r.e.llm_confidence || "…"}">${r.e.llm_confidence || "…"}</span></td><td class="quote" title="${(r.e.quote || "").replace(/"/g, "&quot;")}">${statementsReady ? `“${r.e.quote}”` : `<span style="color:var(--muted)">loading…</span>`}</td></tr>`).join("") || `<tr><td colspan="11" class="empty-state">No legislators match.</td></tr>`}</tbody></table>`;
     wrap.querySelectorAll("th[data-k]").forEach(h => h.onclick = () => { const k = h.dataset.k; if (L.sort === k) L.desc = !L.desc; else { L.sort = k; L.desc = k === "score" || k === "conf"; } renderTable(); });
     wrap.querySelectorAll("tbody tr[data-i]").forEach(tr => tr.onclick = () => { L.sel = rows[+tr.dataset.i].e; renderTable(); renderSide(); });
     $("csv").onclick = () => { const h = ["name", "state", "district", "party", "gender", "issue", "subcommittee", "committee", "direction", "score", "statements", "flipped", "first_date", "last_date", "linkage", "llm_confidence", "latest_bill", "latest_quote", "latest_source"];
-      const lines = [h.join(",")].concat(rows.map(r => [r.p.name, r.p.state, r.p.district || "", r.p.party, r.p.gender, r.i.name, r.i.subName, r.i.catName, r.e.direction, r.e.score.toFixed(3), r.e.n, r.e.flip, r.e.first || "", r.e.last || "", r.e.linkage, r.e.llm_confidence, r.e.bill || "", r.e.quote, r.e.source].map(v => `"${String(v).replace(/"/g, '""')}"`).join(",")));
+      const lines = [h.join(",")].concat(rows.map(r => [r.p.name, r.p.state, r.p.district || "", r.p.party, r.p.gender, r.i.name, r.i.subName, r.i.catName, r.e.direction, r.e.score.toFixed(3), r.e.n, r.e.flip, r.e.first || "", r.e.last || "", r.e.linkage || "", r.e.llm_confidence || "", r.e.bill || "", r.e.quote || "", r.e.source || ""].map(v => `"${String(v).replace(/"/g, '""')}"`).join(",")));
       const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([lines.join("\n")], { type: "text/csv" })); a.download = "owl-legislators.csv"; a.click(); };
   }
   function renderListSide() {
@@ -638,10 +729,11 @@
       </div>`;
     wrap.querySelectorAll(".tabs button").forEach(b => b.onclick = () => { P.tab = b.dataset.tab; renderProfile(); });
     wrap.querySelectorAll(".cite").forEach(a => a.onclick = () => { const st = stById[a.dataset.st]; P.sel = EDGES.find(e => e.from === st.person && e.to === st.issue); P.hl = st.statement_id; renderSide(); });
+    if (!statementsReady) wrap.querySelectorAll(".tabpane").forEach(pn => { pn.innerHTML = stmtsNote(); });
     if (!P.open) P.open = new Set(mine.length <= 12 ? mine.map(x => x.i.cat) : []);
-    if (tab === "issues") { $("exp-all").onclick = () => { mine.forEach(x => P.open.add(x.i.cat)); drawBars(p, mine); }; $("col-all").onclick = () => { P.open.clear(); drawBars(p, mine); }; drawBars(p, mine); }
-    if (tab === "overview") { drawScatter(mine); drawRadar(mine); }
-    if (tab === "timeline") drawTimeline(mine);
+    if (tab === "issues" && statementsReady) { $("exp-all").onclick = () => { mine.forEach(x => P.open.add(x.i.cat)); drawBars(p, mine); }; $("col-all").onclick = () => { P.open.clear(); drawBars(p, mine); }; drawBars(p, mine); }
+    if (tab === "overview" && statementsReady) { drawScatter(mine); drawRadar(mine); }
+    if (tab === "timeline" && statementsReady) drawTimeline(mine);
   }
   function drawTimeline(mine) {
     const s = d3.select("#ptimeline"); s.selectAll("*").remove();
@@ -832,6 +924,7 @@
     render();
   }
   function renderBillAside() {
+    if (!statementsReady) { $aside.innerHTML = `<div class="h" style="margin-top:8px">Bills in data</div>${stmtsNote()}`; return; }
     const groups = [...billGroups().entries()].map(([id, g]) => ({ id, info: billInfo(id) })).filter(x => x.info)
       .sort((a, b) => a.info.num.localeCompare(b.info.num));
     $aside.innerHTML = `<div class="h" style="margin-top:8px">Bills in data</div>`
@@ -841,6 +934,7 @@
     $("bill-explore").onclick = () => { state.mode = "explore"; state.b.id = null; render(); };
   }
   function renderBillSide() {
+    if (!statementsReady) { $side.innerHTML = stmtsNote(); return; }
     const m = billModel();
     if (!m) { $side.innerHTML = `<div class="empty-state">Bill not found in data.</div>`; return; }
     const { demands, active, on, proj } = m;
@@ -875,7 +969,13 @@
     $side.querySelectorAll("input[data-d]").forEach(cb => cb.onchange = () => tickDemand(cb.dataset.d, cb.checked));
   }
   function renderBill() {
-    const wrap = $("bill"), info = billInfo(state.b.id);
+    const wrap = $("bill");
+    if (!statementsReady) {
+      wrap.innerHTML = `<div class="bill-wrap"><div class="crumbline"><a id="bill-back0">← Explore</a> · <span style="color:var(--text)">Bill</span></div><h1>${state.b.id}</h1>${stmtsNote()}</div>`;
+      $("bill-back0").onclick = () => { state.mode = "explore"; state.b.id = null; render(); };
+      return;
+    }
+    const info = billInfo(state.b.id);
     if (!info) {
       wrap.innerHTML = `<div class="empty-state" style="padding:24px">Bill not found in data. <span class="link" id="bill-missing-back">← back to Explore</span></div>`;
       $("bill-missing-back").onclick = () => { state.mode = "explore"; state.b.id = null; render(); };
@@ -1097,7 +1197,7 @@
   function renderHeader() {
     ["explore", "focus", "list", "profile"].forEach(m => $("m-" + m).classList.toggle("active", state.mode === m));
     if (state.mode === "profile") { const p = byId[state.p.person]; $crumb.innerHTML = p ? `<b>${p.name}</b> · ${seat(p)}` : `<b>Legislators</b>`; $hint.textContent = ""; }
-    else if (state.mode === "bill") { const info = billInfo(state.b.id); $crumb.innerHTML = info ? `<b>${info.num}</b> · ${info.title || "Bill"}` : `<b>Bill</b> · not found`; $hint.textContent = ""; }
+    else if (state.mode === "bill") { const info = statementsReady ? billInfo(state.b.id) : null; $crumb.innerHTML = info ? `<b>${info.num}</b> · ${info.title || "Bill"}` : `<b>Bill</b> · ${statementsReady ? "not found" : "loading statements…"}`; $hint.textContent = ""; }
     else if (state.mode === "list") { $crumb.innerHTML = `<b>Legislator list</b> · dropdown filters`; $hint.textContent = ""; }
     else if (state.mode === "explore") { $crumb.innerHTML = `<b>All issues</b> · filtered view`; $hint.textContent = "Tick issues on the left to filter · hover to see connections · click an issue to focus · click a legislator to open their page"; }
     else { const i = issueById[state.issue]; $crumb.innerHTML = i ? `<b>${i.catName}</b> › ${i.subName} › <b>${i.name}</b>` : "Pick an issue"; $hint.textContent = "Drag nodes · click a legislator to open their page · grey issues = what these legislators also talk about"; }

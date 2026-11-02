@@ -12,6 +12,7 @@ data/raw/
 .DS_Store
 data/_site
 _site/
+apps/web/data/
 # agent harness / local tooling (untracked by design)
 .agents/
 _local-backup-*/
