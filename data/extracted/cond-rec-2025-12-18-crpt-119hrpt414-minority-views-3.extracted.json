@@ -1,0 +1,282 @@
+{
+  "record_id": "rec-2025-12-18-crpt-119hrpt414-minority-views-3",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T08:16:52.924Z",
+  "accepted": [
+    {
+      "person": "S000185",
+      "issue": "higher-education-and-student-aid",
+      "bill": "H.R. 4054 Accreditation Choice and Innovation Act",
+      "stance_if_met": "support",
+      "scope": "final_passage",
+      "condition": "H.R. 4054 must undergo drastic revision.",
+      "quote": "Unless there is drastic revision of H.R. 4054, we would urge the House of Representatives to oppose it as well.",
+      "statement_id": null,
+      "record_id": "rec-2025-12-18-crpt-119hrpt414-minority-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "_demand": {
+        "name": "Drastic Revision of H.R. 4054",
+        "type": "amendment"
+      }
+    },
+    {
+      "person": "C001069",
+      "issue": "higher-education-and-student-aid",
+      "bill": "H.R. 4054 Accreditation Choice and Innovation Act",
+      "stance_if_met": "support",
+      "scope": "final_passage",
+      "condition": "H.R. 4054 must undergo drastic revision.",
+      "quote": "Unless there is drastic revision of H.R. 4054, we would urge the House of Representatives to oppose it as well.",
+      "statement_id": null,
+      "record_id": "rec-2025-12-18-crpt-119hrpt414-minority-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "_demand": {
+        "name": "Drastic Revision of H.R. 4054",
+        "type": "amendment"
+      }
+    },
+    {
+      "person": "W000808",
+      "issue": "higher-education-and-student-aid",
+      "bill": "H.R. 4054 Accreditation Choice and Innovation Act",
+      "stance_if_met": "support",
+      "scope": "final_passage",
+      "condition": "H.R. 4054 must undergo drastic revision.",
+      "quote": "Unless there is drastic revision of H.R. 4054, we would urge the House of Representatives to oppose it as well.",
+      "statement_id": null,
+      "record_id": "rec-2025-12-18-crpt-119hrpt414-minority-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "_demand": {
+        "name": "Drastic Revision of H.R. 4054",
+        "type": "amendment"
+      }
+    },
+    {
+      "person": "B001278",
+      "issue": "higher-education-and-student-aid",
+      "bill": "H.R. 4054 Accreditation Choice and Innovation Act",
+      "stance_if_met": "support",
+      "scope": "final_passage",
+      "condition": "H.R. 4054 must undergo drastic revision.",
+      "quote": "Unless there is drastic revision of H.R. 4054, we would urge the House of Representatives to oppose it as well.",
+      "statement_id": null,
+      "record_id": "rec-2025-12-18-crpt-119hrpt414-minority-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "_demand": {
+        "name": "Drastic Revision of H.R. 4054",
+        "type": "amendment"
+      }
+    },
+    {
+      "person": "T000472",
+      "issue": "higher-education-and-student-aid",
+      "bill": "H.R. 4054 Accreditation Choice and Innovation Act",
+      "stance_if_met": "support",
+      "scope": "final_passage",
+      "condition": "H.R. 4054 must undergo drastic revision.",
+      "quote": "Unless there is drastic revision of H.R. 4054, we would urge the House of Representatives to oppose it as well.",
+      "statement_id": null,
+      "record_id": "rec-2025-12-18-crpt-119hrpt414-minority-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "_demand": {
+        "name": "Drastic Revision of H.R. 4054",
+        "type": "amendment"
+      }
+    },
+    {
+      "person": "A000370",
+      "issue": "higher-education-and-student-aid",
+      "bill": "H.R. 4054 Accreditation Choice and Innovation Act",
+      "stance_if_met": "support",
+      "scope": "final_passage",
+      "condition": "H.R. 4054 must undergo drastic revision.",
+      "quote": "Unless there is drastic revision of H.R. 4054, we would urge the House of Representatives to oppose it as well.",
+      "statement_id": null,
+      "record_id": "rec-2025-12-18-crpt-119hrpt414-minority-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "_demand": {
+        "name": "Drastic Revision of H.R. 4054",
+        "type": "amendment"
+      }
+    },
+    {
+      "person": "D000623",
+      "issue": "higher-education-and-student-aid",
+      "bill": "H.R. 4054 Accreditation Choice and Innovation Act",
+      "stance_if_met": "support",
+      "scope": "final_passage",
+      "condition": "H.R. 4054 must undergo drastic revision.",
+      "quote": "Unless there is drastic revision of H.R. 4054, we would urge the House of Representatives to oppose it as well.",
+      "statement_id": null,
+      "record_id": "rec-2025-12-18-crpt-119hrpt414-minority-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "_demand": {
+        "name": "Drastic Revision of H.R. 4054",
+        "type": "amendment"
+      }
+    },
+    {
+      "person": "N000188",
+      "issue": "higher-education-and-student-aid",
+      "bill": "H.R. 4054 Accreditation Choice and Innovation Act",
+      "stance_if_met": "support",
+      "scope": "final_passage",
+      "condition": "H.R. 4054 must undergo drastic revision.",
+      "quote": "Unless there is drastic revision of H.R. 4054, we would urge the House of Representatives to oppose it as well.",
+      "statement_id": null,
+      "record_id": "rec-2025-12-18-crpt-119hrpt414-minority-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "_demand": {
+        "name": "Drastic Revision of H.R. 4054",
+        "type": "amendment"
+      }
+    },
+    {
+      "person": "M001208",
+      "issue": "higher-education-and-student-aid",
+      "bill": "H.R. 4054 Accreditation Choice and Innovation Act",
+      "stance_if_met": "support",
+      "scope": "final_passage",
+      "condition": "H.R. 4054 must undergo drastic revision.",
+      "quote": "Unless there is drastic revision of H.R. 4054, we would urge the House of Representatives to oppose it as well.",
+      "statement_id": null,
+      "record_id": "rec-2025-12-18-crpt-119hrpt414-minority-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "_demand": {
+        "name": "Drastic Revision of H.R. 4054",
+        "type": "amendment"
+      }
+    },
+    {
+      "person": "H001081",
+      "issue": "higher-education-and-student-aid",
+      "bill": "H.R. 4054 Accreditation Choice and Innovation Act",
+      "stance_if_met": "support",
+      "scope": "final_passage",
+      "condition": "H.R. 4054 must undergo drastic revision.",
+      "quote": "Unless there is drastic revision of H.R. 4054, we would urge the House of Representatives to oppose it as well.",
+      "statement_id": null,
+      "record_id": "rec-2025-12-18-crpt-119hrpt414-minority-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "_demand": {
+        "name": "Drastic Revision of H.R. 4054",
+        "type": "amendment"
+      }
+    },
+    {
+      "person": "O000173",
+      "issue": "higher-education-and-student-aid",
+      "bill": "H.R. 4054 Accreditation Choice and Innovation Act",
+      "stance_if_met": "support",
+      "scope": "final_passage",
+      "condition": "H.R. 4054 must undergo drastic revision.",
+      "quote": "Unless there is drastic revision of H.R. 4054, we would urge the House of Representatives to oppose it as well.",
+      "statement_id": null,
+      "record_id": "rec-2025-12-18-crpt-119hrpt414-minority-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "_demand": {
+        "name": "Drastic Revision of H.R. 4054",
+        "type": "amendment"
+      }
+    },
+    {
+      "person": "S001215",
+      "issue": "higher-education-and-student-aid",
+      "bill": "H.R. 4054 Accreditation Choice and Innovation Act",
+      "stance_if_met": "support",
+      "scope": "final_passage",
+      "condition": "H.R. 4054 must undergo drastic revision.",
+      "quote": "Unless there is drastic revision of H.R. 4054, we would urge the House of Representatives to oppose it as well.",
+      "statement_id": null,
+      "record_id": "rec-2025-12-18-crpt-119hrpt414-minority-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "_demand": {
+        "name": "Drastic Revision of H.R. 4054",
+        "type": "amendment"
+      }
+    },
+    {
+      "person": "C001131",
+      "issue": "higher-education-and-student-aid",
+      "bill": "H.R. 4054 Accreditation Choice and Innovation Act",
+      "stance_if_met": "support",
+      "scope": "final_passage",
+      "condition": "H.R. 4054 must undergo drastic revision.",
+      "quote": "Unless there is drastic revision of H.R. 4054, we would urge the House of Representatives to oppose it as well.",
+      "statement_id": null,
+      "record_id": "rec-2025-12-18-crpt-119hrpt414-minority-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "_demand": {
+        "name": "Drastic Revision of H.R. 4054",
+        "type": "amendment"
+      }
+    },
+    {
+      "person": "L000602",
+      "issue": "higher-education-and-student-aid",
+      "bill": "H.R. 4054 Accreditation Choice and Innovation Act",
+      "stance_if_met": "support",
+      "scope": "final_passage",
+      "condition": "H.R. 4054 must undergo drastic revision.",
+      "quote": "Unless there is drastic revision of H.R. 4054, we would urge the House of Representatives to oppose it as well.",
+      "statement_id": null,
+      "record_id": "rec-2025-12-18-crpt-119hrpt414-minority-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "_demand": {
+        "name": "Drastic Revision of H.R. 4054",
+        "type": "amendment"
+      }
+    },
+    {
+      "person": "M001231",
+      "issue": "higher-education-and-student-aid",
+      "bill": "H.R. 4054 Accreditation Choice and Innovation Act",
+      "stance_if_met": "support",
+      "scope": "final_passage",
+      "condition": "H.R. 4054 must undergo drastic revision.",
+      "quote": "Unless there is drastic revision of H.R. 4054, we would urge the House of Representatives to oppose it as well.",
+      "statement_id": null,
+      "record_id": "rec-2025-12-18-crpt-119hrpt414-minority-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "_demand": {
+        "name": "Drastic Revision of H.R. 4054",
+        "type": "amendment"
+      }
+    },
+    {
+      "person": "A000381",
+      "issue": "higher-education-and-student-aid",
+      "bill": "H.R. 4054 Accreditation Choice and Innovation Act",
+      "stance_if_met": "support",
+      "scope": "final_passage",
+      "condition": "H.R. 4054 must undergo drastic revision.",
+      "quote": "Unless there is drastic revision of H.R. 4054, we would urge the House of Representatives to oppose it as well.",
+      "statement_id": null,
+      "record_id": "rec-2025-12-18-crpt-119hrpt414-minority-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "_demand": {
+        "name": "Drastic Revision of H.R. 4054",
+        "type": "amendment"
+      }
+    }
+  ],
+  "rejected": [],
+  "demands": [
+    {
+      "name": "Drastic Revision of H.R. 4054",
+      "type": "amendment"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 3845,
+    "prompt_tokens": 4850,
+    "total_tokens": 8695,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1817
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "finish_reason": "stop"
+}

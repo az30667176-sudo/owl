@@ -34,6 +34,7 @@
 import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync } from "node:fs";
 import { resolve, join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import { reviewNewIssues } from "./review-issues.mjs";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "../..");
 const args = process.argv.slice(2);
@@ -80,6 +81,7 @@ const subIds = new Set(subs);
 const norm = (s) => String(s || "").normalize("NFKC")
   .replace(/[‘’‚]/g, "'").replace(/[“”„]/g, '"').replace(/\s+/g, " ").trim().toLowerCase();
 const dirOf = (s) => (s > 0.15 ? "support" : s < -0.15 ? "oppose" : "neutral");
+
 const CONF = new Set(["low", "mid", "high", "super_high"]);
 const estTokens = (chars) => Math.ceil(chars / 4);
 
@@ -283,12 +285,17 @@ totals.newIssues = allNewIssues.size;
 if (MERGE && allAccepted.length) {
   let newIssueIds = new Set();
   if (MERGE_NEW && allNewIssues.size) {
-    for (const n of allNewIssues.values()) {
-      if (!issueIds.has(n.id)) { issuesFile.issues.push({ id: n.id, name: n.name, parent: n.parent }); issueIds.add(n.id); }
+    const review = reviewNewIssues(issuesFile.issues, [...allNewIssues.values()]);
+    for (const c of review.create) {
+      if (!subIds.has(c.parent)) { console.log(`  ! new issue ${c.id}: bad parent ${c.parent}, skipped`); continue; }
+      issuesFile.issues.push(c); issueIds.add(c.id);
     }
     writeFileSync(join(DATA, "issues.json"), JSON.stringify(issuesFile, null, 2) + "\n");
-    newIssueIds = new Set(allNewIssues.keys());
-    console.log(`merged ${allNewIssues.size} new issue(s) into issues.json`);
+    for (const a of allAccepted) if (review.remap.has(a.issue)) a.issue = review.remap.get(a.issue);
+    newIssueIds = new Set(review.create.map((c) => c.id));
+    writeFileSync(join(extractedDir, "_new-issues.json"), JSON.stringify({ reviewed_at: new Date().toISOString(), mode: "deterministic-review", created: review.create, remapped: Object.fromEntries(review.remap), audit: review.audit }, null, 2) + "\n");
+    console.log(`reviewed ${allNewIssues.size} proposal(s): ${review.create.length} created, ${review.remap.size} remapped`);
+    for (const line of review.audit) console.log(`  ~ ${line}`);
   }
   const mergeable = allAccepted.filter((a) => issueIds.has(a.issue) || newIssueIds.has(a.issue));
   totals.held = allAccepted.length - mergeable.length;

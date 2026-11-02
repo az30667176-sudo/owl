@@ -1,0 +1,42 @@
+{
+  "record_id": "rec-2026-05-26-crpt-119hrpt669-supplemental-views-3",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T08:16:42.221Z",
+  "accepted": [
+    {
+      "person": "S000185",
+      "issue": "higher-education-and-student-aid",
+      "bill": "H.R. 7892",
+      "stance_if_met": "support",
+      "scope": "final_passage",
+      "condition": "Support on the floor depends on significant revision to add enforcement guardrails, evidence of Department success under current practices, and wider consultation with higher education stakeholders.",
+      "quote": "We urge the House of Representatives to oppose H.R. 7892 unless there is a significant revision, evidence provided of Departmental success of current practices, and wider consultation of higher education stakeholders.",
+      "statement_id": null,
+      "record_id": "rec-2026-05-26-crpt-119hrpt669-supplemental-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "_demand": {
+        "name": "Significant revision with guardrails and consultation",
+        "type": "amendment"
+      }
+    }
+  ],
+  "rejected": [],
+  "demands": [
+    {
+      "name": "Significant revision with guardrails and consultation",
+      "type": "amendment"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 1422,
+    "prompt_tokens": 4046,
+    "total_tokens": 5468,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1261
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2929
+    }
+  },
+  "finish_reason": "stop"
+}

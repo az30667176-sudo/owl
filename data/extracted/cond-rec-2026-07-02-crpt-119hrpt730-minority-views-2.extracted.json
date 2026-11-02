@@ -1,0 +1,154 @@
+{
+  "record_id": "rec-2026-07-02-crpt-119hrpt730-minority-views-2",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T08:17:11.688Z",
+  "accepted": [
+    {
+      "person": "S000185",
+      "issue": "higher-education-and-student-aid",
+      "bill": "H.R. 7893",
+      "stance_if_met": "support",
+      "scope": "final_passage",
+      "condition": "Amend the legislation to narrowly focus on verifying the SSNs of students and their contributors.",
+      "quote": "We urge the House of Representatives to do the same unless the legislation is amended to narrowly focus on verifying the SSNs of students and their contributors.",
+      "statement_id": null,
+      "record_id": "rec-2026-07-02-crpt-119hrpt730-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "_demand": {
+        "name": "Narrow bill to SSN verification only",
+        "type": "amendment"
+      }
+    },
+    {
+      "person": "W000808",
+      "issue": "higher-education-and-student-aid",
+      "bill": "H.R. 7893",
+      "stance_if_met": "support",
+      "scope": "final_passage",
+      "condition": "Amend the legislation to narrowly focus on verifying the SSNs of students and their contributors.",
+      "quote": "We urge the House of Representatives to do the same unless the legislation is amended to narrowly focus on verifying the SSNs of students and their contributors.",
+      "statement_id": null,
+      "record_id": "rec-2026-07-02-crpt-119hrpt730-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "_demand": {
+        "name": "Narrow bill to SSN verification only",
+        "type": "amendment"
+      }
+    },
+    {
+      "person": "B001278",
+      "issue": "higher-education-and-student-aid",
+      "bill": "H.R. 7893",
+      "stance_if_met": "support",
+      "scope": "final_passage",
+      "condition": "Amend the legislation to narrowly focus on verifying the SSNs of students and their contributors.",
+      "quote": "We urge the House of Representatives to do the same unless the legislation is amended to narrowly focus on verifying the SSNs of students and their contributors.",
+      "statement_id": null,
+      "record_id": "rec-2026-07-02-crpt-119hrpt730-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "_demand": {
+        "name": "Narrow bill to SSN verification only",
+        "type": "amendment"
+      }
+    },
+    {
+      "person": "T000472",
+      "issue": "higher-education-and-student-aid",
+      "bill": "H.R. 7893",
+      "stance_if_met": "support",
+      "scope": "final_passage",
+      "condition": "Amend the legislation to narrowly focus on verifying the SSNs of students and their contributors.",
+      "quote": "We urge the House of Representatives to do the same unless the legislation is amended to narrowly focus on verifying the SSNs of students and their contributors.",
+      "statement_id": null,
+      "record_id": "rec-2026-07-02-crpt-119hrpt730-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "_demand": {
+        "name": "Narrow bill to SSN verification only",
+        "type": "amendment"
+      }
+    },
+    {
+      "person": "D000623",
+      "issue": "higher-education-and-student-aid",
+      "bill": "H.R. 7893",
+      "stance_if_met": "support",
+      "scope": "final_passage",
+      "condition": "Amend the legislation to narrowly focus on verifying the SSNs of students and their contributors.",
+      "quote": "We urge the House of Representatives to do the same unless the legislation is amended to narrowly focus on verifying the SSNs of students and their contributors.",
+      "statement_id": null,
+      "record_id": "rec-2026-07-02-crpt-119hrpt730-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "_demand": {
+        "name": "Narrow bill to SSN verification only",
+        "type": "amendment"
+      }
+    },
+    {
+      "person": "H001081",
+      "issue": "higher-education-and-student-aid",
+      "bill": "H.R. 7893",
+      "stance_if_met": "support",
+      "scope": "final_passage",
+      "condition": "Amend the legislation to narrowly focus on verifying the SSNs of students and their contributors.",
+      "quote": "We urge the House of Representatives to do the same unless the legislation is amended to narrowly focus on verifying the SSNs of students and their contributors.",
+      "statement_id": null,
+      "record_id": "rec-2026-07-02-crpt-119hrpt730-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "_demand": {
+        "name": "Narrow bill to SSN verification only",
+        "type": "amendment"
+      }
+    },
+    {
+      "person": "L000602",
+      "issue": "higher-education-and-student-aid",
+      "bill": "H.R. 7893",
+      "stance_if_met": "support",
+      "scope": "final_passage",
+      "condition": "Amend the legislation to narrowly focus on verifying the SSNs of students and their contributors.",
+      "quote": "We urge the House of Representatives to do the same unless the legislation is amended to narrowly focus on verifying the SSNs of students and their contributors.",
+      "statement_id": null,
+      "record_id": "rec-2026-07-02-crpt-119hrpt730-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "_demand": {
+        "name": "Narrow bill to SSN verification only",
+        "type": "amendment"
+      }
+    },
+    {
+      "person": "G000606",
+      "issue": "higher-education-and-student-aid",
+      "bill": "H.R. 7893",
+      "stance_if_met": "support",
+      "scope": "final_passage",
+      "condition": "Amend the legislation to narrowly focus on verifying the SSNs of students and their contributors.",
+      "quote": "We urge the House of Representatives to do the same unless the legislation is amended to narrowly focus on verifying the SSNs of students and their contributors.",
+      "statement_id": null,
+      "record_id": "rec-2026-07-02-crpt-119hrpt730-minority-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "_demand": {
+        "name": "Narrow bill to SSN verification only",
+        "type": "amendment"
+      }
+    }
+  ],
+  "rejected": [],
+  "demands": [
+    {
+      "name": "Narrow bill to SSN verification only",
+      "type": "amendment"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 2720,
+    "prompt_tokens": 3917,
+    "total_tokens": 6637,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1684
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "finish_reason": "stop"
+}

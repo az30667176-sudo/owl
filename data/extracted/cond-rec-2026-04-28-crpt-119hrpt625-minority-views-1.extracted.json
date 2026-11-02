@@ -1,0 +1,21 @@
+{
+  "record_id": "rec-2026-04-28-crpt-119hrpt625-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T08:16:14.263Z",
+  "accepted": [],
+  "rejected": [],
+  "demands": [],
+  "usage": {
+    "completion_tokens": 168,
+    "prompt_tokens": 4340,
+    "total_tokens": 4508,
+    "completion_tokens_details": {
+      "reasoning_tokens": 154
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2929
+    }
+  },
+  "finish_reason": "stop",
+  "raw_excerpt": "{\"conditions\": []}"
+}

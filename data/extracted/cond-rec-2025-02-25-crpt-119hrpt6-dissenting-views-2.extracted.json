@@ -1,0 +1,42 @@
+{
+  "record_id": "rec-2025-02-25-crpt-119hrpt6-dissenting-views-2",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T08:17:03.478Z",
+  "accepted": [
+    {
+      "person": "T000460",
+      "issue": "pandemic-fraud-prevention-and-recovery",
+      "bill": null,
+      "stance_if_met": "support",
+      "scope": "vote",
+      "condition": "Fix the bill so it does not rescind American Rescue Plan funding for identity verification tools while extending the statute of limitations.",
+      "quote": "I urge my colleague to vote no unless changed.",
+      "statement_id": null,
+      "record_id": "rec-2025-02-25-crpt-119hrpt6-dissenting-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "_demand": {
+        "name": "Preserve UI fraud-prevention identity verification funding",
+        "type": "funding"
+      }
+    }
+  ],
+  "rejected": [],
+  "demands": [
+    {
+      "name": "Preserve UI fraud-prevention identity verification funding",
+      "type": "funding"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 1506,
+    "prompt_tokens": 3497,
+    "total_tokens": 5003,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1386
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2929
+    }
+  },
+  "finish_reason": "stop"
+}

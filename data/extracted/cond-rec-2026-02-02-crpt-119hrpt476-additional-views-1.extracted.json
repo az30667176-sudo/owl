@@ -1,0 +1,42 @@
+{
+  "record_id": "rec-2026-02-02-crpt-119hrpt476-additional-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T08:16:52.317Z",
+  "accepted": [
+    {
+      "person": "T000460",
+      "issue": "gun-policy",
+      "bill": null,
+      "stance_if_met": "support",
+      "scope": "vote",
+      "condition": "Sort out concerns about weakening the National Firearms Act and the excise tax or adopt the amendments offered to address them.",
+      "quote": "Unless we can sort this out, or unless some of the amendments that are being offered today are adopted, I'm going to have to be a ``no'' and urge the rest of the committee to be a ``no'' on this.",
+      "statement_id": null,
+      "record_id": "rec-2026-02-02-crpt-119hrpt476-additional-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "_demand": {
+        "name": "Adopt amendments resolving NFA and excise tax issues",
+        "type": "amendment"
+      }
+    }
+  ],
+  "rejected": [],
+  "demands": [
+    {
+      "name": "Adopt amendments resolving NFA and excise tax issues",
+      "type": "amendment"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 888,
+    "prompt_tokens": 3637,
+    "total_tokens": 4525,
+    "completion_tokens_details": {
+      "reasoning_tokens": 736
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2929
+    }
+  },
+  "finish_reason": "stop"
+}

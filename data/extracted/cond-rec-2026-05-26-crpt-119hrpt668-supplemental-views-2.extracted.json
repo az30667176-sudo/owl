@@ -1,0 +1,42 @@
+{
+  "record_id": "rec-2026-05-26-crpt-119hrpt668-supplemental-views-2",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T08:16:07.923Z",
+  "accepted": [
+    {
+      "person": "S000185",
+      "issue": "higher-education-and-student-aid",
+      "bill": "H.R. 7891",
+      "stance_if_met": "support",
+      "scope": "vote",
+      "condition": "Provide more clarity limiting the Secretary's discretion to open widespread investigations and unspecified oversight activities before codifying the expanded review process.",
+      "quote": "Without more clarity, Democrats cannot support the proposed codification of an expanded review process",
+      "statement_id": null,
+      "record_id": "rec-2026-05-26-crpt-119hrpt668-supplemental-views-2",
+      "model": "muse-spark-1.3-contributor",
+      "_demand": {
+        "name": "Clarity limiting expanded review authority",
+        "type": "oversight"
+      }
+    }
+  ],
+  "rejected": [],
+  "demands": [
+    {
+      "name": "Clarity limiting expanded review authority",
+      "type": "oversight"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 1845,
+    "prompt_tokens": 5536,
+    "total_tokens": 7381,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1716
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2929
+    }
+  },
+  "finish_reason": "stop"
+}

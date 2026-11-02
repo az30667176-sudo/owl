@@ -1,0 +1,42 @@
+{
+  "record_id": "rec-2025-09-19-crpt-119hrpt304-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T08:17:06.870Z",
+  "accepted": [
+    {
+      "person": "P000034",
+      "issue": "electric-grid-reliability",
+      "bill": "H.R. 3638, the ``Electric Supply Chain Act,''",
+      "stance_if_met": "support",
+      "scope": "vote",
+      "condition": "DOE must provide visibility into Office staffing and assess/certify existing staff capacity can handle existing work plus the bill's new directives.",
+      "quote": "we cannot support an irresponsible bill that unfairly burdens Department of Energy staff with additional directives without assessing their existing capacities.",
+      "statement_id": null,
+      "record_id": "rec-2025-09-19-crpt-119hrpt304-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "_demand": {
+        "name": "Assess DOE staffing capacity before adding work",
+        "type": "oversight"
+      }
+    }
+  ],
+  "rejected": [],
+  "demands": [
+    {
+      "name": "Assess DOE staffing capacity before adding work",
+      "type": "oversight"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 1598,
+    "prompt_tokens": 3490,
+    "total_tokens": 5088,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1453
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2929
+    }
+  },
+  "finish_reason": "stop"
+}

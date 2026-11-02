@@ -1,0 +1,62 @@
+{
+  "record_id": "rec-2025-05-20-crpt-119hrpt106-pt1-dissenting-views-3",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T08:14:24.455Z",
+  "accepted": [
+    {
+      "person": "G000559",
+      "issue": "federal-budget-and-deficit",
+      "bill": null,
+      "stance_if_met": "support",
+      "scope": "vote",
+      "condition": "The defense funding provisions must go through the normal authorization and appropriations process.",
+      "quote": "While there are portions of this bill that I would support as submitted through the normal process, I cannot support providing reconciliation funds by taking food from school-aged children.",
+      "statement_id": null,
+      "record_id": "rec-2025-05-20-crpt-119hrpt106-pt1-dissenting-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "_demand": {
+        "name": "Use normal authorization and appropriations process",
+        "type": "procedure"
+      }
+    },
+    {
+      "person": "G000559",
+      "issue": "child-nutrition-and-school-meals",
+      "bill": null,
+      "stance_if_met": "support",
+      "scope": "vote",
+      "condition": "Reconciliation defense funds must not come at the expense of food for school-aged children.",
+      "quote": "While there are portions of this bill that I would support as submitted through the normal process, I cannot support providing reconciliation funds by taking food from school-aged children.",
+      "statement_id": null,
+      "record_id": "rec-2025-05-20-crpt-119hrpt106-pt1-dissenting-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "_demand": {
+        "name": "Protect school meals from cuts",
+        "type": "funding"
+      }
+    }
+  ],
+  "rejected": [],
+  "demands": [
+    {
+      "name": "Use normal authorization and appropriations process",
+      "type": "procedure"
+    },
+    {
+      "name": "Protect school meals from cuts",
+      "type": "funding"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 2643,
+    "prompt_tokens": 3739,
+    "total_tokens": 6382,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2397
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "finish_reason": "stop"
+}

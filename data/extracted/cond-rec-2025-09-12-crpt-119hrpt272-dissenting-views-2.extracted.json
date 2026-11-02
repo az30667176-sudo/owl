@@ -1,0 +1,21 @@
+{
+  "record_id": "rec-2025-09-12-crpt-119hrpt272-dissenting-views-2",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T08:16:50.027Z",
+  "accepted": [],
+  "rejected": [],
+  "demands": [],
+  "usage": {
+    "completion_tokens": 367,
+    "prompt_tokens": 3299,
+    "total_tokens": 3666,
+    "completion_tokens_details": {
+      "reasoning_tokens": 353
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2929
+    }
+  },
+  "finish_reason": "stop",
+  "raw_excerpt": "{\"conditions\": []}"
+}

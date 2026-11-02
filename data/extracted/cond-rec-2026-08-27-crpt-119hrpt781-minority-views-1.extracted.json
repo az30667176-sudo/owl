@@ -1,0 +1,106 @@
+{
+  "record_id": "rec-2026-08-27-crpt-119hrpt781-minority-views-1",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T08:16:19.824Z",
+  "accepted": [
+    {
+      "person": "S000185",
+      "issue": "transgender-student-rights-in-higher-education",
+      "bill": "H.R. 2555, the Freedom of Association in Higher Education Act",
+      "stance_if_met": "support",
+      "scope": "final_passage",
+      "condition": "Remove the trans-exclusionary language defining sex as assigned at birth from the bill.",
+      "quote": "Unless the trans-exclusionary language is removed from the bill, we urge the House of Representatives to do the same.",
+      "statement_id": null,
+      "record_id": "rec-2026-08-27-crpt-119hrpt781-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "_demand": {
+        "name": "Remove trans-exclusionary language",
+        "type": "amendment"
+      }
+    },
+    {
+      "person": "B001278",
+      "issue": "transgender-student-rights-in-higher-education",
+      "bill": "H.R. 2555, the Freedom of Association in Higher Education Act",
+      "stance_if_met": "support",
+      "scope": "final_passage",
+      "condition": "Remove the trans-exclusionary language defining sex as assigned at birth from the bill.",
+      "quote": "Unless the trans-exclusionary language is removed from the bill, we urge the House of Representatives to do the same.",
+      "statement_id": null,
+      "record_id": "rec-2026-08-27-crpt-119hrpt781-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "_demand": {
+        "name": "Remove trans-exclusionary language",
+        "type": "amendment"
+      }
+    },
+    {
+      "person": "D000623",
+      "issue": "transgender-student-rights-in-higher-education",
+      "bill": "H.R. 2555, the Freedom of Association in Higher Education Act",
+      "stance_if_met": "support",
+      "scope": "final_passage",
+      "condition": "Remove the trans-exclusionary language defining sex as assigned at birth from the bill.",
+      "quote": "Unless the trans-exclusionary language is removed from the bill, we urge the House of Representatives to do the same.",
+      "statement_id": null,
+      "record_id": "rec-2026-08-27-crpt-119hrpt781-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "_demand": {
+        "name": "Remove trans-exclusionary language",
+        "type": "amendment"
+      }
+    },
+    {
+      "person": "M001231",
+      "issue": "transgender-student-rights-in-higher-education",
+      "bill": "H.R. 2555, the Freedom of Association in Higher Education Act",
+      "stance_if_met": "support",
+      "scope": "final_passage",
+      "condition": "Remove the trans-exclusionary language defining sex as assigned at birth from the bill.",
+      "quote": "Unless the trans-exclusionary language is removed from the bill, we urge the House of Representatives to do the same.",
+      "statement_id": null,
+      "record_id": "rec-2026-08-27-crpt-119hrpt781-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "_demand": {
+        "name": "Remove trans-exclusionary language",
+        "type": "amendment"
+      }
+    },
+    {
+      "person": "G000606",
+      "issue": "transgender-student-rights-in-higher-education",
+      "bill": "H.R. 2555, the Freedom of Association in Higher Education Act",
+      "stance_if_met": "support",
+      "scope": "final_passage",
+      "condition": "Remove the trans-exclusionary language defining sex as assigned at birth from the bill.",
+      "quote": "Unless the trans-exclusionary language is removed from the bill, we urge the House of Representatives to do the same.",
+      "statement_id": null,
+      "record_id": "rec-2026-08-27-crpt-119hrpt781-minority-views-1",
+      "model": "muse-spark-1.3-contributor",
+      "_demand": {
+        "name": "Remove trans-exclusionary language",
+        "type": "amendment"
+      }
+    }
+  ],
+  "rejected": [],
+  "demands": [
+    {
+      "name": "Remove trans-exclusionary language",
+      "type": "amendment"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 2326,
+    "prompt_tokens": 5026,
+    "total_tokens": 7352,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1654
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2929
+    }
+  },
+  "finish_reason": "stop"
+}

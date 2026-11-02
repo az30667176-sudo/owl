@@ -434,6 +434,511 @@
       "id": "national-security-and-state-appropriations",
       "name": "National Security and State Appropriations",
       "parent": "hsap-state"
+    },
+    {
+      "id": "child-support-policy",
+      "name": "Child Support Policy",
+      "parent": "hswm-welfare"
+    },
+    {
+      "id": "africa-trade-and-agoa",
+      "name": "Africa Trade and AGOA",
+      "parent": "hswm-tax"
+    },
+    {
+      "id": "eliminating-the-penny",
+      "name": "Eliminating the Penny",
+      "parent": "hsba-institutions"
+    },
+    {
+      "id": "nuclear-modernization",
+      "name": "Nuclear Modernization",
+      "parent": "hsas-readiness"
+    },
+    {
+      "id": "child-labor-protections",
+      "name": "Child Labor Protections",
+      "parent": "hsed-protections"
+    },
+    {
+      "id": "clean-energy-deployment",
+      "name": "Clean Energy Deployment",
+      "parent": "hsif-energy"
+    },
+    {
+      "id": "clean-energy-tax-credits",
+      "name": "Clean Energy Tax Credits",
+      "parent": "hswm-tax"
+    },
+    {
+      "id": "health-plan-data-privacy",
+      "name": "Health Plan Data Privacy",
+      "parent": "hsed-help"
+    },
+    {
+      "id": "nuclear-energy-financing",
+      "name": "Nuclear Energy Financing",
+      "parent": "hsba-natsec"
+    },
+    {
+      "id": "nuclear-nonproliferation",
+      "name": "Nuclear Nonproliferation",
+      "parent": "hsap-energy"
+    },
+    {
+      "id": "terrorism-risk-insurance",
+      "name": "Terrorism Risk Insurance",
+      "parent": "hsba-institutions"
+    },
+    {
+      "id": "canada-tariff-enforcement",
+      "name": "Canada Tariff Enforcement",
+      "parent": "hshm-oversight"
+    },
+    {
+      "id": "federal-geographic-naming",
+      "name": "Federal Geographic Naming",
+      "parent": "hsii-oversight"
+    },
+    {
+      "id": "geothermal-energy-leasing",
+      "name": "Geothermal Energy Leasing",
+      "parent": "hsii-energy"
+    },
+    {
+      "id": "nutrition-assistance-snap",
+      "name": "Nutrition Assistance (SNAP)",
+      "parent": "hsag-farm"
+    },
+    {
+      "id": "arts-and-humanities-funding",
+      "name": "Arts and Humanities Funding",
+      "parent": "hsap-interior"
+    },
+    {
+      "id": "biofuels-and-year-round-e15",
+      "name": "Biofuels and Year-Round E15",
+      "parent": "hsag-farm"
+    },
+    {
+      "id": "natural-gas-and-lng-exports",
+      "name": "Natural Gas and LNG Exports",
+      "parent": "hsif-energy"
+    },
+    {
+      "id": "ukraine-security-assistance",
+      "name": "Ukraine Security Assistance",
+      "parent": "hsap-defense"
+    },
+    {
+      "id": "workplace-safety-and-health",
+      "name": "Workplace Safety and Health",
+      "parent": "hsed-protections"
+    },
+    {
+      "id": "earthquake-hazards-reduction",
+      "name": "Earthquake Hazards Reduction",
+      "parent": "hssy-research"
+    },
+    {
+      "id": "military-installation-naming",
+      "name": "Military Installation Naming",
+      "parent": "hsas-readiness"
+    },
+    {
+      "id": "renewable-energy-development",
+      "name": "Renewable Energy Development",
+      "parent": "hsif-energy"
+    },
+    {
+      "id": "career-and-technical-education",
+      "name": "Career and Technical Education",
+      "parent": "hsed-k12"
+    },
+    {
+      "id": "reproductive-healthcare-access",
+      "name": "Reproductive Healthcare Access",
+      "parent": "hsas-readiness"
+    },
+    {
+      "id": "sba-regional-office-relocation",
+      "name": "SBA Regional Office Relocation",
+      "parent": "hssm-oversight"
+    },
+    {
+      "id": "third-party-litigation-funding",
+      "name": "Third Party Litigation Funding",
+      "parent": "hsju-courts"
+    },
+    {
+      "id": "college-athlete-health-coverage",
+      "name": "College Athlete Health Coverage",
+      "parent": "hsed-higher"
+    },
+    {
+      "id": "congressional-stock-trading-ban",
+      "name": "Congressional Stock Trading Ban",
+      "parent": "hsgo-doge"
+    },
+    {
+      "id": "haiti-trade-preference-programs",
+      "name": "Haiti Trade Preference Programs",
+      "parent": "hswm-oversight"
+    },
+    {
+      "id": "child-nutrition-and-school-meals",
+      "name": "Child Nutrition and School Meals",
+      "parent": "hsed-k12"
+    },
+    {
+      "id": "gender-affirming-care-for-minors",
+      "name": "Gender-Affirming Care for Minors",
+      "parent": "hsif-health"
+    },
+    {
+      "id": "reproductive-health-and-autonomy",
+      "name": "Reproductive Health and Autonomy",
+      "parent": "hsed-help"
+    },
+    {
+      "id": "small-business-regulatory-review",
+      "name": "Small Business Regulatory Review",
+      "parent": "hssm-oversight"
+    },
+    {
+      "id": "state-and-local-energy-authority",
+      "name": "State and Local Energy Authority",
+      "parent": "hsif-energy"
+    },
+    {
+      "id": "foreign-influence-in-k-12-schools",
+      "name": "Foreign Influence in K-12 Schools",
+      "parent": "hsed-k12"
+    },
+    {
+      "id": "haiti-hope-help-trade-preferences",
+      "name": "Haiti HOPE/HELP Trade Preferences",
+      "parent": "hsfa"
+    },
+    {
+      "id": "theft-prevention-and-recovery-act",
+      "name": "Theft Prevention and Recovery Act",
+      "parent": "hsed-help"
+    },
+    {
+      "id": "agricultural-conservation-programs",
+      "name": "Agricultural Conservation Programs",
+      "parent": "hsag-farm"
+    },
+    {
+      "id": "artificial-intelligence-regulation",
+      "name": "Artificial Intelligence Regulation",
+      "parent": "hsif-innovation"
+    },
+    {
+      "id": "gender-equity-in-college-athletics",
+      "name": "Gender Equity in College Athletics",
+      "parent": "hsed-higher"
+    },
+    {
+      "id": "presidential-impoundment-authority",
+      "name": "Presidential Impoundment Authority",
+      "parent": "hsbu"
+    },
+    {
+      "id": "individual-and-corporate-tax-policy",
+      "name": "Individual and Corporate Tax Policy",
+      "parent": "hswm-tax"
+    },
+    {
+      "id": "smithsonian-curatorial-independence",
+      "name": "Smithsonian Curatorial Independence",
+      "parent": "hsha-modernization"
+    },
+    {
+      "id": "bail-reform-and-nonprofit-bail-funds",
+      "name": "Bail Reform and Nonprofit Bail Funds",
+      "parent": "hsju-crime"
+    },
+    {
+      "id": "police-accountability-and-discipline",
+      "name": "Police Accountability and Discipline",
+      "parent": "hsju-crime"
+    },
+    {
+      "id": "sba-regulatory-budget-and-rulemaking",
+      "name": "SBA Regulatory Budget and Rulemaking",
+      "parent": "hssm-oversight"
+    },
+    {
+      "id": "africa-trade-and-agoa-reauthorization",
+      "name": "Africa Trade and AGOA Reauthorization",
+      "parent": "hsfa"
+    },
+    {
+      "id": "interior-board-of-land-appeals-reform",
+      "name": "Interior Board of Land Appeals Reform",
+      "parent": "hsii-oversight"
+    },
+    {
+      "id": "presidential-reorganization-authority",
+      "name": "Presidential Reorganization Authority",
+      "parent": "hsgo-doge"
+    },
+    {
+      "id": "professional-boxing-health-and-safety",
+      "name": "Professional Boxing Health and Safety",
+      "parent": "hsed-protections"
+    },
+    {
+      "id": "truman-scholarship-program-governance",
+      "name": "Truman Scholarship Program Governance",
+      "parent": "hsed-higher"
+    },
+    {
+      "id": "workplace-safety-and-osha-enforcement",
+      "name": "Workplace Safety and OSHA Enforcement",
+      "parent": "hsed-protections"
+    },
+    {
+      "id": "congressional-review-of-midnight-rules",
+      "name": "Congressional Review of Midnight Rules",
+      "parent": "hsgo-doge"
+    },
+    {
+      "id": "defense-production-act-reauthorization",
+      "name": "Defense Production Act Reauthorization",
+      "parent": "hsba-natsec"
+    },
+    {
+      "id": "pandemic-fraud-prevention-and-recovery",
+      "name": "Pandemic Fraud Prevention and Recovery",
+      "parent": "hsgo-doge"
+    },
+    {
+      "id": "pipeline-permitting-and-eminent-domain",
+      "name": "Pipeline Permitting and Eminent Domain",
+      "parent": "hsif-energy"
+    },
+    {
+      "id": "renewable-energy-fees-on-federal-lands",
+      "name": "Renewable Energy Fees on Federal Lands",
+      "parent": "hsii-energy"
+    },
+    {
+      "id": "freedom-of-speech-and-press-protections",
+      "name": "Freedom of Speech and Press Protections",
+      "parent": "hsju-courts"
+    },
+    {
+      "id": "transgender-inclusion-in-women-s-sports",
+      "name": "Transgender Inclusion in Women's Sports",
+      "parent": "hsed-k12"
+    },
+    {
+      "id": "abolition-of-the-department-of-education",
+      "name": "Abolition of the Department of Education",
+      "parent": "hsed-k12"
+    },
+    {
+      "id": "college-athletics-compensation-framework",
+      "name": "College Athletics Compensation Framework",
+      "parent": "hsed-higher"
+    },
+    {
+      "id": "electricity-import-and-export-regulation",
+      "name": "Electricity Import and Export Regulation",
+      "parent": "hsif-energy"
+    },
+    {
+      "id": "israel-gaza-ceasefire-and-hostage-return",
+      "name": "Israel-Gaza Ceasefire and Hostage Return",
+      "parent": "hsfa"
+    },
+    {
+      "id": "military-reproductive-health-care-access",
+      "name": "Military Reproductive Health Care Access",
+      "parent": "hsap-defense"
+    },
+    {
+      "id": "religious-organization-tax-exempt-status",
+      "name": "Religious Organization Tax-Exempt Status",
+      "parent": "hswm-tax"
+    },
+    {
+      "id": "college-athlete-rights-and-ncaa-authority",
+      "name": "College Athlete Rights and NCAA Authority",
+      "parent": "hsed-higher"
+    },
+    {
+      "id": "federal-regulatory-guidance-and-procedure",
+      "name": "Federal Regulatory Guidance and Procedure",
+      "parent": "hsgo-doge"
+    },
+    {
+      "id": "government-use-of-artificial-intelligence",
+      "name": "Government Use of Artificial Intelligence",
+      "parent": "hsgo-cyber"
+    },
+    {
+      "id": "tax-cuts-for-the-wealthy-and-corporations",
+      "name": "Tax Cuts for the Wealthy and Corporations",
+      "parent": "hswm-tax"
+    },
+    {
+      "id": "clean-energy-and-energy-efficiency-funding",
+      "name": "Clean Energy and Energy Efficiency Funding",
+      "parent": "hsif-energy"
+    },
+    {
+      "id": "professional-boxing-boxer-pay-and-benefits",
+      "name": "Professional Boxing Boxer Pay and Benefits",
+      "parent": "hsed-protections"
+    },
+    {
+      "id": "renter-protections-and-eviction-prevention",
+      "name": "Renter Protections and Eviction Prevention",
+      "parent": "hsba-housing"
+    },
+    {
+      "id": "war-powers-and-congressional-authorization",
+      "name": "War Powers and Congressional Authorization",
+      "parent": "hsas-readiness"
+    },
+    {
+      "id": "congressional-oversight-of-defense-spending",
+      "name": "Congressional Oversight of Defense Spending",
+      "parent": "hsas-readiness"
+    },
+    {
+      "id": "federal-reserve-mandate-and-monetary-policy",
+      "name": "Federal Reserve Mandate and Monetary Policy",
+      "parent": "hsba-institutions"
+    },
+    {
+      "id": "worker-classification-and-misclassification",
+      "name": "Worker Classification and Misclassification",
+      "parent": "hsed-protections"
+    },
+    {
+      "id": "epstein-files-transparency-and-investigation",
+      "name": "Epstein Files Transparency and Investigation",
+      "parent": "hsgo-law"
+    },
+    {
+      "id": "inspector-general-independence-and-oversight",
+      "name": "Inspector General Independence and Oversight",
+      "parent": "hsgo-doge"
+    },
+    {
+      "id": "regulatory-review-and-congressional-approval",
+      "name": "Regulatory Review and Congressional Approval",
+      "parent": "hsgo-doge"
+    },
+    {
+      "id": "regulatory-reform-and-major-rule-requirements",
+      "name": "Regulatory Reform and Major Rule Requirements",
+      "parent": "hsgo-doge"
+    },
+    {
+      "id": "science-based-school-meal-nutrition-standards",
+      "name": "Science-Based School Meal Nutrition Standards",
+      "parent": "hsed-k12"
+    },
+    {
+      "id": "clean-energy-and-renewable-portfolio-standards",
+      "name": "Clean Energy and Renewable Portfolio Standards",
+      "parent": "hsif-energy"
+    },
+    {
+      "id": "global-reproductive-health-and-family-planning",
+      "name": "Global Reproductive Health and Family Planning",
+      "parent": "hsap-state"
+    },
+    {
+      "id": "national-coal-council-and-coal-advisory-policy",
+      "name": "National Coal Council and Coal Advisory Policy",
+      "parent": "hsif-energy"
+    },
+    {
+      "id": "transgender-student-rights-in-higher-education",
+      "name": "Transgender Student Rights in Higher Education",
+      "parent": "hsed-higher"
+    },
+    {
+      "id": "petroleum-refinery-market-analysis-and-reporting",
+      "name": "Petroleum Refinery Market Analysis and Reporting",
+      "parent": "hsif-energy"
+    },
+    {
+      "id": "commercial-data-centers-on-military-installations",
+      "name": "Commercial Data Centers on Military Installations",
+      "parent": "hsas-readiness"
+    },
+    {
+      "id": "daca-employment-eligibility-in-legislative-branch",
+      "name": "DACA Employment Eligibility in Legislative Branch",
+      "parent": "hsju-immigration"
+    },
+    {
+      "id": "gao-impoundment-control-act-enforcement-authority",
+      "name": "GAO Impoundment Control Act Enforcement Authority",
+      "parent": "hsap-legislative"
+    },
+    {
+      "id": "liquefied-natural-gas-exports-and-domestic-prices",
+      "name": "Liquefied Natural Gas Exports and Domestic Prices",
+      "parent": "hsif-energy"
+    },
+    {
+      "id": "college-athlete-compensation-and-legal-protections",
+      "name": "College Athlete Compensation and Legal Protections",
+      "parent": "hsed-higher"
+    },
+    {
+      "id": "defense-production-act-and-defense-industrial-base",
+      "name": "Defense Production Act and Defense Industrial Base",
+      "parent": "hsas-readiness"
+    },
+    {
+      "id": "professional-boxing-labor-and-contract-protections",
+      "name": "Professional Boxing Labor and Contract Protections",
+      "parent": "hsed-protections"
+    },
+    {
+      "id": "antitrust-enforcement-and-small-business-competition",
+      "name": "Antitrust Enforcement and Small Business Competition",
+      "parent": "hssm-growth"
+    },
+    {
+      "id": "military-nonpartisanship-and-domestic-use-restrictions",
+      "name": "Military Nonpartisanship and Domestic Use Restrictions",
+      "parent": "hsas-readiness"
+    },
+    {
+      "id": "census-citizenship-question-and-apportionment-exclusion",
+      "name": "Census citizenship question and apportionment exclusion",
+      "parent": "hsha-elections"
+    },
+    {
+      "id": "library-of-congress-copyright-office-and-gpo-governance",
+      "name": "Library of Congress, Copyright Office, and GPO Governance",
+      "parent": "hsap-legislative"
+    },
+    {
+      "id": "department-of-defense-naming-and-military-politicization",
+      "name": "Department of Defense Naming and Military Politicization",
+      "parent": "hsas-readiness"
+    },
+    {
+      "id": "artificial-intelligence-in-financial-services-and-housing",
+      "name": "Artificial Intelligence in Financial Services and Housing",
+      "parent": "hsba-digital"
+    },
+    {
+      "id": "servicemember-property-protections-from-adverse-possession",
+      "name": "Servicemember Property Protections from Adverse Possession",
+      "parent": "hsvr-economic"
     }
   ]
 }

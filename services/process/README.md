@@ -51,10 +51,25 @@ Behavior:
   statements held on them.
 - Every call's token usage is logged; totals print at the end.
 
+## extract-conditions.mjs — conditions ledger
+
+```bash
+node services/process/extract-conditions.mjs data --model muse-spark-1.3-contributor --merge
+```
+
+Same batch machinery as `extract-batch.mjs` (resume via
+`data/extracted/cond-*.extracted.json`, retries, budget caps, `--limit`,
+`--concurrency`, `--only`, `--dry-run`), but extracts conditional stances
+("would support if X") into `data/conditions.json`, consolidating demand
+proposals into the demands registry deterministically (same-type similar
+names merge; shortest wins; ids are slugs). Only records matching a
+conditional-language prefilter are sent (`--no-prefilter` disables it).
+`statement_id` links on exact quote match, else null (allowed).
+
 ## summarize.mjs — per-legislator summaries
 
 ```bash
-node services/process/summarize.mjs [--only p09,p04] [--model muse-spark-1.3] [--dry]
+node services/process/summarize.mjs [--only p09,p04] [--model muse-spark-1.3] [--dry] [--concurrency N] [--redo]
 ```
 
 Writes `data/summaries.json` (merging with existing entries): 2–4 neutral

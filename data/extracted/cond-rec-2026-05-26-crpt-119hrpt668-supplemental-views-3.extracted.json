@@ -1,0 +1,82 @@
+{
+  "record_id": "rec-2026-05-26-crpt-119hrpt668-supplemental-views-3",
+  "model": "muse-spark-1.3-contributor",
+  "extracted_at": "2026-11-02T08:16:25.291Z",
+  "accepted": [
+    {
+      "person": "S000185",
+      "issue": "higher-education-and-student-aid",
+      "bill": "H.R. 7891",
+      "stance_if_met": "support",
+      "scope": "final_passage",
+      "condition": "Significantly narrow enforcement authority in H.R. 7891.",
+      "quote": "We urge the House of Representatives to oppose H.R. 7891 unless there is a significant narrowing of enforcement authority, adjustments to the program review trigger, and wider consultation of higher education stakeholders.",
+      "statement_id": "st27174",
+      "record_id": "rec-2026-05-26-crpt-119hrpt668-supplemental-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "_demand": {
+        "name": "Narrow enforcement authority",
+        "type": "amendment"
+      }
+    },
+    {
+      "person": "S000185",
+      "issue": "higher-education-and-student-aid",
+      "bill": "H.R. 7891",
+      "stance_if_met": "support",
+      "scope": "final_passage",
+      "condition": "Adjust the program review trigger in H.R. 7891.",
+      "quote": "We urge the House of Representatives to oppose H.R. 7891 unless there is a significant narrowing of enforcement authority, adjustments to the program review trigger, and wider consultation of higher education stakeholders.",
+      "statement_id": "st27174",
+      "record_id": "rec-2026-05-26-crpt-119hrpt668-supplemental-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "_demand": {
+        "name": "Adjust program review trigger",
+        "type": "amendment"
+      }
+    },
+    {
+      "person": "S000185",
+      "issue": "higher-education-and-student-aid",
+      "bill": "H.R. 7891",
+      "stance_if_met": "support",
+      "scope": "final_passage",
+      "condition": "Conduct wider consultation of higher education stakeholders on H.R. 7891.",
+      "quote": "We urge the House of Representatives to oppose H.R. 7891 unless there is a significant narrowing of enforcement authority, adjustments to the program review trigger, and wider consultation of higher education stakeholders.",
+      "statement_id": "st27174",
+      "record_id": "rec-2026-05-26-crpt-119hrpt668-supplemental-views-3",
+      "model": "muse-spark-1.3-contributor",
+      "_demand": {
+        "name": "Consult higher education stakeholders",
+        "type": "procedure"
+      }
+    }
+  ],
+  "rejected": [],
+  "demands": [
+    {
+      "name": "Narrow enforcement authority",
+      "type": "amendment"
+    },
+    {
+      "name": "Adjust program review trigger",
+      "type": "amendment"
+    },
+    {
+      "name": "Consult higher education stakeholders",
+      "type": "procedure"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 2342,
+    "prompt_tokens": 4894,
+    "total_tokens": 7236,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1943
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 2929
+    }
+  },
+  "finish_reason": "stop"
+}
