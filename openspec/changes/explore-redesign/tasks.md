@@ -19,12 +19,12 @@
 
 ## 3. Issues directory, issue page, Bills tab
 
-- [ ] 3.1 Routes: `#/issue/<id>` (load + hashchange); Issues tab without id = directory; keep legislator/bill routes.
-- [ ] 3.2 Directory (port `viewI`): committee columns, issue rows with split bars and counts, filter box.
-- [ ] 3.3 Issue page (port `issuePage` + `orbit`, the halo version): header, 4-cell strip (for-actions, against-actions, spoke, cosponsored-only), halo canvas with its own draw helpers, party split bars, strongest voices, district tile map coloured by stance, bills under the issue → `#/bill/<id>`, related-issue chips.
-- [ ] 3.4 Bills tab (port `viewB`): list + filter; rows → `#/bill/<id>`; nav button added between Issues and Find.
-- [ ] 3.5 Remove the old single-issue spectrum (focus) view and its aside; the Issues nav button opens the directory.
-- [ ] 3.6 Verify: directory counts match EDGES; Defense Authorization halo shows yea right / nay left with party grouping; deep link `#/issue/<id>` on a fresh load; Bills filter.
+- [x] 3.1 Routes: `#/issue/<id>` (load + hashchange); Issues tab without id = directory; keep legislator/bill routes.
+- [x] 3.2 Directory (port `viewI`): committee columns, issue rows with split bars and counts, filter box.
+- [x] 3.3 Issue page (port `issuePage` + `orbit`, the halo version): header, 4-cell strip (for-actions, against-actions, spoke, cosponsored-only), halo canvas with its own draw helpers, party split bars, strongest voices, district tile map coloured by stance, bills under the issue → `#/bill/<id>`, related-issue chips.
+- [x] 3.4 Bills tab (port `viewB`): list + filter; rows → `#/bill/<id>`; nav button added between Issues and Find.
+- [x] 3.5 Remove the old single-issue spectrum (focus) view and its aside; the Issues nav button opens the directory.
+- [x] 3.6 Verify: directory counts match EDGES; Defense Authorization halo shows yea right / nay left with party grouping; deep link `#/issue/<id>` on a fresh load; Bills filter.
 
 ## 4. Verify and deploy
 
