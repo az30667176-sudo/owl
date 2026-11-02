@@ -1106,15 +1106,34 @@
   function drawScatter(mine) {
     const s = d3.select("#pscatter"); s.selectAll("*").remove(); if (!mine.length) return;
     const W = 270, H = 230, m = { l: 30, r: 10, t: 14, b: 26 };
-    const x = d3.scaleLinear().domain([-1, 1]).range([m.l, W - m.r]), maxS = d3.max(mine, d => d.e.salience) || 1, y = d3.scaleLinear().domain([0, maxS * 1.1]).range([H - m.b, m.t]);
+    const x = d3.scaleLinear().domain([-1, 1]).range([m.l, W - m.r]), maxS = d3.max(mine, d => d.e.salience) || 1, y = d3.scaleSqrt().domain([0, maxS]).range([H - m.b, m.t]);
+    const radOf = n => Math.min(14, 3 + 3 * Math.log2(1 + n));
+    const jxOf = id => { const k = String(id); let h = 0; for (let j = 0; j < k.length; j++) h = (h * 31 + k.charCodeAt(j)) | 0; return (((h % 13) + 13) % 13) - 6; };
+    const cxOf = d => x(d.e.score) + jxOf(d.i.id ?? d.e.to ?? d.i.name);
     s.append("line").attr("x1", x(0)).attr("x2", x(0)).attr("y1", m.t).attr("y2", H - m.b).attr("stroke", "var(--border-strong)").attr("stroke-dasharray", "3 3");
     s.append("line").attr("x1", m.l).attr("x2", W - m.r).attr("y1", H - m.b).attr("y2", H - m.b).attr("stroke", "var(--border-strong)");
     s.append("text").attr("x", m.l).attr("y", H - 8).attr("font-size", 9).attr("fill", "var(--oppose)").text("oppose");
     s.append("text").attr("x", W - m.r).attr("y", H - 8).attr("font-size", 9).attr("fill", "var(--support)").attr("text-anchor", "end").text("support");
     s.append("text").attr("x", 8).attr("y", m.t + 4).attr("font-size", 9).attr("fill", "var(--muted)").attr("transform", `rotate(-90 8 ${m.t + 4})`).attr("text-anchor", "end").text("attention →");
-    const pts = s.selectAll("g").data(mine).join("g").attr("transform", d => `translate(${x(d.e.score)},${y(d.e.salience)})`).style("cursor", "pointer").on("click", (ev, d) => { state.p.sel = d.e; renderProfile(); renderSide(); });
-    pts.append("circle").attr("r", d => 4 + d.e.n * 1.5).attr("fill", d => CAT_HUE[d.i.cat]).attr("fill-opacity", .85).attr("stroke", d => d.e.flip ? "var(--accent)" : "var(--bg)").attr("stroke-width", d => d.e.flip ? 2 : 1).append("title").text(d => `${d.i.name}: ${fmt(d.e.score)}, ${d.e.n} statements`);
-    pts.append("text").attr("x", 0).attr("y", d => -(6 + d.e.n * 1.5)).attr("font-size", 8.5).attr("fill", "var(--text)").attr("text-anchor", "middle").text(d => d.i.name.length > 16 ? d.i.name.slice(0, 15) + "…" : d.i.name);
+    const pts = s.selectAll("g").data(mine).join("g").attr("transform", d => `translate(${cxOf(d)},${y(d.e.salience)})`).style("cursor", "pointer").on("click", (ev, d) => { state.p.sel = d.e; renderProfile(); renderSide(); });
+    pts.append("circle").attr("r", d => radOf(d.e.n)).attr("fill", d => CAT_HUE[d.i.cat]).attr("fill-opacity", .85).attr("stroke", d => d.e.flip ? "var(--accent)" : "var(--bg)").attr("stroke-width", d => d.e.flip ? 2 : 1).append("title").text(d => `${d.i.name}: ${fmt(d.e.score)}, ${d.e.n} statements`);
+    const keyOf = d => d.e.to ?? d.i.id;
+    const shortOf = d => d.i.name.length > 16 ? d.i.name.slice(0, 15) + "…" : d.i.name;
+    const topKeys = new Set([...mine].sort((a, b) => b.e.salience - a.e.salience).slice(0, 8).map(keyOf));
+    const placed = [], layByKey = new Map();
+    [...mine].filter(d => topKeys.has(keyOf(d))).sort((a, b) => cxOf(a) - cxOf(b)).forEach(d => {
+      const label = shortOf(d), w = label.length * 5 + 6, r = radOf(d.e.n), cx = cxOf(d), cy = y(d.e.salience);
+      for (let row = 0; row < 4; row++) {
+        const ty = Math.max(6 - cy, -(r + 4) - row * 11);
+        const bx0 = Math.max(1, Math.min(W - w - 1, cx - w / 2)), bx1 = bx0 + w, by0 = cy + ty - 9, by1 = cy + ty + 2;
+        if (!placed.some(b => bx0 < b.x1 && bx1 > b.x0 && by0 < b.y1 && by1 > b.y0)) { placed.push({ x0: bx0, x1: bx1, y0: by0, y1: by1 }); layByKey.set(keyOf(d), { dx: bx0 + w / 2 - cx, ty, row }); return; }
+      }
+      const ty = Math.max(6 - cy, -(r + 4) - 3 * 11), bx0 = Math.max(1, Math.min(W - w - 1, cx - w / 2));
+      placed.push({ x0: bx0, x1: bx0 + w, y0: cy + ty - 9, y1: cy + ty + 2 }); layByKey.set(keyOf(d), { dx: bx0 + w / 2 - cx, ty, row: 3 });
+    });
+    pts.each(function(d) { const lay = layByKey.get(keyOf(d)); if (!lay) return; const g = d3.select(this), r = radOf(d.e.n);
+      if (lay.row > 0) g.append("line").attr("x1", 0).attr("y1", -r).attr("x2", lay.dx).attr("y2", lay.ty + 2).attr("stroke", "var(--border-strong)").attr("stroke-width", 1);
+      g.append("text").attr("x", lay.dx).attr("y", lay.ty).attr("font-size", 8.5).attr("fill", "var(--text)").attr("text-anchor", "middle").text(shortOf(d)); });
   }
   function drawBars(p, mine) {
     const svgEl = d3.select("#pbars"); svgEl.selectAll("*").remove();
