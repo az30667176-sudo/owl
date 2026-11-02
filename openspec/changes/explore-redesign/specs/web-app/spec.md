@@ -58,6 +58,10 @@ WHEN a member voted nay and cosponsored on the same issue THEN they SHALL appear
 
 WHEN the location is `#/issue/<id>` on load THEN the issue page SHALL render directly.
 
+#### Scenario: Spectrum tick opens profile
+
+WHEN the user clicks a member dot on the halo (the successor of the spectrum tick) THEN the app SHALL open that legislator's profile.
+
 ### Requirement: Issue panel grouped by bill
 
 When the user selects an issue in Explore and the ledger holds rows for it, the side panel SHALL list that issue's bills (from statements and condition rows), each with its demand chips; hovering a chip SHALL highlight only the edges of the legislators who stated it, without adding glyphs or labels to the graph. Each bill SHALL link to its bill page, and the panel SHALL offer "Open issue page →" to `#/issue/<id>`.
@@ -119,9 +123,3 @@ Until the contract carries an action kind, the app SHALL infer each statement's 
 #### Scenario: Cosponsor row
 
 WHEN a statement has `model: "owl-ingest-metadata"` and score 0.8 THEN it SHALL be labelled cosponsored and its score SHALL still count exactly as today.
-
-## REMOVED Requirements
-
-### Requirement: Spectrum tick opens profile
-**Reason**: The single-issue −1…+1 spectrum is replaced by the issue page's action halo; real scores are bimodal (±0.8) so the spectrum conveyed nothing.
-**Migration**: The halo's member dots open the profile on click; the Find table still lists per-edge scores.
