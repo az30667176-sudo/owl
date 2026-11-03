@@ -18,9 +18,10 @@ statements it rests on.
 Coverage note: only 130 of 451 members (29%) have speech rows so far — most profiles are
 still built from sponsorship and vote records until more hearings are processed.
 
-Answer a few binary questions about real bills and the **match board** ranks every legislator
-by how closely their record matches your positions — closest and farthest — with party, state
-and minimum-answers filters so you can see who to vote for and who to avoid.
+Inside Explore, every sub-issue carries the real bills under it as one-line yes/no questions.
+Answer a few and the **match drawer** under the ring ranks every legislator by how many of your
+answered bills their recorded position matches — with party, state and minimum-overlap filters,
+and a per-member breakdown of which bills they agree, disagree or have no position on.
 
 ## Architecture
 
@@ -84,14 +85,21 @@ Cheatsheet: [docs/WORKFLOW.md](docs/WORKFLOW.md).
 
 **Spec-driven changes (OpenSpec).** `openspec/specs/` holds the live specs (data-contract, web-app, process-pipeline). Anything beyond a one-line fix starts as a change: in Claude Code run `/opsx:propose "<what you want>"` (writes proposal, spec delta, design, tasks under `openspec/changes/<name>/`), review it, `/opsx:apply` to implement, `/opsx:archive` to fold the delta into the live specs. CLI: `openspec list`, `openspec validate --all`, `openspec view`.
 
-## Bill match board
+## Match: questions on bills, answers in Explore
 
 Every bill in `data/bills.json` carries a ≤30-word plain-language `short_context` plus a
 `binary_question` with support/oppose options; bills too complex to simplify are tagged
-`complex_bill` (longer context, no question, prompt to read the full bill). Each bill page
-shows the context with a two-option picker; your answers are stored locally and the
-`#/match` board ranks legislators by agreement with your positions — closest first and
-farthest last — filterable by party, state and minimum answered bills.
+`complex_bill` (longer context, no question, prompt to read the full bill). The questions are
+written by Muse Spark from the bill text and reviewed by a human before they ship.
+
+In the app the questions live where the bills do: open a committee on the Explore ring, click a
+sub-issue, and its bills appear in the side pane as Yes / No rows (the label shows how many,
+e.g. "Small Business Programs · 40?"). Bill pages show the same question under "What this bill
+does". Answers are stored in the browser only. After three answers the drawer under the ring
+ranks every legislator: match = bills answered the same way as you, out of all bills you
+answered (no recorded position counts as no match); click a member to see the bills grouped
+into same / opposite / no position. Filters: state, party, minimum overlap. The summary strip
+is template text built from your answers and bill fields — the browser never calls a model.
 
 Match attributes are drafted by Muse Spark and merged only after human review:
 
@@ -114,9 +122,23 @@ node services/process/summarize.mjs                                             
 
 ## Meta models used
 
-- **Muse Spark 1.3** — stance extraction and scoring, per-legislator summaries (`services/process`)
-- **Muse Image 1.0** — logo and shareable cards (`tools/gen-image.mjs`)
-- **Muse Code / Claude Code on Muse** — coding during development (`tools/claude-muse.ps1` points Claude Code at the Meta Model API)
+Everything the model does happens offline and lands in the repo as data a human can check; the
+browser only renders it.
+
+- **Muse Spark 1.3** (`services/process`)
+  - stance extraction: hearing and floor transcripts → one row per statement with a −1…+1 score,
+    direction, verbatim `quote`, `source` and `llm_confidence` (`extract.mjs`, `extract-batch.mjs`)
+  - conditions: "I would vote yes if…" statements → the demands registry in `conditions.json`
+    (`extract-conditions.mjs`)
+  - per-legislator summaries, every sentence citing a statement id (`summarize.mjs`)
+  - bill context + yes/no questions for 782 bills, drafted then human-reviewed
+    (`draft-bill-context.mjs`)
+  - issue-taxonomy review and a blind re-scoring audit without names or parties
+    (`review-issues.mjs`, `audit/`)
+- **Muse Image 1.0** — the OWL mark and shareable cards (`tools/gen-image.mjs`)
+- **Muse Code** — wrote most of `apps/web/index.html` headlessly from OpenSpec change
+  documents (commits carry `Co-Authored-By: Muse Code`); `tools/claude-muse.ps1` points Claude
+  Code at the Meta Model API for the same purpose
 
 ## Team
 

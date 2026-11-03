@@ -1260,8 +1260,16 @@
       + `</div>`
       + `<div class="isec">Data snapshot</div>`
       + `<div>Data through ${maxDate || "—"} · ${STATEMENTS.length.toLocaleString()} statements · ${PEOPLE.length} members · ${ISSUES.length} issues · ${CONDS.length} conditions${statementsReady ? "" : " (loading statements…)"}</div>`
+      + `<div class="isec">What Muse Spark does here</div>`
+      + `<div style="font-size:13px;line-height:1.9">`
+      + `<div><b>Reads the record.</b> Hearing and floor transcripts go in; one row per statement comes out with a −1…+1 score, a direction, the verbatim quote and the source link, plus a confidence the model assigns to its own reading.</div>`
+      + `<div><b>Finds the conditions.</b> "I would vote yes if…" statements become the demands behind each bill's negotiation map.</div>`
+      + `<div><b>Writes the summaries.</b> Each legislator's summary cites a statement for every sentence; click a number to read the quote.</div>`
+      + `<div><b>Writes the questions.</b> Every bill's plain-language context and yes/no question is drafted from the bill text, then reviewed by a person before it ships.</div>`
+      + `<div><b>Audits itself.</b> A blind pass re-scores quotes with names and parties removed so the scores can be checked for bias.</div>`
+      + `</div>`
       + `<div class="isec">AI disclosure</div>`
-      + `<div>Statements are scored offline by Muse Spark and committed as data. This frontend was written by Muse Code and orchestrated by Claude Code. The browser never calls a model: every number and quote here comes from the loaded files.</div>`
+      + `<div>All of the above runs offline and is committed as data you can inspect in the repository. This frontend was written by Muse Code and orchestrated by Claude Code. The browser never calls a model: every number, quote and match here comes from the loaded files.</div>`
       + `<div class="isec">Source</div>`
       + `<div>Source: <a class="link" href="https://github.com/az30667176-sudo/owl">github.com/az30667176-sudo/owl</a> · Licence: see the repository.</div>`
       + `</div>`;
