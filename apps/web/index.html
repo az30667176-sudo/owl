@@ -298,11 +298,13 @@
   .bill-spec .nm { position: absolute; top: 38px; font: 500 10px var(--mono); color: var(--muted); transform: translateX(-50%); white-space: nowrap; }
   .bill-spec .dot[data-p] { cursor: pointer; }
   .bill-spec .bill-cnt { position: absolute; top: 0; transform: translateX(-50%); font: 600 11px var(--mono); color: var(--accent); border: 1px solid var(--accent); border-radius: 10px; padding: 0 6px; background: var(--bg); white-space: nowrap; }
-  .bill-cols { display: grid; grid-template-columns: 1fr 1fr 1fr; margin-top: 12px; border-top: 1px solid var(--border); }
-  .bill-col { padding: 10px 12px 4px; font-family: var(--mono); font-size: 12px; }
-  .bill-col + .bill-col { border-left: 1px solid var(--border); }
-  .bill-col-h { font-weight: 700; margin-bottom: 6px; }
   .bill-col-row { cursor: pointer; padding: 1px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .rost { margin-top: 10px; border-top: 1px solid var(--border); padding: 6px 0 2px; }
+  .rost-h { font: 700 12px var(--mono); letter-spacing: .06em; margin: 4px 0; }
+  .rost-row { display: flex; align-items: baseline; gap: 8px; padding: 3px 0; border-bottom: 1px solid var(--border); cursor: pointer; font-size: 13px; }
+  .rost-row:hover { background: var(--panel-2); }
+  .rost-row .rost-n { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .rost-row .rost-m { color: var(--muted); font-size: 12px; font-family: var(--mono); white-space: nowrap; }
   .bill-grid { display: grid; grid-template-columns: 1fr 330px; gap: 26px; align-items: start; }
   @media (max-width: 1180px) { .bill-grid { grid-template-columns: 1fr; } }
   #billmap { width: 100%; height: auto; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); display: block; }
@@ -413,7 +415,7 @@
     .legend, .ehud, .ectl, .hint, #loading, .skip, .cond-tip { display: none !important; }
     .tabpane[hidden] { display: block; }
     .print-only { display: block; }
-    .card, .hero, .bill-strip, .bill-cols, .pgrid { break-inside: avoid; }
+    .card, .hero, .bill-strip, .pgrid { break-inside: avoid; }
     td.quote { max-width: none; overflow: visible; white-space: normal; text-overflow: clip; }
     .attn-name, .bill-col-row { white-space: normal; overflow: visible; text-overflow: clip; }
     blockquote, .cond-q, .bill-card .c .q { white-space: normal; }
@@ -641,7 +643,7 @@
     state.pane = "view";
     if (h.indexOf("#/legislator/") === 0 && byId[h.slice(13)]) { state.mode = "profile"; state.p.person = h.slice(13); state.p.sel = null; return; }
     if (h === "#/legislators") { state.mode = "profile"; state.p.person = null; state.p.sel = null; return; }
-    if (h.indexOf("#/bill/") === 0 && h.length > 7) { state.mode = "bill"; state.b.id = h.slice(7); state.b.ticked = []; state.b.sel = null; state.b.exp = {}; return; }
+    if (h.indexOf("#/bill/") === 0 && h.length > 7) { state.mode = "bill"; state.b.id = h.slice(7); state.b.ticked = []; state.b.sel = null; state.b.exp = {}; state.b.rost = {}; state.b.rostAll = {}; return; }
     if (h === "#/bills") { state.mode = "bills"; return; }
     if (h.indexOf("#/issue/") === 0 && issueById[h.slice(8)]) { state.mode = "issue"; state.iid = h.slice(8); return; }
     if (h === "#/issue") { state.mode = "issues"; state.iid = null; return; }
@@ -688,7 +690,7 @@
     const qs = exploreStateToQuery(), target = "#/explore" + (qs ? "?" + qs : "");
     if (location.hash !== target) history.replaceState(null, "", target);
   }
-  const openBill = id => { state.b.id = id; state.b.ticked = []; state.b.sel = null; state.b.exp = {}; if (location.hash !== "#/bill/" + id) location.hash = "#/bill/" + id; else { state.mode = "bill"; render(); } };
+  const openBill = id => { state.b.id = id; state.b.ticked = []; state.b.sel = null; state.b.exp = {}; state.b.rost = {}; state.b.rostAll = {}; if (location.hash !== "#/bill/" + id) location.hash = "#/bill/" + id; else { state.mode = "bill"; render(); } };
   const openIssue = id => { if (!issueById[id]) return; if (location.hash !== "#/issue/" + id) location.hash = "#/issue/" + id; else { state.mode = "issue"; state.iid = id; render(); } };
   const goIssues = () => { if (location.hash === "#/issue") { routeFromHash(); render(); } else location.hash = "#/issue"; };
   const goBills = () => { if (location.hash === "#/bills") { routeFromHash(); render(); } else location.hash = "#/bills"; };
@@ -1575,14 +1577,15 @@
     };
     const whipBar = `<div class="whip" role="img" aria-label="Whip count: YES ${wYes}, NO ${wNo}, UNKNOWN ${wU}, not on record ${wRest}">${seg(wYD, "D", "YES")}${seg(wYR, "R", "YES")}${seg(wYI, "I", "YES")}${seg(wND, "D", "NO")}${seg(wNR, "R", "NO")}${seg(wNI, "I", "NO")}${seg(wU, "U", "U")}${seg(wRest, "", "R")}</div>`;
     const whipCap = `<div class="whip-cap"><span style="color:var(--support)">YES ${wYes}</span> · <span style="color:var(--oppose)">NO ${wNo}</span> · UNKNOWN ${wU} · ${majority} needed · ${wDelta >= 0 ? "+" : ""}${wDelta}</div>`;
-    // single "others" row: everyone unchanged by the current package, summarised by party+projection
+    // aggregate nodes: everyone without an individual row, grouped by projection (recomputed on every tick)
     const oProj = l => byP[l.id] ? byP[l.id].proj : "UNKNOWN";
-    const oCount = (lbl, party) => others.filter(l => oProj(l) === lbl && l.p.party === party).length;
-    const oParts = [];
-    [["YES", "D"], ["YES", "R"], ["YES", "I"], ["NO", "D"], ["NO", "R"], ["NO", "I"]].forEach(([lbl, party]) => { const n = oCount(lbl, party); if (n) oParts.push(`${n} ${party} ${lbl}`); });
-    const oU = others.filter(l => oProj(l) === "UNKNOWN").length;
-    if (oU) oParts.push(`${oU} UNKNOWN`);
-    const othersLabel = `${others.length} others unchanged${oParts.length ? " · " + oParts.join(" · ") : ""}`;
+    const aggDefs = [
+      { key: "support", label: "Support", proj: "YES", col: "var(--support)" },
+      { key: "oppose", label: "Oppose", proj: "NO", col: "var(--oppose)" },
+      { key: "unclear", label: "Not clear", proj: "UNKNOWN", col: "var(--muted)" },
+    ];
+    const aggs = aggDefs.map(a => ({ ...a, members: others.filter(l => oProj(l) === a.proj) }));
+    const aggShown = aggs.filter(a => a.key !== "unclear" || a.members.length > 0);
     // one clause per row: the projection reason when present, else the first condition, else the spoke fallback
     const rowClause = L => {
       const P = byP[L.id];
@@ -1590,18 +1593,16 @@
       if (L.conds.length) { const c = L.conds[0]; return `${c.stance_if_met === "support" ? "YES" : "NO"} if ${(DEMANDS[c.demand] || {}).name || c.demand}`; }
       return `${P ? P.proj : "UNKNOWN"} · spoke`;
     };
-    const hasConds = info.conds.length > 0;
-    const mapRows = indiv.length + (others.length ? 1 : 0);
-    const mapH = 110 + mapRows * 34 + 40;
+    const mapH = 110 + indiv.length * 34 + aggShown.length * 56 + 40;
     // kind line under the stance strip: sponsored counts with cosponsored; views / not-voting omitted
     const kinds = info.stmts.map(kindOf);
     const kindLine = `${kinds.filter(k => k === "cosponsored" || k === "sponsored").length} cosponsored · ${kinds.filter(k => k === "speech").length} spoke · ${kinds.filter(k => k === "yea" || k === "nay").length} voted`;
     // spectrum: axis + dots always; text labels only when they fit (<= 12 scored),
-    // otherwise a beeswarm (one vertical stack of 8px dots per distinct score) + columns below
+    // otherwise a beeswarm (one vertical stack of 8px dots per distinct score)
     const labTxt = l => `${shortName(l.p.name)} ${fmt(l.score)}`;
     const scored = legs.filter(l => l.score !== null).sort((a, b) => a.score - b.score);
-    const exp = state.b.exp || {};
-    let dots = "", specH = 64, axTop = 24, colHtml = "";
+    let dots = "", specH = 64, axTop = 24;
+    const colHtml = "";
     if (scored.length <= 12) {
       const labW = t => t.length * 0.85 + 1; // approx label width in % of spectrum width
       const srows = [];
@@ -1632,18 +1633,16 @@
           + g.slice(0, 12).map((l, j) => `<span class="dot${l.conds.length ? " cond" : ""}" data-p="${l.id}" title="${shortName(l.p.name)} · ${fmt(l.score)}" style="left:${x}%;top:${top0 - 8 - j * step}px;width:8px;height:8px;border-width:1px;cursor:pointer"></span>`).join("");
       }).join("");
     }
-    { // Oppose / Neutral / Support columns (direction by the +/-0.15 rule), |score| desc then name
-      const cols = [["oppose", "Oppose", "var(--oppose)"], ["neutral", "Neutral", "var(--neutral)"], ["support", "Support", "var(--support)"]];
-      colHtml = `<div class="bill-cols">` + cols.map(([key, label, col]) => {
-        const rows = legs.filter(l => dirOf(l.score) === key)
-          .sort((a, b) => (Math.abs(b.score ?? 0) - Math.abs(a.score ?? 0)) || shortName(a.p.name).localeCompare(shortName(b.p.name)));
-        const shown = exp[key] ? rows : rows.slice(0, 15);
-        return `<div class="bill-col"><div class="bill-col-h" style="color:${col}">${label} · ${rows.length}</div>`
-          + shown.map(r => `<div class="bill-col-row" data-p="${r.id}" title="${r.p.name} · ${r.score === null ? "no statement" : fmt(r.score)}"><span style="color:${partyColor(r.p.party)}">●</span> ${shortName(r.p.name)} <span style="color:var(--muted)">${r.score === null ? "—" : fmt(r.score)}</span></div>`).join("")
-          + (rows.length > 15 && !exp[key] ? `<span class="link" data-exp="${key}">+${rows.length - 15} more</span>` : "") + `</div>`;
-      }).join("") + `</div>`;
-    }
     const isDisMap = id => demands.some(t => t.id !== id && on.has(t.id) && (((DEMANDS[t.id] || {}).excludes || []).includes(id) || ((DEMANDS[id] || {}).excludes || []).includes(t.id)));
+    // expandable rosters under the map, one block per open aggregate in map order
+    const rost = state.b.rost || {}, rostAll = state.b.rostAll || {};
+    const rostHtml = aggShown.filter(a => rost[a.key]).map(a => {
+      const shown = rostAll[a.key] ? a.members : a.members.slice(0, 20);
+      return `<div class="rost"><div class="rost-h" style="color:${a.col}">${a.label} · ${a.members.length}</div>`
+        + shown.map(m => `<div class="rost-row" data-p="${m.id}" title="${m.p.name} · ${seat(m.p)}${m.score === null ? "" : " · " + fmt(m.score)}"><span style="color:${partyColor(m.p.party)}">●</span><span class="rost-n">${shortName(m.p.name)}</span><span class="rost-m">${seat(m.p)}${m.score === null ? "" : " · " + fmt(m.score)}</span></div>`).join("")
+        + (a.members.length > 20 ? (rostAll[a.key] ? `<span class="link" data-rostall="${a.key}" data-open="0">Show fewer</span>` : `<span class="link" data-rostall="${a.key}" data-open="1">Show all ${a.members.length}</span>`) : "")
+        + `</div>`;
+    }).join("");
     wrap.innerHTML = `<div class="bill-wrap">
       <div class="crumbline"><a id="bill-back">← Explore</a> · ${path} · <span style="color:var(--text)">Bill</span></div>
       <h1>${info.num}${info.title ? ` · ${billTitleDisp(info)}` : ""}</h1>
@@ -1655,10 +1654,10 @@
       <div class="bill-sec">What it would take</div>
       ${whipBar}
       ${whipCap}
-      ${hasConds ? `<div class="bill-sub" style="margin:0 0 6px">Tick demands in the side pane to see who moves · hover an edge for the quote · click a legislator for their conditions.</div>
+      <div class="bill-sub" style="margin:0 0 6px">Tick demands in the side pane to see who moves · hover an edge for the quote · click a legislator for their conditions.</div>
       <svg id="billmap" viewBox="0 0 860 ${mapH}"></svg>${overflow.length ? `<div class="bill-sub" style="margin:6px 0 0"><span class="link" id="bill-overflow">+${overflow.length} more</span> beyond the 40 shown</div>` : ""}
-      <div class="bill-legend"><span><i style="border-color:var(--support)"></i>supports <b>if</b> demand met</span><span><i style="border-color:var(--oppose)"></i>opposes <b>if</b> demand met</span><span><i style="border-color:var(--accent);border-top-style:dashed"></i>current stance, width = strength</span><span><i style="border-color:var(--oppose);border-top-style:dotted"></i>demands that exclude each other</span><span style="flex-basis:100%;margin-top:4px">node colour = party only · projected vote = the label on each row (<span style="background:var(--support);color:var(--bg);padding:0 4px">YES</span> <span style="background:var(--oppose);color:var(--bg);padding:0 4px">NO</span> <span style="border:1px solid var(--muted);color:var(--muted);padding:0 4px">UNKNOWN</span>); <span style="color:var(--accent)">was …</span> marks a vote the package changes</span></div>`
-        : `<div class="bill-sub" style="border-left:2px solid var(--line, var(--border));padding:10px 12px">No conditions on record for this bill, so nobody moves. The negotiation map appears once the conditions ledger has rows for it.</div>`}
+      <div id="billrost">${rostHtml}</div>
+      <div class="bill-legend"><span><i style="border-color:var(--support)"></i>supports <b>if</b> demand met</span><span><i style="border-color:var(--oppose)"></i>opposes <b>if</b> demand met</span><span><i style="border-color:var(--accent);border-top-style:dashed"></i>current stance, width = strength</span><span><i style="border-color:var(--oppose);border-top-style:dotted"></i>demands that exclude each other</span><span style="flex-basis:100%;margin-top:4px">node colour = party only · projected vote = the label on each row (<span style="background:var(--support);color:var(--bg);padding:0 4px">YES</span> <span style="background:var(--oppose);color:var(--bg);padding:0 4px">NO</span> <span style="border:1px solid var(--muted);color:var(--muted);padding:0 4px">UNKNOWN</span>); <span style="color:var(--accent)">was …</span> marks a vote the package changes</span></div>
       <div class="bill-card" id="billcard"><div class="empty-state">Hover a legislator to see their stated conditions and how the current package affects them · click to open their profile.</div></div>
     </div>`;
     $("bill-back").onclick = () => { state.b.id = null; location.hash = "#/explore"; };
@@ -1666,18 +1665,18 @@
     // whip labels only fit segments >= 36 px wide; the full text is always in the hover title
     wrap.querySelectorAll(".whip i").forEach(el => { if (el.getBoundingClientRect().width < 36) el.textContent = ""; });
     wrap.querySelectorAll(".dot[data-p], .bill-col-row").forEach(el => { kbRow(el, "link"); el.onclick = () => openProfile(el.dataset.p); });
-    wrap.querySelectorAll("[data-exp]").forEach(el => el.onclick = () => { state.b.exp = { ...(state.b.exp || {}), [el.dataset.exp]: true }; renderBill(); });
-    // --- negotiation map svg (only when the conditions ledger has rows for this bill) ---
-    if (hasConds) {
+    wrap.querySelectorAll(".rost-row").forEach(el => { kbRow(el, "link"); el.onclick = () => openProfile(el.dataset.p); });
+    wrap.querySelectorAll("[data-rostall]").forEach(el => el.onclick = () => { state.b.rostAll = { ...(state.b.rostAll || {}), [el.dataset.rostall]: el.dataset.open === "1" }; renderBill(); });
+    // --- negotiation map svg: one map for every bill; demand column only when demands exist ---
     const W = 860, H = mapH, cy = H / 2;
     const svg = d3.select("#billmap");
     const billPos = { x: 120, y: cy };
-    const legX = 530, rowEdge = 848;
+    const legX = demands.length ? 530 : 380, rowEdge = 848;
     const demPos = {}, legPos = {};
-    let othPos = null;
     demands.forEach((d, i) => demPos[d.id] = { x: 380, y: demands.length === 1 ? cy : 80 + i * ((H - 160) / Math.max(1, demands.length - 1)) });
-    const mapOrder = [...indiv.map(l => ({ t: "leg", id: l.id })), ...(others.length ? [{ t: "oth" }] : [])];
-    mapOrder.forEach((r, i) => { const y = mapOrder.length === 1 ? cy : 60 + i * ((H - 120) / Math.max(1, mapOrder.length - 1)); if (r.t === "leg") legPos[r.id] = { x: legX, y }; else othPos = { x: legX, y }; });
+    let yy = 110;
+    indiv.forEach(l => { legPos[l.id] = { x: legX, y: yy + 17 }; yy += 34; });
+    aggShown.forEach(a => { a.y = yy + 28; yy += 56; });
     const supC = "#3fcf77", oppC = "#f2705f", ambC = "#f0b429";
     const partyHex = p => p === "D" ? "#5b8cff" : p === "R" ? "#ff7a6b" : "#b9bfcc";
     const curve = (a, b, lead) => `M${a.x},${a.y} C${(a.x + b.x) / 2},${a.y} ${(a.x + b.x) / 2},${b.y} ${b.x - lead},${b.y}`;
@@ -1770,25 +1769,34 @@
       .attr("stroke-width", 1.2).attr("width", d => pillW(LBL[byP[d.id].proj]));
     pill.append("text").attr("x", 7).attr("y", 14.5).style("font", "700 12px var(--mono)").style("letter-spacing", ".08em")
       .style("fill", d => byP[d.id].proj === "UNKNOWN" ? "var(--muted)" : "#0f1322").text(d => LBL[byP[d.id].proj]);
-    // one "others" row: everyone unchanged by the current package; click lists them via showGroup
-    if (othPos) {
-      const oth = svg.append("g").attr("class", "b-oth").style("cursor", "pointer")
-        .attr("transform", `translate(${othPos.x},${othPos.y})`)
-        .on("click", () => showGroup(othersLabel, others, "no stated condition · unchanged by the current package"));
-      oth.append("title").text(othersLabel);
-      svg.append("line")
-        .attr("x1", billPos.x).attr("y1", billPos.y - 32).attr("x2", othPos.x - 4).attr("y2", othPos.y)
-        .style("stroke", "var(--border-strong)").attr("stroke-width", 1.5).attr("opacity", .8);
-      oth.append("rect").attr("x", 0).attr("y", -7).attr("width", 14).attr("height", 14).attr("rx", 3).style("fill", "var(--muted)");
-      oth.append("text").attr("x", 22).attr("y", 4).style("font", "600 12px var(--sans)").style("fill", "var(--text)")
-        .text(trunc(othersLabel, Math.max(12, Math.floor((rowEdge - 12 - legX - 22) / 6.6))));
-    }
-    } // end if (hasConds)
+    // aggregate nodes: Support / Oppose (/ Not clear) collect everyone without an individual row
+    const aggCol = a => a.key === "support" ? "var(--support)" : a.key === "oppose" ? "var(--oppose)" : "var(--muted)";
+    svg.append("g").selectAll("path").data(aggShown).join("path")
+      .attr("class", "b-aggedge").attr("fill", "none")
+      .style("stroke", a => aggCol(a)).attr("stroke-width", a => 2 + 2 * Math.log10(a.members.length + 1)).attr("opacity", .85)
+      .attr("d", a => curve({ x: billPos.x + 75, y: billPos.y }, { x: legX, y: a.y }, 2));
+    const aggG = svg.append("g").selectAll("g").data(aggShown).join("g")
+      .attr("class", "b-agg")
+      .attr("transform", a => `translate(${legX},${a.y})`).style("cursor", "pointer")
+      .on("click", (ev, a) => { state.b.rost = { ...(state.b.rost || {}), [a.key]: !(state.b.rost || {})[a.key] }; renderBill(); });
+    aggG.append("title").text(a => `${a.label} · ${a.members.length} — click to ${((state.b.rost || {})[a.key]) ? "hide" : "show"} the roster`);
+    aggG.append("rect").attr("x", 0).attr("y", -20).attr("width", 150).attr("height", 40).attr("rx", 16)
+      .attr("fill", "#161b2e").style("stroke", "var(--line, var(--border))");
+    aggG.append("text").attr("x", 12).attr("y", -3).style("font", "600 12px var(--mono)").style("fill", a => aggCol(a))
+      .text(a => trunc(`${a.label} · ${a.members.length}`, 16));
+    const aggBar = aggG.append("g").attr("transform", "translate(12,6)");
+    aggBar.append("title").text(a => ["D", "R", "I"].map(p => `${a.members.filter(m => m.p.party === p).length} ${p}`).join(" · "));
+    aggBar.selectAll("rect").data(a => { let x = 0; return ["D", "R", "I"].map(p => { const c = a.members.filter(m => m.p.party === p).length; const w = a.members.length ? c / a.members.length * 126 : 0; const r = { x, w, p }; x += w; return r; }); })
+      .join("rect").attr("x", r => r.x).attr("y", 0).attr("width", r => r.w).attr("height", 6).attr("fill", r => partyHex(r.p));
+    aggG.append("text").attr("x", 150 - 14).attr("y", 5).attr("text-anchor", "middle").style("font-size", "12px").style("fill", "var(--muted)")
+      .text(a => ((state.b.rost || {})[a.key]) ? "▾" : "▸");
+    aggG.each(function () { kbRow(this, "button"); });
+
     function showBillTip(ev, html) { condTip.style.display = "block"; condTip.style.left = (ev.clientX + 14) + "px"; condTip.style.top = (ev.clientY + 10) + "px"; condTip.innerHTML = html; }
     function hideBillTip() { condTip.style.display = "none"; }
     function focusBillLeg(id) {
       ["b-cond", "b-now", "b-lab"].forEach(c => svg.selectAll("." + c).classed("dim", function () { return id && this.dataset.leg !== id; }));
-      svg.selectAll(".b-leg,.b-oth").attr("opacity", function () { return id && this.dataset.leg !== id ? .35 : 1; });
+      svg.selectAll(".b-leg,.b-agg").attr("opacity", function () { return id && this.dataset.leg !== id ? .35 : 1; });
     }
     function showGroup(label, members, note) {
       const card = $("billcard");
