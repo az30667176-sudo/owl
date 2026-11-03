@@ -33,9 +33,9 @@ All tasks touch `apps/web/index.html` unless stated. One commit per group, messa
 
 ## 6. Shareable Explore state
 
-- [ ] 6.1 `exploreStateToQuery()` / `applyExploreQuery()` for `state`, `com`, `party`, `k`, `q`; written with `history.replaceState` on every filter change; omitted when at defaults; read in `routeFromHash()`.
-- [ ] 6.2 "Copy link" in the Explore side pane copies the current URL (reuse the profile copy-link helper).
-- [ ] 6.3 Verify: load `#/explore?state=CA&party=D` fresh → CA chip, D only; clear filters → hash is `#/explore`.
+- [x] 6.1 `exploreStateToQuery()` / `applyExploreQuery()` for `state`, `com`, `party`, `k`, `q`; written with `history.replaceState` on every filter change; omitted when at defaults; read in `routeFromHash()`.
+- [x] 6.2 "Copy link" in the Explore side pane copies the current URL (reuse the profile copy-link helper).
+- [x] 6.3 Verify: load `#/explore?state=CA&party=D` fresh → CA chip, D only; clear filters → hash is `#/explore`.
 
 ## 7. CSV export
 

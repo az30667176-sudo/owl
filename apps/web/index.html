@@ -610,7 +610,46 @@
     if (h === "#/issue") { state.mode = "issues"; state.iid = null; return; }
     if (h === "#/find") { state.mode = "list"; return; }
     if (h === "#/about") { state.mode = "about"; return; }
+    if (h.indexOf("#/explore") === 0) { state.mode = "explore"; applyExploreQuery(); return; }
     state.mode = "explore";
+  }
+  // shareable Explore state (group 6): state, com, party, k, q live in the hash query,
+  // written with history.replaceState so filter changes do not pollute history
+  function exploreStateToQuery() {
+    const ps = new URLSearchParams();
+    const st = state.f.state || (E && E.stateF) || "";
+    if (st) ps.set("state", st);
+    if (E && E.open) ps.set("com", E.open);
+    if (state.f.parties.size && state.f.parties.size < 3) ps.set("party", [...state.f.parties].sort().join(","));
+    if (E && E.K !== 2) ps.set("k", E.K);
+    if (state.f.q.trim()) ps.set("q", state.f.q.trim());
+    return ps.toString();
+  }
+  function applyExploreQuery() {
+    const h = location.hash || "";
+    if (h.indexOf("#/explore") !== 0 || h.indexOf("?") < 0) return;
+    const ps = new URLSearchParams(h.slice(h.indexOf("?") + 1));
+    const st = ps.get("state") || "";
+    state.f.state = STATES.includes(st) ? st : "";
+    const party = (ps.get("party") || "").split(",").map(s => s.trim()).filter(s => ["D", "R", "I"].includes(s));
+    state.f.parties = new Set(party.length ? party : ["D", "R", "I"]);
+    state.f.q = ps.get("q") || "";
+    if (E) {
+      E.stateF = state.f.state || null;
+      E.showD = state.f.parties.has("D"); E.showR = state.f.parties.has("R"); E.showI = state.f.parties.has("I");
+      const k = parseInt(ps.get("k") || "2", 10);
+      E.K = (k >= 1 && k <= 5) ? k : 2;
+      const com = ps.get("com") || "", nc = com && COMMITTEES.some(c => c.id === com) ? com : null;
+      if (E.open !== nc) { E.open = nc; E_build(false); }
+      if ($("fD")) $("fD").checked = E.showD;
+      if ($("fR")) $("fR").checked = E.showR;
+      if ($("eK")) { $("eK").value = E.K; $("eKv").textContent = E.K; }
+    }
+  }
+  function syncExploreHash() {
+    if (state.mode !== "explore") return;
+    const qs = exploreStateToQuery(), target = "#/explore" + (qs ? "?" + qs : "");
+    if (location.hash !== target) history.replaceState(null, "", target);
   }
   const openBill = id => { state.b.id = id; state.b.ticked = []; state.b.sel = null; state.b.exp = {}; if (location.hash !== "#/bill/" + id) location.hash = "#/bill/" + id; else { state.mode = "bill"; render(); } };
   const openIssue = id => { if (!issueById[id]) return; if (location.hash !== "#/issue/" + id) location.hash = "#/issue/" + id; else { state.mode = "issue"; state.iid = id; render(); } };
@@ -665,11 +704,11 @@
     $("all").onclick = () => { ISSUES.forEach(i => f.issues.add(i.id)); render(); };
     $("none").onclick = () => { f.issues.clear(); render(); };
     $("f-state").onchange = e => { f.state = e.target.value; render(); };
-    const q = $("q"); q.oninput = () => { f.q = q.value; if (E) E_draw(); renderSide(); const fe2 = filteredEdges(); $aside.querySelector(".stat").textContent = `${fe2.length} stances · ${new Set(fe2.map(e => e.from)).size} legislators · ${new Set(fe2.map(e => e.to)).size} issues`; };
+    const q = $("q"); q.oninput = () => { f.q = q.value; if (E) E_draw(); renderSide(); syncExploreHash(); const fe2 = filteredEdges(); $aside.querySelector(".stat").textContent = `${fe2.length} stances · ${new Set(fe2.map(e => e.from)).size} legislators · ${new Set(fe2.map(e => e.to)).size} issues`; };
   }
   function renderExploreSide() {
     const mmHtml = `<div class="mmwrap" id="mmwrap" style="display:block"><div class="h" style="display:flex;justify-content:space-between;margin-top:0"><span>Map</span><span id="mmmode" style="color:var(--muted);letter-spacing:.06em"></span></div><canvas id="mm"></canvas><div class="mmleg" id="mmleg"></div></div>`;
-    const aboutFoot = `<div class="topic-sub" style="margin:14px 0 0;border-top:1px solid var(--border);padding-top:10px">How this is scored → <span class="link" data-about>About</span></div>`;
+    const aboutFoot = `<div class="topic-sub" style="margin:14px 0 0;border-top:1px solid var(--border);padding-top:10px">How this is scored → <span class="link" data-about>About</span> · <span class="link" data-copy>Copy link</span></div>`;
     if (E && E.pinned) {
       $side.innerHTML = mmHtml + E_pinHtml(E.pinned) + aboutFoot;
       const ob = $("open-issue");
@@ -1264,12 +1303,13 @@
     }
   }
 
+  function copyLink(el) { navigator.clipboard?.writeText(location.href); el.textContent = "Link copied"; }
   function renderProfileSide() {
     const e = state.p.sel, p = byId[state.p.person];
     if (!p) { $side.innerHTML = `<div class="empty-state">Every legislator has a page at <code>#/legislator/&lt;id&gt;</code>. Pick one on the left.</div>`; return; }
     $side.innerHTML = e ? `<div class="person-card"><div class="name">${issueById[e.to].name}</div><div class="meta">${issueById[e.to].catName} › ${issueById[e.to].subName}</div>${evidenceHtml(e, state.p.hl)}</div>`
       : `<div class="empty-state">Click a bar, a dot or a citation number to read the quote behind it.<br><br><span class="link" id="share-link">Copy link to this page</span></div>`;
-    const sl = $("share-link"); if (sl) sl.onclick = () => { navigator.clipboard?.writeText(location.href); sl.textContent = "Link copied"; };
+    const sl = $("share-link"); if (sl) sl.onclick = () => copyLink(sl);
     const hl = $side.querySelector(".stmt.hl"); if (hl) hl.scrollIntoView({ block: "center" });
   }
 
@@ -1800,13 +1840,13 @@
     topCom.forEach(c => comCount.set(c, (comCount.get(c) || 0) + 1));
     const avgCount = PEOPLE.length / COMMITTEES.length;
     const ang = new Map(COMMITTEES.map((c, ci) => { const span = 2 * Math.PI / COMMITTEES.length, a0 = -Math.PI / 2 + ci * span + .012, a1 = -Math.PI / 2 + (ci + 1) * span - .012; return [c.id, { a0, a1, t0: a0, t1: a1 }]; }));
-    E = { edges: EDGES, comById, iCat, legSpec, topCom, secondCom, comCount, avgCount, ang, open: null, K: 2, showD: true, showR: true, query: "", zt: d3.zoomIdentity, pinned: null, hover: null, stateF: null, mmHover: null, hl: null, legs: [], anchors: new Map(), agg: [], tweenStart: 0, markers: [], TW: 650 };
+    E = { edges: EDGES, comById, iCat, legSpec, topCom, secondCom, comCount, avgCount, ang, open: null, K: 2, showD: true, showR: true, showI: true, query: "", zt: d3.zoomIdentity, pinned: null, hover: null, stateF: null, mmHover: null, hl: null, legs: [], anchors: new Map(), agg: [], tweenStart: 0, markers: [], TW: 650 };
     E_targets();
     E_build(true);
     ectl.innerHTML = `<label class="ck"><input type="checkbox" id="fD" checked> D</label><label class="ck"><input type="checkbox" id="fR" checked> R</label><span>edges per legislator</span><input type="range" id="eK" min="1" max="5" value="2"><b id="eKv">2</b><button class="btn" id="eRz">reset view</button>`;
-    $("fD").onchange = e => { E.showD = e.target.checked; E_draw(); };
-    $("fR").onchange = e => { E.showR = e.target.checked; E_draw(); };
-    $("eK").oninput = e => { E.K = +e.target.value; $("eKv").textContent = E.K; E_draw(); };
+    $("fD").onchange = e => { E.showD = e.target.checked; E_draw(); syncExploreHash(); };
+    $("fR").onchange = e => { E.showR = e.target.checked; E_draw(); syncExploreHash(); };
+    $("eK").oninput = e => { E.K = +e.target.value; $("eKv").textContent = E.K; E_draw(); syncExploreHash(); };
     $("eRz").onclick = () => { E.pinned = null; E.hl = null; renderSide(); d3.select(cv).transition().duration(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 400).call(E_zoom.transform, d3.zoomIdentity); };
     E_zoom = d3.zoom().scaleExtent([1, 8]).on("zoom", ev => { E.zt = ev.transform; E_draw(); });
     d3.select(cv).call(E_zoom).on("dblclick.zoom", null);
@@ -1967,7 +2007,7 @@
     E_draw();
   }
 
-  function E_visible(l) { return (l.party === "D" ? E.showD : l.party === "R" ? E.showR : true) && (!E.query || l.name.toLowerCase().includes(E.query)) && (!E.stateF || l.state === E.stateF); }
+  function E_visible(l) { return (l.party === "D" ? E.showD : l.party === "R" ? E.showR : E.showI) && (!E.query || l.name.toLowerCase().includes(E.query)) && (!E.stateF || l.state === E.stateF); }
   function E_qpt(x0, y0, qx, qy, x1, y1, t) { const u = 1 - t; return [u * u * x0 + 2 * u * t * qx + t * t * x1, u * u * y0 + 2 * u * t * qy + t * t * y1]; }
   function E_condRows(p, t) {
     if (E.comById.has(t)) { const out = []; ISSUES.filter(i => i.cat === t).forEach(i => (condByPI[p + "|" + i.id] || []).forEach(r => out.push(r))); return out; }
@@ -2111,7 +2151,7 @@
     const hov = E.hover;
     if (!hov || hov.kind === "cond") { if (!hov) { E.pinned = null; E.hl = null; renderSide(); E_draw(); } return; }
     if (hov.kind === "leg") { openProfile(hov.id); return; }
-    if (hov.kind === "com") { E.open = E.open === hov.id ? null : hov.id; E.hover = null; E.pinned = null; E_build(false); renderSide(); return; }
+    if (hov.kind === "com") { E.open = E.open === hov.id ? null : hov.id; E.hover = null; E.pinned = null; E_build(false); renderSide(); syncExploreHash(); return; }
     E.pinned = E.pinned && E.pinned.id === hov.id ? null : hov;
     renderSide(); E_draw();
   }
@@ -2184,7 +2224,7 @@
       : `<span><span class="sq" style="background:var(--party-d)"></span>D</span><span><span class="sq" style="background:var(--party-r)"></span>R</span><span>hover an issue or committee in the graph to recolour</span>`)
       + (E.stateF ? ` <span class="chip" id="clrst">${STATE_NAMES[E.stateF]} only ✕</span>` : ` <span>click a state name to filter</span>`);
     const clr = $("clrst");
-    if (clr) clr.onclick = () => { E.stateF = null; renderSide(); E_draw(); };
+    if (clr) clr.onclick = () => { E.stateF = null; renderSide(); E_draw(); syncExploreHash(); };
   }
   function E_mmBind() {
     const mm = mmEl();
@@ -2219,7 +2259,7 @@
       const r = mm.getBoundingClientRect(), x = ev.clientX - r.left, y = ev.clientY - r.top;
       if (E.mmHover) { window.E_fly(E.mmHover.l.id); return; }
       const sl = E.mm.states.find(s0 => x >= s0.x && x <= s0.x + s0.s && y >= s0.y && y <= s0.y + s0.s);
-      if (sl) { E.stateF = E.stateF === sl.st ? null : sl.st; E_hideTip(); renderSide(); E_draw(); }
+      if (sl) { E.stateF = E.stateF === sl.st ? null : sl.st; E_hideTip(); renderSide(); E_draw(); syncExploreHash(); }
     };
   }
   function E_show() {
@@ -2227,10 +2267,12 @@
     $hint.style.display = "none";
     if (!E || E.edges !== EDGES) E_init();
     else { const _s = E_paneSize(); if (E.lastW && (Math.abs(_s.W - E.lastW) > 2 || Math.abs(_s.H - E.lastH) > 2)) E_build(false); else E_size(); }
+    applyExploreQuery();
     E.query = gs.value.trim().toLowerCase();
     E.query = E.query.length >= 2 && !/^\d{5}$/.test(E.query) ? E.query : "";
     E_draw();
     E_mmBind();
+    syncExploreHash();
   }
   let E_cvRO = null;
   function E_watch() {
@@ -2277,6 +2319,7 @@
     ({ explore: renderExploreSide, issues: renderIssuesSide, issue: renderIssueSide, bills: renderBillsSide, list: renderListSide, profile: renderProfileSide, bill: renderBillSide, about: renderAboutSide })[state.mode]();
     $side.querySelectorAll("[data-open]").forEach(b => b.onclick = () => openProfile(b.dataset.open));
     $side.querySelectorAll("[data-about]").forEach(b => b.onclick = () => { location.hash = "#/about"; });
+    $side.querySelectorAll("[data-copy]").forEach(b => b.onclick = () => copyLink(b));
     bindCondChips();
   }
   function render() { document.body.dataset.pane = state.pane || "view"; renderHeader(); renderAside(); renderSide(); renderCenter(); const _sw = document.getElementById("pane-switch"); if (_sw) _sw.querySelectorAll("button").forEach(b => b.classList.toggle("active", b.dataset.pane === (state.pane || "view"))); }
