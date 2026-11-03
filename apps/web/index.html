@@ -507,7 +507,7 @@
   // a bill's committee = first resolvable issue's committee, else the issue with most statements for that bill
   const billCom = rec => {
     for (const iid of (rec.issue_ids || [])) { const is = issueById[iid]; if (is) return is.cat; }
-    const info = billInfo(rec.bill_id);
+    const info = billInfo(billId(rec.number));
     return info ? info.iss.cat : null;
   };
   // bill id: lower-case letters+digits of the leading bill number ("H.R. 6110 …" -> "hr6110"; null for null)
@@ -663,9 +663,14 @@
   function saveMatch() { try { localStorage.setItem("owl-match", JSON.stringify(MATCH.answers)); } catch { /* storage unavailable */ } }
   // statements + conditions behind one bills.json bill, for billLegs; memoised on (bill, statements)
   let _blCache = { id: null, n: -1, info: null };
+  // bills.json ids carry a congress suffix ("hr478-119") while statement rows name the bill in
+  // free text ("H.R. 478 …"); a row belongs to the bill when its bill_id matches, or when the
+  // number parsed from its text matches the number parsed from the bill record
   function billStmtsInfo(bill_id) {
     if (_blCache.id === bill_id && _blCache.n === STATEMENTS.length) return _blCache.info;
-    const info = { stmts: STATEMENTS.filter(s => billId(s.bill) === bill_id), conds: CONDS.filter(r => billId(r.bill) === bill_id) };
+    const rec = billById[bill_id], num = rec ? billId(rec.number) : null;
+    const isMine = r => r.bill_id === bill_id || (num !== null && billId(r.bill) === num);
+    const info = { stmts: STATEMENTS.filter(isMine), conds: CONDS.filter(isMine) };
     _blCache = { id: bill_id, n: STATEMENTS.length, info };
     return info;
   }
@@ -935,7 +940,9 @@
     return `<div class="h">What your answers say</div>`
       + `<div style="font-size:13px;line-height:1.7">You answered ${n} bill${n === 1 ? "" : "s"}: yes on ${yes}, no on ${no}.`
       + (top.length ? ` Most of your answers fall under ${top.join(" and ")}.` : "")
-      + ` You sided with the recorded majority on ${sided} of ${n}.</div>`
+      + ` You sided with the recorded majority on ${sided} of ${n}.`
+      + (n >= 3 && (() => { const r = matchRows()[0]; return r ? ` Closest match so far: ${shortName(r.p.name)} (${seat(r.p)} · ${r.p.party}), with you on ${r.agree} of ${r.n}.` : ""; })())
+      + `</div>`
       + (to.length ? `<div class="h">What you accepted</div><ul style="margin:6px 0;padding-left:18px;font-size:13px">${to.map(t => `<li>${t}</li>`).join("")}</ul>` : "");
   }
   function matchBoardHtml() {
