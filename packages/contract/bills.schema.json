@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/az30667176-sudo/owl/packages/contract/bills.schema.json",
+  "title": "Contract B — bills.json (optional)",
+  "description": "One record per bill: number, title, status, last action, sponsor, issues. Statement and condition rows reference bill_id (optional field); the Bills tab reads this file when present and falls back to string grouping when absent.",
+  "type": "object",
+  "required": ["bills"],
+  "additionalProperties": false,
+  "properties": {
+    "_meta": { "$ref": "record.schema.json#/$defs/meta" },
+    "bills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["bill_id", "number"],
+        "additionalProperties": false,
+        "properties": {
+          "bill_id": { "type": "string", "minLength": 1 },
+          "number": { "type": "string", "minLength": 1, "description": "Display number, e.g. H.R. 1234." },
+          "congress": { "type": "integer", "minimum": 1 },
+          "title": { "type": ["string", "null"] },
+          "short_title": { "type": ["string", "null"] },
+          "status": { "enum": ["introduced", "committee", "passed_house", "passed_senate", "enacted", "failed"], "description": "Omitted when the latest action is ambiguous; a missing status beats a wrong one." },
+          "introduced_date": { "type": "string", "format": "date" },
+          "last_action": {
+            "type": "object",
+            "required": ["date", "text"],
+            "additionalProperties": false,
+            "properties": {
+              "date": { "type": "string", "format": "date" },
+              "text": { "type": "string", "minLength": 1 }
+            }
+          },
+          "sponsor_id": { "type": "string", "description": "people.json id of the sponsor." },
+          "issue_ids": { "type": "array", "items": { "type": "string" }, "description": "issues.json ids; the bill's own mapping (all seed issues, not just the primary)." },
+          "url": { "type": "string", "format": "uri" },
+          "short_context": { "type": "string", "minLength": 1, "maxLength": 200, "description": "Plain-language summary of what the bill addresses. Max 30 words (enforced by validate.mjs)." },
+          "binary_question": {
+            "type": "object",
+            "required": ["question", "options"],
+            "additionalProperties": false,
+            "properties": {
+              "question": { "type": "string", "minLength": 1, "maxLength": 200 },
+              "options": {
+                "type": "array",
+                "minItems": 2,
+                "maxItems": 2,
+                "items": {
+                  "type": "object",
+                  "required": ["stance", "label"],
+                  "additionalProperties": false,
+                  "properties": {
+                    "stance": { "enum": ["support", "oppose"] },
+                    "label": { "type": "string", "minLength": 1, "maxLength": 120 }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -11,7 +11,7 @@ Single source of truth for every byte that crosses a team boundary. Maps 1:1 to 
 | Contract | Producer → Consumer | Shape | Schema |
 |---|---|---|---|
 | **A** | ingest → process | one **record**: speaker-tagged text + source + hints | `record.schema.json` |
-| **B** | process → frontend | six **data files** the frontend loads at startup | `taxonomy`, `issues`, `people`, `statements`, `summaries`, `conditions` `.schema.json` |
+| **B** | process → frontend | seven **data files** the frontend loads at startup | `taxonomy`, `issues`, `people`, `statements`, `summaries`, `conditions`, `bills` `.schema.json` |
 | **C** | frontend-internal | derived in the browser from B (aggregation, filters, graph) | `derived.md` (rules, no file crosses a boundary) |
 
 Owners: A is owned by **ingest** (producer) and **process** (consumer) jointly; B is owned by **process** (producer) and **web** (consumer) jointly. A change to any schema = open an issue with label `contract`, get the consuming side's thumbs-up, then land the schema and the code in one PR.
@@ -82,7 +82,7 @@ Level 1 = House standing committees, level 2 = their subcommittees. A committee 
 ### stances.json — one row per statement (schema: `statements.schema.json`)
 
 ```
-{ "_meta": {...}, "stances": [ { "statement_id", "person", "issue", "date", "score", "direction", "linkage", "llm_confidence", "quote", "bill", "source", "model", "record_id"?, "rationale"? } ] }
+{ "_meta": {...}, "stances": [ { "statement_id", "person", "issue", "date", "score", "direction", "linkage", "llm_confidence", "quote", "bill", "source", "model", "record_id"?, "rationale"?, "kind"?, "vote_question"?, "bill_id"? } ] }
 ```
 | field | type | rule |
 |---|---|---|
@@ -100,6 +100,9 @@ Level 1 = House standing committees, level 2 = their subcommittees. A committee 
 | `model` | string | e.g. `muse-spark-1.3` |
 | `record_id` | string | back-reference to the contract-A record. Optional on mock data, **required on real data** (the validator uses it to check the quote) |
 | `rationale` | string | optional one-sentence model explanation |
+| `kind` | `speech` \| `sponsored` \| `cosponsored` \| `vote` \| `views` | optional; what the row records. Rows without it stay valid |
+| `vote_question` | `final_passage` \| `amendment` \| `procedural` | optional; only when `kind` is `vote`. Omitted when the question is unknown |
+| `bill_id` | bills id | optional; must exist in `bills.json` when present |
 
 **Never pre-aggregate.** A legislator who speaks five times on an issue yields five rows. Aggregation is contract C.
 
@@ -134,10 +137,21 @@ Generated offline by `services/process/summarize.mjs`. Every sentence cites ≥ 
 | `statement_id` | string \| null | stances id, or null when not yet linked. When non-null it must exist and belong to the same `person` |
 | `record_id` | string | back-reference to the contract-A record. The validator uses it to check the quote |
 | `model` | string | e.g. `muse-spark-1.3` |
+| `bill_id` | bills id | optional; must exist in `bills.json` when present |
 
 Demand registry: `water-cap` (amendment, "Enforceable water-use cap"), `water-disc` (amendment, "Binding water-use disclosure (Sec. 4)"), `clean` (procedure, "Pass the bill clean, no amendments", excludes `water-cap` + `water-disc`).
 
 Rules: `quote` must be verbatim against the record named by `record_id`; `statement_id` is nullable but when present must match the row's `person`; conditions are never averaged into scores.
+
+### bills.json — optional
+
+```
+{ "_meta": {...}, "bills": [ { "bill_id", "number", "congress"?, "title"?, "short_title"?, "status"?, "introduced_date"?, "last_action"?, "sponsor_id"?, "issue_ids"?, "url"?, "short_context"?, "binary_question"? } ] }
+```
+
+One record per bill, emitted by `services/ingest/csv-to-json.mjs` from `bills.csv`. The Bills tab and bill pages read this file when present and fall back to grouping statement rows on the bill string when absent. `status` is best-effort (omitted when the latest action is ambiguous); `issue_ids` carries all of the bill's seed issues. Statement and condition rows link via their optional `bill_id`, which must resolve when present.
+
+Match attributes (optional, process-merged, never ingest-emitted): `short_context` is a neutral ≤30-word plain-language summary of what the bill addresses; `binary_question` is `{ question, options: [{ stance, label }, …] }` with exactly two options, one `support` and one `oppose`, driving the match-board picker. Ingest regens must carry these fields forward by `bill_id` without overwriting them.
 
 ## Contract C — derived in the browser
 

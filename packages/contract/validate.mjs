@@ -119,6 +119,7 @@ function validateDir(dir) {
   const stances = readJson(join(dir, "stances.json"));
   const summaries = existsSync(join(dir, "summaries.json")) ? readJson(join(dir, "summaries.json")) : null;
   const conditions = existsSync(join(dir, "conditions.json")) ? readJson(join(dir, "conditions.json")) : null;
+  const bills = existsSync(join(dir, "bills.json")) ? readJson(join(dir, "bills.json")) : null;
 
   const okT = validateAgainst(taxonomy, "taxonomy.schema.json", "taxonomy.json");
   const okI = validateAgainst(issues, "issues.schema.json", "issues.json");
@@ -126,7 +127,8 @@ function validateDir(dir) {
   const okS = validateAgainst(stances, "statements.schema.json", "stances.json");
   const okSum = summaries ? validateAgainst(summaries, "summaries.schema.json", "summaries.json") : true;
   const okCond = conditions ? validateAgainst(conditions, "conditions.schema.json", "conditions.json") : true;
-  if (!(okT && okI && okP && okS && okSum && okCond)) return;
+  const okB = bills ? validateAgainst(bills, "bills.schema.json", "bills.json") : true;
+  if (!(okT && okI && okP && okS && okSum && okCond && okB)) return;
 
   const mock = !!(people._meta?.mock || stances._meta?.mock);
 
@@ -154,6 +156,21 @@ function validateDir(dir) {
     if (p.bioguide_id) { if (bioguides.has(p.bioguide_id)) err(`people.json: duplicate bioguide_id ${p.bioguide_id}`); bioguides.add(p.bioguide_id); }
     if (!p.district.startsWith(p.state + "-")) err(`people.json: ${p.id} district ${p.district} does not match state ${p.state}`);
   }
+  // bills (optional file)
+  const billIds = new Set();
+  if (bills) for (const b of bills.bills) {
+    if (billIds.has(b.bill_id)) err(`bills.json: duplicate bill_id ${b.bill_id}`); billIds.add(b.bill_id);
+    for (const i of b.issue_ids || []) if (!issueIds.has(i)) err(`bills.json ${b.bill_id}: unknown issue ${i}`);
+    if (b.sponsor_id && !personIds.has(b.sponsor_id)) err(`bills.json ${b.bill_id}: unknown sponsor ${b.sponsor_id}`);
+    if (b.short_context && b.short_context.trim().split(/\s+/).length > 30) err(`bills.json ${b.bill_id}: short_context exceeds 30 words`);
+    if (b.binary_question) {
+      const stances = (b.binary_question.options || []).map((o) => o.stance).sort().join(",");
+      if (stances !== "oppose,support") err(`bills.json ${b.bill_id}: binary_question options must be exactly one support and one oppose`);
+    }
+  }
+  if (!bills && (stances.stances.some((s) => s.bill_id) || conditions?.conditions.some((c) => c.bill_id))) {
+    warn("bill_id references present but bills.json is absent");
+  }
   // statements
   const records = loadRecords();
   const stIds = new Set(), stOwner = new Map();
@@ -164,6 +181,8 @@ function validateDir(dir) {
     if (!personIds.has(s.person)) err(`${L}: unknown person ${s.person}`);
     if (!issueIds.has(s.issue)) err(`${L}: unknown issue ${s.issue}`);
     if (s.direction !== dirOf(s.score)) err(`${L}: direction ${s.direction} inconsistent with score ${s.score} (expected ${dirOf(s.score)})`);
+    if (s.vote_question !== undefined && s.kind !== "vote") err(`${L}: vote_question requires kind "vote" (got ${JSON.stringify(s.kind)})`);
+    if (s.bill_id && bills && !billIds.has(s.bill_id)) err(`${L}: unknown bill_id ${s.bill_id}`);
     if (!s.record_id && !mock) err(`${L}: record_id required on non-mock data`);
     if (s.record_id) {
       const r = records.get(s.record_id);
@@ -208,6 +227,7 @@ function validateDir(dir) {
         if (!stIds.has(c.statement_id)) err(`${L}: unknown statement_id ${c.statement_id}`);
         else if (stOwner.get(c.statement_id) !== c.person) err(`${L}: statement_id ${c.statement_id} belongs to ${stOwner.get(c.statement_id)}, not ${c.person}`);
       }
+      if (c.bill_id && bills && !billIds.has(c.bill_id)) err(`${L}: unknown bill_id ${c.bill_id}`);
       if (c.record_id) {
         const r = records.get(c.record_id);
         if (!r) { quoteSkipped++; }
@@ -223,7 +243,7 @@ function validateDir(dir) {
   if (orphans.length) warn(`people.json: ${orphans.length} legislator(s) with no statements (fine for real data, UI shows them empty)`);
   const unused = [...issueIds].filter((i) => !stances.stances.some((s) => s.issue === i));
   if (unused.length) warn(`issues.json: ${unused.length} issue(s) with no statements: ${unused.join(", ")}`);
-  console.log(`contract B: ${taxonomy.committees.length} committees, ${issues.issues.length} issues, ${people.people.length} people, ${stances.stances.length} statements, ${summaries ? Object.keys(summaries.summaries).length : 0} summaries, ${condCount} conditions; quotes checked ${quoteChecked}, skipped ${quoteSkipped}${mock ? " [mock data]" : ""}`);
+  console.log(`contract B: ${taxonomy.committees.length} committees, ${issues.issues.length} issues, ${people.people.length} people, ${stances.stances.length} statements, ${bills ? bills.bills.length : 0} bills, ${summaries ? Object.keys(summaries.summaries).length : 0} summaries, ${condCount} conditions; quotes checked ${quoteChecked}, skipped ${quoteSkipped}${mock ? " [mock data]" : ""}`);
 }
 
 if (opt.dir) validateDir(opt.dir); else loadRecords();
