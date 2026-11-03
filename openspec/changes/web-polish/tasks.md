@@ -39,9 +39,9 @@ All tasks touch `apps/web/index.html` unless stated. One commit per group, messa
 
 ## 7. CSV export
 
-- [ ] 7.1 `toCSV(rows, cols)` (RFC 4180 quoting, UTF-8 BOM) + `downloadBlob(name, text)`.
-- [ ] 7.2 Legislators view toolbar: "Download CSV" exporting the filtered `rows` with the columns in the delta spec; profile hero: "Download CSV" exporting the member's statements (awaits `STATEMENTS_READY`).
-- [ ] 7.3 Verify: filter to N rows → file has N data rows; open in a spreadsheet, quotes intact.
+- [x] 7.1 `toCSV(rows, cols)` (RFC 4180 quoting, UTF-8 BOM) + `downloadBlob(name, text)`.
+- [x] 7.2 Legislators view toolbar: "Download CSV" exporting the filtered `rows` with the columns in the delta spec; profile hero: "Download CSV" exporting the member's statements (awaits `STATEMENTS_READY`).
+- [x] 7.3 Verify: filter to N rows → file has N data rows; open in a spreadsheet, quotes intact.
 
 ## 8. Empty states
 
