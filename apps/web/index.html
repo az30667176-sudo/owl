@@ -224,10 +224,15 @@
     .hero { grid-template-columns: 40px minmax(0, 1fr); gap: 12px; }
     .hero .avatar { width: 40px; height: 40px; font-size: 16px; }
     .hero h1 { font-size: 24px; }
-    .ehud { display: none !important; }
+    .ehud, .ectl .er2, .ectl .lab .full, .es-bar .es-more { display: none !important; }
+    .ectl .lab .short { display: inline !important; }
     .ectl { left: 8px; right: 8px; }
-    .ectl .eg { padding: 4px 10px; min-height: 32px; }
+    .ectl .eg { padding: 4px 8px; min-height: 32px; gap: 6px; }
+    .ectl .eg.act { padding-right: 4px; }
     .ectl .er { min-height: 34px; }
+    .ectl input[type=range] { width: 64px; }
+    .es-bar { padding: 6px 10px; gap: 6px 10px; }
+    .es-act .btn.sm { padding: 3px 8px; }
     .legend { display: none; }
   }
 
@@ -435,6 +440,7 @@
   .ectl .eg.leg i { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 6px; vertical-align: -1px; }
   .ectl .eg.leg i.ln { width: 14px; height: 0; border-top: 2px dashed var(--muted); border-radius: 0; vertical-align: 2px; }
   .ectl .lab { font: 500 10.5px var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+  .ectl .lab .short { display: none; }
   .ectl .pt { display: inline-flex; align-items: center; gap: 6px; height: 26px; font: inherit; font-size: 12px; font-weight: 600; color: var(--muted); background: transparent; border: 1px solid var(--border); border-radius: 3px; padding: 0 10px; cursor: pointer; }
   .ectl .pt i { width: 8px; height: 8px; border-radius: 50%; opacity: .3; }
   .ectl .pt:hover { border-color: var(--border-strong); color: var(--text); }
@@ -990,9 +996,9 @@
     const i = issueById[id];
     const rows = billsForIssue(id);
     const done = rows.filter(r => MATCH.answers[r.bill_id]).length;
-    let h = `<div class="h" style="margin-top:0;display:flex;justify-content:space-between"><span>Questions under ${i ? i.name : id}</span><span>${rows.length ? `${done} of ${rows.length} answered` : ""}</span></div>`;
+    let h = `<div class="h" style="margin-top:0">Questions under ${i ? i.name : id}</div>`;
     if (!rows.length) return h + `<div class="topic-sub">No questions under this issue yet.</div>`;
-    return h + `<div class="topic-sub" style="margin-bottom:4px">Answer Yes or No (hover a button for the full wording). Your matches collect under the ring.</div>` + rows.map(rec => {
+    return h + `<div class="topic-sub" style="margin-bottom:4px"><b style="color:var(--text)">${done} of ${rows.length} answered.</b> Answer Yes or No (hover a button for the full wording); your matches collect in the bar under the ring.</div>` + rows.map(rec => {
       const q = rec.binary_question, ans = MATCH.answers[rec.bill_id];
       const legs = billLegsMemo(rec.bill_id);
       const forN = legs.filter(l => l.score !== null && l.score > .15).length;
@@ -1066,7 +1072,7 @@
     const rows = n >= 3 ? matchRows() : [];
     const top = rows[0];
     const bar = `<div class="es-bar"><span><b>${n} answered</b> · yes ${yes} · no ${n - yes}`
-      + (n >= 3 ? ` · ${rows.length} member${rows.length === 1 ? "" : "s"} ranked` + (top ? ` · closest <span class="link" data-esprof="${top.p.id}">${shortName(top.p.name)}</span> ${top.agree}/${n}` : "") : ` · answer ${3 - n} more to see who matches you`)
+      + (n >= 3 ? `<span class="es-more"> · ${rows.length} member${rows.length === 1 ? "" : "s"} ranked` + (top ? ` · closest <span class="link" data-esprof="${top.p.id}">${shortName(top.p.name)}</span> ${top.agree}/${n}` : "") + `</span>` : ` · answer ${3 - n} more to see who matches you`)
       + `</span><span class="es-act">` + (n >= 3 ? `<button class="btn sm${open ? "" : " pri"}" data-esdr="${open ? "close" : "open"}" aria-expanded="${open}">${open ? "Hide matches ▾" : "Show matches ▴"}</button>` : "") + `<button class="btn sm" data-esclear>Clear answers</button></span></div>`;
     if (!open) return bar;
     const per = new Map(ids.map(id => [id, new Map(billLegsMemo(id).map(L => [L.id, dirOf(L.score)]))]));
@@ -2384,7 +2390,7 @@
     // fixed reserve at the pane bottom: toolbar + 12px + the match bar (whether or not it is showing) + 10px.
     // Keeping this constant means answering a question never changes the canvas size, so the ring never re-fits.
     const ctlH = (ectl && ectl.getClientRects().length && ectl.offsetHeight) || 40;
-    const chrome = ctlH + 12 + 40 + 10;
+    const chrome = ctlH + 12 + (W <= 480 ? 72 : 40) + 10;
     const H = Math.max(320, ((pane && pane.clientHeight) || 0) - chrome);
     return { W, H };
   }
@@ -2423,7 +2429,7 @@
     const ang = new Map(COMMITTEES.map((c, ci) => { const span = 2 * Math.PI / COMMITTEES.length, a0 = -Math.PI / 2 + ci * span + .012, a1 = -Math.PI / 2 + (ci + 1) * span - .012; return [c.id, { a0, a1, t0: a0, t1: a1 }]; }));
     E = { edges: EDGES, comById, iCat, legSpec, topCom, secondCom, comCount, avgCount, ang, open: null, K: 2, showD: true, showR: true, showI: true, query: "", zt: d3.zoomIdentity, pinned: null, hover: null, stateF: null, mmHover: null, hl: null, legs: [], anchors: new Map(), agg: [], tweenStart: 0, markers: [], TW: 650 };
     ectl.innerHTML = `<div class="er"><div class="eg"><span class="lab">Party</span><button class="pt on" id="fD" aria-pressed="true"><i style="background:var(--party-d)"></i>D</button><button class="pt on" id="fR" aria-pressed="true"><i style="background:var(--party-r)"></i>R</button></div>`
-      + `<div class="eg"><span class="lab">Edges per member</span><input type="range" id="eK" min="1" max="5" value="${E.K}" aria-label="Edges per member"><b id="eKv" class="val">${E.K}</b></div>`
+      + `<div class="eg"><span class="lab"><span class="full">Edges per member</span><span class="short">Edges</span></span><input type="range" id="eK" min="1" max="5" value="${E.K}" aria-label="Edges per member"><b id="eKv" class="val">${E.K}</b></div>`
       + `<div class="eg act"><button class="btn rz" id="eRz" title="Zoom out, unpin, clear highlight">↺ Reset view</button></div></div>`
       + `<div class="er er2"><div class="eg leg"><span class="lab">Edge</span><span title="Edge colour = the member's position on the issue"><i style="background:var(--support)"></i>Support</span><span><i style="background:var(--oppose)"></i>Oppose</span><span><i style="background:var(--neutral)"></i>Neutral</span><span title="Edge width = attention, opacity = strength of the position, dashed = the member changed direction"><i class="ln"></i>Changed direction</span></div></div>`;
     ectl.querySelector(".er2").appendChild(ehud);
