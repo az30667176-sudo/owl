@@ -902,18 +902,25 @@
   }
   // ranked members for answered bills: per member, agree / n over answered bills where
   // billLegs direction is support or oppose; members under MATCH.min are not ranked
+  // when nobody shares MATCH.min answered bills, rank at the largest overlap anyone reaches
+  // (down to 1) and report that floor in matchRows.floor so the board can say so
   function matchRows() {
     const ids = Object.keys(MATCH.answers).filter(id => billQ(id));
     const per = new Map(ids.map(id => [id, new Map(billLegsMemo(id).map(L => [L.id, dirOf(L.score)]))]));
-    return PEOPLE
+    const all = PEOPLE
       .filter(p => (!state.f.state || p.state === state.f.state) && (MATCH.party === "ALL" || p.party === MATCH.party))
       .map(p => {
         let agree = 0, n = 0;
         ids.forEach(id => { const d = per.get(id).get(p.id); if (d === "support" || d === "oppose") { n++; if (d === MATCH.answers[id]) agree++; } });
         return { p, agree, n, share: n ? agree / n : -1 };
-      })
-      .filter(r => r.n >= MATCH.min)
+      });
+    const best = all.reduce((m, r) => Math.max(m, r.n), 0);
+    const floor = Math.max(1, Math.min(MATCH.min, best));
+    const out = all
+      .filter(r => r.n >= floor)
       .sort((a, b) => b.share - a.share || b.n - a.n || a.p.name.localeCompare(b.p.name));
+    out.floor = floor;
+    return out;
   }
   // deterministic summary built only from the stored answers and bill fields; the browser
   // never calls a model, and no trade-off prose is generated when the field is absent
@@ -959,8 +966,9 @@
       + ["ALL", "D", "R"].map(p => `<span class="chip${MATCH.party === p ? " active" : ""}" data-mp="${p}">${p === "ALL" ? "All" : p}</span>`).join("")
       + `<label class="topic-sub" style="margin:0">min overlap <select id="mb-min" class="if" style="width:auto">${[2, 3, 4, 5].map(m => `<option value="${m}"${m === MATCH.min ? " selected" : ""}>${m}</option>`).join("")}</select></label>`
       + `</div>`
+      + (rows.floor < MATCH.min ? `<div class="topic-sub" style="margin:0 0 6px">No member has a recorded position on ${MATCH.min} of your bills yet; ranking at ${rows.floor} for now. Answer more bills to tighten it.</div>` : "")
       + (rows.length ? `<div class="h">Closest</div>${rows.slice(0, 10).map(row).join("")}<div class="h">Farthest</div>${rows.slice(-10).reverse().map(row).join("")}`
-        : `<div class="empty-state">No members reach the minimum overlap of ${MATCH.min} bills.</div>`)
+        : `<div class="empty-state">No member has a recorded position on any bill you answered.</div>`)
 
   }
   function bindMatchBoard() {
