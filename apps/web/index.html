@@ -965,7 +965,7 @@
   }
   // top-5 match list under the ring: one column per answered bill, ✓ agree / ✗ disagree / – no position;
   // state and party filters are the same ones the side-pane board uses
-  const billShort = rec => String(rec.number || rec.bill_id).replace(/\./g, "").replace(/\s+/g, " ").replace(/^H R /, "HR ").replace(/^H Con Res /, "HConRes ").replace(/^H J Res /, "HJRes ").replace(/^H Res /, "HRes ").replace(/^S J Res /, "SJRes ").replace(/^S Con Res /, "SConRes ").replace(/^S Res /, "SRes ");
+  const billShort = rec => String(rec.number || rec.bill_id).replace(/\./g, "").replace(/\s+/g, " ").replace(/^H R /, "HR ").replace(/^H Con Res /, "HConRes ").replace(/^HJ Res /, "HJRes ").replace(/^H Res /, "HRes ").replace(/^SJ Res /, "SJRes ").replace(/^S Con Res /, "SConRes ").replace(/^S Res /, "SRes ");
   function matchListHtml(ids) {
     const rows = matchRows(), top = rows.slice(0, 5);
     const per = new Map(ids.map(id => [id, new Map(billLegsMemo(id).map(L => [L.id, dirOf(L.score)]))]));
