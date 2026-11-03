@@ -23,7 +23,7 @@
   :root {
     --bg: #0f1322; --panel: #171c2e; --panel-2: #1f2538; --border: #2c3348; --border-strong: #4a5372;
     --text: #efe6d2; --muted: #aaa493; --faint: #6c6f7d;
-    --accent: #f0b429; --on-accent: #1a1200; --parchment: #efe6d2;
+    --accent: #f0b429; --accent-dim: #c9961f; --accent-cold: #8a6a1a; --on-accent: #1a1200; --parchment: #efe6d2;
     --support: #3fcf77; --oppose: #f2705f; --neutral: #9aa3b2;
     --party-d: #5b8cff; --party-r: #ff7a6b; --party-i: #b9bfcc;
     --ai: #c9b6ff; --ai-wash: #1d1a33;
@@ -354,11 +354,13 @@
   .idc { border-top: 1px solid var(--border); padding: 10px 0; }
   .idc h3 { font-family: var(--display); font-weight: 600; font-size: 15px; margin: 0 0 6px; display: flex; gap: 8px; align-items: center; }
   .idc h3 .cdot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; flex: none; }
-  .idi { display: grid; grid-template-columns: 1fr 90px 34px; gap: 10px; align-items: center; padding: 5px 0; cursor: pointer; font-size: 13px; }
+  .idi { display: grid; grid-template-columns: 1fr 110px max-content; gap: 10px; align-items: center; padding: 5px 0; cursor: pointer; font-size: 13px; }
   .idi:hover { color: var(--accent); }
   .idi.active { color: var(--accent); }
-  .imini { display: flex; height: 6px; border-radius: 3px; overflow: hidden; background: var(--border); }
-  .imini i { display: block; height: 6px; }
+  .hbar { display: flex; height: 6px; border-radius: 3px; overflow: hidden; background: var(--border); }
+  .hbar i { display: block; height: 6px; }
+  .icount { font: 500 11px var(--mono); color: var(--muted); text-align: right; white-space: nowrap; }
+  .hot5 { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0 2px; }
   .if { width: 280px; background: var(--panel-2); border: 1px solid var(--border); color: var(--text); border-radius: 3px; padding: 6px 10px; font-size: 13px; outline: none; }
   .if:focus { border-color: var(--accent); }
   .ibl { display: grid; grid-template-columns: 110px 1fr auto; gap: 12px; padding: 10px 0; border-top: 1px solid var(--border); align-items: center; cursor: pointer; }
@@ -876,17 +878,31 @@
   // The halo reads only the per-edge kind counts [sponsored, cosponsored, yea, nay, views, spokeN, spokeMeanScore];
   // node colour is party only — stance appears in bars, the map legend and dot placement (left/right), never as a dot colour.
   const issEdges = id => seByI.get(id) || [];
-  function issMini(rows) {
-    const T = ISSUE_SPLIT_T, s = rows.filter(r => r > T).length, o = rows.filter(r => r < -T).length, n = rows.length - s - o, t = rows.length || 1;
-    return `<div class="imini"><i style="width:${s / t * 100}%;background:var(--support)"></i><i style="width:${n / t * 100}%;background:var(--neutral)"></i><i style="width:${o / t * 100}%;background:var(--oppose)"></i></div>`;
+  // Issue heat: derived aggregate over existing edge salience (no score/heat/flip/salience change).
+  // sal = Σ edge.salience, active = edge count, bills = issueBills(id).length,
+  // heat = percentile rank of sal among issues with ≥ 1 edge (first-index-wins, like edge heat).
+  let _heatCache = null, _heatKey = "";
+  function issueHeat() {
+    const key = (statementsReady ? "1" : "0") + ":" + EDGES.length;
+    if (_heatCache && _heatKey === key) return _heatCache;
+    const sal = new Map(), act = new Map();
+    EDGES.forEach(e => { sal.set(e.to, (sal.get(e.to) || 0) + (e.salience || 0)); act.set(e.to, (act.get(e.to) || 0) + 1); });
+    const ranked = [...sal.entries()].filter(([, s]) => s > 0).sort((a, b) => a[1] - b[1]);
+    const heat = new Map(ranked.map(([id], k) => [id, ranked.length > 1 ? k / (ranked.length - 1) : 1]));
+    _heatCache = new Map(ISSUES.map(i => [i.id, { salience: sal.get(i.id) || 0, active: act.get(i.id) || 0, bills: issueBills(i.id).length, heat: heat.get(i.id) || 0 }]));
+    _heatKey = key;
+    return _heatCache;
   }
+  const heatColor = h => h >= .66 ? "var(--accent)" : h >= .33 ? "var(--accent-dim)" : "var(--accent-cold)";
   function dirRows(q, active) {
+    const H = issueHeat();
     return COMMITTEES.map(c => {
-      const iss = ISSUES.filter(i => i.cat === c.id && (!q || i.name.toLowerCase().includes(q) || c.name.toLowerCase().includes(q)));
+      const iss = ISSUES.filter(i => i.cat === c.id && (!q || i.name.toLowerCase().includes(q) || c.name.toLowerCase().includes(q)))
+        .sort((a, b) => H.get(b.id).heat - H.get(a.id).heat || (a.name < b.name ? -1 : 1));
       if (!iss.length) return "";
       return `<div class="idc"><h3><span class="cdot" style="background:${CAT_HUE[c.id]}"></span>${c.name}</h3>` + iss.map(i => {
-        const es = issEdges(i.id);
-        return `<div class="idi${active === i.id ? " active" : ""}" data-i="${i.id}"><span>${i.name}</span>${issMini(es.map(e => e.score))}<span style="font:500 11px var(--mono);color:var(--muted);text-align:right">${es.length}</span></div>`;
+        const h = H.get(i.id);
+        return `<div class="idi${active === i.id ? " active" : ""}" data-i="${i.id}"><span${h.heat < .33 ? ` style="color:var(--muted)"` : ""}>${i.name}</span><div class="hbar"><i style="width:${(h.heat * 100).toFixed(1)}%;background:${heatColor(h.heat)}"></i></div><span class="icount">${h.active} active · ${h.bills} bills</span></div>`;
       }).join("") + `</div>`;
     }).join("");
   }
@@ -895,14 +911,16 @@
     $aside.innerHTML = `<div class="h" style="margin-top:8px">Issues</div><div class="topic-sub">${COMMITTEES.length} committees · ${ISSUES.length} issues · ${EDGES.length.toLocaleString()} stances on record. Click an issue for its halo page.</div>`;
   }
   function renderIssuesCenter() {
-    const wrap = $("issues");
-    wrap.innerHTML = `<div class="iwrap"><div class="icrumb">Issues</div><div class="ih1">All issues</div><div class="isub">${COMMITTEES.length} committees · ${ISSUES.length} issues · bar = support / neutral / oppose among legislators on record</div><div style="margin:12px 0"><input class="if" id="ifl" placeholder="Filter issues or committees…"></div><div class="idir" id="idir"></div></div>`;
+    const wrap = $("issues"), H = issueHeat();
+    const hot5 = ISSUES.filter(i => H.get(i.id).active > 0).sort((a, b) => H.get(b.id).heat - H.get(a.id).heat || (a.name < b.name ? -1 : 1)).slice(0, 5);
+    wrap.innerHTML = `<div class="iwrap"><div class="icrumb">Issues</div><div class="ih1">All issues</div><div class="isub">${COMMITTEES.length} committees · ${ISSUES.length} issues · bar = attention in the last 90 days (recent statements count more) · number = legislators active · bills</div><div class="hot5">${hot5.map(i => { const h = H.get(i.id).heat, d = Math.min(5, Math.floor(h * 5) + 1); return `<span class="chip" data-i="${i.id}">${i.name} <span style="color:var(--accent);letter-spacing:1px">${"●".repeat(d)}</span></span>`; }).join("")}</div><div style="margin:12px 0"><input class="if" id="ifl" placeholder="Filter issues or committees…"></div><div class="idir" id="idir"></div></div>`;
     const draw = q => { $("idir").innerHTML = dirRows(q); bindDirRows($("idir")); };
     draw("");
     $("ifl").oninput = e => draw(e.target.value.trim().toLowerCase());
+    wrap.querySelectorAll(".hot5 .chip").forEach(el => { kbRow(el, "link"); el.onclick = () => openIssue(el.dataset.i); });
   }
   function renderIssuesSide() {
-    $side.innerHTML = `<div class="empty-state">The dot marks the committee, never the stance. Each bar splits the legislators on record into support / neutral / oppose.</div>`;
+    $side.innerHTML = `<div class="empty-state">The bar is attention, not agreement: how much and how recently legislators acted on the issue. Stances live on bill pages.</div>`;
   }
   // bills under one issue from EDGES' bill strings (latest bill per edge) + condition rows; STATEMENTS not needed
   function issueBills(id) {
