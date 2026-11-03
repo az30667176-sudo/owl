@@ -393,7 +393,7 @@
 <div class="app">
   <header class="masthead">
     <a class="brand" href="#" id="brand"><img class="logo" src="assets/logo/owl-mark-64.png" alt=""><span class="wordmark">OWL</span><span class="tagline">Open Watch on Legislators</span></a>
-    <nav class="modes" aria-label="Sections"><button id="m-explore">Explore</button><button id="m-issues">Issues</button><button id="m-bills">Bills</button><button id="m-list">Find</button><button id="m-profile">Legislators</button></nav>
+    <nav class="modes" aria-label="Sections"><button id="m-explore">Explore</button><button id="m-issues">Issues</button><button id="m-bills">Bills</button><button id="m-list">Find</button><button id="m-profile">Legislators</button><button id="m-about">About</button></nav>
     <div class="gsrch"><input id="gs" type="text" autocomplete="off" placeholder="Find a legislator: name, state, district (CA-12) or ZIP" aria-label="Find a legislator"><kbd>/</kbd><div class="dd" id="dd"></div></div>
     <div class="pane-switch" id="pane-switch" role="tablist" aria-label="Panes"><button data-pane="filters" role="tab" aria-label="Show filters pane">Filters</button><button data-pane="view" role="tab" class="active" aria-label="Show view pane">View</button><button data-pane="details" role="tab" aria-label="Show details pane">Details</button></div>
     <span class="crumb" id="crumb"></span>
@@ -669,8 +669,9 @@
   }
   function renderExploreSide() {
     const mmHtml = `<div class="mmwrap" id="mmwrap" style="display:block"><div class="h" style="display:flex;justify-content:space-between;margin-top:0"><span>Map</span><span id="mmmode" style="color:var(--muted);letter-spacing:.06em"></span></div><canvas id="mm"></canvas><div class="mmleg" id="mmleg"></div></div>`;
+    const aboutFoot = `<div class="topic-sub" style="margin:14px 0 0;border-top:1px solid var(--border);padding-top:10px">How this is scored → <span class="link" data-about>About</span></div>`;
     if (E && E.pinned) {
-      $side.innerHTML = mmHtml + E_pinHtml(E.pinned);
+      $side.innerHTML = mmHtml + E_pinHtml(E.pinned) + aboutFoot;
       const ob = $("open-issue");
       if (ob) ob.onclick = () => openIssue(ob.dataset.i);
       E_mmBind();
@@ -682,7 +683,7 @@
       const sel = state.edge && mine.find(e => e.to === state.edge) || mine[0];
       $side.innerHTML = mmHtml + `<div class="person-card"><div class="name">${title(p)}</div><div class="meta">${seat(p)} · ${p.party} · ${mine.length} stances in view</div>
         ${mine.map(e => `<div class="stance-line ${sel === e ? "active" : ""}" data-issue="${e.to}"><div><div class="t">${issueById[e.to].name}</div><div class="c">${issueById[e.to].catName} › ${issueById[e.to].subName}</div></div><div class="score" style="color:${color(e.direction)}">${fmt(e.score)}</div></div>`).join("")}
-        ${sel ? evidenceHtml(sel) : ""}<div style="margin-top:12px;display:flex;gap:8px"><button class="btn" id="back">← all legislators</button><button class="btn" data-open="${p.id}">Open profile →</button></div></div>`;
+        ${sel ? evidenceHtml(sel) : ""}<div style="margin-top:12px;display:flex;gap:8px"><button class="btn" id="back">← all legislators</button><button class="btn" data-open="${p.id}">Open profile →</button></div></div>` + aboutFoot;
       $side.querySelectorAll(".stance-line").forEach(el => el.onclick = () => { state.edge = el.dataset.issue; renderSide(); });
       $("back").onclick = () => { state.person = null; state.edge = null; render(); }; E_mmBind();
       return;
@@ -690,7 +691,7 @@
     const byP = {}; fe.forEach(e => (byP[e.from] ??= []).push(e));
     const rows = Object.entries(byP).sort((a, b) => b[1].length - a[1].length).map(([pid, es]) => { const p = byId[pid];
       return `<div class="row" data-id="${pid}"><div><div class="name">${title(p)}</div><div class="meta">${seat(p)} · ${p.party} · <span style="color:var(--support)">${es.filter(e => e.direction === "support").length} for</span> · <span style="color:var(--oppose)">${es.filter(e => e.direction === "oppose").length} against</span></div></div><div class="score">${es.length}</div></div>`; }).join("");
-    $side.innerHTML = mmHtml + `<div class="topic-sub">${fe.length} stances across ${Object.keys(byP).length} legislators. Click one to see their positions.</div>${rows || `<div class="empty-state">Nothing matches the filters.</div>`} ${conditionsPanel(state.issue)}`; E_mmBind();
+    $side.innerHTML = mmHtml + `<div class="topic-sub">${fe.length} stances across ${Object.keys(byP).length} legislators. Click one to see their positions.</div>${rows || `<div class="empty-state">Nothing matches the filters.</div>`} ${conditionsPanel(state.issue)}` + aboutFoot; E_mmBind();
     $side.querySelectorAll(".row").forEach(el => el.onclick = () => { state.person = el.dataset.id; state.edge = null; render(); });
   }
   const fmt = s => (s > 0 ? "+" : "") + s.toFixed(2);
@@ -750,12 +751,43 @@
     });
   }
 
-  // ---------- ABOUT (placeholder; group 5 fills the methodology page) ----------
+  // ---------- ABOUT (group 5): methodology page; scoring wording copied from packages/contract/derived.md ----------
   function renderAboutAside() {
     $aside.innerHTML = '<div class="h" style="margin-top:8px">About</div><div class="topic-sub">Methodology, data snapshot and AI disclosure.</div>';
   }
   function renderAboutCenter() {
-    $("about").innerHTML = '<div class="iwrap"><div class="icrumb">About</div><div class="ih1">About</div><div class="isub">Methodology and data notes - full text lands with group 5.</div></div>';
+    const maxDate = (graphRaw && graphRaw.meta && graphRaw.meta.maxDate)
+      || STATEMENTS.reduce((a, s) => ((s.date && s.date > a) ? s.date : a), "");
+    const mono = "font-family:var(--mono)";
+    $("about").innerHTML = `<div class="iwrap"><div class="icrumb">About</div><div class="ih1">About OWL</div>`
+      + `<div class="isub">Open Watch on Legislators — every number traces back to a quoted statement.</div>`
+      + `<div class="isec">What OWL is</div>`
+      + `<div>OWL tracks how US legislators vote, speak and shift positions across issues. Each legislator–issue pair is one edge with a score from −1 (oppose) to +1 (support), and every score opens to the verbatim quotes behind it. Nothing is pre-aggregated upstream and the browser never calls a model.</div>`
+      + `<div class="isec">The six files</div>`
+      + `<div style="font-size:13px;line-height:1.9">`
+      + `<div><span style="${mono}">taxonomy.json</span> — House standing committees and their subcommittees</div>`
+      + `<div><span style="${mono}">issues.json</span> — concrete issues, each under one subcommittee</div>`
+      + `<div><span style="${mono}">people.json</span> — legislators: name, chamber, state, district, party</div>`
+      + `<div><span style="${mono}">stances.json</span> — one row per statement: score, direction, confidence, verbatim quote, bill, source</div>`
+      + `<div><span style="${mono}">summaries.json</span> — per-legislator AI summary, every sentence cited to a statement</div>`
+      + `<div><span style="${mono}">conditions.json</span> — demands registry plus the conditions that would move each vote</div>`
+      + `</div>`
+      + `<div class="isec">How a position is scored</div>`
+      + `<!-- scoring wording copied from packages/contract/derived.md — keep both in step -->`
+      + `<div style="font-size:13px;line-height:1.9">`
+      + `<div><b>score</b> — weighted mean of statement scores, weights by llm_confidence: low .4, mid .7, high 1, super_high 1.2</div>`
+      + `<div><b>direction</b> — from the derived score: &gt; .15 support, &lt; −.15 oppose, else neutral</div>`
+      + `<div><b>flip</b> — true when the set of non-neutral statement directions has more than one member (neutral → support is <b>not</b> a flip)</div>`
+      + `<div><b>salience</b> — Σ over statements of 2^(−age_days / 180) (recent statements count more, half-life 180 days); age_days relative to today (mock data: relative to the newest statement so the demo is stable). All sources are official records, so there is no venue weighting</div>`
+      + `<div><b>heat</b> — percentile rank of salience across all edges, 0…1</div>`
+      + `</div>`
+      + `<div class="isec">Data snapshot</div>`
+      + `<div>Data through ${maxDate || "—"} · ${STATEMENTS.length.toLocaleString()} statements · ${PEOPLE.length} members · ${ISSUES.length} issues · ${CONDS.length} conditions${statementsReady ? "" : " (loading statements…)"}</div>`
+      + `<div class="isec">AI disclosure</div>`
+      + `<div>Statements are scored offline by Muse Spark and committed as data. This frontend was written by Muse Code and orchestrated by Claude Code. The browser never calls a model: every number and quote here comes from the loaded files.</div>`
+      + `<div class="isec">Source</div>`
+      + `<div>Source: <a class="link" href="https://github.com/az30667176-sudo/owl">github.com/az30667176-sudo/owl</a> · Licence: see the repository.</div>`
+      + `</div>`;
   }
   function renderAboutSide() {
     $side.innerHTML = '<div class="empty-state">How positions are scored, where the data comes from, and what AI does here.</div>';
@@ -2228,7 +2260,7 @@
       else if (state.mode === "issue") { const _is = issueById[state.iid]; _t = ((_is && _is.name) || "Issue") + " \u00b7 OWL"; }
       else if (state.mode === "about") _t = "About \u00b7 OWL";
       document.title = _t; }
-    ["explore", "issues", "bills", "list", "profile"].forEach(m => $("m-" + m).classList.toggle("active", state.mode === m));
+    ["explore", "issues", "bills", "list", "profile", "about"].forEach(m => $("m-" + m).classList.toggle("active", state.mode === m));
     if (state.mode === "profile") { const p = byId[state.p.person]; $crumb.innerHTML = p ? `<b>${p.name}</b> · ${seat(p)}` : `<b>Legislators</b>`; $hint.textContent = ""; }
     else if (state.mode === "bill") { const info = statementsReady ? billInfo(state.b.id) : null; $crumb.innerHTML = info ? `<b>${info.num}</b> · ${billTitleDisp(info) || "Bill"}` : `<b>Bill</b> · ${statementsReady ? "not found" : "loading statements…"}`; $hint.textContent = ""; }
     else if (state.mode === "list") { $crumb.innerHTML = `<b>Legislator list</b> · dropdown filters`; $hint.textContent = ""; }
@@ -2244,12 +2276,14 @@
     $side.dataset.label = hasEvidence ? "Evidence" : state.mode === "explore" ? "In view" : "Notes";
     ({ explore: renderExploreSide, issues: renderIssuesSide, issue: renderIssueSide, bills: renderBillsSide, list: renderListSide, profile: renderProfileSide, bill: renderBillSide, about: renderAboutSide })[state.mode]();
     $side.querySelectorAll("[data-open]").forEach(b => b.onclick = () => openProfile(b.dataset.open));
+    $side.querySelectorAll("[data-about]").forEach(b => b.onclick = () => { location.hash = "#/about"; });
     bindCondChips();
   }
   function render() { document.body.dataset.pane = state.pane || "view"; renderHeader(); renderAside(); renderSide(); renderCenter(); const _sw = document.getElementById("pane-switch"); if (_sw) _sw.querySelectorAll("button").forEach(b => b.classList.toggle("active", b.dataset.pane === (state.pane || "view"))); }
   $("m-explore").onclick = () => { if (location.hash === "#/explore") { routeFromHash(); render(); } else location.hash = "#/explore"; };
   $("m-list").onclick = () => { if (location.hash === "#/find") { routeFromHash(); render(); } else location.hash = "#/find"; };
   $("m-profile").onclick = () => { if (location.hash === "#/legislators") { routeFromHash(); render(); } else location.hash = "#/legislators"; };
+  $("m-about").onclick = () => { if (location.hash === "#/about") { routeFromHash(); render(); } else location.hash = "#/about"; };
 $("m-issues").onclick = goIssues;
 $("m-bills").onclick = goBills;
   $("pane-switch").querySelectorAll("button").forEach(b => b.onclick = () => { state.pane = b.dataset.pane; render(); });

@@ -28,8 +28,8 @@ All tasks touch `apps/web/index.html` unless stated. One commit per group, messa
 
 ## 5. About page
 
-- [ ] 5.1 `renderAbout()` for `#/about`: sections — What OWL is; The six files (taxonomy, issues, people, stances, summaries, conditions) one line each; How a position is scored (score / direction ±0.15 / flip / salience half-life 180 d / heat percentile — wording copied from `packages/contract/derived.md`, with an HTML comment naming that file); Data snapshot ("Data through <maxDate>", statement / member / issue / condition counts from the loaded arrays); AI disclosure (Muse Spark scoring, Muse Code implementation, Claude Code orchestration, no model calls in the browser); Source (repo link, licence).
-- [ ] 5.2 Masthead: "About" link in the nav row; Explore side pane footer line "How this is scored → About".
+- [x] 5.1 `renderAbout()` for `#/about`: sections — What OWL is; The six files (taxonomy, issues, people, stances, summaries, conditions) one line each; How a position is scored (score / direction ±0.15 / flip / salience half-life 180 d / heat percentile — wording copied from `packages/contract/derived.md`, with an HTML comment naming that file); Data snapshot ("Data through <maxDate>", statement / member / issue / condition counts from the loaded arrays); AI disclosure (Muse Spark scoring, Muse Code implementation, Claude Code orchestration, no model calls in the browser); Source (repo link, licence).
+- [x] 5.2 Masthead: "About" link in the nav row; Explore side pane footer line "How this is scored → About".
 
 ## 6. Shareable Explore state
 
