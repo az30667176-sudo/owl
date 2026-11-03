@@ -16,6 +16,7 @@
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs";
 import { resolve, dirname, basename } from "node:path";
 import { fileURLToPath } from "node:url";
+import { SCORE_RUBRIC, resolveScore } from "./scoring.mjs";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "../..");
 const DATA = resolve(ROOT, "data");
@@ -45,12 +46,12 @@ For every passage where a known legislator takes a position on a policy issue, e
 Rules:
 - Only legislators from the provided list, by id. Ignore the chair/clerk/witnesses ("<other>").
 - Map each statement to an existing issue id when one fits. If none fits, propose new_issue {name, parent} where parent is a subcommittee id from the taxonomy.
-- score in [-1, 1]: +1 strong support, -1 strong opposition, near 0 neutral/undecided. direction must match the score.
+- ${SCORE_RUBRIC}
 - linkage (how directly the quote addresses the issue) and llm_confidence (how sure you are of the reading) in: low, mid, high, super_high.
 - quote: a VERBATIM contiguous excerpt (<= 60 words) copied exactly from the transcript. Never paraphrase. The quote must by itself justify the score.
 - bill: the bill named in or around the passage, else null. rationale: one neutral sentence on why the score.
 - A legislator may produce several statements if they address several issues. Do not merge different issues into one statement.
-Return ONLY JSON: {"statements":[{"person":"p01","issue":"gun-policy"|null,"new_issue":{"name":"...","parent":"hsju-crime"}|null,"score":0.8,"direction":"support","linkage":"high","llm_confidence":"high","quote":"...","bill":"H.R. 4410","rationale":"..."}]}`;
+Return ONLY JSON: {"statements":[{"person":"p01","issue":"gun-policy"|null,"new_issue":{"name":"...","parent":"hsju-crime"}|null,"rationale":"...","direction":"support","intensity":"qualified","position":0.6,"linkage":"high","llm_confidence":"high","quote":"...","bill":"H.R. 4410"}]}`;
 
 const userMsg = `Taxonomy (subcommittee id: committee › subcommittee):\n${subs.map(s => `${s.id}: ${s.label}`).join("\n")}\n\nExisting issues (id: name, parent):\n${issues.map(i => `${i.id}: ${i.name} (${i.parent})`).join("\n")}\n\nLegislators (id: name, district, party):\n${people.map(p => `${p.id}: ${p.name}, ${p.district}, ${p.party}`).join("\n")}\n\nRecord ${record.id}, date ${record.hints?.date || "unknown"}, source ${record.source?.url_link}.\nTranscript:\n${record.content}\n\nExtract the statements now.`;
 
@@ -73,14 +74,14 @@ for (const st of parsed.statements || []) {
       if (!issueIds.has(issueId)) { newIssues.push({ id: issueId, name: st.new_issue.name, parent: st.new_issue.parent }); issueIds.add(issueId); }
     } else why.push(`unknown issue ${st.issue} / bad new_issue`);
   }
-  const score = Number(st.score); if (!(score >= -1 && score <= 1)) why.push("score out of range");
+  const score = resolveScore(st); if (score === null) why.push("score unresolvable (bad intensity band or raw score out of range)");
   // direction is DERIVED from score (the contract's rule); the model's label is advisory only
   const direction = dirOf(score), modelDir = String(st.direction || "").toLowerCase().replace(/^(opposition|opposed|opposes)$/, "oppose").replace(/^(supports|supportive)$/, "support");
   if (modelDir && modelDir !== direction) console.warn(`  ! ${st.person}: model said "${st.direction}" but score ${score} ⇒ ${direction}; using score`);
   if (!CONF.has(st.linkage) || !CONF.has(st.llm_confidence)) why.push("bad linkage/confidence");
   const q = String(st.quote || ""); if (!q || !CONTENT.includes(norm(q))) why.push("quote not verbatim in transcript");
   if (why.length) { rejected.push({ st, why }); continue; }
-  accepted.push({ statement_id: `st${String(nextId++).padStart(3, "0")}`, person: st.person, issue: issueId, date: record.hints?.date || null, score: +score.toFixed(2), direction, linkage: st.linkage, llm_confidence: st.llm_confidence, quote: q.trim(), bill: st.bill || null, source: record.source?.url_link || null, record_id: record.id, model: j.model || MODEL, rationale: st.rationale || null });
+  accepted.push({ statement_id: `st${String(nextId++).padStart(3, "0")}`, person: st.person, issue: issueId, date: record.hints?.date || null, score: +score.toFixed(2), direction, linkage: st.linkage, llm_confidence: st.llm_confidence, quote: q.trim(), bill: st.bill || null, source: record.source?.url_link || null, record_id: record.id, model: j.model || MODEL, rationale: st.rationale || null, kind: "speech" });
 }
 
 mkdirSync(resolve(DATA, "extracted"), { recursive: true });

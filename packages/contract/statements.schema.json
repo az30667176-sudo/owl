@@ -28,7 +28,10 @@
           "source": { "type": "string", "format": "uri" },
           "model": { "type": "string", "minLength": 1 },
           "record_id": { "type": "string", "description": "Back-reference to the contract-A record. Required for real data; lets the validator check the quote." },
-          "rationale": { "type": ["string", "null"], "maxLength": 400 }
+          "rationale": { "type": ["string", "null"], "maxLength": 400 },
+          "kind": { "type": "string", "enum": ["speech", "sponsored", "cosponsored", "vote", "views"], "description": "What the row records. speech = scored utterance; sponsored/cosponsored = (co)sponsorship action; vote = committee/floor vote; views = minority/additional views signature. Optional: rows without it stay valid." },
+          "vote_question": { "type": "string", "enum": ["final_passage", "amendment", "procedural"], "description": "What the vote was on. Only when kind == \"vote\"; omitted when the question is unknown (never guess)." },
+          "bill_id": { "type": "string", "minLength": 1, "description": "bills.json id, when the row is about a known bill. Optional." }
         }
       }
     }

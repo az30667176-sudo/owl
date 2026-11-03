@@ -23,11 +23,13 @@ Mapping:
 | people.csv | people.json | `id` = bioguide; sitting + departed |
 | committees.csv + issue parents | taxonomy.json | `in_graph=false` committees dropped unless an issue needs them; subcommittee names are provisional title-cased slugs (the drop carries ids only) |
 | issues.csv | issues.json | direct |
+| bills.csv | bills.json | one record per bill: number, title, best-effort status, last action, sponsor, all seed issues |
 | records.csv | records/*.json | content verbatim; gov/usgov/official_transcript |
-| evidence sponsored/cosponsored | stances ±1.0/0.8 | anchored to synthetic per-(bill, date) `rec-billstatus-*` transcriptions of BILLSTATUS data |
-| evidence committee_vote yea/nay | stances ±0.8 | quote = the record's own vote line |
-| evidence present/not_voting | stances 0.0 | neutral |
-| evidence signed_views | stances ±0.6, mid confidence | stance is heuristic; quote = signer name (speaker tag / signature) |
+| evidence sponsored/cosponsored | stances ±1.0/0.8, kind sponsored/cosponsored | one row on the bill's primary issue; anchored to synthetic per-(bill, date) `rec-billstatus-*` transcriptions of BILLSTATUS data |
+| evidence committee_vote yea/nay | stances ±0.8, kind vote | quote = the record's own vote line; `vote_question` (final_passage/amendment/procedural) when recognised, omitted when boilerplate/unknown |
+| evidence committee_vote present | stances 0.0, kind vote | neutral; a cast vote still counts as a row |
+| evidence committee_vote not_voting | skipped | absence is not a stance |
+| evidence signed_views | skipped | signatures track party membership, not issue opposition |
 | evidence offered_amendment | skipped | no exported record to anchor a quote |
 
 Rows whose bill has no seed issues, whose quote line is not found in the

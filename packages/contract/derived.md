@@ -8,15 +8,42 @@ For all statements with the same `person` and `issue`, sorted by `date`:
 
 | derived field | rule |
 |---|---|
-| `score` | weighted mean of statement scores, weights by `llm_confidence`: low .4, mid .7, high 1, super_high 1.2 |
+| `score` | weighted mean of *effective* statement scores (`score` × kind factor, see below) over stance rows only — speech, sponsorships, final-passage and unknown-question votes — weights by `llm_confidence`: low .4, mid .7, high 1, super_high 1.2. Amendment/procedural votes count toward `n`/salience only; an edge with no stance rows scores 0 (neutral) |
 | `direction` | from the derived score: `> .15` support, `< −.15` oppose, else neutral |
 | `n` | number of statements (shown as ×N) |
 | `first`, `last` | date range |
-| `flip` | true when the set of non-neutral statement directions has more than one member (neutral → support is **not** a flip) |
+| `flip` | true when the non-neutral directions among speech and final-passage-vote statements have more than one member (neutral → support is **not** a flip; amendment/procedural yea+nay pairs are **not** flips; votes without a known question count as before) |
 | `linkage`, `llm_confidence` | the maximum across statements |
 | `quote`, `bill`, `source` | from the latest statement (used as the headline evidence) |
 | `salience` | Σ over statements of `2^(−age_days / 180)` (recent statements count more, half-life 180 days); `age_days` relative to today (mock data: relative to the newest statement so the demo is stable). All sources are official records, so there is no venue weighting |
 | `heat` | percentile rank of `salience` across all edges, 0…1 |
+
+## Statement kinds (Contract B `kind` / `vote_question`)
+
+Every statement row carries a `kind`: `speech` (a scored utterance), `sponsored` /
+`cosponsored` (a signature, not words spoken), `vote` (a cast vote), or `views`
+(legacy views-signature rows; no longer emitted). Vote rows further carry
+`vote_question` (`final_passage` | `amendment` | `procedural`) when the question
+could be recognised from the record; the field is omitted rather than guessed.
+
+Kind factors, applied to every statement score before aggregation (stored scores
+are untouched; this is display math). A cosponsorship (`+0.8`) thus contributes
+`+0.4`, while speech counts in full:
+
+| kind | factor |
+|---|---|
+| speech | 1.0 |
+| sponsored | 0.8 |
+| cosponsored | 0.5 |
+| vote, final_passage | 1.0 |
+| vote, amendment / procedural | 0.5 |
+| vote, question unknown | 0.75 |
+| views (legacy rows) | 0.25 |
+
+Rows without `kind` (mock/legacy data) resolve through the old
+model/rationale inference and take the same factors. Rows are already deduped
+upstream (one action → one row on the bill's primary issue), so no
+consumer-side dedupe is needed.
 
 ## Per-legislator
 

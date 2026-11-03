@@ -35,6 +35,8 @@ jobs:
           cp data/taxonomy.json data/issues.json data/people.json data/stances.json _site/data/
           if [ -f data/summaries.json ]; then cp data/summaries.json _site/data/; fi
           if [ -f data/conditions.json ]; then cp data/conditions.json _site/data/; fi
+          if [ -f data/bills.json ]; then cp data/bills.json _site/data/; fi
+          if [ -f data/audit/blind-scoring.json ]; then mkdir -p _site/data/audit && cp data/audit/blind-scoring.json _site/data/audit/; fi
       - name: Build derived graph cache
         run: node apps/web/build/graph.mjs data _site/data/graph.json
       - uses: actions/configure-pages@v5

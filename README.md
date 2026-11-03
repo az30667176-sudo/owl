@@ -15,6 +15,9 @@ Stances are extracted and scored by **Muse Spark** (Meta Model API). Every state
 one click. Per-legislator summaries are written by Muse Spark too, with every sentence citing the
 statements it rests on.
 
+Coverage note: only 130 of 451 members (29%) have speech rows so far — most profiles are
+still built from sponsorship and vote records until more hearings are processed.
+
 ## Architecture
 
 Four boxes, three contracts (mirrors the team board):

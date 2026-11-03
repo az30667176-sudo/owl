@@ -77,4 +77,18 @@ describe("bill match attributes", () => {
     billsFile([b]);
     assert.equal(validate().status, 1);
   });
+  it("accepts complex bills with longer context and no question", () => {
+    billsFile([{ bill_id: "hr1-119", number: "H.R. 1", complex_bill: true, short_context: Array(45).fill("word").join(" ") }]);
+    assert.equal(validate().status, 0);
+  });
+  it("rejects complex bills that break the complex rules", () => {
+    billsFile([{ bill_id: "hr1-119", number: "H.R. 1", complex_bill: true, short_context: Array(55).fill("word").join(" ") }]);
+    assert.equal(validate().status, 1);
+    const b = goodBill();
+    b.complex_bill = true;
+    billsFile([b]);
+    const r = validate();
+    assert.equal(r.status, 1);
+    assert.match(r.out, /must not carry/);
+  });
 });

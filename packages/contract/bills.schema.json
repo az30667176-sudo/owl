@@ -34,7 +34,8 @@
           "sponsor_id": { "type": "string", "description": "people.json id of the sponsor." },
           "issue_ids": { "type": "array", "items": { "type": "string" }, "description": "issues.json ids; the bill's own mapping (all seed issues, not just the primary)." },
           "url": { "type": "string", "format": "uri" },
-          "short_context": { "type": "string", "minLength": 1, "maxLength": 200, "description": "Plain-language summary of what the bill addresses. Max 30 words (enforced by validate.mjs)." },
+          "short_context": { "type": "string", "minLength": 1, "maxLength": 350, "description": "Plain-language summary of what the bill addresses. Max 30 words, or 50 when complex_bill is true (enforced by validate.mjs)." },
+          "complex_bill": { "type": "boolean", "description": "True when the bill cannot be fairly reduced to one question. Relaxes short_context to 50 words; binary_question must then be absent and the UI shows a read-the-full-bill tag." },
           "binary_question": {
             "type": "object",
             "required": ["question", "options"],

@@ -162,7 +162,9 @@ function validateDir(dir) {
     if (billIds.has(b.bill_id)) err(`bills.json: duplicate bill_id ${b.bill_id}`); billIds.add(b.bill_id);
     for (const i of b.issue_ids || []) if (!issueIds.has(i)) err(`bills.json ${b.bill_id}: unknown issue ${i}`);
     if (b.sponsor_id && !personIds.has(b.sponsor_id)) err(`bills.json ${b.bill_id}: unknown sponsor ${b.sponsor_id}`);
-    if (b.short_context && b.short_context.trim().split(/\s+/).length > 30) err(`bills.json ${b.bill_id}: short_context exceeds 30 words`);
+    const contextCap = b.complex_bill ? 50 : 30;
+    if (b.short_context && b.short_context.trim().split(/\s+/).filter(Boolean).length > contextCap) err(`bills.json ${b.bill_id}: short_context exceeds ${contextCap} words`);
+    if (b.complex_bill && b.binary_question) err(`bills.json ${b.bill_id}: complex bills must not carry binary_question`);
     if (b.binary_question) {
       const stances = (b.binary_question.options || []).map((o) => o.stance).sort().join(",");
       if (stances !== "oppose,support") err(`bills.json ${b.bill_id}: binary_question options must be exactly one support and one oppose`);

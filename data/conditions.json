@@ -83,7 +83,8 @@
       "statement_id": null,
       "record_id": "rec-2026-05-26-crpt-119hrpt668-supplemental-views-2",
       "model": "muse-spark-1.3-contributor",
-      "demand": "clarity-limiting-expanded-review-authority"
+      "demand": "clarity-limiting-expanded-review-authority",
+      "bill_id": "hr7891-119"
     },
     {
       "condition_id": "cd00002",
@@ -97,7 +98,8 @@
       "statement_id": null,
       "record_id": "rec-2026-08-27-crpt-119hrpt781-minority-views-1",
       "model": "muse-spark-1.3-contributor",
-      "demand": "remove-trans-exclusionary-language"
+      "demand": "remove-trans-exclusionary-language",
+      "bill_id": "hr2555-119"
     },
     {
       "condition_id": "cd00003",
@@ -111,7 +113,8 @@
       "statement_id": null,
       "record_id": "rec-2026-08-27-crpt-119hrpt781-minority-views-1",
       "model": "muse-spark-1.3-contributor",
-      "demand": "remove-trans-exclusionary-language"
+      "demand": "remove-trans-exclusionary-language",
+      "bill_id": "hr2555-119"
     },
     {
       "condition_id": "cd00004",
@@ -125,7 +128,8 @@
       "statement_id": null,
       "record_id": "rec-2026-08-27-crpt-119hrpt781-minority-views-1",
       "model": "muse-spark-1.3-contributor",
-      "demand": "remove-trans-exclusionary-language"
+      "demand": "remove-trans-exclusionary-language",
+      "bill_id": "hr2555-119"
     },
     {
       "condition_id": "cd00005",
@@ -139,7 +143,8 @@
       "statement_id": null,
       "record_id": "rec-2026-08-27-crpt-119hrpt781-minority-views-1",
       "model": "muse-spark-1.3-contributor",
-      "demand": "remove-trans-exclusionary-language"
+      "demand": "remove-trans-exclusionary-language",
+      "bill_id": "hr2555-119"
     },
     {
       "condition_id": "cd00006",
@@ -153,7 +158,8 @@
       "statement_id": null,
       "record_id": "rec-2026-08-27-crpt-119hrpt781-minority-views-1",
       "model": "muse-spark-1.3-contributor",
-      "demand": "remove-trans-exclusionary-language"
+      "demand": "remove-trans-exclusionary-language",
+      "bill_id": "hr2555-119"
     },
     {
       "condition_id": "cd00007",
@@ -167,7 +173,8 @@
       "statement_id": "st27174",
       "record_id": "rec-2026-05-26-crpt-119hrpt668-supplemental-views-3",
       "model": "muse-spark-1.3-contributor",
-      "demand": "narrow-enforcement-authority"
+      "demand": "narrow-enforcement-authority",
+      "bill_id": "hr7891-119"
     },
     {
       "condition_id": "cd00008",
@@ -181,7 +188,8 @@
       "statement_id": "st27174",
       "record_id": "rec-2026-05-26-crpt-119hrpt668-supplemental-views-3",
       "model": "muse-spark-1.3-contributor",
-      "demand": "adjust-program-review-trigger"
+      "demand": "adjust-program-review-trigger",
+      "bill_id": "hr7891-119"
     },
     {
       "condition_id": "cd00009",
@@ -195,7 +203,8 @@
       "statement_id": "st27174",
       "record_id": "rec-2026-05-26-crpt-119hrpt668-supplemental-views-3",
       "model": "muse-spark-1.3-contributor",
-      "demand": "consult-higher-education-stakeholders"
+      "demand": "consult-higher-education-stakeholders",
+      "bill_id": "hr7891-119"
     },
     {
       "condition_id": "cd00010",
@@ -209,7 +218,8 @@
       "statement_id": null,
       "record_id": "rec-2026-02-25-crpt-119hrpt520-dissenting-views-1",
       "model": "muse-spark-1.3-contributor",
-      "demand": "end-billionaire-giveaways-curb-corruption-require-ice-compli"
+      "demand": "end-billionaire-giveaways-curb-corruption-require-ice-compli",
+      "bill_id": "hjres139-119"
     },
     {
       "condition_id": "cd00011",
@@ -223,7 +233,8 @@
       "statement_id": null,
       "record_id": "rec-2026-05-26-crpt-119hrpt669-supplemental-views-3",
       "model": "muse-spark-1.3-contributor",
-      "demand": "significant-revision-with-guardrails-and-consultation"
+      "demand": "significant-revision-with-guardrails-and-consultation",
+      "bill_id": "hr7892-119"
     },
     {
       "condition_id": "cd00012",
@@ -251,7 +262,8 @@
       "statement_id": null,
       "record_id": "rec-2025-12-18-crpt-119hrpt414-minority-views-3",
       "model": "muse-spark-1.3-contributor",
-      "demand": "drastic-revision-of-h-r-4054"
+      "demand": "drastic-revision-of-h-r-4054",
+      "bill_id": "hr4054-119"
     },
     {
       "condition_id": "cd00014",
@@ -265,7 +277,8 @@
       "statement_id": null,
       "record_id": "rec-2025-12-18-crpt-119hrpt414-minority-views-3",
       "model": "muse-spark-1.3-contributor",
-      "demand": "drastic-revision-of-h-r-4054"
+      "demand": "drastic-revision-of-h-r-4054",
+      "bill_id": "hr4054-119"
     },
     {
       "condition_id": "cd00015",
@@ -279,7 +292,8 @@
       "statement_id": null,
       "record_id": "rec-2025-12-18-crpt-119hrpt414-minority-views-3",
       "model": "muse-spark-1.3-contributor",
-      "demand": "drastic-revision-of-h-r-4054"
+      "demand": "drastic-revision-of-h-r-4054",
+      "bill_id": "hr4054-119"
     },
     {
       "condition_id": "cd00016",
@@ -293,7 +307,8 @@
       "statement_id": null,
       "record_id": "rec-2025-12-18-crpt-119hrpt414-minority-views-3",
       "model": "muse-spark-1.3-contributor",
-      "demand": "drastic-revision-of-h-r-4054"
+      "demand": "drastic-revision-of-h-r-4054",
+      "bill_id": "hr4054-119"
     },
     {
       "condition_id": "cd00017",
@@ -307,7 +322,8 @@
       "statement_id": null,
       "record_id": "rec-2025-12-18-crpt-119hrpt414-minority-views-3",
       "model": "muse-spark-1.3-contributor",
-      "demand": "drastic-revision-of-h-r-4054"
+      "demand": "drastic-revision-of-h-r-4054",
+      "bill_id": "hr4054-119"
     },
     {
       "condition_id": "cd00018",
@@ -321,7 +337,8 @@
       "statement_id": null,
       "record_id": "rec-2025-12-18-crpt-119hrpt414-minority-views-3",
       "model": "muse-spark-1.3-contributor",
-      "demand": "drastic-revision-of-h-r-4054"
+      "demand": "drastic-revision-of-h-r-4054",
+      "bill_id": "hr4054-119"
     },
     {
       "condition_id": "cd00019",
@@ -335,7 +352,8 @@
       "statement_id": null,
       "record_id": "rec-2025-12-18-crpt-119hrpt414-minority-views-3",
       "model": "muse-spark-1.3-contributor",
-      "demand": "drastic-revision-of-h-r-4054"
+      "demand": "drastic-revision-of-h-r-4054",
+      "bill_id": "hr4054-119"
     },
     {
       "condition_id": "cd00020",
@@ -349,7 +367,8 @@
       "statement_id": null,
       "record_id": "rec-2025-12-18-crpt-119hrpt414-minority-views-3",
       "model": "muse-spark-1.3-contributor",
-      "demand": "drastic-revision-of-h-r-4054"
+      "demand": "drastic-revision-of-h-r-4054",
+      "bill_id": "hr4054-119"
     },
     {
       "condition_id": "cd00021",
@@ -363,7 +382,8 @@
       "statement_id": null,
       "record_id": "rec-2025-12-18-crpt-119hrpt414-minority-views-3",
       "model": "muse-spark-1.3-contributor",
-      "demand": "drastic-revision-of-h-r-4054"
+      "demand": "drastic-revision-of-h-r-4054",
+      "bill_id": "hr4054-119"
     },
     {
       "condition_id": "cd00022",
@@ -377,7 +397,8 @@
       "statement_id": null,
       "record_id": "rec-2025-12-18-crpt-119hrpt414-minority-views-3",
       "model": "muse-spark-1.3-contributor",
-      "demand": "drastic-revision-of-h-r-4054"
+      "demand": "drastic-revision-of-h-r-4054",
+      "bill_id": "hr4054-119"
     },
     {
       "condition_id": "cd00023",
@@ -391,7 +412,8 @@
       "statement_id": null,
       "record_id": "rec-2025-12-18-crpt-119hrpt414-minority-views-3",
       "model": "muse-spark-1.3-contributor",
-      "demand": "drastic-revision-of-h-r-4054"
+      "demand": "drastic-revision-of-h-r-4054",
+      "bill_id": "hr4054-119"
     },
     {
       "condition_id": "cd00024",
@@ -405,7 +427,8 @@
       "statement_id": null,
       "record_id": "rec-2025-12-18-crpt-119hrpt414-minority-views-3",
       "model": "muse-spark-1.3-contributor",
-      "demand": "drastic-revision-of-h-r-4054"
+      "demand": "drastic-revision-of-h-r-4054",
+      "bill_id": "hr4054-119"
     },
     {
       "condition_id": "cd00025",
@@ -419,7 +442,8 @@
       "statement_id": null,
       "record_id": "rec-2025-12-18-crpt-119hrpt414-minority-views-3",
       "model": "muse-spark-1.3-contributor",
-      "demand": "drastic-revision-of-h-r-4054"
+      "demand": "drastic-revision-of-h-r-4054",
+      "bill_id": "hr4054-119"
     },
     {
       "condition_id": "cd00026",
@@ -433,7 +457,8 @@
       "statement_id": null,
       "record_id": "rec-2025-12-18-crpt-119hrpt414-minority-views-3",
       "model": "muse-spark-1.3-contributor",
-      "demand": "drastic-revision-of-h-r-4054"
+      "demand": "drastic-revision-of-h-r-4054",
+      "bill_id": "hr4054-119"
     },
     {
       "condition_id": "cd00027",
@@ -447,7 +472,8 @@
       "statement_id": null,
       "record_id": "rec-2025-12-18-crpt-119hrpt414-minority-views-3",
       "model": "muse-spark-1.3-contributor",
-      "demand": "drastic-revision-of-h-r-4054"
+      "demand": "drastic-revision-of-h-r-4054",
+      "bill_id": "hr4054-119"
     },
     {
       "condition_id": "cd00028",
@@ -461,7 +487,8 @@
       "statement_id": null,
       "record_id": "rec-2025-12-18-crpt-119hrpt414-minority-views-3",
       "model": "muse-spark-1.3-contributor",
-      "demand": "drastic-revision-of-h-r-4054"
+      "demand": "drastic-revision-of-h-r-4054",
+      "bill_id": "hr4054-119"
     },
     {
       "condition_id": "cd00029",
@@ -475,7 +502,8 @@
       "statement_id": null,
       "record_id": "rec-2025-06-04-crpt-119hrpt136-minority-views-1",
       "model": "muse-spark-1.3-contributor",
-      "demand": "add-consumer-advocate-protections-to-e-delivery-bill"
+      "demand": "add-consumer-advocate-protections-to-e-delivery-bill",
+      "bill_id": "hr2441-119"
     },
     {
       "condition_id": "cd00030",
@@ -503,7 +531,8 @@
       "statement_id": null,
       "record_id": "rec-2025-09-19-crpt-119hrpt304-minority-views-1",
       "model": "muse-spark-1.3-contributor",
-      "demand": "assess-doe-staffing-capacity-before-adding-work"
+      "demand": "assess-doe-staffing-capacity-before-adding-work",
+      "bill_id": "hr3638-119"
     },
     {
       "condition_id": "cd00032",
@@ -517,7 +546,8 @@
       "statement_id": null,
       "record_id": "rec-2026-07-02-crpt-119hrpt730-minority-views-2",
       "model": "muse-spark-1.3-contributor",
-      "demand": "narrow-bill-to-ssn-verification-only"
+      "demand": "narrow-bill-to-ssn-verification-only",
+      "bill_id": "hr7893-119"
     },
     {
       "condition_id": "cd00033",
@@ -531,7 +561,8 @@
       "statement_id": null,
       "record_id": "rec-2026-07-02-crpt-119hrpt730-minority-views-2",
       "model": "muse-spark-1.3-contributor",
-      "demand": "narrow-bill-to-ssn-verification-only"
+      "demand": "narrow-bill-to-ssn-verification-only",
+      "bill_id": "hr7893-119"
     },
     {
       "condition_id": "cd00034",
@@ -545,7 +576,8 @@
       "statement_id": null,
       "record_id": "rec-2026-07-02-crpt-119hrpt730-minority-views-2",
       "model": "muse-spark-1.3-contributor",
-      "demand": "narrow-bill-to-ssn-verification-only"
+      "demand": "narrow-bill-to-ssn-verification-only",
+      "bill_id": "hr7893-119"
     },
     {
       "condition_id": "cd00035",
@@ -559,7 +591,8 @@
       "statement_id": null,
       "record_id": "rec-2026-07-02-crpt-119hrpt730-minority-views-2",
       "model": "muse-spark-1.3-contributor",
-      "demand": "narrow-bill-to-ssn-verification-only"
+      "demand": "narrow-bill-to-ssn-verification-only",
+      "bill_id": "hr7893-119"
     },
     {
       "condition_id": "cd00036",
@@ -573,7 +606,8 @@
       "statement_id": null,
       "record_id": "rec-2026-07-02-crpt-119hrpt730-minority-views-2",
       "model": "muse-spark-1.3-contributor",
-      "demand": "narrow-bill-to-ssn-verification-only"
+      "demand": "narrow-bill-to-ssn-verification-only",
+      "bill_id": "hr7893-119"
     },
     {
       "condition_id": "cd00037",
@@ -587,7 +621,8 @@
       "statement_id": null,
       "record_id": "rec-2026-07-02-crpt-119hrpt730-minority-views-2",
       "model": "muse-spark-1.3-contributor",
-      "demand": "narrow-bill-to-ssn-verification-only"
+      "demand": "narrow-bill-to-ssn-verification-only",
+      "bill_id": "hr7893-119"
     },
     {
       "condition_id": "cd00038",
@@ -601,7 +636,8 @@
       "statement_id": null,
       "record_id": "rec-2026-07-02-crpt-119hrpt730-minority-views-2",
       "model": "muse-spark-1.3-contributor",
-      "demand": "narrow-bill-to-ssn-verification-only"
+      "demand": "narrow-bill-to-ssn-verification-only",
+      "bill_id": "hr7893-119"
     },
     {
       "condition_id": "cd00039",
@@ -615,7 +651,8 @@
       "statement_id": null,
       "record_id": "rec-2026-07-02-crpt-119hrpt730-minority-views-2",
       "model": "muse-spark-1.3-contributor",
-      "demand": "narrow-bill-to-ssn-verification-only"
+      "demand": "narrow-bill-to-ssn-verification-only",
+      "bill_id": "hr7893-119"
     }
   ]
 }

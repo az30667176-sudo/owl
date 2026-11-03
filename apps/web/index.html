@@ -248,7 +248,7 @@
     .pane-switch { order: 4; flex: 1 1 100%; display: flex; border: 1px solid var(--border); border-radius: 3px; overflow: hidden; }
     .pane-switch button { flex: 1; background: transparent; border: 0; color: var(--muted); padding: 6px 0; font: inherit; font-size: 12px; cursor: pointer; }
     .pane-switch button.active { background: var(--accent); color: var(--on-accent); }
-    #profile, #bill, #issues, #issue, #bills, #table-wrap, #about { padding: 14px 14px 24px; }
+    #profile, #bill, #issues, #issue, #bills, #table-wrap, #about, #match { padding: 14px 14px 24px; }
     .bill-grid { grid-template-columns: 1fr; }
     .bill-strip { grid-template-columns: repeat(2, 1fr); }
     table { font-size: 12px; }
@@ -322,7 +322,7 @@
   .bill-card .c .q { font-family: var(--display); font-style: italic; color: var(--muted); }
   #bill .dim { opacity: .18 !important; }
   /* issues directory + issue halo page + bills tab (3.2-3.4); wording and layout ported from data/_site/search-sample.html */
-  #issues, #issue, #bills, #about { position: absolute; inset: 0; overflow: auto; padding: 18px 22px 30px; display: none; }
+  #issues, #issue, #bills, #about, #match { position: absolute; inset: 0; overflow: auto; padding: 18px 22px 30px; display: none; }
   .icrumb { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); font-family: var(--mono); }
   .icrumb a { color: var(--accent); cursor: pointer; text-decoration: none; }
   .isub { color: var(--muted); font-size: 13px; margin: 0 0 4px; }
@@ -398,10 +398,10 @@
       --text: #111; --muted: #444; --faint: #666; --parchment: #111; --on-accent: #fff;
       --accent: #8a6100; --support: #0d7a3f; --oppose: #c23b2a; --neutral: #5a6472;
       --party-d: #1f4fd8; --party-r: #d83a2a; --party-i: #5a6472; --ai: #4b2fb3; --ai-wash: #f4f0ff; }
-    html, body, .app, #main, #profile, #bill, #issues, #issue, #bills, #about { background: #fff !important; color: #111; }
+    html, body, .app, #main, #profile, #bill, #issues, #issue, #bills, #about, #match { background: #fff !important; color: #111; }
     .app { display: block; height: auto; }
     #main { overflow: visible; }
-    #profile, #bill, #issues, #issue, #bills, #about, #table-wrap { position: static; overflow: visible; padding: 0; display: block; }
+    #profile, #bill, #issues, #issue, #bills, #about, #match, #table-wrap { position: static; overflow: visible; padding: 0; display: block; }
     .masthead, .modes, .pane-switch, aside, .side, .tabs, .toolbar, .btn, .link, canvas { display: none !important; }
     .legend, .ehud, .ectl, .hint, #loading, .skip, .cond-tip { display: none !important; }
     .tabpane[hidden] { display: block; }
@@ -423,7 +423,7 @@
 <div class="app">
   <header class="masthead">
     <a class="brand" href="#" id="brand"><img class="logo" src="assets/logo/owl-mark-64.png" alt=""><span class="wordmark">OWL</span><span class="tagline">Open Watch on Legislators</span></a>
-    <nav class="modes" aria-label="Sections"><button id="m-explore">Explore</button><button id="m-issues">Issues</button><button id="m-bills">Bills</button><button id="m-list">Find</button><button id="m-profile">Legislators</button><button id="m-about">About</button></nav>
+    <nav class="modes" aria-label="Sections"><button id="m-explore">Explore</button><button id="m-issues">Issues</button><button id="m-bills">Bills</button><button id="m-match">Match</button><button id="m-list">Find</button><button id="m-profile">Legislators</button><button id="m-about">About</button></nav>
     <div class="gsrch"><input id="gs" type="text" autocomplete="off" placeholder="Find a legislator: name, state, district (CA-12) or ZIP" aria-label="Find a legislator"><kbd>/</kbd><div class="dd" id="dd"></div></div>
     <div class="pane-switch" id="pane-switch" role="tablist" aria-label="Panes"><button data-pane="filters" role="tab" aria-label="Show filters pane">Filters</button><button data-pane="view" role="tab" class="active" aria-label="Show view pane">View</button><button data-pane="details" role="tab" aria-label="Show details pane">Details</button></div>
     <span class="crumb" id="crumb"></span>
@@ -439,6 +439,7 @@
     <div id="issues"></div>
     <div id="issue"></div>
     <div id="bills"></div>
+    <div id="match"></div>
     <div id="about"></div>
     <div id="table-wrap"></div>
     <div id="profile"></div>
@@ -482,10 +483,19 @@
   try { conditionsRaw = await load("conditions.json"); } catch { /* optional file */ }
   const DEMANDS = Object.fromEntries((conditionsRaw.demands || []).map(d => [d.id, d]));
   const CONDS = conditionsRaw.conditions || [];
+  // bill match attributes (optional; missing = no picker, no match board entries)
+  let billsRaw = { bills: [] };
+  try { billsRaw = await load("bills.json"); } catch { /* optional file */ }
   const condByPI = {}, condByPerson = {}, condByIssue = {};
   CONDS.forEach(r => { (condByPI[r.person + "|" + r.issue] ??= []).push(r); (condByPerson[r.person] ??= []).push(r); (condByIssue[r.issue] ??= []).push(r); });
   // bill id: lower-case letters+digits of the leading bill number ("H.R. 6110 …" -> "hr6110"; null for null)
   const billId = s => { if (s == null) return null; const m = /^\s*([A-Za-z.][A-Za-z.\s]*?\d+)/.exec(s); return m ? m[1].replace(/[^A-Za-z0-9]/g, "").toLowerCase() : null; };
+  // match attributes keyed like billGroups (normalised number) plus raw bill_id
+  const BILLCTX = new Map();
+  (billsRaw.bills || []).filter(b => b.short_context || b.binary_question || b.complex_bill).forEach(b => {
+    BILLCTX.set(billId(b.number), b);
+    if (b.bill_id) BILLCTX.set(b.bill_id, b);
+  });
   const nowWord = v => (v === null || v === undefined) ? "has not spoken on it" : v > .15 ? "supports now" : v < -.15 ? "opposes now" : "is neutral now";
   // lower-case a demand name for mid-sentence use after "if"/"until"; abbreviations ("Sec.") and acronyms stay untouched
   const lcFirst = s => String(s).replace(/^([A-Za-z][A-Za-z.]*)/, w => (w.includes(".") || !/^[A-Z][a-z]/.test(w)) ? w : w[0].toLowerCase() + w.slice(1));
@@ -537,9 +547,11 @@
   // One row per statement in the data; aggregate to one edge per (person, issue).
   const CONF = ["low", "mid", "high", "super_high"], CONF_W = { low: .4, mid: .7, high: 1, super_high: 1.2 };
   const dirOf = s => s > 0.15 ? "support" : s < -0.15 ? "oppose" : "neutral";
-  // Action-kind inference (isolated for deletion when the contract gains kind).
+  // Action-kind labels (prefers contract kind; legacy inference fallback).
+  // Kind display factors (signatures count less than speech; stored scores untouched).
+  // Amendment/procedural votes count as activity only, never toward the score.
   // Keep in sync with apps/web/lib/derive.mjs.
-  const kindOf = st => {
+  const kindOfLegacy = st => {
     if (st.model === "owl-ingest-metadata") return st.score >= 1 ? "sponsored" : "cosponsored";
     if (st.model === "owl-ingest-rule") {
       if (String(st.rationale || "").startsWith("Signed")) return "views";
@@ -548,20 +560,62 @@
     }
     return "speech";
   };
+  const kindOf = st => {
+    if (st.kind) {
+      if (st.kind === "vote") return st.direction === "support" ? "yea" : st.direction === "oppose" ? "nay" : "notvoting";
+      return st.kind;
+    }
+    return kindOfLegacy(st);
+  };
+  const kindFactor = st => {
+    switch (kindOf(st)) {
+      case "speech": return 1;
+      case "sponsored": return 0.8;
+      case "cosponsored": return 0.5;
+      case "views": return 0.25;
+      case "yea":
+      case "nay": {
+        const vq = st.vote_question;
+        if (vq === "final_passage") return 1;
+        if (vq === "amendment" || vq === "procedural") return 0.5;
+        return 0.75;
+      }
+      default: return 1;
+    }
+  };
+  const effOf = st => st.score * kindFactor(st);
+  const scoresStance = st => st.kind !== "vote" || !st.vote_question || st.vote_question === "final_passage";
+  // Inlined copy of matchRank from apps/web/lib/derive.mjs — keep in sync.
+  const matchRank = (legsByBill, answers, { minAnswers = 3 } = {}) => {
+    const per = new Map();
+    for (const [bill, stance] of Object.entries(answers || {})) {
+      if (stance !== "support" && stance !== "oppose") continue;
+      for (const leg of legsByBill[bill] || []) {
+        if (leg.score === null || leg.score === undefined) continue;
+        if (!per.has(leg.id)) per.set(leg.id, { id: leg.id, answered: 0, agreed: 0 });
+        const r = per.get(leg.id);
+        r.answered += 1;
+        if (dirOf(leg.score) === stance) r.agreed += 1;
+      }
+    }
+    return [...per.values()].filter(r => r.answered >= minAnswers)
+      .map(r => ({ ...r, rate: r.answered ? r.agreed / r.answered : 0 }))
+      .sort((a, b) => b.rate - a.rate || b.agreed - a.agreed || b.answered - a.answered);
+  };
   // Inlined copy of deriveEdges from apps/web/lib/derive.mjs — keep in sync.
   // Fallback path when graph.json is absent; scoring changes apply in both places.
   const deriveEdgesInline = (statements, now) => {
     const heatOf = s => { const days = s.date ? (now - new Date(s.date)) / 864e5 : 365; return Math.pow(2, -Math.max(0, days) / 180); };
     const edges = [...d3.group(statements, s => s.person + "|" + s.issue).values()].map(list => {
       const st = [...list].sort((a, b) => String(a.date || "").localeCompare(String(b.date || "")));
-      const w = st.map(s => CONF_W[s.llm_confidence] || .7), score = st.reduce((a, s, i) => a + s.score * w[i], 0) / w.reduce((a, b) => a + b, 0);
-      const latest = st[st.length - 1], dirs = st.map(s => s.direction);
+      const sw = st.filter(scoresStance), w = sw.map(s => CONF_W[s.llm_confidence] || .7), eff = sw.map(effOf), score = w.length ? eff.reduce((a, v, i) => a + v * w[i], 0) / w.reduce((a, b) => a + b, 0) : 0;
+      const latest = st[st.length - 1], flipDirs = st.filter(s => { const k = kindOf(s); if (k === "speech") return true; if (k === "yea" || k === "nay") return !s.vote_question || s.vote_question === "final_passage"; return false; }).map(s => s.direction);
       const counts = { sponsored: 0, cosponsored: 0, yea: 0, nay: 0, views: 0 };
       let spokeN = 0, spokeSum = 0;
       st.forEach(s => { const k = kindOf(s); if (k === "speech") { spokeN += 1; spokeSum += s.score; } else if (k in counts) counts[k] += 1; });
       return { from: latest.person, to: latest.issue, score, direction: dirOf(score), n: st.length, statements: st, salience: st.reduce((a, s) => a + heatOf(s), 0),
         linkage: CONF[Math.max(...st.map(s => CONF.indexOf(s.linkage)))], llm_confidence: CONF[Math.max(...st.map(s => CONF.indexOf(s.llm_confidence)))],
-        flip: new Set(dirs.filter(d => d !== "neutral")).size > 1, first: st[0].date, last: latest.date,
+        flip: new Set(flipDirs.filter(d => d !== "neutral")).size > 1, first: st[0].date, last: latest.date,
         quote: latest.quote, bill: latest.bill, source: latest.source, model: latest.model,
         kind: [counts.sponsored, counts.cosponsored, counts.yea, counts.nay, counts.views, spokeN, spokeN ? spokeSum / spokeN : 0] };
     });
@@ -626,8 +680,15 @@
     l: { chamber: "", state: "", cat: "", sub: "", issue: "", dir: "", party: "", gender: "", minConf: 0, sort: "score", desc: true, sel: null },
     p: { person: null, sel: null, q: "" },
     iid: null,
-    b: { id: null, ticked: [], sel: null }
+    b: { id: null, ticked: [], sel: null },
+    m: { parties: new Set(["D", "R", "I"]), state: "", min: 3 }
   };
+  // match-board answers {billGroupKey: "support"|"oppose"}, persisted across visits
+  const MATCH_KEY = "owl-match-answers";
+  let matchAnswers = {};
+  try { matchAnswers = JSON.parse(localStorage.getItem(MATCH_KEY) || "{}") || {}; } catch { matchAnswers = {}; }
+  const saveAnswers = () => { try { localStorage.setItem(MATCH_KEY, JSON.stringify(matchAnswers)); } catch { /* private mode */ } };
+  const nAnswers = () => Object.keys(matchAnswers).length;
   // hash router (group 1): every mode has a hash; state.mode derives from location.hash
   function routeFromHash() {
     const h = location.hash || "#/explore";
@@ -636,6 +697,7 @@
     if (h === "#/legislators") { state.mode = "profile"; state.p.person = null; state.p.sel = null; return; }
     if (h.indexOf("#/bill/") === 0 && h.length > 7) { state.mode = "bill"; state.b.id = h.slice(7); state.b.ticked = []; state.b.sel = null; state.b.exp = {}; state.b.rost = {}; state.b.rostAll = {}; return; }
     if (h === "#/bills") { state.mode = "bills"; return; }
+    if (h === "#/match") { state.mode = "match"; return; }
     if (h.indexOf("#/issue/") === 0 && issueById[h.slice(8)]) { state.mode = "issue"; state.iid = h.slice(8); return; }
     if (h === "#/issue") { state.mode = "issues"; state.iid = null; return; }
     if (h === "#/find") { state.mode = "list"; return; }
@@ -862,7 +924,7 @@
       + `<div class="isub">Open Watch on Legislators — every number traces back to a quoted statement.</div>`
       + `<div class="isec">What OWL is</div>`
       + `<div>OWL tracks how US legislators vote, speak and shift positions across issues. Each legislator–issue pair is one edge with a score from −1 (oppose) to +1 (support), and every score opens to the verbatim quotes behind it. Nothing is pre-aggregated upstream and the browser never calls a model.</div>`
-      + `<div class="isec">The six files</div>`
+      + `<div class="isec">The eight files</div>`
       + `<div style="font-size:13px;line-height:1.9">`
       + `<div><span style="${mono}">taxonomy.json</span> — House standing committees and their subcommittees</div>`
       + `<div><span style="${mono}">issues.json</span> — concrete issues, each under one subcommittee</div>`
@@ -870,13 +932,16 @@
       + `<div><span style="${mono}">stances.json</span> — one row per statement: score, direction, confidence, verbatim quote, bill, source</div>`
       + `<div><span style="${mono}">summaries.json</span> — per-legislator AI summary, every sentence cited to a statement</div>`
       + `<div><span style="${mono}">conditions.json</span> — demands registry plus the conditions that would move each vote</div>`
+      + `<div><span style="${mono}">bills.json</span> — per-bill records with voter-guide context and binary questions</div>`
+      + `<div><span style="${mono}">graph.json</span> — precomputed member×issue edges (deploy cache)</div>`
       + `</div>`
       + `<div class="isec">How a position is scored</div>`
       + `<!-- scoring wording copied from packages/contract/derived.md — keep both in step -->`
       + `<div style="font-size:13px;line-height:1.9">`
-      + `<div><b>score</b> — weighted mean of statement scores, weights by llm_confidence: low .4, mid .7, high 1, super_high 1.2</div>`
+      + `<div><b>score</b> — weighted mean of <i>effective</i> scores (each row × its kind factor: speech 1, sponsored .8, cosponsored .5, final-passage vote 1, amendment vote .5, legacy views .25) over stance rows only — amendment/procedural votes count as activity, never toward the score; weights by llm_confidence: low .4, mid .7, high 1, super_high 1.2</div>`
       + `<div><b>direction</b> — from the derived score: &gt; .15 support, &lt; −.15 oppose, else neutral</div>`
-      + `<div><b>flip</b> — true when the set of non-neutral statement directions has more than one member (neutral → support is <b>not</b> a flip)</div>`
+      + `<div><b>flip</b> — true when the non-neutral directions among speech and final-passage votes have more than one member (neutral → support is <b>not</b> a flip; amendment/procedural pairs are <b>not</b> flips)</div>`
+      + `<div><b>match</b> — share of your answered bills where the legislator's bill score points your way; minimum answered bills to rank (default 3)</div>`
       + `<div><b>salience</b> — Σ over statements of 2^(−age_days / 180) (recent statements count more, half-life 180 days); age_days relative to today (mock data: relative to the newest statement so the demo is stable). All sources are official records, so there is no venue weighting</div>`
       + `<div><b>heat</b> — percentile rank of salience across all edges, 0…1</div>`
       + `</div>`
@@ -1144,7 +1209,7 @@
       const list = groups.filter(g => (!onlyC || g.info.conds.length) && (!q || g.info.num.toLowerCase().includes(q) || g.info.title.toLowerCase().includes(q)));
       $("bll").innerHTML = list.slice(0, 200).map(g => {
         const v = g.info;
-        return `<div class="ibl" data-b="${g.id}"><div><div class="num">${v.num}</div><div class="mt">${v.stmts.length} statement${v.stmts.length === 1 ? "" : "s"}</div></div><div><div>${v.title}</div><div class="mt">${v.iss.catName} › ${v.iss.subName} › ${v.iss.name}</div></div>${v.conds.length ? `<span class="itag">◆ ${v.conds.length} condition${v.conds.length > 1 ? "s" : ""}</span>` : `<span class="mt">no conditions</span>`}</div>`;
+        return `<div class="ibl" data-b="${g.id}"><div><div class="num">${v.num}${matchAnswers[g.id] ? " ✓" : ""}</div><div class="mt">${v.stmts.length} statement${v.stmts.length === 1 ? "" : "s"}</div></div><div><div>${v.title}</div><div class="mt">${v.iss.catName} › ${v.iss.subName} › ${v.iss.name}</div></div>${v.conds.length ? `<span class="itag">◆ ${v.conds.length} condition${v.conds.length > 1 ? "s" : ""}</span>` : `<span class="mt">no conditions</span>`}</div>`;
       }).join("") + (list.length > 200 ? `<div class="mt" style="padding:10px 0">+ ${list.length - 200} more · filter to narrow</div>` : "");
       $("bll").querySelectorAll("[data-b]").forEach(el => { kbRow(el, "link"); el.onclick = () => openBill(el.dataset.b); });
     };
@@ -1152,11 +1217,100 @@
     $("bfl").oninput = e => draw(e.target.value.trim().toLowerCase());
     $("bfc").onchange = () => draw($("bfl").value.trim().toLowerCase());
   }
+  // ---------- match board (#32) ----------
+  function matchLegsByBill() {
+    const out = {};
+    for (const bid of Object.keys(matchAnswers)) {
+      const info = billGroups().has(bid) ? billInfo(bid) : null;
+      if (info) out[bid] = billLegs(info).map(l => ({ id: l.id, score: l.score }));
+    }
+    return out;
+  }
+  function matchRanked() {
+    const ranked = matchRank(matchLegsByBill(), matchAnswers, { minAnswers: state.m.min });
+    return ranked.filter(r => {
+      const p = byId[r.id];
+      return p && state.m.parties.has(p.party) && (!state.m.state || p.state === state.m.state);
+    });
+  }
+  function renderMatchAside() {
+    $aside.innerHTML = `<div class="box"><div class="stat">${nAnswers()} answered</div><div class="mt">bills with your position</div></div>`
+      + `<div class="box"><div class="stat">${statementsReady ? matchRanked().length : "…"}</div><div class="mt">legislators ranked</div></div>`;
+  }
+  function renderMatchSide() {
+    const ids = Object.keys(matchAnswers);
+    let h = `<div class="empty-state">Answer the binary question on any bill page; your picks land here and power the board.</div>`;
+    if (ids.length) {
+      h += ids.map(bid => {
+        const info = billGroups().has(bid) ? billInfo(bid) : null;
+        return `<div class="rost-row" data-b="${bid}" title="Open bill"><span class="rost-n">${info ? info.num : bid}</span><span class="rost-m">${matchAnswers[bid]}</span></div>`;
+      }).join("") + `<div style="margin-top:8px"><span class="chip" id="mm-clear">Clear all answers</span></div>`;
+    }
+    h += `<div class="mt" style="margin-top:8px">Match = share of your answered bills where the legislator's bill score points your way. Amendment-only rows never score.</div>`;
+    $side.innerHTML = h;
+    $side.querySelectorAll(".rost-row").forEach(el => { kbRow(el, "link"); el.onclick = () => { location.hash = "#/bill/" + el.dataset.b; }; });
+    const clr = $("mm-clear");
+    if (clr) clr.onclick = () => { matchAnswers = {}; saveAnswers(); render(); };
+  }
+  function renderMatchCenter() {
+    const wrap = $("match");
+    if (!statementsReady) { wrap.innerHTML = `<div class="iwrap"><div class="icrumb">Match</div><div class="ih1">Your match board</div>${stmtsNote()}</div>`; return; }
+    const ids = Object.keys(matchAnswers);
+    const head = `<div class="iwrap"><div class="icrumb">Match</div><div class="ih1">Your match board</div>`
+      + `<div class="mt">Match = share of your answered bills where the legislator's bill score points your way (min ${state.m.min} to rank).</div>`;
+    if (!ids.length) {
+      wrap.innerHTML = head + `<div class="empty-state">No answers yet. Open any <a class="link" href="#/bills">bill</a>, read the short context, and pick a side.</div></div>`;
+      return;
+    }
+    const ranked = matchRanked();
+    const f = state.m;
+    const filters = `<div class="filters">`
+      + ["D", "R", "I"].map(p => `<label><input type="checkbox" data-party="${p}" ${f.parties.has(p) ? "checked" : ""}> ${p}</label>`).join("")
+      + `<select id="mm-state"><option value="">All states</option>${STATES.map(s => `<option value="${s}" ${f.state === s ? "selected" : ""}>${s}</option>`).join("")}</select>`
+      + `<label>Min bills <input type="number" id="mm-min" min="1" max="${ids.length}" value="${f.min}"></label>`
+      + `</div>`;
+    const rowOf = (r, i) => {
+      const p = byId[r.id];
+      const pct = Math.round(r.rate * 100);
+      return `<div class="rost-row" data-p="${r.id}" title="${p.name} · agreed ${r.agreed}/${r.answered}"><span class="rost-n">${i + 1}. ${shortName(p.name)}</span><span class="rost-m"><span style="color:${partyColor(p.party)}">●</span> ${p.party} · ${seat(p)} · ${pct}% (${r.agreed}/${r.answered})</span></div>`;
+    };
+    let body;
+    if (!ranked.length) {
+      body = `<div class="empty-state">Nobody meets the current filters — lower Min bills or widen party/state.</div>`;
+    } else {
+      const top = ranked.slice(0, 15), bot = ranked.slice(-8).reverse();
+      body = `<div class="isec">Closest to you</div>` + top.map(rowOf).join("")
+        + `<div class="isec">Farthest from you</div>` + bot.map((r, i) => rowOf(r, ranked.length - 1 - i)).join("");
+    }
+    wrap.innerHTML = head + filters + body + `</div>`;
+    wrap.querySelectorAll(".rost-row").forEach(el => { kbRow(el, "link"); el.onclick = () => openProfile(el.dataset.p); });
+    wrap.querySelectorAll("[data-party]").forEach(cb => cb.onchange = () => { cb.checked ? f.parties.add(cb.dataset.party) : f.parties.delete(cb.dataset.party); render(); });
+    $("mm-state").onchange = e => { f.state = e.target.value; render(); };
+    $("mm-min").onchange = e => { f.min = Math.max(1, parseInt(e.target.value, 10) || 1); render(); };
+  }
+  // binary picker + context block for bill pages (empty when the bill has no match attributes)
+  function matchPickerHtml(bid) {
+    const ctx = BILLCTX.get(bid);
+    if (!ctx) return "";
+    if (ctx.complex_bill || !ctx.binary_question) {
+      return `<div class="isec">Too complex for one question</div>`
+        + (ctx.short_context ? `<div>${ctx.short_context}</div>` : "")
+        + `<div class="mt">This bill spans too much for a single fair question — no simplified options.`
+        + (ctx.url ? ` <a class="link" href="${ctx.url}" target="_blank" rel="noopener">Read the full bill ↗</a>` : "") + `</div>`;
+    }
+    const cur = matchAnswers[bid];
+    const q = ctx.binary_question;
+    const optChip = o => `<span class="chip pick ${cur === o.stance ? "active" : ""}" data-stance="${o.stance}" title="${o.label}">${cur === o.stance ? "✓ " : ""}${o.label}</span>`;
+    return `<div class="isec">What this bill does</div><div>${ctx.short_context}</div>`
+      + `<div class="isec">Your take: ${q.question}</div>`
+      + `<div style="display:flex;gap:8px;flex-wrap:wrap">${q.options.map(optChip).join("")}</div>`
+      + (cur ? `<div class="mt">Picked ${cur} — click again to clear. See <a class="link" href="#/match">your match board</a>.</div>` : `<div class="mt">Pick a side to power your match board.</div>`);
+  }
   // centre pane router (replaces the old SVG focus graph in 3.5; Explore renders on Canvas via E_show)
   function renderCenter() {
     const list = state.mode === "list", prof = state.mode === "profile", bill = state.mode === "bill",
       issues = state.mode === "issues", issue = state.mode === "issue", bills = state.mode === "bills",
-      about = state.mode === "about";
+      about = state.mode === "about", match = state.mode === "match";
     $("table-wrap").style.display = list ? "block" : "none";
     $("profile").style.display = prof ? "block" : "none";
     $("bill").style.display = bill ? "block" : "none";
@@ -1164,7 +1318,8 @@
     $("issue").style.display = issue ? "block" : "none";
     $("bills").style.display = bills ? "block" : "none";
     $("about").style.display = about ? "block" : "none";
-    $("legend").style.display = (list || prof || bill || issues || issue || bills || about) ? "none" : "flex";
+    $("match").style.display = match ? "block" : "none";
+    $("legend").style.display = (list || prof || bill || issues || issue || bills || about || match) ? "none" : "flex";
     $hint.style.display = state.mode === "explore" ? "none" : "";
     const showCv = state.mode === "explore";
     cv.classList.toggle("on", showCv); ectl.classList.toggle("on", showCv); ehud.classList.toggle("on", showCv);
@@ -1175,6 +1330,7 @@
     if (issue) return renderIssueCenter();
     if (bills) return renderBillsCenter();
     if (about) return renderAboutCenter();
+    if (match) return renderMatchCenter();
     E_show();
   }
 
@@ -1452,13 +1608,14 @@
     const issue = Object.entries(counts).sort((a, b) => b[1] - a[1])[0][0];
     return { ...g, num: m ? m[1].replace(/\s+/g, " ") : (chosen || id), title: m ? m[2].trim() : "", issue, iss: issueById[issue], latest };
   }
-  // legislators with a bill-matched statement or a condition row on this bill; score = confidence-weighted mean or null
+  // legislators with a bill-matched statement or a condition row on this bill; score = confidence-weighted mean of kind-scaled effective scores, or null
   function billLegs(info) {
     const pids = [...new Set([...info.stmts.map(s => s.person), ...info.conds.map(r => r.person)])].filter(id => byId[id]);
     return pids.map(pid => {
       const mine = info.stmts.filter(s => s.person === pid);
       let score = null;
-      if (mine.length) { const w = mine.map(s => CONF_W[s.llm_confidence] || .7); score = mine.reduce((a, s, i) => a + s.score * w[i], 0) / w.reduce((a, b) => a + b, 0); }
+      const sw = mine.filter(scoresStance);
+      if (sw.length) { const w = sw.map(s => CONF_W[s.llm_confidence] || .7), eff = sw.map(effOf); score = eff.reduce((a, v, i) => a + v * w[i], 0) / w.reduce((a, b) => a + b, 0); }
       return { id: pid, p: byId[pid], score, conds: info.conds.filter(r => r.person === pid) };
     }).sort((a, b) => (b.score ?? -2) - (a.score ?? -2));
   }
@@ -1688,6 +1845,7 @@
       <div class="crumbline"><a id="bill-back">← Explore</a> · ${path} · <span style="color:var(--text)">Bill</span></div>
       <h1>${info.num}${info.title ? ` · ${billTitleDisp(info)}` : ""}</h1>
       <div class="bill-sub">${path} · ${info.stmts.length} statement${info.stmts.length === 1 ? "" : "s"} in data${info.latest ? ` · latest ${info.latest.date || "undated"}` : ""}</div>
+      ${matchPickerHtml(state.b.id)}
       <div class="bill-strip"><div><b style="color:var(--support)">${sup}</b><span>support now</span></div><div><b style="color:var(--oppose)">${opp}</b><span>oppose now</span></div><div><b style="color:var(--accent)">${info.conds.length}</b><span>stated conditions</span></div><div><b>${silent}</b><span>member silent on it</span></div></div>
       <div class="bill-sub" style="margin:-2px 0 2px">${kindLine}</div>
       <div class="bill-sec">Where they stand today · ◆ = has stated a condition</div>
@@ -1707,6 +1865,11 @@
     wrap.querySelectorAll(".whip i").forEach(el => { if (el.getBoundingClientRect().width < 36) el.textContent = ""; });
     wrap.querySelectorAll(".dot[data-p], .bill-col-row").forEach(el => { kbRow(el, "link"); el.onclick = () => openProfile(el.dataset.p); });
     wrap.querySelectorAll(".rost-row").forEach(el => { kbRow(el, "link"); el.onclick = () => openProfile(el.dataset.p); });
+    wrap.querySelectorAll(".chip.pick").forEach(el => el.onclick = () => {
+      const st = el.dataset.stance;
+      if (matchAnswers[state.b.id] === st) delete matchAnswers[state.b.id]; else matchAnswers[state.b.id] = st;
+      saveAnswers(); render();
+    });
     wrap.querySelectorAll("[data-rostall]").forEach(el => el.onclick = () => { state.b.rostAll = { ...(state.b.rostAll || {}), [el.dataset.rostall]: el.dataset.open === "1" }; renderBill(); });
     // --- negotiation map svg: one map for every bill; demand column only when demands exist ---
     const W = 860, H = mapH, cy = H / 2;
@@ -2501,8 +2664,10 @@
       else if (state.mode === "issues") _t = "Issues \u00b7 OWL";
       else if (state.mode === "issue") { const _is = issueById[state.iid]; _t = ((_is && _is.name) || "Issue") + " \u00b7 OWL"; }
       else if (state.mode === "about") _t = "About \u00b7 OWL";
+      else if (state.mode === "match") _t = "Match \u00b7 OWL";
       document.title = _t; }
-    ["explore", "issues", "bills", "list", "profile", "about"].forEach(m => $("m-" + m).classList.toggle("active", state.mode === m));
+    ["explore", "issues", "bills", "match", "list", "profile", "about"].forEach(m => $("m-" + m).classList.toggle("active", state.mode === m));
+    $("m-match").textContent = nAnswers() ? `Match (${nAnswers()})` : "Match";
     if (state.mode === "profile") { const p = byId[state.p.person]; $crumb.innerHTML = p ? `<b>${p.name}</b> · ${seat(p)}` : `<b>Legislators</b>`; $hint.textContent = ""; }
     else if (state.mode === "bill") { const info = statementsReady ? billInfo(state.b.id) : null; $crumb.innerHTML = info ? `<b>${info.num}</b> · ${billTitleDisp(info) || "Bill"}` : `<b>Bill</b> · ${statementsReady ? "not found" : "loading statements…"}`; $hint.textContent = ""; }
     else if (state.mode === "list") { $crumb.innerHTML = `<b>Legislator list</b> · dropdown filters`; $hint.textContent = ""; }
@@ -2510,13 +2675,14 @@
     else if (state.mode === "bills") { $crumb.innerHTML = `<b>Bills</b> · every bill in data`; $hint.textContent = ""; }
     else if (state.mode === "issues") { $crumb.innerHTML = `<b>Issues</b> · directory`; $hint.textContent = ""; }
     else if (state.mode === "about") { $crumb.innerHTML = "<b>About</b> | methodology"; $hint.textContent = ""; }
+    else if (state.mode === "match") { $crumb.innerHTML = `<b>Match</b> · ${nAnswers()} answered`; $hint.textContent = ""; }
     else { const i = issueById[state.iid]; $crumb.innerHTML = i ? `<b>${i.catName}</b> › ${i.subName} › <b>${i.name}</b>` : "Pick an issue"; $hint.textContent = ""; }
   }
-  function renderAside() { ({ explore: renderExploreAside, issues: renderIssuesAside, issue: renderIssueAside, bills: renderBillsAside, list: renderListAside, profile: renderProfileAside, bill: renderBillAside, about: renderAboutAside })[state.mode](); }
+  function renderAside() { ({ explore: renderExploreAside, issues: renderIssuesAside, issue: renderIssueAside, bills: renderBillsAside, list: renderListAside, profile: renderProfileAside, bill: renderBillAside, about: renderAboutAside, match: renderMatchAside })[state.mode](); }
   function renderSide() {
     const hasEvidence = state.mode === "explore" ? !!state.person : state.mode === "list" ? !!state.l.sel : state.mode === "issue" ? true : !!state.p.sel;
     $side.dataset.label = hasEvidence ? "Evidence" : state.mode === "explore" ? "In view" : "Notes";
-    ({ explore: renderExploreSide, issues: renderIssuesSide, issue: renderIssueSide, bills: renderBillsSide, list: renderListSide, profile: renderProfileSide, bill: renderBillSide, about: renderAboutSide })[state.mode]();
+    ({ explore: renderExploreSide, issues: renderIssuesSide, issue: renderIssueSide, bills: renderBillsSide, list: renderListSide, profile: renderProfileSide, bill: renderBillSide, about: renderAboutSide, match: renderMatchSide })[state.mode]();
     $side.querySelectorAll("[data-open]").forEach(b => b.onclick = () => openProfile(b.dataset.open));
     $side.querySelectorAll("[data-about]").forEach(b => b.onclick = () => { location.hash = "#/about"; });
     $side.querySelectorAll("[data-copy]").forEach(b => b.onclick = () => copyLink(b));
@@ -2529,6 +2695,7 @@
   $("m-about").onclick = () => { if (location.hash === "#/about") { routeFromHash(); render(); } else location.hash = "#/about"; };
 $("m-issues").onclick = goIssues;
 $("m-bills").onclick = goBills;
+$("m-match").onclick = () => { if (location.hash === "#/match") { routeFromHash(); render(); } else location.hash = "#/match"; };
   $("pane-switch").querySelectorAll("button").forEach(b => b.onclick = () => { state.pane = b.dataset.pane; render(); });
   $("brand").onclick = e => { e.preventDefault(); state.person = null; if (!location.hash || location.hash === "#/explore") { routeFromHash(); render(); } else location.hash = "#/explore"; };
   window.addEventListener("hashchange", () => { routeFromHash(); render(); });

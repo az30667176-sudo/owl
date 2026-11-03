@@ -1,0 +1,1136 @@
+{
+  "_meta": {
+    "description": "Blind scoring audit: the same rubric re-scores sampled quotes with speaker name/party hidden.",
+    "model": "muse-spark-1.3",
+    "seed": 30,
+    "n": 100,
+    "at": "2026-11-03",
+    "prompt_sha": "9e4f993ea2cc",
+    "note": "D: uniform sample n=100 seed=30; R: full population n=1 (only one R speech row exists)"
+  },
+  "summary": {
+    "n": 101,
+    "failed": 0,
+    "mean_abs_diff": 0.4094,
+    "mean_signed_diff": 0.2401,
+    "direction_agreement": 0.7129,
+    "by_party": {
+      "D": {
+        "n": 100,
+        "mean_abs_diff": 0.4135,
+        "mean_signed_diff": 0.2425,
+        "direction_agreement": 0.71
+      },
+      "R": {
+        "n": 1,
+        "mean_abs_diff": 0,
+        "mean_signed_diff": 0,
+        "direction_agreement": 1
+      }
+    },
+    "top10": [
+      {
+        "statement_id": "st27536",
+        "party": "D",
+        "published": -0.9,
+        "blind": 0.8,
+        "abs_diff": 1.7000000000000002,
+        "signed_diff": 1.7000000000000002,
+        "agree": false
+      },
+      {
+        "statement_id": "st27817",
+        "party": "D",
+        "published": -0.8,
+        "blind": 0.9,
+        "abs_diff": 1.7000000000000002,
+        "signed_diff": 1.7000000000000002,
+        "agree": false
+      },
+      {
+        "statement_id": "st26381",
+        "party": "D",
+        "published": -0.9,
+        "blind": 0.7,
+        "abs_diff": 1.6,
+        "signed_diff": 1.6,
+        "agree": false
+      },
+      {
+        "statement_id": "st26615",
+        "party": "D",
+        "published": -0.9,
+        "blind": 0.7,
+        "abs_diff": 1.6,
+        "signed_diff": 1.6,
+        "agree": false
+      },
+      {
+        "statement_id": "st27304",
+        "party": "D",
+        "published": -0.9,
+        "blind": 0.6,
+        "abs_diff": 1.5,
+        "signed_diff": 1.5,
+        "agree": false
+      },
+      {
+        "statement_id": "st25340",
+        "party": "D",
+        "published": -0.8,
+        "blind": 0.7,
+        "abs_diff": 1.5,
+        "signed_diff": 1.5,
+        "agree": false
+      },
+      {
+        "statement_id": "st27297",
+        "party": "D",
+        "published": -0.9,
+        "blind": 0.6,
+        "abs_diff": 1.5,
+        "signed_diff": 1.5,
+        "agree": false
+      },
+      {
+        "statement_id": "st25658",
+        "party": "D",
+        "published": -0.8,
+        "blind": 0.7,
+        "abs_diff": 1.5,
+        "signed_diff": 1.5,
+        "agree": false
+      },
+      {
+        "statement_id": "st24983",
+        "party": "D",
+        "published": -0.8,
+        "blind": 0.7,
+        "abs_diff": 1.5,
+        "signed_diff": 1.5,
+        "agree": false
+      },
+      {
+        "statement_id": "st26500",
+        "party": "D",
+        "published": -0.8,
+        "blind": 0.7,
+        "abs_diff": 1.5,
+        "signed_diff": 1.5,
+        "agree": false
+      }
+    ]
+  },
+  "rows": [
+    {
+      "statement_id": "st24908",
+      "person": "F000110",
+      "party": "D",
+      "issue": "consumer-protection",
+      "quote": "It undermines consumer protection, community reinvestment, and anti-discrimination safeguards, as well as impairs the Consumer Financial Protection Bureau's (CFPB) ability to issue any new rules.",
+      "published": 0.9,
+      "blind": 0.9,
+      "error": null
+    },
+    {
+      "statement_id": "st25162",
+      "person": "W000788",
+      "party": "D",
+      "issue": "bank-regulation",
+      "quote": "H.R. 6553 would reduce the safeguards for some of the largest banks, including guardrails that could have prevented three of the largest bank failures in U.S. history in 2023 when Silicon Valley Bank and other regional banks failed.",
+      "published": 0.9,
+      "blind": 0.7,
+      "error": null
+    },
+    {
+      "statement_id": "st27211",
+      "person": "S000185",
+      "party": "D",
+      "issue": "higher-education-and-student-aid",
+      "quote": "For the reasons stated above, all Committee Democrats present unanimously opposed H.R. 5505 when the Committee on Education and Workforce considered it on June 25, 2026.",
+      "published": -1,
+      "blind": 0,
+      "error": null
+    },
+    {
+      "statement_id": "st26141",
+      "person": "R000606",
+      "party": "D",
+      "issue": "immigration-enforcement",
+      "quote": "I oppose this legislation, and I urge my colleagues to do the same.",
+      "published": -1,
+      "blind": 0,
+      "error": null
+    },
+    {
+      "statement_id": "st27304",
+      "person": "L000602",
+      "party": "D",
+      "issue": "child-care",
+      "quote": "this bill would hurt the program more than it would help, injecting unnecessary politicization into the process.",
+      "published": -0.9,
+      "blind": 0.6,
+      "error": null
+    },
+    {
+      "statement_id": "st25583",
+      "person": "T000469",
+      "party": "D",
+      "issue": "federal-budget-and-deficit",
+      "quote": "It is the biggest tax cut for billionaires in American history, paid for by throwing 13.7 million Americans off their health care coverage.",
+      "published": -1,
+      "blind": 0,
+      "error": null
+    },
+    {
+      "statement_id": "st25832",
+      "person": "V000130",
+      "party": "D",
+      "issue": "housing-finance",
+      "quote": "and slash funding for building and maintaining housing, even as an affordable housing crisis rages across the country.",
+      "published": 0.9,
+      "blind": 0.7,
+      "error": null
+    },
+    {
+      "statement_id": "st26381",
+      "person": "W000788",
+      "party": "D",
+      "issue": "securities-and-capital-markets",
+      "quote": "This bill poses risks to retail investors by exposing them to high-risk private funds that lack important investor protections and regulatory guardrails and are not required to disclose critical information.",
+      "published": -0.9,
+      "blind": 0.7,
+      "error": null
+    },
+    {
+      "statement_id": "st25829",
+      "person": "V000130",
+      "party": "D",
+      "issue": "consumer-protection",
+      "quote": "this budget reconciliation bill contains five harmful sections that significantly undermine consumer protection by crippling the Consumer Financial Protection Bureau (CFPB)",
+      "published": 0.9,
+      "blind": 1,
+      "error": null
+    },
+    {
+      "statement_id": "st26655",
+      "person": "V000081",
+      "party": "D",
+      "issue": "small-business-cyber-and-fraud",
+      "quote": "a certification form will provide an extra layer of security and help the SBA to more effectively link an action to an associated fraudulent act.",
+      "published": 0.7,
+      "blind": 0.7,
+      "error": null
+    },
+    {
+      "statement_id": "st25340",
+      "person": "A000381",
+      "party": "D",
+      "issue": "civil-rights-in-schools",
+      "quote": "The requirements of H.R. 2616 will have the effect of forcibly outing transgender students.",
+      "published": -0.8,
+      "blind": 0.7,
+      "error": null
+    },
+    {
+      "statement_id": "st26612",
+      "person": "H001068",
+      "party": "D",
+      "issue": "environmental-review-nepa",
+      "quote": "Eliminating lease-sale-level NEPA analysis would short-circuit the way PEISs work.",
+      "published": 0.8,
+      "blind": 0.7,
+      "error": null
+    },
+    {
+      "statement_id": "st27844",
+      "person": "C001131",
+      "party": "D",
+      "issue": "gender-equity-in-college-athletics",
+      "quote": "H.R. 4312 is deficient for failing to address issues of gender equity in college athletics.",
+      "published": 0.8,
+      "blind": 0.8,
+      "error": null
+    },
+    {
+      "statement_id": "st27297",
+      "person": "S000185",
+      "party": "D",
+      "issue": "child-care",
+      "quote": "this bill would hurt the program more than it would help, injecting unnecessary politicization into the process.",
+      "published": -0.9,
+      "blind": 0.6,
+      "error": null
+    },
+    {
+      "statement_id": "st27426",
+      "person": "S001211",
+      "party": "D",
+      "issue": "water-infrastructure-and-quality",
+      "quote": "In our view, this legislation is unnecessary, unwarranted, and a dangerous attack on clean water nationwide. For these reasons, we oppose H.R. 3898.",
+      "published": 1,
+      "blind": 0.9,
+      "error": null
+    },
+    {
+      "statement_id": "st24900",
+      "person": "V000130",
+      "party": "D",
+      "issue": "consumer-protection",
+      "quote": "It undermines consumer protection, community reinvestment, and anti-discrimination safeguards, as well as impairs the Consumer Financial Protection Bureau's (CFPB) ability to issue any new rules.",
+      "published": 0.9,
+      "blind": 0.9,
+      "error": null
+    },
+    {
+      "statement_id": "st25797",
+      "person": "V000081",
+      "party": "D",
+      "issue": "consumer-protection",
+      "quote": "this budget reconciliation bill contains five harmful sections that significantly undermine consumer protection by crippling the Consumer Financial Protection Bureau (CFPB)",
+      "published": 0.9,
+      "blind": 1,
+      "error": null
+    },
+    {
+      "statement_id": "st26269",
+      "person": "M001137",
+      "party": "D",
+      "issue": "securities-and-capital-markets",
+      "quote": "For these reasons, we oppose H.R. 3672.",
+      "published": -1,
+      "blind": 0,
+      "error": null
+    },
+    {
+      "statement_id": "st24823",
+      "person": "G000606",
+      "party": "D",
+      "issue": "wages-and-labor-standards",
+      "quote": "raising the federal minimum wage to provide family-sustaining pay.",
+      "published": 0.8,
+      "blind": 1,
+      "error": null
+    },
+    {
+      "statement_id": "st27384",
+      "person": "H001081",
+      "party": "D",
+      "issue": "k-12-education",
+      "quote": "For the reasons stated above, all Committee Democrats present opposed H.R. 7661 when the Committee on Education and the Workforce considered it on March 17, 2026.",
+      "published": -1,
+      "blind": 0,
+      "error": null
+    },
+    {
+      "statement_id": "st25187",
+      "person": "G000587",
+      "party": "D",
+      "issue": "bank-regulation",
+      "quote": "Accordingly, this bill would significantly weaken the supervisory framework and undermine consumer protection as well as the safety and soundness of depository institutions.",
+      "published": 0.85,
+      "blind": 0.9,
+      "error": null
+    },
+    {
+      "statement_id": "st25772",
+      "person": "T000472",
+      "party": "D",
+      "issue": "immigration-enforcement",
+      "quote": "H.R. 7893 would exacerbate these fears with concerns that this new citizenship verification will be used by the Trump Administration for further unlawful immigration enforcement.",
+      "published": -0.8,
+      "blind": -0.7,
+      "error": null
+    },
+    {
+      "statement_id": "st25467",
+      "person": "S000185",
+      "party": "D",
+      "issue": "higher-education-and-student-aid",
+      "quote": "It is critical for Office of Federal Student Aid (FSA) to prevent any waste, fraud, and abuse of the federal student aid system.",
+      "published": 0.8,
+      "blind": 0.5,
+      "error": null
+    },
+    {
+      "statement_id": "st25533",
+      "person": "M001231",
+      "party": "D",
+      "issue": "child-care",
+      "quote": "As a result, it would--in the name of incentivizing child and elder subsidies--actually drive up workers' child and elder costs.",
+      "published": 0.8,
+      "blind": 0.7,
+      "error": null
+    },
+    {
+      "statement_id": "st26585",
+      "person": "G000598",
+      "party": "D",
+      "issue": "environmental-regulation",
+      "quote": "Goodbye regulations that are protecting Americans from junk fees, air pollution, and lead in their drinking water.",
+      "published": 0.8,
+      "blind": 0.8,
+      "error": null
+    },
+    {
+      "statement_id": "st25054",
+      "person": "S000185",
+      "party": "D",
+      "issue": "higher-education-and-student-aid",
+      "quote": "After decrying the problem of the politicization of the Truman Scholarship, H.R. 7894 makes significant changes throughout Truman Scholarship's authorizing statute that will infuse more politics into the program.",
+      "published": -0.8,
+      "blind": 0.6,
+      "error": null
+    },
+    {
+      "statement_id": "st25027",
+      "person": "G000587",
+      "party": "D",
+      "issue": "digital-assets-and-fintech",
+      "quote": "H.R. 3633, the crypto market structure bill Democrats call the ``CALAMITY Act,'' would legitimize the numerous crypto scams of President Trump and his family.",
+      "published": -1,
+      "blind": -0.8,
+      "error": null
+    },
+    {
+      "statement_id": "st26643",
+      "person": "L000562",
+      "party": "D",
+      "issue": "corporate-disclosure-and-audit",
+      "quote": "For these reasons, we oppose H.R. 2441.",
+      "published": -1,
+      "blind": 0,
+      "error": null
+    },
+    {
+      "statement_id": "st27798",
+      "person": "P000034",
+      "party": "D",
+      "issue": "natural-gas-and-lng-exports",
+      "quote": "The evidence is clear: unrestricted LNG exports would increase energy prices for Americans, on top of the nearly $300 in higher energy bills imposed by Republicans' Big Ugly Bill.",
+      "published": -0.9,
+      "blind": -0.8,
+      "error": null
+    },
+    {
+      "statement_id": "st26769",
+      "person": "D000216",
+      "party": "D",
+      "issue": "farm-trade-and-food-safety",
+      "quote": "would also eliminate protections for small meat and poultry producers, a gift to large corporations.",
+      "published": 0.8,
+      "blind": 0.7,
+      "error": null
+    },
+    {
+      "statement_id": "st26964",
+      "person": "C001131",
+      "party": "D",
+      "issue": "labor-relations-and-unions",
+      "quote": "certain athletes at academic institutions subject to the NLRB's jurisdiction are statutory employees who have the right to act collectively to improve their terms and conditions of employment.",
+      "published": 0.8,
+      "blind": 0.9,
+      "error": null
+    },
+    {
+      "statement_id": "st26107",
+      "person": "D000623",
+      "party": "D",
+      "issue": "higher-education-and-student-aid",
+      "quote": "Committee Democrats support efforts to improve college affordability for underrepresented students and unanimously voted in favor of H.R. 6472 at markup.",
+      "published": 0.9,
+      "blind": 0.8,
+      "error": null
+    },
+    {
+      "statement_id": "st25604",
+      "person": "S000185",
+      "party": "D",
+      "issue": "research-and-technology-transfer",
+      "quote": "Further, H.R. 1048 would jeopardize the essential global partnerships among institutions that play a critical role in the United States' social, economic, and technological progress.",
+      "published": -0.7,
+      "blind": 0.7,
+      "error": null
+    },
+    {
+      "statement_id": "st24733",
+      "person": "D000623",
+      "party": "D",
+      "issue": "labor-relations-and-unions",
+      "quote": "In return, college athletes are permanently stripped from ever receiving labor and employment rights and protections, including a minimum wage; overtime pay; workers' compensation for injuries, illnesses, or fatalities; safety and health protections; and the right to organize a union and collectively bargain for fair conditions.",
+      "published": 0.8,
+      "blind": 0.8,
+      "error": null
+    },
+    {
+      "statement_id": "st27536",
+      "person": "C001069",
+      "party": "D",
+      "issue": "k-12-education",
+      "quote": "This bill creates a one-size-fits-all solution in search of a problem that does not exist, and it stands as an example of the type of federal overreach that congressional Republicans have long claimed would harm children, teachers, and schools.",
+      "published": -0.9,
+      "blind": 0.8,
+      "error": null
+    },
+    {
+      "statement_id": "st25307",
+      "person": "L000602",
+      "party": "D",
+      "issue": "higher-education-and-student-aid",
+      "quote": "Committee Democrats urge Congress to review the findings and recommendations of this study prior to making any changes to student athletics fees.",
+      "published": -0.4,
+      "blind": 0,
+      "error": null
+    },
+    {
+      "statement_id": "st26153",
+      "person": "B000490",
+      "party": "D",
+      "issue": "health-programs-and-research",
+      "quote": "Strike report language supporting an FDA re-review of the safety of mifepristone based on a non-peer-reviewed study and replace it with bill language preventing FDA from any further restrictions on the drug.",
+      "published": 0.8,
+      "blind": 0.7,
+      "error": null
+    },
+    {
+      "statement_id": "st26563",
+      "person": "B001318",
+      "party": "D",
+      "issue": "social-security",
+      "quote": "We gave Republicans the chance to commit to protecting Social Security and Medicare.",
+      "published": 0.9,
+      "blind": 0.6,
+      "error": null
+    },
+    {
+      "statement_id": "st25364",
+      "person": "L000602",
+      "party": "D",
+      "issue": "retirement-and-employee-benefits",
+      "quote": "The voting of proxies is not an arbitrary exercise, but rather an important mechanism for shareholders to monitor and hold management accountable and enhance long-term value of plan assets.",
+      "published": 0.8,
+      "blind": 0.8,
+      "error": null
+    },
+    {
+      "statement_id": "st26859",
+      "person": "B001326",
+      "party": "D",
+      "issue": "corporate-disclosure-and-audit",
+      "quote": "Through these integrated functions, the PCAOB plays an indispensable role in promoting the reliability of the financial statements upon which investors depend.",
+      "published": 0.9,
+      "blind": 1,
+      "error": null
+    },
+    {
+      "statement_id": "st25277",
+      "person": "B001278",
+      "party": "D",
+      "issue": "higher-education-and-student-aid",
+      "quote": "Ideally these financial aid packages would be presented in a format that is standardized, allowing students to easily compare aid packages between institutions.",
+      "published": 0.8,
+      "blind": 0.7,
+      "error": null
+    },
+    {
+      "statement_id": "st26567",
+      "person": "T000469",
+      "party": "D",
+      "issue": "social-security",
+      "quote": "We gave Republicans the chance to commit to protecting Social Security and Medicare.",
+      "published": 0.9,
+      "blind": 0.5,
+      "error": null
+    },
+    {
+      "statement_id": "st26046",
+      "person": "B001315",
+      "party": "D",
+      "issue": "health-programs-and-research",
+      "quote": "We will vote against the larger bill, which, in addition to taking food away from children and seniors, takes health care away from people through $625 billion in Medicaid cuts, when it comes to the House floor for a vote.",
+      "published": 0.8,
+      "blind": 0.8,
+      "error": null
+    },
+    {
+      "statement_id": "st27886",
+      "person": "H001081",
+      "party": "D",
+      "issue": "reproductive-health-and-autonomy",
+      "quote": "Committee Democrats continue to fight for comprehensive reproductive health and reproductive autonomy.",
+      "published": 1,
+      "blind": 0,
+      "error": null
+    },
+    {
+      "statement_id": "st26067",
+      "person": "F000481",
+      "party": "D",
+      "issue": "forest-management-and-wildfire",
+      "quote": "Nothing in this bill helps address the wildfire crisis or improve forest health; in fact, this bill takes us backward by including harmful rescissions to popular forest conservation programs.",
+      "published": 0.8,
+      "blind": 0.8,
+      "error": null
+    },
+    {
+      "statement_id": "st25658",
+      "person": "G000553",
+      "party": "D",
+      "issue": "bank-regulation",
+      "quote": "Moreover, the bill does not include any flexibility for regulators to make adjustments in the opposite direction that might promote safety, soundness, and consumer protection.",
+      "published": -0.8,
+      "blind": 0.7,
+      "error": null
+    },
+    {
+      "statement_id": "st24911",
+      "person": "W000187",
+      "party": "D",
+      "issue": "financial-crime-and-sanctions",
+      "quote": "The CALAMITY Act endangers our country's national security and ignores Trump's elimination of important defenses against criminal activity facilitated by crypto.",
+      "published": 0.85,
+      "blind": 0.8,
+      "error": null
+    },
+    {
+      "statement_id": "st25821",
+      "person": "C001061",
+      "party": "D",
+      "issue": "consumer-protection",
+      "quote": "this budget reconciliation bill contains five harmful sections that significantly undermine consumer protection by crippling the Consumer Financial Protection Bureau (CFPB)",
+      "published": 0.9,
+      "blind": 0.9,
+      "error": null
+    },
+    {
+      "statement_id": "st26705",
+      "person": "F000110",
+      "party": "D",
+      "issue": "corporate-disclosure-and-audit",
+      "quote": "The bill also dismantles, and moves the functions of, the Public Company Accounting Oversight Board (PCAOB) to the SEC, exposing what have traditionally been nonpartisan audit, ethics, and quality control standards to the political whims of the Commission.",
+      "published": 0.8,
+      "blind": 0.8,
+      "error": null
+    },
+    {
+      "statement_id": "st26115",
+      "person": "W000187",
+      "party": "D",
+      "issue": "corporate-disclosure-and-audit",
+      "quote": "Additionally, H.R. 8286 would allow issuers, rather than investors, to determine which types of information get disclosed in a company's SEC filings.",
+      "published": 0.85,
+      "blind": 0.6,
+      "error": null
+    },
+    {
+      "statement_id": "st25320",
+      "person": "B001278",
+      "party": "D",
+      "issue": "wages-and-labor-standards",
+      "quote": "By categorically excluding these occupations from FLSA, this bill would threaten the independence of legitimate independent contractors and imperil the protections of low-wage workers in call centers.",
+      "published": 0.8,
+      "blind": 0.8,
+      "error": null
+    },
+    {
+      "statement_id": "st27433",
+      "person": "H001094",
+      "party": "D",
+      "issue": "water-infrastructure-and-quality",
+      "quote": "In our view, this legislation is unnecessary, unwarranted, and a dangerous attack on clean water nationwide. For these reasons, we oppose H.R. 3898.",
+      "published": 1,
+      "blind": 1,
+      "error": null
+    },
+    {
+      "statement_id": "st27515",
+      "person": "B001278",
+      "party": "D",
+      "issue": "child-care",
+      "quote": "While it is important to address any instance of fraud with federal funds designed to support child care programs, this bill would hurt the program more than it would help.",
+      "published": 0.8,
+      "blind": 0.7,
+      "error": null
+    },
+    {
+      "statement_id": "st27647",
+      "person": "R000617",
+      "party": "D",
+      "issue": "dhs-workforce-and-operations",
+      "quote": "Trump and Noem are unconstitutionally dismantling DHS--firing hundreds of civil servants, freezing grants, eliminating the watchdogs who protect Americans, and failing to respond to Hurricane Helene's devastation in North Carolina.",
+      "published": 0.8,
+      "blind": 0.9,
+      "error": null
+    },
+    {
+      "statement_id": "st26200",
+      "person": "R000606",
+      "party": "D",
+      "issue": "law-enforcement-support",
+      "quote": "There is no question that we must address the root causes of violent crime and invest in proven solutions, such as community violence intervention and drug treatment, and support law enforcement with funding and other resources, as the Trump Administration has refused to do.",
+      "published": 0.8,
+      "blind": 0.8,
+      "error": null
+    },
+    {
+      "statement_id": "st26055",
+      "person": "V000138",
+      "party": "D",
+      "issue": "forest-management-and-wildfire",
+      "quote": "Nothing in this bill helps address the wildfire crisis or improve forest health; in fact, this bill takes us backward by including harmful rescissions to popular forest conservation programs.",
+      "published": 0.8,
+      "blind": 0.9,
+      "error": null
+    },
+    {
+      "statement_id": "st25532",
+      "person": "M001231",
+      "party": "D",
+      "issue": "wages-and-labor-standards",
+      "quote": "H.R. 2270, the Empowering Employer Child and Elder Care Solutions Act, would allow employers to pay their workers less overtime than they are owed by excluding child and dependent care services and payments from the rate used to compute overtime compensation.",
+      "published": 0.9,
+      "blind": 0.7,
+      "error": null
+    },
+    {
+      "statement_id": "st28023",
+      "person": "B001318",
+      "party": "D",
+      "issue": "nutrition-assistance-snap",
+      "quote": "More than 4 million Americans--including over 1.5 million children--have lost access to food assistance.",
+      "published": 0.8,
+      "blind": 0.6,
+      "error": null
+    },
+    {
+      "statement_id": "st24983",
+      "person": "G000606",
+      "party": "D",
+      "issue": "child-care",
+      "quote": "Safeguarding the integrity of the Child Care and Development Fund (CCDF) is critical, but making arbitrary changes to current program reporting requirements under the guise of allegedly fighting fraud is unacceptable.",
+      "published": -0.8,
+      "blind": 0.7,
+      "error": null
+    },
+    {
+      "statement_id": "st27151",
+      "person": "F000110",
+      "party": "D",
+      "issue": "consumer-protection",
+      "quote": "For these reasons, we oppose the ``Financial Services Committee Print, Providing for reconciliation pursuant to H. Con. Res. 14, the Concurrent Resolution on the Budget for Fiscal Year 2025.''",
+      "published": 0.9,
+      "blind": 0,
+      "error": null
+    },
+    {
+      "statement_id": "st27620",
+      "person": "B001278",
+      "party": "D",
+      "issue": "health-programs-and-research",
+      "quote": "Committee Democrats will work tirelessly to protect the DGA process and to ensure that science guides the nation's public health response.",
+      "published": 0.8,
+      "blind": 0.8,
+      "error": null
+    },
+    {
+      "statement_id": "st28001",
+      "person": "G000553",
+      "party": "D",
+      "issue": "artificial-intelligence-in-financial-services-and-housing",
+      "quote": "At a time of unprecedented AI risk, H.R. 4801 would give companies free rein to experiment on consumers and investors on their own terms.",
+      "published": -1,
+      "blind": -0.9,
+      "error": null
+    },
+    {
+      "statement_id": "st27219",
+      "person": "T000472",
+      "party": "D",
+      "issue": "child-care",
+      "quote": "The Child Care for Working Families Act, slated to be reintroduced again this Congress, would ensure families across America can find and afford the child care they need, dramatically expand access to high-quality preschool programs, and boost wages for early childhood workers.",
+      "published": 0.9,
+      "blind": 1,
+      "error": null
+    },
+    {
+      "statement_id": "st25782",
+      "person": "S000185",
+      "party": "D",
+      "issue": "civil-rights-in-schools",
+      "quote": "The bill negatively targets transgender youth under the guise of ``biological truth and defending women.''",
+      "published": 0.8,
+      "blind": 0.7,
+      "error": null
+    },
+    {
+      "statement_id": "st27416",
+      "person": "N000002",
+      "party": "D",
+      "issue": "water-infrastructure-and-quality",
+      "quote": "In our view, this legislation is unnecessary, unwarranted, and a dangerous attack on clean water nationwide. For these reasons, we oppose H.R. 3898.",
+      "published": 1,
+      "blind": 1,
+      "error": null
+    },
+    {
+      "statement_id": "st25096",
+      "person": "N000188",
+      "party": "D",
+      "issue": "higher-education-and-student-aid",
+      "quote": "H.R. 4054, the Accreditation Choice and Innovation Act, makes sweeping reforms to the higher education accreditation process. In general, these ill-informed reforms will create loopholes in the oversight of both institutions and accreditors which will in turn establish untested pathways to federal funding, insert politics and culture wars into the accreditation process, and erode the quality of higher education.",
+      "published": 0.8,
+      "blind": 0.8,
+      "error": null
+    },
+    {
+      "statement_id": "st24789",
+      "person": "T000472",
+      "party": "D",
+      "issue": "child-care",
+      "quote": "Research confirms that improved supports, specifically improving access to child care, plays an important role in assisting student parents to continue with their educational plans.",
+      "published": 0.8,
+      "blind": 0.8,
+      "error": null
+    },
+    {
+      "statement_id": "st28014",
+      "person": "B001296",
+      "party": "D",
+      "issue": "nutrition-assistance-snap",
+      "quote": "More than 4 million Americans--including over 1.5 million children--have lost access to food assistance.",
+      "published": 0.8,
+      "blind": 0,
+      "error": null
+    },
+    {
+      "statement_id": "st27477",
+      "person": "G000606",
+      "party": "D",
+      "issue": "wages-and-labor-standards",
+      "quote": "These amendments would have required fair wages be paid to workers on all projects funded under the programs in this bill",
+      "published": 0.8,
+      "blind": 0,
+      "error": null
+    },
+    {
+      "statement_id": "st26500",
+      "person": "V000130",
+      "party": "D",
+      "issue": "securities-and-capital-markets",
+      "quote": "Preempting blue sky laws for these kinds of trades reduces the types of recourse investors have against private issuers, and also removes critical layers of oversight that protect retail investors from fraud and high-risk speculative schemes.",
+      "published": -0.8,
+      "blind": 0.7,
+      "error": null
+    },
+    {
+      "statement_id": "st27018",
+      "person": "T000488",
+      "party": "D",
+      "issue": "emergency-management",
+      "quote": "the administration is unlawfully withholding billions of Federal disaster response, flood mitigation, and wildfire prevention grant funding even as court orders have instructed the Agency to immediately disburse the funding.",
+      "published": 0.9,
+      "blind": 0.9,
+      "error": null
+    },
+    {
+      "statement_id": "st27142",
+      "person": "B001281",
+      "party": "D",
+      "issue": "consumer-protection",
+      "quote": "For these reasons, we oppose the ``Financial Services Committee Print, Providing for reconciliation pursuant to H. Con. Res. 14, the Concurrent Resolution on the Budget for Fiscal Year 2025.''",
+      "published": 0.9,
+      "blind": 0,
+      "error": null
+    },
+    {
+      "statement_id": "st25734",
+      "person": "V000130",
+      "party": "D",
+      "issue": "financial-stability",
+      "quote": "Weak standards in the STABLE Act present a myriad of risks to financial stability.",
+      "published": 0.8,
+      "blind": 0.8,
+      "error": null
+    },
+    {
+      "statement_id": "st25462",
+      "person": "G000606",
+      "party": "D",
+      "issue": "wages-and-labor-standards",
+      "quote": "The bill would create more instability and unpredictability for low-wage workers throughout the economy.",
+      "published": -0.8,
+      "blind": 0.7,
+      "error": null
+    },
+    {
+      "statement_id": "st26615",
+      "person": "T000472",
+      "party": "D",
+      "issue": "veterans-health-care",
+      "quote": "For the reasons cited above, Committee Democrats oppose H.R. 2283, which would create a carveout grant program to funnel VA dollars to community providers of mental health, rather than investing them in VA's direct care system.",
+      "published": -0.9,
+      "blind": 0.7,
+      "error": null
+    },
+    {
+      "statement_id": "st26944",
+      "person": "B001278",
+      "party": "D",
+      "issue": "child-care",
+      "quote": "The Majority have proposed bills--including H.R. 7720, the Child Care Payment Integrity and Fraud Accountability Act--that could have the overall effect of upending the child care system to address a problem that has not been proven to exist.",
+      "published": 0.8,
+      "blind": 0.7,
+      "error": null
+    },
+    {
+      "statement_id": "st24901",
+      "person": "T000481",
+      "party": "D",
+      "issue": "bank-regulation",
+      "quote": "However, this package of overwhelmingly Republican and partisan bills represents the greatest amount of bank deregulation since before the 2008 global financial crisis.",
+      "published": 0.9,
+      "blind": 0.8,
+      "error": null
+    },
+    {
+      "statement_id": "st27110",
+      "person": "W000788",
+      "party": "D",
+      "issue": "consumer-protection",
+      "quote": "would block the White House from undermining CFPB's independence by prohibiting its ability to review or modify CFPB's budget or proposed rules and guidance before it is finalized.",
+      "published": 0.85,
+      "blind": 0.8,
+      "error": null
+    },
+    {
+      "statement_id": "st25322",
+      "person": "D000623",
+      "party": "D",
+      "issue": "wages-and-labor-standards",
+      "quote": "By categorically excluding these occupations from FLSA, this bill would threaten the independence of legitimate independent contractors and imperil the protections of low-wage workers in call centers.",
+      "published": 0.8,
+      "blind": 0.8,
+      "error": null
+    },
+    {
+      "statement_id": "st25684",
+      "person": "V000081",
+      "party": "D",
+      "issue": "digital-assets-and-fintech",
+      "quote": "The Waters bill reflects extensive collaboration and technical assistance from the Treasury Department and the Board of Governors of the Federal Reserve System (Fed) and creates a strong federal framework that supports responsible innovation with consumer protection, national security, and financial stability front and center.",
+      "published": 0.8,
+      "blind": 0.8,
+      "error": null
+    },
+    {
+      "statement_id": "st25529",
+      "person": "D000623",
+      "party": "D",
+      "issue": "child-care",
+      "quote": "As a result, it would--in the name of incentivizing child and elder subsidies--actually drive up workers' child and elder costs.",
+      "published": 0.8,
+      "blind": 0.6,
+      "error": null
+    },
+    {
+      "statement_id": "st27717",
+      "person": "T000488",
+      "party": "D",
+      "issue": "nutrition-assistance-snap",
+      "quote": "Taking food assistance away from millions of American children, seniors, veterans and people with disabilities to fund tax breaks for the wealthy and large corporations will have long-term costs on the country, both in terms of increasing the deficit and with regard to diminishing opportunities for our nation's children.",
+      "published": 1,
+      "blind": 1,
+      "error": null
+    },
+    {
+      "statement_id": "st25218",
+      "person": "H001094",
+      "party": "D",
+      "issue": "water-infrastructure-and-quality",
+      "quote": "We oppose H.R. 3898. The Clean Water Act (CWA) is the nation's bedrock environmental law for ``restoring and maintaining the chemical, physical, and biological integrity of the Nation's waters.''",
+      "published": 0.9,
+      "blind": 0.8,
+      "error": null
+    },
+    {
+      "statement_id": "st27055",
+      "person": "S001193",
+      "party": "D",
+      "issue": "border-security",
+      "quote": "Securing the southern border and countering drug trafficking means making sure U.S. officials are inspecting both what is entering and what is leaving the country, and the Republican legislation fails to address the latter.",
+      "published": 0.7,
+      "blind": 0.8,
+      "error": null
+    },
+    {
+      "statement_id": "st26330",
+      "person": "D000216",
+      "party": "D",
+      "issue": "national-security-and-state-appropriations",
+      "quote": "It compounds the problem by cutting humanitarian aid while crises are worsening across Africa, Eastern Europe, and the Middle East.",
+      "published": 0.9,
+      "blind": 0.7,
+      "error": null
+    },
+    {
+      "statement_id": "st26516",
+      "person": "L000562",
+      "party": "D",
+      "issue": "bank-regulation",
+      "quote": "For these reasons, we oppose H.R. 3320.",
+      "published": -1,
+      "blind": 0,
+      "error": null
+    },
+    {
+      "statement_id": "st27059",
+      "person": "K000402",
+      "party": "D",
+      "issue": "border-security",
+      "quote": "Securing the southern border and countering drug trafficking means making sure U.S. officials are inspecting both what is entering and what is leaving the country, and the Republican legislation fails to address the latter.",
+      "published": 0.7,
+      "blind": 0.7,
+      "error": null
+    },
+    {
+      "statement_id": "st26015",
+      "person": "D000216",
+      "party": "D",
+      "issue": "law-enforcement-support",
+      "quote": "This bill defunds law enforcement by gutting the Bureau of Alcohol, Tobacco, Firearms, and Explosives (ATF) by more than 25 percent, forcing the agency to lose more than 1,000 law enforcement personnel nationwide.",
+      "published": 0.9,
+      "blind": 0.9,
+      "error": null
+    },
+    {
+      "statement_id": "st25770",
+      "person": "B001278",
+      "party": "D",
+      "issue": "immigration-enforcement",
+      "quote": "H.R. 7893 would exacerbate these fears with concerns that this new citizenship verification will be used by the Trump Administration for further unlawful immigration enforcement.",
+      "published": -0.8,
+      "blind": -0.7,
+      "error": null
+    },
+    {
+      "statement_id": "st26894",
+      "person": "L000602",
+      "party": "D",
+      "issue": "child-care",
+      "quote": "The Majority have proposed bills--including H.R. 7722, the Child Care Integrity Monitoring Act of 2026-- that could have the overall effect of upending the child care system to address a problem that has not been proven to exist.",
+      "published": 0.8,
+      "blind": 0.7,
+      "error": null
+    },
+    {
+      "statement_id": "st26031",
+      "person": "H001081",
+      "party": "D",
+      "issue": "forest-management-and-wildfire",
+      "quote": "Nothing in this bill helps address the wildfire crisis or improve forest health; in fact, this bill takes us backward by including harmful rescissions to popular forest conservation programs.",
+      "published": 0.8,
+      "blind": 0.8,
+      "error": null
+    },
+    {
+      "statement_id": "st26860",
+      "person": "C001117",
+      "party": "D",
+      "issue": "corporate-disclosure-and-audit",
+      "quote": "Through these integrated functions, the PCAOB plays an indispensable role in promoting the reliability of the financial statements upon which investors depend.",
+      "published": 0.9,
+      "blind": 0.9,
+      "error": null
+    },
+    {
+      "statement_id": "st27817",
+      "person": "C001069",
+      "party": "D",
+      "issue": "college-athlete-compensation-and-legal-protections",
+      "quote": "This section would clear the field of any existing protections, permanently prevent states from protecting college athletes, and strip athletes of their ability to hold athletic programs, conferences, and the NCAA accountable for violations or abuses.",
+      "published": -0.8,
+      "blind": 0.9,
+      "error": null
+    },
+    {
+      "statement_id": "st25130",
+      "person": "B001278",
+      "party": "D",
+      "issue": "labor-relations-and-unions",
+      "quote": "This bill would significantly narrow the scope of the NLRA and FLSA and make it more difficult for potentially misclassified workers to argue that they are entitled to NLRA and FLSA rights.",
+      "published": 0.8,
+      "blind": 0.6,
+      "error": null
+    },
+    {
+      "statement_id": "st27224",
+      "person": "S000185",
+      "party": "D",
+      "issue": "health-programs-and-research",
+      "quote": "Medicaid cuts will negatively impact people across the country, with disproportionate impacts for poorer states as well as individuals in rural areas and Black, Latino, and Indigenous people.",
+      "published": 0.8,
+      "blind": 0.7,
+      "error": null
+    },
+    {
+      "statement_id": "st26303",
+      "person": "T000472",
+      "party": "D",
+      "issue": "va-operations-and-oversight",
+      "quote": "This Committee must focus on the recruitment and retention of this critical workforce, not on adding additional barriers.",
+      "published": -0.7,
+      "blind": 0.7,
+      "error": null
+    },
+    {
+      "statement_id": "st26936",
+      "person": "C001131",
+      "party": "D",
+      "issue": "k-12-education",
+      "quote": "Parents and educators know that America's students need more opportunities to succeed, and we need to strengthen our public schools where 90 percent of students--and 95 percent of students with disabilities--learn.",
+      "published": 0.8,
+      "blind": 0.9,
+      "error": null
+    },
+    {
+      "statement_id": "st25649",
+      "person": "L000602",
+      "party": "D",
+      "issue": "k-12-education",
+      "quote": "However, the bill is largely duplicative of current law and increases opportunities for waste, fraud, and abuse of government funding.",
+      "published": -0.8,
+      "blind": 0,
+      "error": null
+    },
+    {
+      "statement_id": "st26291",
+      "person": "T000472",
+      "party": "D",
+      "issue": "va-operations-and-oversight",
+      "quote": "Democratic Members fundamentally object to the raiding of the franchise fund, and through this amendment, pushed for the Majority to undertake the appropriate avenues for funding new IT projects through the traditional appropriations process.",
+      "published": -0.8,
+      "blind": 0.7,
+      "error": null
+    },
+    {
+      "statement_id": "st26583",
+      "person": "L000562",
+      "party": "D",
+      "issue": "immigration-enforcement",
+      "quote": "H.R. 2056 constitutes an unacceptable encroachment on D.C.'s self-governance by mandating that local agencies participate in federal immigration enforcement operations. Such a mandate would undermine community trust and pose a serious risk to public safety.",
+      "published": -0.9,
+      "blind": -0.85,
+      "error": null
+    },
+    {
+      "statement_id": "st27937",
+      "person": "R000612",
+      "party": "R",
+      "issue": "terrorism-risk-insurance",
+      "quote": "I do not believe the federal government should be in the business of permanently backstopping risks that the private sector is clearly capable of handling on its own.",
+      "published": -0.9,
+      "blind": -0.9,
+      "error": null
+    }
+  ]
+}
