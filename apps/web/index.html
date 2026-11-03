@@ -51,34 +51,18 @@
   aside, section, .side { overflow: auto; }
   aside { border-right: 1px solid var(--border); background: var(--panel); padding: 10px 12px 24px; }
   .h { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 14px 4px 6px; display: flex; justify-content: space-between; }
-  .h a { color: var(--accent); cursor: pointer; text-transform: none; letter-spacing: 0; font-size: 11px; }
   .cat { padding: 7px 10px; border-radius: 8px; cursor: pointer; color: var(--text); display: flex; justify-content: space-between; gap: 8px; font-size: 13px; }
   .cat:hover { background: var(--panel-2); }
   .cat.active { background: rgba(240,180,41,.14); color: var(--accent); }
   .cat .n { color: var(--muted); font-size: 12px; }
-  .subs { display: flex; flex-wrap: wrap; gap: 6px; padding: 2px 4px 4px; }
   .chip { font-size: 12px; padding: 4px 10px; border: 1px solid var(--border); border-radius: 999px; cursor: pointer; color: var(--muted); user-select: none; }
   .chip:hover { border-color: var(--accent); color: var(--text); }
   .chip.active { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
   .chip.empty { opacity: .4; cursor: default; }
-  .chip.d.active { background: var(--party-d); border-color: var(--party-d); color: #06112b; }
-  .chip.r.active { background: var(--party-r); border-color: var(--party-r); color: #2b0906; }
-  .chip.support.active { background: var(--support); border-color: var(--support); color: #04200f; }
-  .chip.oppose.active { background: var(--oppose); border-color: var(--oppose); color: #2b0906; }
-  .chip.neutral.active { background: var(--neutral); border-color: var(--neutral); color: #111; }
   .search, .field select { width: 100%; background: var(--panel-2); border: 1px solid var(--border); color: var(--text); border-radius: 8px; padding: 7px 10px; font: inherit; font-size: 13px; outline: none; }
   .search:focus, .field select:focus { border-color: var(--accent); }
   .field { margin: 0 4px 10px; }
   .field label { display: block; font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 4px; }
-  .group { margin: 4px 4px 0; }
-  .group .gh { display: flex; align-items: center; gap: 8px; padding: 6px 6px; border-radius: 8px; cursor: pointer; }
-  .group .gh:hover { background: var(--panel-2); }
-  .group .gh .sw { width: 10px; height: 10px; border-radius: 3px; flex: none; }
-  .group .gh .name { flex: 1; font-weight: 600; font-size: 13px; }
-  .group .gh .n { color: var(--muted); font-size: 11px; }
-  .group .gh input { accent-color: var(--accent); }
-  .group .subl { font-size: 11px; color: var(--muted); padding: 4px 0 2px 24px; }
-  .group .subs { padding-left: 24px; }
   .stat { font-size: 12px; color: var(--muted); margin: 10px 4px 0; }
   section { position: relative; }
   #main { overflow: hidden; }
@@ -361,6 +345,11 @@
   .hbar i { display: block; height: 6px; }
   .icount { font: 500 11px var(--mono); color: var(--muted); text-align: right; white-space: nowrap; }
   .hot5 { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0 2px; }
+  .hot-row { display: grid; grid-template-columns: 1fr 54px auto; gap: 10px; align-items: center; padding: 5px 6px; border-radius: 8px; cursor: pointer; font-size: 13px; }
+  .hot-row:hover { background: var(--panel-2); }
+  .hot-row .hot-n { font: 500 11px var(--mono); color: var(--muted); }
+  .rc-line { padding: 5px 6px; border-radius: 8px; cursor: pointer; font-size: 13px; }
+  .rc-line:hover { background: var(--panel-2); }
   .if { width: 280px; background: var(--panel-2); border: 1px solid var(--border); color: var(--text); border-radius: 3px; padding: 6px 10px; font-size: 13px; outline: none; }
   .if:focus { border-color: var(--accent); }
   .ibl { display: grid; grid-template-columns: 110px 1fr auto; gap: 12px; padding: 10px 0; border-top: 1px solid var(--border); align-items: center; cursor: pointer; }
@@ -717,35 +706,65 @@
     return EDGES.filter(e => f.issues.has(e.to) && personOk(byId[e.from], f) && f.dirs.has(e.direction) && (e.llm_confidence ? CONF.indexOf(e.llm_confidence) : 9) >= f.minConf
       && (!q || byId[e.from].name.toLowerCase().includes(q) || issueById[e.to].name.toLowerCase().includes(q)));
   }
+  let _stmtsHooked = false;
   function renderExploreAside() {
-    const f = state.f;
-    const chip = (cls, id, label, on) => `<span class="chip ${cls} ${on ? "active" : ""}" data-k="${cls}" data-id="${id}">${label}</span>`;
-    const groups = COMMITTEES.map(c => {
-      const issues = ISSUES.filter(i => i.cat === c.id && countFor(i.id) > 0);
-      if (!issues.length) return "";
-      const allOn = issues.every(i => f.issues.has(i.id)), anyOn = issues.some(i => f.issues.has(i.id));
-      const bySub = {}; issues.forEach(i => (bySub[i.sub] ??= []).push(i));
-      return `<div class="group">
-        <label class="gh"><input type="checkbox" data-cat="${c.id}" ${allOn ? "checked" : ""} ${!allOn && anyOn ? "data-ind=1" : ""}><span class="sw" style="background:${CAT_HUE[c.id]}"></span><span class="name">${c.name}</span><span class="n">${issues.reduce((a, i) => a + countFor(i.id), 0)}</span></label>
-        ${Object.entries(bySub).map(([sid, list]) => `${subById[sid].leaf ? "" : `<div class="subl">${subById[sid].name}</div>`}<div class="subs">${list.map(i => chip("issue", i.id, `${i.name} · ${countFor(i.id)}`, f.issues.has(i.id))).join("")}</div>`).join("")}
-      </div>`;
-    }).join("");
+    const f = state.f, H = issueHeat();
+    // Hottest issues · 90 days: top 8 by heat; sparkline = statements per month over the last 12 months
+    const hot8 = ISSUES.filter(i => H.get(i.id).active > 0).sort((a, b) => H.get(b.id).heat - H.get(a.id).heat || (a.name < b.name ? -1 : 1)).slice(0, 8);
+    const buckets = new Map(hot8.map(i => [i.id, new Array(12).fill(0)]));
+    if (statementsReady) {
+      const anchor = STATEMENTS.reduce((a, s) => (s.date && s.date > a) ? s.date : a, "");
+      const [ay, am] = anchor.split("-").map(Number), aIdx = ay * 12 + (am - 1);
+      STATEMENTS.forEach(s => {
+        const b = buckets.get(s.issue); if (!b || !s.date) return;
+        const [y, m] = s.date.split("-").map(Number), d = aIdx - (y * 12 + (m - 1));
+        if (d >= 0 && d < 12) b[11 - d] += 1;
+      });
+    }
+    const spark = id => {
+      const arr = buckets.get(id), mx = Math.max(...arr);
+      const pts = arr.map((v, k) => `${(k * 54 / 11).toFixed(1)},${(13 - (mx ? v / mx * 12 : 0)).toFixed(1)}`).join(" ");
+      return `<svg width="54" height="14" viewBox="0 0 54 14" aria-hidden="true"><polyline points="${pts}" fill="none" stroke="var(--accent)" stroke-width="1"/></svg>`;
+    };
+    // Recent changes · 30 days: speech-evidenced flips + condition rows, newest first
+    const MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const mdy = d => { const p = String(d || "").split("-"); return p.length === 3 ? `${MON[+p[1] - 1]} ${+p[2]}` : String(d || ""); };
+    const rc = [];
+    EDGES.forEach(e => { if (e.flip && (e.kind || [])[5] >= 2 && e.last && byId[e.from] && issueById[e.to]) rc.push({ date: e.last, kind: "flip", person: e.from, issue: e.to }); });
+    CONDS.forEach(r => {
+      if (!byId[r.person] || !issueById[r.issue]) return;
+      const d = (r.statement_id && stById[r.statement_id] && stById[r.statement_id].date) || (seByI.get(r.issue) || []).find(e => e.from === r.person)?.last;
+      if (d) rc.push({ date: d, kind: "cond", person: r.person, issue: r.issue });
+    });
+    rc.sort((a, b) => String(b.date).localeCompare(String(a.date)) || (a.person < b.person ? -1 : 1));
+    const recent = rc.slice(0, 8);
+    const cur = f.state || (E && E.stateF) || "";
     const fe = filteredEdges();
     $aside.innerHTML = `
-      <div class="h" style="margin-top:8px">Search</div><input class="search" id="q" placeholder="legislator or issue…" value="${f.q}">
-      <div class="h">State</div><div class="field"><select id="f-state"><option value="">All states</option>${STATES.map(s => `<option ${f.state === s ? "selected" : ""}>${s}</option>`).join("")}</select></div>
-      <div class="h">Issues of interest <span><a id="all">all</a>&nbsp;<a id="none">none</a></span></div>${groups}
-      <div class="h">Party</div><div class="subs">${chip("d party", "D", "Democrat", f.parties.has("D"))}${chip("r party", "R", "Republican", f.parties.has("R"))}</div>
-      <div class="h">Stance</div><div class="subs">${["support", "oppose", "neutral"].map(d => chip(d + " dir", d, d, f.dirs.has(d))).join("")}</div>
-      <div class="h">Min. LLM confidence</div><div class="subs">${CONF.map((c, i) => chip("conf", i, c, f.minConf === i)).join("")}</div>
+      <div class="h" style="margin-top:8px">Hottest issues · 90 days</div>
+      ${hot8.map(i => `<div class="hot-row" data-i="${i.id}"><span>${i.name}</span>${spark(i.id)}<span class="hot-n">${H.get(i.id).active}</span></div>`).join("")}
+      <div style="margin:2px 6px 0"><span class="link" id="all-issues">all ${ISSUES.length} →</span></div>
+      <div class="h">Recent changes · 30 days</div>
+      ${recent.map(r => `<div class="rc-line" data-p="${r.person}"><span style="color:${partyColor(byId[r.person].party)}">●</span> <b>${shortName(byId[r.person].name)}</b> ${r.kind === "flip" ? "flipped on" : "set a condition on"} <span style="color:var(--accent)">${issueById[r.issue].name}</span> ${r.kind === "flip" ? "⟲" : "◆"} <span style="color:var(--muted)">${mdy(r.date)}</span></div>`).join("") || `<div class="empty-state">No recent flips or conditions.</div>`}
+      <div class="h">State</div>
+      ${cur ? `<div style="margin:0 4px 6px"><span class="chip" id="clr-state">${cur} ×</span></div>` : ""}
+      <div class="field"><select id="f-state"><option value="">All states</option>${STATES.map(s => `<option value="${s}"${s === cur ? " selected" : ""}>${STATE_NAMES[s] || s}</option>`).join("")}</select></div>
       <div class="stat">${fe.length} stances · ${new Set(fe.map(e => e.from)).size} legislators · ${new Set(fe.map(e => e.to)).size} issues</div>`;
-    $aside.querySelectorAll("input[data-cat]").forEach(cb => { if (cb.dataset.ind) cb.indeterminate = true; cb.onchange = () => { ISSUES.filter(i => i.cat === cb.dataset.cat).forEach(i => cb.checked ? f.issues.add(i.id) : f.issues.delete(i.id)); render(); }; });
-    $aside.querySelectorAll(".chip").forEach(el => el.onclick = () => { const k = el.dataset.k, id = el.dataset.id;
-      if (k.includes("issue")) toggle(f.issues, id); else if (k.includes("chamber")) toggle(f.chambers, id); else if (k.includes("party")) toggle(f.parties, id); else if (k.includes("dir")) toggle(f.dirs, id); else if (k.includes("conf")) f.minConf = +id; render(); });
-    $("all").onclick = () => { ISSUES.forEach(i => f.issues.add(i.id)); render(); };
-    $("none").onclick = () => { f.issues.clear(); render(); };
-    $("f-state").onchange = e => { f.state = e.target.value; render(); };
-    const q = $("q"); q.oninput = () => { f.q = q.value; if (E) E_draw(); renderSide(); syncExploreHash(); const fe2 = filteredEdges(); $aside.querySelector(".stat").textContent = `${fe2.length} stances · ${new Set(fe2.map(e => e.from)).size} legislators · ${new Set(fe2.map(e => e.to)).size} issues`; };
+    $aside.querySelectorAll(".hot-row").forEach(el => {
+      kbRow(el, "link");
+      el.onclick = () => {
+        const is = issueById[el.dataset.i]; if (!is) return;
+        if (E) { E.open = is.cat; E.hover = null; E.pinned = null; E.hl = { issue: is.id, set: new Set((seByI.get(is.id) || []).map(e => e.from)) }; E_build(false); }
+        renderSide(); syncExploreHash();
+      };
+    });
+    const ai = $("all-issues"); kbRow(ai, "link"); ai.onclick = goIssues;
+    $aside.querySelectorAll(".rc-line").forEach(el => { kbRow(el, "link"); el.onclick = () => window.E_fly(el.dataset.p); });
+    const stSel = $("f-state");
+    if (stSel) stSel.onchange = () => { f.state = stSel.value; if (E) E.stateF = f.state || null; syncExploreHash(); render(); };
+    const clr = $("clr-state");
+    if (clr) { kbRow(clr, "button"); clr.onclick = () => { f.state = ""; if (E) E.stateF = null; syncExploreHash(); render(); }; }
+    if (!statementsReady && !_stmtsHooked) { _stmtsHooked = true; STATEMENTS_READY.then(() => { if (state.mode === "explore") renderExploreAside(); }); }
   }
   function renderExploreSide() {
     const mmHtml = `<div class="mmwrap" id="mmwrap" style="display:block"><div class="h" style="display:flex;justify-content:space-between;margin-top:0"><span>Map</span><span id="mmmode" style="color:var(--muted);letter-spacing:.06em"></span></div><canvas id="mm"></canvas><div class="mmleg" id="mmleg"></div></div>`;
