@@ -100,6 +100,8 @@
   .es-g.ok .es-gt { color: var(--support); } .es-g.no .es-gt { color: var(--oppose); } .es-g.na .es-gt { color: var(--muted); }
   @media (max-width: 900px) { .es-cols { grid-template-columns: 1fr; } }
   /* one-line question rows under an issue: hairline separators, mono bill number, Yes / No toggles */
+  .flipline { margin-top: 6px; font-size: 12px; color: var(--muted); line-height: 1.5; }
+  .flipline b { font-weight: 600; }
   .mq { border-top: 1px solid var(--border); padding: 8px 2px; }
   .mq .num { font-family: var(--mono); font-size: 12px; color: var(--accent); margin-right: 8px; white-space: nowrap; }
   .mq .qq { font-size: 13px; line-height: 1.4; }
@@ -538,6 +540,8 @@
   };
   // bill id: lower-case letters+digits of the leading bill number ("H.R. 6110 …" -> "hr6110"; null for null)
   const billId = s => { if (s == null) return null; const m = /^\s*([A-Za-z.][A-Za-z.\s]*?\d+)/.exec(s); return m ? m[1].replace(/[^A-Za-z0-9]/g, "").toLowerCase() : null; };
+  // bills.json record for a billGroups key ("hr478"), the key the Bills tab and bill pages use
+  const billRecByNum = new Map(BILLS.map(b => [billId(b.number), b]));
   const nowWord = v => (v === null || v === undefined) ? "has not spoken on it" : v > .15 ? "supports now" : v < -.15 ? "opposes now" : "is neutral now";
   // lower-case a demand name for mid-sentence use after "if"/"until"; abbreviations ("Sec.") and acronyms stay untouched
   const lcFirst = s => String(s).replace(/^([A-Za-z][A-Za-z.]*)/, w => (w.includes(".") || !/^[A-Z][a-z]/.test(w)) ? w : w[0].toLowerCase() + w.slice(1));
@@ -930,7 +934,21 @@
       delete MATCH.answers[id];
       if (state.e.lastBill === id) { const rest = Object.keys(MATCH.answers).filter(k => billQ(k)); state.e.lastBill = rest.length ? rest[rest.length - 1] : null; }
     } else { MATCH.answers[id] = st; state.e.lastBill = id; }
-    saveMatch(); renderSide(); E_renderSummary(); E_size(); E_draw();
+    saveMatch();
+    if (state.mode === "explore") { renderSide(); E_renderSummary(); E_size(); E_draw(); } else render();
+  }
+  // bill page: what the bill does + the yes/no question, answered into the same store as Explore
+  function billPickerHtml(bid) {
+    const rec = billRecByNum.get(bid);
+    if (!rec || !(rec.short_context || rec.binary_question)) return "";
+    if (rec.complex_bill || !rec.binary_question) {
+      return `<div class="bill-sec">What this bill does</div>` + (rec.short_context ? `<div class="bill-sub">${rec.short_context}</div>` : "")
+        + `<div class="bill-sub">Too complex for one fair yes/no question.${rec.url ? ` <a class="link" href="${rec.url}" target="_blank" rel="noopener">Read the full bill ↗</a>` : ""}</div>`;
+    }
+    const ans = MATCH.answers[rec.bill_id];
+    return `<div class="bill-sec">What this bill does</div><div class="bill-sub">${rec.short_context || ""}</div>`
+      + `<div class="bill-sec">Your take · ${rec.binary_question.question}</div>`
+      + `<div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:0 0 6px">${ynBtns(rec, ans)}<span class="bill-sub" style="margin:0">${ans ? `You said ${ans === "support" ? "yes" : "no"} · click again to clear · <a class="link" href="#/explore">see who matches you ↗</a>` : "Hover a button for the full wording. Answers collect in Explore."}</span></div>`;
   }
   function bindAnswerButtons(root) {
     root.querySelectorAll("[data-mq]").forEach(el => el.onclick = ev => { ev.stopPropagation(); answerBill(el.dataset.mq, el.dataset.st); });
@@ -1068,18 +1086,51 @@
     const main = $("main");
     if (main) {
       const cols = el.querySelector(".es-cols");
-      if (cols) cols.style.maxHeight = Math.max(160, Math.round((main.clientHeight || 640) * .56) - 120) + "px";
+      if (cols) cols.style.maxHeight = Math.max(150, Math.round((main.clientHeight || 640) * .40) - 110) + "px";
       main.style.setProperty("--esum", show && el.offsetHeight ? el.offsetHeight + "px" : "0px");
     }
   }
   const fmt = s => (s > 0 ? "+" : "") + s.toFixed(2);
   // Direction ribbon: a time band colored by the direction held at each moment; flips show as color changes.
+  // human label for a statement's kind (contract kind + vote_question, legacy inference otherwise)
+  const kindLabel = s => {
+    const k = kindOf(s);
+    if (k === "yea" || k === "nay") { const vq = s.vote_question; return vq === "final_passage" ? "final-passage vote" : vq === "amendment" ? "amendment vote" : vq === "procedural" ? "procedural vote" : "vote"; }
+    return k === "views" ? "signed views" : k === "notvoting" ? "not voting" : k;
+  };
+  // statements that count toward the flip rule (derived.md): speech and final-passage / unknown-question votes
+  const countsForFlip = s => { const k = kindOf(s); return k === "speech" || ((k === "yea" || k === "nay") && (!s.vote_question || s.vote_question === "final_passage")); };
+  // chronological direction changes among flip-counting statements: [{date, direction, kind}] at each change,
+  // first element = the starting direction; falls back to every statement when none qualify (legacy data)
+  function flipPath(st) {
+    let q = st.filter(s => s.date && s.direction !== "neutral" && countsForFlip(s));
+    if (new Set(q.map(s => s.direction)).size < 2) q = st.filter(s => s.date && s.direction !== "neutral");
+    const out = [];
+    q.forEach(s => { if (!out.length || out[out.length - 1].direction !== s.direction) out.push({ date: s.date, direction: s.direction, kind: kindLabel(s), id: s.statement_id }); });
+    return out;
+  }
+  const flipLine = e => {
+    const path = flipPath(e.statements);
+    if (path.length < 2) return "";
+    return `<div class="flipline">⟲ Changed direction: ${path.map((p, k) => `<b style="color:${color(p.direction)}">${p.direction}</b> <span>(${p.date}, ${p.kind})</span>`).join(" → ")}</div>`;
+  };
+  // direction over time: band colour follows the flip-counting statements; amendment / procedural votes
+  // draw as small hollow dots so a nay on someone else's amendment never reads as a change of heart;
+  // same-day statements fan out vertically; the dot where the direction changed gets an accent ring
   function ribbon(st, W = 300, H = 22, labels = true) {
     const dated = st.filter(s => s.date); if (dated.length < 2) return "";
     const t0 = new Date(dated[0].date), t1 = new Date(dated[dated.length - 1].date), span = Math.max(1, t1 - t0);
     const x = d => 6 + (new Date(d) - t0) / span * (W - 12);
-    const segs = dated.map((s, k) => { const x0 = x(s.date), x1 = k < dated.length - 1 ? x(dated[k + 1].date) : W - 6; return `<rect x="${x0}" y="${H / 2 - 5}" width="${Math.max(2, x1 - x0)}" height="10" fill="${color(s.direction)}" fill-opacity="${.35 + Math.abs(s.score) * .6}"/>`; }).join("");
-    const dots = dated.map(s => `<circle cx="${x(s.date)}" cy="${H / 2}" r="4" fill="${color(s.direction)}" stroke="var(--bg)" stroke-width="1.5"><title>${s.date} · ${s.direction} ${fmt(s.score)}</title></circle>`).join("");
+    let band = dated.filter(countsForFlip); if (!band.length) band = dated;
+    const segs = band.map((s, k) => { const x0 = x(s.date), x1 = k < band.length - 1 ? x(band[k + 1].date) : W - 6; return `<rect x="${x0}" y="${H / 2 - 5}" width="${Math.max(2, x1 - x0)}" height="10" fill="${color(s.direction)}" fill-opacity="${.35 + Math.abs(s.score) * .6}"/>`; }).join("");
+    const changes = new Set(flipPath(st).slice(1).map(p => p.id).filter(Boolean));
+    const byDay = new Map(); dated.forEach(s => { const a = byDay.get(s.date) || []; a.push(s); byDay.set(s.date, a); });
+    const dots = dated.map(s => {
+      const g = byDay.get(s.date), j = g.indexOf(s), cy = H / 2 + (g.length > 1 ? (j - (g.length - 1) / 2) * 5 : 0);
+      const weak = !countsForFlip(s), r = weak ? 2.5 : 4;
+      const ring = changes.has(s.statement_id) ? `<circle cx="${x(s.date)}" cy="${cy}" r="7" fill="none" stroke="var(--accent)" stroke-width="1.5"/>` : "";
+      return ring + `<circle cx="${x(s.date)}" cy="${cy}" r="${r}" fill="${weak ? "var(--bg)" : color(s.direction)}" stroke="${weak ? color(s.direction) : "var(--bg)"}" stroke-width="1.5"><title>${s.date} · ${s.direction} ${fmt(s.score)} · ${kindLabel(s)}</title></circle>`;
+    }).join("");
     const lab = labels ? `<text x="6" y="${H - 1}" font-size="9" fill="var(--muted)">${dated[0].date}</text><text x="${W - 6}" y="${H - 1}" font-size="9" fill="var(--muted)" text-anchor="end">${dated[dated.length - 1].date}</text>` : "";
     return `<svg width="${W}" height="${H + (labels ? 10 : 0)}" style="vertical-align:middle;display:block">${segs}${dots}${lab}</svg>`;
   }
@@ -1087,8 +1138,8 @@
     const i = issueById[e.to], st = e.statements;
     const head = `<div style="font-weight:600">${title(byId[e.from])} on ${i.name}</div><div style="font-size:11px;color:var(--muted)">${i.catName} › ${i.subName}</div>
       <div class="tags" style="margin-top:6px"><span class="tag" style="color:${color(e.direction)}">${e.direction} · ${fmt(e.score)}</span><span class="tag">${e.n} statement${e.n > 1 ? "s" : ""}</span><span class="tag" title="attention: recency-weighted statement count, percentile across all edges">🔥 ${Math.round(e.heat * 100)}th pct</span>${e.flip ? `<span class="tag" style="border-color:var(--accent);color:var(--accent)">⟲ flipped</span>` : ""}<span class="tag c-${e.llm_confidence || "…"}">confidence: ${e.llm_confidence || "…"}</span></div>
-      ${e.n > 1 && statementsReady ? `<div style="margin-top:8px;font-size:11px;color:var(--muted)">direction over time</div>${ribbon(st, 300)}` : ""}`;
-    const items = [...st].reverse().map(s => `<div class="stmt ${hlId && s.statement_id === hlId ? "hl" : ""}" style="margin-top:10px;padding-top:10px;border-top:1px solid var(--border)"><div style="font-size:11px;color:var(--muted)">${s.statement_id ? `<span class="tag" style="padding:0 5px">${s.statement_id.replace(/^st0*/, "#")}</span> · ` : ""}${s.date || "undated"} · <span style="color:${color(s.direction)}">${s.direction} ${fmt(s.score)}</span> · <span class="tag c-${s.llm_confidence}" style="padding:0 5px">${s.llm_confidence}</span></div>
+      ${e.n > 1 && statementsReady ? `<div style="margin-top:8px;font-size:11px;color:var(--muted)">direction over time · solid = speech or final-passage vote, hollow = amendment / procedural</div>${ribbon(st, 300)}${e.flip ? flipLine(e) : ""}` : ""}`;
+    const items = [...st].reverse().map(s => `<div class="stmt ${hlId && s.statement_id === hlId ? "hl" : ""}" style="margin-top:10px;padding-top:10px;border-top:1px solid var(--border)"><div style="font-size:11px;color:var(--muted)">${s.statement_id ? `<span class="tag" style="padding:0 5px">${s.statement_id.replace(/^st0*/, "#")}</span> · ` : ""}${s.date || "undated"} · <span style="color:${color(s.direction)}">${s.direction} ${fmt(s.score)}</span> · ${kindLabel(s)} · <span class="tag c-${s.llm_confidence}" style="padding:0 5px">${s.llm_confidence}</span></div>
       <blockquote>“${s.quote}”</blockquote><div style="font-size:12px;color:var(--muted)">${s.bill && billId(s.bill) ? `<a class="link" href="#/bill/${billId(s.bill)}">${s.bill} ↗</a>` : (s.bill || "")} · linkage ${s.linkage} · ${s.model || ""}</div><a href="${s.source}" target="_blank" rel="noopener">source ↗</a></div>`).join("");
     return `<div class="evidence">${head}${statementsReady ? items : stmtsNote()}</div>`;
   }
@@ -1426,7 +1477,8 @@
       const list = groups.filter(g => (!onlyC || g.info.conds.length) && (!q || g.info.num.toLowerCase().includes(q) || g.info.title.toLowerCase().includes(q)));
       $("bll").innerHTML = list.slice(0, 200).map(g => {
         const v = g.info, bq = billQ(g.id);
-        return `<div class="ibl" data-b="${g.id}"><div><div class="num">${v.num}</div><div class="mt">${v.stmts.length} statement${v.stmts.length === 1 ? "" : "s"}</div></div><div><div>${v.title}</div>${bq && bq.short_context ? `<div class="mt" style="white-space:normal">${bq.short_context}</div>` : ""}<div class="mt">${v.iss.catName} › ${v.iss.subName} › ${v.iss.name}</div></div>${bq ? `<span class="itag" title="Carries a yes/no question — answer it in Explore">? question</span>` : ""}${v.conds.length ? `<span class="itag">◆ ${v.conds.length} condition${v.conds.length > 1 ? "s" : ""}</span>` : (bq ? "" : `<span class="mt">no conditions</span>`)}</div>`;
+        const ansB = MATCH.answers[(billRecByNum.get(g.id) || {}).bill_id];
+        return `<div class="ibl" data-b="${g.id}"><div><div class="num">${v.num}${ansB ? ` <span style="color:${ansB === "support" ? "var(--support)" : "var(--oppose)"}" title="you said ${ansB === "support" ? "yes" : "no"}">✓</span>` : ""}</div><div class="mt">${v.stmts.length} statement${v.stmts.length === 1 ? "" : "s"}</div></div><div><div>${v.title}</div>${bq && bq.short_context ? `<div class="mt" style="white-space:normal">${bq.short_context}</div>` : ""}<div class="mt">${v.iss.catName} › ${v.iss.subName} › ${v.iss.name}</div></div>${bq ? `<span class="itag" title="Carries a yes/no question — answer it in Explore">? question</span>` : ""}${v.conds.length ? `<span class="itag">◆ ${v.conds.length} condition${v.conds.length > 1 ? "s" : ""}</span>` : (bq ? "" : `<span class="mt">no conditions</span>`)}</div>`;
       }).join("") + (list.length > 200 ? `<div class="mt" style="padding:10px 0">+ ${list.length - 200} more · filter to narrow</div>` : "");
       $("bll").querySelectorAll("[data-b]").forEach(el => { kbRow(el, "link"); el.onclick = () => openBill(el.dataset.b); });
     };
@@ -1620,11 +1672,18 @@
       const g2 = s.append("g").attr("transform", `translate(0,${y})`);
       g2.append("text").attr("x", L - 10).attr("y", 20).attr("text-anchor", "end").attr("fill", "var(--text)").attr("font-size", 12).text(r.i.name.length > 24 ? r.i.name.slice(0, 23) + "…" : r.i.name);
       g2.append("rect").attr("x", L - 4).attr("y", 6).attr("width", 3).attr("height", 22).attr("fill", CAT_HUE[r.i.cat]);
-      st.forEach((a, j) => { const x0 = x(new Date(a.date)), x1 = j < st.length - 1 ? x(new Date(st[j + 1].date)) : x.range()[1];
+      let band = st.filter(countsForFlip); if (!band.length) band = st;
+      band.forEach((a, j) => { const x0 = x(new Date(a.date)), x1 = j < band.length - 1 ? x(new Date(band[j + 1].date)) : x.range()[1];
         g2.append("rect").attr("x", x0).attr("y", 11).attr("width", Math.max(2, x1 - x0)).attr("height", 12).attr("fill", color(a.direction)).attr("fill-opacity", .3 + Math.abs(a.score) * .5); });
-      st.forEach(a => g2.append("circle").attr("cx", x(new Date(a.date))).attr("cy", 17).attr("r", 5).attr("fill", color(a.direction)).attr("stroke", "var(--bg)").attr("stroke-width", 1.5).style("cursor", "pointer")
-        .on("click", () => { state.p.sel = r.e; state.p.hl = a.statement_id; renderSide(); }).append("title").text(`${a.date} · ${a.direction} ${fmt(a.score)}\n“${a.quote}”`));
-      if (r.e.flip) g2.append("text").attr("x", W - R).attr("y", 21).attr("text-anchor", "end").attr("fill", "var(--accent)").attr("font-size", 12).text("⟲");
+      const changes = new Set(flipPath(st).slice(1).map(p => p.id).filter(Boolean));
+      const byDay = new Map(); st.forEach(a => { const g = byDay.get(a.date) || []; g.push(a); byDay.set(a.date, g); });
+      st.forEach(a => {
+        const g = byDay.get(a.date), j = g.indexOf(a), cy = 17 + (g.length > 1 ? (j - (g.length - 1) / 2) * 5 : 0), weak = !countsForFlip(a);
+        if (changes.has(a.statement_id)) g2.append("circle").attr("cx", x(new Date(a.date))).attr("cy", cy).attr("r", 8.5).attr("fill", "none").attr("stroke", "var(--accent)").attr("stroke-width", 1.5);
+        g2.append("circle").attr("cx", x(new Date(a.date))).attr("cy", cy).attr("r", weak ? 3 : 5).attr("fill", weak ? "var(--bg)" : color(a.direction)).attr("stroke", weak ? color(a.direction) : "var(--bg)").attr("stroke-width", 1.5).style("cursor", "pointer")
+          .on("click", () => { state.p.sel = r.e; state.p.hl = a.statement_id; renderSide(); }).append("title").text(`${a.date} · ${a.direction} ${fmt(a.score)} · ${kindLabel(a)}\n“${a.quote}”`);
+      });
+      if (r.e.flip) { const fp = flipPath(st); g2.append("text").attr("x", W - R).attr("y", 21).attr("text-anchor", "end").attr("fill", "var(--accent)").attr("font-size", 11).text(fp.length > 1 ? `⟲ ${fp[fp.length - 2].direction} → ${fp[fp.length - 1].direction}` : "⟲ flipped"); }
     });
   }
   function drawAttn(p, mine) {
@@ -1972,6 +2031,7 @@
       <div class="crumbline"><a id="bill-back">← Explore</a> · ${path} · <span style="color:var(--text)">Bill</span></div>
       <h1>${info.num}${info.title ? ` · ${billTitleDisp(info)}` : ""}</h1>
       <div class="bill-sub">${path} · ${info.stmts.length} statement${info.stmts.length === 1 ? "" : "s"} in data${info.latest ? ` · latest ${info.latest.date || "undated"}` : ""}</div>
+      ${billPickerHtml(state.b.id)}
       ${bq ? `${bq.short_context ? `<div class="bill-sub" style="color:var(--text)">${bq.short_context}</div>` : ""}<div class="bill-sub">${bq.binary_question.question} ${bq.binary_question.options.map(o => `<span class="pill ${o.stance}">${o.label}</span>`).join(" ")} <span class="link" id="bill-ans">Answer it in Explore →</span></div>` : ""}
       <div class="bill-strip"><div><b style="color:var(--support)">${sup}</b><span>support now</span></div><div><b style="color:var(--oppose)">${opp}</b><span>oppose now</span></div><div><b style="color:var(--accent)">${info.conds.length}</b><span>stated conditions</span></div><div><b>${silent}</b><span>member silent on it</span></div></div>
       <div class="bill-sub" style="margin:-2px 0 2px">${kindLine}</div>
@@ -1993,6 +2053,7 @@
     wrap.querySelectorAll(".whip i").forEach(el => { if (el.getBoundingClientRect().width < 36) el.textContent = ""; });
     wrap.querySelectorAll(".dot[data-p], .bill-col-row").forEach(el => { kbRow(el, "link"); el.onclick = () => openProfile(el.dataset.p); });
     wrap.querySelectorAll(".rost-row").forEach(el => { kbRow(el, "link"); el.onclick = () => openProfile(el.dataset.p); });
+    bindAnswerButtons(wrap);
     wrap.querySelectorAll("[data-rostall]").forEach(el => el.onclick = () => { state.b.rostAll = { ...(state.b.rostAll || {}), [el.dataset.rostall]: el.dataset.open === "1" }; renderBill(); });
     // --- negotiation map svg: one map for every bill; demand column only when demands exist ---
     const W = 860, H = mapH, cy = H / 2;
@@ -2293,7 +2354,7 @@
     const W = Math.max(320, (pane && pane.clientWidth) || 0);
     let chrome = 0;
     [ectl, ehud, $("legend"), $("hint"), $("e-summary")].forEach(el => { if (el && el.getClientRects().length) chrome += el.offsetHeight || 0; });
-    chrome = Math.max(76, chrome + 16);
+    chrome = Math.max(96, chrome + 44); // HUD, controls and legend float over the pane bottom: keep ring labels clear of them
     const H = Math.max(320, ((pane && pane.clientHeight) || 0) - chrome);
     return { W, H };
   }
@@ -2599,7 +2660,16 @@
         const lx = cx + out * Math.cos(a.am), ly = cy + out * Math.sin(a.am);
         const lines = E_wrapLabel(a.name, 22), f = "600 " + (11 / E.zt.k) + "px Public Sans", lh = 12 / E.zt.k;
         cx2.font = f;
-        const y0 = Math.min(Math.max(ly + 4 - (lines.length - 1) * lh / 2, 10 + (lines.length - 1) * lh / 2), H - 4 - (lines.length - 1) * lh / 2);
+        let y0 = Math.min(Math.max(ly + 4 - (lines.length - 1) * lh / 2, 10 + (lines.length - 1) * lh / 2), H - 4 - (lines.length - 1) * lh / 2);
+        // collision pass: labels clamped to the pane edge pile up on one line; slide a colliding label
+        // away from the ring (down in the lower half, up in the upper half) until it is clear
+        const twMax = Math.max(...lines.map(ln => cx2.measureText(ln).width));
+        const bx = al === "left" ? lx : al === "right" ? lx - twMax : lx - twMax / 2;
+        const boxAt = yy => ({ x0: bx, x1: bx + twMax, y0: yy - (lines.length - 1) * lh / 2 - lh / 2, y1: yy + (lines.length - 1) * lh / 2 + lh / 2 });
+        const hits = yy => { const b = boxAt(yy); return drawnBoxes.some(o => b.x0 < o.x1 && b.x1 > o.x0 && b.y0 < o.y1 && b.y1 > o.y0); };
+        const dir = Math.sin(a.am) >= 0 ? 1 : -1;
+        for (let k = 0; k < 6 && hits(y0); k++) y0 += dir * (lh + 2);
+        drawnBoxes.push(boxAt(y0));
         lines.forEach((ln, li) => {
           const tw = cx2.measureText(ln).width;
           E_label(ln, E_fitX(lx, tw, al, W), y0 + (li - (lines.length - 1) / 2) * lh, f, PAL.ink, al);
@@ -2611,11 +2681,14 @@
         const t = E_truncIssue(a.name) + (nq ? ` · ${nq}?` : ""), f = "500 " + (10 / E.zt.k) + "px Public Sans";
         cx2.font = f;
         const tw = cx2.measureText(t).width, th = 12 / E.zt.k;
-        const px = E_fitX(ix, tw, al, W), py = Math.min(Math.max(iy + 4, 10), H - 4);
+        const px = E_fitX(ix, tw, al, W); let py = Math.min(Math.max(iy + 4, 10), H - 4);
         const x0 = al === "left" ? px : al === "right" ? px - tw : px - tw / 2;
-        const box = { x0: x0, x1: x0 + tw, y0: py - th / 2, y1: py + th / 2 };
-        if (cull && drawnBoxes.some(b => box.x0 < b.x1 && box.x1 > b.x0 && box.y0 < b.y1 && box.y1 > b.y0)) continue;
-        drawnBoxes.push(box);
+        const boxI = yy => ({ x0: x0, x1: x0 + tw, y0: yy - th / 2, y1: yy + th / 2 });
+        const hitI = yy => { const b = boxI(yy); return drawnBoxes.some(o => b.x0 < o.x1 && b.x1 > o.x0 && b.y0 < o.y1 && b.y1 > o.y0); };
+        const dirI = Math.sin(a.am) >= 0 ? 1 : -1;
+        for (let k = 0; k < 4 && hitI(py); k++) py += dirI * (th + 2);
+        if (cull && hitI(py)) continue;
+        drawnBoxes.push(boxI(py));
         E_label(t, px, py, f, PAL.ink, al);
       }
     }
