@@ -806,7 +806,7 @@
       // title = text after the bill number from the latest statement, else the bill string
       const latest = g.stmts.slice().sort((a, b) => String(a.date || "").localeCompare(String(b.date || ""))).pop();
       const chosen = latest ? latest.bill : g.conds[0].bill;
-      const m = /^\s*([A-Za-z.]+\s*\d+)\s*(.*)$/.exec(chosen || "");
+      const m = /^\s*([A-Za-z.][A-Za-z.\s]*?\d+)\s*(.*)$/.exec(chosen || "");
       const num = m ? m[1].replace(/\s+/g, " ") : (chosen || id), title = m ? m[2].trim() : "";
       const onBill = rows.filter(r => billId(r.bill) === id);
       const chips = [...new Set(onBill.map(r => r.demand))].map(d => { const def = DEMANDS[d] || {}, mine = onBill.filter(r => r.demand === d);
@@ -919,7 +919,7 @@
     });
     const conds = condByIssue[id] || [];
     return [...per.values()].map(g => {
-      const m = /^\s*([A-Za-z.]+\s*\d+)\s*(.*)$/.exec(g.str || "");
+      const m = /^\s*([A-Za-z.][A-Za-z.\s]*?\d+)\s*(.*)$/.exec(g.str || "");
       return { ...g, num: m ? m[1].replace(/\s+/g, " ") : g.id, title: m ? m[2].trim() : "", conds: conds.filter(r => billId(r.bill) === g.id).length };
     }).sort((a, b) => b.n - a.n);
   }
@@ -1404,7 +1404,7 @@
     if (!g || (!g.stmts.length && !g.conds.length)) return null;
     const latest = g.stmts.slice().sort((a, b) => String(a.date || "").localeCompare(String(b.date || ""))).pop();
     const chosen = latest ? latest.bill : g.conds[0].bill;
-    const m = /^\s*([A-Za-z.]+\s*\d+)\s*(.*)$/.exec(chosen || "");
+    const m = /^\s*([A-Za-z.][A-Za-z.\s]*?\d+)\s*(.*)$/.exec(chosen || "");
     const counts = {};
     g.stmts.forEach(s => counts[s.issue] = (counts[s.issue] || 0) + 1);
     g.conds.forEach(r => counts[r.issue] = (counts[r.issue] || 0) + 1);
@@ -1721,7 +1721,7 @@
     // bill node
     const nb = svg.append("g").attr("transform", `translate(${billPos.x},${billPos.y})`);
     nb.append("rect").attr("x", -75).attr("y", -31).attr("width", 150).attr("height", 62).attr("fill", "#161b2e").style("stroke", "var(--accent)");
-    nb.append("text").attr("text-anchor", "middle").attr("y", -8).style("font", "600 13px var(--display)").style("fill", "var(--text)").text(info.num);
+    nb.append("text").attr("text-anchor", "middle").attr("y", -8).style("font", "600 13px var(--display)").style("fill", "var(--text)").text(info.num.length > 18 ? info.num.slice(0, 17) + "…" : info.num).append("title").text(info.num);
     nb.append("text").attr("text-anchor", "middle").attr("y", 8).style("font", "11px var(--sans)").style("fill", "var(--muted)").text(info.title.length > 24 ? info.title.slice(0, 23) + "…" : info.title);
     nb.append("text").attr("text-anchor", "middle").attr("y", 22).style("font", "500 10px var(--mono)").style("fill", "var(--muted)")
       .text(active.length ? `+ ${active.map(a => ((DEMANDS[a] || {}).name || a).split(" ")[0]).join(" + ").toUpperCase()}` : "AS WRITTEN");
