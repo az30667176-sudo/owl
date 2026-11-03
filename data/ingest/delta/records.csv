@@ -1,0 +1,69 @@
+record_id,kind,views_type,part,parts,report_citation,date,committee_code,committee_name,bill_id,bill_label,bill_title,source_url,parse_status,n_votes,n_quotable_vote_lines,n_tokens_est,n_persons,person_bioguides,bill_urls,content
+rec-2026-10-29-crpt-119hrpt853-committee-votes-1,committee_votes,,1,,H. Rept. 119-853,2025-06-11,HSPW,House Committee on Transportation and Infrastructure,hr3331-119,H.R. 3331,Mariner Exam Modernization Act,https://www.govinfo.gov/content/pkg/CRPT-119hrpt853/html/CRPT-119hrpt853.htm,checksum_failed,67,64,317,67,G000546|L000560|C001087|N000147|W000806|N000002|M001184|C001068|P000605|G000559|B001291|J000288|R000603|C001072|B001295|T000468|L000578|H001068|W000821|B001285|M001199|W000808|S001212|D000623|B001309|C001112|J000301|S001211|V000133|D000629|N000026|G000586|M000871|P000614|O000086|M001196|B001316|S001159|C001129|R000579|E000235|H001094|K000401|S001223|F000480|S001221|W000829|F000477|B001321|D000530|B001323|G000598|B001327|P000621|H001100|M001237|S001229|F000483|M001240|G000602|T000490|F000481|K000405|K000404|K000403|O000177|P000622,https://www.congress.gov/bill/119th-congress/house-bill/3331,"<other>: On: final passage, as amended. Yea 52. Nay 52. Present 0. Not voting 0.
+Mr. Graves of MO: yea
+Mr. Larsen of WA: yea
+Mr. Crawford: yea
+Ms. Norton: yea
+Mr. Webster of FL: nay
+Mr. Nadler: yea
+Mr. Massie: nay
+Mr. Cohen: yea
+Mr. Perry: nay
+Mr. Garamendi: yea
+Mr. Babin: nay
+Mr. Johnson of GA: yea
+Mr. Rouzer: yea
+Mr. Carson: yea
+Mr. Bost: yea
+Ms. Titus: yea
+Mr. LaMalfa: yea
+Mr. Huffman: not voting
+Mr. Westerman: yea
+Ms. Brownley: yea
+Mr. Mast: yea
+Ms. Wilson of FL: yea
+Mr. Stauber: yea
+Mr. DeSaulnier: yea
+Mr. Burchett: nay
+Mr. Carbajal: yea
+Mr. Johnson of SD: yea
+Mr. Stanton: yea
+Mr. Van Drew: nay
+Ms. Davids of KS: yea
+Mr. Nehls: not voting
+Mr. Garcia of IL: yea
+Mr. Mann: not voting
+Mr. Pappas: yea
+Mr. Owens: nay
+Mr. Moulton: yea
+Mr. Burlison: nay
+Ms. Strickland: yea
+Mr. Collins: nay
+Mr. Ryan: yea
+Mr. Ezell: yea
+Ms. Hoyle of OR: yea
+Mr. Kiley: yea
+Mrs. Sykes: yea
+Mr. Fong: yea
+Ms. Scholten: yea
+Mr. Wied: yea
+Mrs. Foushee: yea
+Mr. Barrett: yea
+Mr. Deluzio: yea
+Mr. Begich: nay
+Mr. Garcia of CA: yea
+Mr. Bresnahan: yea
+Ms. Pou: yea
+Mr. Hurd: yea
+Ms. McDonald Rivet: yea
+Mr. Shreve: yea
+Ms. Friedman: yea
+Mr. McDowell: yea
+Ms. Gillen: yea
+Mr. Taylor: yea
+Mr. Figures: yea
+Mr. Knott: yea
+Ms. King-Hinds: yea
+Mr. Kennedy: nay
+Mr. Onder: nay
+Mr. Patronis: yea"

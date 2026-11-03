@@ -53,3 +53,5 @@ shortening, and quote resolution (speaker-tag substring, `not_voting`
 record line, backtick repair, unresolvable → null).
 
 See docs/ARCHITECTURE.md for the contract this service consumes/produces.
+
+The CSV drop this converter reads is produced by `govinfo/` (House committee reports → CSV, key-free, weekly job); see `govinfo/README.md`.

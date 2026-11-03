@@ -1688,3 +1688,9 @@ hr10238-119,HSSM,House Committee on Small Business,house_committee,super_high,me
 hr10238-119,crs:commerce,Commerce,crs_policy_area,super_high,metadata,BILLSTATUS-119hr10238
 hr1382-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt852
 hr1382-119,crs:environmental-protection,Environmental Protection,crs_policy_area,super_high,metadata,BILLSTATUS-119hr1382
+hr3331-119,HSPW,House Committee on Transportation and Infrastructure,house_committee,super_high,metadata,CRPT-119hrpt853
+hr3331-119,crs:transportation-and-public-works,Transportation and Public Works,crs_policy_area,super_high,metadata,BILLSTATUS-119hr3331
+hr4598-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt854
+hr4598-119,crs:native-americans,Native Americans,crs_policy_area,super_high,metadata,BILLSTATUS-119hr4598
+hr7954-119,HSII,House Committee on Natural Resources,house_committee,super_high,metadata,CRPT-119hrpt856
+hr7954-119,crs:native-americans,Native Americans,crs_policy_area,super_high,metadata,BILLSTATUS-119hr7954
