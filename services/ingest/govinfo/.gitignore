@@ -1,0 +1,15 @@
+# downloads and generated output stay out of git (patterns without a trailing slash also catch a symlinked cache); the CSV drop is published to the repo's data/ingest/ by ingest.py --publish
+cache
+out
+out_full
+state/runs/
+*.part
+*.bak
+*.bak?
+__pycache__/
+.DS_Store
+.claude/
+state/last_report.md
+state/last_run.json
+.agents/
+state/staging/

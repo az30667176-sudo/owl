@@ -1,0 +1,114 @@
+# Weekly ingest of House committee reports, operated by Muse Code on a GitHub-hosted runner.
+# Lands at .github/workflows/ingest-weekly.yml (copy this file there in the PR that adds services/ingest/govinfo).
+#
+# What it does every Monday: restore the download cache -> (first run only) backfill every report of the 119th ->
+# `tools/ingest-weekly.sh` (Muse Code headless runs `ingest.py run --publish data/ingest`; falls back to running the
+# pipeline directly when META_API_KEY is absent; the build converts the drop with services/ingest/csv-to-json.mjs and
+# validates it before publishing) -> if the CSV drop changed, commit on data/ingest-<date>, push, open a PR.
+# Repo prerequisites (admin, once): secret META_API_KEY (agent mode; optional), Settings > Actions > General >
+# "Allow GitHub Actions to create and approve pull requests" (else the branch is pushed and the PR is opened by hand).
+name: Weekly ingest (House committee reports)
+
+on:
+  schedule:
+    - cron: "0 13 * * 1"          # Mondays 13:00 UTC (9 AM EDT / 8 AM EST)
+  workflow_dispatch:
+    inputs:
+      agent:
+        description: Operate the run through Muse Code (needs the META_API_KEY secret); unchecked = run the pipeline directly
+        type: boolean
+        default: true
+      force_build:
+        description: Rebuild and republish even when govinfo has nothing new
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: ingest-weekly
+  cancel-in-progress: false
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      INGEST_DIR: services/ingest/govinfo         # the govinfo pipeline; services/ingest/ itself is the CSV -> JSON converter
+      MUSE_MODEL: muse-spark-1.3-contributor
+      MUSE_EXTRA_FLAGS: --disable-sandbox          # the runner is disposable; Muse Code's OS sandbox is not needed here
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: System and Python dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils      # pdftotext, PDF fallback
+          python3 -m pip install --quiet pyyaml
+
+      - name: Restore the download cache (reports, MODS, bill status, roster)
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.INGEST_DIR }}/cache
+          key: ingest-cache-${{ github.run_id }}
+          restore-keys: |
+            ingest-cache-
+
+      - name: Backfill when the cache is empty (first run, or evicted)
+        working-directory: ${{ env.INGEST_DIR }}
+        run: |
+          n_mods="$(find cache/mods -name '*.xml' 2>/dev/null | wc -l)"
+          if [ "$n_mods" -lt 100 ]; then
+            echo "cache empty: downloading every report of the 119th first (about 15 minutes)"
+            python3 -I ingest.py backfill --no-validate
+          else
+            echo "cache present: $n_mods MODS files, $(find cache/crpt -type f 2>/dev/null | wc -l) report texts"
+          fi
+
+      - name: Install Muse Code
+        if: ${{ github.event_name == 'schedule' || inputs.agent }}
+        run: |
+          curl -fsSL https://dev.meta.ai/install.sh | sh
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+      - name: Weekly ingest
+        working-directory: ${{ env.INGEST_DIR }}
+        env:
+          META_API_KEY: ${{ secrets.META_API_KEY }}
+          AGENT: ${{ github.event_name == 'schedule' || inputs.agent }}
+          FORCE_BUILD: ${{ inputs.force_build }}
+        run: |
+          publish="$GITHUB_WORKSPACE/data/ingest"
+          if [ "$FORCE_BUILD" = "true" ]; then
+            python3 -I ingest.py run --force-build --publish "$publish"
+          elif [ "$AGENT" = "true" ] && [ -n "$META_API_KEY" ] && command -v muse >/dev/null 2>&1; then
+            tools/ingest-weekly.sh --publish "$publish"           # Muse Code operates the run (contributor tier)
+          else
+            tools/ingest-weekly.sh --direct --publish "$publish"  # no agent: the pipeline alone
+          fi
+
+      - name: Keep the run logs and the agent's report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ingest-run-${{ github.run_id }}
+          path: |
+            ${{ env.INGEST_DIR }}/state/runs
+            ${{ env.INGEST_DIR }}/state/last_report.md
+            ${{ env.INGEST_DIR }}/state/last_run.json
+          if-no-files-found: ignore
+
+      - name: Open a pull request when the drop changed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: ${{ env.INGEST_DIR }}/tools/ci-open-drop-pr.sh
