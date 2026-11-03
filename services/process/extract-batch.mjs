@@ -35,6 +35,7 @@ import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync } from 
 import { resolve, join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { reviewNewIssues } from "./review-issues.mjs";
+import { SCORE_RUBRIC, resolveScore } from "./scoring.mjs";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "../..");
 const args = process.argv.slice(2);
@@ -90,14 +91,14 @@ For every passage where a listed legislator takes a position on a policy issue, 
 Rules:
 - Only legislators from the provided list, by id. The speaker tag names the section's signers; attribute shared text to EACH signer only when the passage states a position (do not emit one row per signer for purely procedural sentences).
 - Map each statement to an existing issue id when one fits. If none fits, propose new_issue {name, parent} where parent is a subcommittee id from the taxonomy.
-- score in [-1, 1]: +1 strong support, -1 strong opposition, near 0 neutral/undecided. direction must match the score.
+- ${SCORE_RUBRIC}
 - linkage (how directly the quote addresses the issue) and llm_confidence (how sure you are of the reading) in: low, mid, high, super_high.
 - quote: a VERBATIM contiguous excerpt (<= 60 words, <= 600 chars) copied exactly from the text. Never paraphrase. The quote must by itself justify the score. Never quote the speaker tag.
 - bill: the bill named in or around the passage (label first, e.g. "H.R. 1382 ..."), else null. rationale: one neutral sentence on why the score.
 - A legislator may produce several statements if they address several issues. Do not merge different issues into one statement.
 - If no passage states a position attributable to a listed legislator, return {"statements": []}.
 Return ONLY the JSON object: no markdown fences, no commentary, no analysis text.
-{"statements":[{"person":"<id>","issue":"<issue-id>"|null,"new_issue":{"name":"...","parent":"<sub-id>"}|null,"score":0.8,"direction":"support","linkage":"high","llm_confidence":"high","quote":"...","bill":"H.R. 1382 ..."|null,"rationale":"..."}]}`;
+{"statements":[{"person":"<id>","issue":"<issue-id>"|null,"new_issue":{"name":"...","parent":"<sub-id>"}|null,"rationale":"...","direction":"support","intensity":"qualified","position":0.6,"linkage":"high","llm_confidence":"high","quote":"...","bill":"H.R. 1382 ..."|null}]}`;
 
 function buildPrompt(record, persons) {
   const userMsg = `Taxonomy subcommittee ids:\n${subs.join(", ")}\n\nExisting issues (id: name, parent):\n${issuesFile.issues.map((i) => `${i.id}: ${i.name} (${i.parent})`).join("\n")}\n\nLegislators (id: name, district, party):\n${persons.map((p) => `${p.id}: ${p.name}, ${p.district}, ${p.party}`).join("\n")}\n\nRecord ${record.id}, date ${record.hints?.date || "unknown"}, source ${record.source?.url_link}.\nText:\n${record.content}\n\nExtract the statements now.`;
@@ -136,8 +137,8 @@ function validateStatements(parsed, record, persons) {
         }
       } else why.push(`unknown issue ${st.issue} / bad new_issue`);
     }
-    const score = Number(st.score);
-    if (!(score >= -1 && score <= 1)) why.push("score out of range");
+    const score = resolveScore(st);
+    if (score === null) why.push("score unresolvable (bad intensity band or raw score out of range)");
     const direction = dirOf(score);
     if (!CONF.has(st.linkage) || !CONF.has(st.llm_confidence)) why.push("bad linkage/confidence");
     const q = String(st.quote || "").trim();
@@ -151,6 +152,7 @@ function validateStatements(parsed, record, persons) {
       direction, linkage: st.linkage, llm_confidence: st.llm_confidence, quote: q, bill,
       source: record.source?.url_link || null, record_id: record.id,
       model: MODEL, rationale: st.rationale ? String(st.rationale).slice(0, 400) : null,
+      kind: "speech",
     });
   }
   return { accepted, rejected, newIssues };

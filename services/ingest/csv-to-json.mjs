@@ -4,7 +4,7 @@
 //   node services/ingest/csv-to-json.mjs <csv-dir> <out-dir> [--records <dir>] [--drop <label>] [--sub-names <taxonomy.json>] [--skip-manifest]
 //
 // Input:  an owl-ingest-csv-* drop (records/people/bills/issues/evidence/...csv + MANIFEST.csv).
-// Output: <out-dir>/{taxonomy,issues,people,stances}.json and <records dir>/*.json
+// Output: <out-dir>/{taxonomy,issues,people,stances,bills}.json and <records dir>/*.json
 //         (records dir defaults to <out-dir>/records).
 // summaries.json and conditions.json are LLM-owned and intentionally not emitted;
 // the frontend treats their absence as "not generated yet".
@@ -18,12 +18,15 @@
 //     title-cased slugs; the CSV itself has no names)
 //   issues.csv  -> issues.json
 //   records.csv -> one contract-A record JSON per row
-//   evidence.csv -> stances.json, one row per (fact x bill issue):
-//     sponsored/cosponsored -> +/-1.0/0.8, anchored to synthetic per-(bill,date)
-//                                BILLSTATUS transcription records (rec-billstatus-...)
-//     committee_vote yea/nay   -> +/-0.8, quote = the record's own vote line
-//     committee_vote present/not_voting -> 0.0 neutral
-//     signed_views             -> +/-0.6 (mid confidence: stance is heuristic)
+//   evidence.csv -> stances.json, one row per fact on the bill's primary issue:
+//     sponsored/cosponsored -> +/-1.0/0.8, kind sponsored/cosponsored, anchored to
+//                                synthetic per-(bill,date) BILLSTATUS transcription
+//                                records (rec-billstatus-*)
+//     committee_vote yea/nay   -> +/-0.8, kind vote, vote_question when recognised,
+//                                quote = the record's own vote line
+//     committee_vote present   -> 0.0 neutral, kind vote
+//     committee_vote not_voting -> skipped (absence is not a stance)
+//     signed_views             -> skipped (tracks party membership, not opposition)
 //     offered_amendment        -> skipped (no exported record to anchor a quote)
 //   Rows whose bill has no seed issues, whose quote line is not found in the
 //   record, or that duplicate an identical statement are skipped and reported.
@@ -92,7 +95,64 @@ export function resolveSubName(id, refMap) {
   return (refMap && refMap.get(id)) || subNameFromId(id);
 }
 
-const SCORE = { sponsored: 1.0, cosponsored: 0.8, committee_vote: 0.8, signed_views: 0.6 };
+const SCORE = { sponsored: 1.0, cosponsored: 0.8, committee_vote: 0.8 };
+
+// Evidence action -> contract-B statement kind (#25). Conceptual mapping; whether
+// the action currently emits a row is decided in the loop (signed_views is skipped, #26).
+export function kindOfAction(action) {
+  return { sponsored: "sponsored", cosponsored: "cosponsored", committee_vote: "vote", signed_views: "views" }[action] || null;
+}
+
+// Vote question -> final_passage | amendment | procedural, or null when the question
+// is report boilerplate ("In compliance with the Rules...") or otherwise unrecognised.
+// Null means "omit the field, never guess" (#25).
+export function classifyVoteQuestion(q) {
+  const t = (q || "").trim();
+  if (!t) return null;
+  if (/final passage/i.test(t)) return "final_passage";
+  if (/ordered favorably reported|motion to report .* favorably/i.test(t)) return "final_passage";
+  if (/\bamdt\b|amendment|offered by/i.test(t)) return "amendment";
+  if (/^no\.\s*\d/i.test(t)) return "amendment";
+  if (/^on [a-z][a-z'. -]* log \d/i.test(t)) return "amendment";
+  if (/motion to table|appeal of the ruling|point of order/i.test(t)) return "procedural";
+  return null;
+}
+
+// Latest action text -> bill status, or null when the action is ambiguous.
+// Conservative by design: only high-confidence signals map; a missing status
+// (field omitted) beats a wrong one (#28).
+export function classifyBillStatus(actionText, label) {
+  const t = (actionText || "").trim();
+  if (!t) return null;
+  const house = !/^\s*s\.?\s/i.test((label || "").trim());
+  if (/signed by (the )?president|became public law|became private law/i.test(t)) return "enacted";
+  if (/passed senate|agreed to in (the )?senate/i.test(t)) return "passed_senate";
+  if (/passed (the )?house|agreed to in (the )?house/i.test(t)) return "passed_house";
+  if (house && /received in the senate|placed on senate legislative calendar/i.test(t)) return "passed_house";
+  if (!house && /received in the house/i.test(t)) return "passed_senate";
+  if (/failed by the yeas and nays|failed of passage/i.test(t)) return "failed";
+  if (/referred to|hearings held|ordered to be reported|markup|subcommittee/i.test(t)) return "committee";
+  if (/introduced in/i.test(t)) return "introduced";
+  return null;
+}
+
+// One bills.csv row -> contract-B bill record (#28). Unknown seed issues are
+// dropped; unrecognised status / bad dates / bad urls are omitted, never guessed.
+export function buildBillRecord(b, issueIds) {
+  const rec = { bill_id: (b.bill_id || "").trim(), number: (b.label || "").trim() };
+  const congress = /-(\d+)$/.exec(rec.bill_id)?.[1];
+  if (congress) rec.congress = parseInt(congress, 10);
+  if ((b.title || "").trim()) rec.title = b.title.trim();
+  const status = classifyBillStatus(b.latest_action_text, rec.number);
+  if (status) rec.status = status;
+  if (isDate((b.introduced_date || "").trim())) rec.introduced_date = b.introduced_date.trim();
+  const lastDate = (b.latest_action_date || "").trim(), lastText = (b.latest_action_text || "").trim().replace(/\s+/g, " ");
+  if (isDate(lastDate) && lastText) rec.last_action = { date: lastDate, text: lastText };
+  if ((b.sponsor_bioguide || "").trim()) rec.sponsor_id = b.sponsor_bioguide.trim();
+  rec.issue_ids = splitPipe(b.seed_issue_ids).filter((id) => issueIds.has(id));
+  if (isUri((b.congress_url || "").trim())) rec.url = b.congress_url.trim();
+  return rec;
+}
 
 // Resolve an evidence quote_line to the verbatim quote to store, or null.
 // Tries, in order: the line as-is (signer names are substrings of the speaker
@@ -211,6 +271,15 @@ export function convertCsvDrop(csvDir, outDir, opts = {}) {
   }
   const issueIds = new Set(issues.map((i) => i.id));
 
+  // 2b. bills.json (#28): one record per bill in the drop.
+  const billsOut = [];
+  for (const b of billsCsv) {
+    const rec = buildBillRecord(b, issueIds);
+    if (!rec.bill_id || !rec.number) { skip("bill-without-id"); continue; }
+    billsOut.push(rec);
+  }
+  billsOut.sort((a, b) => (a.bill_id < b.bill_id ? -1 : 1));
+
   // 3. people.json (sitting + departed: all are real 119th members).
   const people = peopleCsv.map((p) => ({
     id: p.bioguide_id.trim(), bioguide_id: p.bioguide_id.trim(), name: p.name.trim(),
@@ -266,11 +335,16 @@ export function convertCsvDrop(csvDir, outDir, opts = {}) {
   for (const e of evidenceCsv) {
     const action = e.action;
     if (action === "offered_amendment") { skip("amendment-no-record"); continue; }
+    // #26: views signatures track minority-party membership, not issue opposition — no stance row.
+    if (action === "signed_views") { skip("views-no-stance-row"); continue; }
+    // #26: absence is not a neutral stance — no row (a cast "present" vote still emits one).
+    if (action === "committee_vote" && (e.vote || "").trim() === "not_voting") { skip("not-voting-no-row"); continue; }
     if (!(action in SCORE)) { skip(`unknown-action-${action}`); continue; }
     if (!personIds.has(e.person_bioguide)) { skip("unknown-person"); continue; }
     const bill = bills.get(e.bill_id);
     if (!bill) { skip("unknown-bill"); continue; }
-    const targets = (billIssues.get(e.bill_id) || []).filter((id) => issueIds.has(id));
+    // #26: one action -> one row on the bill's primary (first seed) issue, never fanned out.
+    const targets = (billIssues.get(e.bill_id) || []).filter((id) => issueIds.has(id)).slice(0, 1);
     if (!targets.length) { skip("bill-without-issues"); continue; }
 
     // Anchor: the record's own line (guaranteed verbatim) or a synthetic sponsor line.
@@ -308,13 +382,19 @@ export function convertCsvDrop(csvDir, outDir, opts = {}) {
       const dedupKey = [e.person_bioguide, issue, record.date, score, quote, billStr, record.id].join("\u0001");
       if (seen.has(dedupKey)) { skip("duplicate-statement"); continue; }
       seen.add(dedupKey);
-      stances.push({
+      const row = {
         person: e.person_bioguide, issue, date: record.date, score, direction,
         linkage, llm_confidence: confidence, quote, bill: billStr, source: record.url,
         model: `owl-ingest-${(e.extraction_method || "rule").trim()}`,
         record_id: record.id,
         rationale,
-      });
+        kind: kindOfAction(action),
+      };
+      if (action === "committee_vote") {
+        const vq = classifyVoteQuestion(e.vote_question);
+        if (vq) row.vote_question = vq;
+      }
+      stances.push(row);
     }
   }
   // Deterministic order -> stable numbering for the same input.
@@ -340,6 +420,7 @@ export function convertCsvDrop(csvDir, outDir, opts = {}) {
   writeFileSync(join(outDir, "issues.json"), JSON.stringify({ ...meta("Seed level-3 issues from bill metadata (issues.csv). The model may propose more."), issues }, null, 2) + "\n");
   writeFileSync(join(outDir, "people.json"), JSON.stringify({ ...meta("Every House member with a 119th-Congress term (sitting + departed). id = bioguide id."), people }, null, 2) + "\n");
   writeFileSync(join(outDir, "stances.json"), JSON.stringify({ ...meta("One row per (evidence fact x bill issue). Deterministic readings of sponsorships, committee votes and signed views; quotes are verbatim record lines."), stances }, null, 2) + "\n");
+  writeFileSync(join(outDir, "bills.json"), JSON.stringify({ ...meta("One record per bill: number, title, status, last action, sponsor, issues."), bills: billsOut }, null, 2) + "\n");
   let nSynthetic = 0;
   for (const [id, r] of records) {
     const rec = {
@@ -356,7 +437,7 @@ export function convertCsvDrop(csvDir, outDir, opts = {}) {
 
   report.counts.output = {
     committees: committees.length, issues: issues.length, people: people.length,
-    statements: stances.length, records: records.size, syntheticRecords: nSynthetic,
+    statements: stances.length, bills: billsOut.length, records: records.size, syntheticRecords: nSynthetic,
     checksumDowngraded: downgraded,
   };
   return { outDir, recordsDir, report };
@@ -387,7 +468,7 @@ export function formatReport(report) {
   const c = report.counts.csvRows || {};
   L.push(`csv rows: evidence=${c.evidence} records=${c.records} people=${c.people} bills=${c.bills} issues=${c.issues} committees=${c.committees}`);
   const o = report.counts.output || {};
-  L.push(`output: ${o.statements} statements, ${o.people} people, ${o.issues} issues, ${o.committees} committees, ${o.records} records (${o.syntheticRecords} synthetic BILLSTATUS)`);
+  L.push(`output: ${o.statements} statements, ${o.bills} bills, ${o.people} people, ${o.issues} issues, ${o.committees} committees, ${o.records} records (${o.syntheticRecords} synthetic BILLSTATUS)`);
   if (report.counts.subFallback) L.push(`subcommittee names falling back to provisional slugs: ${report.counts.subFallback} (pass --sub-names <taxonomy.json>)`);
   const skips = Object.entries(report.skips).sort((a, b) => b[1] - a[1]);
   if (skips.length) L.push(`skipped evidence rows: ${skips.map(([k, v]) => `${k}=${v}`).join(", ")}`);

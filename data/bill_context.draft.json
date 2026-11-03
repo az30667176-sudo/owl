@@ -1,0 +1,388 @@
+{
+  "_meta": {
+    "description": "Staging: LLM-drafted bill match attributes. Human review required; merge only approved entries.",
+    "model": "muse-spark-1.3",
+    "at": "2026-11-03",
+    "prompt_sha": "0ce90ab82691"
+  },
+  "drafts": [
+    {
+      "bill_id": "hr8800-119",
+      "number": "H.R. 8800",
+      "approved": true,
+      "short_context": "The bill would set funding levels and rules for the military and defense programs for the 2027 budget year, covering pay, weapons, buildings, and new tech.",
+      "binary_question": null,
+      "error": null,
+      "complex_bill": true
+    },
+    {
+      "bill_id": "hr3838-119",
+      "number": "H.R. 3838",
+      "approved": true,
+      "short_context": "The bill would set 2026 funding and buying rules for the U.S. military and defense programs.",
+      "binary_question": {
+        "question": "Should the U.S. adopt this 2026 military funding and buying plan?",
+        "options": [
+          {
+            "stance": "support",
+            "label": "Yes, adopt the 2026 military funding and buying plan."
+          },
+          {
+            "stance": "oppose",
+            "label": "No, reject the 2026 military funding and buying plan."
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr842-119",
+      "number": "H.R. 842",
+      "approved": true,
+      "short_context": "The bill would allow Medicare to cover multi-cancer early detection screening tests for beneficiaries meeting coverage criteria.",
+      "binary_question": {
+        "question": "Should Medicare cover multi-cancer early detection screening tests?",
+        "options": [
+          {
+            "stance": "support",
+            "label": "Yes, provide Medicare coverage for these tests"
+          },
+          {
+            "stance": "oppose",
+            "label": "No, do not add this Medicare coverage"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr7613-119",
+      "number": "H.R. 7613",
+      "approved": true,
+      "short_context": "The bill would require federal aviation regulators to update notification procedures for aircraft accidents and cybersecurity threats.",
+      "binary_question": {
+        "question": "Should federal aviation accident and cybersecurity alert procedures be changed as proposed?",
+        "options": [
+          {
+            "stance": "support",
+            "label": "Support updating federal alert requirements for aviation safety and cybersecurity"
+          },
+          {
+            "stance": "oppose",
+            "label": "Oppose changing current federal alert requirements for aviation safety and cybersecurity"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr979-119",
+      "number": "H.R. 979",
+      "approved": true,
+      "short_context": "The bill would require new passenger vehicles to include AM radio receivers as standard equipment and direct studies on related costs and safety communications.",
+      "binary_question": {
+        "question": "Should new vehicles be required to include AM radio as standard equipment?",
+        "options": [
+          {
+            "stance": "support",
+            "label": "Require AM radio in new vehicles as standard equipment"
+          },
+          {
+            "stance": "oppose",
+            "label": "Leave AM radio inclusion to automakers and market choice"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr1262-119",
+      "number": "H.R. 1262",
+      "approved": true,
+      "short_context": "The bill would let the FDA require pediatric studies for certain new adult drugs with mechanisms relevant to childhood cancer.",
+      "binary_question": {
+        "question": "Should the FDA require pediatric studies for certain new drugs with potential pediatric cancer uses?",
+        "options": [
+          {
+            "stance": "support",
+            "label": "Require pediatric studies when relevant to children's cancers"
+          },
+          {
+            "stance": "oppose",
+            "label": "Do not add new pediatric study requirements for drugs"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr6500-119",
+      "number": "H.R. 6500",
+      "approved": true,
+      "short_context": "The bill would keep federal agencies funded at current levels for a set time and extend several expiring programs covering taxes, child welfare, and agency operations.",
+      "binary_question": null,
+      "error": null,
+      "complex_bill": true
+    },
+    {
+      "bill_id": "hr1329-119",
+      "number": "H.R. 1329",
+      "approved": true,
+      "short_context": "The bill would establish a Smithsonian museum dedicated to American women's history and authorize site selection and planning.",
+      "binary_question": {
+        "question": "Should Congress establish a Smithsonian museum for American women's history?",
+        "options": [
+          {
+            "stance": "support",
+            "label": "Establish a Smithsonian museum for American women's history"
+          },
+          {
+            "stance": "oppose",
+            "label": "Do not establish a Smithsonian museum for American women's history"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr4313-119",
+      "number": "H.R. 4313",
+      "approved": true,
+      "short_context": "The bill would extend Medicare rules allowing hospitals to provide inpatient services in patients' homes and require a study of the program.",
+      "binary_question": {
+        "question": "Should Medicare continue allowing hospitals to provide inpatient-level care at home?",
+        "options": [
+          {
+            "stance": "support",
+            "label": "Support extending home-based hospital care under Medicare"
+          },
+          {
+            "stance": "oppose",
+            "label": "Oppose extending home-based hospital care under Medicare"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr425-119",
+      "number": "H.R. 425",
+      "approved": true,
+      "short_context": "The bill would repeal federal requirements for businesses to report beneficial ownership information to the Treasury Department.",
+      "binary_question": {
+        "question": "Should federal beneficial ownership reporting requirements for businesses be repealed?",
+        "options": [
+          {
+            "stance": "support",
+            "label": "Yes, repeal the reporting requirements"
+          },
+          {
+            "stance": "oppose",
+            "label": "No, keep the reporting requirements"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr2853-119",
+      "number": "H.R. 2853",
+      "approved": true,
+      "short_context": "The bill would create a federal coordination center to investigate organized retail theft and increase penalties for interstate transport of stolen goods.",
+      "binary_question": {
+        "question": "Should the federal government create a coordination center and stronger penalties for organized retail theft?",
+        "options": [
+          {
+            "stance": "support",
+            "label": "Support federal coordination and stronger penalties to address organized retail theft"
+          },
+          {
+            "stance": "oppose",
+            "label": "Oppose expanded federal role, preferring state and local handling of retail theft"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr38-119",
+      "number": "H.R. 38",
+      "approved": true,
+      "short_context": "The bill would allow people licensed to carry a concealed handgun in one state to carry it in other states that allow concealed carry.",
+      "binary_question": {
+        "question": "Should concealed carry licenses be recognized across state lines?",
+        "options": [
+          {
+            "stance": "support",
+            "label": "Allow out-of-state concealed carry license holders to carry nationwide"
+          },
+          {
+            "stance": "oppose",
+            "label": "Keep concealed carry recognition decisions with individual states"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr8872-119",
+      "number": "H.R. 8872",
+      "approved": true,
+      "short_context": "The bill would require states to add eligibility checks, reporting, and oversight rules for TANF cash assistance funds.",
+      "binary_question": {
+        "question": "Should states face stricter eligibility checks and reporting for TANF funds?",
+        "options": [
+          {
+            "stance": "support",
+            "label": "Support stricter checks to reduce improper TANF payments"
+          },
+          {
+            "stance": "oppose",
+            "label": "Oppose added requirements to preserve state flexibility and access"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr5267-119",
+      "number": "H.R. 5267",
+      "approved": true,
+      "short_context": "The bill would clarify when franchisors and franchisees are considered joint employers for wages, benefits, and labor standards.",
+      "binary_question": {
+        "question": "Should joint-employer rules for franchisors and franchisees be clarified as proposed?",
+        "options": [
+          {
+            "stance": "support",
+            "label": "Support clarifying joint-employer rules for franchises"
+          },
+          {
+            "stance": "oppose",
+            "label": "Oppose changing joint-employer rules for franchises"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr1155-119",
+      "number": "H.R. 1155",
+      "approved": true,
+      "short_context": "The bill would require the IRS to replace stolen paper tax refund checks and recover the original funds from financial institutions.",
+      "binary_question": {
+        "question": "Should the IRS replace stolen tax refund checks and recover the original payments?",
+        "options": [
+          {
+            "stance": "support",
+            "label": "Replace stolen refund checks and recover the funds"
+          },
+          {
+            "stance": "oppose",
+            "label": "Do not change current handling of stolen refund checks"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr9722-119",
+      "number": "H.R. 9722",
+      "approved": true,
+      "short_context": "The bill would prohibit the IRS from applying tax-exempt rules differently to religious organizations than to other nonprofits.",
+      "binary_question": {
+        "question": "Should religious organizations receive the same tax-exempt treatment as other nonprofits?",
+        "options": [
+          {
+            "stance": "support",
+            "label": "Support equal tax treatment for religious organizations"
+          },
+          {
+            "stance": "oppose",
+            "label": "Keep current IRS discretion for religious organizations"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr4312-119",
+      "number": "H.R. 4312",
+      "approved": true,
+      "short_context": "The bill would create national standards for college athlete name, image, and likeness compensation and related school requirements.",
+      "binary_question": {
+        "question": "Should there be national standards for college athlete name, image, and likeness compensation?",
+        "options": [
+          {
+            "stance": "support",
+            "label": "Support national NIL standards for college athletes"
+          },
+          {
+            "stance": "oppose",
+            "label": "Oppose national NIL standards for college athletes"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr9772-119",
+      "number": "H.R. 9772",
+      "approved": true,
+      "short_context": "The bill would require certain tax-exempt organizations to disclose foreign donations to the IRS and Congress.",
+      "binary_question": {
+        "question": "Should tax-exempt organizations be required to disclose foreign donations to the IRS and Congress?",
+        "options": [
+          {
+            "stance": "support",
+            "label": "Require disclosure of foreign donations"
+          },
+          {
+            "stance": "oppose",
+            "label": "Do not require disclosure of foreign donations"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr3699-119",
+      "number": "H.R. 3699",
+      "approved": true,
+      "short_context": "The bill would prohibit state and local governments from banning or restricting consumer access to certain energy sources.",
+      "binary_question": {
+        "question": "Should state and local governments be barred from restricting access to certain energy sources?",
+        "options": [
+          {
+            "stance": "support",
+            "label": "Bar state and local energy source restrictions"
+          },
+          {
+            "stance": "oppose",
+            "label": "Allow state and local energy source restrictions"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr1919-119",
+      "number": "H.R. 1919",
+      "approved": true,
+      "short_context": "The bill would prohibit the Federal Reserve from issuing a central bank digital currency and from using one for monetary policy.",
+      "binary_question": {
+        "question": "Should the Federal Reserve be prohibited from issuing a central bank digital currency?",
+        "options": [
+          {
+            "stance": "support",
+            "label": "Support prohibiting the Federal Reserve from issuing a digital dollar"
+          },
+          {
+            "stance": "oppose",
+            "label": "Oppose prohibiting the Federal Reserve from issuing a digital dollar"
+          }
+        ]
+      },
+      "error": null
+    }
+  ]
+}

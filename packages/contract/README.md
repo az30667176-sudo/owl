@@ -151,7 +151,7 @@ Rules: `quote` must be verbatim against the record named by `record_id`; `statem
 
 One record per bill, emitted by `services/ingest/csv-to-json.mjs` from `bills.csv`. The Bills tab and bill pages read this file when present and fall back to grouping statement rows on the bill string when absent. `status` is best-effort (omitted when the latest action is ambiguous); `issue_ids` carries all of the bill's seed issues. Statement and condition rows link via their optional `bill_id`, which must resolve when present.
 
-Match attributes (optional, process-merged, never ingest-emitted): `short_context` is a neutral ≤30-word plain-language summary of what the bill addresses; `binary_question` is `{ question, options: [{ stance, label }, …] }` with exactly two options, one `support` and one `oppose`, driving the match-board picker. Ingest regens must carry these fields forward by `bill_id` without overwriting them.
+Match attributes (optional, process-merged, never ingest-emitted): `short_context` is a neutral ≤30-word plain-language summary of what the bill addresses; `binary_question` is `{ question, options: [{ stance, label }, …] }` with exactly two options, one `support` and one `oppose`, driving the match-board picker. Bills that cannot be fairly reduced to one question set `complex_bill: true` instead: context may run to 50 words, no question is carried, and the UI shows a read-the-full-bill tag. Ingest regens must carry these fields forward by `bill_id` without overwriting them.
 
 ## Contract C — derived in the browser
 

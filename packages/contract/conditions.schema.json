@@ -40,7 +40,8 @@
           "quote": { "type": "string", "minLength": 2, "maxLength": 400, "description": "Verbatim substring of the source record's content." },
           "statement_id": { "type": ["string", "null"], "description": "stances.json id, or null when not yet linked. When present it must belong to the same person." },
           "record_id": { "type": "string", "description": "Back-reference to the contract-A record. Lets the validator check the quote." },
-          "model": { "type": "string", "minLength": 1 }
+          "model": { "type": "string", "minLength": 1 },
+          "bill_id": { "type": "string", "minLength": 1, "description": "bills.json id, when the condition is about a known bill. Optional." }
         }
       }
     }
