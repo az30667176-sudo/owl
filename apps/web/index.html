@@ -68,44 +68,48 @@
   #main { overflow: hidden; }
   svg { width: 100%; height: 100%; display: block; }
   .legend { position: absolute; left: 14px; bottom: calc(12px + var(--esum, 0px)); display: flex; gap: 14px; font-size: 12px; color: var(--muted); background: rgba(23,26,33,.85); padding: 6px 10px; border-radius: 8px; border: 1px solid var(--border); }
-  /* match drawer (explore-match-v3): a bar under the ring that opens into your answers + ranked matches; the ring shrinks via --esum */
-  #e-summary { position: absolute; left: 0; right: 0; bottom: 0; display: none; background: var(--panel); border-top: 1px solid var(--border); font-size: 13px; z-index: 4; }
-  #e-summary.on { display: block; }
+  /* match drawer (explore-match-v3): a one-line bar under the ring; "Show matches" opens a sheet that overlays
+     the lower part of the ring. The canvas keeps a fixed reserve for the bar, so answering never re-fits the ring. */
+  #e-summary { position: absolute; left: 0; right: 0; bottom: 0; display: none; flex-direction: column; max-height: 56%; background: var(--panel); border-top: 1px solid var(--border); font-size: 13px; z-index: 6; }
+  #e-summary.on { display: flex; }
   #e-summary .h { margin: 0 0 4px; }
-  .es-bar { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 8px 16px; flex-wrap: wrap; }
+  .es-bar { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 0 16px; min-height: 40px; flex-wrap: wrap; flex: none; }
+  .es-bar b { color: var(--accent); }
   .es-act { display: flex; gap: 8px; }
   .btn.sm { padding: 4px 10px; font-size: 12px; }
-  .es-body { padding: 4px 16px 12px; border-top: 1px solid var(--border); }
-  .es-ctl { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin: 6px 0; }
-  .es-cols { display: grid; grid-template-columns: minmax(240px, 320px) 1fr; gap: 16px; }
-  .es-col { overflow: auto; min-height: 0; padding-right: 4px; }
-  .es-a { border-top: 1px solid var(--border); padding: 6px 2px; }
+  .btn.pri { color: var(--accent); border-color: var(--accent-cold); }
+  .es-body { padding: 8px 16px 14px; border-top: 1px solid var(--border); display: flex; flex-direction: column; min-height: 0; }
+  .es-ctl { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin: 0 0 6px; }
+  .es-cols { display: grid; grid-template-columns: minmax(260px, 360px) 1fr; gap: 24px; min-height: 0; }
+  .es-col { overflow: auto; min-height: 0; padding-right: 6px; }
+  .es-a { border-top: 1px solid var(--border); padding: 8px 2px; }
   .qrow { display: flex; gap: 8px; align-items: baseline; }
   .es-a .qq { font-size: 13px; line-height: 1.4; }
   .es-a .num, .es-det .num, .es-g .num { font-family: var(--mono); font-size: 11px; color: var(--accent); white-space: nowrap; margin-right: 6px; }
-  .es-a .tgl { display: flex; gap: 6px; margin-top: 4px; }
-  .chip.yn { min-width: 44px; text-align: center; font-weight: 600; }
-  .chip.yn.sm { padding: 2px 8px; font-size: 11px; min-width: 36px; }
-  .es-m { border-top: 1px solid var(--border); padding: 7px 8px; border-radius: 6px; cursor: pointer; }
+  .es-a .tgl { display: flex; gap: 6px; margin-top: 6px; }
+  .chip.yn { min-width: 48px; text-align: center; font-weight: 600; }
+  .chip.yn.sm { padding: 2px 8px; font-size: 11px; min-width: 40px; }
+  .es-m { border-top: 1px solid var(--border); padding: 8px 8px; cursor: pointer; }
   .es-m:hover, .es-m.open { background: var(--panel-2); }
   .es-mh { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
   .es-m .meta, .es-g .meta { color: var(--muted); font-size: 11px; }
   .es-pct { white-space: nowrap; text-align: right; }
-  .es-seg { display: flex; height: 6px; border-radius: 999px; background: var(--border); overflow: hidden; margin-top: 5px; }
+  .es-pct b { font-family: var(--mono); font-size: 14px; }
+  .es-seg { display: flex; height: 5px; background: var(--border); overflow: hidden; margin-top: 6px; }
   .es-seg i { display: block; height: 100%; }
-  .es-det { margin-top: 8px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; cursor: default; }
+  .es-det { margin-top: 10px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; cursor: default; }
   .es-g ul { margin: 4px 0 0; padding-left: 0; list-style: none; font-size: 12px; }
-  .es-g li { padding: 3px 0; border-top: 1px solid var(--border); }
-  .es-gt { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; }
+  .es-g li { padding: 4px 0; border-top: 1px solid var(--border); line-height: 1.4; }
+  .es-gt { font-size: 10.5px; text-transform: uppercase; letter-spacing: .12em; font-family: var(--mono); }
   .es-g.ok .es-gt { color: var(--support); } .es-g.no .es-gt { color: var(--oppose); } .es-g.na .es-gt { color: var(--muted); }
-  @media (max-width: 900px) { .es-cols { grid-template-columns: 1fr; } }
+  @media (max-width: 900px) { .es-cols { grid-template-columns: 1fr; } #e-summary { max-height: 70%; } }
   /* one-line question rows under an issue: hairline separators, mono bill number, Yes / No toggles */
   .flipline { margin-top: 6px; font-size: 12px; color: var(--muted); line-height: 1.5; }
   .flipline b { font-weight: 600; }
-  .mq { border-top: 1px solid var(--border); padding: 8px 2px; }
+  .mq { border-top: 1px solid var(--border); padding: 10px 2px; }
   .mq .num { font-family: var(--mono); font-size: 12px; color: var(--accent); margin-right: 8px; white-space: nowrap; }
-  .mq .qq { font-size: 13px; line-height: 1.4; }
-  .mq .tgl { display: flex; gap: 6px; align-items: center; margin-top: 6px; flex-wrap: wrap; }
+  .mq .qq { font-size: 13px; line-height: 1.45; }
+  .mq .tgl { display: flex; gap: 6px; align-items: center; margin-top: 8px; flex-wrap: wrap; }
   .legend i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px; vertical-align: -1px; }
   .hint { font-size: 12px; color: var(--muted); padding: 12px 14px 0; }
   .hint:empty { display: none; }
@@ -220,8 +224,10 @@
     .hero { grid-template-columns: 40px minmax(0, 1fr); gap: 12px; }
     .hero .avatar { width: 40px; height: 40px; font-size: 16px; }
     .hero h1 { font-size: 24px; }
-    .ehud { top: 6px; bottom: auto; left: 8px; right: 8px; font-size: 10px; }
-    .ectl { left: 8px; right: 8px; bottom: 8px; gap: 4px 12px; }
+    .ehud { display: none !important; }
+    .ectl { left: 8px; right: 8px; }
+    .ectl .eg { padding: 4px 10px; min-height: 32px; }
+    .ectl .er { min-height: 34px; }
     .legend { display: none; }
   }
 
@@ -414,24 +420,36 @@
   .gsrch mark { background: none; color: var(--accent); }
   #cv { position: absolute; top: 0; left: 0; display: none; max-width: 100%; }
   #cv.on { display: block; }
-  .ehud { position: absolute; left: 14px; bottom: calc(var(--ectlh, 38px) + 20px + var(--esum, 0px)); font: 500 11px var(--mono); color: var(--muted); pointer-events: none; display: none; text-align: left; }
+  /* Explore HUD: status text that lives in the toolbar's second row (right side); never floats over the ring */
+  .ehud { font: 500 11px/1.5 var(--mono); color: var(--muted); display: none; text-align: right; margin-left: auto; padding: 6px 14px; white-space: nowrap; }
   .ehud.on { display: block; }
-  .ehud b { color: var(--text); }
-  /* Explore toolbar: one hairline bar under the ring — party toggles · edge density · legend · reset */
-  .ectl { position: absolute; left: 14px; right: 14px; bottom: calc(12px + var(--esum, 0px)); display: none; gap: 0; align-items: center; font-size: 12px; color: var(--muted); flex-wrap: wrap; background: var(--panel); border: 1px solid var(--border); border-radius: 3px; padding: 0 6px; min-height: 38px; }
+  .ehud b { color: var(--text); font-weight: 600; }
+  /* Explore toolbar: one hairline control strip under the ring — party · edge density · legend · reset */
+  .ectl { position: absolute; left: 14px; right: 14px; bottom: calc(12px + var(--esum, 0px)); display: none; flex-direction: column; font-size: 12px; color: var(--muted); background: var(--panel); border: 1px solid var(--border); border-radius: 3px; padding: 0; z-index: 3; }
   .ectl.on { display: flex; }
-  .ectl .eg { display: flex; align-items: center; gap: 8px; padding: 6px 12px; border-right: 1px solid var(--border); }
-  .ectl .eg.leg { gap: 12px; margin-left: auto; border-right: 0; }
-  .ectl .eg.leg i { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 5px; vertical-align: -1px; }
-  .ectl .lab { font: 500 10.5px var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
-  .ectl .pt { display: inline-flex; align-items: center; gap: 5px; font: inherit; font-size: 12px; font-weight: 600; color: var(--muted); background: transparent; border: 1px solid var(--border); border-radius: 3px; padding: 3px 9px; cursor: pointer; }
-  .ectl .pt i { width: 8px; height: 8px; border-radius: 50%; opacity: .35; }
-  .ectl .pt.on { color: var(--text); border-color: var(--border-strong); }
+  .ectl .er { display: flex; align-items: stretch; flex-wrap: wrap; min-height: 40px; }
+  .ectl .er + .er { border-top: 1px solid var(--border); }
+  .ectl .eg { display: flex; align-items: center; gap: 10px; padding: 6px 14px; border-right: 1px solid var(--border); min-height: 38px; }
+  .ectl .eg.leg { gap: 14px; border-right: 0; }
+  .ectl .eg.leg span { white-space: nowrap; }
+  .ectl .eg.leg i { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 6px; vertical-align: -1px; }
+  .ectl .eg.leg i.ln { width: 14px; height: 0; border-top: 2px dashed var(--muted); border-radius: 0; vertical-align: 2px; }
+  .ectl .lab { font: 500 10.5px var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+  .ectl .pt { display: inline-flex; align-items: center; gap: 6px; height: 26px; font: inherit; font-size: 12px; font-weight: 600; color: var(--muted); background: transparent; border: 1px solid var(--border); border-radius: 3px; padding: 0 10px; cursor: pointer; }
+  .ectl .pt i { width: 8px; height: 8px; border-radius: 50%; opacity: .3; }
+  .ectl .pt:hover { border-color: var(--border-strong); color: var(--text); }
+  .ectl .pt.on { color: var(--text); border-color: var(--border-strong); background: var(--panel-2); }
   .ectl .pt.on i { opacity: 1; }
-  .ectl input[type=range] { accent-color: var(--accent); width: 110px; }
-  .ectl .val { font: 600 12px var(--mono); color: var(--text); min-width: 1ch; }
-  .ectl .btn.rz { margin-left: 8px; border-radius: 3px; font-size: 12px; padding: 5px 12px; color: var(--accent); border-color: var(--border-strong); }
-  .ectl .btn.rz:hover { background: var(--panel-2); }
+  .ectl input[type=range] { -webkit-appearance: none; appearance: none; width: 120px; height: 26px; margin: 0; background: transparent; cursor: pointer; }
+  .ectl input[type=range]::-webkit-slider-runnable-track { height: 2px; background: var(--border-strong); }
+  .ectl input[type=range]::-moz-range-track { height: 2px; background: var(--border-strong); }
+  .ectl input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 12px; height: 12px; margin-top: -5px; border-radius: 50%; background: var(--accent); border: 2px solid var(--panel); }
+  .ectl input[type=range]::-moz-range-thumb { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); border: 2px solid var(--panel); }
+  .ectl input[type=range]:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .ectl .val { font: 600 12px var(--mono); color: var(--accent); min-width: 1ch; }
+  .ectl .eg.act { border-right: 0; padding: 6px 8px 6px 14px; margin-left: auto; }
+  .ectl .btn.rz { margin: 0; height: 26px; padding: 0 12px; border-radius: 3px; font-size: 12px; color: var(--accent); border-color: var(--border-strong); white-space: nowrap; }
+  .ectl .btn.rz:hover { background: var(--panel-2); border-color: var(--accent); }
   .mmwrap { display: none; margin-bottom: 14px; }
   #mm { width: 100%; height: 210px; display: block; max-width: 100%; background: var(--bg); border: 1px solid var(--border); cursor: pointer; }
   .mmleg { font-size: 11.5px; color: var(--muted); margin-top: 4px; display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
@@ -1033,7 +1051,7 @@
       + (to.length ? ` What you accepted: ${to.join(" ")}` : "");
   }
   // drawer open state: open by default once three bills are answered; the user can hide it
-  const E_drawerOpen = ids => ids.length >= 3 && state.e.drawer !== "close";
+  const E_drawerOpen = ids => ids.length >= 3 && state.e.drawer === "open";
   // one member's answered bills in three groups, with the question text
   function matchDetail(r, ids, per) {
     const g = { same: [], opp: [], none: [] };
@@ -1049,7 +1067,7 @@
     const top = rows[0];
     const bar = `<div class="es-bar"><span><b>${n} answered</b> · yes ${yes} · no ${n - yes}`
       + (n >= 3 ? ` · ${rows.length} member${rows.length === 1 ? "" : "s"} ranked` + (top ? ` · closest <span class="link" data-esprof="${top.p.id}">${shortName(top.p.name)}</span> ${top.agree}/${n}` : "") : ` · answer ${3 - n} more to see who matches you`)
-      + `</span><span class="es-act">` + (n >= 3 ? `<button class="btn sm" data-esdr="${open ? "close" : "open"}">${open ? "Hide matches ▾" : "Show matches ▴"}</button>` : "") + `<button class="btn sm" data-esclear>Clear answers</button></span></div>`;
+      + `</span><span class="es-act">` + (n >= 3 ? `<button class="btn sm${open ? "" : " pri"}" data-esdr="${open ? "close" : "open"}" aria-expanded="${open}">${open ? "Hide matches ▾" : "Show matches ▴"}</button>` : "") + `<button class="btn sm" data-esclear>Clear answers</button></span></div>`;
     if (!open) return bar;
     const per = new Map(ids.map(id => [id, new Map(billLegsMemo(id).map(L => [L.id, dirOf(L.score)]))]));
     const stOpts = `<option value="">All states</option>` + STATES.map(st => `<option value="${st}"${st === state.f.state ? " selected" : ""}>${STATE_NAMES[st] || st}</option>`).join("");
@@ -1095,9 +1113,10 @@
     const main = $("main");
     if (main) {
       const cols = el.querySelector(".es-cols");
-      if (cols) cols.style.maxHeight = Math.max(150, Math.round((main.clientHeight || 640) * .40) - 110) + "px";
-      main.style.setProperty("--esum", show && el.offsetHeight ? el.offsetHeight + "px" : "0px");
-      main.style.setProperty("--ectlh", (ectl && ectl.offsetHeight ? ectl.offsetHeight : 38) + "px");
+      if (cols) cols.style.maxHeight = Math.max(160, Math.round((main.clientHeight || 640) * .56) - 150) + "px";
+      // the toolbar sits above the one-line bar only; an opened sheet overlays the toolbar and the lower ring
+      const bar = el.querySelector(".es-bar");
+      main.style.setProperty("--esum", show && bar && bar.offsetHeight ? bar.offsetHeight + "px" : "0px");
     }
   }
   const fmt = s => (s > 0 ? "+" : "") + s.toFixed(2);
@@ -2362,9 +2381,10 @@
   function E_paneSize() {
     const pane = $("main");
     const W = Math.max(320, (pane && pane.clientWidth) || 0);
-    let chrome = 0;
-    [ectl, ehud, $("legend"), $("hint"), $("e-summary")].forEach(el => { if (el && el.getClientRects().length) chrome += el.offsetHeight || 0; });
-    chrome = Math.max(96, chrome + 44); // HUD, controls and legend float over the pane bottom: keep ring labels clear of them
+    // fixed reserve at the pane bottom: toolbar + 12px + the match bar (whether or not it is showing) + 10px.
+    // Keeping this constant means answering a question never changes the canvas size, so the ring never re-fits.
+    const ctlH = (ectl && ectl.getClientRects().length && ectl.offsetHeight) || 40;
+    const chrome = ctlH + 12 + 40 + 10;
     const H = Math.max(320, ((pane && pane.clientHeight) || 0) - chrome);
     return { W, H };
   }
@@ -2402,12 +2422,13 @@
     const avgCount = PEOPLE.length / COMMITTEES.length;
     const ang = new Map(COMMITTEES.map((c, ci) => { const span = 2 * Math.PI / COMMITTEES.length, a0 = -Math.PI / 2 + ci * span + .012, a1 = -Math.PI / 2 + (ci + 1) * span - .012; return [c.id, { a0, a1, t0: a0, t1: a1 }]; }));
     E = { edges: EDGES, comById, iCat, legSpec, topCom, secondCom, comCount, avgCount, ang, open: null, K: 2, showD: true, showR: true, showI: true, query: "", zt: d3.zoomIdentity, pinned: null, hover: null, stateF: null, mmHover: null, hl: null, legs: [], anchors: new Map(), agg: [], tweenStart: 0, markers: [], TW: 650 };
+    ectl.innerHTML = `<div class="er"><div class="eg"><span class="lab">Party</span><button class="pt on" id="fD" aria-pressed="true"><i style="background:var(--party-d)"></i>D</button><button class="pt on" id="fR" aria-pressed="true"><i style="background:var(--party-r)"></i>R</button></div>`
+      + `<div class="eg"><span class="lab">Edges per member</span><input type="range" id="eK" min="1" max="5" value="${E.K}" aria-label="Edges per member"><b id="eKv" class="val">${E.K}</b></div>`
+      + `<div class="eg act"><button class="btn rz" id="eRz" title="Zoom out, unpin, clear highlight">↺ Reset view</button></div></div>`
+      + `<div class="er er2"><div class="eg leg"><span class="lab">Edge</span><span title="Edge colour = the member's position on the issue"><i style="background:var(--support)"></i>Support</span><span><i style="background:var(--oppose)"></i>Oppose</span><span><i style="background:var(--neutral)"></i>Neutral</span><span title="Edge width = attention, opacity = strength of the position, dashed = the member changed direction"><i class="ln"></i>Changed direction</span></div></div>`;
+    ectl.querySelector(".er2").appendChild(ehud);
     E_targets();
     E_build(true);
-    ectl.innerHTML = `<div class="eg"><span class="lab">Party</span><button class="pt on" id="fD" aria-pressed="true"><i style="background:var(--party-d)"></i>D</button><button class="pt on" id="fR" aria-pressed="true"><i style="background:var(--party-r)"></i>R</button></div>`
-      + `<div class="eg"><span class="lab">Edges per member</span><input type="range" id="eK" min="1" max="5" value="2" aria-label="Edges per member"><b id="eKv" class="val">2</b></div>`
-      + `<div class="eg leg"><span><i style="background:var(--support)"></i>Support</span><span><i style="background:var(--oppose)"></i>Oppose</span><span><i style="background:var(--neutral)"></i>Neutral</span><span class="lab" style="letter-spacing:.02em;text-transform:none" title="Edge width = attention, opacity = strength of the position, dashed = the member changed direction">width · opacity · dashed = flipped</span></div>`
-      + `<button class="btn rz" id="eRz" title="Zoom out, unpin, clear highlight">↺ Reset view</button>`;
     const togg = (id, key) => { const b = $(id); b.onclick = () => { E[key] = !E[key]; b.classList.toggle("on", E[key]); b.setAttribute("aria-pressed", E[key]); E_draw(); syncExploreHash(); }; };
     togg("fD", "showD"); togg("fR", "showR");
     $("eK").oninput = e => { E.K = +e.target.value; $("eKv").textContent = E.K; E_draw(); syncExploreHash(); };
@@ -2501,8 +2522,11 @@
     return [name.slice(0, cut), name.slice(cut + 1)];
   }
   function E_truncIssue(name) { return name.length > 26 ? name.slice(0, 25) + "…" : name; }
+  // ring radius leaves room outside the ring for labels: ~150px sideways for a wrapped committee name or a
+  // radial issue label, ~56px above/below for a two-line committee name. Phones keep a tighter margin.
   function E_ringRadius(W, H) {
-    return Math.max(40, Math.min(W, H) / 2 - 24);
+    const compact = W <= 480;
+    return Math.max(40, Math.min(W / 2 - (compact ? 56 : 150), H / 2 - (compact ? 44 : 56)));
   }
   function E_fitX(lx, tw, al, W) {
     if (al === "left") return Math.min(Math.max(lx, 4), Math.max(4, W - 4 - tw));
@@ -2571,6 +2595,19 @@
     return condByPI[p + "|" + t] || [];
   }
   function E_circle(x, y, r, fill, stroke) { cx2.beginPath(); cx2.arc(x, y, r, 0, 2 * Math.PI); if (fill && fill !== "none") { cx2.fillStyle = fill; cx2.fill(); } if (stroke) { cx2.lineWidth = 1.5; cx2.strokeStyle = stroke; cx2.stroke(); } }
+  // text along an arc centred on angle am at radius r; in the lower half it runs the other way so it never reads upside down
+  function E_arcText(t, am, r, f, c) {
+    const W = E.lastW, H = E.lastH, cx = W / 2, cy = H / 2;
+    cx2.save(); cx2.font = f; cx2.fillStyle = c; cx2.textAlign = "center"; cx2.textBaseline = "middle"; cx2.globalAlpha = .95;
+    const lower = Math.sin(am) > 0, chars = [...t], tot = cx2.measureText(t).width;
+    let ang = am - (lower ? -1 : 1) * tot / 2 / r;
+    for (const ch of chars) {
+      const w = cx2.measureText(ch).width, a = ang + (lower ? -1 : 1) * w / 2 / r;
+      cx2.save(); cx2.translate(cx + r * Math.cos(a), cy + r * Math.sin(a)); cx2.rotate(a + (lower ? -Math.PI / 2 : Math.PI / 2)); cx2.fillText(ch, 0, 0); cx2.restore();
+      ang += (lower ? -1 : 1) * w / r;
+    }
+    cx2.restore();
+  }
   function E_label(t, x, y, f, c, al) { cx2.font = f; cx2.fillStyle = c; cx2.textAlign = al || "center"; cx2.fillText(t, x, y); }
   function E_draw() {
     if (!E) return;
@@ -2604,9 +2641,9 @@
       else { const rk = l.rank.indexOf(a.t); on = rk > -1 && rk < E.K; if (on && E.open && t.kind === "issue") on = rk < E.K + 2; }
       if (!on) continue;
       const mx = (l.x + t.x) / 2, my = (l.y + t.y) / 2, qx = mx + (cx - mx) * .25, qy = my + (cy - my) * .25;
-      cx2.globalAlpha = strong ? .75 : .07 + .2 * Math.abs(a.score);
+      cx2.globalAlpha = strong ? .8 : .045 + .13 * Math.abs(a.score);
       cx2.strokeStyle = eColor(dirOf(a.score));
-      cx2.lineWidth = (strong ? heatW(Math.min(1, a.heat)) : heatW(Math.min(1, a.heat)) * .35) / sk;
+      cx2.lineWidth = (strong ? heatW(Math.min(1, a.heat)) : heatW(Math.min(1, a.heat)) * .3) / sk;
       cx2.setLineDash(a.flip ? [4 / sk, 3 / sk] : []);
       cx2.beginPath(); cx2.moveTo(l.x, l.y); cx2.quadraticCurveTo(qx, qy, t.x, t.y); cx2.stroke();
       const rows = E_condRows(a.p, a.t);
@@ -2642,69 +2679,78 @@
     if (E.pinned && E.pinned.kind === "leg") { const pl = LB.get(E.pinned.id); if (pl && E_visible(pl)) { E_circle(pl.x, pl.y, 7 / sk, "none", PAL.ink); E_label(pl.name.replace(/^(Rep|Sen)\. /, ""), pl.x + 7 / E.zt.k, pl.y + 4 / E.zt.k, "600 " + (12 / E.zt.k) + "px Public Sans", PAL.ink, "left"); } }
     const drawnBoxes = [];
     const compact = W <= 480;
+    const openCount = E.open ? ISSUES.filter(i => i.cat === E.open).length : 0;
+    // Labels, three passes so nothing prints over anything else:
+    //  1. issue labels of the open committee run radially (chord-diagram style) from just outside the arc,
+    //     reading outward, flipped on the left half so they are never upside down. Angular spacing is what
+    //     the open sector gives them (>= 13px along the arc even at 24 issues), so they cannot collide.
+    //  2. committee labels stay horizontal, wrapped to two lines, and slide away from the ring (up to
+    //     three steps) when they would hit an issue label or another committee label.
+    //  3. the open committee itself is named in the HUD, not on the ring.
+    const rotBox = (am, r0, tw, th) => {
+      const c = Math.cos(am), sn = Math.sin(am), pts = [];
+      for (const r of [r0, r0 + tw]) for (const o of [-th / 2, th / 2]) pts.push([cx + r * c - o * sn, cy + r * sn + o * c]);
+      return { x0: Math.min(...pts.map(q => q[0])), x1: Math.max(...pts.map(q => q[0])), y0: Math.min(...pts.map(q => q[1])), y1: Math.max(...pts.map(q => q[1])) };
+    };
+    const comLabels = [];
     { const oc = E.open ? E.anchors.get(E.open) : null;
       if (oc) {
-        const alO = Math.cos(oc.am) > .2 ? "left" : Math.cos(oc.am) < -.2 ? "right" : "center";
-        const fO = "600 " + (12 / E.zt.k) + "px Public Sans";
-        cx2.font = fO;
-        const tO = oc.name + "  ·  click to collapse", twO = cx2.measureText(tO).width;
-        const pxO = E_fitX(cx + (R0 + 72) * Math.cos(oc.am), twO, alO, W);
-        const pyO = Math.min(Math.max(cy + (R0 + 72) * Math.sin(oc.am) + 4, 10), H - 4);
-        cx2.globalAlpha = 1;
-        E_label(tO, pxO, pyO, fO, oc.col, alO);
-        const thO = 14 / E.zt.k, xO = alO === "left" ? pxO : alO === "right" ? pxO - twO : pxO - twO / 2;
-        drawnBoxes.push({ x0: xO, x1: xO + twO, y0: pyO - thO / 2, y1: pyO + thO / 2 });
+        const f = "600 " + (12 / E.zt.k) + "px Public Sans";
+        cx2.font = f;
+        let t = oc.name + " · " + openCount + " issues · click arc to close";
+        const rIn = R0 - 14, span = (oc.a1 - oc.a0) * rIn - 24;
+        if (cx2.measureText(t).width > span) t = oc.name + " · " + openCount + " issues";
+        if (cx2.measureText(t).width > span) t = oc.name;
+        if (cx2.measureText(t).width <= span) E_arcText(t, oc.am, rIn, f, oc.col);
       } }
-    let issueIdx = 0;
-    const openCount = E.open ? ISSUES.filter(i => i.cat === E.open).length : 0;
-    const cull = openCount > 12;
     for (const a of E.anchors.values()) {
       const rr = a.kind === "com" ? (a.id === E.open ? 0 : 11 / sk) : 8 / sk;
       if (rr) { cx2.globalAlpha = 1; E_circle(a.x, a.y, rr, a.col, PAL.bg); }
-      const narrow = a.kind === "com" && (a.a1 - a.a0) < .18, ci = a.kind === "com" ? COMMITTEES.findIndex(c => c.id === a.id) : 0;
+      if (a.kind === "com") { if (a.id !== E.open) comLabels.push(a); continue; }
+      const nq = a.id ? billsForIssue(a.id).length : 0; // issues with yes/no questions get a count so users know where to click
+      const f = "500 " + (10.5 / E.zt.k) + "px Public Sans", th = 12 / E.zt.k;
+      cx2.font = f;
+      const r0 = R0 + 26, flip = Math.cos(a.am) < 0;
+      // room along the radius before the pane edge, in the label's own direction
+      const room = Math.max(40, (Math.abs(Math.cos(a.am)) > 1e-6 ? ((Math.cos(a.am) > 0 ? W - 6 - cx : cx - 6) / Math.abs(Math.cos(a.am))) : 1e9), 0);
+      const roomY = Math.abs(Math.sin(a.am)) > 1e-6 ? ((Math.sin(a.am) > 0 ? H - 6 - cy : cy - 6) / Math.abs(Math.sin(a.am))) : 1e9;
+      const maxW = Math.min(room, roomY) - r0;
+      let t = a.name + (nq ? ` · ${nq}?` : "");
+      let tw = cx2.measureText(t).width;
+      if (tw > maxW) { let nm = a.name; while (nm.length > 4 && cx2.measureText(nm + "…" + (nq ? ` · ${nq}?` : "")).width > maxW) nm = nm.slice(0, -1); t = nm.trimEnd() + "…" + (nq ? ` · ${nq}?` : ""); tw = cx2.measureText(t).width; }
+      cx2.save(); cx2.translate(cx + r0 * Math.cos(a.am), cy + r0 * Math.sin(a.am)); cx2.rotate(flip ? a.am + Math.PI : a.am);
+      cx2.font = f; cx2.fillStyle = fx && fx.id === a.id ? PAL.accent : PAL.ink; cx2.textAlign = flip ? "right" : "left"; cx2.textBaseline = "middle"; cx2.globalAlpha = 1;
+      cx2.fillText(t, 0, 0); cx2.restore(); cx2.textBaseline = "alphabetic";
+      // leader from the node to the label start
+      cx2.globalAlpha = .5; cx2.strokeStyle = a.col; cx2.lineWidth = 1 / sk; cx2.setLineDash([]);
+      cx2.beginPath(); cx2.moveTo(cx + (R0 + 9) * Math.cos(a.am), cy + (R0 + 9) * Math.sin(a.am)); cx2.lineTo(cx + (r0 - 4) * Math.cos(a.am), cy + (r0 - 4) * Math.sin(a.am)); cx2.stroke();
+      drawnBoxes.push(rotBox(a.am, r0, tw, th));
+    }
+    for (const a of comLabels) {
+      const narrow = (a.a1 - a.a0) < .18, ci = COMMITTEES.findIndex(c => c.id === a.id);
       const al = Math.cos(a.am) > .2 ? "left" : Math.cos(a.am) < -.2 ? "right" : "center";
       cx2.globalAlpha = 1;
-      if (a.kind === "com" && a.id === E.open) {
-        /* open-committee label drawn pre-loop and seeded into drawnBoxes */
-      } else if (a.kind === "com") {
-        const wide = (a.a1 - a.a0) > Math.PI / 10;
-        if (compact && !wide && a.id !== E.open && (!fx || fx.id !== a.id)) continue;
-        const out = R0 + (narrow ? (ci % 2 ? 36 : 54) : 36);
-        const lx = cx + out * Math.cos(a.am), ly = cy + out * Math.sin(a.am);
-        const lines = E_wrapLabel(a.name, 22), f = "600 " + (11 / E.zt.k) + "px Public Sans", lh = 12 / E.zt.k;
-        cx2.font = f;
-        let y0 = Math.min(Math.max(ly + 4 - (lines.length - 1) * lh / 2, 10 + (lines.length - 1) * lh / 2), H - 4 - (lines.length - 1) * lh / 2);
-        // collision pass: labels clamped to the pane edge pile up on one line; slide a colliding label
-        // away from the ring (down in the lower half, up in the upper half) until it is clear
-        const twMax = Math.max(...lines.map(ln => cx2.measureText(ln).width));
-        const bx = al === "left" ? lx : al === "right" ? lx - twMax : lx - twMax / 2;
-        const boxAt = yy => ({ x0: bx, x1: bx + twMax, y0: yy - (lines.length - 1) * lh / 2 - lh / 2, y1: yy + (lines.length - 1) * lh / 2 + lh / 2 });
-        const hits = yy => { const b = boxAt(yy); return drawnBoxes.some(o => b.x0 < o.x1 && b.x1 > o.x0 && b.y0 < o.y1 && b.y1 > o.y0); };
-        const dir = Math.sin(a.am) >= 0 ? 1 : -1;
-        for (let k = 0; k < 2 && hits(y0); k++) y0 += dir * (lh + 2);
-        drawnBoxes.push(boxAt(y0));
-        lines.forEach((ln, li) => {
-          const tw = cx2.measureText(ln).width;
-          E_label(ln, E_fitX(lx, tw, al, W), y0 + (li - (lines.length - 1) / 2) * lh, f, PAL.ink, al);
-        });
-      } else {
-        const outI = R0 + [20, 38, 56][issueIdx++ % 3];
-        const ix = cx + outI * Math.cos(a.am), iy = cy + outI * Math.sin(a.am);
-        const nq = a.id ? billsForIssue(a.id).length : 0; // issues with yes/no questions get a count so users know where to click
-        const t = E_truncIssue(a.name) + (nq ? ` · ${nq}?` : ""), f = "500 " + (10 / E.zt.k) + "px Public Sans";
-        cx2.font = f;
-        const tw = cx2.measureText(t).width, th = 12 / E.zt.k;
-        const px = E_fitX(ix, tw, al, W); let py = Math.min(Math.max(iy + 4, 10), H - 4);
-        const x0 = al === "left" ? px : al === "right" ? px - tw : px - tw / 2;
-        const boxI = yy => ({ x0: x0, x1: x0 + tw, y0: yy - th / 2, y1: yy + th / 2 });
-        const hitI = yy => { const b = boxI(yy); return drawnBoxes.some(o => b.x0 < o.x1 && b.x1 > o.x0 && b.y0 < o.y1 && b.y1 > o.y0); };
-        // issue labels stay beside their node (three alternating radii); only a label pinned to the pane edge may
-        // step inward (two steps max) so clamped neighbours do not print on one line; crowded sectors skip instead
-        if (py !== iy + 4) { const dirI = py < iy + 4 ? -1 : 1; for (let k = 0; k < 2 && hitI(py); k++) py += dirI * (th + 2); }
-        if (cull && hitI(py)) continue;
-        drawnBoxes.push(boxI(py));
-        E_label(t, px, py, f, PAL.ink, al);
-      }
+      const wide = (a.a1 - a.a0) > Math.PI / 10;
+      if (compact && !wide && (!fx || fx.id !== a.id)) continue;
+      const out = R0 + (narrow ? (ci % 2 ? 34 : 50) : 34);
+      const lx = cx + out * Math.cos(a.am), ly = cy + out * Math.sin(a.am);
+      const lines = E_wrapLabel(a.name, 22), f = "600 " + (11 / E.zt.k) + "px Public Sans", lh = 13 / E.zt.k;
+      cx2.font = f;
+      let y0 = Math.min(Math.max(ly + 4 - (lines.length - 1) * lh / 2, 10 + (lines.length - 1) * lh / 2), H - 4 - (lines.length - 1) * lh / 2);
+      // collision pass: slide a colliding label away from the ring (down in the lower half, up in the upper half)
+      const twMax = Math.max(...lines.map(ln => cx2.measureText(ln).width));
+      const bx0 = E_fitX(lx, twMax, al, W);
+      const bx = al === "left" ? bx0 : al === "right" ? bx0 - twMax : bx0 - twMax / 2;
+      const boxAt = yy => ({ x0: bx - 2, x1: bx + twMax + 2, y0: yy - (lines.length - 1) * lh / 2 - lh / 2, y1: yy + (lines.length - 1) * lh / 2 + lh / 2 });
+      const hits = yy => { const b = boxAt(yy); return drawnBoxes.some(o => b.x0 < o.x1 && b.x1 > o.x0 && b.y0 < o.y1 && b.y1 > o.y0); };
+      const dir = Math.sin(a.am) >= 0 ? 1 : -1;
+      for (let k = 0; k < 3 && hits(y0); k++) y0 += dir * (lh + 2);
+      drawnBoxes.push(boxAt(y0));
+      cx2.fillStyle = fx && fx.id === a.id ? PAL.accent : PAL.ink;
+      lines.forEach((ln, li) => {
+        const tw = cx2.measureText(ln).width;
+        E_label(ln, E_fitX(lx, tw, al, W), y0 + (li - (lines.length - 1) / 2) * lh, f, fx && fx.id === a.id ? PAL.accent : PAL.ink, al);
+      });
     }
 
     if (fx && fx.x != null && fx.kind !== "com") { const base = (fx.kind === "leg" ? 6 : 14) / sk; cx2.globalAlpha = 1; E_circle(fx.x, fx.y, base, "none", PAL.ink); }
@@ -2712,8 +2758,7 @@
     E_drawMM(focusT, focusL);
     const drawn = focusT ? E.agg.filter(a => a.t === focusT).length : focusL ? E.agg.filter(a => a.p === focusL).length : null;
     const nA = Object.keys(MATCH.answers).filter(id => billQ(id)).length;
-    ehud.innerHTML = `${E.legs.length} legislators · ${E.open ? "1 committee open" : COMMITTEES.length + " committees"} · <b>${drawn != null ? drawn + " edges of focus" : "top " + E.K + " edges/person"}</b> · zoom ×${E.zt.k.toFixed(1)}${E.zt.k > 2.4 ? " · names on" : " · scroll to zoom (names at ×2.4)"}${nA ? ` · <b>${nA} answered</b> <span id="e-clear" style="pointer-events:auto;cursor:pointer;color:var(--accent)">clear answers</span>` : ""}`;
-    { const ec = $("e-clear"); if (ec) ec.onclick = () => { MATCH.answers = {}; saveMatch(); state.e.lastBill = null; E_renderSummary(); E_size(); renderSide(); E_draw(); syncExploreHash(); }; }
+    ehud.innerHTML = `${E.legs.length} legislators · <b>${drawn != null ? drawn + " edges of focus" : "top " + E.K + " per member"}</b> · zoom ×${E.zt.k.toFixed(1)}`;
   }
   function E_nodeAt(x, y) {
     let best = null;
