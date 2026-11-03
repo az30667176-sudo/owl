@@ -484,6 +484,21 @@
   const CONDS = conditionsRaw.conditions || [];
   const condByPI = {}, condByPerson = {}, condByIssue = {};
   CONDS.forEach(r => { (condByPI[r.person + "|" + r.issue] ??= []).push(r); (condByPerson[r.person] ??= []).push(r); (condByIssue[r.issue] ??= []).push(r); });
+  // bills file (optional; missing or empty = no bill carries a question, the app behaves exactly as before).
+  // Like graph.json the loader probes ./data/ first, so the gitignored local sample at
+  // apps/web/data/bills.json is picked up in dev while the deployed site keeps working without it.
+  let billsRaw = null;
+  for (const base of ["./data/", DATA_BASE]) { try { const r = await fetch(`${base}bills.json`); if (r.ok) { billsRaw = await r.json(); break; } } catch { /* try next base */ } }
+  const BILLS = billsRaw && Array.isArray(billsRaw.bills) ? billsRaw.bills : [];
+  const billById = Object.fromEntries(BILLS.map(b => [b.bill_id, b]));
+  // bill record carrying a yes/no question, or null (absent file, unknown id, or no question)
+  const billQ = id => { const b = billById[id]; return b && b.binary_question ? b : null; };
+  // a bill's committee = first resolvable issue's committee, else the issue with most statements for that bill
+  const billCom = rec => {
+    for (const iid of (rec.issue_ids || [])) { const is = issueById[iid]; if (is) return is.cat; }
+    const info = billInfo(rec.bill_id);
+    return info ? info.iss.cat : null;
+  };
   // bill id: lower-case letters+digits of the leading bill number ("H.R. 6110 …" -> "hr6110"; null for null)
   const billId = s => { if (s == null) return null; const m = /^\s*([A-Za-z.][A-Za-z.\s]*?\d+)/.exec(s); return m ? m[1].replace(/[^A-Za-z0-9]/g, "").toLowerCase() : null; };
   const nowWord = v => (v === null || v === undefined) ? "has not spoken on it" : v > .15 ? "supports now" : v < -.15 ? "opposes now" : "is neutral now";
@@ -1143,8 +1158,8 @@
       const onlyC = $("bfc").checked;
       const list = groups.filter(g => (!onlyC || g.info.conds.length) && (!q || g.info.num.toLowerCase().includes(q) || g.info.title.toLowerCase().includes(q)));
       $("bll").innerHTML = list.slice(0, 200).map(g => {
-        const v = g.info;
-        return `<div class="ibl" data-b="${g.id}"><div><div class="num">${v.num}</div><div class="mt">${v.stmts.length} statement${v.stmts.length === 1 ? "" : "s"}</div></div><div><div>${v.title}</div><div class="mt">${v.iss.catName} › ${v.iss.subName} › ${v.iss.name}</div></div>${v.conds.length ? `<span class="itag">◆ ${v.conds.length} condition${v.conds.length > 1 ? "s" : ""}</span>` : `<span class="mt">no conditions</span>`}</div>`;
+        const v = g.info, bq = billQ(g.id);
+        return `<div class="ibl" data-b="${g.id}"><div><div class="num">${v.num}</div><div class="mt">${v.stmts.length} statement${v.stmts.length === 1 ? "" : "s"}</div></div><div><div>${v.title}</div>${bq && bq.short_context ? `<div class="mt" style="white-space:normal">${bq.short_context}</div>` : ""}<div class="mt">${v.iss.catName} › ${v.iss.subName} › ${v.iss.name}</div></div>${bq ? `<span class="itag" title="Carries a yes/no question — answer it in Explore">? question</span>` : ""}${v.conds.length ? `<span class="itag">◆ ${v.conds.length} condition${v.conds.length > 1 ? "s" : ""}</span>` : (bq ? "" : `<span class="mt">no conditions</span>`)}</div>`;
       }).join("") + (list.length > 200 ? `<div class="mt" style="padding:10px 0">+ ${list.length - 200} more · filter to narrow</div>` : "");
       $("bll").querySelectorAll("[data-b]").forEach(el => { kbRow(el, "link"); el.onclick = () => openBill(el.dataset.b); });
     };
@@ -1585,6 +1600,7 @@
       return;
     }
     const { legs, demands, active, on, proj, byP } = billModel();
+    const bq = billQ(state.b.id), bqCom = bq ? (billCom(bq) || info.iss.cat) : null;
     const sup = legs.filter(l => l.score !== null && l.score > .15).length;
     const opp = legs.filter(l => l.score !== null && l.score < -.15).length;
     const silent = legs.filter(l => l.score === null && l.conds.length).length;
@@ -1688,6 +1704,7 @@
       <div class="crumbline"><a id="bill-back">← Explore</a> · ${path} · <span style="color:var(--text)">Bill</span></div>
       <h1>${info.num}${info.title ? ` · ${billTitleDisp(info)}` : ""}</h1>
       <div class="bill-sub">${path} · ${info.stmts.length} statement${info.stmts.length === 1 ? "" : "s"} in data${info.latest ? ` · latest ${info.latest.date || "undated"}` : ""}</div>
+      ${bq ? `${bq.short_context ? `<div class="bill-sub" style="color:var(--text)">${bq.short_context}</div>` : ""}<div class="bill-sub">${bq.binary_question.question} ${bq.binary_question.options.map(o => `<span class="pill ${o.stance}">${o.label}</span>`).join(" ")} <span class="link" id="bill-ans">Answer it in Explore →</span></div>` : ""}
       <div class="bill-strip"><div><b style="color:var(--support)">${sup}</b><span>support now</span></div><div><b style="color:var(--oppose)">${opp}</b><span>oppose now</span></div><div><b style="color:var(--accent)">${info.conds.length}</b><span>stated conditions</span></div><div><b>${silent}</b><span>member silent on it</span></div></div>
       <div class="bill-sub" style="margin:-2px 0 2px">${kindLine}</div>
       <div class="bill-sec">Where they stand today · ◆ = has stated a condition</div>
@@ -1702,6 +1719,7 @@
       <div class="bill-card" id="billcard"><div class="empty-state">Hover a legislator to see their stated conditions and how the current package affects them · click to open their profile.</div></div>
     </div>`;
     $("bill-back").onclick = () => { state.b.id = null; location.hash = "#/explore"; };
+    if (bq) $("bill-ans").onclick = () => { location.hash = "#/explore?com=" + bqCom + "&bill=" + state.b.id; };
     if ($("bill-overflow")) $("bill-overflow").onclick = () => showGroup(`+${overflow.length} more`, overflow, "beyond the 40 individual nodes shown");
     // whip labels only fit segments >= 36 px wide; the full text is always in the hover title
     wrap.querySelectorAll(".whip i").forEach(el => { if (el.getBoundingClientRect().width < 36) el.textContent = ""; });
