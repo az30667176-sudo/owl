@@ -9,8 +9,8 @@ All tasks touch `apps/web/index.html` unless stated. One commit per group, messa
 
 ## 2. Titles and share metadata
 
-- [ ] 2.1 `renderHeader()` sets `document.title` per route (table in the delta spec).
-- [ ] 2.2 `<head>`: meta description, `og:title`, `og:description`, `og:image` = `https://az30667176-sudo.github.io/owl/assets/logo/owl-mark-512.png`, `og:url` + `<link rel="canonical">` = `https://az30667176-sudo.github.io/owl/`, `twitter:card` summary.
+- [x] 2.1 `renderHeader()` sets `document.title` per route (table in the delta spec).
+- [x] 2.2 `<head>`: meta description, `og:title`, `og:description`, `og:image` = `https://az30667176-sudo.github.io/owl/assets/logo/owl-mark-512.png`, `og:url` + `<link rel="canonical">` = `https://az30667176-sudo.github.io/owl/`, `twitter:card` summary.
 
 ## 3. Responsive layout and touch
 

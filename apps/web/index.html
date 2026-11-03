@@ -3,6 +3,16 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="OWL tracks how US legislators vote, speak and shift positions across issues. Open data, transparent scoring, no black boxes." />
+<meta property="og:title" content="OWL - Open Watch on Legislators" />
+<meta property="og:description" content="Explore how US legislators vote, speak and shift positions across issues. Open data, transparent scoring." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://az30667176-sudo.github.io/owl/assets/logo/owl-mark-512.png" />
+<meta property="og:url" content="https://az30667176-sudo.github.io/owl/" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="OWL - Open Watch on Legislators" />
+<meta name="twitter:description" content="Explore how US legislators vote, speak and shift positions across issues. Open data, transparent scoring." />
+<link rel="canonical" href="https://az30667176-sudo.github.io/owl/" />
 <title>OWL — Open Watch on Legislators</title>
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -2081,6 +2091,17 @@
 
   // ---------- shell ----------
   function renderHeader() {
+    // per-route title (group 2): exactly the delta-spec table
+    { let _t = "OWL";
+      if (state.mode === "profile") { const _p = byId[state.p.person]; _t = (_p ? _p.name : "Legislators") + " \u00b7 OWL"; }
+      else if (state.mode === "bill") { const _bi = statementsReady ? billInfo(state.b.id) : null; _t = ((_bi && _bi.num) || "Bill") + " \u00b7 OWL"; }
+      else if (state.mode === "list") _t = "Find \u00b7 OWL";
+      else if (state.mode === "explore") _t = "OWL";
+      else if (state.mode === "bills") _t = "Bills \u00b7 OWL";
+      else if (state.mode === "issues") _t = "Issues \u00b7 OWL";
+      else if (state.mode === "issue") { const _is = issueById[state.iid]; _t = ((_is && _is.name) || "Issue") + " \u00b7 OWL"; }
+      else if (state.mode === "about") _t = "About \u00b7 OWL";
+      document.title = _t; }
     ["explore", "issues", "bills", "list", "profile"].forEach(m => $("m-" + m).classList.toggle("active", state.mode === m));
     if (state.mode === "profile") { const p = byId[state.p.person]; $crumb.innerHTML = p ? `<b>${p.name}</b> · ${seat(p)}` : `<b>Legislators</b>`; $hint.textContent = ""; }
     else if (state.mode === "bill") { const info = statementsReady ? billInfo(state.b.id) : null; $crumb.innerHTML = info ? `<b>${info.num}</b> · ${info.title || "Bill"}` : `<b>Bill</b> · ${statementsReady ? "not found" : "loading statements…"}`; $hint.textContent = ""; }
