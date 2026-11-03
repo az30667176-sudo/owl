@@ -901,6 +901,11 @@
     const coOnly = es.filter(e => { const k = K(e); return k[1] && !k[0] && !k[2] && !k[3] && !k[4] && !k[5]; }).length;
     const bills = issueBills(id);
     const top = es.slice().sort((a, b) => b.score - a.score);
+    const condRows = condByIssue[id] || [];
+    const condSection = `<div class="isec">Conditions</div>` + (condRows.length ? condRows.map(r => {
+      const dot = r.stance_if_met === "support" ? "var(--support)" : "var(--oppose)", dtype = (DEMANDS[r.demand] || {}).type || "";
+      return `<div style="display:flex;gap:10px;margin:10px 0"><span style="width:10px;height:10px;border-radius:50%;background:${dot};flex:none;margin-top:5px"></span><div><div><b>${byId[r.person].name}</b> · ${condShort(nowOf(r.person, r.issue), r)}</div><div style="font-size:11px;color:var(--muted);margin-top:2px">${r.bill && billId(r.bill) ? `<a class="link" href="#/bill/${billId(r.bill)}">${r.bill} ↗</a> · ` : (r.bill ? `${r.bill} · ` : "")}<span class="tag">${dtype}</span></div><div class="cond-q">“${r.quote}”</div></div></div>`;
+    }).join("") : `<div class="sub">No conditions recorded for this issue.</div>`);
     const nm = pid => byId[pid].name.replace(/^(Rep|Sen)\. /, "");
     wrap.innerHTML = `<div class="iwrap"><div class="icrumb"><a id="i-exp">← Explore</a> · <a id="i-issues">Issues</a> · ${com.name} · <span style="color:var(--text)">${is.name}</span></div>`
       + `<div class="ih1">${is.name}</div><div class="isub">${com.name} · ${es.length} legislators on record · ${bills.length} bill${bills.length === 1 ? "" : "s"}</div>`
@@ -908,7 +913,7 @@
       + `<div class="isec">What members actually did on this issue · right half = for, left half = against · one ring per kind of action · hover a dot</div><div class="orbwrap"><canvas id="orbit"></canvas><div class="ohud" id="ohud"></div></div>`
       + `<div class="isec">By party</div><div style="font-weight:600">All</div>${E_splitbar(es.map(e => e.score))}<div style="font-weight:600;color:var(--party-d)">Democrats</div>${E_splitbar(es.filter(e => byId[e.from].party === "D").map(e => e.score))}<div style="font-weight:600;color:var(--party-r)">Republicans</div>${E_splitbar(es.filter(e => byId[e.from].party === "R").map(e => e.score))}`
       + `<div class="isec">Strongest voices</div><div class="iwho"><div><div style="color:var(--support);font-weight:600;margin-bottom:4px">Most supportive</div><ol>${top.slice(0, 5).map(e => `<li data-p="${e.from}">${nm(e.from)} <span style="color:var(--muted)">${byId[e.from].district || byId[e.from].state}</span> <span style="color:var(--support)">${e.score > 0 ? "+" : ""}${e.score.toFixed(2)}</span></li>`).join("")}</ol></div><div><div style="color:var(--oppose);font-weight:600;margin-bottom:4px">Most opposed</div><ol>${top.slice(-5).reverse().map(e => `<li data-p="${e.from}">${nm(e.from)} <span style="color:var(--muted)">${byId[e.from].district || byId[e.from].state}</span> <span style="color:var(--oppose)">${e.score.toFixed(2)}</span></li>`).join("")}</ol></div></div>`
-      + `<div class="isec">Where in the country · colour = stance on this issue</div><canvas id="imap"></canvas><div class="mmleg"><span><span class="sq" style="background:var(--support)"></span>supports</span><span><span class="sq" style="background:var(--oppose)"></span>opposes</span><span><span class="sq" style="background:var(--neutral)"></span>neutral</span><span><span class="sq" style="background:#2a3148"></span>no statement</span></div></div>`;
+      + `${condSection}<div class="isec">Where in the country · colour = stance on this issue</div><canvas id="imap"></canvas><div class="mmleg"><span><span class="sq" style="background:var(--support)"></span>supports</span><span><span class="sq" style="background:var(--oppose)"></span>opposes</span><span><span class="sq" style="background:var(--neutral)"></span>neutral</span><span><span class="sq" style="background:#2a3148"></span>no statement</span></div></div>`;
     $("i-exp").onclick = () => { state.person = null; location.hash = "#/explore"; };
     $("i-issues").onclick = goIssues;
     wrap.querySelectorAll("[data-p]").forEach(el => { kbRow(el, "link"); el.onclick = () => openProfile(el.dataset.p); });
@@ -1191,6 +1196,8 @@
       return `<div style="display:flex;gap:10px;margin:10px 0"><span style="width:10px;height:10px;border-radius:50%;background:${dot};flex:none;margin-top:5px"></span><div><div>${condShort(nowOf(r.person, r.issue), r)}</div><div style="font-size:11px;color:var(--muted);margin-top:2px">${r.bill && billId(r.bill) ? `<a class="link" href="#/bill/${billId(r.bill)}">${r.bill} ↗</a> · ` : (r.bill ? `${r.bill} · ` : "")}<span class="tag">${dtype}</span></div><div class="cond-q">“${r.quote}”</div></div></div>`;
     }).join("") : "";
     const stat = (v, l, c, t) => `<div class="stat" ${t ? `title="${t}"` : ""}><span class="v" ${c ? `style="color:${c}"` : ""}>${v}</span><span class="l">${l}</span></div>`;
+    const noSpeechNote = (mine.length && mine.every(x => (((x.e.kind || [])[5]) || 0) === 0))
+      ? `<div class="sub">No hearing statements yet — positions below come from sponsorship and votes.</div>` : "";
     const summary = SUMMARIES[p.id];
     const cite = id => { const st = stById[id]; return st ? `<a class="cite" data-st="${id}" title="${st.date} · ${issueById[st.issue].name}">[${id.replace(/^st0*/, "")}]</a>` : ""; };
     const summaryHtml = summary
@@ -1208,7 +1215,7 @@
       <div class="tabs">${[["overview", "Overview"], ["issues", "Issues by committee"], ["timeline", "Timeline"]].map(([k, l]) => `<button class="${tab === k ? "active" : ""}" data-tab="${k}">${l}</button>`).join("")}</div>
       <div id="tab-overview" class="tabpane" ${tab !== "overview" ? "hidden" : ""}>
         <div class="pgrid">
-          <div class="card"><h3>What they talk about</h3><div class="sub">Top issues by attention — recent statements count more. Click a row for the evidence.</div><div id="p-attn"></div><div class="sub" id="p-attn-note" style="margin:8px 0 0"></div></div>
+          <div class="card"><h3>What they talk about</h3><div class="sub">Top issues by attention — recent statements count more. Click a row for the evidence.</div>${noSpeechNote}<div id="p-attn"></div><div class="sub" id="p-attn-note" style="margin:8px 0 0"></div></div>
           <div class="card"><h3>Where their attention goes</h3><div class="sub">Share of attention by committee.</div><div id="p-mix"></div><div id="p-mix-leg" class="mix-leg"></div><div class="mix-nums"><div><div class="v">${decisiveTxt}</div><div class="l" title="mean |score| across issues: how strongly they commit, regardless of direction">Decisiveness</div></div><div><div class="v">${divTxt}</div><div class="l" title="mean distance from other ${partyName}s on the same issues">vs own party</div></div></div>
             </div>
         </div>

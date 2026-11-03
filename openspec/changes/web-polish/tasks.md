@@ -45,8 +45,8 @@ All tasks touch `apps/web/index.html` unless stated. One commit per group, messa
 
 ## 8. Empty states
 
-- [ ] 8.1 Profile: when every edge has `spokeN == 0`, insert the note "No hearing statements yet — positions below come from sponsorship and votes." above the attention list (muted `.sub`).
-- [ ] 8.2 Issue page: when no condition rows reference the issue, hide the Conditions block and show "No conditions recorded for this issue."
+- [x] 8.1 Profile: when every edge has `spokeN == 0`, insert the note "No hearing statements yet — positions below come from sponsorship and votes." above the attention list (muted `.sub`).
+- [x] 8.2 Issue page: when no condition rows reference the issue, hide the Conditions block and show "No conditions recorded for this issue."
 
 ## 9. Print
 
