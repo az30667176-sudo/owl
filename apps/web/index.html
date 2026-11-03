@@ -933,7 +933,7 @@
       if (opt && typeof opt.tradeoff === "string" && opt.tradeoff) to.push(opt.tradeoff);
     });
     return `<div class="h">What your answers say</div>`
-      + `<div style="font-size:13px;line-height:1.7">You answered ${n} bills: yes on ${yes}, no on ${no}.`
+      + `<div style="font-size:13px;line-height:1.7">You answered ${n} bill${n === 1 ? "" : "s"}: yes on ${yes}, no on ${no}.`
       + (top.length ? ` Most of your answers fall under ${top.join(" and ")}.` : "")
       + ` You sided with the recorded majority on ${sided} of ${n}.</div>`
       + (to.length ? `<div class="h">What you accepted</div><ul style="margin:6px 0;padding-left:18px;font-size:13px">${to.map(t => `<li>${t}</li>`).join("")}</ul>` : "");
