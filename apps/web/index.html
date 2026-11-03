@@ -77,8 +77,6 @@
   .side { border-left: 1px solid var(--border); background: var(--panel); padding: 14px; }
   .topic-title { font-size: 18px; font-weight: 700; margin: 0 0 2px; }
   .topic-sub { color: var(--muted); font-size: 12px; margin-bottom: 12px; }
-  /* old single-issue spectrum removed in 3.5 (Issues is a directory + halo page now) */
-  /* node dots of the old focus SVG removed in 3.5 */
   .iwrap { max-width: 1180px; }
   .row { display: grid; grid-template-columns: 1fr auto; gap: 8px; align-items: center; padding: 8px 8px; border-radius: 8px; cursor: pointer; }
   .row:hover, .row.active { background: var(--panel-2); }
@@ -96,7 +94,6 @@
   .tag.c-low { border-color: var(--oppose); color: var(--oppose); }
   .evidence a { color: var(--accent); font-size: 12px; }
   .empty-state { color: var(--muted); padding: 20px 8px; }
-  /* node dots of the old focus SVG removed in 3.5 */
   .ih1 { font-family: var(--display); font-weight: 600; font-size: 24px; margin: 6px 0 4px; }
   .person-card { padding: 10px 8px; border-radius: 8px; }
   .person-card .name { font-weight: 700; font-size: 16px; }
@@ -282,7 +279,7 @@
   .bill-card .c .q { font-family: var(--display); font-style: italic; color: var(--muted); }
   #bill .dim { opacity: .18 !important; }
   /* issues directory + issue halo page + bills tab (3.2-3.4); wording and layout ported from data/_site/search-sample.html */
-  #issues, #issue, #bills { position: absolute; inset: 0; overflow: auto; padding: 18px 22px 30px; display: none; }
+  #issues, #issue, #bills, #about { position: absolute; inset: 0; overflow: auto; padding: 18px 22px 30px; display: none; }
   .icrumb { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); font-family: var(--mono); }
   .icrumb a { color: var(--accent); cursor: pointer; text-decoration: none; }
   .isub { color: var(--muted); font-size: 13px; margin: 0 0 4px; }
@@ -369,6 +366,7 @@
     <div id="issues"></div>
     <div id="issue"></div>
     <div id="bills"></div>
+    <div id="about"></div>
     <div id="table-wrap"></div>
     <div id="profile"></div>
     <div id="bill"></div>
@@ -557,14 +555,24 @@
     iid: null,
     b: { id: null, ticked: [], sel: null }
   };
-  // deep link: #/legislator/<id> + #/bill/<id> + #/issue/<id> (3.1); Issues tab without id shows the directory
-  const openBill = id => { state.mode = "bill"; state.b.id = id; state.b.ticked = []; state.b.sel = null; history.replaceState(null, "", `#/bill/${id}`); render(); };
-  const openIssue = id => { if (!issueById[id]) return; state.mode = "issue"; state.iid = id; if (location.hash !== `#/issue/${id}`) location.hash = `#/issue/${id}`; else render(); };
-  const goIssues = () => { if (location.hash === "#/issue") { state.mode = "issues"; render(); } else location.hash = "#/issue"; };
-  const goBills = () => { state.mode = "bills"; history.replaceState(null, "", location.pathname); render(); };
-  { const m = /^#\/legislator\/([\w-]+)/.exec(location.hash); if (m && byId[m[1]]) { state.mode = "profile"; state.p.person = m[1]; } }
-  { const m = /^#\/bill\/([\w-]+)/.exec(location.hash); if (m) { state.mode = "bill"; state.b.id = m[1]; } }
-  { const m = /^#\/issue\/([\w-]+)/.exec(location.hash); if (m && issueById[m[1]]) { state.mode = "issue"; state.iid = m[1]; } else if (location.hash === "#/issue") state.mode = "issues"; }
+  // hash router (group 1): every mode has a hash; state.mode derives from location.hash
+  function routeFromHash() {
+    const h = location.hash || "#/explore";
+    if (h.indexOf("#/legislator/") === 0 && byId[h.slice(13)]) { state.mode = "profile"; state.p.person = h.slice(13); state.p.sel = null; return; }
+    if (h === "#/legislators") { state.mode = "profile"; state.p.person = null; state.p.sel = null; return; }
+    if (h.indexOf("#/bill/") === 0 && h.length > 7) { state.mode = "bill"; state.b.id = h.slice(7); state.b.ticked = []; state.b.sel = null; return; }
+    if (h === "#/bills") { state.mode = "bills"; return; }
+    if (h.indexOf("#/issue/") === 0 && issueById[h.slice(8)]) { state.mode = "issue"; state.iid = h.slice(8); return; }
+    if (h === "#/issue") { state.mode = "issues"; state.iid = null; return; }
+    if (h === "#/find") { state.mode = "list"; return; }
+    if (h === "#/about") { state.mode = "about"; return; }
+    state.mode = "explore";
+  }
+  const openBill = id => { state.b.id = id; state.b.ticked = []; state.b.sel = null; if (location.hash !== "#/bill/" + id) location.hash = "#/bill/" + id; else { state.mode = "bill"; render(); } };
+  const openIssue = id => { if (!issueById[id]) return; if (location.hash !== "#/issue/" + id) location.hash = "#/issue/" + id; else { state.mode = "issue"; state.iid = id; render(); } };
+  const goIssues = () => { if (location.hash === "#/issue") { routeFromHash(); render(); } else location.hash = "#/issue"; };
+  const goBills = () => { if (location.hash === "#/bills") { routeFromHash(); render(); } else location.hash = "#/bills"; };
+  routeFromHash();
   // default focus = first issue with stances
   { const first = ISSUES.find(i => countFor(i.id) > 0); if (first) state.issue = first.id; }
 
@@ -697,30 +705,16 @@
     });
   }
 
-  // ---------- FOCUS ----------
-  /* 3.5: old single-issue spectrum (focus) view removed; Issues is a directory + halo page now.
-  function renderFocusAside() {
-    const cats = COMMITTEES.filter(c => ISSUES.some(i => i.cat === c.id && countFor(i.id) > 0)).map(c => `<div class="cat ${state.cat === c.id ? "active" : ""}" data-id="${c.id}"><span>${c.name}</span><span class="n">${ISSUES.filter(i => i.cat === c.id).reduce((a, i) => a + countFor(i.id), 0)}</span></div>`).join("");
-    const subs = SUBS.filter(s => s.cat === state.cat && ISSUES.some(i => i.sub === s.id && countFor(i.id) > 0)).map(s => `<span class="chip ${state.sub === s.id ? "active" : ""}" data-sub="${s.id}">${s.name}</span>`).join("");
-    const issues = ISSUES.filter(i => i.sub === state.sub).map(i => { const n = countFor(i.id); return `<span class="chip ${state.issue === i.id ? "active" : ""} ${n ? "" : "empty"}" data-issue="${i.id}">${i.name}${n ? ` · ${n}` : ""}</span>`; }).join("");
-    $aside.innerHTML = `<div class="h">Committee</div>${cats}<div class="h">Subcommittee</div><div class="subs">${subs || "<span class='chip empty'>—</span>"}</div><div class="h">Issue</div><div class="subs">${issues || "<span class='chip empty'>—</span>"}</div>`;
-    $aside.querySelectorAll(".cat").forEach(el => el.onclick = () => { state.cat = el.dataset.id; const i = ISSUES.find(i => i.cat === state.cat && countFor(i.id) > 0); state.sub = i ? i.sub : null; state.issue = i ? i.id : null; state.person = null; render(); });
-    $aside.querySelectorAll(".chip[data-sub]").forEach(el => el.onclick = () => { state.sub = el.dataset.sub; const i = ISSUES.find(i => i.sub === state.sub && countFor(i.id) > 0); state.issue = i ? i.id : null; state.person = null; render(); });
-    $aside.querySelectorAll(".chip[data-issue]:not(.empty)").forEach(el => el.onclick = () => { state.issue = el.dataset.issue; state.person = null; render(); });
+  // ---------- ABOUT (placeholder; group 5 fills the methodology page) ----------
+  function renderAboutAside() {
+    $aside.innerHTML = '<div class="h" style="margin-top:8px">About</div><div class="topic-sub">Methodology, data snapshot and AI disclosure.</div>';
   }
-  function renderFocusSide() {
-    const i = issueById[state.issue];
-    if (!i) { $side.innerHTML = `<div class="empty-state">Choose a committee, subcommittee and issue.</div>`; return; }
-    const edges = EDGES.filter(e => e.to === i.id).sort((a, b) => b.score - a.score);
-    const ticks = edges.map(e => `<span class="tick" data-open="${e.from}" title="${title(byId[e.from])} · ${fmt(e.score)} — open profile" style="left:${(e.score + 1) / 2 * 100}%;background:${color(e.direction)};cursor:pointer"></span>`).join("");
-    const rows = edges.map(e => { const p = byId[e.from], pct = Math.abs(e.score) * 50, left = e.score < 0 ? 50 - pct : 50;
-      return `<div class="row ${state.person === p.id ? "active" : ""}" data-id="${p.id}"><div><div class="name">${title(p)}</div><div class="meta">${seat(p)} · ${p.party}</div><div class="bar"><span style="left:${left}%;width:${pct}%;background:${color(e.direction)}"></span></div></div><div class="score" style="color:${color(e.direction)}">${fmt(e.score)}</div></div>`; }).join("");
-    const sel = state.person && edges.find(e => e.from === state.person);
-    $side.innerHTML = `<h2 class="topic-title">${i.name}</h2><div class="topic-sub">${i.catName} › ${i.subName} · ${edges.length} legislators</div><div class="spectrum">${ticks}</div>${rows}${sel ? evidenceHtml(sel) + profileBtn(sel.from) : `<div class="empty-state" style="padding-top:10px">Click a legislator to read the quote behind the score.</div>`} ${conditionsPanel(i.id)}`;
-    $side.querySelectorAll(".row").forEach(el => el.onclick = () => { state.person = el.dataset.id; render(); });
+  function renderAboutCenter() {
+    $("about").innerHTML = '<div class="iwrap"><div class="icrumb">About</div><div class="ih1">About</div><div class="isub">Methodology and data notes - full text lands with group 5.</div></div>';
   }
-
-  } */
+  function renderAboutSide() {
+    $side.innerHTML = '<div class="empty-state">How positions are scored, where the data comes from, and what AI does here.</div>';
+  }
 
   // ---------- ISSUES DIRECTORY + ISSUE PAGE + BILLS TAB (3.2-3.4) ----------
   // Ported from data/_site/search-sample.html (viewI, issuePage, orbit, tileMap, viewB).
@@ -799,7 +793,7 @@
       + `<div class="isec">By party</div><div style="font-weight:600">All</div>${E_splitbar(es.map(e => e.score))}<div style="font-weight:600;color:var(--party-d)">Democrats</div>${E_splitbar(es.filter(e => byId[e.from].party === "D").map(e => e.score))}<div style="font-weight:600;color:var(--party-r)">Republicans</div>${E_splitbar(es.filter(e => byId[e.from].party === "R").map(e => e.score))}`
       + `<div class="isec">Strongest voices</div><div class="iwho"><div><div style="color:var(--support);font-weight:600;margin-bottom:4px">Most supportive</div><ol>${top.slice(0, 5).map(e => `<li data-p="${e.from}">${nm(e.from)} <span style="color:var(--muted)">${byId[e.from].district || byId[e.from].state}</span> <span style="color:var(--support)">${e.score > 0 ? "+" : ""}${e.score.toFixed(2)}</span></li>`).join("")}</ol></div><div><div style="color:var(--oppose);font-weight:600;margin-bottom:4px">Most opposed</div><ol>${top.slice(-5).reverse().map(e => `<li data-p="${e.from}">${nm(e.from)} <span style="color:var(--muted)">${byId[e.from].district || byId[e.from].state}</span> <span style="color:var(--oppose)">${e.score.toFixed(2)}</span></li>`).join("")}</ol></div></div>`
       + `<div class="isec">Where in the country · colour = stance on this issue</div><canvas id="imap"></canvas><div class="mmleg"><span><span class="sq" style="background:var(--support)"></span>supports</span><span><span class="sq" style="background:var(--oppose)"></span>opposes</span><span><span class="sq" style="background:var(--neutral)"></span>neutral</span><span><span class="sq" style="background:#2a3148"></span>no statement</span></div></div>`;
-    $("i-exp").onclick = () => { state.mode = "explore"; state.person = null; render(); };
+    $("i-exp").onclick = () => { state.person = null; location.hash = "#/explore"; };
     $("i-issues").onclick = goIssues;
     wrap.querySelectorAll("[data-p]").forEach(el => el.onclick = () => openProfile(el.dataset.p));
     I_orbit(id, es);
@@ -961,14 +955,16 @@
   // centre pane router (replaces the old SVG focus graph in 3.5; Explore renders on Canvas via E_show)
   function renderCenter() {
     const list = state.mode === "list", prof = state.mode === "profile", bill = state.mode === "bill",
-      issues = state.mode === "issues", issue = state.mode === "issue", bills = state.mode === "bills";
+      issues = state.mode === "issues", issue = state.mode === "issue", bills = state.mode === "bills",
+      about = state.mode === "about";
     $("table-wrap").style.display = list ? "block" : "none";
     $("profile").style.display = prof ? "block" : "none";
     $("bill").style.display = bill ? "block" : "none";
     $("issues").style.display = issues ? "block" : "none";
     $("issue").style.display = issue ? "block" : "none";
     $("bills").style.display = bills ? "block" : "none";
-    $("legend").style.display = (list || prof || bill || issues || issue || bills) ? "none" : "flex";
+    $("about").style.display = about ? "block" : "none";
+    $("legend").style.display = (list || prof || bill || issues || issue || bills || about) ? "none" : "flex";
     $hint.style.display = state.mode === "explore" ? "none" : "";
     const showCv = state.mode === "explore";
     cv.classList.toggle("on", showCv); ectl.classList.toggle("on", showCv); ehud.classList.toggle("on", showCv);
@@ -978,6 +974,7 @@
     if (issues) return renderIssuesCenter();
     if (issue) return renderIssueCenter();
     if (bills) return renderBillsCenter();
+    if (about) return renderAboutCenter();
     E_show();
   }
 
@@ -1030,7 +1027,7 @@
   }
 
   // ---------- PROFILE (one page per legislator) ----------
-  const openProfile = id => { state.mode = "profile"; state.p.person = id; state.p.sel = null; state.p.hl = null; state.p.open = null; history.replaceState(null, "", `#/legislator/${id}`); render(); };
+  const openProfile = id => { state.p.person = id; state.p.sel = null; state.p.hl = null; state.p.open = null; if (location.hash !== "#/legislator/" + id) location.hash = "#/legislator/" + id; else { state.mode = "profile"; render(); } };
   const profileBtn = id => `<div style="margin-top:10px"><button class="btn" data-open="${id}">Open profile →</button></div>`;
   const partyColor = p => p === "D" ? "var(--party-d)" : p === "R" ? "var(--party-r)" : "var(--party-i)";
   function renderProfileAside() {
@@ -1303,7 +1300,7 @@
       + (groups.map(g => `<div class="cat ${state.b.id === g.id ? "active" : ""}" data-bill="${g.id}"><span>${g.info.num}${g.info.title ? " · " + g.info.title : ""}</span><span class="n">${g.info.stmts.length + g.info.conds.length}</span></div>`).join("") || `<div class="empty-state">No bills in data.</div>`)
       + `<div style="margin-top:12px"><button class="btn" id="bill-explore">← back to Explore</button></div>`;
     $aside.querySelectorAll("[data-bill]").forEach(el => el.onclick = () => openBill(el.dataset.bill));
-    $("bill-explore").onclick = () => { state.mode = "explore"; state.b.id = null; render(); };
+    $("bill-explore").onclick = () => { state.b.id = null; location.hash = "#/explore"; };
   }
   function renderBillSide() {
     if (!statementsReady) { $side.innerHTML = stmtsNote(); return; }
@@ -1344,13 +1341,13 @@
     const wrap = $("bill");
     if (!statementsReady) {
       wrap.innerHTML = `<div class="bill-wrap"><div class="crumbline"><a id="bill-back0">← Explore</a> · <span style="color:var(--text)">Bill</span></div><h1>${state.b.id}</h1>${stmtsNote()}</div>`;
-      $("bill-back0").onclick = () => { state.mode = "explore"; state.b.id = null; render(); };
+      $("bill-back0").onclick = () => { state.b.id = null; location.hash = "#/explore"; };
       return;
     }
     const info = billInfo(state.b.id);
     if (!info) {
       wrap.innerHTML = `<div class="empty-state" style="padding:24px">Bill not found in data. <span class="link" id="bill-missing-back">← back to Explore</span></div>`;
-      $("bill-missing-back").onclick = () => { state.mode = "explore"; state.b.id = null; render(); };
+      $("bill-missing-back").onclick = () => { state.b.id = null; location.hash = "#/explore"; };
       return;
     }
     const { legs, demands, active, on, proj, byP } = billModel();
@@ -1391,7 +1388,7 @@
       <div class="bill-legend"><span><i style="border-color:var(--support)"></i>supports <b>if</b> demand met</span><span><i style="border-color:var(--oppose)"></i>opposes <b>if</b> demand met</span><span><i style="border-color:var(--accent);border-top-style:dashed"></i>current stance, width = strength</span><span><i style="border-color:var(--oppose);border-top-style:dotted"></i>demands that exclude each other</span><span style="flex-basis:100%;margin-top:4px">node colour = party only · projected vote = the label under the name (<span style="background:var(--support);color:var(--bg);padding:0 4px">YES</span> <span style="background:var(--oppose);color:var(--bg);padding:0 4px">NO</span> <span style="border:1px solid var(--muted);color:var(--muted);padding:0 4px">UNKNOWN</span>); <span style="color:var(--accent)">was …</span> marks a vote the package changes</span></div>
       <div class="bill-card" id="billcard"><div class="empty-state">Hover a legislator to see their stated conditions and how the current package affects them · click to open their profile.</div></div>
     </div>`;
-    $("bill-back").onclick = () => { state.mode = "explore"; state.b.id = null; render(); };
+    $("bill-back").onclick = () => { state.b.id = null; location.hash = "#/explore"; };
     // --- negotiation map svg ---
     const W = 860, H = Math.max(400, 110 + legs.length * 96), cy = H / 2;
     const svg = d3.select("#billmap");
@@ -2080,68 +2077,7 @@
     E_cvRO.observe($("stage"));
   }
 
-/* ---------- GRAPH (focus SVG force graph) removed in 3.5; Explore renders on Canvas, centre panes below ----------
-// ---------- GRAPH ----------
-  const svg = d3.select("#graph"), g = svg.append("g");
-  svg.call(d3.zoom().scaleExtent([.3, 3]).on("zoom", ev => g.attr("transform", ev.transform)));
-  let sim;
-  function buildGraphData() {
-    if (state.mode === "focus") {
-      const i = issueById[state.issue]; if (!i) return { nodes: [], links: [] };
-      const edges = EDGES.filter(e => e.to === i.id), persons = [...new Set(edges.map(e => e.from))];
-      const other = EDGES.filter(e => e.to !== i.id && persons.includes(e.from)), topics = [...new Set(other.map(e => e.to))];
-      return { nodes: [{ id: i.id, kind: "topic", name: i.name, main: true, cat: i.cat }, ...persons.map(id => ({ id, kind: "person", name: byId[id].name.replace(/^(Rep|Sen)\. /, "") })), ...topics.map(id => ({ id, kind: "topic", name: issueById[id].name, main: false, cat: issueById[id].cat }))],
-        links: [...edges.map(e => ({ source: e.from, target: e.to, e, main: true })), ...other.map(e => ({ source: e.from, target: e.to, e, main: false }))] };
-    }
-    return { nodes: [], links: [] };
-    // Explore renders on Canvas (E_show); this SVG force graph serves the focus view only.
-  }
-  function renderGraph() {
-    const list = state.mode === "list", prof = state.mode === "profile", bill = state.mode === "bill";
-    $("table-wrap").style.display = list ? "block" : "none"; $("profile").style.display = prof ? "block" : "none"; $("bill").style.display = bill ? "block" : "none";
-    svg.style("display", (list || prof || bill || state.mode === "explore") ? "none" : "block"); $("legend").style.display = list || prof || bill ? "none" : "flex";
-    if (list) { sim && sim.stop(); cv.classList.remove("on"); ectl.classList.remove("on"); ehud.classList.remove("on");  $hint.style.display = ""; return renderTable(); }
-    if (prof) { sim && sim.stop(); cv.classList.remove("on"); ectl.classList.remove("on"); ehud.classList.remove("on");  $hint.style.display = ""; return renderProfile(); }
-    if (bill) { sim && sim.stop(); cv.classList.remove("on"); ectl.classList.remove("on"); ehud.classList.remove("on");  $hint.style.display = ""; return renderBill(); }
-    g.selectAll("*").remove();
-        cv.classList.remove("on"); ectl.classList.remove("on"); ehud.classList.remove("on"); $hint.style.display = "";
-    if (state.mode === "explore") { sim && sim.stop(); graphLinkSel = null; E_show(); return; }
-    const { nodes, links } = buildGraphData(), { width, height } = svg.node().getBoundingClientRect();
-    // (no per-node degree sizing in the focus view)
-    sim && sim.stop();
-    sim = d3.forceSimulation(nodes)
-      .force("link", d3.forceLink(links).id(d => d.id).distance(l => l.main ? 150 : 110).strength(l => l.main ? .7 : .25))
-      .force("charge", d3.forceManyBody().strength(-380)).force("center", d3.forceCenter(width / 2, height / 2)).force("collide", d3.forceCollide(d => d.kind === "topic" ? 40 : 22));
-    const link = g.append("g").selectAll("line").data(links).join("line").attr("stroke", d => color(d.e.direction)).attr("stroke-width", d => heatW(d.e.heat)).attr("stroke-opacity", d => (d.main ? .45 : .15) + Math.abs(d.e.score) * .45).attr("stroke-dasharray", d => d.e.flip ? "7 4" : null);
-    link.append("title").text(d => `${byId[d.e.from].name} on ${issueById[d.e.to].name}: ${d.e.direction} ${fmt(d.e.score)} · ${d.e.n} statement${d.e.n > 1 ? "s" : ""} · attention ${Math.round(d.e.heat * 100)}th pct${d.e.flip ? " · flipped" : ""}`);
-    const node = g.append("g").selectAll("g").data(nodes).join("g").style("cursor", "pointer")
-      .call(d3.drag().on("start", (ev, d) => { if (!ev.active) sim.alphaTarget(.3).restart(); d.fx = d.x; d.fy = d.y; }).on("drag", (ev, d) => { d.fx = ev.x; d.fy = ev.y; }).on("end", (ev, d) => { if (!ev.active) sim.alphaTarget(0); d.fx = null; d.fy = null; }))
-      .on("click", (ev, d) => { if (d.kind === "person") { openProfile(d.id); } else { const i = issueById[d.id]; if (!d.main) { state.mode = "focus"; state.cat = i.cat; state.sub = i.sub; state.issue = i.id; state.person = null; render(); } } })
-      .on("mouseenter", (ev, d) => highlight(d)).on("mouseleave", () => highlight(null));
-    node.filter(d => d.kind === "topic").append("circle").attr("r", 18).attr("fill", d => d.main ? CAT_HUE[d.cat] : "var(--border)").attr("fill-opacity", d => d.main ? .9 : 1).attr("stroke", d => d.main ? "#fff" : "var(--border-strong)").attr("stroke-width", 1.5);
-    node.filter(d => d.kind === "person").append("circle").attr("r", d => state.person === d.id ? 14 : (byId[d.id].chamber === "senate" ? 11 : 9))
-      .attr("fill", d => { const e = links.find(l => l.main && (l.source.id ?? l.source) === d.id); return e ? color(e.e.direction) : "var(--neutral)"; })
-      .attr("stroke", d => state.person === d.id ? "#fff" : (byId[d.id].chamber === "senate" ? "var(--accent)" : "var(--bg)")).attr("stroke-width", 2);
-    node.append("text").attr("class", d => "node-label" + (d.kind === "topic" ? " topic" : "")).attr("text-anchor", "middle").attr("dy", d => d.kind === "topic" ? 5 : 22).text(d => d.name);
-    // condition markers (2.2): amber diamond at the midpoint of edges with rows; existing edge styling untouched
-    const condLinks = links.filter(l => (condByPI[l.e.from + "|" + l.e.to] || []).length);
-    const markers = g.append("g").selectAll("path").data(condLinks).join("path")
-      .attr("d", d3.symbol(d3.symbolDiamond, 70)).attr("fill", "var(--accent)").attr("stroke", "var(--bg)").attr("stroke-width", 1.5)
-      .style("cursor", "pointer").style("pointer-events", "all")
-      .on("mousemove", (ev, l) => { const rows = condByPI[l.e.from + "|" + l.e.to] || [];
-        condTip.style.display = "block"; condTip.style.left = (ev.clientX + 14) + "px"; condTip.style.top = (ev.clientY + 10) + "px";
-        condTip.innerHTML = rows.map(r => `<div><b>${byId[r.person].name}</b> ${phrase(l.e.score, r)}<div class="cond-q">“${r.quote}”</div></div>`).join(`<hr style="border:0;border-top:1px solid var(--border);margin:6px 0">`); })
-      .on("mouseleave", () => { condTip.style.display = "none"; });
-    graphLinkSel = link;
-    function highlight(d) {
-      if (!d) { node.attr("opacity", 1); link.attr("stroke-opacity", l => (l.main ? .45 : .15) + Math.abs(l.e.score) * .45); return; }
-      const near = new Set([d.id]); links.forEach(l => { if (l.source.id === d.id) near.add(l.target.id); if (l.target.id === d.id) near.add(l.source.id); });
-      node.attr("opacity", n => near.has(n.id) ? 1 : .15); link.attr("stroke-opacity", l => l.source.id === d.id || l.target.id === d.id ? .95 : .05);
-    }
-    sim.on("tick", () => { link.attr("x1", d => d.source.x).attr("y1", d => d.source.y).attr("x2", d => d.target.x).attr("y2", d => d.target.y); node.attr("transform", d => `translate(${d.x},${d.y})`); markers.attr("transform", d => `translate(${(d.source.x + d.target.x) / 2},${(d.source.y + d.target.y) / 2})`); });
-  }
-
-  } */
+/* focus GRAPH view removed (group 1): Explore renders on Canvas; centre panes below. */
 
   // ---------- shell ----------
   function renderHeader() {
@@ -2152,30 +2088,25 @@
     else if (state.mode === "explore") { $crumb.innerHTML = `<b>All issues</b> · filtered view`; $hint.textContent = "Click a committee to open it in place · hover or pin to see all of a node's edges · scroll to zoom · / to search · click empty space to reset"; }
     else if (state.mode === "bills") { $crumb.innerHTML = `<b>Bills</b> · every bill in data`; $hint.textContent = "Filter by number or title · most statements first · click a row for the negotiation map"; }
     else if (state.mode === "issues") { $crumb.innerHTML = `<b>Issues</b> · directory`; $hint.textContent = "Bar = support / neutral / oppose among legislators on record · click an issue for its halo page"; }
+    else if (state.mode === "about") { $crumb.innerHTML = "<b>About</b> | methodology"; $hint.textContent = ""; }
     else { const i = issueById[state.iid]; $crumb.innerHTML = i ? `<b>${i.catName}</b> › ${i.subName} › <b>${i.name}</b>` : "Pick an issue"; $hint.textContent = "Half-rings = what members actually did · right = for, left = against · hover a dot for the actions"; }
   }
-  function renderAside() { ({ explore: renderExploreAside, issues: renderIssuesAside, issue: renderIssueAside, bills: renderBillsAside, list: renderListAside, profile: renderProfileAside, bill: renderBillAside })[state.mode](); }
+  function renderAside() { ({ explore: renderExploreAside, issues: renderIssuesAside, issue: renderIssueAside, bills: renderBillsAside, list: renderListAside, profile: renderProfileAside, bill: renderBillAside, about: renderAboutAside })[state.mode](); }
   function renderSide() {
     const hasEvidence = state.mode === "explore" ? !!state.person : state.mode === "list" ? !!state.l.sel : state.mode === "issue" ? true : !!state.p.sel;
     $side.dataset.label = hasEvidence ? "Evidence" : state.mode === "explore" ? "In view" : "Notes";
-    ({ explore: renderExploreSide, issues: renderIssuesSide, issue: renderIssueSide, bills: renderBillsSide, list: renderListSide, profile: renderProfileSide, bill: renderBillSide })[state.mode]();
+    ({ explore: renderExploreSide, issues: renderIssuesSide, issue: renderIssueSide, bills: renderBillsSide, list: renderListSide, profile: renderProfileSide, bill: renderBillSide, about: renderAboutSide })[state.mode]();
     $side.querySelectorAll("[data-open]").forEach(b => b.onclick = () => openProfile(b.dataset.open));
     bindCondChips();
   }
-  function render() { renderHeader(); renderAside(); renderSide(); renderCenter(); if (!["profile", "bill", "issue"].includes(state.mode) && /^#\/(legislator|bill|issue)/.test(location.hash)) history.replaceState(null, "", location.pathname); }
-  ["explore", "list", "profile"].forEach(m => $("m-" + m).onclick = () => { state.mode = m; state.person = null; render(); });
+  function render() { renderHeader(); renderAside(); renderSide(); renderCenter(); }
+  $("m-explore").onclick = () => { if (location.hash === "#/explore") { routeFromHash(); render(); } else location.hash = "#/explore"; };
+  $("m-list").onclick = () => { if (location.hash === "#/find") { routeFromHash(); render(); } else location.hash = "#/find"; };
+  $("m-profile").onclick = () => { if (location.hash === "#/legislators") { routeFromHash(); render(); } else location.hash = "#/legislators"; };
 $("m-issues").onclick = goIssues;
 $("m-bills").onclick = goBills;
-  $("brand").onclick = e => { e.preventDefault(); state.mode = "explore"; state.person = null; render(); };
-  window.addEventListener("hashchange", () => {
-    let m = /^#\/legislator\/([\w-]+)/.exec(location.hash);
-    if (m && byId[m[1]]) { state.mode = "profile"; state.p.person = m[1]; state.p.sel = null; render(); return; }
-    m = /^#\/bill\/([\w-]+)/.exec(location.hash);
-    if (m) { state.mode = "bill"; state.b.id = m[1]; state.b.ticked = []; state.b.sel = null; render(); return; }
-    m = /^#\/issue\/([\w-]+)/.exec(location.hash);
-    if (m) { if (issueById[m[1]]) { state.mode = "issue"; state.iid = m[1]; } else { state.mode = "issues"; state.iid = null; } render(); return; }
-    if (location.hash === "#/issue") { state.mode = "issues"; render(); }
-  });
+  $("brand").onclick = e => { e.preventDefault(); state.person = null; if (!location.hash || location.hash === "#/explore") { routeFromHash(); render(); } else location.hash = "#/explore"; };
+  window.addEventListener("hashchange", () => { routeFromHash(); render(); });
   render();
   E_watch();
   window.addEventListener("resize", () => { if (state.mode === "list") renderCenter(); });
