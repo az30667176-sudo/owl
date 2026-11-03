@@ -1099,10 +1099,12 @@
     if (!statementsReady) { wrap.innerHTML = `<div class="iwrap"><div class="icrumb">Bills</div><div class="ih1">All bills</div>${stmtsNote()}</div>`; return; }
     const groups = [...billGroups().entries()].map(([id, g]) => ({ id, info: billInfo(id) })).filter(x => x.info)
       .map(x => ({ ...x, total: x.info.stmts.length + x.info.conds.length }))
-      .sort((a, b) => b.total - a.total || a.info.num.localeCompare(b.info.num));
-    wrap.innerHTML = `<div class="iwrap"><div class="icrumb">Bills</div><div class="ih1">All bills</div><div class="isub">${groups.length} bills in data · most statements first · ◆ = legislators have stated conditions (negotiation map available)</div><div style="margin:12px 0"><input class="if" id="bfl" placeholder="Filter by number or title…"></div><div id="bll"></div></div>`;
+      .sort((a, b) => (b.info.conds.length > 0) - (a.info.conds.length > 0) || b.total - a.total || a.info.num.localeCompare(b.info.num));
+    const nCond = groups.filter(g => g.info.conds.length).length;
+    wrap.innerHTML = `<div class="iwrap"><div class="icrumb">Bills</div><div class="ih1">All bills</div><div class="isub">${groups.length} bills in data · ◆ ${nCond} with stated conditions (what-if map) listed first, then most statements first</div><div style="margin:12px 0;display:flex;gap:12px;align-items:center"><input class="if" id="bfl" placeholder="Filter by number or title…" style="flex:1"><label class="mt" style="white-space:nowrap;cursor:pointer"><input type="checkbox" id="bfc"> ◆ with conditions only</label></div><div id="bll"></div></div>`;
     const draw = q => {
-      const list = groups.filter(g => !q || g.info.num.toLowerCase().includes(q) || g.info.title.toLowerCase().includes(q));
+      const onlyC = $("bfc").checked;
+      const list = groups.filter(g => (!onlyC || g.info.conds.length) && (!q || g.info.num.toLowerCase().includes(q) || g.info.title.toLowerCase().includes(q)));
       $("bll").innerHTML = list.slice(0, 200).map(g => {
         const v = g.info;
         return `<div class="ibl" data-b="${g.id}"><div><div class="num">${v.num}</div><div class="mt">${v.stmts.length} statement${v.stmts.length === 1 ? "" : "s"}</div></div><div><div>${v.title}</div><div class="mt">${v.iss.catName} › ${v.iss.subName} › ${v.iss.name}</div></div>${v.conds.length ? `<span class="itag">◆ ${v.conds.length} condition${v.conds.length > 1 ? "s" : ""}</span>` : `<span class="mt">no conditions</span>`}</div>`;
@@ -1111,6 +1113,7 @@
     };
     draw("");
     $("bfl").oninput = e => draw(e.target.value.trim().toLowerCase());
+    $("bfc").onchange = () => draw($("bfl").value.trim().toLowerCase());
   }
   // centre pane router (replaces the old SVG focus graph in 3.5; Explore renders on Canvas via E_show)
   function renderCenter() {
