@@ -2509,7 +2509,8 @@
       } else {
         const outI = R0 + [20, 38, 56][issueIdx++ % 3];
         const ix = cx + outI * Math.cos(a.am), iy = cy + outI * Math.sin(a.am);
-        const t = E_truncIssue(a.name), f = "500 " + (10 / E.zt.k) + "px Public Sans";
+        const nq = a.id ? billsForIssue(a.id).length : 0; // issues with yes/no questions get a count so users know where to click
+        const t = E_truncIssue(a.name) + (nq ? ` · ${nq}?` : ""), f = "500 " + (10 / E.zt.k) + "px Public Sans";
         cx2.font = f;
         const tw = cx2.measureText(t).width, th = 12 / E.zt.k;
         const px = E_fitX(ix, tw, al, W), py = Math.min(Math.max(iy + 4, 10), H - 4);
