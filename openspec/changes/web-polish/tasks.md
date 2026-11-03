@@ -14,10 +14,10 @@ All tasks touch `apps/web/index.html` unless stated. One commit per group, messa
 
 ## 3. Responsive layout and touch
 
-- [ ] 3.1 CSS: `@media (max-width: 899px)` makes `.pgrid` one column; `body[data-pane=…]` shows only that pane; masthead keeps brand, nav, search; `.pane-switch` segmented control (Filters / View / Details) using existing tokens, hidden ≥ 900 px.
-- [ ] 3.2 `state.pane` (default `view`, reset on route change); switch click sets it and re-renders; ResizeObserver resizes the Canvas and minimap when the view pane appears.
-- [ ] 3.3 Explore Canvas: Pointer Events (`pointerdown/move/up/cancel`), one-pointer drag pan, two-pointer pinch about the midpoint with the wheel clamp, tap (< 6 px) = click; `touch-action: none` on the Canvas; keep mouse fallback when `window.PointerEvent` is undefined.
-- [ ] 3.4 Verify at 375 × 812 (Explore, profile, issue page, bills) — no horizontal scroll, switch works, pinch zooms.
+- [x] 3.1 CSS: `@media (max-width: 899px)` makes `.pgrid` one column; `body[data-pane=…]` shows only that pane; masthead keeps brand, nav, search; `.pane-switch` segmented control (Filters / View / Details) using existing tokens, hidden ≥ 900 px.
+- [x] 3.2 `state.pane` (default `view`, reset on route change); switch click sets it and re-renders; ResizeObserver resizes the Canvas and minimap when the view pane appears.
+- [x] 3.3 Explore Canvas: Pointer Events (`pointerdown/move/up/cancel`), one-pointer drag pan, two-pointer pinch about the midpoint with the wheel clamp, tap (< 6 px) = click; `touch-action: none` on the Canvas; keep mouse fallback when `window.PointerEvent` is undefined.
+- [x] 3.4 Verify at 375 × 812 (Explore, profile, issue page, bills) — no horizontal scroll, switch works, pinch zooms.
 
 ## 4. Keyboard access and reduced motion
 

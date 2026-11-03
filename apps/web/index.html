@@ -234,6 +234,27 @@
   #profile { padding: 18px 28px 40px; }
   .pgrid { grid-template-columns: 1fr 320px; gap: 28px; }
   @media (max-width: 1180px) { .masthead .crumb { display: none; } .masthead { gap: 18px; } .masthead .tagline { display: none; } }
+  /* responsive (group 3): below 900px one pane at a time via body[data-pane] */
+  .pane-switch { display: none; }
+  @media (max-width: 899px) {
+    .app { grid-template-columns: 1fr; grid-template-rows: auto minmax(0, 1fr); height: 100dvh; }
+    .pgrid { grid-template-columns: 1fr; }
+    body[data-pane="filters"] #stage, body[data-pane="filters"] .side { display: none; }
+    body[data-pane="view"] aside, body[data-pane="view"] .side { display: none; }
+    body[data-pane="details"] aside, body[data-pane="details"] #stage { display: none; }
+    aside, .side { border: 0; border-bottom: 1px solid var(--border); }
+    .masthead { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; padding: 8px 12px; }
+    .masthead .tagline, .masthead .crumb { display: none; }
+    .masthead .mock, .masthead .drop { margin-left: auto; }
+    .gsrch { order: 3; flex: 1 1 100%; max-width: none; min-width: 0; margin-left: 0; }
+    .pane-switch { order: 4; flex: 1 1 100%; display: flex; border: 1px solid var(--border); border-radius: 3px; overflow: hidden; }
+    .pane-switch button { flex: 1; background: transparent; border: 0; color: var(--muted); padding: 6px 0; font: inherit; font-size: 12px; cursor: pointer; }
+    .pane-switch button.active { background: var(--accent); color: var(--on-accent); }
+    #profile, #bill, #issues, #issue, #bills, #table-wrap, #about { padding: 14px 14px 24px; }
+    .bill-grid { grid-template-columns: 1fr; }
+    .bill-strip { grid-template-columns: repeat(2, 1fr); }
+    table { font-size: 12px; }
+  }
   /* scrollbars: thin, on-theme */
   * { scrollbar-width: thin; scrollbar-color: #2a3148 transparent; }
   *::-webkit-scrollbar { width: 8px; height: 8px; }
@@ -356,13 +377,14 @@
   .cond-tip .cond-q { font-family: var(--display); font-style: italic; color: var(--muted); margin-top: 4px; font-size: 14px; line-height: 22px; }
 </style>
 </head>
-<body>
+<body data-pane="view">
 <div id="loading">Loading data…</div>
 <div class="app">
   <header class="masthead">
     <a class="brand" href="#" id="brand"><img class="logo" src="assets/logo/owl-mark-64.png" alt=""><span class="wordmark">OWL</span><span class="tagline">Open Watch on Legislators</span></a>
     <nav class="modes" aria-label="Sections"><button id="m-explore">Explore</button><button id="m-issues">Issues</button><button id="m-bills">Bills</button><button id="m-list">Find</button><button id="m-profile">Legislators</button></nav>
     <div class="gsrch"><input id="gs" type="text" autocomplete="off" placeholder="Find a legislator: name, state, district (CA-12) or ZIP" aria-label="Find a legislator"><kbd>/</kbd><div class="dd" id="dd"></div></div>
+    <div class="pane-switch" id="pane-switch" role="tablist" aria-label="Panes"><button data-pane="filters" role="tab">Filters</button><button data-pane="view" role="tab" class="active">View</button><button data-pane="details" role="tab">Details</button></div>
     <span class="crumb" id="crumb"></span>
     <span class="mock" id="mock" hidden>Mock data · fictional legislators</span>
     <span class="drop" id="drop" hidden></span>
@@ -558,7 +580,7 @@
   const title = p => p.name;
 
   const state = {
-    mode: "explore", cat: null, sub: null, issue: null, person: null, edge: null,
+    mode: "explore", cat: null, sub: null, issue: null, person: null, edge: null, pane: "view",
     f: { issues: new Set(ISSUES.filter(i => countFor(i.id) > 0).map(i => i.id)), chambers: new Set(["house", "senate"]), state: "", parties: new Set(["D", "R", "I"]), dirs: new Set(["support", "oppose", "neutral"]), minConf: 0, q: "" },
     l: { chamber: "", state: "", cat: "", sub: "", issue: "", dir: "", party: "", gender: "", minConf: 0, sort: "score", desc: true, sel: null },
     p: { person: null, sel: null, q: "" },
@@ -568,6 +590,7 @@
   // hash router (group 1): every mode has a hash; state.mode derives from location.hash
   function routeFromHash() {
     const h = location.hash || "#/explore";
+    state.pane = "view";
     if (h.indexOf("#/legislator/") === 0 && byId[h.slice(13)]) { state.mode = "profile"; state.p.person = h.slice(13); state.p.sel = null; return; }
     if (h === "#/legislators") { state.mode = "profile"; state.p.person = null; state.p.sel = null; return; }
     if (h.indexOf("#/bill/") === 0 && h.length > 7) { state.mode = "bill"; state.b.id = h.slice(7); state.b.ticked = []; state.b.sel = null; return; }
@@ -1699,6 +1722,52 @@
     $("eRz").onclick = () => { E.pinned = null; E.hl = null; renderSide(); d3.select(cv).transition().duration(400).call(E_zoom.transform, d3.zoomIdentity); };
     E_zoom = d3.zoom().scaleExtent([1, 8]).on("zoom", ev => { E.zt = ev.transform; E_draw(); });
     d3.select(cv).call(E_zoom).on("dblclick.zoom", null);
+    cv.style.touchAction = "none";
+    if (window.PointerEvent) {
+      E_zoom.touchable(function () { return false; });
+      (function () {
+        var tp = new Map(), pinchD = 0, downMoved = 0;
+        function ploc(ev) { const r = cv.getBoundingClientRect(); return { x: ev.clientX - r.left, y: ev.clientY - r.top }; }
+        cv.addEventListener("pointerdown", function (ev) {
+          if (ev.pointerType !== "touch") return;
+          try { cv.setPointerCapture(ev.pointerId); } catch (err) {}
+          tp.set(ev.pointerId, ploc(ev));
+          if (tp.size === 1) downMoved = 0;
+          if (tp.size === 2) { const q = Array.from(tp.values()); pinchD = Math.hypot(q[0].x - q[1].x, q[0].y - q[1].y) || 1; }
+        });
+        cv.addEventListener("pointermove", function (ev) {
+          if (ev.pointerType !== "touch" || !tp.has(ev.pointerId)) return;
+          ev.preventDefault();
+          const prev = tp.get(ev.pointerId), cur = ploc(ev);
+          tp.set(ev.pointerId, cur);
+          if (tp.size === 1) {
+            const dx = cur.x - prev.x, dy = cur.y - prev.y;
+            downMoved += Math.abs(dx) + Math.abs(dy);
+            d3.select(cv).call(E_zoom.translateBy, dx, dy);
+          } else if (tp.size === 2) {
+            const q = Array.from(tp.values()), d = Math.hypot(q[0].x - q[1].x, q[0].y - q[1].y) || 1;
+            if (pinchD > 0) {
+              const mx = (q[0].x + q[1].x) / 2, my = (q[0].y + q[1].y) / 2, t = d3.zoomTransform(cv);
+              const k = Math.min(8, Math.max(1, t.k * d / pinchD));
+              d3.select(cv).call(E_zoom.transform, d3.zoomIdentity.translate(mx - (mx - t.x) * k / t.k, my - (my - t.y) * k / t.k).scale(k));
+            }
+            pinchD = d;
+          }
+        }, { passive: false });
+        function tUp(ev) {
+          if (ev.pointerType !== "touch" || !tp.has(ev.pointerId)) return;
+          tp.delete(ev.pointerId);
+          if (tp.size < 2) pinchD = 0;
+          if (tp.size === 0 && downMoved < 6) {
+            const r = cv.getBoundingClientRect();
+            E.hover = E_nodeAt((ev.clientX - r.left - E.zt.x) / E.zt.k, (ev.clientY - r.top - E.zt.y) / E.zt.k);
+            E_click();
+          }
+        }
+        cv.addEventListener("pointerup", tUp);
+        cv.addEventListener("pointercancel", function (ev) { tp.delete(ev.pointerId); pinchD = 0; });
+      })();
+    }
     cv.onmousemove = E_move;
     cv.onclick = E_click;
     cv.onmouseleave = () => { E.hover = null; E_hideTip(); E_draw(); };
@@ -2120,12 +2189,13 @@
     $side.querySelectorAll("[data-open]").forEach(b => b.onclick = () => openProfile(b.dataset.open));
     bindCondChips();
   }
-  function render() { renderHeader(); renderAside(); renderSide(); renderCenter(); }
+  function render() { document.body.dataset.pane = state.pane || "view"; renderHeader(); renderAside(); renderSide(); renderCenter(); const _sw = document.getElementById("pane-switch"); if (_sw) _sw.querySelectorAll("button").forEach(b => b.classList.toggle("active", b.dataset.pane === (state.pane || "view"))); }
   $("m-explore").onclick = () => { if (location.hash === "#/explore") { routeFromHash(); render(); } else location.hash = "#/explore"; };
   $("m-list").onclick = () => { if (location.hash === "#/find") { routeFromHash(); render(); } else location.hash = "#/find"; };
   $("m-profile").onclick = () => { if (location.hash === "#/legislators") { routeFromHash(); render(); } else location.hash = "#/legislators"; };
 $("m-issues").onclick = goIssues;
 $("m-bills").onclick = goBills;
+  $("pane-switch").querySelectorAll("button").forEach(b => b.onclick = () => { state.pane = b.dataset.pane; render(); });
   $("brand").onclick = e => { e.preventDefault(); state.person = null; if (!location.hash || location.hash === "#/explore") { routeFromHash(); render(); } else location.hash = "#/explore"; };
   window.addEventListener("hashchange", () => { routeFromHash(); render(); });
   render();
