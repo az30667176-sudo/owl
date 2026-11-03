@@ -1595,7 +1595,7 @@
       axTop = top0; specH = top0 + 28;
       dots = [...per.entries()].map(([k, g]) => {
         const x = (+k + 1) / 2 * 100;
-        return (g.length > 12 ? `<span class="bill-cnt" style="left:${x}%">${scored.length}</span>` : "")
+        return (g.length > 12 ? `<span class="bill-cnt" style="left:${x}%">${g.length}</span>` : "")
           + g.slice(0, 12).map((l, j) => `<span class="dot${l.conds.length ? " cond" : ""}" data-p="${l.id}" title="${shortName(l.p.name)} · ${fmt(l.score)}" style="left:${x}%;top:${top0 - 8 - j * step}px;width:8px;height:8px;border-width:1px;cursor:pointer"></span>`).join("");
       }).join("");
     }
