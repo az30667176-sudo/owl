@@ -21,10 +21,10 @@ All tasks touch `apps/web/index.html` unless stated. One commit per group, messa
 
 ## 4. Keyboard access and reduced motion
 
-- [ ] 4.1 Skip link as first element (`<a class="skip" href="#main">Skip to content</a>`), `id="main"` on the centre pane; `:focus-visible` ring with `var(--accent)`.
-- [ ] 4.2 Legislators table rows, Issues directory rows, Bills rows, profile attention rows, search results, issue "strongest voices" and bill lists: focusable (`tabindex="0"` + `role="link"` or real `<a>`/`<button>`), Enter/Space activates via one shared keydown handler; `aria-label` on icon-only buttons (zoom, pin, close, pane switch) and `aria-label="Find a legislator"` on the search input.
-- [ ] 4.3 `prefers-reduced-motion`: `E_fly` and sector open/close tweens use duration 0; CSS transitions disabled.
-- [ ] 4.4 Verify: Tab from the skip link through Legislators rows → Enter opens profile; no element lacks a visible focus state.
+- [x] 4.1 Skip link as first element (`<a class="skip" href="#main">Skip to content</a>`), `id="main"` on the centre pane; `:focus-visible` ring with `var(--accent)`.
+- [x] 4.2 Legislators table rows, Issues directory rows, Bills rows, profile attention rows, search results, issue "strongest voices" and bill lists: focusable (`tabindex="0"` + `role="link"` or real `<a>`/`<button>`), Enter/Space activates via one shared keydown handler; `aria-label` on icon-only buttons (zoom, pin, close, pane switch) and `aria-label="Find a legislator"` on the search input.
+- [x] 4.3 `prefers-reduced-motion`: `E_fly` and sector open/close tweens use duration 0; CSS transitions disabled.
+- [x] 4.4 Verify: Tab from the skip link through Legislators rows → Enter opens profile; no element lacks a visible focus state.
 
 ## 5. About page
 

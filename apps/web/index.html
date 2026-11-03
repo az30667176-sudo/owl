@@ -35,6 +35,8 @@
   html, body { height: 100%; margin: 0; background: var(--bg); color: var(--text);
     font: 14px/1.45 var(--sans); }
   :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .skip { position: absolute; left: -9999px; top: 0; background: var(--accent); color: var(--on-accent); padding: 8px 14px; z-index: 20; border-radius: 0 0 3px 0; font-weight: 600; }
+  .skip:focus { left: 0; }
   h1, .topic-title, .person-card .name, .ph h1, .hero h1 { font-family: var(--display); font-weight: 600; letter-spacing: -.01em; }
   .app { display: grid; grid-template-columns: 280px 1fr 360px; grid-template-rows: 48px 1fr; height: 100vh; }
   header { grid-column: 1 / -1; display: flex; align-items: center; gap: 14px; padding: 0 16px; border-bottom: 1px solid var(--border); background: var(--panel); }
@@ -79,7 +81,7 @@
   .group .subs { padding-left: 24px; }
   .stat { font-size: 12px; color: var(--muted); margin: 10px 4px 0; }
   section { position: relative; }
-  #stage { overflow: hidden; }
+  #main { overflow: hidden; }
   svg { width: 100%; height: 100%; display: block; }
   .legend { position: absolute; left: 14px; bottom: 12px; display: flex; gap: 14px; font-size: 12px; color: var(--muted); background: rgba(23,26,33,.85); padding: 6px 10px; border-radius: 8px; border: 1px solid var(--border); }
   .legend i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px; vertical-align: -1px; }
@@ -239,9 +241,9 @@
   @media (max-width: 899px) {
     .app { grid-template-columns: 1fr; grid-template-rows: auto minmax(0, 1fr); height: 100dvh; }
     .pgrid { grid-template-columns: 1fr; }
-    body[data-pane="filters"] #stage, body[data-pane="filters"] .side { display: none; }
+    body[data-pane="filters"] #main, body[data-pane="filters"] .side { display: none; }
     body[data-pane="view"] aside, body[data-pane="view"] .side { display: none; }
-    body[data-pane="details"] aside, body[data-pane="details"] #stage { display: none; }
+    body[data-pane="details"] aside, body[data-pane="details"] #main { display: none; }
     aside, .side { border: 0; border-bottom: 1px solid var(--border); }
     .masthead { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; padding: 8px 12px; }
     .masthead .tagline, .masthead .crumb { display: none; }
@@ -255,6 +257,7 @@
     .bill-strip { grid-template-columns: repeat(2, 1fr); }
     table { font-size: 12px; }
   }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
   /* scrollbars: thin, on-theme */
   * { scrollbar-width: thin; scrollbar-color: #2a3148 transparent; }
   *::-webkit-scrollbar { width: 8px; height: 8px; }
@@ -378,19 +381,20 @@
 </style>
 </head>
 <body data-pane="view">
+<a class="skip" href="#main">Skip to content</a>
 <div id="loading">Loading data…</div>
 <div class="app">
   <header class="masthead">
     <a class="brand" href="#" id="brand"><img class="logo" src="assets/logo/owl-mark-64.png" alt=""><span class="wordmark">OWL</span><span class="tagline">Open Watch on Legislators</span></a>
     <nav class="modes" aria-label="Sections"><button id="m-explore">Explore</button><button id="m-issues">Issues</button><button id="m-bills">Bills</button><button id="m-list">Find</button><button id="m-profile">Legislators</button></nav>
     <div class="gsrch"><input id="gs" type="text" autocomplete="off" placeholder="Find a legislator: name, state, district (CA-12) or ZIP" aria-label="Find a legislator"><kbd>/</kbd><div class="dd" id="dd"></div></div>
-    <div class="pane-switch" id="pane-switch" role="tablist" aria-label="Panes"><button data-pane="filters" role="tab">Filters</button><button data-pane="view" role="tab" class="active">View</button><button data-pane="details" role="tab">Details</button></div>
+    <div class="pane-switch" id="pane-switch" role="tablist" aria-label="Panes"><button data-pane="filters" role="tab" aria-label="Show filters pane">Filters</button><button data-pane="view" role="tab" class="active" aria-label="Show view pane">View</button><button data-pane="details" role="tab" aria-label="Show details pane">Details</button></div>
     <span class="crumb" id="crumb"></span>
     <span class="mock" id="mock" hidden>Mock data · fictional legislators</span>
     <span class="drop" id="drop" hidden></span>
   </header>
   <aside id="aside"></aside>
-  <section id="stage">
+  <section id="main">
     <div class="hint" id="hint"></div>
     <canvas id="cv"></canvas>
     <div class="ehud" id="ehud"></div>
@@ -728,6 +732,7 @@
     return `<div class="h" style="margin-top:16px">What it would take</div>${groups}${statementsReady ? "" : stmtsNote()}`;
   }
   // chip hover: edges of the chip's legislators on this issue go full opacity, other edges of the issue dim; leaving restores
+  function kbRow(el, role) { el.setAttribute("tabindex", "0"); el.setAttribute("data-kb", "1"); if (role) el.setAttribute("role", role); }
   function bindCondChips() {
     $side.querySelectorAll(".cond-chip").forEach(ch => {
       const set = new Set((ch.dataset.people || "").split(" ").filter(Boolean)), issue = ch.dataset.issue;
@@ -768,7 +773,7 @@
       }).join("") + `</div>`;
     }).join("");
   }
-  function bindDirRows(root) { root.querySelectorAll(".idi").forEach(el => el.onclick = () => openIssue(el.dataset.i)); }
+  function bindDirRows(root) { root.querySelectorAll(".idi").forEach(el => { kbRow(el, "link"); el.onclick = () => openIssue(el.dataset.i); }); }
   function renderIssuesAside() {
     $aside.innerHTML = `<div class="h" style="margin-top:8px">Issues</div><div class="topic-sub">${COMMITTEES.length} committees · ${ISSUES.length} issues · ${EDGES.length.toLocaleString()} stances on record. Click an issue for its halo page.</div>`;
   }
@@ -828,7 +833,7 @@
       + `<div class="isec">Where in the country · colour = stance on this issue</div><canvas id="imap"></canvas><div class="mmleg"><span><span class="sq" style="background:var(--support)"></span>supports</span><span><span class="sq" style="background:var(--oppose)"></span>opposes</span><span><span class="sq" style="background:var(--neutral)"></span>neutral</span><span><span class="sq" style="background:#2a3148"></span>no statement</span></div></div>`;
     $("i-exp").onclick = () => { state.person = null; location.hash = "#/explore"; };
     $("i-issues").onclick = goIssues;
-    wrap.querySelectorAll("[data-p]").forEach(el => el.onclick = () => openProfile(el.dataset.p));
+    wrap.querySelectorAll("[data-p]").forEach(el => { kbRow(el, "link"); el.onclick = () => openProfile(el.dataset.p); });
     I_orbit(id, es);
     const sc = new Map(es.map(e => [e.from, e.score]));
     I_tilemap($("imap"), l => sc.has(l.id) ? eColor(dirOf(sc.get(l.id))) : "#2a3148", {
@@ -845,8 +850,8 @@
     const bills = issueBills(id);
     $side.innerHTML = `<div class="h">Related issues</div><div class="irel">${rel.map(q => `<span class="chip" data-i="${q.id}" style="border-color:${CAT_HUE[q.cat]}"><span style="color:${CAT_HUE[q.cat]}">●</span> ${q.name} <span style="color:var(--muted)">· ${q.n} shared</span></span>`).join("") || `<span class="topic-sub">—</span>`}</div>`
       + `<div class="h">Bills under this issue</div>` + (bills.map(b => `<div class="ibl" data-b="${b.id}"><div><div class="num">${b.num}</div><div class="mt">${b.n} statement${b.n === 1 ? "" : "s"}</div></div><div><div>${b.title || b.str}</div><div class="mt">${is.catName} › ${is.subName}</div></div>${b.conds ? `<span class="itag">◆ ${b.conds} condition${b.conds > 1 ? "s" : ""}</span>` : `<span class="mt">no conditions</span>`}</div>`).join("") || `<div class="empty-state">No bills on record for this issue.</div>`);
-    $side.querySelectorAll("[data-i]").forEach(el => el.onclick = () => openIssue(el.dataset.i));
-    $side.querySelectorAll("[data-b]").forEach(el => el.onclick = () => openBill(el.dataset.b));
+    $side.querySelectorAll("[data-i]").forEach(el => { kbRow(el, "link"); el.onclick = () => openIssue(el.dataset.i); });
+    $side.querySelectorAll("[data-b]").forEach(el => { kbRow(el, "link"); el.onclick = () => openBill(el.dataset.b); });
   }
   // issue halo: concentric half-rings, one per kind of action; right half = for, left half = against.
   // A dot is a member (party colour — node colour encodes party only). Arc length filled = how many. No invented spectrum.
@@ -980,7 +985,7 @@
         const v = g.info;
         return `<div class="ibl" data-b="${g.id}"><div><div class="num">${v.num}</div><div class="mt">${v.stmts.length} statement${v.stmts.length === 1 ? "" : "s"}</div></div><div><div>${v.title}</div><div class="mt">${v.iss.catName} › ${v.iss.subName} › ${v.iss.name}</div></div>${v.conds.length ? `<span class="itag">◆ ${v.conds.length} condition${v.conds.length > 1 ? "s" : ""}</span>` : `<span class="mt">no conditions</span>`}</div>`;
       }).join("") + (list.length > 200 ? `<div class="mt" style="padding:10px 0">+ ${list.length - 200} more · filter to narrow</div>` : "");
-      $("bll").querySelectorAll("[data-b]").forEach(el => el.onclick = () => openBill(el.dataset.b));
+      $("bll").querySelectorAll("[data-b]").forEach(el => { kbRow(el, "link"); el.onclick = () => openBill(el.dataset.b); });
     };
     draw("");
     $("bfl").oninput = e => draw(e.target.value.trim().toLowerCase());
@@ -1048,7 +1053,7 @@
       <table><thead><tr>${th("name", "Legislator")}${th("state", "District")}${th("party", "Party")}${th("gender", "Gender")}${th("issue", "Issue")}<th>Committee</th><th>Stance</th>${th("score", "Score")}${th("n", "Stmts")}${th("conf", "Confidence")}<th>Latest quote</th></tr></thead>
       <tbody>${rows.map((r, k) => `<tr data-i="${k}" class="${L.sel === r.e ? "active" : ""}"><td><b>${r.p.name}</b></td><td>${seat(r.p)}</td><td><span class="pill ${r.p.party}">${r.p.party}</span></td><td>${r.p.gender}</td><td>${r.i.name}<div style="font-size:11px;color:var(--muted)">${r.i.subName}</div></td><td style="color:var(--muted)">${r.i.catName}</td><td><span class="pill ${r.e.direction}">${r.e.direction}</span></td><td class="score" style="color:${color(r.e.direction)}">${fmt(r.e.score)}</td><td style="text-align:center">${r.e.n}${r.e.flip ? ' <span style="color:var(--accent)" title="position changed over time">⟲</span>' : ""}</td><td><span class="tag c-${r.e.llm_confidence || "…"}">${r.e.llm_confidence || "…"}</span></td><td class="quote" title="${(r.e.quote || "").replace(/"/g, "&quot;")}">${statementsReady ? `“${r.e.quote}”` : `<span style="color:var(--muted)">loading…</span>`}</td></tr>`).join("") || `<tr><td colspan="11" class="empty-state">No legislators match.</td></tr>`}</tbody></table>`;
     wrap.querySelectorAll("th[data-k]").forEach(h => h.onclick = () => { const k = h.dataset.k; if (L.sort === k) L.desc = !L.desc; else { L.sort = k; L.desc = k === "score" || k === "conf"; } renderTable(); });
-    wrap.querySelectorAll("tbody tr[data-i]").forEach(tr => tr.onclick = () => { L.sel = rows[+tr.dataset.i].e; renderTable(); renderSide(); });
+    wrap.querySelectorAll("tbody tr[data-i]").forEach(tr => { kbRow(tr, "link"); tr.onclick = () => { L.sel = rows[+tr.dataset.i].e; renderTable(); renderSide(); }; });
     $("csv").onclick = () => { const h = ["name", "state", "district", "party", "gender", "issue", "subcommittee", "committee", "direction", "score", "statements", "flipped", "first_date", "last_date", "linkage", "llm_confidence", "latest_bill", "latest_quote", "latest_source"];
       const lines = [h.join(",")].concat(rows.map(r => [r.p.name, r.p.state, r.p.district || "", r.p.party, r.p.gender, r.i.name, r.i.subName, r.i.catName, r.e.direction, r.e.score.toFixed(3), r.e.n, r.e.flip, r.e.first || "", r.e.last || "", r.e.linkage || "", r.e.llm_confidence || "", r.e.bill || "", r.e.quote || "", r.e.source || ""].map(v => `"${String(v).replace(/"/g, '""')}"`).join(",")));
       const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([lines.join("\n")], { type: "text/csv" })); a.download = "owl-legislators.csv"; a.click(); };
@@ -1068,7 +1073,7 @@
     const people = PEOPLE.filter(p => !q || p.name.toLowerCase().includes(q) || p.state.toLowerCase() === q || (p.district || "").toLowerCase().includes(q)).sort((a, b) => a.name.localeCompare(b.name));
     $aside.innerHTML = `<div class="h" style="margin-top:8px">Legislators</div><input class="search" id="pq" placeholder="name, state or district…" value="${P.q}">
       <div class="dir-list">${people.map(p => `<div class="dir-row ${P.person === p.id ? "active" : ""}" data-id="${p.id}"><div><div class="n">${p.name}</div><div class="d">${seat(p)} · ${EDGES.filter(e => e.from === p.id).length} stances</div></div><span class="pill ${p.party}">${p.party}</span></div>`).join("")}</div>`;
-    $aside.querySelectorAll(".dir-row").forEach(el => el.onclick = () => openProfile(el.dataset.id));
+    $aside.querySelectorAll(".dir-row").forEach(el => { kbRow(el, "link"); el.onclick = () => openProfile(el.dataset.id); });
     const pq = $("pq"); pq.oninput = () => { P.q = pq.value; renderProfileAside(); pq.focus(); pq.setSelectionRange(pq.value.length, pq.value.length); };
   }
   function partyMean(issue, party) { const xs = EDGES.filter(e => e.to === issue && byId[e.from].party === party).map(e => e.score); return xs.length ? xs.reduce((a, b) => a + b, 0) / xs.length : null; }
@@ -1165,7 +1170,7 @@
         + `<span class="attn-barwrap"><span class="attn-bar" style="width:${(e.salience / maxS * 100).toFixed(1)}%;background:${color(e.direction)}"></span></span>`
         + `<span class="score" style="color:${color(e.direction)}">${fmt(e.score)}</span><span class="attn-n">×${e.n}</span></div>`;
     }).join("");
-    host.querySelectorAll(".attn-row").forEach(el => el.onclick = () => { const hit = mine.find(x => x.e.to === el.dataset.to); if (hit) { state.p.sel = hit.e; renderProfile(); renderSide(); } });
+    host.querySelectorAll(".attn-row").forEach(el => { kbRow(el, "link"); el.onclick = () => { const hit = mine.find(x => x.e.to === el.dataset.to); if (hit) { state.p.sel = hit.e; renderProfile(); renderSide(); } }; });
     if (note) note.textContent = `${shown.length} of ${mine.length} issues · ranked by attention (recent statements count more)`;
   }
   function drawMix(mine) {
@@ -1584,7 +1589,7 @@
     if (q && !groups.length) h = `<div class="it" style="cursor:default"><span></span><span class="mt">No match. Try a surname, a state (texas), a district (CA-12) or a ZIP.</span><span></span></div>`;
     dd.innerHTML = h;
     dd.style.display = q ? "block" : "none";
-    dd.querySelectorAll(".it[data-i]").forEach(el => {
+    dd.querySelectorAll(".it[data-i]").forEach(el => { kbRow(el, "link");
       el.onmouseenter = () => { gsSel = +el.dataset.i; dd.querySelectorAll(".it").forEach(x => x.classList.toggle("on", x === el)); };
       el.onclick = () => gsPick(gsResults[+el.dataset.i], false);
     });
@@ -1605,6 +1610,14 @@
     else if (e.key === "ArrowUp") { gsSel = Math.max(0, gsSel - 1); gsRender(); e.preventDefault(); }
     else if (e.key === "Enter" && gsResults[gsSel]) { gsPick(gsResults[gsSel], e.shiftKey ? true : state.mode !== "explore"); }
     else if (e.key === "Escape") { dd.style.display = "none"; gs.blur(); }
+  });
+  // shared keyboard activation (group 4): Enter/Space on any data-kb row clicks it
+  document.addEventListener("keydown", ev => {
+    if (ev.key !== "Enter" && ev.key !== " ") return;
+    const t = ev.target && ev.target.closest ? ev.target.closest("[data-kb]") : null;
+    if (!t || t.closest("button, input, select, textarea, a")) return;
+    if (ev.key === " ") ev.preventDefault();
+    t.click();
   });
   document.addEventListener("keydown", e => {
     if (e.key === "/" && !/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement && document.activeElement.tagName || "") && document.activeElement !== gs) { e.preventDefault(); gs.focus(); gs.select(); }
@@ -1671,7 +1684,7 @@
   // resize fires the observer, which resizes again, until the canvas is tens of
   // millions of px wide and nothing renders.
   function E_paneSize() {
-    const pane = $("stage");
+    const pane = $("main");
     const W = Math.max(320, (pane && pane.clientWidth) || 0);
     let chrome = 0;
     [ectl, ehud, $("legend"), $("hint")].forEach(el => { if (el && el.getClientRects().length) chrome += el.offsetHeight || 0; });
@@ -1719,7 +1732,7 @@
     $("fD").onchange = e => { E.showD = e.target.checked; E_draw(); };
     $("fR").onchange = e => { E.showR = e.target.checked; E_draw(); };
     $("eK").oninput = e => { E.K = +e.target.value; $("eKv").textContent = E.K; E_draw(); };
-    $("eRz").onclick = () => { E.pinned = null; E.hl = null; renderSide(); d3.select(cv).transition().duration(400).call(E_zoom.transform, d3.zoomIdentity); };
+    $("eRz").onclick = () => { E.pinned = null; E.hl = null; renderSide(); d3.select(cv).transition().duration(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 400).call(E_zoom.transform, d3.zoomIdentity); };
     E_zoom = d3.zoom().scaleExtent([1, 8]).on("zoom", ev => { E.zt = ev.transform; E_draw(); });
     d3.select(cv).call(E_zoom).on("dblclick.zoom", null);
     cv.style.touchAction = "none";
@@ -1797,6 +1810,7 @@
     E.tweenStart = performance.now();
   }
   function E_stepAngles(now) {
+    if (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) { for (const g of E.ang.values()) { g.a0 = g.t0; g.a1 = g.t1; } return false; }
     const p = Math.min(1, (now - E.tweenStart) / E.TW), e = d3.easeCubicInOut(p);
     for (const g of E.ang.values()) { if (g.f0 === undefined) { g.a0 = g.t0; g.a1 = g.t1; continue; } g.a0 = g.f0 + (g.t0 - g.f0) * e; g.a1 = g.f1 + (g.t1 - g.f1) * e; }
     return p < 1;
@@ -2032,7 +2046,7 @@
     if (!l) return;
     E.pinned = l; E.hover = null; E.hl = null;
     renderSide();
-    d3.select(cv).transition().duration(850).ease(d3.easeCubicInOut).call(E_zoom.transform, d3.zoomIdentity.translate(cv.getBoundingClientRect().width / 2, cv.getBoundingClientRect().height / 2).scale(3.2).translate(-l.x, -l.y));
+    d3.select(cv).transition().duration(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 850).ease(d3.easeCubicInOut).call(E_zoom.transform, d3.zoomIdentity.translate(cv.getBoundingClientRect().width / 2, cv.getBoundingClientRect().height / 2).scale(3.2).translate(-l.x, -l.y));
     setTimeout(() => { if (state.mode === "explore") E_draw(); }, 900);
   };
   // ---------- LINKED MINIMAP (2.4) ----------
@@ -2153,7 +2167,7 @@
       E.rsT = setTimeout(() => { if (state.mode !== "explore" || !E) return; E_build(false); }, 120);
     });
     E_cvRO.disconnect();
-    E_cvRO.observe($("stage"));
+    E_cvRO.observe($("main"));
   }
 
 /* focus GRAPH view removed (group 1): Explore renders on Canvas; centre panes below. */
