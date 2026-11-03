@@ -297,6 +297,7 @@
   .bill-spec .dot.cond::after { content: "◆"; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); color: var(--accent); font-size: 10px; }
   .bill-spec .nm { position: absolute; top: 38px; font: 500 10px var(--mono); color: var(--muted); transform: translateX(-50%); white-space: nowrap; }
   .bill-spec .dot[data-p] { cursor: pointer; }
+  .bill-spec .bill-cnt { position: absolute; top: 0; transform: translateX(-50%); font: 600 11px var(--mono); color: var(--accent); border: 1px solid var(--accent); border-radius: 10px; padding: 0 6px; background: var(--bg); white-space: nowrap; }
   .bill-cols { display: grid; grid-template-columns: 1fr 1fr 1fr; margin-top: 12px; border-top: 1px solid var(--border); }
   .bill-col { padding: 10px 12px 4px; font-family: var(--mono); font-size: 12px; }
   .bill-col + .bill-col { border-left: 1px solid var(--border); }
@@ -1541,6 +1542,27 @@
     const opp = legs.filter(l => l.score !== null && l.score < -.15).length;
     const silent = legs.filter(l => l.score === null && l.conds.length).length;
     const path = `${info.iss.catName} › ${info.iss.subName} › ${info.iss.name}`;
+    // scale rule: individual map nodes only for condition holders, speakers on this bill, or movers (cap 40); the rest group by projection+party
+    const spokeOnBill = new Set(info.stmts.filter(s => kindOf(s) === "speech").map(s => s.person));
+    const isIndiv = L => L.conds.length > 0 || spokeOnBill.has(L.id) || (byP[L.id] && byP[L.id].proj !== byP[L.id].base);
+    const byAbs = (a, b) => (Math.abs(b.score ?? 0) - Math.abs(a.score ?? 0)) || shortName(a.p.name).localeCompare(shortName(b.p.name));
+    let indiv = legs.filter(isIndiv).sort(byAbs);
+    let overflow = [];
+    if (indiv.length > 40) { overflow = indiv.slice(40); indiv = indiv.slice(0, 40); }
+    const grouped = legs.filter(l => !isIndiv(l)).concat(overflow);
+    const gmap = new Map();
+    grouped.forEach(L => { const k = (byP[L.id] ? byP[L.id].proj : "UNKNOWN") + "|" + L.p.party; if (!gmap.has(k)) gmap.set(k, []); gmap.get(k).push(L); });
+    const partyPlural = p => p === "D" ? "Democrats" : p === "R" ? "Republicans" : "Independents";
+    const groups = [...gmap.entries()].map(([k, members]) => {
+      const [pj, prty] = k.split("|");
+      members.sort((a, b) => shortName(a.p.name).localeCompare(shortName(b.p.name)));
+      return { key: k, proj: pj, party: prty, members, label: `${pj} · ${members.length} ${partyPlural(prty)}` };
+    }).sort((a, b) => b.members.length - a.members.length || (a.label < b.label ? -1 : 1));
+    const mapRows = indiv.length + groups.length;
+    const mapH = Math.max(400, 110 + mapRows * 96);
+    // kind line under the stance strip: sponsored counts with cosponsored; views / not-voting omitted
+    const kinds = info.stmts.map(kindOf);
+    const kindLine = `${kinds.filter(k => k === "cosponsored" || k === "sponsored").length} cosponsored · ${kinds.filter(k => k === "speech").length} spoke · ${kinds.filter(k => k === "yea" || k === "nay").length} voted`;
     // spectrum: axis + dots always; text labels only when they fit (<= 12 scored),
     // otherwise a beeswarm (one vertical stack of 8px dots per distinct score) + columns below
     const labTxt = l => `${shortName(l.p.name)} ${fmt(l.score)}`;
@@ -1569,11 +1591,12 @@
       const per = new Map();
       scored.forEach(l => { const k = l.score.toFixed(3); if (!per.has(k)) per.set(k, []); per.get(k).push(l); });
       const step = 10; // 8px dot + 2px gap
-      const top0 = Math.max(...[...per.values()].map(g => g.length)) * step + 12;
-      axTop = top0; specH = top0 + 34;
+      const top0 = Math.min(Math.max(...[...per.values()].map(g => g.length)), 12) * step + 12;
+      axTop = top0; specH = top0 + 28;
       dots = [...per.entries()].map(([k, g]) => {
         const x = (+k + 1) / 2 * 100;
-        return g.map((l, j) => `<span class="dot${l.conds.length ? " cond" : ""}" data-p="${l.id}" title="${shortName(l.p.name)} · ${fmt(l.score)}" style="left:${x}%;top:${top0 - 8 - j * step}px;width:8px;height:8px;border-width:1px;cursor:pointer"></span>`).join("");
+        return (g.length > 12 ? `<span class="bill-cnt" style="left:${x}%">${scored.length}</span>` : "")
+          + g.slice(0, 12).map((l, j) => `<span class="dot${l.conds.length ? " cond" : ""}" data-p="${l.id}" title="${shortName(l.p.name)} · ${fmt(l.score)}" style="left:${x}%;top:${top0 - 8 - j * step}px;width:8px;height:8px;border-width:1px;cursor:pointer"></span>`).join("");
       }).join("");
     }
     { // Oppose / Neutral / Support columns (direction by the +/-0.15 rule), |score| desc then name
@@ -1593,24 +1616,27 @@
       <h1>${info.num}${info.title ? ` · ${billTitleDisp(info)}` : ""}</h1>
       <div class="bill-sub">${path} · ${info.stmts.length} statement${info.stmts.length === 1 ? "" : "s"} in data${info.latest ? ` · latest ${info.latest.date || "undated"}` : ""}</div>
       <div class="bill-strip"><div><b style="color:var(--support)">${sup}</b><span>support now</span></div><div><b style="color:var(--oppose)">${opp}</b><span>oppose now</span></div><div><b style="color:var(--accent)">${info.conds.length}</b><span>stated conditions</span></div><div><b>${silent}</b><span>member silent on it</span></div></div>
+      <div class="bill-sub" style="margin:-2px 0 2px">${kindLine}</div>
       <div class="bill-sec">Where they stand today · ◆ = has stated a condition</div>
       <div class="bill-spec" style="height:${specH}px"><div class="ax" style="top:${axTop}px"><i style="left:0">−1 oppose</i><i style="left:49%">0</i><i style="right:0">+1 support</i></div>${dots}</div>${colHtml}
       <div class="bill-sec">What it would take · negotiation map</div>
       <div class="bill-sub" style="margin:0 0 6px">Tick demands in the side pane to see who moves · hover an edge for the quote · click a legislator for their conditions.</div>
-      <svg id="billmap" viewBox="0 0 860 ${Math.max(400, 110 + legs.length * 96)}"></svg>
+      <svg id="billmap" viewBox="0 0 860 ${mapH}"></svg>${overflow.length ? `<div class="bill-sub" style="margin:6px 0 0"><span class="link" id="bill-overflow">+${overflow.length} more</span> beyond the 40 shown</div>` : ""}
       <div class="bill-legend"><span><i style="border-color:var(--support)"></i>supports <b>if</b> demand met</span><span><i style="border-color:var(--oppose)"></i>opposes <b>if</b> demand met</span><span><i style="border-color:var(--accent);border-top-style:dashed"></i>current stance, width = strength</span><span><i style="border-color:var(--oppose);border-top-style:dotted"></i>demands that exclude each other</span><span style="flex-basis:100%;margin-top:4px">node colour = party only · projected vote = the label under the name (<span style="background:var(--support);color:var(--bg);padding:0 4px">YES</span> <span style="background:var(--oppose);color:var(--bg);padding:0 4px">NO</span> <span style="border:1px solid var(--muted);color:var(--muted);padding:0 4px">UNKNOWN</span>); <span style="color:var(--accent)">was …</span> marks a vote the package changes</span></div>
       <div class="bill-card" id="billcard"><div class="empty-state">Hover a legislator to see their stated conditions and how the current package affects them · click to open their profile.</div></div>
     </div>`;
     $("bill-back").onclick = () => { state.b.id = null; location.hash = "#/explore"; };
+    if ($("bill-overflow")) $("bill-overflow").onclick = () => showGroup(`+${overflow.length} more`, overflow, "beyond the 40 individual nodes shown");
     wrap.querySelectorAll(".dot[data-p], .bill-col-row").forEach(el => { kbRow(el, "link"); el.onclick = () => openProfile(el.dataset.p); });
     wrap.querySelectorAll("[data-exp]").forEach(el => el.onclick = () => { state.b.exp = { ...(state.b.exp || {}), [el.dataset.exp]: true }; renderBill(); });
     // --- negotiation map svg ---
-    const W = 860, H = Math.max(400, 110 + legs.length * 96), cy = H / 2;
+    const W = 860, H = mapH, cy = H / 2;
     const svg = d3.select("#billmap");
     const billPos = { x: 120, y: cy };
-    const demPos = {}, legPos = {};
+    const demPos = {}, legPos = {}, grpPos = {};
     demands.forEach((d, i) => demPos[d.id] = { x: 380, y: demands.length === 1 ? cy : 80 + i * ((H - 160) / Math.max(1, demands.length - 1)) });
-    legs.forEach((l, i) => legPos[l.id] = { x: 670, y: legs.length === 1 ? cy : 60 + i * ((H - 120) / Math.max(1, legs.length - 1)) });
+    const mapOrder = [...indiv.map(l => ({ t: "leg", id: l.id })), ...groups.map(g => ({ t: "grp", id: g.key }))];
+    mapOrder.forEach((r, i) => { const y = mapOrder.length === 1 ? cy : 60 + i * ((H - 120) / Math.max(1, mapOrder.length - 1)); if (r.t === "leg") legPos[r.id] = { x: 670, y }; else grpPos[r.id] = { x: 670, y }; });
     const supC = "#3fcf77", oppC = "#f2705f", ambC = "#f0b429";
     const partyHex = p => p === "D" ? "#5b8cff" : p === "R" ? "#ff7a6b" : "#b9bfcc";
     const curve = (a, b, lead) => `M${a.x},${a.y} C${(a.x + b.x) / 2},${a.y} ${(a.x + b.x) / 2},${b.y} ${b.x - lead},${b.y}`;
@@ -1625,7 +1651,7 @@
       .style("stroke", "var(--oppose)").attr("stroke-dasharray", "2 4").attr("stroke-width", 1.4).attr("opacity", .8)
       .attr("d", ([a, b]) => { const p = demPos[a], q = demPos[b]; return `M${p.x - 6},${p.y + 12} C${p.x - 70},${(p.y + q.y) / 2} ${q.x - 70},${(p.y + q.y) / 2} ${q.x - 6},${q.y - 12}`; });
     // faint dashed amber current-stance edges bill -> legislator (width by |score|)
-    const nowEdges = svg.append("g").selectAll("path").data(legs.filter(l => l.score !== null)).join("path")
+    const nowEdges = svg.append("g").selectAll("path").data(indiv.filter(l => l.score !== null)).join("path")
       .attr("class", "b-now").attr("data-leg", d => d.id).attr("fill", "none")
       .style("stroke", "var(--accent)").attr("stroke-dasharray", "3 5").attr("stroke-width", d => 1 + 3 * Math.abs(d.score)).attr("opacity", .35)
       .attr("d", d => { const b = legPos[d.id]; return `M${billPos.x},${billPos.y - 32} C${billPos.x},${Math.min(billPos.y, b.y) - 40} ${b.x - 140},${b.y} ${b.x - 16},${b.y}`; });
@@ -1669,7 +1695,7 @@
       .text(d => `${(d.type || "").toUpperCase()} · UNLOCKS ${info.conds.filter(r => r.demand === d.id && r.stance_if_met === "support").length} · LOSES ${info.conds.filter(r => r.demand === d.id && r.stance_if_met === "oppose").length}`);
     // legislator nodes: party-colour fill only; projection is the label under the name
     const LBL = { YES: "YES", NO: "NO", UNKNOWN: "UNKNOWN" };
-    const nl = svg.append("g").selectAll("g").data(legs).join("g")
+    const nl = svg.append("g").selectAll("g").data(indiv).join("g")
       .attr("class", "b-leg").attr("data-leg", d => d.id)
       .attr("transform", d => `translate(${legPos[d.id].x},${legPos[d.id].y})`).style("cursor", "pointer")
       .on("click", (ev, d) => openProfile(d.id))
@@ -1696,11 +1722,30 @@
       .attr("x", d => 24 + LBL[byP[d.id].proj].length * 8.4 + 14 + 8)
       .style("fill", d => byP[d.id].proj !== byP[d.id].base ? "var(--accent)" : "var(--muted)")
       .text(d => byP[d.id].proj !== byP[d.id].base ? `was ${byP[d.id].base}` : (d.score === null ? "no statement" : `now ${fmt(d.score)}`));
+    // group nodes: one per (projection, party); radius scales with count; edge colour follows projection
+    const grpC = p => p === "YES" ? supC : p === "NO" ? oppC : "#9aa3b2";
+    const grpR = n => Math.min(28, Math.max(14, Math.round(12 + Math.sqrt(n) * 1.5)));
+    svg.append("g").selectAll("line").data(groups).join("line")
+      .attr("x1", billPos.x).attr("y1", billPos.y - 32).attr("x2", d => grpPos[d.key].x - grpR(d.members.length)).attr("y2", d => grpPos[d.key].y)
+      .style("stroke", d => grpC(d.proj)).attr("stroke-width", 2.5).attr("opacity", .8);
+    const ng = svg.append("g").selectAll("g").data(groups).join("g")
+      .attr("class", "b-grp").style("cursor", "pointer")
+      .attr("transform", d => `translate(${grpPos[d.key].x},${grpPos[d.key].y})`)
+      .on("click", (ev, d) => showGroup(d.label, d.members, "no stated condition, no speech on this bill, unchanged by the current package"));
+    ng.append("circle").attr("r", d => grpR(d.members.length)).attr("fill", d => partyHex(d.party)).attr("stroke", "#0f1322").attr("stroke-width", 2);
+    ng.append("text").attr("x", 32).attr("y", -2).style("font-size", "12px").style("fill", "var(--text)").style("font-weight", 600).text(d => d.label);
+    ng.append("text").attr("x", 32).attr("y", 14).style("font", "500 10px var(--mono)").style("fill", "var(--muted)").text(d => `${d.proj} projection · click to list`);
     function showBillTip(ev, html) { condTip.style.display = "block"; condTip.style.left = (ev.clientX + 14) + "px"; condTip.style.top = (ev.clientY + 10) + "px"; condTip.innerHTML = html; }
     function hideBillTip() { condTip.style.display = "none"; }
     function focusBillLeg(id) {
       ["b-cond", "b-now", "b-lab"].forEach(c => svg.selectAll("." + c).classed("dim", function () { return id && this.dataset.leg !== id; }));
-      svg.selectAll(".b-leg").attr("opacity", function () { return id && this.dataset.leg !== id ? .35 : 1; });
+      svg.selectAll(".b-leg,.b-grp").attr("opacity", function () { return id && this.dataset.leg !== id ? .35 : 1; });
+    }
+    function showGroup(label, members, note) {
+      const card = $("billcard");
+      card.innerHTML = `<h3>Grouped · ${label}</h3><div class="meta">${members.length} legislator${members.length === 1 ? "" : "s"}${note ? ` · ${note}` : ""}</div>`
+        + members.map(m => `<div class="bill-col-row" data-p="${m.id}"><span style="color:${partyColor(m.p.party)}">●</span> ${m.p.name} <span style="color:var(--muted)">${seat(m.p)} · ${m.score === null ? "—" : fmt(m.score)}</span></div>`).join("");
+      card.querySelectorAll("[data-p]").forEach(el => { kbRow(el, "link"); el.onclick = () => openProfile(el.dataset.p); });
     }
     function updateBillCard() {
       const card = $("billcard"), id = state.b.sel, L = legs.find(l => l.id === id);
