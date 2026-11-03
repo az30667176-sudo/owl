@@ -414,14 +414,24 @@
   .gsrch mark { background: none; color: var(--accent); }
   #cv { position: absolute; top: 0; left: 0; display: none; max-width: 100%; }
   #cv.on { display: block; }
-  .ehud { position: absolute; left: 14px; bottom: calc(84px + var(--esum, 0px)); font: 500 11px var(--mono); color: var(--muted); pointer-events: none; display: none; text-align: left; }
+  .ehud { position: absolute; left: 14px; bottom: calc(var(--ectlh, 38px) + 20px + var(--esum, 0px)); font: 500 11px var(--mono); color: var(--muted); pointer-events: none; display: none; text-align: left; }
   .ehud.on { display: block; }
   .ehud b { color: var(--text); }
-  .ectl { position: absolute; left: 14px; right: 14px; bottom: calc(44px + var(--esum, 0px)); display: none; gap: 10px; align-items: center; font-size: 13px; color: var(--muted); flex-wrap: wrap; }
+  /* Explore toolbar: one hairline bar under the ring — party toggles · edge density · legend · reset */
+  .ectl { position: absolute; left: 14px; right: 14px; bottom: calc(12px + var(--esum, 0px)); display: none; gap: 0; align-items: center; font-size: 12px; color: var(--muted); flex-wrap: wrap; background: var(--panel); border: 1px solid var(--border); border-radius: 3px; padding: 0 6px; min-height: 38px; }
   .ectl.on { display: flex; }
-  .ectl input[type=range] { accent-color: var(--accent); }
-  .ectl label.ck { display: flex; gap: 4px; align-items: center; cursor: pointer; }
-  .ectl label.ck input { accent-color: var(--accent); }
+  .ectl .eg { display: flex; align-items: center; gap: 8px; padding: 6px 12px; border-right: 1px solid var(--border); }
+  .ectl .eg.leg { gap: 12px; margin-left: auto; border-right: 0; }
+  .ectl .eg.leg i { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 5px; vertical-align: -1px; }
+  .ectl .lab { font: 500 10.5px var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .ectl .pt { display: inline-flex; align-items: center; gap: 5px; font: inherit; font-size: 12px; font-weight: 600; color: var(--muted); background: transparent; border: 1px solid var(--border); border-radius: 3px; padding: 3px 9px; cursor: pointer; }
+  .ectl .pt i { width: 8px; height: 8px; border-radius: 50%; opacity: .35; }
+  .ectl .pt.on { color: var(--text); border-color: var(--border-strong); }
+  .ectl .pt.on i { opacity: 1; }
+  .ectl input[type=range] { accent-color: var(--accent); width: 110px; }
+  .ectl .val { font: 600 12px var(--mono); color: var(--text); min-width: 1ch; }
+  .ectl .btn.rz { margin-left: 8px; border-radius: 3px; font-size: 12px; padding: 5px 12px; color: var(--accent); border-color: var(--border-strong); }
+  .ectl .btn.rz:hover { background: var(--panel-2); }
   .mmwrap { display: none; margin-bottom: 14px; }
   #mm { width: 100%; height: 210px; display: block; max-width: 100%; background: var(--bg); border: 1px solid var(--border); cursor: pointer; }
   .mmleg { font-size: 11.5px; color: var(--muted); margin-top: 4px; display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
@@ -801,8 +811,7 @@
       const com = ps.get("com") || "";
       const nc = com && COMMITTEES.some(c => c.id === com) ? com : null;
       if (E.open !== nc) { E.open = nc; E_build(false); }
-      if ($("fD")) $("fD").checked = E.showD;
-      if ($("fR")) $("fR").checked = E.showR;
+      [["fD", E.showD], ["fR", E.showR]].forEach(([id, on]) => { const b = $(id); if (b) { b.classList.toggle("on", on); b.setAttribute("aria-pressed", on); } });
       if ($("eK")) { $("eK").value = E.K; $("eKv").textContent = E.K; }
     }
   }
@@ -1088,6 +1097,7 @@
       const cols = el.querySelector(".es-cols");
       if (cols) cols.style.maxHeight = Math.max(150, Math.round((main.clientHeight || 640) * .40) - 110) + "px";
       main.style.setProperty("--esum", show && el.offsetHeight ? el.offsetHeight + "px" : "0px");
+      main.style.setProperty("--ectlh", (ectl && ectl.offsetHeight ? ectl.offsetHeight : 38) + "px");
     }
   }
   const fmt = s => (s > 0 ? "+" : "") + s.toFixed(2);
@@ -1498,7 +1508,7 @@
     $("issue").style.display = issue ? "block" : "none";
     $("bills").style.display = bills ? "block" : "none";
     $("about").style.display = about ? "block" : "none";
-    $("legend").style.display = (list || prof || bill || issues || issue || bills || about) ? "none" : "flex";
+    $("legend").style.display = "none"; // legend lives in the Explore toolbar now
     $hint.style.display = state.mode === "explore" ? "none" : "";
     const showCv = state.mode === "explore";
     E_renderSummary(); cv.classList.toggle("on", showCv); ectl.classList.toggle("on", showCv); ehud.classList.toggle("on", showCv);
@@ -2394,9 +2404,12 @@
     E = { edges: EDGES, comById, iCat, legSpec, topCom, secondCom, comCount, avgCount, ang, open: null, K: 2, showD: true, showR: true, showI: true, query: "", zt: d3.zoomIdentity, pinned: null, hover: null, stateF: null, mmHover: null, hl: null, legs: [], anchors: new Map(), agg: [], tweenStart: 0, markers: [], TW: 650 };
     E_targets();
     E_build(true);
-    ectl.innerHTML = `<label class="ck"><input type="checkbox" id="fD" checked> D</label><label class="ck"><input type="checkbox" id="fR" checked> R</label><span>edges per legislator</span><input type="range" id="eK" min="1" max="5" value="2"><b id="eKv">2</b><button class="btn" id="eRz">reset view</button>`;
-    $("fD").onchange = e => { E.showD = e.target.checked; E_draw(); syncExploreHash(); };
-    $("fR").onchange = e => { E.showR = e.target.checked; E_draw(); syncExploreHash(); };
+    ectl.innerHTML = `<div class="eg"><span class="lab">Party</span><button class="pt on" id="fD" aria-pressed="true"><i style="background:var(--party-d)"></i>D</button><button class="pt on" id="fR" aria-pressed="true"><i style="background:var(--party-r)"></i>R</button></div>`
+      + `<div class="eg"><span class="lab">Edges per member</span><input type="range" id="eK" min="1" max="5" value="2" aria-label="Edges per member"><b id="eKv" class="val">2</b></div>`
+      + `<div class="eg leg"><span><i style="background:var(--support)"></i>Support</span><span><i style="background:var(--oppose)"></i>Oppose</span><span><i style="background:var(--neutral)"></i>Neutral</span><span class="lab" style="letter-spacing:.02em;text-transform:none" title="Edge width = attention, opacity = strength of the position, dashed = the member changed direction">width · opacity · dashed = flipped</span></div>`
+      + `<button class="btn rz" id="eRz" title="Zoom out, unpin, clear highlight">↺ Reset view</button>`;
+    const togg = (id, key) => { const b = $(id); b.onclick = () => { E[key] = !E[key]; b.classList.toggle("on", E[key]); b.setAttribute("aria-pressed", E[key]); E_draw(); syncExploreHash(); }; };
+    togg("fD", "showD"); togg("fR", "showR");
     $("eK").oninput = e => { E.K = +e.target.value; $("eKv").textContent = E.K; E_draw(); syncExploreHash(); };
     $("eRz").onclick = () => { E.pinned = null; E.hl = null; renderSide(); d3.select(cv).transition().duration(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 400).call(E_zoom.transform, d3.zoomIdentity); };
     E_zoom = d3.zoom().scaleExtent([1, 8]).on("zoom", ev => { E.zt = ev.transform; E_draw(); });
@@ -2668,7 +2681,7 @@
         const boxAt = yy => ({ x0: bx, x1: bx + twMax, y0: yy - (lines.length - 1) * lh / 2 - lh / 2, y1: yy + (lines.length - 1) * lh / 2 + lh / 2 });
         const hits = yy => { const b = boxAt(yy); return drawnBoxes.some(o => b.x0 < o.x1 && b.x1 > o.x0 && b.y0 < o.y1 && b.y1 > o.y0); };
         const dir = Math.sin(a.am) >= 0 ? 1 : -1;
-        for (let k = 0; k < 6 && hits(y0); k++) y0 += dir * (lh + 2);
+        for (let k = 0; k < 2 && hits(y0); k++) y0 += dir * (lh + 2);
         drawnBoxes.push(boxAt(y0));
         lines.forEach((ln, li) => {
           const tw = cx2.measureText(ln).width;
@@ -2685,8 +2698,9 @@
         const x0 = al === "left" ? px : al === "right" ? px - tw : px - tw / 2;
         const boxI = yy => ({ x0: x0, x1: x0 + tw, y0: yy - th / 2, y1: yy + th / 2 });
         const hitI = yy => { const b = boxI(yy); return drawnBoxes.some(o => b.x0 < o.x1 && b.x1 > o.x0 && b.y0 < o.y1 && b.y1 > o.y0); };
-        const dirI = Math.sin(a.am) >= 0 ? 1 : -1;
-        for (let k = 0; k < 4 && hitI(py); k++) py += dirI * (th + 2);
+        // issue labels stay beside their node (three alternating radii); only a label pinned to the pane edge may
+        // step inward (two steps max) so clamped neighbours do not print on one line; crowded sectors skip instead
+        if (py !== iy + 4) { const dirI = py < iy + 4 ? -1 : 1; for (let k = 0; k < 2 && hitI(py); k++) py += dirI * (th + 2); }
         if (cull && hitI(py)) continue;
         drawnBoxes.push(boxI(py));
         E_label(t, px, py, f, PAL.ink, al);
