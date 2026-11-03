@@ -641,8 +641,32 @@
     l: { chamber: "", state: "", cat: "", sub: "", issue: "", dir: "", party: "", gender: "", minConf: 0, sort: "score", desc: true, sel: null },
     p: { person: null, sel: null, q: "" },
     iid: null,
-    b: { id: null, ticked: [], sel: null }
+    b: { id: null, ticked: [], sel: null },
+    e: { bill: null }
   };
+  // Explore canvas state lives here from startup so the hash router can consult it on first load
+  let E = null, E_sim = null, E_zoom = null;
+  // match-in-Explore answers: bill_id -> "support" | "oppose", persisted across reloads
+  const MATCH = { answers: {}, party: "ALL", min: 3 };
+  try { const raw = JSON.parse(localStorage.getItem("owl-match") || "{}"); if (raw && typeof raw === "object") for (const [k, v] of Object.entries(raw)) if (v === "support" || v === "oppose") MATCH.answers[k] = v; } catch { /* storage unavailable */ }
+  function saveMatch() { try { localStorage.setItem("owl-match", JSON.stringify(MATCH.answers)); } catch { /* storage unavailable */ } }
+  // statements + conditions behind one bills.json bill, for billLegs; memoised on (bill, statements)
+  let _blCache = { id: null, n: -1, info: null };
+  function billStmtsInfo(bill_id) {
+    if (_blCache.id === bill_id && _blCache.n === STATEMENTS.length) return _blCache.info;
+    const info = { stmts: STATEMENTS.filter(s => billId(s.bill) === bill_id), conds: CONDS.filter(r => billId(r.bill) === bill_id) };
+    _blCache = { id: bill_id, n: STATEMENTS.length, info };
+    return info;
+  }
+  let _blLegs = { id: null, n: -1, legs: null };
+  function billLegsMemo(bill_id) {
+    if (_blLegs.id === bill_id && _blLegs.n === STATEMENTS.length) return _blLegs.legs;
+    const legs = billLegs(billStmtsInfo(bill_id));
+    _blLegs = { id: bill_id, n: STATEMENTS.length, legs };
+    return legs;
+  }
+  // bills.json records with a question belonging to one committee, stable bill_id order
+  const billsForCom = cat => BILLS.filter(b => b.binary_question && billCom(b) === cat).sort((a, b) => a.bill_id < b.bill_id ? -1 : 1);
   // hash router (group 1): every mode has a hash; state.mode derives from location.hash
   function routeFromHash() {
     const h = location.hash || "#/explore";
@@ -665,6 +689,7 @@
     const st = state.f.state || (E && E.stateF) || "";
     if (st) ps.set("state", st);
     if (E && E.open) ps.set("com", E.open);
+    if (state.e.bill && billQ(state.e.bill)) ps.set("bill", state.e.bill);
     if (state.f.parties.size && state.f.parties.size < 3) ps.set("party", [...state.f.parties].sort().join(","));
     if (E && E.K !== 2) ps.set("k", E.K);
     if (state.f.q.trim()) ps.set("q", state.f.q.trim());
@@ -679,12 +704,15 @@
     const party = (ps.get("party") || "").split(",").map(s => s.trim()).filter(s => ["D", "R", "I"].includes(s));
     state.f.parties = new Set(party.length ? party : ["D", "R", "I"]);
     state.f.q = ps.get("q") || "";
+    { const bq = billQ(ps.get("bill") || ""); state.e.bill = bq ? bq.bill_id : null; }
     if (E) {
       E.stateF = state.f.state || null;
       E.showD = state.f.parties.has("D"); E.showR = state.f.parties.has("R"); E.showI = state.f.parties.has("I");
       const k = parseInt(ps.get("k") || "2", 10);
       E.K = (k >= 1 && k <= 5) ? k : 2;
-      const com = ps.get("com") || "", nc = com && COMMITTEES.some(c => c.id === com) ? com : null;
+      const com = ps.get("com") || "";
+      let nc = com && COMMITTEES.some(c => c.id === com) ? com : null;
+      { const bc = state.e.bill ? billCom(billById[state.e.bill]) : null; if (bc) nc = bc; }
       if (E.open !== nc) { E.open = nc; E_build(false); }
       if ($("fD")) $("fD").checked = E.showD;
       if ($("fR")) $("fR").checked = E.showR;
@@ -782,12 +810,14 @@
     if (!statementsReady && !_stmtsHooked) { _stmtsHooked = true; STATEMENTS_READY.then(() => { if (state.mode === "explore") renderExploreAside(); }); }
   }
   function renderExploreSide() {
+    const bx = billCardHtml();
     const mmHtml = `<div class="mmwrap" id="mmwrap" style="display:block"><div class="h" style="display:flex;justify-content:space-between;margin-top:0"><span>Map</span><span id="mmmode" style="color:var(--muted);letter-spacing:.06em"></span></div><canvas id="mm"></canvas><div class="mmleg" id="mmleg"></div></div>`;
     const aboutFoot = `<div class="topic-sub" style="margin:14px 0 0;border-top:1px solid var(--border);padding-top:10px">How this is scored → <span class="link" data-about>About</span> · <span class="link" data-copy>Copy link</span></div>`;
     if (E && E.pinned) {
-      $side.innerHTML = mmHtml + E_pinHtml(E.pinned) + aboutFoot;
+      $side.innerHTML = mmHtml + bx + E_pinHtml(E.pinned) + aboutFoot;
       const ob = $("open-issue");
       if (ob) ob.onclick = () => openIssue(ob.dataset.i);
+      bindBillCard();
       E_mmBind();
       return;
     }
@@ -795,18 +825,50 @@
     if (state.person && byId[state.person]) {
       const p = byId[state.person], mine = fe.filter(e => e.from === p.id).sort((a, b) => b.score - a.score);
       const sel = state.edge && mine.find(e => e.to === state.edge) || mine[0];
-      $side.innerHTML = mmHtml + `<div class="person-card"><div class="name">${title(p)}</div><div class="meta">${seat(p)} · ${p.party} · ${mine.length} stances in view</div>
+      $side.innerHTML = mmHtml + bx + `<div class="person-card"><div class="name">${title(p)}</div><div class="meta">${seat(p)} · ${p.party} · ${mine.length} stances in view</div>
         ${mine.map(e => `<div class="stance-line ${sel === e ? "active" : ""}" data-issue="${e.to}"><div><div class="t">${issueById[e.to].name}</div><div class="c">${issueById[e.to].catName} › ${issueById[e.to].subName}</div></div><div class="score" style="color:${color(e.direction)}">${fmt(e.score)}</div></div>`).join("")}
         ${sel ? evidenceHtml(sel) : ""}<div style="margin-top:12px;display:flex;gap:8px"><button class="btn" id="back">← all legislators</button><button class="btn" data-open="${p.id}">Open profile →</button></div></div>` + aboutFoot;
       $side.querySelectorAll(".stance-line").forEach(el => el.onclick = () => { state.edge = el.dataset.issue; renderSide(); });
-      $("back").onclick = () => { state.person = null; state.edge = null; render(); }; E_mmBind();
+      $("back").onclick = () => { state.person = null; state.edge = null; render(); }; bindBillCard(); E_mmBind();
       return;
     }
     const byP = {}; fe.forEach(e => (byP[e.from] ??= []).push(e));
     const rows = Object.entries(byP).sort((a, b) => b[1].length - a[1].length).map(([pid, es]) => { const p = byId[pid];
       return `<div class="row" data-id="${pid}"><div><div class="name">${title(p)}</div><div class="meta">${seat(p)} · ${p.party} · <span style="color:var(--support)">${es.filter(e => e.direction === "support").length} for</span> · <span style="color:var(--oppose)">${es.filter(e => e.direction === "oppose").length} against</span></div></div><div class="score">${es.length}</div></div>`; }).join("");
-    $side.innerHTML = mmHtml + `<div class="topic-sub">${fe.length} stances across ${Object.keys(byP).length} legislators. Click one to see their positions.</div>${rows || `<div class="empty-state">Nothing matches the filters.</div>`} ${conditionsPanel(state.issue)}` + aboutFoot; E_mmBind();
+    $side.innerHTML = mmHtml + bx + `<div class="topic-sub">${fe.length} stances across ${Object.keys(byP).length} legislators. Click one to see their positions.</div>${rows || `<div class="empty-state">Nothing matches the filters.</div>`} ${conditionsPanel(state.issue)}` + aboutFoot; bindBillCard(); E_mmBind();
     $side.querySelectorAll(".row").forEach(el => el.onclick = () => { state.person = el.dataset.id; state.edge = null; render(); });
+  }
+  // bill answer card in the Explore side pane: number, title, short_context, the yes/no
+  // question with its two options plus Skip; answering stores the stance per bill_id in
+  // localStorage, recolours the node and lights the ring by agreement on that bill
+  function billCardHtml() {
+    const id = state.e.bill;
+    if (!id) return "";
+    const rec = billById[id];
+    if (!rec || !rec.binary_question) return "";
+    const q = rec.binary_question, ans = MATCH.answers[id];
+    const legs = billLegsMemo(id);
+    const forN = legs.filter(l => l.score !== null && l.score > .15).length;
+    const agN = legs.filter(l => l.score !== null && l.score < -.15).length;
+    const btn = o => {
+      const sup = o.stance === "support", on = ans === o.stance;
+      return `<button class="btn" data-ans="${o.stance}" style="border-color:${sup ? "var(--support)" : "var(--oppose)"};${on ? `background:${sup ? "var(--support)" : "var(--oppose)"};color:var(--bg);font-weight:700;` : ""}">${o.label}</button>`;
+    };
+    const ansName = ans ? ((q.options.find(o => o.stance === ans) || {}).label || ans) : null;
+    return `<div class="h" style="margin-top:0">Bill question · ${rec.number}</div>`
+      + `<div style="font-weight:700">${rec.number}${rec.title ? ` · ${rec.title}` : ""}</div>`
+      + (rec.short_context ? `<div class="topic-sub" style="margin:4px 0 0">${rec.short_context}</div>` : "")
+      + `<div style="margin:8px 0">${q.question}</div>`
+      + `<div style="display:flex;gap:8px;flex-wrap:wrap">${q.options.map(btn).join("")}<button class="btn" id="bill-skip">Skip</button></div>`
+      + `<div class="topic-sub" style="margin:6px 0 0">${forN} members on record for · ${agN} against${ansName ? ` · you answered <b>${ansName}</b>` : ""}</div>`;
+  }
+  function bindBillCard() {
+    $side.querySelectorAll("[data-ans]").forEach(b => b.onclick = () => {
+      MATCH.answers[state.e.bill] = b.dataset.ans;
+      saveMatch(); renderSide(); E_draw(); syncExploreHash();
+    });
+    const sk = $("bill-skip");
+    if (sk) sk.onclick = () => { state.e.bill = null; renderSide(); E_draw(); syncExploreHash(); };
   }
   const fmt = s => (s > 0 ? "+" : "") + s.toFixed(2);
   // Direction ribbon: a time band colored by the direction held at each moment; flips show as color changes.
@@ -1982,7 +2044,6 @@
   };
   const eColor = d => d === "support" ? PAL.support : d === "oppose" ? PAL.oppose : PAL.neutral;
   const eParty = p => p === "D" ? PAL.D : p === "R" ? PAL.R : PAL.I;
-  let E = null, E_sim = null, E_zoom = null;
   function E_finAngle(sid, fin, mid) { if (!sid || !fin.has(sid)) return 0; return Math.atan2(Math.sin(fin.get(sid) - mid), Math.cos(fin.get(sid) - mid)); }
   function E_legTip(p) {
     const es = (seByL.get(p.id) || []).slice().sort((a, b) => b.heat - a.heat).slice(0, 4);
@@ -2182,6 +2243,20 @@
         });
       }
     });
+    E.billNodes = [];
+    if (E.open) {
+      const g = E.ang.get(E.open), bl = billsForCom(E.open);
+      if (g && bl.length) {
+        const rows = bl.length > 8 ? 2 : 1, half = Math.ceil(bl.length / rows);
+        bl.forEach((rec, k) => {
+          const row = rows === 2 && k >= half ? 1 : 0, idx = row ? k - half : k;
+          const cnt = row ? bl.length - half : half;
+          const ak = cnt <= 1 ? (g.a0 + g.a1) / 2 : g.a0 + (idx + .5) / cnt * (g.a1 - g.a0);
+          const rr = R0 - 34 - row * 18;
+          E.billNodes.push({ kind: "bill", id: rec.bill_id, num: rec.number, title: rec.title || "", x: cx + rr * Math.cos(ak), y: cy + rr * Math.sin(ak) });
+        });
+      }
+    }
     E.R0 = R0;
   }
   function E_tgtOf(issueId) { const c = E.iCat.get(issueId); return c === E.open ? issueId : c; }
@@ -2277,7 +2352,20 @@
     }
     cx2.setLineDash([]);
     const near = hl ? hl.set : focusT ? new Set(E.agg.filter(a => a.t === focusT).map(a => a.p)) : focusL ? new Set([focusL]) : null;
-    for (const l of E.legs) { cx2.globalAlpha = !E_visible(l) ? .06 : (!near || near.has(l.id) ? 1 : .13); E_circle(l.x, l.y, 3.6 / sk, eParty(l.party)); }
+    const selQ = state.e.bill ? billQ(state.e.bill) : null;
+    const selAns = selQ ? MATCH.answers[selQ.bill_id] : null;
+    const billLight = selQ && selAns ? new Map(billLegsMemo(selQ.bill_id).map(L => [L.id, dirOf(L.score)])) : null;
+    for (const l of E.legs) {
+      if (!E_visible(l)) { cx2.globalAlpha = .06; E_circle(l.x, l.y, 3.6 / sk, eParty(l.party)); continue; }
+      cx2.globalAlpha = (!near || near.has(l.id)) ? 1 : .13;
+      let fill = eParty(l.party);
+      if (billLight && (!near || near.has(l.id))) {
+        const d = billLight.get(l.id);
+        if (d === "support" || d === "oppose") fill = d === selAns ? PAL.support : PAL.oppose;
+        else cx2.globalAlpha = .3;
+      }
+      E_circle(l.x, l.y, 3.6 / sk, fill);
+    }
     cx2.globalAlpha = 1;
     for (const l of E.legs) {
       if (!E_visible(l)) continue;
@@ -2337,15 +2425,28 @@
         E_label(t, px, py, f, PAL.ink, al);
       }
     }
+    for (const b of (E.billNodes || [])) {
+      const ans = MATCH.answers[b.id], s = 4.5 / sk;
+      cx2.globalAlpha = 1;
+      cx2.fillStyle = ans === "support" ? PAL.support : ans === "oppose" ? PAL.oppose : PAL.bg;
+      cx2.strokeStyle = PAL.accent; cx2.lineWidth = 1.5 / sk;
+      cx2.fillRect(b.x - s, b.y - s, 2 * s, 2 * s);
+      cx2.strokeRect(b.x - s, b.y - s, 2 * s, 2 * s);
+      E_label("?", b.x, b.y + 3.5 / sk, "700 " + (8 / E.zt.k) + "px JetBrains Mono", ans ? PAL.bg : PAL.accent);
+      if (E.zt.k > 2.4 || (fx && fx.id === b.id)) E_label(b.num, b.x, b.y - 7 / sk, "500 " + (10 / E.zt.k) + "px Public Sans", PAL.accent);
+    }
     if (fx && fx.x != null && fx.kind !== "com") { const base = (fx.kind === "leg" ? 6 : 14) / sk; cx2.globalAlpha = 1; E_circle(fx.x, fx.y, base, "none", PAL.ink); }
     cx2.restore();
     E_drawMM(focusT, focusL);
     const drawn = focusT ? E.agg.filter(a => a.t === focusT).length : focusL ? E.agg.filter(a => a.p === focusL).length : null;
-    ehud.innerHTML = `${E.legs.length} legislators · ${E.open ? "1 committee open" : COMMITTEES.length + " committees"} · <b>${drawn != null ? drawn + " edges of focus" : "top " + E.K + " edges/person"}</b> · zoom ×${E.zt.k.toFixed(1)}${E.zt.k > 2.4 ? " · names on" : " · scroll to zoom (names at ×2.4)"}`;
+    const nA = Object.keys(MATCH.answers).filter(id => billQ(id)).length;
+    ehud.innerHTML = `${E.legs.length} legislators · ${E.open ? "1 committee open" : COMMITTEES.length + " committees"} · <b>${drawn != null ? drawn + " edges of focus" : "top " + E.K + " edges/person"}</b> · zoom ×${E.zt.k.toFixed(1)}${E.zt.k > 2.4 ? " · names on" : " · scroll to zoom (names at ×2.4)"}${nA ? ` · <b>${nA} answered</b> <span id="e-clear" style="pointer-events:auto;cursor:pointer;color:var(--accent)">clear answers</span>` : ""}`;
+    { const ec = $("e-clear"); if (ec) ec.onclick = () => { MATCH.answers = {}; saveMatch(); state.e.bill = null; renderSide(); E_draw(); syncExploreHash(); }; }
   }
   function E_nodeAt(x, y) {
     let best = null;
     for (const mk of E.markers) { const d = (mk.x - x) ** 2 + (mk.y - y) ** 2, rr = 9 / E.zt.k; if (d < rr * rr) return { kind: "cond", ...mk }; }
+    for (const b of (E.billNodes || [])) { const d = (b.x - x) ** 2 + (b.y - y) ** 2, rr = 9 / E.zt.k; if (d < rr * rr && (!best || d < best.d)) best = { n: b, d }; }
     for (const n of [...E.legs, ...E.anchors.values()]) {
       if (n.kind === "leg" && !E_visible(n)) continue;
       if (n.kind === "com" && n.id === E.open) continue;
@@ -2362,14 +2463,16 @@
     if (!n) E_hideTip();
     else if (n.kind === "cond") E_tip(ev, n.rows.map(row => `<div><b>${byId[row.person].name}</b> ${phrase(n.score, row)}<div class="cond-q">“${row.quote}”</div></div>`).join(`<hr style="border:0;border-top:1px solid var(--border);margin:6px 0">`));
     else if (n.kind === "leg") E_tip(ev, E_legTip(n) + `<div style="color:var(--accent);margin-top:3px">click → profile</div>`);
+    else if (n.kind === "bill") E_tip(ev, `<b>${n.num}</b> ${n.title}<div style="color:var(--accent);margin-top:3px">click → answer it</div>`);
     else if (n.kind === "com") E_tip(ev, `<b>${n.name}</b><br>click to open its issues`);
     else E_tip(ev, `<b>${n.name}</b><br>${(seByI.get(n.id) || []).length} legislators · click to pin`);
   }
   function E_click() {
     const hov = E.hover;
     if (!hov || hov.kind === "cond") { if (!hov) { E.pinned = null; E.hl = null; renderSide(); E_draw(); } return; }
+    if (hov.kind === "bill") { state.e.bill = state.e.bill === hov.id ? null : hov.id; renderSide(); E_draw(); syncExploreHash(); return; }
     if (hov.kind === "leg") { openProfile(hov.id); return; }
-    if (hov.kind === "com") { E.open = E.open === hov.id ? null : hov.id; E.hover = null; E.pinned = null; E_build(false); renderSide(); syncExploreHash(); return; }
+    if (hov.kind === "com") { E.open = E.open === hov.id ? null : hov.id; E.hover = null; E.pinned = null; state.e.bill = null; E_build(false); renderSide(); syncExploreHash(); return; }
     E.pinned = E.pinned && E.pinned.id === hov.id ? null : hov;
     renderSide(); E_draw();
   }

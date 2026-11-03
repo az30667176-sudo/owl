@@ -10,11 +10,11 @@ All tasks touch `apps/web/index.html` only (plus ticking boxes here). Three comm
 
 ## 2. Explore bill nodes and answer card
 
-- [ ] 2.1 `E_build`: when a sector is open, add the committee's bills with questions as nodes `{kind:"bill", id, x, y}` placed on a second, slightly inner arc inside the sector (same angular spread as the issues; if more than 8 bills, pack two rows); square 9 px, stroke `var(--accent)`, fill `var(--bg)`; answered yes → fill support colour, no → fill oppose colour. Label on hover/zoom: bill number. `E_nodeAt` returns bill nodes; `E_click` on a bill → `state.e.bill = id`, `renderSide()`.
-- [ ] 2.2 Side pane card (`renderExploreSide` when `state.e.bill`): number, title, `short_context`, question, two option buttons (labels from `binary_question.options`, support = green outline, oppose = red outline), Skip (clears selection), "n members on record for · m against" from `billLegs`. Answer → `MATCH.answers[bill_id] = stance` saved to `localStorage("owl-match")`, bill node recoloured, `E_draw()`.
-- [ ] 2.3 Member lighting while a bill is selected: `E_draw` fills member dots by `billLegs` direction vs the answer (agree = support colour, disagree = oppose colour, no record / neutral = dimmed to 30% alpha); edges unchanged; clearing the selection restores party fill. HUD gains `n answered` (count of stored answers) and a "clear answers" link.
-- [ ] 2.4 Hash: `bill=<bill_id>` in the Explore query selects that bill and opens its committee on load.
-- [ ] 2.5 Verify: open Armed Services → bill squares appear with the issues; click one → card; answer Yes → node green, dots lit; reload → still green, HUD count kept; no `bills.json` → no squares.
+- [x] 2.1 `E_build`: when a sector is open, add the committee's bills with questions as nodes `{kind:"bill", id, x, y}` placed on a second, slightly inner arc inside the sector (same angular spread as the issues; if more than 8 bills, pack two rows); square 9 px, stroke `var(--accent)`, fill `var(--bg)`; answered yes → fill support colour, no → fill oppose colour. Label on hover/zoom: bill number. `E_nodeAt` returns bill nodes; `E_click` on a bill → `state.e.bill = id`, `renderSide()`.
+- [x] 2.2 Side pane card (`renderExploreSide` when `state.e.bill`): number, title, `short_context`, question, two option buttons (labels from `binary_question.options`, support = green outline, oppose = red outline), Skip (clears selection), "n members on record for · m against" from `billLegs`. Answer → `MATCH.answers[bill_id] = stance` saved to `localStorage("owl-match")`, bill node recoloured, `E_draw()`.
+- [x] 2.3 Member lighting while a bill is selected: `E_draw` fills member dots by `billLegs` direction vs the answer (agree = support colour, disagree = oppose colour, no record / neutral = dimmed to 30% alpha); edges unchanged; clearing the selection restores party fill. HUD gains `n answered` (count of stored answers) and a "clear answers" link.
+- [x] 2.4 Hash: `bill=<bill_id>` in the Explore query selects that bill and opens its committee on load.
+- [x] 2.5 Verify: open Armed Services → bill squares appear with the issues; click one → card; answer Yes → node green, dots lit; reload → still green, HUD count kept; no `bills.json` → no squares.
 
 ## 3. Match list and summary
 
