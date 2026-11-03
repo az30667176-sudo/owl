@@ -18,6 +18,10 @@ statements it rests on.
 Coverage note: only 130 of 451 members (29%) have speech rows so far — most profiles are
 still built from sponsorship and vote records until more hearings are processed.
 
+Answer a few binary questions about real bills and the **match board** ranks every legislator
+by how closely their record matches your positions — closest and farthest — with party, state
+and minimum-answers filters so you can see who to vote for and who to avoid.
+
 ## Architecture
 
 Four boxes, three contracts (mirrors the team board):
@@ -48,7 +52,7 @@ apps/web/                      Data vis
   index.html                     the whole app (HTML + vanilla JS + D3, no build step)
   assets/logo/                   Muse Image logo
 data/                          Contract-B data store (process writes, web reads; mock today)
-  taxonomy.json · issues.json · people.json · stances.json · summaries.json
+  taxonomy.json · issues.json · people.json · stances.json · summaries.json · bills.json
   records/                       contract-A records (mock sample; real ones optional, used to re-check quotes)
   extracted/                     per-record extraction logs (accepted / rejected / new issues)
 packages/contract/             Contracts A / B / C
@@ -60,6 +64,8 @@ services/ingest/               Data producer + pre-processing (contract A out)
 services/process/              Data process (contract A in, contract B out)
   extract.mjs                    record → statement rows via Muse Spark, with quote/direction/id checks
   summarize.mjs                  statements → per-legislator summary with validated citations
+  scoring.mjs                    verbal intensity + position → continuous stance score
+  draft-bill-context.mjs         bills → short_context + binary_question drafts (human-reviewed merge)
 tools/                         gen-image.mjs (Muse Image) · claude-muse.ps1 (run Claude Code on the Meta Model API)
 docs/                          ARCHITECTURE.md (board + ERD) · WORKFLOW.md (issues, labels, gh)
 .github/                       Pages deploy (validate data → assemble app + data → publish), issue + PR templates
@@ -77,6 +83,24 @@ Milestones: M1 contract frozen (10/28) · M2 end-to-end on real data (10/31) · 
 Cheatsheet: [docs/WORKFLOW.md](docs/WORKFLOW.md).
 
 **Spec-driven changes (OpenSpec).** `openspec/specs/` holds the live specs (data-contract, web-app, process-pipeline). Anything beyond a one-line fix starts as a change: in Claude Code run `/opsx:propose "<what you want>"` (writes proposal, spec delta, design, tasks under `openspec/changes/<name>/`), review it, `/opsx:apply` to implement, `/opsx:archive` to fold the delta into the live specs. CLI: `openspec list`, `openspec validate --all`, `openspec view`.
+
+## Bill match board
+
+Every bill in `data/bills.json` carries a ≤30-word plain-language `short_context` plus a
+`binary_question` with support/oppose options; bills too complex to simplify are tagged
+`complex_bill` (longer context, no question, prompt to read the full bill). Each bill page
+shows the context with a two-option picker; your answers are stored locally and the
+`#/match` board ranks legislators by agreement with your positions — closest first and
+farthest last — filterable by party, state and minimum answered bills.
+
+Match attributes are drafted by Muse Spark and merged only after human review:
+
+```bash
+node services/process/draft-bill-context.mjs data --top 782 --csv <csv-drop> --out data/bill_context.full.json
+# review drafts, set approved:true, then:
+node services/process/draft-bill-context.mjs data --merge --out data/bill_context.full.json
+node packages/contract/validate.mjs data --records data/records
+```
 
 ## Quick start
 
