@@ -17,7 +17,7 @@
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,400&family=Public+Sans:wght@400;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
 <style>
   /* OWL Night Watch tokens: see the design system (claude.ai/artifact/EpJB5dSQaBEEuKzhToDhF1) */
   :root {
@@ -193,7 +193,15 @@
   .tabs button.active { color: var(--text); border-bottom-color: var(--accent); }
   .tabpane[hidden] { display: none; }
   .stmt.hl { background: rgba(201,182,255,.12); border-radius: 8px; padding: 10px 8px 4px; margin-left: -8px; margin-right: -8px; }
-  @media (max-width: 1100px) { .hero { grid-template-columns: 56px 1fr; } .strip { grid-column: 1 / -1; border-left: 0; flex-wrap: wrap; } }
+  @media (max-width: 1100px) { .hero { grid-template-columns: 56px minmax(0, 1fr); } .hero .who { min-width: 0; } .hero .meta { overflow-wrap: break-word; } .strip { grid-column: 1 / -1; border-left: 0; flex-wrap: wrap; } }
+  @media (max-width: 480px) {
+    .hero { grid-template-columns: 40px minmax(0, 1fr); gap: 12px; }
+    .hero .avatar { width: 40px; height: 40px; font-size: 16px; }
+    .hero h1 { font-size: 24px; }
+    .ehud { top: 6px; bottom: auto; left: 8px; right: 8px; font-size: 10px; }
+    .ectl { left: 8px; right: 8px; bottom: 8px; gap: 4px 12px; }
+    .legend { display: none; }
+  }
 
   /* ---- Editorial layout: masthead, hairlines instead of cards, margin notes ---- */
   .app { grid-template-columns: 236px 1fr 320px; grid-template-rows: 64px 1fr; }
@@ -246,10 +254,13 @@
     body[data-pane="view"] aside, body[data-pane="view"] .side { display: none; }
     body[data-pane="details"] aside, body[data-pane="details"] #main { display: none; }
     aside, .side { border: 0; border-bottom: 1px solid var(--border); }
-    .masthead { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; padding: 8px 12px; }
+    .masthead { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; padding: 6px 10px; }
     .masthead .tagline, .masthead .crumb { display: none; }
-    .masthead .mock, .masthead .drop { margin-left: auto; }
-    .gsrch { order: 3; flex: 1 1 100%; max-width: none; min-width: 0; margin-left: 0; }
+    .masthead .drop { display: none; }
+    .masthead .mock { margin-left: auto; }
+    .gsrch { order: 2; flex: 1 1 auto; max-width: none; min-width: 0; margin-left: 0; }
+    .masthead .modes { order: 3; flex: 1 1 100%; max-width: 100%; margin: 0; gap: 16px; flex-wrap: nowrap; overflow-x: auto; }
+    .masthead .modes button { white-space: nowrap; flex: none; }
     .pane-switch { order: 4; flex: 1 1 100%; display: flex; border: 1px solid var(--border); border-radius: 3px; overflow: hidden; }
     .pane-switch button { flex: 1; background: transparent; border: 0; color: var(--muted); padding: 6px 0; font: inherit; font-size: 12px; cursor: pointer; }
     .pane-switch button.active { background: var(--accent); color: var(--on-accent); }
@@ -382,6 +393,27 @@
   .mmleg .chip { cursor: pointer; }
   .splitbar { display: flex; height: 8px; margin: 3px 0 4px; border-radius: 3px; overflow: hidden; }
   .splitbar i { display: block; height: 8px; }
+  .print-only { display: none; }
+  /* print (group 9): profile and bill pages; nav panes hidden, light tokens, full quotes */
+  @media print {
+    :root { --bg: #fff; --panel: #fff; --panel-2: #f6f6f6; --border: #bbb; --border-strong: #888;
+      --text: #111; --muted: #444; --faint: #666; --parchment: #111; --on-accent: #fff;
+      --accent: #8a6100; --support: #0d7a3f; --oppose: #c23b2a; --neutral: #5a6472;
+      --party-d: #1f4fd8; --party-r: #d83a2a; --party-i: #5a6472; --ai: #4b2fb3; --ai-wash: #f4f0ff; }
+    html, body, .app, #main, #profile, #bill, #issues, #issue, #bills, #about { background: #fff !important; color: #111; }
+    .app { display: block; height: auto; }
+    #main { overflow: visible; }
+    #profile, #bill, #issues, #issue, #bills, #about, #table-wrap { position: static; overflow: visible; padding: 0; display: block; }
+    .masthead, .modes, .pane-switch, aside, .side, .tabs, .toolbar, .btn, .link, canvas { display: none !important; }
+    .legend, .ehud, .ectl, .hint, #loading, .skip, .cond-tip { display: none !important; }
+    .tabpane[hidden] { display: block; }
+    .print-only { display: block; }
+    .card, .hero, .bill-strip, .bill-cols, .pgrid { break-inside: avoid; }
+    td.quote { max-width: none; overflow: visible; white-space: normal; text-overflow: clip; }
+    .attn-name, .bill-col-row { white-space: normal; overflow: visible; text-overflow: clip; }
+    blockquote, .cond-q, .bill-card .c .q { white-space: normal; }
+    a { color: #111; text-decoration: none; }
+  }
   /* conditions markers (2.2): fixed-position what-if tooltip in existing tokens */
   .cond-tip { background: var(--panel-2); border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; font-size: 12px; }
   .cond-tip .cond-q { font-family: var(--display); font-style: italic; color: var(--muted); margin-top: 4px; font-size: 14px; line-height: 22px; }
@@ -423,7 +455,7 @@
   <div class="side" id="side"></div>
 </div>
 
-<script>
+<script type="module">
 (async () => {
   // ---------- load ----------
   // Data lives in <repo>/data. GitHub Pages copies it next to this page; local dev serves the repo root.
@@ -1748,8 +1780,8 @@
     else openProfile(p.id);
     gs.value = p.name;
   }
-  gs.addEventListener("input", () => { gsSel = 0; ensureZips().then(() => { if (document.activeElement === gs) gsRender(); }); gsRender(); });
-  gs.addEventListener("focus", () => { ensureZips().then(() => { if (document.activeElement === gs && gs.value) gsRender(); }); if (gs.value) gsRender(); });
+  gs.addEventListener("input", () => { gsSel = 0; if (/^\d/.test(gs.value)) ensureZips().then(() => { if (document.activeElement === gs) gsRender(); }); gsRender(); });
+  gs.addEventListener("focus", () => { if (/^\d/.test(gs.value)) ensureZips().then(() => { if (document.activeElement === gs && gs.value) gsRender(); }); if (gs.value) gsRender(); });
   gs.addEventListener("keydown", e => {
     if (e.key === "ArrowDown") { gsSel = Math.min(gsResults.length - 1, gsSel + 1); gsRender(); e.preventDefault(); }
     else if (e.key === "ArrowUp") { gsSel = Math.max(0, gsSel - 1); gsRender(); e.preventDefault(); }
@@ -1968,15 +2000,7 @@
   }
   function E_truncIssue(name) { return name.length > 26 ? name.slice(0, 25) + "…" : name; }
   function E_ringRadius(W, H) {
-    cx2.font = "600 11px Public Sans";
-    let labelWidth = 0, maxLines = 1;
-    COMMITTEES.forEach(c => {
-      const lines = E_wrapLabel(c.name, 22);
-      maxLines = Math.max(maxLines, lines.length);
-      lines.forEach(ln => { labelWidth = Math.max(labelWidth, cx2.measureText(ln).width); });
-    });
-    const labelAllowance = maxLines * 12;
-    return Math.max(40, Math.min((W - 2 * (labelWidth + 24)) / 2, (H - 2 * (labelAllowance + 24)) / 2) * 0.98);
+    return Math.max(40, Math.min(W, H) / 2 - 24);
   }
   function E_fitX(lx, tw, al, W) {
     if (al === "left") return Math.min(Math.max(lx, 4), Math.max(4, W - 4 - tw));
@@ -2101,6 +2125,7 @@
     }
     if (E.pinned && E.pinned.kind === "leg") { const pl = LB.get(E.pinned.id); if (pl && E_visible(pl)) { E_circle(pl.x, pl.y, 7 / sk, "none", PAL.ink); E_label(pl.name.replace(/^(Rep|Sen)\. /, ""), pl.x + 7 / E.zt.k, pl.y + 4 / E.zt.k, "600 " + (12 / E.zt.k) + "px Public Sans", PAL.ink, "left"); } }
     const drawnBoxes = [];
+    const compact = W <= 480;
     { const oc = E.open ? E.anchors.get(E.open) : null;
       if (oc) {
         const alO = Math.cos(oc.am) > .2 ? "left" : Math.cos(oc.am) < -.2 ? "right" : "center";
@@ -2126,6 +2151,8 @@
       if (a.kind === "com" && a.id === E.open) {
         /* open-committee label drawn pre-loop and seeded into drawnBoxes */
       } else if (a.kind === "com") {
+        const wide = (a.a1 - a.a0) > Math.PI / 10;
+        if (compact && !wide && a.id !== E.open && (!fx || fx.id !== a.id)) continue;
         const out = R0 + (narrow ? (ci % 2 ? 36 : 54) : 36);
         const lx = cx + out * Math.cos(a.am), ly = cy + out * Math.sin(a.am);
         const lines = E_wrapLabel(a.name, 22), f = "600 " + (11 / E.zt.k) + "px Public Sans", lh = 12 / E.zt.k;
@@ -2362,6 +2389,48 @@ $("m-bills").onclick = goBills;
   $("pane-switch").querySelectorAll("button").forEach(b => b.onclick = () => { state.pane = b.dataset.pane; render(); });
   $("brand").onclick = e => { e.preventDefault(); state.person = null; if (!location.hash || location.hash === "#/explore") { routeFromHash(); render(); } else location.hash = "#/explore"; };
   window.addEventListener("hashchange", () => { routeFromHash(); render(); });
+  // print (group 9): a profile prints Overview + Timeline regardless of the active tab;
+  // a bill page prints all its statements. beforeprint draws the hidden panes and appends
+  // a print-only full-quote list (SVG titles do not print); afterprint restores the view.
+  let _printing = false;
+  const printStmtRow = (s, name) => `<div style="margin:8px 0;padding-top:8px;border-top:1px solid #bbb"><div style="font-size:11px;color:#444">${s.date || "undated"} · ${s.direction} ${fmt(s.score)}${s.bill ? ` · ${s.bill}` : ""}${name ? ` · ${name}` : ""}</div><div style="font-family:var(--display);font-style:italic">“${s.quote}”</div></div>`;
+  window.addEventListener("beforeprint", () => {
+    if (!statementsReady) return;
+    if (state.mode === "profile" && byId[state.p.person]) {
+      const p = byId[state.p.person], P = state.p;
+      const mine = EDGES.filter(e => e.from === p.id).map(e => ({ e, i: issueById[e.to] }));
+      document.querySelectorAll("#profile .tabpane").forEach(pn => pn.removeAttribute("hidden"));
+      drawAttn(p, mine); drawMix(mine);
+      if (!P.open) P.open = new Set(mine.length <= 12 ? mine.map(x => x.i.cat) : []);
+      drawBars(p, mine); drawTimeline(mine);
+      const rows = [...mine].sort((a, b) => b.e.salience - a.e.salience);
+      const div = document.createElement("div");
+      div.className = "print-only"; div.id = "print-quotes";
+      div.innerHTML = `<div class="isec">All statements in full</div>` + rows.map(({ e, i }) =>
+        `<div style="margin-top:10px"><b>${i.name}</b> · ${i.catName}</div>` +
+        [...e.statements].sort((a, b) => String(a.date || "").localeCompare(String(b.date || ""))).map(printStmtRow).join("")
+      ).join("");
+      $("profile").appendChild(div);
+      _printing = true;
+    } else if (state.mode === "bill" && billModel()) {
+      state.b._exp = state.b.exp; state.b.exp = { oppose: 1, neutral: 1, support: 1 };
+      renderBill();
+      const m = billModel();
+      const div = document.createElement("div");
+      div.className = "print-only"; div.id = "print-quotes";
+      div.innerHTML = `<div class="isec">All statements on this bill</div>` +
+        [...m.info.stmts].sort((a, b) => String(a.date || "").localeCompare(String(b.date || ""))).map(s => printStmtRow(s, byId[s.person] ? byId[s.person].name : s.person)).join("");
+      document.querySelector("#bill .bill-wrap").appendChild(div);
+      _printing = true;
+    }
+  });
+  window.addEventListener("afterprint", () => {
+    if (!_printing) return;
+    _printing = false;
+    const q = $("print-quotes"); if (q) q.remove();
+    if (state.b && state.b._exp) { state.b.exp = state.b._exp; delete state.b._exp; }
+    render();
+  });
   render();
   E_watch();
   window.addEventListener("resize", () => { if (state.mode === "list") renderCenter(); });

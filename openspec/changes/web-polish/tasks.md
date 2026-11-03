@@ -50,14 +50,14 @@ All tasks touch `apps/web/index.html` unless stated. One commit per group, messa
 
 ## 9. Print
 
-- [ ] 9.1 `@media print`: hide masthead, nav, pane switch, `.aside`, `.side`; light tokens; full quotes; profile prints Overview + Timeline regardless of active tab; bill page prints all statements.
+- [x] 9.1 `@media print`: hide masthead, nav, pane switch, `.aside`, `.side`; light tokens; full quotes; profile prints Overview + Timeline regardless of active tab; bill page prints all statements.
 - [ ] 9.2 Verify with the browser print preview on `#/legislator/D000216` and one bill.
 
 ## 10. Load order and assets
 
-- [ ] 10.1 `<script defer>` on the D3 tag; module script after it; confirm first paint and Explore still work with `graph.json` present and absent.
+- [x] 10.1 `<script defer>` on the D3 tag; module script after it; confirm first paint and Explore still work with `graph.json` present and absent.
 - [ ] 10.2 Confirm `assets/zip-to-district.json` is fetched only when a query starts with a digit (it is already lazy — leave if so).
-- [ ] 10.3 Delete unreferenced logo files (`owl-mark.png`, `owl-mark-m.png`, `owl-mark-32/128/256.png`); keep 64 and 512; update `apps/web/assets/README.md` line for `logo/`.
+- [x] 10.3 Delete unreferenced logo files (`owl-mark.png`, `owl-mark-m.png`, `owl-mark-32/128/256.png`); keep 64 and 512; update `apps/web/assets/README.md` line for `logo/`.
 
 ## 11. Final check
 
