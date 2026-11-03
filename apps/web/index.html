@@ -73,6 +73,17 @@
   #e-summary.on { display: block; }
   #e-summary .h { margin: 0 0 4px; }
   #e-summary ul { margin: 6px 0 0; padding-left: 18px; font-size: 13px; }
+  #e-summary .es-ctl { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin: 8px 0 6px; }
+  #e-summary table.es { border-collapse: collapse; font-size: 12px; margin-top: 4px; max-width: 100%; }
+  #e-summary table.es th, #e-summary table.es td { padding: 3px 6px; border-top: 1px solid var(--border); text-align: center; white-space: nowrap; }
+  #e-summary table.es th { font-weight: 500; color: var(--muted); border-top: 0; }
+  #e-summary table.es th.q { font-size: 11px; letter-spacing: 0; max-width: 64px; overflow: hidden; text-overflow: ellipsis; }
+  #e-summary table.es td.nm, #e-summary table.es th.nm { text-align: left; }
+  #e-summary table.es td.nm .link { font-weight: 500; }
+  #e-summary table.es td.nm .meta { color: var(--muted); font-size: 11px; margin-left: 6px; }
+  #e-summary table.es .ok { color: var(--support); font-weight: 600; }
+  #e-summary table.es .no { color: var(--oppose); font-weight: 600; }
+  #e-summary table.es .na { color: var(--muted); opacity: .6; }
   /* one-line question rows under an issue: hairline separators, mono bill number, chip toggles */
   .mq { border-top: 1px solid var(--border); padding: 8px 2px; }
   .mq .num { font-family: var(--mono); font-size: 12px; color: var(--accent); margin-right: 8px; white-space: nowrap; }
@@ -674,11 +685,11 @@
     _blCache = { id: bill_id, n: STATEMENTS.length, info };
     return info;
   }
-  let _blLegs = { id: null, n: -1, legs: null };
+  let _blLegs = { n: -1, map: new Map() };
   function billLegsMemo(bill_id) {
-    if (_blLegs.id === bill_id && _blLegs.n === STATEMENTS.length) return _blLegs.legs;
-    const legs = billLegs(billStmtsInfo(bill_id));
-    _blLegs = { id: bill_id, n: STATEMENTS.length, legs };
+    if (_blLegs.n !== STATEMENTS.length) _blLegs = { n: STATEMENTS.length, map: new Map() };
+    let legs = _blLegs.map.get(bill_id);
+    if (!legs) { legs = billLegs(billStmtsInfo(bill_id)); _blLegs.map.set(bill_id, legs); }
     return legs;
   }
   // bills.json records with a question under one issue, stable bill_id order: a bill hangs off
@@ -948,9 +959,36 @@
       + `<div style="font-size:13px;line-height:1.7">You answered ${n} bill${n === 1 ? "" : "s"}: yes on ${yes}, no on ${no}.`
       + (top.length ? ` Most of your answers fall under ${top.join(" and ")}.` : "")
       + ` You sided with the recorded majority on ${sided} of ${n}.`
-      + (n >= 3 && (() => { const r = matchRows()[0]; return r ? ` Closest match so far: ${shortName(r.p.name)} (${seat(r.p)} · ${r.p.party}), with you on ${r.agree} of ${r.n}.` : ""; })())
       + `</div>`
+      + (n >= 3 ? matchListHtml(ids) : `<div class="topic-sub" style="margin:4px 0 0">Answer ${3 - n} more to see who matches you.</div>`)
       + (to.length ? `<div class="h">What you accepted</div><ul style="margin:6px 0;padding-left:18px;font-size:13px">${to.map(t => `<li>${t}</li>`).join("")}</ul>` : "");
+  }
+  // top-5 match list under the ring: one column per answered bill, ✓ agree / ✗ disagree / – no position;
+  // state and party filters are the same ones the side-pane board uses
+  const billShort = rec => String(rec.number || rec.bill_id).replace(/\./g, "").replace(/\s+/g, " ").replace(/^H R /, "HR ").replace(/^H Con Res /, "HConRes ").replace(/^H J Res /, "HJRes ").replace(/^H Res /, "HRes ").replace(/^S J Res /, "SJRes ").replace(/^S Con Res /, "SConRes ").replace(/^S Res /, "SRes ");
+  function matchListHtml(ids) {
+    const rows = matchRows(), top = rows.slice(0, 5);
+    const per = new Map(ids.map(id => [id, new Map(billLegsMemo(id).map(L => [L.id, dirOf(L.score)]))]));
+    const stOpts = `<option value="">All states</option>` + STATES.map(s => `<option value="${s}"${s === state.f.state ? " selected" : ""}>${STATE_NAMES[s] || s}</option>`).join("");
+    const ctl = `<div class="es-ctl"><span class="h" style="margin:0">Closest to you</span>`
+      + `<select id="es-state" class="if" style="width:150px">${stOpts}</select>`
+      + ["ALL", "D", "R"].map(p => `<span class="chip${MATCH.party === p ? " active" : ""}" data-esp="${p}">${p === "ALL" ? "All" : p}</span>`).join("")
+      + (rows.floor < MATCH.min ? `<span class="topic-sub" style="margin:0">no one has a position on ${MATCH.min} of your bills yet · ranking at ${rows.floor}</span>` : "")
+      + `</div>`;
+    if (!top.length) return ctl + `<div class="topic-sub" style="margin:0">No member has a recorded position on any bill you answered${state.f.state ? " in " + (STATE_NAMES[state.f.state] || state.f.state) : ""}.</div>`;
+    const head = `<tr><th class="nm">Member</th><th>Match</th>` + ids.map(id => { const rec = billById[id], a = MATCH.answers[id]; return `<th class="q" style="color:${a === "support" ? "var(--support)" : "var(--oppose)"}" title="${(rec.number + " — " + rec.binary_question.question).replace(/"/g, "&quot;")} · you: ${a === "support" ? "yes" : "no"}">${billShort(rec)}</th>`; }).join("") + `</tr>`;
+    const body = top.map(r => `<tr><td class="nm"><span class="link" data-esprof="${r.p.id}">${shortName(r.p.name)}</span><span class="meta"><span style="color:${partyColor(r.p.party)}">●</span> ${seat(r.p)}</span></td>`
+      + `<td><b>${Math.round(r.share * 100)}%</b> <span style="color:var(--muted)">${r.agree}/${r.n}</span></td>`
+      + ids.map(id => { const d = per.get(id).get(r.p.id); if (d !== "support" && d !== "oppose") return `<td class="na" title="no recorded position">–</td>`; return d === MATCH.answers[id] ? `<td class="ok" title="${d === "support" ? "yes" : "no"}, same as you">✓</td>` : `<td class="no" title="${d === "support" ? "yes" : "no"}, opposite to you">✗</td>`; }).join("")
+      + `</tr>`).join("");
+    return ctl + `<div style="overflow-x:auto"><table class="es">${head}${body}</table></div>`
+      + `<div class="topic-sub" style="margin:4px 0 0">✓ same as you · ✗ opposite · – no recorded position. Full list and minimum-overlap setting in the side pane.</div>`;
+  }
+  function bindMatchList(el) {
+    const ms = el.querySelector("#es-state");
+    if (ms) ms.onchange = () => { state.f.state = ms.value; if (E) E.stateF = state.f.state || null; syncExploreHash(); render(); };
+    el.querySelectorAll("[data-esp]").forEach(c => c.onclick = () => { MATCH.party = c.dataset.esp; renderSide(); E_renderSummary(); E_size(); });
+    el.querySelectorAll("[data-esprof]").forEach(c => { kbRow(c, "link"); c.onclick = () => openProfile(c.dataset.esprof); });
   }
   function matchBoardHtml() {
     const ids = Object.keys(MATCH.answers).filter(id => billQ(id));
@@ -988,7 +1026,7 @@
     const ids = Object.keys(MATCH.answers).filter(id => billQ(id));
     const show = state.mode === "explore" && ids.length > 0;
     const html = show ? matchSummaryHtml(ids) : "";
-    if (html !== _eSumHtml) { el.innerHTML = html; _eSumHtml = html; }
+    if (html !== _eSumHtml) { el.innerHTML = html; _eSumHtml = html; bindMatchList(el); }
     el.classList.toggle("on", show);
     const main = $("main");
     if (main) main.style.setProperty("--esum", show && el.offsetHeight ? el.offsetHeight + "px" : "0px");
