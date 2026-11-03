@@ -2364,8 +2364,8 @@
     else if (state.mode === "bill") { const info = statementsReady ? billInfo(state.b.id) : null; $crumb.innerHTML = info ? `<b>${info.num}</b> · ${billTitleDisp(info) || "Bill"}` : `<b>Bill</b> · ${statementsReady ? "not found" : "loading statements…"}`; $hint.textContent = ""; }
     else if (state.mode === "list") { $crumb.innerHTML = `<b>Legislator list</b> · dropdown filters`; $hint.textContent = ""; }
     else if (state.mode === "explore") { $crumb.innerHTML = `<b>All issues</b> · filtered view`; $hint.textContent = "Click a committee to open it in place · hover or pin to see all of a node's edges · scroll to zoom · / to search · click empty space to reset"; }
-    else if (state.mode === "bills") { $crumb.innerHTML = `<b>Bills</b> · every bill in data`; $hint.textContent = "Filter by number or title · most statements first · click a row for the negotiation map"; }
-    else if (state.mode === "issues") { $crumb.innerHTML = `<b>Issues</b> · directory`; $hint.textContent = "Bar = support / neutral / oppose among legislators on record · click an issue for its halo page"; }
+    else if (state.mode === "bills") { $crumb.innerHTML = `<b>Bills</b> · every bill in data`; $hint.textContent = ""; }
+    else if (state.mode === "issues") { $crumb.innerHTML = `<b>Issues</b> · directory`; $hint.textContent = ""; }
     else if (state.mode === "about") { $crumb.innerHTML = "<b>About</b> | methodology"; $hint.textContent = ""; }
     else { const i = issueById[state.iid]; $crumb.innerHTML = i ? `<b>${i.catName}</b> › ${i.subName} › <b>${i.name}</b>` : "Pick an issue"; $hint.textContent = ""; }
   }

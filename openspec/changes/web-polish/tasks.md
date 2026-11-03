@@ -51,14 +51,14 @@ All tasks touch `apps/web/index.html` unless stated. One commit per group, messa
 ## 9. Print
 
 - [x] 9.1 `@media print`: hide masthead, nav, pane switch, `.aside`, `.side`; light tokens; full quotes; profile prints Overview + Timeline regardless of active tab; bill page prints all statements.
-- [ ] 9.2 Verify with the browser print preview on `#/legislator/D000216` and one bill.
+- [x] 9.2 Verify with the browser print preview on `#/legislator/D000216` and one bill.
 
 ## 10. Load order and assets
 
 - [x] 10.1 `<script defer>` on the D3 tag; module script after it; confirm first paint and Explore still work with `graph.json` present and absent.
-- [ ] 10.2 Confirm `assets/zip-to-district.json` is fetched only when a query starts with a digit (it is already lazy — leave if so).
+- [x] 10.2 Confirm `assets/zip-to-district.json` is fetched only when a query starts with a digit (it is already lazy — leave if so).
 - [x] 10.3 Delete unreferenced logo files (`owl-mark.png`, `owl-mark-m.png`, `owl-mark-32/128/256.png`); keep 64 and 512; update `apps/web/assets/README.md` line for `logo/`.
 
 ## 11. Final check
 
-- [ ] 11.1 `node --check` on the extracted script; `node packages/contract/validate.mjs data --records data/records` → OK; smoke all routes at desktop and 375 px.
+- [x] 11.1 `node --check` on the extracted script; `node packages/contract/validate.mjs data --records data/records` → OK; smoke all routes at desktop and 375 px.
