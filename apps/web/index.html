@@ -74,7 +74,9 @@
   #e-summary .h { margin: 0 0 4px; }
   #e-summary ul { margin: 6px 0 0; padding-left: 18px; font-size: 13px; }
   #e-summary .es-ctl { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin: 8px 0 6px; }
-  #e-summary table.es { border-collapse: collapse; font-size: 12px; margin-top: 4px; max-width: 100%; }
+  #e-summary .es-wrap { overflow: auto; max-height: max(180px, 38vh); }
+  #e-summary table.es { border-collapse: collapse; font-size: 12px; margin-top: 4px; }
+  #e-summary table.es thead th { position: sticky; top: 0; background: var(--panel); z-index: 1; }
   #e-summary table.es th, #e-summary table.es td { padding: 3px 6px; border-top: 1px solid var(--border); text-align: center; white-space: nowrap; }
   #e-summary table.es th { font-weight: 500; color: var(--muted); border-top: 0; }
   #e-summary table.es th.q { font-size: 11px; letter-spacing: 0; max-width: 64px; overflow: hidden; text-overflow: ellipsis; }
@@ -923,13 +925,15 @@
       .map(p => {
         let agree = 0, n = 0;
         ids.forEach(id => { const d = per.get(id).get(p.id); if (d === "support" || d === "oppose") { n++; if (d === MATCH.answers[id]) agree++; } });
-        return { p, agree, n, share: n ? agree / n : -1 };
+        // share = bills answered the same way / all bills you answered: silence is not a match,
+        // and a member who agreed on 3 of your 17 bills ranks below one who agreed on 9
+        return { p, agree, n, dis: n - agree, share: ids.length ? agree / ids.length : 0 };
       });
     const best = all.reduce((m, r) => Math.max(m, r.n), 0);
     const floor = Math.max(1, Math.min(MATCH.min, best));
     const out = all
       .filter(r => r.n >= floor)
-      .sort((a, b) => b.share - a.share || b.n - a.n || a.p.name.localeCompare(b.p.name));
+      .sort((a, b) => b.agree - a.agree || a.dis - b.dis || b.n - a.n || a.p.name.localeCompare(b.p.name));
     out.floor = floor;
     return out;
   }
@@ -967,7 +971,7 @@
   // state and party filters are the same ones the side-pane board uses
   const billShort = rec => String(rec.number || rec.bill_id).replace(/\./g, "").replace(/\s+/g, " ").replace(/^H R /, "HR ").replace(/^H Con Res /, "HConRes ").replace(/^HJ Res /, "HJRes ").replace(/^H Res /, "HRes ").replace(/^SJ Res /, "SJRes ").replace(/^S Con Res /, "SConRes ").replace(/^S Res /, "SRes ");
   function matchListHtml(ids) {
-    const rows = matchRows(), top = rows.slice(0, 5);
+    const rows = matchRows(), top = rows;
     const per = new Map(ids.map(id => [id, new Map(billLegsMemo(id).map(L => [L.id, dirOf(L.score)]))]));
     const stOpts = `<option value="">All states</option>` + STATES.map(s => `<option value="${s}"${s === state.f.state ? " selected" : ""}>${STATE_NAMES[s] || s}</option>`).join("");
     const ctl = `<div class="es-ctl"><span class="h" style="margin:0">Closest to you</span>`
@@ -976,13 +980,13 @@
       + (rows.floor < MATCH.min ? `<span class="topic-sub" style="margin:0">no one has a position on ${MATCH.min} of your bills yet · ranking at ${rows.floor}</span>` : "")
       + `</div>`;
     if (!top.length) return ctl + `<div class="topic-sub" style="margin:0">No member has a recorded position on any bill you answered${state.f.state ? " in " + (STATE_NAMES[state.f.state] || state.f.state) : ""}.</div>`;
-    const head = `<tr><th class="nm">Member</th><th>Match</th>` + ids.map(id => { const rec = billById[id], a = MATCH.answers[id]; return `<th class="q" style="color:${a === "support" ? "var(--support)" : "var(--oppose)"}" title="${(rec.number + " — " + rec.binary_question.question).replace(/"/g, "&quot;")} · you: ${a === "support" ? "yes" : "no"}">${billShort(rec)}</th>`; }).join("") + `</tr>`;
+    const head = `<thead><tr><th class="nm">Member</th><th>Match</th>` + ids.map(id => { const rec = billById[id], a = MATCH.answers[id]; return `<th class="q" style="color:${a === "support" ? "var(--support)" : "var(--oppose)"}" title="${(rec.number + " — " + rec.binary_question.question).replace(/"/g, "&quot;")} · you: ${a === "support" ? "yes" : "no"}">${billShort(rec)}</th>`; }).join("") + `</tr></thead>`;
     const body = top.map(r => `<tr><td class="nm"><span class="link" data-esprof="${r.p.id}">${shortName(r.p.name)}</span><span class="meta"><span style="color:${partyColor(r.p.party)}">●</span> ${seat(r.p)}</span></td>`
-      + `<td><b>${Math.round(r.share * 100)}%</b> <span style="color:var(--muted)">${r.agree}/${r.n}</span></td>`
+      + `<td title="${r.agree} same as you · ${r.dis} opposite · ${ids.length - r.n} no position"><b>${Math.round(r.share * 100)}%</b> <span style="color:var(--muted)">${r.agree}/${ids.length}</span></td>`
       + ids.map(id => { const d = per.get(id).get(r.p.id); if (d !== "support" && d !== "oppose") return `<td class="na" title="no recorded position">–</td>`; return d === MATCH.answers[id] ? `<td class="ok" title="${d === "support" ? "yes" : "no"}, same as you">✓</td>` : `<td class="no" title="${d === "support" ? "yes" : "no"}, opposite to you">✗</td>`; }).join("")
       + `</tr>`).join("");
-    return ctl + `<div style="overflow-x:auto"><table class="es">${head}${body}</table></div>`
-      + `<div class="topic-sub" style="margin:4px 0 0">✓ same as you · ✗ opposite · – no recorded position. Full list and minimum-overlap setting in the side pane.</div>`;
+    return ctl + `<div class="es-wrap"><table class="es">${head}<tbody>${body}</tbody></table></div>`
+      + `<div class="topic-sub" style="margin:4px 0 0">${rows.length} member${rows.length === 1 ? "" : "s"} ranked by bills answered the same way as you, out of the ${ids.length} you answered. ✓ same as you · ✗ opposite · – no recorded position. Minimum-overlap setting in the side pane.</div>`;
   }
   function bindMatchList(el) {
     const ms = el.querySelector("#es-state");
@@ -994,11 +998,11 @@
     const ids = Object.keys(MATCH.answers).filter(id => billQ(id));
     if (ids.length < 3) return "";
     const rows = matchRows();
-    const pct = r => Math.round(r.share * 100) + "%";
-    const row = r => `<div class="row" data-mprof="${r.p.id}"><div><div class="name"><span style="color:${partyColor(r.p.party)}">●</span> ${shortName(r.p.name)}</div><div class="meta">${seat(r.p)} · ${r.p.party}</div></div><div style="text-align:right"><div class="score" style="min-width:0">${pct(r)} · ${r.agree}/${r.n}</div><div class="bar" style="width:90px"><span style="left:0;width:${(r.share * 100).toFixed(1)}%;background:var(--accent)"></span></div></div></div>`;
+    const pct = r => Math.round(r.share * 100) + "%", tot = ids.length;
+    const row = r => `<div class="row" data-mprof="${r.p.id}"><div><div class="name"><span style="color:${partyColor(r.p.party)}">●</span> ${shortName(r.p.name)}</div><div class="meta">${seat(r.p)} · ${r.p.party}</div></div><div style="text-align:right"><div class="score" style="min-width:0" title="${r.agree} same · ${r.dis} opposite · ${tot - r.n} no position">${pct(r)} · ${r.agree}/${tot}</div><div class="bar" style="width:90px"><span style="left:0;width:${(r.share * 100).toFixed(1)}%;background:var(--accent)"></span></div></div></div>`;
     const stOpts = `<option value="">All states</option>` + STATES.map(s => `<option value="${s}"${s === state.f.state ? " selected" : ""}>${STATE_NAMES[s] || s}</option>`).join("");
     return `<div class="h">Your match board</div>`
-      + `<div class="topic-sub" style="margin:0 0 6px">Share of bills you answered on which the member has a recorded position (sponsorship, cosponsorship, vote or statement) matching your answer; members under the minimum are not ranked.</div>`
+      + `<div class="topic-sub" style="margin:0 0 6px">Share of all bills you answered on which the member's recorded position (sponsorship, cosponsorship, vote or statement) matches your answer; no recorded position counts as no match. Members under the minimum overlap are not ranked.</div>`
       + `<div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:8px">`
       + `<select id="mb-state" class="if" style="width:150px">${stOpts}</select>`
       + ["ALL", "D", "R"].map(p => `<span class="chip${MATCH.party === p ? " active" : ""}" data-mp="${p}">${p === "ALL" ? "All" : p}</span>`).join("")
