@@ -39,6 +39,8 @@
   .skip:focus { left: 0; }
   h1, .topic-title, .person-card .name, .ph h1, .hero h1 { font-family: var(--display); font-weight: 600; letter-spacing: -.01em; }
   .app { display: grid; grid-template-columns: 280px 1fr 360px; grid-template-rows: 48px 1fr; height: 100vh; }
+  /* Explore gets a wider right column: the state map and the member list need the room */
+  @media (min-width: 1280px) { body[data-mode="explore"] .app { grid-template-columns: 260px 1fr 430px; } }
   header { grid-column: 1 / -1; display: flex; align-items: center; gap: 14px; padding: 0 16px; border-bottom: 1px solid var(--border); background: var(--panel); }
   header .brand { font-weight: 700; letter-spacing: .3px; }
   header .crumb { color: var(--muted); font-size: 13px; }
@@ -468,6 +470,19 @@
   .ectl .btn.rz:hover { background: var(--panel-2); border-color: var(--accent); }
   .mmwrap { display: none; margin-bottom: 14px; }
   #mm { width: 100%; height: 210px; display: block; max-width: 100%; background: var(--bg); border: 1px solid var(--border); cursor: pointer; }
+  /* first-visit guide in the Explore side pane */
+  .intro { border: 1px solid var(--border-strong); border-left: 3px solid var(--accent); padding: 12px 14px 10px; margin: 0 0 14px; background: var(--panel-2); }
+  .intro .h { margin: 0 0 8px; }
+  .intro ol { margin: 0; padding: 0; list-style: none; counter-reset: step; }
+  .intro li { position: relative; padding: 0 0 8px 28px; font-size: 13px; line-height: 1.5; counter-increment: step; }
+  .intro li::before { content: counter(step); position: absolute; left: 0; top: 1px; width: 19px; height: 19px; border-radius: 50%; background: var(--accent); color: var(--on-accent); font: 700 11px var(--mono); display: flex; align-items: center; justify-content: center; }
+  .intro .read { font-size: 12px; color: var(--muted); line-height: 1.55; border-top: 1px solid var(--border); padding-top: 8px; margin-top: 2px; }
+  .intro .read b { color: var(--text); font-weight: 600; }
+  .intro .act { display: flex; gap: 8px; align-items: center; margin-top: 10px; flex-wrap: wrap; }
+  .intro .dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; vertical-align: -1px; margin-right: 3px; }
+  .mmhead { display: flex; justify-content: space-between; align-items: baseline; margin: 0 0 6px; }
+  .mmhead .h { margin: 0; }
+  .mmhead .link { font-size: 11px; }
   .mmleg { font-size: 11.5px; color: var(--muted); margin-top: 6px; display: flex; gap: 6px 12px; flex-wrap: wrap; align-items: center; line-height: 1.5; }
   .mmleg .sq { display: inline-block; width: 9px; height: 9px; margin-right: 5px; vertical-align: baseline; }
   .mmleg .chip { cursor: pointer; }
@@ -754,7 +769,7 @@
     p: { person: null, sel: null, q: "" },
     iid: null,
     b: { id: null, ticked: [], sel: null },
-    e: { lastBill: null, drawer: null, mOpen: null }
+    e: { lastBill: null, drawer: null, mOpen: null, intro: null }
   };
   // Explore canvas state lives here from startup so the hash router can consult it on first load
   let E = null, E_sim = null, E_zoom = null;
@@ -941,14 +956,14 @@
   }
   function renderExploreSide() {
 
-    const mmHtml = `<div class="mmwrap" id="mmwrap" style="display:block"><div class="h" style="display:flex;justify-content:space-between;margin-top:0"><span>Map</span><span id="mmmode" style="color:var(--muted);letter-spacing:.06em"></span></div><canvas id="mm"></canvas><div class="mmleg" id="mmleg"></div></div>`;
+    const mmHtml = E_introHtml() + `<div class="mmwrap" id="mmwrap" style="display:block"><div class="mmhead"><span class="h">Where they sit</span><span id="mmmode" style="color:var(--muted);font-size:11px;letter-spacing:.04em"></span></div><canvas id="mm"></canvas><div class="mmleg" id="mmleg"></div></div>`;
     const aboutFoot = `<div class="topic-sub" style="margin:14px 0 0;border-top:1px solid var(--border);padding-top:10px">How this is scored → <span class="link" data-about>About</span> · <span class="link" data-copy>Copy link</span></div>`;
     if (E && E.pinned) {
       $side.innerHTML = mmHtml + E_pinHtml(E.pinned) + aboutFoot;
       const ob = $("open-issue");
       if (ob) ob.onclick = () => openIssue(ob.dataset.i);
       bindIssueQuestions();
-      E_mmBind();
+      E_mmBind(); bindIntro($side);
       return;
     }
     const fe = filteredEdges();
@@ -959,14 +974,34 @@
         ${mine.map(e => `<div class="stance-line ${sel === e ? "active" : ""}" data-issue="${e.to}"><div><div class="t">${issueById[e.to].name}</div><div class="c">${issueById[e.to].catName} › ${issueById[e.to].subName}</div></div><div class="score" style="color:${color(e.direction)}">${fmt(e.score)}</div></div>`).join("")}
         ${sel ? evidenceHtml(sel) : ""}<div style="margin-top:12px;display:flex;gap:8px"><button class="btn" id="back">← all legislators</button><button class="btn" data-open="${p.id}">Open profile →</button></div></div>` + aboutFoot;
       $side.querySelectorAll(".stance-line").forEach(el => el.onclick = () => { state.edge = el.dataset.issue; renderSide(); });
-      $("back").onclick = () => { state.person = null; state.edge = null; render(); }; E_mmBind();
+      $("back").onclick = () => { state.person = null; state.edge = null; render(); }; E_mmBind(); bindIntro($side);
       return;
     }
     const byP = {}; fe.forEach(e => (byP[e.from] ??= []).push(e));
     const rows = Object.entries(byP).sort((a, b) => b[1].length - a[1].length).map(([pid, es]) => { const p = byId[pid];
       return `<div class="row" data-id="${pid}"><div><div class="name">${title(p)}</div><div class="meta">${seat(p)} · ${p.party} · <span style="color:var(--support)">${es.filter(e => e.direction === "support").length} for</span> · <span style="color:var(--oppose)">${es.filter(e => e.direction === "oppose").length} against</span></div></div><div class="score">${es.length}</div></div>`; }).join("");
-    $side.innerHTML = mmHtml + `<div class="topic-sub">${fe.length} stances across ${Object.keys(byP).length} legislators. Click one to see their positions.</div>${rows || `<div class="empty-state">Nothing matches the filters.</div>`} ${conditionsPanel(state.issue)}` + aboutFoot; E_mmBind();
+    $side.innerHTML = mmHtml + `<div class="topic-sub">${fe.length} stances across ${Object.keys(byP).length} legislators. Click one to see their positions.</div>${rows || `<div class="empty-state">Nothing matches the filters.</div>`} ${conditionsPanel(state.issue)}` + aboutFoot; E_mmBind(); bindIntro($side);
     $side.querySelectorAll(".row[data-id]").forEach(el => el.onclick = () => { state.person = el.dataset.id; state.edge = null; render(); });
+  }
+  // first-visit guide: three steps + how to read the ring; dismissed state in localStorage, reopened from the "How to use" link
+  const introSeen = () => { try { return localStorage.getItem("owl-intro") === "1"; } catch { return false; } };
+  function E_introHtml() {
+    const open = state.e.intro === true || (state.e.intro !== false && !introSeen());
+    if (!open) return `<div class="mmhead" style="margin-bottom:10px;justify-content:flex-end"><span class="link" data-intro="open">? How to use this map</span></div>`;
+    return `<div class="intro"><div class="h">How to use this map</div><ol>`
+      + `<li><b>Click a coloured dot on the ring</b> — each is a House committee — to open its issues.</li>`
+      + `<li><b>Click an issue.</b> Its bills appear here as Yes / No questions; answer the ones you care about.</li>`
+      + `<li><b>After three answers, open "Show matches"</b> under the ring to see which members' records are closest to yours.</li>`
+      + `</ol><div class="read"><b>Reading the ring.</b> Small dots are the ${PEOPLE.length} House members (<span class="dot" style="background:var(--party-d)"></span>Democrat, <span class="dot" style="background:var(--party-r)"></span>Republican). Each sits near the committee they work on most; closer to the rim means more specialised. Lines are their recorded positions: <span style="color:var(--support)">green</span> for, <span style="color:var(--oppose)">red</span> against. Hover anything for details, scroll to zoom.</div>`
+      + `<div class="act"><button class="btn" data-intro="try">Try it: open Financial Services →</button><span class="link" data-intro="close">Got it</span></div></div>`;
+  }
+  function bindIntro(root) {
+    root.querySelectorAll("[data-intro]").forEach(el => el.onclick = () => {
+      const a = el.dataset.intro;
+      if (a === "open") { state.e.intro = true; renderSide(); E_mmBind(); return; }
+      if (a === "close") { state.e.intro = false; try { localStorage.setItem("owl-intro", "1"); } catch { /* storage unavailable */ } renderSide(); E_mmBind(); return; }
+      if (a === "try") { state.e.intro = false; try { localStorage.setItem("owl-intro", "1"); } catch { /* storage unavailable */ } location.hash = "#/explore?com=hsba"; }
+    });
   }
   // one-line question rows under an issue node: the bill number, its yes/no question
   // (short_context on hover), Yes / No toggles and the recorded for/against split; answering
@@ -2775,15 +2810,27 @@
       const twMax = Math.max(...lines.map(ln => cx2.measureText(ln).width));
       const bx0 = E_fitX(lx, twMax, al, W);
       const bx = al === "left" ? bx0 : al === "right" ? bx0 - twMax : bx0 - twMax / 2;
-      const boxAt = yy => ({ x0: bx - 2, x1: bx + twMax + 2, y0: yy - (lines.length - 1) * lh / 2 - lh / 2, y1: yy + (lines.length - 1) * lh / 2 + lh / 2 });
-      const hits = yy => { const b = boxAt(yy); return drawnBoxes.some(o => b.x0 < o.x1 && b.x1 > o.x0 && b.y0 < o.y1 && b.y1 > o.y0); };
-      const dir = Math.sin(a.am) >= 0 ? 1 : -1;
-      for (let k = 0; k < 3 && hits(y0); k++) y0 += dir * (lh + 2);
-      drawnBoxes.push(boxAt(y0));
+      // candidate positions: away from the ring first, then toward it, then one step further out
+      // sideways; every candidate stays inside the pane. If none is clear the label is skipped (the
+      // dot keeps its hover tooltip) rather than printed over something else.
+      const half = (lines.length - 1) * lh / 2 + lh / 2;
+      const clampY = yy => Math.min(Math.max(yy, 10 + half), H - 4 - half);
+      const boxAt = (xx, yy) => ({ x0: xx - 2, x1: xx + twMax + 2, y0: yy - half, y1: yy + half });
+      const hits = (xx, yy) => { const b = boxAt(xx, yy); return drawnBoxes.some(o => b.x0 < o.x1 && b.x1 > o.x0 && b.y0 < o.y1 && b.y1 > o.y0); };
+      const dir = Math.sin(a.am) >= 0 ? 1 : -1, sx = Math.cos(a.am) >= 0 ? 1 : -1;
+      const steps = [0, 1, -1, 2, -2, 3, -3, 4].map(k => clampY(y0 + dir * k * (lh + 2)));
+      let placed = null;
+      for (const dx of [0, sx * 28, sx * 56]) {
+        const xx = Math.min(Math.max(bx + dx, 4), W - 4 - twMax);
+        for (const yy of steps) if (!hits(xx, yy)) { placed = { xx, yy }; break; }
+        if (placed) break;
+      }
+      if (!placed) continue;
+      drawnBoxes.push(boxAt(placed.xx, placed.yy));
       cx2.fillStyle = fx && fx.id === a.id ? PAL.accent : PAL.ink;
+      const ax = al === "left" ? placed.xx : al === "right" ? placed.xx + twMax : placed.xx + twMax / 2;
       lines.forEach((ln, li) => {
-        const tw = cx2.measureText(ln).width;
-        E_label(ln, E_fitX(lx, tw, al, W), y0 + (li - (lines.length - 1) / 2) * lh, f, fx && fx.id === a.id ? PAL.accent : PAL.ink, al);
+        E_label(ln, ax, placed.yy + (li - (lines.length - 1) / 2) * lh, f, fx && fx.id === a.id ? PAL.accent : PAL.ink, al);
       });
     }
 
@@ -2843,17 +2890,17 @@
     const mm = mmEl();
     if (!mm) return null;
     const dpr = devicePixelRatio || 1;
-    const MW = Math.max(200, (mm.parentElement && mm.parentElement.clientWidth) || mm.getBoundingClientRect().width || 200), MH = 210;
+    // one tile per state (US tile grid); the tile is sized from the pane width so the grid uses the whole column
+    const MW = Math.max(200, (mm.parentElement && mm.parentElement.clientWidth) || mm.getBoundingClientRect().width || 200);
+    const cols = 12, rows = 8, ts = Math.floor((MW - 4) / cols), MH = ts * rows + 4;
     mm.style.width = MW + "px"; mm.style.height = MH + "px";
     mm.width = Math.round(MW * dpr); mm.height = Math.round(MH * dpr);
     const c = mm.getContext("2d");
     c.setTransform(dpr, 0, 0, dpr, 0, 0);
-    const cells = [], states = [], cols = 12, rows = 8, ts = Math.min((MW - 4) / cols, (MH - 4) / rows), ox = (MW - ts * cols) / 2, oy = (MH - ts * rows) / 2;
+    const cells = [], states = [], ox = (MW - ts * cols) / 2, oy = 2;
     Object.entries(TILE).forEach(([st, [cc, rw]]) => {
       const x0 = ox + cc * ts + 1, y0 = oy + rw * ts + 1, sz = ts - 2;
-      states.push({ st, x: x0, y: y0, s: sz });
-      const members = PEOPLE.filter(p => p.state === st), g = Math.ceil(Math.sqrt(Math.max(1, members.length))), cs = (sz - 7) / g;
-      members.forEach((l, k) => cells.push({ l, st, x: x0 + (k % g) * cs, y: y0 + 7 + Math.floor(k / g) * cs, w: Math.max(1, cs - .6), h: Math.max(1, cs - .6) }));
+      states.push({ st, x: x0, y: y0, s: sz, members: PEOPLE.filter(p => p.state === st) });
     });
     return { mm, c, cells, states, MW, MH };
   }
@@ -2873,28 +2920,36 @@
     c.clearRect(0, 0, MW, MH);
     const mode = focusT ? (E.comById.get(focusT) ? E.comById.get(focusT).name : (issueById[focusT] || {}).name) : null;
     const sc = focusT ? new Map(PEOPLE.map(p => [p.id, E_aggScore(p.id, focusT)])) : null;
+    // each state tile: abbreviation, seat count, and a split bar — party shares, or stance shares when an issue is in focus
+    const hov = E.mmHover && E.mmHover.st;
     for (const s0 of states) {
-      c.globalAlpha = E.stateF && E.stateF !== s0.st ? .25 : 1;
-      c.fillStyle = E.stateF === s0.st ? PAL.accent : PAL.neutral;
-      c.font = "600 7px JetBrains Mono"; c.textAlign = "left";
-      c.fillText(s0.st, s0.x + 1, s0.y + 6);
-    }
-    for (const cl of cells) {
-      const dim = E.stateF && cl.st !== E.stateF;
-      let col = eParty(cl.l.party);
-      if (sc) { const v = sc.get(cl.l.id); col = v === undefined ? "#2a3148" : eColor(dirOf(v)); }
-      c.globalAlpha = dim ? .15 : 1; c.fillStyle = col;
-      c.fillRect(cl.x, cl.y, cl.w, cl.h);
+      const sel = E.stateF === s0.st, dim = E.stateF && !sel;
+      const n = s0.members.length;
+      const parts = sc
+        ? [["support", 0], ["neutral", 0], ["oppose", 0], ["none", 0]].map(([k]) => [k, s0.members.filter(p => { const v = sc.get(p.id); return v === undefined ? k === "none" : dirOf(v) === k; }).length])
+        : [["D", s0.members.filter(p => p.party === "D").length], ["R", s0.members.filter(p => p.party === "R").length], ["I", s0.members.filter(p => p.party !== "D" && p.party !== "R").length]];
+      const colOf = k => k === "D" ? PAL.D : k === "R" ? PAL.R : k === "I" ? PAL.I : k === "none" ? "#2a3148" : eColor(k);
+      c.globalAlpha = dim ? .3 : 1;
+      c.fillStyle = sel || hov === s0.st ? "#232a40" : "#1a2033";
+      c.fillRect(s0.x, s0.y, s0.s, s0.s);
+      if (sel) { c.strokeStyle = PAL.accent; c.lineWidth = 1.5; c.strokeRect(s0.x + .75, s0.y + .75, s0.s - 1.5, s0.s - 1.5); }
+      c.fillStyle = sel ? PAL.accent : PAL.ink;
+      c.font = "700 " + Math.max(8, Math.min(10, s0.s * .36)) + "px JetBrains Mono"; c.textAlign = "left"; c.textBaseline = "alphabetic";
+      c.fillText(s0.st, s0.x + 3, s0.y + Math.max(9, s0.s * .4));
+      c.fillStyle = PAL.muted; c.font = "500 " + Math.max(7, Math.min(9, s0.s * .3)) + "px JetBrains Mono"; c.textAlign = "right";
+      c.fillText(String(n), s0.x + s0.s - 3, s0.y + Math.max(9, s0.s * .4));
+      // split bar along the bottom of the tile
+      const bx = s0.x + 3, bw = s0.s - 6, bh = Math.max(4, Math.round(s0.s * .22)), by = s0.y + s0.s - bh - 3;
+      let x = bx;
+      parts.forEach(([k, v]) => { if (!v || !n) return; const w = bw * v / n; c.fillStyle = colOf(k); c.fillRect(x, by, Math.max(1, w - (x + w < bx + bw ? .8 : 0)), bh); x += w; });
     }
     c.globalAlpha = 1;
-    const ring = focusL || (E.mmHover && E.mmHover.l.id);
-    if (ring) { const found = cells.find(cc => cc.l.id === ring); if (found) { c.strokeStyle = PAL.ink; c.lineWidth = 1.5; c.strokeRect(found.x - 1.5, found.y - 1.5, found.w + 3, found.h + 3); } }
     const modeEl = $("mmmode"), legEl = $("mmleg");
-    if (modeEl) modeEl.textContent = mode ? "colour = stance on " + mode : "colour = party";
+    if (modeEl) modeEl.textContent = mode ? "bar = stance on " + mode : "bar = party split";
     if (legEl) legEl.innerHTML = (mode
-      ? `<span><span class="sq" style="background:var(--support)"></span>supports</span><span><span class="sq" style="background:var(--oppose)"></span>opposes</span><span><span class="sq" style="background:var(--neutral)"></span>neutral</span><span><span class="sq" style="background:#2a3148"></span>no statement</span>`
-      : `<span><span class="sq" style="background:var(--party-d)"></span>D</span><span><span class="sq" style="background:var(--party-r)"></span>R</span><span>hover an issue or committee in the graph to recolour</span>`)
-      + (E.stateF ? ` <span class="chip" id="clrst">${STATE_NAMES[E.stateF]} only ✕</span>` : ` <span>click a state name to filter</span>`);
+      ? `<span><span class="sq" style="background:var(--support)"></span>for</span><span><span class="sq" style="background:var(--neutral)"></span>neutral</span><span><span class="sq" style="background:var(--oppose)"></span>against</span><span><span class="sq" style="background:#2a3148"></span>no record</span>`
+      : `<span><span class="sq" style="background:var(--party-d)"></span>Democrats</span><span><span class="sq" style="background:var(--party-r)"></span>Republicans</span><span>one tile per state · number = seats · hover an issue on the ring to recolour by stance</span>`)
+      + (E.stateF ? ` <span class="chip" id="clrst">${STATE_NAMES[E.stateF]} only ✕</span>` : ` <span>click a state to show only its delegation</span>`);
     const clr = $("clrst");
     if (clr) clr.onclick = () => { E.stateF = null; renderSide(); E_draw(); syncExploreHash(); };
   }
@@ -2911,26 +2966,21 @@
     E.mm = E_mmLayout();
     E_drawMM(E.hover && (E.hover.kind === "com" || E.hover.kind === "issue") ? E.hover.id : E.pinned && (E.pinned.kind === "com" || E.pinned.kind === "issue") ? E.pinned.id : null, null);
     E_mmRO.observe(mm.parentElement || mm);
+    const tileAt = (x, y) => E.mm.states.find(s0 => x >= s0.x && x <= s0.x + s0.s && y >= s0.y && y <= s0.y + s0.s);
     mm.onmousemove = ev => {
       const r = mm.getBoundingClientRect(), x = ev.clientX - r.left, y = ev.clientY - r.top;
-      const cl = E.mm.cells.find(cc => x >= cc.x - .5 && x <= cc.x + cc.w + .5 && y >= cc.y - .5 && y <= cc.y + cc.h + .5);
-      const sl = !cl && E.mm.states.find(s0 => x >= s0.x && x <= s0.x + s0.s && y >= s0.y && y <= s0.y + 7);
-      mm.style.cursor = cl || sl ? "pointer" : "default";
-      if ((cl || null) !== E.mmHover) {
-        E.mmHover = cl || null;
-        const l = cl && E.legs.find(z => z.id === cl.l.id);
-        E.hover = l || null;
-        E_draw();
-      }
-      if (cl) E_tip(ev, `<b>${cl.l.name}</b><br>${cl.l.district || cl.l.state} · ${cl.l.party}<div style="color:var(--accent);margin-top:3px">click to fly to</div>`);
-      else if (sl) E_tip(ev, `<b>${STATE_NAMES[sl.st]}</b> · ${PEOPLE.filter(p => p.state === sl.st).length} seat${PEOPLE.filter(p => p.state === sl.st).length > 1 ? "s" : ""}<div style="color:var(--accent);margin-top:3px">click to show only this delegation</div>`);
-      else E_hideTip();
+      const sl = tileAt(x, y);
+      mm.style.cursor = sl ? "pointer" : "default";
+      if ((sl || null) !== E.mmHover) { E.mmHover = sl || null; E_drawMM(E.hover && (E.hover.kind === "com" || E.hover.kind === "issue") ? E.hover.id : E.pinned && (E.pinned.kind === "com" || E.pinned.kind === "issue") ? E.pinned.id : null, null); }
+      if (sl) {
+        const d = sl.members.filter(p => p.party === "D").length, rr = sl.members.filter(p => p.party === "R").length, o = sl.members.length - d - rr;
+        E_tip(ev, `<b>${STATE_NAMES[sl.st] || sl.st}</b> · ${sl.members.length} seat${sl.members.length === 1 ? "" : "s"}<br><span style="color:var(--party-d)">${d} D</span> · <span style="color:var(--party-r)">${rr} R</span>${o ? ` · ${o} other` : ""}<div style="color:var(--accent);margin-top:3px">${E.stateF === sl.st ? "click to show every state again" : "click to show only this delegation"}</div>`);
+      } else E_hideTip();
     };
-    mm.onmouseleave = () => { E.mmHover = null; E.hover = null; E_hideTip(); E_draw(); };
+    mm.onmouseleave = () => { E.mmHover = null; E_hideTip(); E_drawMM(E.hover && (E.hover.kind === "com" || E.hover.kind === "issue") ? E.hover.id : E.pinned && (E.pinned.kind === "com" || E.pinned.kind === "issue") ? E.pinned.id : null, null); };
     mm.onclick = ev => {
       const r = mm.getBoundingClientRect(), x = ev.clientX - r.left, y = ev.clientY - r.top;
-      if (E.mmHover) { window.E_fly(E.mmHover.l.id); return; }
-      const sl = E.mm.states.find(s0 => x >= s0.x && x <= s0.x + s0.s && y >= s0.y && y <= s0.y + s0.s);
+      const sl = tileAt(x, y);
       if (sl) { E.stateF = E.stateF === sl.st ? null : sl.st; E_hideTip(); renderSide(); E_draw(); syncExploreHash(); }
     };
   }
@@ -2975,6 +3025,7 @@
       else if (state.mode === "issue") { const _is = issueById[state.iid]; _t = ((_is && _is.name) || "Issue") + " \u00b7 OWL"; }
       else if (state.mode === "about") _t = "About \u00b7 OWL";
       document.title = _t; }
+    document.body.dataset.mode = state.mode;
     ["explore", "issues", "bills", "list", "profile", "about"].forEach(m => $("m-" + m).classList.toggle("active", state.mode === m));
     if (state.mode === "profile") { const p = byId[state.p.person]; $crumb.innerHTML = p ? `<b>${p.name}</b> · ${seat(p)}` : `<b>Legislators</b>`; $hint.textContent = ""; }
     else if (state.mode === "bill") { const info = statementsReady ? billInfo(state.b.id) : null; $crumb.innerHTML = info ? `<b>${info.num}</b> · ${billTitleDisp(info) || "Bill"}` : `<b>Bill</b> · ${statementsReady ? "not found" : "loading statements…"}`; $hint.textContent = ""; }
