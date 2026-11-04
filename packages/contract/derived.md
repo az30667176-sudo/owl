@@ -8,7 +8,7 @@ For all statements with the same `person` and `issue`, sorted by `date`:
 
 | derived field | rule |
 |---|---|
-| `score` | weighted mean of *effective* statement scores (`score` × kind factor, see below) over stance rows only — speech, sponsorships, final-passage and unknown-question votes — weights by `llm_confidence`: low .4, mid .7, high 1, super_high 1.2. Amendment/procedural votes count toward `n`/salience only; an edge with no stance rows scores 0 (neutral) |
+| `score` | weighted mean of *effective* statement scores (`score` × kind factor, see below) over stance rows only — speech, sponsorships, final-passage and unknown-question votes — weights by `llm_confidence` (low .4, mid .7, high 1, super_high 1.2) × time decay (newest statement in the set 1.0, oldest 0.2, exponential between; dateless rows count as oldest). Amendment/procedural votes count toward `n`/salience only; an edge with no stance rows scores 0 (neutral) |
 | `direction` | from the derived score: `> .15` support, `< −.15` oppose, else neutral |
 | `n` | number of statements (shown as ×N) |
 | `first`, `last` | date range |

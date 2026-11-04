@@ -13,6 +13,24 @@
 
 export const CONF_W = { low: 0.4, mid: 0.7, high: 1, super_high: 1.2 };
 
+// Time decay for score weights: recent positions count more than old ones, so
+// flips move the score and stale piles dilute less. Range-relative: the newest
+// statement in the set weighs 1.0, the oldest 0.2, exponential between. Stored
+// scores are untouched; this is display math. Dateless rows count as oldest
+// (least weight); a set with no usable dates weighs everything 1.0.
+export const TIME_W_MIN = 0.2;
+export function timeRangeOf(statements) {
+  const ts = statements.map((s) => (s.date ? +new Date(s.date) : NaN)).filter(Number.isFinite);
+  if (!ts.length) return null;
+  return { min: Math.min(...ts), max: Math.max(...ts) };
+}
+export function timeWeight(date, range) {
+  if (!range || range.max <= range.min) return 1;
+  const t = date ? +new Date(date) : range.min;
+  const f = Math.min(1, Math.max(0, (t - range.min) / (range.max - range.min)));
+  return Math.pow(TIME_W_MIN, 1 - f);
+}
+
 const CONF_ORDER = ["low", "mid", "high", "super_high"];
 
 export function dirOf(score) {
@@ -104,6 +122,7 @@ function heatOfAt(now, s) {
 // score/n weight but take no kind slot (no halo ring reads them).
 export function deriveEdges(statements, { now } = {}) {
   const t = now instanceof Date ? now : new Date(now ?? Date.now());
+  const range = timeRangeOf(statements);
   const groups = new Map();
   for (const s of statements) {
     const k = s.person + "|" + s.issue;
@@ -113,7 +132,7 @@ export function deriveEdges(statements, { now } = {}) {
   const edges = [...groups.values()].map((list) => {
     const st = [...list].sort((a, b) => String(a.date || "").localeCompare(String(b.date || "")));
     const sw = st.filter(scoresStance);
-    const w = sw.map((s) => CONF_W[s.llm_confidence] || 0.7);
+    const w = sw.map((s) => (CONF_W[s.llm_confidence] || 0.7) * timeWeight(s.date, range));
     const eff = sw.map(effOf);
     const score = w.length ? eff.reduce((a, v, i) => a + v * w[i], 0) / w.reduce((a, b) => a + b, 0) : 0;
     const latest = st[st.length - 1];

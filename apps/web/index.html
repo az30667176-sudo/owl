@@ -690,13 +690,18 @@
   };
   const effOf = st => st.score * kindFactor(st);
   const scoresStance = st => st.kind !== "vote" || !st.vote_question || st.vote_question === "final_passage";
+  // Time decay for score weights (keep in sync with derive.mjs): newest = 1.0, oldest = 0.2, exponential between.
+  const TIME_W_MIN = 0.2;
+  const timeRangeOf = statements => { const ts = statements.map(s => s.date ? +new Date(s.date) : NaN).filter(Number.isFinite); return ts.length ? { min: Math.min(...ts), max: Math.max(...ts) } : null; };
+  const timeW = (date, range) => { if (!range || range.max <= range.min) return 1; const t = date ? +new Date(date) : range.min; const f = Math.min(1, Math.max(0, (t - range.min) / (range.max - range.min))); return Math.pow(TIME_W_MIN, 1 - f); };
   // Inlined copy of deriveEdges from apps/web/lib/derive.mjs — keep in sync.
   // Fallback path when graph.json is absent; scoring changes apply in both places.
   const deriveEdgesInline = (statements, now) => {
     const heatOf = s => { const days = s.date ? (now - new Date(s.date)) / 864e5 : 365; return Math.pow(2, -Math.max(0, days) / 180); };
+    const range = timeRangeOf(statements);
     const edges = [...d3.group(statements, s => s.person + "|" + s.issue).values()].map(list => {
       const st = [...list].sort((a, b) => String(a.date || "").localeCompare(String(b.date || "")));
-      const sw = st.filter(scoresStance), w = sw.map(s => CONF_W[s.llm_confidence] || .7), eff = sw.map(effOf), score = w.length ? eff.reduce((a, v, i) => a + v * w[i], 0) / w.reduce((a, b) => a + b, 0) : 0;
+      const sw = st.filter(scoresStance), w = sw.map(s => (CONF_W[s.llm_confidence] || .7) * timeW(s.date, range)), eff = sw.map(effOf), score = w.length ? eff.reduce((a, v, i) => a + v * w[i], 0) / w.reduce((a, b) => a + b, 0) : 0;
       const latest = st[st.length - 1], flipDirs = st.filter(s => { const k = kindOf(s); if (k === "speech") return true; if (k === "yea" || k === "nay") return !s.vote_question || s.vote_question === "final_passage"; return false; }).map(s => s.direction);
       const counts = { sponsored: 0, cosponsored: 0, yea: 0, nay: 0, views: 0 };
       let spokeN = 0, spokeSum = 0;
@@ -794,7 +799,10 @@
   function billLegsMemo(bill_id) {
     if (_blLegs.n !== STATEMENTS.length) _blLegs = { n: STATEMENTS.length, map: new Map() };
     let legs = _blLegs.map.get(bill_id);
-    if (!legs) { legs = billLegs(billStmtsInfo(bill_id)); _blLegs.map.set(bill_id, legs); }
+    if (!legs) {
+      if (_blLegs.rangeN !== STATEMENTS.length) { _blLegs.range = timeRangeOf(STATEMENTS); _blLegs.rangeN = STATEMENTS.length; }
+      legs = billLegs(billStmtsInfo(bill_id), _blLegs.range); _blLegs.map.set(bill_id, legs);
+    }
     return legs;
   }
   // bills.json records with a question under one issue, stable bill_id order: a bill hangs off
@@ -1286,7 +1294,7 @@
       + `<div class="isec">How a position is scored</div>`
       + `<!-- scoring wording copied from packages/contract/derived.md — keep both in step -->`
       + `<div style="font-size:13px;line-height:1.9">`
-      + `<div><b>score</b> — weighted mean of <i>effective</i> scores (each row × its kind factor: speech 1, sponsored .8, cosponsored .5, final-passage vote 1, amendment vote .5, legacy views .25) over stance rows only — amendment/procedural votes count as activity, never toward the score; weights by llm_confidence: low .4, mid .7, high 1, super_high 1.2</div>`
+      + `<div><b>score</b> — weighted mean of <i>effective</i> scores (each row × its kind factor: speech 1, sponsored .8, cosponsored .5, final-passage vote 1, amendment vote .5, legacy views .25) over stance rows only — amendment/procedural votes count as activity, never toward the score; weights by llm_confidence (low .4, mid .7, high 1, super_high 1.2) × time decay (newest statement 100%, oldest 20%), so recent positions move the score more than old ones</div>`
       + `<div><b>direction</b> — from the derived score: &gt; .15 support, &lt; −.15 oppose, else neutral</div>`
       + `<div><b>flip</b> — true when the non-neutral directions among speech and final-passage votes have more than one member (neutral → support is <b>not</b> a flip; amendment/procedural pairs are <b>not</b> flips)</div>`
       + `<div><b>match</b> — share of all bills you answered where the legislator's recorded bill position points your way; no recorded position counts as no match</div>`
@@ -1566,7 +1574,7 @@
       $("bll").innerHTML = list.slice(0, 200).map(g => {
         const v = g.info, bq = billQ(g.id);
         const ansB = MATCH.answers[(billRecByNum.get(g.id) || {}).bill_id];
-        return `<div class="ibl" data-b="${g.id}"><div><div class="num">${v.num}${ansB ? ` <span style="color:${ansB === "support" ? "var(--support)" : "var(--oppose)"}" title="you said ${ansB === "support" ? "yes" : "no"}">✓</span>` : ""}</div><div class="mt">${v.stmts.length} statement${v.stmts.length === 1 ? "" : "s"}</div></div><div><div>${tidyTitle(v.title) || "<span class=\"mt\">untitled</span>"}</div>${bq && bq.short_context ? `<div class="mt" style="white-space:normal">${bq.short_context}</div>` : ""}<div class="mt">${v.iss.catName} › ${v.iss.subName} › ${v.iss.name}</div></div>${bq ? `<span class="itag" title="Carries a yes/no question — answer it in Explore">? question</span>` : ""}${v.conds.length ? `<span class="itag">◆ ${v.conds.length} condition${v.conds.length > 1 ? "s" : ""}</span>` : (bq ? "" : `<span class="mt">no conditions</span>`)}</div>`;
+        return `<div class="ibl" data-b="${g.id}"><div><div class="num">${v.num}${ansB ? ` <span style="color:${ansB === "support" ? "var(--support)" : "var(--oppose)"}" title="you said ${ansB === "support" ? "yes" : "no"}">✓</span>` : ""}</div><div class="mt">${v.stmts.length} statement${v.stmts.length === 1 ? "" : "s"}</div></div><div><div>${tidyTitle(v.title) || (v.untitled ? "<span class=\"mt\">untitled</span>" : "")}</div>${bq && bq.short_context ? `<div class="mt" style="white-space:normal">${bq.short_context}</div>` : ""}<div class="mt">${v.iss.catName} › ${v.iss.subName} › ${v.iss.name}</div></div>${bq ? `<span class="itag" title="Carries a yes/no question — answer it in Explore">? question</span>` : ""}${v.conds.length ? `<span class="itag">◆ ${v.conds.length} condition${v.conds.length > 1 ? "s" : ""}</span>` : (bq ? "" : `<span class="mt">no conditions</span>`)}</div>`;
       }).join("") + (list.length > 200 ? `<div class="mt" style="padding:10px 0">+ ${list.length - 200} more · filter to narrow</div>` : "");
       $("bll").querySelectorAll("[data-b]").forEach(el => { kbRow(el, "link"); el.onclick = () => openBill(el.dataset.b); });
     };
@@ -1889,16 +1897,23 @@
     g.stmts.forEach(s => counts[s.issue] = (counts[s.issue] || 0) + 1);
     g.conds.forEach(r => counts[r.issue] = (counts[r.issue] || 0) + 1);
     const issue = Object.entries(counts).sort((a, b) => b[1] - a[1])[0][0];
-    return { ...g, num: m ? m[1].replace(/\s+/g, " ") : (chosen || id), title: m ? m[2].trim() : "", issue, iss: issueById[issue], latest };
+    const num = m ? m[1].replace(/\s+/g, " ") : (chosen || id);
+    // title: parsed tail first, then the authoritative bills.json record; a bare
+    // number with no record anywhere is genuinely untitled, but a long "number"
+    // is itself descriptive text (LLM title-only string), not an untitled bill
+    let title = m ? m[2].trim() : "";
+    if (!tidyTitle(title)) title = (billRecByNum.get(id) || {}).title || "";
+    const untitled = !tidyTitle(title) && ((billId(num) || "").length <= 12);
+    return { ...g, num, title, untitled, issue, iss: issueById[issue], latest };
   }
-  // legislators with a bill-matched statement or a condition row on this bill; score = confidence-weighted mean of kind-scaled effective scores, or null
-  function billLegs(info) {
+  // legislators with a bill-matched statement or a condition row on this bill; score = confidence- and recency-weighted mean of kind-scaled effective scores, or null
+  function billLegs(info, range) {
     const pids = [...new Set([...info.stmts.map(s => s.person), ...info.conds.map(r => r.person)])].filter(id => byId[id]);
     return pids.map(pid => {
       const mine = info.stmts.filter(s => s.person === pid);
       let score = null;
       const sw = mine.filter(scoresStance);
-      if (sw.length) { const w = sw.map(s => CONF_W[s.llm_confidence] || .7), eff = sw.map(effOf); score = eff.reduce((a, v, i) => a + v * w[i], 0) / w.reduce((a, b) => a + b, 0); }
+      if (sw.length) { const w = sw.map(s => (CONF_W[s.llm_confidence] || .7) * timeW(s.date, range)), eff = sw.map(effOf); score = eff.reduce((a, v, i) => a + v * w[i], 0) / w.reduce((a, b) => a + b, 0); }
       return { id: pid, p: byId[pid], score, conds: info.conds.filter(r => r.person === pid) };
     }).sort((a, b) => (b.score ?? -2) - (a.score ?? -2));
   }

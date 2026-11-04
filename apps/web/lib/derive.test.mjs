@@ -2,7 +2,7 @@
 //   node --test apps/web/lib/derive.test.mjs
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
-import { kindOf, kindFactor, effOf, deriveEdges, matchRank } from "./derive.mjs";
+import { kindOf, kindFactor, effOf, deriveEdges, matchRank, timeWeight, timeRangeOf } from "./derive.mjs";
 
 const row = (o) => ({
   person: "p1", issue: "i1", date: "2026-01-01", score: 0.8, direction: "support",
@@ -138,5 +138,33 @@ describe("matchRank", () => {
   });
   it("returns nothing without answers", () => {
     assert.deepEqual(matchRank(legsByBill, {}, { minAnswers: 1 }), []);
+  });
+});
+
+describe("timeWeight", () => {
+  const range = { min: +new Date("2025-01-01"), max: +new Date("2026-11-01") };
+  it("weighs newest 1.0, oldest 0.2, exponential between", () => {
+    assert.equal(timeWeight("2026-11-01", range), 1);
+    assert.equal(timeWeight("2025-01-01", range), 0.2);
+    const mid = timeWeight("2025-12-01", range);
+    assert.ok(mid > 0.2 && mid < 1, `mid-range weight ${mid} should sit between`);
+  });
+  it("returns 1 without a usable range; dateless rows count as oldest", () => {
+    assert.equal(timeWeight("2026-01-01", null), 1);
+    assert.equal(timeWeight("2026-01-01", { min: 5, max: 5 }), 1);
+    assert.equal(timeWeight(null, range), 0.2);
+  });
+  it("derives the range from statement dates", () => {
+    assert.deepEqual(timeRangeOf([row({ date: "2025-03-01" }), row({ date: "2026-03-01" })]), {
+      min: +new Date("2025-03-01"), max: +new Date("2026-03-01"),
+    });
+    assert.equal(timeRangeOf([row({ date: null })]), null);
+  });
+  it("lets a recent flip move the edge score", () => {
+    const old = row({ date: "2025-01-01", score: 0.8, direction: "support", kind: "speech" });
+    const fresh = row({ date: "2026-10-01", score: -0.8, direction: "oppose", kind: "speech" });
+    const [e] = deriveEdges([old, fresh], { now: new Date("2026-11-01T00:00:00Z") });
+    assert.ok(e.score < -0.3, `expected recent oppose to dominate, got ${e.score}`);
+    assert.equal(e.flip, true);
   });
 });
