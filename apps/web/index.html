@@ -964,10 +964,12 @@
   }
   function renderExploreSide() {
 
-    const mmHtml = E_introHtml() + `<div class="mmwrap" id="mmwrap" style="display:block"><div class="mmhead"><span class="h">Where they sit</span><span id="mmmode" style="color:var(--muted);font-size:11px;letter-spacing:.04em"></span></div><canvas id="mm"></canvas><div class="mmleg" id="mmleg"></div></div>`;
+    const mapHtml = `<div class="mmwrap" id="mmwrap" style="display:block"><div class="mmhead"><span class="h">Where they sit</span><span id="mmmode" style="color:var(--muted);font-size:11px;letter-spacing:.04em"></span></div><canvas id="mm"></canvas><div class="mmleg" id="mmleg"></div></div>`;
+    const mmHtml = E_introHtml() + mapHtml;
     const aboutFoot = `<div class="topic-sub" style="margin:14px 0 0;border-top:1px solid var(--border);padding-top:10px">How this is scored → <span class="link" data-about>About</span> · <span class="link" data-copy>Copy link</span></div>`;
     if (E && E.pinned) {
-      $side.innerHTML = mmHtml + E_pinHtml(E.pinned) + aboutFoot;
+      // a pinned topic or member comes first (its yes/no questions must be visible without scrolling), the map after
+      $side.innerHTML = E_introHtml() + E_pinHtml(E.pinned) + mapHtml + aboutFoot;
       const ob = $("open-issue");
       if (ob) ob.onclick = () => openIssue(ob.dataset.i);
       bindIssueQuestions();
@@ -1000,7 +1002,7 @@
       + `<li><b>Click a coloured dot on the ring</b> — each is a House committee — to open its topics.</li>`
       + `<li><b>Click a topic.</b> Its bills appear here as Yes / No questions; answer the ones you care about.</li>`
       + `<li><b>After three answers, open "Show matches"</b> under the ring to see which members' records are closest to yours.</li>`
-      + `</ol><div class="read"><b>Reading the ring.</b> Small dots are the ${PEOPLE.length} House members (<span class="dot" style="background:var(--party-d)"></span>Democrat, <span class="dot" style="background:var(--party-r)"></span>Republican). Each sits near the committee they work on most; closer to the rim means more specialised. Lines are their recorded positions: <span style="color:var(--support)">green</span> for, <span style="color:var(--oppose)">red</span> against. Hover anything for details, scroll to zoom.</div>`
+      + `</ol><div class="read"><b>Reading the ring.</b> Small dots are the ${PEOPLE.length} House members (<span class="dot" style="background:var(--party-d)"></span>Democrat, <span class="dot" style="background:var(--party-r)"></span>Republican). Each sits near the committee they work on most; closer to the rim means more specialised. Lines show attention: thicker and brighter means more, and more recent, activity on that committee or topic. Hover anything for details, scroll to zoom.</div>`
       + `<div class="act"><button class="btn" data-intro="try">Try it: open Financial Services →</button><span class="link" data-intro="close">Got it</span></div></div>`;
   }
   function bindIntro(root) {
@@ -1729,7 +1731,7 @@
       <div class="hero">
         <div class="avatar" style="background:${partyColor(p.party)}">${initials}</div>
         <div class="who"><h1>${p.name}</h1><div class="meta">${seat(p)} · ${partyName} · ${p.gender === "F" ? "Female" : "Male"} · since ${p.since}${p.bioguide_id ? ` · <a class="link" href="https://bioguide.congress.gov/search/bio/${p.bioguide_id}" target="_blank">bioguide ↗</a>` : ""}</div><div style="margin-top:8px"><button class="btn" id="p-csv"${statementsReady ? "" : " disabled"}>Download CSV</button></div></div>
-        <div class="strip">${stat(mine.length, "issues")}${stat(sup, "support", "var(--support)")}${stat(opp, "oppose", "var(--oppose)")}${stat(nStatements, "statements")}${stat(decisiveTxt, "decisiveness", null, "mean |score| across issues: how strongly they commit, regardless of direction")}${stat(divTxt, "vs party", null, "mean distance from other " + partyName + "s on the same issues")}${flips ? stat("⟲ " + flips, "flipped", "var(--accent)") : ""}</div>
+        <div class="strip">${stat(mine.length, "topics")}${stat(sup, "support", "var(--support)")}${stat(opp, "oppose", "var(--oppose)")}${stat(nStatements, "statements")}${stat(decisiveTxt, "decisiveness", null, "mean |score| across issues: how strongly they commit, regardless of direction")}${stat(divTxt, "vs party", null, "mean distance from other " + partyName + "s on the same issues")}${flips ? stat("⟲ " + flips, "flipped", "var(--accent)") : ""}</div>
       </div>
       ${summaryHtml}
       ${condBlock}
@@ -3065,13 +3067,15 @@
     bindCondChips();
   }
   function render() { document.body.dataset.pane = state.pane || "view"; renderHeader(); renderAside(); renderSide(); renderCenter(); const _sw = document.getElementById("pane-switch"); if (_sw) _sw.querySelectorAll("button").forEach(b => b.classList.toggle("active", b.dataset.pane === (state.pane || "view"))); }
-  $("m-explore").onclick = () => { if (location.hash === "#/explore") { routeFromHash(); render(); } else location.hash = "#/explore"; };
+  // the Explore tab and the logo always return to the full ring: zoom out, unpin, close the open committee
+  const E_home = () => { state.person = null; state.edge = null; if (gs.value) { gs.value = ""; state.f.q = ""; } if (E) { E.query = ""; const wasOpen = E.open; E.pinned = null; E.hl = null; E.hover = null; E.open = null; E.zt = d3.zoomIdentity; if (E_zoom) d3.select(cv).call(E_zoom.transform, d3.zoomIdentity); if (wasOpen && state.mode === "explore") E_build(false); } };
+  $("m-explore").onclick = () => { E_home(); if (location.hash === "#/explore") { routeFromHash(); render(); } else location.hash = "#/explore"; };
   $("m-list").onclick = () => { if (location.hash === "#/find") { routeFromHash(); render(); } else location.hash = "#/find"; };
   $("m-about").onclick = () => { if (location.hash === "#/about") { routeFromHash(); render(); } else location.hash = "#/about"; };
 $("m-issues").onclick = goIssues;
 $("m-bills").onclick = goBills;
   $("pane-switch").querySelectorAll("button").forEach(b => b.onclick = () => { state.pane = b.dataset.pane; render(); });
-  $("brand").onclick = e => { e.preventDefault(); state.person = null; if (!location.hash || location.hash === "#/explore") { routeFromHash(); render(); } else location.hash = "#/explore"; };
+  $("brand").onclick = e => { e.preventDefault(); E_home(); if (!location.hash || location.hash === "#/explore") { routeFromHash(); render(); } else location.hash = "#/explore"; };
   window.addEventListener("hashchange", () => { routeFromHash(); render(); });
   // print (group 9): a profile prints Overview + Timeline regardless of the active tab;
   // a bill page prints all its statements. beforeprint draws the hidden panes and appends
