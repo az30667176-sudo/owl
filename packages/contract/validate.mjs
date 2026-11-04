@@ -168,6 +168,9 @@ function validateDir(dir) {
     if (b.binary_question) {
       const stances = (b.binary_question.options || []).map((o) => o.stance).sort().join(",");
       if (stances !== "oppose,support") err(`bills.json ${b.bill_id}: binary_question options must be exactly one support and one oppose`);
+      for (const o of b.binary_question.options || []) {
+        if (o.tradeoff && o.tradeoff.trim().split(/\s+/).filter(Boolean).length > 25) err(`bills.json ${b.bill_id}: ${o.stance} tradeoff exceeds 25 words`);
+      }
     }
   }
   if (!bills && (stances.stances.some((s) => s.bill_id) || conditions?.conditions.some((c) => c.bill_id))) {

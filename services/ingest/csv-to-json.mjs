@@ -2,6 +2,7 @@
 // OWL ingest: CSV drop -> contract-A records + contract-B data files.
 //
 //   node services/ingest/csv-to-json.mjs <csv-dir> <out-dir> [--records <dir>] [--drop <label>] [--sub-names <taxonomy.json>] [--skip-manifest]
+//   node services/ingest/csv-to-json.mjs --check <csv-dir>   (validate only, no output)
 //
 // Input:  an owl-ingest-csv-* drop (records/people/bills/issues/evidence/...csv + MANIFEST.csv).
 // Output: <out-dir>/{taxonomy,issues,people,stances,bills}.json and <records dir>/*.json
@@ -33,7 +34,7 @@
 
 import { readFileSync, writeFileSync, mkdirSync, readdirSync } from "node:fs";
 import { resolve, join, basename } from "node:path";
-import { createHash } from "node:crypto";
+import { validateCsvDrop, formatCsvReport } from "./validate-csv.mjs";
 
 // ---------- tiny RFC 4180 parser (handles quoted fields with newlines) ----------
 export function parseCsv(text) {
@@ -110,7 +111,7 @@ export function classifyVoteQuestion(q) {
   const t = (q || "").trim();
   if (!t) return null;
   if (/final passage/i.test(t)) return "final_passage";
-  if (/ordered favorably reported|motion to report .* favorably/i.test(t)) return "final_passage";
+  if (/ordered favorably reported|ordered adversely reported|motion to report .* favorably/i.test(t)) return "final_passage";
   if (/\bamdt\b|amendment|offered by/i.test(t)) return "amendment";
   if (/^no\.\s*\d/i.test(t)) return "amendment";
   if (/^on [a-z][a-z'. -]* log \d/i.test(t)) return "amendment";
@@ -138,12 +139,22 @@ export function classifyBillStatus(actionText, label) {
 
 // One bills.csv row -> contract-B bill record (#28). Unknown seed issues are
 // dropped; unrecognised status / bad dates / bad urls are omitted, never guessed.
+// #35: the producer's own columns win when present and valid (single source of
+// truth, no drift); the local patterns are the fallback for older drops.
+const VOTE_KINDS = new Set(["final_passage", "amendment", "procedural"]);
+const BILL_STATUSES = new Set(["introduced", "committee", "passed_house", "passed_senate", "enacted", "failed"]);
+export function voteQuestionOf(e) {
+  const k = (e.vote_kind || "").trim();
+  if (VOTE_KINDS.has(k)) return k;
+  return classifyVoteQuestion(e.vote_question);
+}
 export function buildBillRecord(b, issueIds) {
   const rec = { bill_id: (b.bill_id || "").trim(), number: (b.label || "").trim() };
   const congress = /-(\d+)$/.exec(rec.bill_id)?.[1];
   if (congress) rec.congress = parseInt(congress, 10);
   if ((b.title || "").trim()) rec.title = b.title.trim();
-  const status = classifyBillStatus(b.latest_action_text, rec.number);
+  const producerStatus = (b.status || "").trim();
+  const status = BILL_STATUSES.has(producerStatus) ? producerStatus : classifyBillStatus(b.latest_action_text, rec.number);
   if (status) rec.status = status;
   if (isDate((b.introduced_date || "").trim())) rec.introduced_date = b.introduced_date.trim();
   const lastDate = (b.latest_action_date || "").trim(), lastText = (b.latest_action_text || "").trim().replace(/\s+/g, " ");
@@ -189,20 +200,17 @@ export function convertCsvDrop(csvDir, outDir, opts = {}) {
   const skip = (reason) => { report.skips[reason] = (report.skips[reason] || 0) + 1; };
   const readCsv = (f) => parseCsv(readFileSync(join(csvDir, f), "utf8"));
 
-  // 0. integrity: every file must match MANIFEST.csv (unless skipped).
-  const manifestPath = join(csvDir, "MANIFEST.csv");
-  let manifest = null;
-  try { manifest = readCsv("MANIFEST.csv"); } catch { /* older drop without one */ }
-  if (manifest && !opts.skipManifest) {
-    for (const m of manifest) {
-      if (m.file === "MANIFEST.csv" || !m.file) continue;
-      const hash = createHash("sha256").update(readFileSync(join(csvDir, m.file))).digest("hex");
-      if (hash !== m.sha256) throw new Error(`MANIFEST mismatch: ${m.file} (use --skip-manifest to override)`);
-    }
-    report.counts.manifest = `verified ${manifest.length - 1} file(s)`;
-  } else if (!manifest) {
-    report.warnings.push("no MANIFEST.csv; integrity not verified");
+  // 0. source validation: refuse a drop with errors (producers run the same
+  // gate standalone via validate-csv.mjs); carry warnings into the report.
+  const csvCheck = validateCsvDrop(csvDir, { skipManifest: opts.skipManifest });
+  if (!csvCheck.ok) {
+    throw new Error(`invalid CSV drop (${csvCheck.counts.errorTotal} error(s)):\n` +
+      csvCheck.errors.map((p) => `  ${p.file}${p.row ? `:${p.row}` : ""}${p.col ? ` [${p.col}]` : ""}: ${p.message}`).join("\n"));
   }
+  for (const w of csvCheck.warnings) {
+    report.warnings.push(`csv ${w.file}${w.row ? `:${w.row}` : ""}${w.col ? ` [${w.col}]` : ""}: ${w.message}`);
+  }
+  report.counts.manifest = opts.skipManifest ? "skipped (--skip-manifest)" : "verified";
 
   const peopleCsv = readCsv("people.csv");
   const committeesCsv = readCsv("committees.csv");
@@ -391,7 +399,7 @@ export function convertCsvDrop(csvDir, outDir, opts = {}) {
         kind: kindOfAction(action),
       };
       if (action === "committee_vote") {
-        const vq = classifyVoteQuestion(e.vote_question);
+        const vq = voteQuestionOf(e);
         if (vq) row.vote_question = vq;
       }
       stances.push(row);
@@ -490,8 +498,18 @@ if (isMain) {
   }
   const opt = (n) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : null; };
   const [csvDir, outDir] = positional;
+  if (args.includes("--check")) {
+    if (!csvDir) {
+      console.error("usage: csv-to-json.mjs --check <csv-dir> [--skip-manifest]");
+      process.exit(2);
+    }
+    const res = validateCsvDrop(resolve(csvDir), { skipManifest: args.includes("--skip-manifest") });
+    console.log(formatCsvReport(res));
+    process.exit(res.ok ? 0 : 1);
+  }
   if (!csvDir || !outDir) {
     console.error("usage: csv-to-json.mjs <csv-dir> <out-dir> [--records <dir>] [--drop <label>] [--sub-names <taxonomy.json>] [--skip-manifest]");
+    console.error("   or: csv-to-json.mjs --check <csv-dir> [--skip-manifest]  (validate only, no output)");
     process.exit(2);
   }
   try {

@@ -52,7 +52,8 @@
                   "additionalProperties": false,
                   "properties": {
                     "stance": { "enum": ["support", "oppose"] },
-                    "label": { "type": "string", "minLength": 1, "maxLength": 120 }
+                    "label": { "type": "string", "minLength": 1, "maxLength": 120 },
+                    "tradeoff": { "type": "string", "minLength": 1, "maxLength": 200, "description": "What the voter gives up by choosing THAT option. Max 25 words, plain language, no party framing (enforced by validate.mjs). Absent = the UI hides the tradeoff block." }
                   }
                 }
               }

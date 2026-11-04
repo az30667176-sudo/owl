@@ -11,10 +11,28 @@ node services/ingest/csv-to-json.mjs <csv-dir> <out-dir> [--records <dir>] [--dr
 node services/ingest/csv-to-json.mjs owl-ingest-csv-2026-10-30 data
 ```
 
-Verifies `MANIFEST.csv` sha256 first (refuses on mismatch unless
-`--skip-manifest`), then writes `taxonomy/issues/people/stances.json` to
-`<out-dir>` and one record JSON per row to `<out-dir>/records`
-(`summaries.json` / `conditions.json` are LLM-owned and not emitted).
+The converter runs `validateCsvDrop` first and refuses a drop with errors;
+warnings are carried into the printed report. Then it writes
+`taxonomy/issues/people/stances/bills.json` to `<out-dir>` and one record
+JSON per row to `<out-dir>/records` (`summaries.json` / `conditions.json`
+are LLM-owned and not emitted).
+
+## validate-csv.mjs (producer self-check)
+
+```bash
+node services/ingest/validate-csv.mjs <csv-dir> [--skip-manifest]
+# or: node services/ingest/csv-to-json.mjs --check <csv-dir>
+```
+
+Same gate the converter enforces, as a read-only check the data producer
+runs on their end before handing a drop off. Exit 0 + `CSV-OK` means the
+drop converts; exit 1 + `CSV-INVALID` lists every problem with
+`file:line [column]` locations. Checks: required files and columns,
+`MANIFEST.csv` sha256/rows/bytes, duplicate and empty keys, date and URL
+formats, enum values (action, vote, stance, linkage, party, in_graph), and
+cross-file references (evidence → people/bills/records, bills →
+issues/sponsor, records → people/bills). Rows the converter would silently
+skip (unknown parent, out-of-graph committee, empty stance) are warnings.
 
 Mapping:
 
@@ -45,11 +63,13 @@ excludes them by default).
 ## Tests
 
 ```bash
-node --test services/ingest/csv-to-json.test.mjs
+node --test services/ingest/csv-to-json.test.mjs services/ingest/validate-csv.test.mjs
 ```
 
 Zero-dependency (`node:test`); covers the CSV parser, committee-name
 shortening, and quote resolution (speaker-tag substring, `not_voting`
-record line, backtick repair, unresolvable → null).
+record line, backtick repair, unresolvable → null), plus the source-data
+validator (fixture drops per check, and the committed drop converting with
+zero errors).
 
 See docs/ARCHITECTURE.md for the contract this service consumes/produces.

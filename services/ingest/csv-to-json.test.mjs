@@ -2,7 +2,7 @@
 //   node --test services/ingest/csv-to-json.test.mjs
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
-import { parseCsv, shortCommitteeName, resolveQuote, resolveSubName, kindOfAction, classifyVoteQuestion, classifyBillStatus, buildBillRecord } from "./csv-to-json.mjs";
+import { parseCsv, shortCommitteeName, resolveQuote, resolveSubName, kindOfAction, classifyVoteQuestion, classifyBillStatus, buildBillRecord, voteQuestionOf } from "./csv-to-json.mjs";
 
 describe("parseCsv", () => {
   it("handles multiline quoted fields, escaped quotes, CRLF", () => {
@@ -148,5 +148,22 @@ describe("buildBillRecord", () => {
     assert.ok(!("status" in r));
     assert.ok(!("url" in r));
     assert.deepEqual(r.issue_ids, []);
+  });
+  it("prefers the producer status column when valid, else classifies (#35)", () => {
+    assert.equal(buildBillRecord({ ...row, status: "enacted" }, new Set(["good-issue"])).status, "enacted");
+    assert.equal(buildBillRecord({ ...row, status: "bogus" }, new Set(["good-issue"])).status, "passed_house");
+  });
+});
+
+describe("voteQuestionOf", () => {
+  it("treats ordered adversely reported as final passage", () => {
+    assert.equal(classifyVoteQuestion("H.R. 1 was ordered adversely reported to the House"), "final_passage");
+    assert.equal(voteQuestionOf({ vote_question: "H.R. 1 was ordered adversely reported to the House" }), "final_passage");
+  });
+  it("prefers the producer vote_kind column when valid, else classifies (#35)", () => {
+    assert.equal(voteQuestionOf({ vote_kind: "amendment", vote_question: "final passage" }), "amendment");
+    assert.equal(voteQuestionOf({ vote_kind: "unknown", vote_question: "final passage" }), "final_passage");
+    assert.equal(voteQuestionOf({ vote_kind: "bogus", vote_question: "final passage" }), "final_passage");
+    assert.equal(voteQuestionOf({ vote_question: "final passage" }), "final_passage");
   });
 });
