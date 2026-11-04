@@ -19,7 +19,7 @@ const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname.replace
 const SEG = JSON.parse(fs.readFileSync(path.join(ROOT, arg("--segments", "tools/demo/segments-walkthrough.json")), "utf8"));
 const NAME = SEG._meta.out;
 const OUT = path.join(ROOT, "tools/demo/out"), AUDIO = path.join(OUT, "audio", NAME), FR = path.join(OUT, NAME + "-frames");
-const W = 1920, H = 1080, FPS = 30, PAD = 0.2;
+const W = 1920, H = 1080, FPS = 30, PAD = 0.15;
 fs.rmSync(FR, { recursive: true, force: true }); fs.mkdirSync(FR, { recursive: true });
 
 const probe = f => +execFileSync("ffprobe", ["-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", f]).toString().trim();
@@ -150,7 +150,7 @@ const SHOTS = {
     await cue("question"); await pointAt("#side .mq .qq", 0, 900, .3);
     await cue("answer"); await clickSel('#side [data-mq][data-st="support"]', 0, 700);
     await cue("care"); await clickSel('#side [data-mq][data-st="support"]', 1, 700);
-    await cue("enough"); await clickSel('#side [data-mq][data-st="support"]', 2, 700);
+    await cue("three"); await clickSel('#side [data-mq][data-st="support"]', 2, 600);
   },
   async kMatches() {
     await cue("ring"); await pointAt('[data-esdr="open"]', 0, 900);

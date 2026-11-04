@@ -4,7 +4,7 @@
     "out": "owl-walkthrough",
     "voice": "en-US-BrianMultilingualNeural",
     "wordsPerSecond": 2.8,
-    "rate": "+7%"
+    "rate": "+12%"
   },
   "segments": [
     {
@@ -47,7 +47,7 @@
       "id": "k08",
       "shot": "kAnswer",
       "caption": "Real bills as yes-or-no questions",
-      "text": "Now the right panel turns each real bill into a yes-or-no question. Just answer the ones you care about. Three is enough to start."
+      "text": "The right panel turns each real bill into a yes-or-no question. Answer the ones you care about; three is enough."
     },
     {
       "id": "k09",

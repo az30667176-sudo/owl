@@ -4,7 +4,7 @@
     "out": "owl-tech",
     "voice": "en-US-BrianMultilingualNeural",
     "wordsPerSecond": 2.8,
-    "rate": "+7%",
+    "rate": "+12%",
     "startUrl": "https://github.com/az30667176-sudo/owl"
   },
   "segments": [
@@ -30,7 +30,7 @@
       "id": "t03",
       "shot": "tCaps",
       "caption": "",
-      "text": "That's over twenty thousand quotes. It also turns 765 bills into plain yes-or-no questions, finds the conditions behind votes, and audits itself, re-scoring quotes blind to catch bias."
+      "text": "That's over twenty thousand quotes. It turns 765 bills into plain yes-or-no questions, finds the conditions behind votes, and audits itself, re-scoring quotes blind to catch bias."
     },
     {
       "id": "t04",

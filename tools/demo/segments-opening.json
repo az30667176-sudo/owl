@@ -4,7 +4,7 @@
     "out": "owl-opening",
     "voice": "en-US-BrianMultilingualNeural",
     "wordsPerSecond": 2.8,
-    "rate": "+7%",
+    "rate": "+12%",
     "startUrl": "http://127.0.0.1:8765/tools/demo/vision.html#rec"
   },
   "segments": [
