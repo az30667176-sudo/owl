@@ -1,0 +1,28 @@
+{
+  "_meta": {
+    "description": "Middle third of the demo video: how to use the site. Narration and shots for tools/demo/record.mjs --segments tools/demo/segments-middle.json",
+    "out": "owl-demo-middle",
+    "voice": "en-US-AndrewNeural",
+    "wordsPerSecond": 2.7
+  },
+  "segments": [
+    { "id": "m01", "shot": "mLand", "caption": "Explore · 20 committees · 451 members",
+      "text": "Open OWL and you land on the Explore map. Each coloured dot on the ring is a House committee. The small dots are all 451 members, placed near the committee they work on most." },
+    { "id": "m02", "shot": "mCommittee", "caption": "Line = attention, not agreement",
+      "text": "Click a committee and it opens into its topics. The lines show attention: who acts on what, and how recently." },
+    { "id": "m03", "shot": "mTopic", "caption": "Real bills as plain yes-or-no questions",
+      "text": "Click a topic, and its real bills appear as plain yes-or-no questions." },
+    { "id": "m04", "shot": "mAnswer", "caption": "Answer what you care about",
+      "text": "Answer the ones you care about. Every answer is checked against what each member actually did on that bill." },
+    { "id": "m05", "shot": "mMatches", "caption": "Your closest members · filter by state",
+      "text": "Open your matches to see who is closest to you, and exactly which bills they agree or disagree with you on. Narrow it to your own state." },
+    { "id": "m06", "shot": "mProfile", "caption": "Every sentence cites a quote",
+      "text": "Click any member for their profile. The summary is written by Muse Spark, and every sentence cites a statement. Click a number to read the exact quote and its source." },
+    { "id": "m07", "shot": "mTimeline", "caption": "See when a position changed",
+      "text": "The timeline shows everything they said and voted, and marks the moment a position changed." },
+    { "id": "m08", "shot": "mBill", "caption": "Every bill: what it does, who stands where",
+      "text": "Every bill has its own page: what it does in plain words, where members stand today, and the same question for you to answer." },
+    { "id": "m09", "shot": "mSearch", "caption": "Search by name, district or ZIP",
+      "text": "Or just type a name, a district, or your ZIP code at the top, and go straight to your own representative." }
+  ]
+}

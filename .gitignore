@@ -16,3 +16,6 @@ apps/web/data/
 # agent harness / local tooling (untracked by design)
 .agents/
 _local-backup-*/
+
+# demo recorder output (video, audio, generated pages)
+tools/demo/out/

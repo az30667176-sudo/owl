@@ -1,0 +1,71 @@
+{
+  "_meta": {
+    "description": "Middle third of the demo video (Kurt's walkthrough, <= 1:30): find your representative by ZIP, read the evidence, then start from a topic and get matched. Shots in tools/demo/record.mjs (k*).",
+    "out": "owl-walkthrough",
+    "voice": "en-US-BrianMultilingualNeural",
+    "wordsPerSecond": 2.8,
+    "rate": "+7%"
+  },
+  "segments": [
+    {
+      "id": "k01",
+      "shot": "kLand",
+      "caption": "The whole House on one ring",
+      "text": "Here's how to read it. In the middle is the whole House. Each coloured dot on the ring is a committee, and every small dot is a member."
+    },
+    {
+      "id": "k02",
+      "shot": "kSearch",
+      "caption": "Search by name, district or ZIP",
+      "text": "Say you want your own representative. Click the search bar up top, and type a name, a district, or your ZIP code. Here's 91204."
+    },
+    {
+      "id": "k03",
+      "shot": "kFriedman",
+      "caption": "Lines = what she spends her time on",
+      "text": "There she is, Laura Friedman, a Democrat from California's 30th. The ring shows only her lines, the topics she spends time on, and her positions are in the right panel."
+    },
+    {
+      "id": "k04",
+      "shot": "kProfile",
+      "caption": "Every sentence cites a quote",
+      "text": "Click Open profile for her full page. The summary's written by Muse Spark, and every sentence cites a statement. Click a number to read the quote."
+    },
+    {
+      "id": "k05",
+      "shot": "kEvidence",
+      "caption": "Evidence and changes over time",
+      "text": "Click a topic, and the right panel shows you the evidence: each vote and statement, and when her position changed."
+    },
+    {
+      "id": "k07",
+      "shot": "kTopic",
+      "caption": "Start from a topic you care about",
+      "text": "Now back to Explore. Maybe you care about a topic, not a person. Click Education and Workforce. It opens into its topics, and I'll pick Child Care."
+    },
+    {
+      "id": "k08",
+      "shot": "kAnswer",
+      "caption": "Real bills as yes-or-no questions",
+      "text": "Now the right panel turns each real bill into a yes-or-no question. Just answer the ones you care about. Three is enough to start."
+    },
+    {
+      "id": "k09",
+      "shot": "kMatches",
+      "caption": "Who matches you · filter by state",
+      "text": "Then, below the ring, open Show matches. These members' records line up with yours, and you can narrow it to your state."
+    },
+    {
+      "id": "k10",
+      "shot": "kMember",
+      "caption": "Where you agree, and where you differ",
+      "text": "Click a name, and you'll see exactly which bills you agree on, and where you differ."
+    },
+    {
+      "id": "k11",
+      "shot": "kEnd",
+      "caption": "az30667176-sudo.github.io/owl",
+      "text": "That's OWL. Find out who really stands with you."
+    }
+  ]
+}

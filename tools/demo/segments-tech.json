@@ -1,0 +1,60 @@
+{
+  "_meta": {
+    "description": "Closing segment of the demo video (tech + future, <= 60 s): the GitHub repo's architecture and Meta models, the pipeline that keeps taking in records, then three planned directions. Shots t* in tools/demo/walkthrough.mjs; vision scenes in tools/demo/vision.html.",
+    "out": "owl-tech",
+    "voice": "en-US-BrianMultilingualNeural",
+    "wordsPerSecond": 2.8,
+    "rate": "+7%",
+    "startUrl": "https://github.com/az30667176-sudo/owl"
+  },
+  "segments": [
+    {
+      "id": "t01",
+      "shot": "tRepo",
+      "caption": "",
+      "text": "Now, under the hood. It's all open on GitHub, with the architecture in our README."
+    },
+    {
+      "id": "t02",
+      "shot": "tArch",
+      "caption": "",
+      "text": "Official records come in with zero model calls. Then Muse Spark does the reading."
+    },
+    {
+      "id": "t09",
+      "shot": "tReal",
+      "caption": "",
+      "text": "Here's a real one. Muse Spark finds the stance in a committee report, keeps the exact sentence, and scores it, and our validator checks the quote word for word."
+    },
+    {
+      "id": "t03",
+      "shot": "tCaps",
+      "caption": "",
+      "text": "That's over twenty thousand quotes. It also turns 765 bills into plain yes-or-no questions, finds the conditions behind votes, and audits itself, re-scoring quotes blind to catch bias."
+    },
+    {
+      "id": "t04",
+      "shot": "tGates",
+      "caption": "",
+      "text": "A person approves every draft, a contract gate checks every deploy, and Muse Code built much of the site."
+    },
+    {
+      "id": "t05",
+      "shot": "tPlug",
+      "caption": "",
+      "text": "And this architecture doesn't care where data comes from. Hearings, floor speeches, press releases, public posts on Facebook and Instagram, even decades of old records: each one is just another adapter."
+    },
+    {
+      "id": "t06",
+      "shot": "tLive",
+      "caption": "",
+      "text": "So positions can update as politicians speak, every change still links to its quote, and Meta's multilingual models can serve it in every voter's own language."
+    },
+    {
+      "id": "t08",
+      "shot": "tEnd",
+      "caption": "",
+      "text": "One Congress today. Informed voters everywhere tomorrow. Come explore, and see the proof for yourself."
+    }
+  ]
+}

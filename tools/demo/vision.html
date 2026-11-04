@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OWL vision</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,400&family=Public+Sans:wght@400;600;700&family=JetBrains+Mono:wght@500;700&family=Noto+Sans+Devanagari:wght@500&family=Noto+Sans+JP:wght@500&family=Noto+Sans+TC:wght@500&display=swap" rel="stylesheet">
+<!-- Vision scenes for the closing segment of the demo video (tools/demo/segments-vision.json).
+     Illustrations of planned work, styled with the app's tokens; window.scene(n) / window.step(n)
+     are driven by tools/demo/walkthrough.mjs. Nothing here is product data except the Friedman
+     card in scene 5, which repeats what the live profile shows. -->
+<style>
+  :root { --bg:#0f1322; --panel:#171c2e; --panel-2:#1f2538; --border:#2c3348; --border-strong:#4a5372;
+    --text:#efe6d2; --muted:#9aa3b2; --accent:#f0b429; --support:#3fcf77; --oppose:#f2705f;
+    --party-d:#5b8cff; --party-r:#ff7a6b; --display:'Fraunces',Georgia,serif; --mono:'JetBrains Mono',Consolas,monospace; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text); font: 400 18px/1.5 'Public Sans', 'Segoe UI', sans-serif; overflow: hidden; }
+  .scene { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; padding: 0 140px; opacity: 0; transition: opacity .25s ease; pointer-events: none; }
+  .scene.on { opacity: 1; transition: opacity .55s ease .3s; } /* outgoing scene clears before the next fades in */
+  .kicker { font: 600 15px var(--mono); letter-spacing: .18em; text-transform: uppercase; color: var(--accent); margin-bottom: 18px; }
+  h1 { font: 600 64px/1.1 var(--display); margin: 0 0 14px; letter-spacing: -.01em; }
+  .sub { color: var(--muted); font-size: 22px; max-width: 980px; }
+  .fade { opacity: 0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease; }
+  .fade.on { opacity: 1; transform: none; }
+  .tag { display: inline-block; font: 500 13px var(--mono); color: var(--muted); border: 1px solid var(--border); padding: 3px 10px; border-radius: 3px; margin-top: 26px; }
+
+
+  /* 1 · architecture (redrawn from the README's end-to-end pipeline diagram) */
+  .arch { display: grid; grid-template-columns: 1fr 30px 1.05fr 30px 1.05fr 30px 1.3fr 30px .9fr 30px 1fr; align-items: stretch; margin-top: 30px; position: relative; }
+  .col { border: 1px solid var(--border); background: var(--panel); padding: 18px 16px 16px; border-radius: 3px; opacity: 0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease, box-shadow .5s ease, border-color .5s ease; display: flex; flex-direction: column; gap: 8px; }
+  .col.on { opacity: 1; transform: none; }
+  .col .ch { font: 600 15px var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: 2px; }
+  .col .n { border: 1px solid var(--border); background: var(--panel-2); padding: 11px 13px; font-size: 19px; line-height: 1.3; border-radius: 3px; }
+  .col .n small { display: block; color: var(--muted); font: 500 14px var(--mono); margin-top: 2px; }
+  .col.det { border-top: 3px solid #3fcf77; } .col.det .ch { color: #3fcf77; }
+  .col.spark { border-top: 3px solid #2f8cff; } .col.spark .ch { color: #5aa5ff; } .col.spark .n { border-color: rgba(47,140,255,.45); }
+  .col.spark.glow { box-shadow: 0 0 0 2px #2f8cff, 0 0 40px rgba(47,140,255,.35); }
+  .col .rev { border: 1px dashed var(--accent); color: var(--accent); background: rgba(240,180,41,.08); transition: box-shadow .4s ease; }
+  .col .rev.glow { box-shadow: 0 0 0 2px var(--accent), 0 0 26px rgba(240,180,41,.35); }
+  .col.web { border-top: 3px solid var(--accent); } .col.web .ch { color: var(--accent); }
+  .col.glow2 { box-shadow: 0 0 0 2px var(--accent), 0 0 34px rgba(240,180,41,.3); }
+  .ar { display: flex; align-items: center; justify-content: center; color: var(--border-strong); font: 700 26px var(--mono); opacity: 0; transition: opacity .5s ease; }
+  .ar.on { opacity: 1; }
+  .lane { position: absolute; left: 0; right: 0; top: 50%; height: 0; pointer-events: none; }
+  .pk { position: absolute; top: -6px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 14px var(--accent); opacity: 0; }
+  .lane.go .pk { animation: pk 4.2s linear infinite; }
+  @keyframes pk { 0% { left: 2%; opacity: 0; } 6% { opacity: 1; } 92% { opacity: 1; } 100% { left: 97%; opacity: 0; } }
+  .meta { display: flex; gap: 16px; margin-top: 18px; align-items: center; opacity: 0; transition: opacity .5s ease; }
+  .meta.on { opacity: 1; }
+  .meta .lbl { font: 600 15px var(--mono); letter-spacing: .1em; text-transform: uppercase; color: #5aa5ff; }
+  .meta .n { border: 1px dashed rgba(47,140,255,.6); background: var(--panel); padding: 11px 16px; font-size: 19px; border-radius: 3px; transition: box-shadow .4s ease; }
+  .meta .n.glow { box-shadow: 0 0 0 2px #2f8cff, 0 0 26px rgba(47,140,255,.35); }
+  .legend1 { display: flex; gap: 26px; margin-top: 22px; font: 500 16px var(--mono); color: var(--muted); }
+  .legend1 i { display: inline-block; width: 12px; height: 12px; margin-right: 7px; vertical-align: -1px; border-radius: 2px; }
+
+
+  /* 7 · what Muse Spark does (numbers from data/ and the validator) */
+  .caps { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 30px; }
+  .cap { border: 1px solid var(--border); border-left: 4px solid #2f8cff; background: var(--panel); padding: 22px 26px; opacity: .18; transform: translateY(10px); transition: all .5s ease; }
+  .cap.on { opacity: 1; transform: none; box-shadow: 0 0 0 1px rgba(47,140,255,.5), 0 0 30px rgba(47,140,255,.18); }
+  .cap .num { font: 600 54px/1 var(--display); color: #8cc2ff; }
+  .cap .what { font: 600 23px 'Public Sans'; margin-top: 10px; }
+  .cap .how { font: 500 15px var(--mono); color: var(--muted); margin-top: 8px; }
+  .cap .q { font: italic 400 20px var(--display); color: var(--text); margin-top: 8px; }
+
+  /* 8 · plug in any source, positions update as they speak */
+  .plug { display: grid; grid-template-columns: 1.05fr 70px .9fr 70px 1fr; align-items: center; margin-top: 30px; }
+  .srcs { display: flex; flex-direction: column; gap: 11px; }
+  .src { border: 1px solid var(--border); background: var(--panel); padding: 11px 16px; font-size: 19px; border-radius: 3px; display: flex; justify-content: space-between; opacity: 0; transform: translateX(-16px); transition: all .45s ease; }
+  .src.on { opacity: 1; transform: none; }
+  .src small { font: 500 13px var(--mono); color: var(--muted); align-self: center; }
+  .src.now small { color: #3fcf77; }
+  .src.new { border-color: var(--accent); }
+  .src.new small { color: var(--accent); }
+  .pipe2 { border: 1px solid var(--border-strong); background: var(--panel); padding: 22px; display: flex; flex-direction: column; gap: 10px; opacity: 0; transition: opacity .5s ease; }
+  .pipe2.on { opacity: 1; }
+  .pipe2 .ch { font: 600 15px var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+  .pipe2 .n { border: 1px solid var(--border); background: var(--panel-2); padding: 11px 13px; font-size: 19px; border-radius: 3px; }
+  .pipe2 .n.sp { border-color: rgba(47,140,255,.6); color: #8cc2ff; }
+  .pipe2 .n.gt { border-color: rgba(63,207,119,.6); color: #7fe0a6; }
+  .arr2 { text-align: center; font: 700 40px var(--mono); color: var(--accent); opacity: 0; transition: opacity .4s ease; }
+  .arr2.on { opacity: 1; }
+  .feed { border: 1px solid var(--border-strong); border-top: 3px solid var(--accent); background: var(--panel); padding: 18px 20px; opacity: 0; transition: opacity .5s ease; }
+  .feed.on { opacity: 1; }
+  .feed .ch { font: 600 15px var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+  .fi { border-top: 1px solid var(--border); padding: 11px 0; font-size: 18px; opacity: 0; transform: translateY(-8px); transition: all .4s ease; }
+  .fi.on { opacity: 1; transform: none; }
+  .fi .t { font: 500 13px var(--mono); color: var(--muted); }
+  .fi .ch2 { font: 600 14px var(--mono); }
+
+
+  /* 9 · a real record and the row Muse Spark extracted from it (st25745, H. Rept. 119-106) */
+  .ba { display: grid; grid-template-columns: 1.25fr 80px 1fr; gap: 0; align-items: center; margin-top: 30px; }
+  .doc { background: #f4f1ea; color: #222; font: 400 19px/1.6 Georgia, 'Times New Roman', serif; padding: 26px 30px; border-radius: 2px; box-shadow: 0 0 0 1px #4a5372; }
+  .doc .src { font: 500 13px var(--mono); color: #555; margin-bottom: 10px; letter-spacing: .02em; }
+  .doc mark { background: linear-gradient(90deg, rgba(240,180,41,.75) 0, rgba(240,180,41,.75) 0) no-repeat; background-size: 0% 100%; color: inherit; transition: background-size 1.6s ease; padding: 0 2px; }
+  .doc mark.on { background-size: 100% 100%; }
+  .ba .arr { text-align: center; font: 700 46px var(--mono); color: var(--accent); opacity: 0; transition: opacity .4s ease; }
+  .ba .arr.on { opacity: 1; }
+  .row9 { background: var(--panel); border: 1px solid var(--border-strong); border-top: 3px solid #2f8cff; padding: 20px 24px; }
+  .row9 .h { font: 600 14px var(--mono); letter-spacing: .12em; text-transform: uppercase; color: #5aa5ff; margin-bottom: 8px; }
+  .row9 .f { display: flex; justify-content: space-between; gap: 16px; border-top: 1px solid var(--border); padding: 10px 0; font-size: 18px; opacity: 0; transform: translateY(6px); transition: all .35s ease; }
+  .row9 .f.on { opacity: 1; transform: none; }
+  .row9 .f span:first-child { color: var(--muted); font: 500 15px var(--mono); }
+  .row9 .q { font: italic 400 18px/1.45 var(--display); }
+  .row9 .ok { color: #3fcf77; font: 600 15px var(--mono); }
+
+  /* 2 · decades of records */
+  .tl { display: flex; align-items: flex-end; gap: 14px; height: 360px; margin: 34px 0 8px; border-bottom: 1px solid var(--border-strong); padding-bottom: 2px; }
+  .tl .c { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; }
+  .tl .b { width: 100%; background: var(--panel-2); border: 1px solid var(--border); height: 0; transition: height .55s cubic-bezier(.2,.7,.2,1); }
+  .tl .c.now .b { background: var(--accent); border-color: var(--accent); }
+  .tl .c.lit .b { background: rgba(240,180,41,.32); border-color: rgba(240,180,41,.55); }
+  .tl .y { font: 500 12px var(--mono); color: var(--muted); margin-top: 8px; white-space: nowrap; }
+  .tl .c.now .y { color: var(--accent); }
+  .pipe { display: flex; gap: 12px; align-items: center; margin-top: 30px; font: 500 15px var(--mono); }
+  .pipe span { border: 1px solid var(--border-strong); background: var(--panel); padding: 8px 14px; border-radius: 3px; }
+  .pipe i { color: var(--accent); font-style: normal; }
+
+  /* 3 · public posts → evidence */
+  .flow { display: grid; grid-template-columns: 1fr 120px 1fr; align-items: center; gap: 30px; margin-top: 36px; }
+  .posts { display: flex; flex-direction: column; gap: 18px; }
+  .post { background: var(--panel); border: 1px solid var(--border); border-radius: 3px; padding: 16px 18px; }
+  .post .who { display: flex; align-items: center; gap: 10px; font: 600 15px 'Public Sans'; color: var(--muted); }
+  .post .av { width: 30px; height: 30px; border-radius: 50%; background: var(--panel-2); border: 1px solid var(--border-strong); }
+  .post .ln { height: 10px; background: var(--panel-2); border-radius: 2px; margin-top: 12px; }
+  .post .ln.s { width: 62%; }
+  .arrow { font: 700 54px var(--mono); color: var(--accent); text-align: center; }
+  .ev { background: var(--panel); border: 1px solid var(--border-strong); border-left: 4px solid var(--accent); padding: 22px 26px; }
+  .ev .h { font: 600 13px var(--mono); letter-spacing: .14em; color: var(--accent); text-transform: uppercase; }
+  .ev .row { display: flex; justify-content: space-between; border-top: 1px solid var(--border); padding: 12px 0; font-size: 18px; }
+  .ev .row:first-of-type { border-top: 0; }
+  .ev .row b { font-weight: 600; }
+  .ev .q { font: italic 400 20px var(--display); color: var(--muted); }
+
+  /* 4 · global */
+  .globe { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin-top: 34px; }
+  .globe div { border: 1px solid var(--border); background: var(--panel); padding: 16px 14px; font: 600 17px 'Public Sans'; color: var(--muted); border-radius: 3px; transition: all .45s ease; }
+  .globe div.lit { color: var(--text); border-color: var(--accent); background: rgba(240,180,41,.12); }
+  .fact { margin-top: 30px; display: inline-flex; align-items: baseline; gap: 18px; border: 1px solid var(--border-strong); background: var(--panel); padding: 18px 26px; border-left: 4px solid var(--accent); }
+  .fact .n { font: 600 52px var(--display); color: var(--accent); }
+  .fact .t { font-size: 20px; }
+  .fact .s { font: 500 13px var(--mono); color: var(--muted); }
+
+  /* 5 · every language */
+  .lang { margin-top: 36px; display: grid; grid-template-columns: 1.3fr 1fr; gap: 40px; align-items: center; }
+  .card5 { background: var(--panel); border: 1px solid var(--border-strong); padding: 26px 30px; }
+  .card5 .nm { font: 600 30px var(--display); }
+  .card5 .meta { color: var(--muted); font-size: 16px; margin: 4px 0 18px; }
+  .card5 .stance { display: inline-block; font: 600 15px var(--mono); color: var(--support); border: 1px solid var(--support); padding: 3px 10px; border-radius: 3px; }
+  .card5 .line { font-size: 30px; line-height: 1.35; margin-top: 16px; min-height: 84px; transition: opacity .35s ease; font-family: 'Public Sans','Noto Sans Devanagari','Noto Sans JP','Noto Sans TC',sans-serif; }
+  .langs { display: flex; flex-wrap: wrap; gap: 10px; }
+  .langs span { font: 600 16px 'Public Sans','Noto Sans Devanagari','Noto Sans JP','Noto Sans TC',sans-serif; border: 1px solid var(--border); padding: 8px 14px; border-radius: 999px; color: var(--muted); transition: all .3s ease; }
+  .langs span.on { color: var(--bg); background: var(--accent); border-color: var(--accent); }
+
+  /* 6 · close */
+  .end { align-items: center; text-align: center; padding: 0; }
+  .end img { width: 132px; height: 132px; border-radius: 50%; margin-bottom: 26px; }
+  .end h1 { font-size: 72px; }
+  .end .url { font: 600 26px var(--mono); color: var(--accent); margin-top: 22px; }
+</style>
+</head>
+<body>
+
+<section class="scene" id="s1" style="padding:0 60px">
+  <div class="kicker">Under the hood · from the README</div>
+  <h1 style="font-size:54px">Official records in. Quoted evidence out.</h1>
+  <div class="arch" id="arch">
+    <div class="col" id="c1"><div class="ch">Sources</div><div class="n">congress.gov<small>bill status</small></div><div class="n">govinfo<small>committee reports</small></div><div class="n">hearing transcripts<small>planned</small></div></div>
+    <div class="ar" id="a1">→</div>
+    <div class="col det" id="c2"><div class="ch">Ingest · no model</div><div class="n">govinfo parser<small>weekly job</small></div><div class="n">CSV drop<small>9 tables</small></div><div class="n">validate-csv<small>self-check gate</small></div><div class="n">csv-to-json</div></div>
+    <div class="ar" id="a2">→</div>
+    <div class="col" id="c3"><div class="ch">Data · contracts A + B</div><div class="n">records<small>speaker-tagged text</small></div><div class="n">taxonomy · topics · people<small>stances · bills</small></div></div>
+    <div class="ar" id="a3">⇄</div>
+    <div class="col spark" id="c4"><div class="ch">Muse Spark</div><div class="n">stances + exact quotes</div><div class="n">cited summaries</div><div class="n">bill context + yes/no questions</div><div class="n">blind bias audit</div><div class="n rev" id="rev">human approves drafts before merge</div></div>
+    <div class="ar" id="a4">→</div>
+    <div class="col det" id="c5"><div class="ch">Contract gate</div><div class="n">validate.mjs<small>types · ids · verbatim quotes</small></div></div>
+    <div class="ar" id="a5">→</div>
+    <div class="col web" id="c6"><div class="ch">Website · no model calls</div><div class="n">Explore · Topics</div><div class="n">Bills · Legislators</div><div class="n">match board</div></div>
+    <div class="lane" id="lane"><span class="pk"></span><span class="pk" style="animation-delay:1.4s"></span><span class="pk" style="animation-delay:2.8s"></span></div>
+  </div>
+  <div class="meta" id="meta"><span class="lbl">Other Meta models</span><span class="n" id="mimg">Muse Image · logo and share cards</span><span class="n" id="mcode">Muse Code · coding agent that built much of the site</span></div>
+  <div class="legend1"><span><i style="background:#2f8cff"></i>Muse Spark</span><span><i style="background:#3fcf77"></i>deterministic, zero model calls</span><span><i style="background:#f0b429"></i>human review · the website</span></div>
+</section>
+
+<section class="scene" id="s9">
+  <div class="kicker" style="color:#5aa5ff">Muse Spark · one real example</div>
+  <h1>From a committee report to quoted evidence.</h1>
+  <div class="ba">
+    <div class="doc"><div class="src">H. Rept. 119-106 · Dissenting Views · govinfo.gov</div>Republicans propose spending ten times the amount on Trump's failed border wall as they do on CBP personnel. <mark id="hl">Committee Democrats support the use of more efficient border security technologies to catch and detect smugglers and interdict drugs.</mark> Yet when Rep. Correa offered an amendment enabling funding in the bill to be used for new, innovative technologies, Republicans opposed that effort.</div>
+    <div class="arr" id="ba1">→</div>
+    <div class="row9"><div class="h">Extracted by Muse Spark</div>
+      <div class="f" id="r1"><span>member</span><b>Rep. J. Luis Correa · CA-46</b></div>
+      <div class="f" id="r2"><span>topic</span><b>Border Security</b></div>
+      <div class="f" id="r3"><span>stance</span><b style="color:var(--support)">support · +0.70</b></div>
+      <div class="f" id="r4"><span>quote</span><span class="q">“…support the use of more efficient border security technologies…”</span></div>
+      <div class="f" id="r5"><span>confidence</span><b>high</b></div>
+      <div class="f" id="r6"><span>check</span><span class="ok">✓ verbatim in source</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="scene" id="s7">
+  <div class="kicker" style="color:#5aa5ff">Muse Spark · what it does here</div>
+  <h1>It reads the record, and checks itself.</h1>
+  <div class="caps">
+    <div class="cap" id="k1"><div class="num">20,647</div><div class="what">quotes extracted and checked word for word</div><div class="how">every stance links to its verbatim quote and source</div></div>
+    <div class="cap" id="k2"><div class="num">765</div><div class="what">bills turned into plain yes-or-no questions</div><div class="how">drafted by Muse Spark · approved by a person</div></div>
+    <div class="cap" id="k3"><div class="num">39</div><div class="what">conditions behind votes</div><div class="q">“I would vote yes if…”</div></div>
+    <div class="cap" id="k4"><div class="num">101</div><div class="what">quotes re-scored blind, to catch bias</div><div class="how">same model · names and parties hidden</div></div>
+  </div>
+</section>
+
+<section class="scene" id="s8">
+  <div class="kicker">Next · any source, updated continuously</div>
+  <h1>Every new source is one more adapter.</h1>
+  <div class="plug">
+    <div class="srcs" id="srcs">
+      <div class="src now">congress.gov bills and votes<small>today</small></div>
+      <div class="src now">govinfo committee reports<small>today</small></div>
+      <div class="src new">hearing transcripts<small>next</small></div>
+      <div class="src new">floor speeches<small>next</small></div>
+      <div class="src new">press releases<small>next</small></div>
+      <div class="src new">Facebook · public posts<small>next</small></div>
+      <div class="src new">Instagram · public posts<small>next</small></div>
+    </div>
+    <div class="arr2" id="ar1">→</div>
+    <div class="pipe2" id="pp"><div class="ch">Same pipeline</div><div class="n">adapter → contract-A record</div><div class="n sp">Muse Spark reads it</div><div class="n gt">contract gate</div></div>
+    <div class="arr2" id="ar2">→</div>
+    <div class="feed" id="feed"><div class="ch">Positions, as they speak</div>
+      <div class="fi" id="f1"><div class="t">new statement · minutes ago</div>stance on the topic updated<div class="ch2" style="color:var(--support)">linked to its quote</div></div>
+      <div class="fi" id="f2"><div class="t">new vote · today</div>position changed<div class="ch2" style="color:var(--accent)">⟲ support → oppose</div></div>
+      <div class="fi" id="f3"><div class="t">new post · today</div>match results refreshed<div class="ch2" style="color:var(--muted)">for every voter who answered</div></div>
+    </div>
+  </div>
+  <div class="tag">Illustration of planned sources and update flow</div>
+</section>
+
+<section class="scene" id="s2">
+  <div class="kicker">Next · decades of records</div>
+  <h1>One Congress today. Every Congress tomorrow.</h1>
+  <div class="tl" id="tl"></div>
+  <div class="pipe fade" id="pipe"><span>Official records</span><i>→</i><span>Strict contracts</span><i>→</i><span>Muse Spark</span><i>→</i><span>Quoted evidence</span><span style="border-color:var(--accent);color:var(--accent)">same pipeline</span></div>
+  <div class="tag">Illustration of planned coverage</div>
+</section>
+
+<section class="scene" id="s3">
+  <div class="kicker">Next · public social media</div>
+  <h1>Public posts, cleaned up into insight.</h1>
+  <div class="flow">
+    <div class="posts">
+      <div class="post fade" id="p1"><div class="who"><span class="av"></span>Public post · Facebook</div><div class="ln"></div><div class="ln s"></div></div>
+      <div class="post fade" id="p2"><div class="who"><span class="av"></span>Public post · Instagram</div><div class="ln"></div><div class="ln s"></div></div>
+      <div class="post fade" id="p3"><div class="who"><span class="av"></span>Public post · Facebook</div><div class="ln"></div><div class="ln s"></div></div>
+    </div>
+    <div class="arrow fade" id="ar">→</div>
+    <div class="ev fade" id="ev">
+      <div class="h">OWL evidence</div>
+      <div class="row"><span>Verbatim quote</span><b>✓</b></div>
+      <div class="row"><span>Source link</span><b>✓</b></div>
+      <div class="row"><span>Stance on the topic</span><b style="color:var(--support)">support</b></div>
+      <div class="row"><span>Model confidence</span><b>high</b></div>
+      <div class="q">Checked against the votes on record.</div>
+    </div>
+  </div>
+  <div class="tag">Illustration of a planned source · placeholder posts, no real content</div>
+</section>
+
+<section class="scene" id="s4">
+  <div class="kicker">Next · every democracy</div>
+  <h1>Public political speech, at planetary scale.</h1>
+  <div class="globe" id="globe"></div>
+  <div class="fact fade" id="fact"><span class="n">100M+</span><span><span class="t">Instagram followers · Narendra Modi, Prime Minister of India</span><br><span class="s">first serving world leader past 100 million · reported February 2026</span></span></div>
+</section>
+
+<section class="scene" id="s5">
+  <div class="kicker">Next · Meta multilingual models</div>
+  <h1>Every voter, in their own language.</h1>
+  <div class="lang">
+    <div class="card5">
+      <div class="nm">Rep. Laura Friedman</div>
+      <div class="meta">CA-30 · Democrat · Water Resources Development Act of 2026</div>
+      <span class="stance">final-passage vote · yea</span>
+      <div class="line" id="line">Supports the Water Resources Development Act of 2026.</div>
+    </div>
+    <div class="langs" id="langs"></div>
+  </div>
+  <div class="tag">Concept · translations shown for illustration</div>
+</section>
+
+<section class="scene end" id="s6">
+  <img src="../../apps/web/assets/logo/owl-mark-512.png" alt="">
+  <h1>One Congress today.<br>Informed voters everywhere tomorrow.</h1>
+  <div class="url">az30667176-sudo.github.io/owl</div>
+</section>
+
+<script>
+  const CONGRESSES = [["104th","1995"],["105th","1997"],["106th","1999"],["107th","2001"],["108th","2003"],["109th","2005"],["110th","2007"],["111th","2009"],["112th","2011"],["113th","2013"],["114th","2015"],["115th","2017"],["116th","2019"],["117th","2021"],["118th","2023"],["119th","2025"]];
+  const tl = document.getElementById("tl");
+  CONGRESSES.forEach(([c, y], i) => { const d = document.createElement("div"); d.className = "c" + (i === CONGRESSES.length - 1 ? " now" : ""); d.innerHTML = `<div class="b"></div><div class="y">${c}<br>${y}</div>`; tl.appendChild(d); });
+  const COUNTRIES = ["United States", "India", "Brazil", "Indonesia", "Mexico", "Philippines", "Nigeria", "Germany", "Japan", "Taiwan", "South Africa", "Poland", "Argentina", "Kenya", "South Korea", "Canada", "France", "Chile"];
+  const globe = document.getElementById("globe"); COUNTRIES.forEach(n => { const d = document.createElement("div"); d.textContent = n; globe.appendChild(d); });
+  const LANGS = [
+    ["English", "Supports the Water Resources Development Act of 2026."],
+    ["Español", "Apoya la Ley de Desarrollo de Recursos Hídricos de 2026."],
+    ["हिन्दी", "जल संसाधन विकास अधिनियम 2026 का समर्थन करती हैं।"],
+    ["Português", "Apoia a Lei de Desenvolvimento de Recursos Hídricos de 2026."],
+    ["Bahasa Indonesia", "Mendukung Undang-Undang Pengembangan Sumber Daya Air 2026."],
+    ["日本語", "2026年水資源開発法を支持しています。"],
+    ["中文", "支持《2026 年水資源開發法》。"]
+  ];
+  const langs = document.getElementById("langs"); LANGS.forEach(([n], i) => { const s = document.createElement("span"); s.textContent = n; if (!i) s.className = "on"; langs.appendChild(s); });
+  const $ = id => document.getElementById(id);
+  let timers = [];
+  const clear = () => { timers.forEach(clearInterval); timers.forEach(clearTimeout); timers = []; };
+  window.scene = n => { clear(); document.querySelectorAll(".scene").forEach(s => s.classList.toggle("on", s.id === "s" + n)); };
+  // step(n): the beat inside the current scene, timed by the narration
+  window.step = n => {
+    const on = id => $(id).classList.add("on");
+    const cur = (document.querySelector(".scene.on") || {}).id;
+    if (cur === "s9") {
+      if (n === 1) $("hl").classList.add("on");
+      if (n === 2) { on("ba1"); ["r1", "r2", "r3", "r4", "r5"].forEach((id, i) => timers.push(setTimeout(() => on(id), 200 + i * 260))); }
+      if (n === 3) on("r6");
+    }
+    if (cur === "s7" && n >= 1 && n <= 4) on("k" + n);
+    if (cur === "s8") {
+      if (n === 1) [...document.querySelectorAll("#srcs .src")].forEach((d, i) => timers.push(setTimeout(() => d.classList.add("on"), i * 170)));
+      if (n === 2) { on("ar1"); timers.push(setTimeout(() => on("pp"), 250)); }
+      if (n === 3) { on("ar2"); on("feed"); ["f1", "f2", "f3"].forEach((id, i) => timers.push(setTimeout(() => on(id), 300 + i * 650))); }
+    }
+    if (cur === "s1") {
+      if (n === 1) ["c1","a1","c2","a2","c3","a3","c4","a4","c5","a5","c6"].forEach((id, i) => timers.push(setTimeout(() => on(id), i * 140)));
+      if (n === 2) $("c4").classList.add("glow");
+      if (n === 3) $("rev").classList.add("glow");
+      if (n === 4) { on("meta"); $("mcode").classList.add("glow"); }
+      if (n === 5) { $("c4").classList.remove("glow"); $("rev").classList.remove("glow"); $("mcode").classList.remove("glow"); $("lane").classList.add("go"); }
+      if (n === 6) { $("c5").classList.add("glow2"); setTimeout(() => $("c6").classList.add("glow2"), 600); }
+    }
+    if (cur === "s2") {
+      const cs = [...tl.children], h = [62, 66, 70, 74, 76, 80, 84, 86, 88, 90, 92, 94, 95, 96, 98, 100];
+      if (n === 1) { cs[cs.length - 1].querySelector(".b").style.height = h[15] + "%"; }
+      if (n === 2) { cs.slice(0, -1).reverse().forEach((c, i) => timers.push(setTimeout(() => { c.classList.add("lit"); c.querySelector(".b").style.height = h[14 - i] + "%"; }, i * 110))); }
+      if (n === 3) on("pipe");
+    }
+    if (cur === "s3") { if (n === 1) ["p1", "p2", "p3"].forEach((id, i) => timers.push(setTimeout(() => on(id), i * 250))); if (n === 2) { on("ar"); timers.push(setTimeout(() => on("ev"), 350)); } }
+    if (cur === "s4") { if (n === 1) [...globe.children].forEach((d, i) => timers.push(setTimeout(() => d.classList.add("lit"), i * 90))); if (n === 2) on("fact"); }
+    if (cur === "s5" && n === 1) {
+      let k = 0; const line = $("line"), sp = [...langs.children];
+      timers.push(setInterval(() => { k = (k + 1) % LANGS.length; line.style.opacity = 0; setTimeout(() => { line.textContent = LANGS[k][1]; line.style.opacity = 1; }, 300); sp.forEach((s, i) => s.classList.toggle("on", i === k)); }, 1300));
+    }
+  };
+  if (!location.hash.includes("rec")) { scene(2); }
+</script>
+</body>
+</html>

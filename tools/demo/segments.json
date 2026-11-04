@@ -1,0 +1,33 @@
+{
+  "_meta": {
+    "description": "Demo video timeline: one narration segment per shot. tools/demo/record.mjs plays the shot while the segment's audio runs. Narration revised from docs/demo/script.md (Muse Spark only; topic instead of issue; one line on the blind audit).",
+    "voice": "en-US-AndrewNeural",
+    "wordsPerSecond": 2.7
+  },
+  "segments": [
+    { "id": "s01", "shot": "govinfo", "caption": "",
+      "text": "Before voting, every citizen deserves to know what their representative actually said and did. But that record is scattered across bills, reports, and transcripts nobody has time to read." },
+    { "id": "s02", "shot": "home", "caption": "OWL · Open Watch on Legislators",
+      "text": "At OWL, Open Watch on Legislators, our mission is to make every position in Congress legible, searchable, and backed by the exact quote behind it. Our vision is a public evidence graph of the legislature, where asking for proof always gets a clear answer." },
+    { "id": "s03", "shot": "topic", "caption": "451 House members",
+      "text": "Here is what OWL does today. Pick a topic and see all 451 House members placed by what they actually did on it." },
+    { "id": "s04", "shot": "member", "caption": "Every sentence cites a quote",
+      "text": "Pick a member and see their stances, where they break with their party, and how their views have shifted over time." },
+    { "id": "s05", "shot": "match", "caption": "Answer three questions · see who matches you",
+      "text": "Answer a few yes-or-no questions about real bills, and get a ranked list of the members whose records are closest to yours, filtered by party and state. Behind that view are 20,608 statements, each tied to its source." },
+    { "id": "s06", "shot": "terminal", "caption": "Strict contracts · 20,647 quotes checked",
+      "text": "It is built to stay trustworthy. Official records pass through a deterministic pipeline, with no model calls while gathering data, and must meet strict contracts before anything is modeled." },
+    { "id": "s07", "shot": "evidence", "caption": "Muse Spark: verbatim quote · score · confidence",
+      "text": "Then Meta's Muse Spark does the reading: extracting stances with verbatim quotes, and scoring them on one calibrated scale." },
+    { "id": "s08", "shot": "audit", "caption": "Muse Spark audits its own scores",
+      "text": "Spark also audits itself. It re-scores a sample of quotes with names and parties hidden, and flags the ones that change for a human to review." },
+    { "id": "s09", "shot": "bill", "caption": "Plain-language questions, human-reviewed",
+      "text": "It summarizes each legislator with citations, and drafts plain-language bill questions that a person reviews before they ship. Muse Code built much of this front end from written specs." },
+    { "id": "s10", "shot": "zoom", "caption": "Next: decades of past Congresses",
+      "text": "Looking ahead, we start with the current Congress. The same pipeline can reach back across twenty or thirty years of past Congresses, plus members' public posts on Meta platforms, processed in batches on Meta's model serving." },
+    { "id": "s11", "shot": "about", "caption": "Ask in plain words · answers with quotes",
+      "text": "Next, a visitor will ask a question in plain words and get an answer drawn from the evidence, with quotes. Even at a hundred times today's data, Meta's cost-efficient serving keeps that practical." },
+    { "id": "s12", "shot": "end", "caption": "az30667176-sudo.github.io/owl",
+      "text": "Come explore your Congress, and see the proof for yourself." }
+  ]
+}
