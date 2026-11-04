@@ -1757,11 +1757,11 @@
       const hasCond = (condByPI[p.id + "|" + e.to] || []).length > 0;
       return `<div class="attn-row${state.p.sel === e ? " active" : ""}" data-to="${e.to}"><span class="attn-dot" style="background:${CAT_HUE[i.cat]}"></span>`
         + `<span class="attn-name" title="${i.name.replace(/"/g, "&quot;")}">${nm}${hasCond ? ' <span class="attn-cond">◆</span>' : ""}${e.flip ? ' <span class="tag" style="border-color:var(--accent);color:var(--accent)">flip</span>' : ""}</span>`
-        + `<span class="attn-barwrap"><span class="attn-bar" style="width:${(e.salience / maxS * 100).toFixed(1)}%;background:${color(e.direction)}"></span></span>`
-        + `<span class="score" style="color:${color(e.direction)}">${fmt(e.score)}</span><span class="attn-n">×${e.n}</span></div>`;
+        + `<span class="attn-barwrap" title="score ${fmt(e.score)} · attention ${Math.round(e.heat * 100)}th pct"><span class="attn-bar" style="width:${(Math.abs(e.score) * 100).toFixed(1)}%;background:${color(e.direction)};opacity:${(.45 + .55 * e.salience / maxS).toFixed(2)}"></span></span>`
+        + `<span class="score" style="color:${color(e.direction)}">${fmt(e.score)}</span><span class="attn-n" title="${e.n} statement${e.n === 1 ? "" : "s"}">×${e.n}</span></div>`;
     }).join("");
     host.querySelectorAll(".attn-row").forEach(el => { kbRow(el, "link"); el.onclick = () => { const hit = mine.find(x => x.e.to === el.dataset.to); if (hit) { state.p.sel = hit.e; renderProfile(); renderSide(); } }; });
-    if (note) note.textContent = `${shown.length} of ${mine.length} issues · ranked by attention (recent statements count more)`;
+    if (note) note.textContent = `${shown.length} of ${mine.length} issues · ranked by attention (recent statements count more) · bar = score, −1…+1 · ×n = statements`;
   }
   function drawMix(mine) {
     const host = document.getElementById("p-mix"), leg = document.getElementById("p-mix-leg");
