@@ -425,7 +425,7 @@
   .irel { display: flex; flex-wrap: wrap; gap: 6px; }
   @media (max-width: 1180px) { .istrip { grid-template-columns: repeat(2, 1fr); } .iwho { grid-template-columns: 1fr; } }
   /* global search (2.1) + Explore canvas (2.2) + minimap (2.4) */
-  .gsrch { position: relative; flex: 1; min-width: 200px; max-width: 480px; margin-left: auto; }
+  .gsrch { position: relative; flex: 1; min-width: 200px; max-width: 480px; justify-self: center; margin: 0 auto; }
   .gsrch input { width: 100%; background: var(--panel-2); border: 1px solid var(--border); color: var(--text); border-radius: 3px; padding: 7px 36px 7px 10px; font: inherit; font-size: 13px; outline: none; }
   .gsrch input:focus { border-color: var(--accent); }
   .gsrch kbd { position: absolute; right: 9px; top: 7px; font: 500 11px var(--mono); color: var(--muted); border: 1px solid var(--border); padding: 1px 6px; border-radius: 3px; }
@@ -2430,7 +2430,7 @@
   function E_finAngle(sid, fin, mid) { if (!sid || !fin.has(sid)) return 0; return Math.atan2(Math.sin(fin.get(sid) - mid), Math.cos(fin.get(sid) - mid)); }
   function E_legTip(p) {
     const es = (seByL.get(p.id) || []).slice().sort((a, b) => b.heat - a.heat).slice(0, 4);
-    return `<b>${p.name}</b> · ${p.district || p.state} · ${p.party}<br>` + es.map(e => `<span style="color:${color(dirOf(e.score))}">${e.score > 0 ? "+" : ""}${e.score.toFixed(2)}</span> ${issueById[e.to].name}`).join("<br>") + `<div style="color:var(--muted);margin-top:3px">${(seByL.get(p.id) || []).length} issues on record</div>`;
+    return `<b>${p.name}</b> · ${p.district || p.state} · ${p.party}<br>` + es.map(e => `${issueById[e.to].name} <span style="color:var(--muted)">${Math.round(e.heat * 100)}th pct attention</span>`).join("<br>") + `<div style="color:var(--muted);margin-top:3px">${(seByL.get(p.id) || []).length} topics on record</div>`;
   }
   function E_tip(ev, html) { condTip.style.display = "block"; condTip.style.left = (ev.clientX + 14) + "px"; condTip.style.top = (ev.clientY + 10) + "px"; condTip.innerHTML = html; }
   function E_hideTip() { condTip.style.display = "none"; }
@@ -2439,7 +2439,7 @@
     const partyName = p.party === "D" ? "Democrat" : p.party === "R" ? "Republican" : "Independent";
     return `<div class="person-card"><div class="name">${title(p)}</div><div class="meta">${partyName} · ${seat(p)} · talks most about ${topCommittee(p)}</div>`
       + es.slice(0, 6).map(e => `<div class="stance-line"><div><div class="t">${issueById[e.to].name}</div></div><div class="score" style="color:${color(e.direction)}">${fmt(e.score)}</div></div>`).join("")
-      + `<div class="meta" style="margin-top:6px">${es.length} issues on record</div><div style="margin-top:10px"><button class="btn" data-open="${p.id}">Open profile →</button></div></div>`;
+      + `<div class="meta" style="margin-top:6px">${es.length} topics on record</div><div style="margin-top:10px"><button class="btn" data-open="${p.id}">Open profile →</button></div></div>`;
   }
   function E_splitbar(rows) {
     const s = rows.filter(r => r > .15).length, o = rows.filter(r => r < -.15).length, n = rows.length - s - o, t = rows.length || 1;
@@ -2512,7 +2512,7 @@
     ectl.innerHTML = `<div class="er"><div class="eg"><span class="lab">Party</span><button class="pt on" id="fD" aria-pressed="true"><i style="background:var(--party-d)"></i>D</button><button class="pt on" id="fR" aria-pressed="true"><i style="background:var(--party-r)"></i>R</button></div>`
       + `<div class="eg"><span class="lab"><span class="full">Edges per member</span><span class="short">Edges</span></span><input type="range" id="eK" min="1" max="5" value="${E.K}" aria-label="Edges per member"><b id="eKv" class="val">${E.K}</b></div>`
       + `<div class="eg act"><button class="btn rz" id="eRz" title="Zoom out, unpin, clear highlight">↺ Reset view</button></div></div>`
-      + `<div class="er er2"><div class="eg leg"><span class="lab">Edge</span><span title="Edge colour = the member's position on the topic"><i style="background:var(--support)"></i>Support</span><span><i style="background:var(--oppose)"></i>Oppose</span><span><i style="background:var(--neutral)"></i>Neutral</span><span title="Edge width = attention, opacity = strength of the position, dashed = the member changed direction"><i class="ln"></i>Changed direction</span></div></div>`;
+      + `<div class="er er2"><div class="eg leg"><span class="lab">Edge</span><span title="Lines join a member to the committees and topics they act on most. They show attention, not agreement: recent statements count more."><i class="ln" style="border-top:2px solid var(--accent)"></i>Line: thicker and brighter = more attention</span></div></div>`;
     ectl.querySelector(".er2").appendChild(ehud);
     E_targets();
     E_build(true);
@@ -2728,10 +2728,10 @@
       else { const rk = l.rank.indexOf(a.t); on = rk > -1 && rk < E.K; if (on && E.open && t.kind === "issue") on = rk < E.K + 2; }
       if (!on) continue;
       const mx = (l.x + t.x) / 2, my = (l.y + t.y) / 2, qx = mx + (cx - mx) * .25, qy = my + (cy - my) * .25;
-      cx2.globalAlpha = strong ? .8 : .045 + .13 * Math.abs(a.score);
-      cx2.strokeStyle = eColor(dirOf(a.score));
+      cx2.globalAlpha = strong ? .35 + .6 * Math.min(1, a.heat) : .03 + .12 * Math.min(1, a.heat);
+      cx2.strokeStyle = PAL.accent; // one hue for every line: it encodes attention, not a stance
       cx2.lineWidth = (strong ? heatW(Math.min(1, a.heat)) : heatW(Math.min(1, a.heat)) * .3) / sk;
-      cx2.setLineDash(a.flip ? [4 / sk, 3 / sk] : []);
+      cx2.setLineDash([]);
       cx2.beginPath(); cx2.moveTo(l.x, l.y); cx2.quadraticCurveTo(qx, qy, t.x, t.y); cx2.stroke();
       const rows = E_condRows(a.p, a.t);
       if (rows.length && (strong || hl)) {
