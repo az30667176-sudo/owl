@@ -520,7 +520,7 @@
 <div class="app">
   <header class="masthead">
     <a class="brand" href="#" id="brand"><img class="logo" src="assets/logo/owl-mark-64.png" alt=""><span class="wordmark">OWL</span><span class="tagline">Open Watch on Legislators</span></a>
-    <nav class="modes" aria-label="Sections"><button id="m-explore">Explore</button><button id="m-issues">Issues</button><button id="m-bills">Bills</button><button id="m-list">Find</button><button id="m-profile">Legislators</button><button id="m-about">About</button></nav>
+    <nav class="modes" aria-label="Sections"><button id="m-explore">Explore</button><button id="m-issues">Topics</button><button id="m-bills">Bills</button><button id="m-list">Legislators</button><button id="m-about">About</button></nav>
     <div class="gsrch"><input id="gs" type="text" autocomplete="off" placeholder="Find a legislator: name, state, district (CA-12) or ZIP" aria-label="Find a legislator"><kbd>/</kbd><div class="dd" id="dd"></div></div>
     <div class="pane-switch" id="pane-switch" role="tablist" aria-label="Panes"><button data-pane="filters" role="tab" aria-label="Show filters pane">Filters</button><button data-pane="view" role="tab" class="active" aria-label="Show view pane">View</button><button data-pane="details" role="tab" aria-label="Show details pane">Details</button></div>
     <span class="crumb" id="crumb"></span>
@@ -770,7 +770,7 @@
   const state = {
     mode: "explore", cat: null, sub: null, issue: null, person: null, edge: null, pane: "view",
     f: { issues: new Set(ISSUES.filter(i => countFor(i.id) > 0).map(i => i.id)), chambers: new Set(["house", "senate"]), state: "", parties: new Set(["D", "R", "I"]), dirs: new Set(["support", "oppose", "neutral"]), minConf: 0, q: "" },
-    l: { chamber: "", state: "", cat: "", sub: "", issue: "", dir: "", party: "", gender: "", minConf: 0, sort: "score", desc: true, sel: null },
+    l: { q: "", chamber: "", state: "", cat: "", sub: "", issue: "", dir: "", party: "", gender: "", minConf: 0, sort: "score", desc: true, sel: null },
     p: { person: null, sel: null, q: "" },
     iid: null,
     b: { id: null, ticked: [], sel: null },
@@ -827,7 +827,7 @@
     const h = location.hash || "#/explore";
     state.pane = "view";
     if (h.indexOf("#/legislator/") === 0 && byId[h.slice(13)]) { state.mode = "profile"; state.p.person = h.slice(13); state.p.sel = null; return; }
-    if (h === "#/legislators") { state.mode = "profile"; state.p.person = null; state.p.sel = null; return; }
+    if (h === "#/legislators") { state.mode = "list"; if (location.hash !== "#/find") location.hash = "#/find"; return; }
     if (h.indexOf("#/bill/") === 0 && h.length > 7) { state.mode = "bill"; state.b.id = h.slice(7); state.b.ticked = []; state.b.sel = null; state.b.exp = {}; state.b.rost = {}; state.b.rostAll = {}; return; }
     if (h === "#/bills") { state.mode = "bills"; return; }
     if (h.indexOf("#/issue/") === 0 && issueById[h.slice(8)]) { state.mode = "issue"; state.iid = h.slice(8); return; }
@@ -937,7 +937,7 @@
     const cur = f.state || (E && E.stateF) || "";
     const fe = filteredEdges();
     $aside.innerHTML = `
-      <div class="h" style="margin-top:8px">Hottest issues · 90 days</div>
+      <div class="h" style="margin-top:8px">Hottest topics · 90 days</div>
       ${hot8.map(i => `<div class="hot-row" data-i="${i.id}"><span>${i.name}</span>${spark(i.id)}<span class="hot-n">${H.get(i.id).active}</span></div>`).join("")}
       <div style="margin:2px 6px 0"><span class="link" id="all-issues">all ${ISSUES.length} →</span></div>
       <div class="h">Recent changes · 30 days</div>
@@ -945,7 +945,7 @@
       <div class="h">State</div>
       ${cur ? `<div style="margin:0 4px 6px"><span class="chip" id="clr-state">${cur} ×</span></div>` : ""}
       <div class="field"><select id="f-state"><option value="">All states</option>${STATES.map(s => `<option value="${s}"${s === cur ? " selected" : ""}>${STATE_NAMES[s] || s}</option>`).join("")}</select></div>
-      <div class="stat">${fe.length} stances · ${new Set(fe.map(e => e.from)).size} legislators · ${new Set(fe.map(e => e.to)).size} issues</div>`;
+      <div class="stat">${fe.length} stances · ${new Set(fe.map(e => e.from)).size} legislators · ${new Set(fe.map(e => e.to)).size} topics</div>`;
     $aside.querySelectorAll(".hot-row").forEach(el => {
       kbRow(el, "link");
       el.onclick = () => {
@@ -997,8 +997,8 @@
     const open = state.e.intro === true || (state.e.intro !== false && !introSeen());
     if (!open) return `<div class="mmhead" style="margin-bottom:10px;justify-content:flex-end"><span class="link" data-intro="open">? How to use this map</span></div>`;
     return `<div class="intro"><div class="h">How to use this map</div><ol>`
-      + `<li><b>Click a coloured dot on the ring</b> — each is a House committee — to open its issues.</li>`
-      + `<li><b>Click an issue.</b> Its bills appear here as Yes / No questions; answer the ones you care about.</li>`
+      + `<li><b>Click a coloured dot on the ring</b> — each is a House committee — to open its topics.</li>`
+      + `<li><b>Click a topic.</b> Its bills appear here as Yes / No questions; answer the ones you care about.</li>`
       + `<li><b>After three answers, open "Show matches"</b> under the ring to see which members' records are closest to yours.</li>`
       + `</ol><div class="read"><b>Reading the ring.</b> Small dots are the ${PEOPLE.length} House members (<span class="dot" style="background:var(--party-d)"></span>Democrat, <span class="dot" style="background:var(--party-r)"></span>Republican). Each sits near the committee they work on most; closer to the rim means more specialised. Lines are their recorded positions: <span style="color:var(--support)">green</span> for, <span style="color:var(--oppose)">red</span> against. Hover anything for details, scroll to zoom.</div>`
       + `<div class="act"><button class="btn" data-intro="try">Try it: open Financial Services →</button><span class="link" data-intro="close">Got it</span></div></div>`;
@@ -1050,7 +1050,7 @@
     const rows = billsForIssue(id);
     const done = rows.filter(r => MATCH.answers[r.bill_id]).length;
     let h = `<div class="h" style="margin-top:0">Questions under ${i ? i.name : id}</div>`;
-    if (!rows.length) return h + `<div class="topic-sub">No questions under this issue yet.</div>`;
+    if (!rows.length) return h + `<div class="topic-sub">No questions under this topic yet.</div>`;
     return h + `<div class="topic-sub" style="margin-bottom:4px"><b style="color:var(--text)">${done} of ${rows.length} answered.</b> Answer Yes or No (hover a button for the full wording); your matches collect in the bar under the ring.</div>` + rows.map(rec => {
       const q = rec.binary_question, ans = MATCH.answers[rec.bill_id];
       const legs = billLegsMemo(rec.bill_id);
@@ -1279,11 +1279,11 @@
     $("about").innerHTML = `<div class="iwrap"><div class="icrumb">About</div><div class="ih1">About OWL</div>`
       + `<div class="isub">Open Watch on Legislators — every number traces back to a quoted statement.</div>`
       + `<div class="isec">What OWL is</div>`
-      + `<div>OWL tracks how US legislators vote, speak and shift positions across issues. Each legislator–issue pair is one edge with a score from −1 (oppose) to +1 (support), and every score opens to the verbatim quotes behind it. Nothing is pre-aggregated upstream and the browser never calls a model.</div>`
+      + `<div>OWL tracks how US legislators vote, speak and shift positions across topics. Each legislator–topic pair is one edge with a score from −1 (oppose) to +1 (support), and every score opens to the verbatim quotes behind it. Nothing is pre-aggregated upstream and the browser never calls a model.</div>`
       + `<div class="isec">The eight files</div>`
       + `<div style="font-size:13px;line-height:1.9">`
       + `<div><span style="${mono}">taxonomy.json</span> — House standing committees and their subcommittees</div>`
-      + `<div><span style="${mono}">issues.json</span> — concrete issues, each under one subcommittee</div>`
+      + `<div><span style="${mono}">issues.json</span> — concrete topics, each under one subcommittee</div>`
       + `<div><span style="${mono}">people.json</span> — legislators: name, chamber, state, district, party</div>`
       + `<div><span style="${mono}">stances.json</span> — one row per statement: score, direction, confidence, verbatim quote, bill, source</div>`
       + `<div><span style="${mono}">summaries.json</span> — per-legislator AI summary, every sentence cited to a statement</div>`
@@ -1302,7 +1302,7 @@
       + `<div><b>heat</b> — percentile rank of salience across all edges, 0…1</div>`
       + `</div>`
       + `<div class="isec">Data snapshot</div>`
-      + `<div>Data through ${maxDate || "—"} · ${STATEMENTS.length.toLocaleString()} statements · ${PEOPLE.length} members · ${ISSUES.length} issues · ${CONDS.length} conditions${statementsReady ? "" : " (loading statements…)"}</div>`
+      + `<div>Data through ${maxDate || "—"} · ${STATEMENTS.length.toLocaleString()} statements · ${PEOPLE.length} members · ${ISSUES.length} topics · ${CONDS.length} conditions${statementsReady ? "" : " (loading statements…)"}</div>`
       + `<div class="isec">What Muse Spark does here</div>`
       + `<div style="font-size:13px;line-height:1.9">`
       + `<div><b>Reads the record.</b> Hearing and floor transcripts go in; one row per statement comes out with a −1…+1 score, a direction, the verbatim quote and the source link, plus a confidence the model assigns to its own reading.</div>`
@@ -1356,19 +1356,19 @@
   }
   function bindDirRows(root) { root.querySelectorAll(".idi").forEach(el => { kbRow(el, "link"); el.onclick = () => openIssue(el.dataset.i); }); }
   function renderIssuesAside() {
-    $aside.innerHTML = `<div class="h" style="margin-top:8px">Issues</div><div class="topic-sub">${COMMITTEES.length} committees · ${ISSUES.length} issues · ${EDGES.length.toLocaleString()} stances on record. Click an issue for its halo page.</div>`;
+    $aside.innerHTML = `<div class="h" style="margin-top:8px">Topics</div><div class="topic-sub">${COMMITTEES.length} committees · ${ISSUES.length} topics · ${EDGES.length.toLocaleString()} stances on record. Click a topic for its halo page.</div>`;
   }
   function renderIssuesCenter() {
     const wrap = $("issues"), H = issueHeat();
     const hot5 = ISSUES.filter(i => H.get(i.id).active > 0).sort((a, b) => H.get(b.id).heat - H.get(a.id).heat || (a.name < b.name ? -1 : 1)).slice(0, 5);
-    wrap.innerHTML = `<div class="iwrap"><div class="icrumb">Issues</div><div class="ih1">All issues</div><div class="isub">${COMMITTEES.length} committees · ${ISSUES.length} issues · bar = attention in the last 90 days (recent statements count more) · number = legislators active · bills</div><div class="hot5">${hot5.map(i => { const h = H.get(i.id).heat, d = Math.min(5, Math.floor(h * 5) + 1); return `<span class="chip" data-i="${i.id}">${i.name} <span style="color:var(--accent);letter-spacing:1px">${"●".repeat(d)}</span></span>`; }).join("")}</div><div style="margin:12px 0"><input class="if" id="ifl" placeholder="Filter issues or committees…"></div><div class="idir" id="idir"></div></div>`;
+    wrap.innerHTML = `<div class="iwrap"><div class="icrumb">Topics</div><div class="ih1">All topics</div><div class="isub">${COMMITTEES.length} committees · ${ISSUES.length} topics · bar = attention in the last 90 days (recent statements count more) · number = legislators active · bills</div><div class="hot5">${hot5.map(i => { const h = H.get(i.id).heat, d = Math.min(5, Math.floor(h * 5) + 1); return `<span class="chip" data-i="${i.id}">${i.name} <span style="color:var(--accent);letter-spacing:1px">${"●".repeat(d)}</span></span>`; }).join("")}</div><div style="margin:12px 0"><input class="if" id="ifl" placeholder="Filter topics or committees…"></div><div class="idir" id="idir"></div></div>`;
     const draw = q => { $("idir").innerHTML = dirRows(q); bindDirRows($("idir")); };
     draw("");
     $("ifl").oninput = e => draw(e.target.value.trim().toLowerCase());
     wrap.querySelectorAll(".hot5 .chip").forEach(el => { kbRow(el, "link"); el.onclick = () => openIssue(el.dataset.i); });
   }
   function renderIssuesSide() {
-    $side.innerHTML = `<div class="empty-state">The bar is attention, not agreement: how much and how recently legislators acted on the issue. Stances live on bill pages.</div>`;
+    $side.innerHTML = `<div class="empty-state">The bar is attention, not agreement: how much and how recently legislators acted on the topic. Stances live on bill pages.</div>`;
   }
   // bills under one issue from EDGES' bill strings (latest bill per edge) + condition rows; STATEMENTS not needed
   function issueBills(id) {
@@ -1390,13 +1390,13 @@
     }).sort((a, b) => b.n - a.n);
   }
   function renderIssueAside() {
-    $aside.innerHTML = `<div class="h" style="margin-top:8px">Issues</div><div class="idir" style="grid-template-columns:1fr" id="iaside"></div>`;
+    $aside.innerHTML = `<div class="h" style="margin-top:8px">Topics</div><div class="idir" style="grid-template-columns:1fr" id="iaside"></div>`;
     $("iaside").innerHTML = dirRows("", state.iid);
     bindDirRows($("iaside"));
   }
   function renderIssueCenter() {
     const wrap = $("issue"), id = state.iid, is = issueById[id];
-    if (!is) { wrap.innerHTML = `<div class="iwrap"><div class="empty-state">Unknown issue. <span class="link" id="i-back">← all issues</span></div></div>`; $("i-back").onclick = goIssues; return; }
+    if (!is) { wrap.innerHTML = `<div class="iwrap"><div class="empty-state">Unknown topic. <span class="link" id="i-back">← all topics</span></div></div>`; $("i-back").onclick = goIssues; return; }
     const es = issEdges(id), T = ISSUE_SPLIT_T;
     const com = COMMITTEES.find(c => c.id === is.cat);
     const K = e => e.kind || [];
@@ -1410,15 +1410,15 @@
     const condSection = `<div class="isec">Conditions</div>` + (condRows.length ? condRows.map(r => {
       const dot = r.stance_if_met === "support" ? "var(--support)" : "var(--oppose)", dtype = (DEMANDS[r.demand] || {}).type || "";
       return `<div style="display:flex;gap:10px;margin:10px 0"><span style="width:10px;height:10px;border-radius:50%;background:${dot};flex:none;margin-top:5px"></span><div><div><b>${byId[r.person].name}</b> · ${condShort(nowOf(r.person, r.issue), r)}</div><div style="font-size:11px;color:var(--muted);margin-top:2px">${r.bill && billId(r.bill) ? `<a class="link" href="#/bill/${billId(r.bill)}">${r.bill} ↗</a> · ` : (r.bill ? `${r.bill} · ` : "")}<span class="tag">${dtype}</span></div><div class="cond-q">“${r.quote}”</div></div></div>`;
-    }).join("") : `<div class="sub">No conditions recorded for this issue.</div>`);
+    }).join("") : `<div class="sub">No conditions recorded for this topic.</div>`);
     const nm = pid => byId[pid].name.replace(/^(Rep|Sen)\. /, "");
-    wrap.innerHTML = `<div class="iwrap"><div class="icrumb"><a id="i-exp">← Explore</a> · <a id="i-issues">Issues</a> · ${com.name} · <span style="color:var(--text)">${is.name}</span></div>`
+    wrap.innerHTML = `<div class="iwrap"><div class="icrumb"><a id="i-exp">← Explore</a> · <a id="i-issues">Topics</a> · ${com.name} · <span style="color:var(--text)">${is.name}</span></div>`
       + `<div class="ih1">${is.name}</div><div class="isub">${com.name} · ${es.length} legislators on record · ${bills.length} bill${bills.length === 1 ? "" : "s"}</div>`
       + `<div class="istrip"><div><b style="color:var(--support)">${forN}</b><span>took a 'for' action</span></div><div><b style="color:var(--oppose)">${agN}</b><span>took an 'against' action</span></div><div><b>${spokeN}</b><span>actually spoke (LLM-scored)</span></div><div><b style="color:var(--accent)">${coOnly}</b><span>cosponsored only, never voted or spoke</span></div></div>`
-      + `<div class="isec">What members actually did on this issue · right half = for, left half = against · one ring per kind of action · hover a dot</div><div class="orbwrap"><canvas id="orbit"></canvas><div class="ohud" id="ohud"></div></div>`
+      + `<div class="isec">What members actually did on this topic · right half = for, left half = against · one ring per kind of action · hover a dot</div><div class="orbwrap"><canvas id="orbit"></canvas><div class="ohud" id="ohud"></div></div>`
       + `<div class="isec">By party</div><div style="font-weight:600">All</div>${E_splitbar(es.map(e => e.score))}<div style="font-weight:600;color:var(--party-d)">Democrats</div>${E_splitbar(es.filter(e => byId[e.from].party === "D").map(e => e.score))}<div style="font-weight:600;color:var(--party-r)">Republicans</div>${E_splitbar(es.filter(e => byId[e.from].party === "R").map(e => e.score))}`
       + `<div class="isec">Strongest voices</div><div class="iwho"><div><div style="color:var(--support);font-weight:600;margin-bottom:4px">Most supportive</div><ol>${top.slice(0, 5).map(e => `<li data-p="${e.from}">${nm(e.from)} <span style="color:var(--muted)">${byId[e.from].district || byId[e.from].state}</span> <span style="color:var(--support)">${e.score > 0 ? "+" : ""}${e.score.toFixed(2)}</span></li>`).join("")}</ol></div><div><div style="color:var(--oppose);font-weight:600;margin-bottom:4px">Most opposed</div><ol>${top.slice(-5).reverse().map(e => `<li data-p="${e.from}">${nm(e.from)} <span style="color:var(--muted)">${byId[e.from].district || byId[e.from].state}</span> <span style="color:var(--oppose)">${e.score.toFixed(2)}</span></li>`).join("")}</ol></div></div>`
-      + `${condSection}<div class="isec">Where in the country · colour = stance on this issue</div><canvas id="imap"></canvas><div class="mmleg"><span><span class="sq" style="background:var(--support)"></span>supports</span><span><span class="sq" style="background:var(--oppose)"></span>opposes</span><span><span class="sq" style="background:var(--neutral)"></span>neutral</span><span><span class="sq" style="background:#2a3148"></span>no statement</span></div></div>`;
+      + `${condSection}<div class="isec">Where in the country · colour = stance on this topic</div><canvas id="imap"></canvas><div class="mmleg"><span><span class="sq" style="background:var(--support)"></span>supports</span><span><span class="sq" style="background:var(--oppose)"></span>opposes</span><span><span class="sq" style="background:var(--neutral)"></span>neutral</span><span><span class="sq" style="background:#2a3148"></span>no statement</span></div></div>`;
     $("i-exp").onclick = () => { state.person = null; location.hash = "#/explore"; };
     $("i-issues").onclick = goIssues;
     wrap.querySelectorAll("[data-p]").forEach(el => { kbRow(el, "link"); el.onclick = () => openProfile(el.dataset.p); });
@@ -1436,8 +1436,8 @@
     EDGES.forEach(e => { if (e.to !== id && mine.has(e.from)) co.set(e.to, (co.get(e.to) || 0) + 1); });
     const rel = [...co.entries()].sort((a, b) => b[1] - a[1]).slice(0, 8).map(([iid, n]) => ({ ...issueById[iid], n }));
     const bills = issueBills(id);
-    $side.innerHTML = `<div class="h">Related issues</div><div class="irel">${rel.map(q => `<span class="chip" data-i="${q.id}" style="border-color:${CAT_HUE[q.cat]}"><span style="color:${CAT_HUE[q.cat]}">●</span> ${q.name} <span style="color:var(--muted)">· ${q.n} shared</span></span>`).join("") || `<span class="topic-sub">—</span>`}</div>`
-      + `<div class="h">Bills under this issue</div>` + (bills.map(b => `<div class="ibl" data-b="${b.id}"><div><div class="num">${b.num}</div><div class="mt">${b.n} statement${b.n === 1 ? "" : "s"}</div></div><div><div>${tidyTitle(b.title) || b.str}</div><div class="mt">${is.catName} › ${is.subName}</div></div>${b.conds ? `<span class="itag">◆ ${b.conds} condition${b.conds > 1 ? "s" : ""}</span>` : `<span class="mt">no conditions</span>`}</div>`).join("") || `<div class="empty-state">No bills on record for this issue.</div>`);
+    $side.innerHTML = `<div class="h">Related topics</div><div class="irel">${rel.map(q => `<span class="chip" data-i="${q.id}" style="border-color:${CAT_HUE[q.cat]}"><span style="color:${CAT_HUE[q.cat]}">●</span> ${q.name} <span style="color:var(--muted)">· ${q.n} shared</span></span>`).join("") || `<span class="topic-sub">—</span>`}</div>`
+      + `<div class="h">Bills under this topic</div>` + (bills.map(b => `<div class="ibl" data-b="${b.id}"><div><div class="num">${b.num}</div><div class="mt">${b.n} statement${b.n === 1 ? "" : "s"}</div></div><div><div>${tidyTitle(b.title) || b.str}</div><div class="mt">${is.catName} › ${is.subName}</div></div>${b.conds ? `<span class="itag">◆ ${b.conds} condition${b.conds > 1 ? "s" : ""}</span>` : `<span class="mt">no conditions</span>`}</div>`).join("") || `<div class="empty-state">No bills on record for this topic.</div>`);
     $side.querySelectorAll("[data-i]").forEach(el => { kbRow(el, "link"); el.onclick = () => openIssue(el.dataset.i); });
     $side.querySelectorAll("[data-b]").forEach(el => { kbRow(el, "link"); el.onclick = () => openBill(el.dataset.b); });
   }
@@ -1501,7 +1501,7 @@
         c2.fillRect(b.x - w / 2, b.y - 8, w, 18); c2.strokeRect(b.x - w / 2, b.y - 8, w, 18);
         label(b.num, b.x, b.y + 5, "600 10px JetBrains Mono", on ? PAL.bg : PAL.accent);
       });
-      if (!hasK) label("This issue has no action-kind data", C.x, C.y - Rmax * .6, "500 12px Public Sans", PAL.muted);
+      if (!hasK) label("This topic has no action-kind data", C.x, C.y - Rmax * .6, "500 12px Public Sans", PAL.muted);
       $("ohud").innerHTML = `${es.length} members on record · each dot = one member · party colour`;
     }
     const all = [...dots, ...bills];
@@ -1519,7 +1519,7 @@
         if (k[3]) acts.push(`voted nay ${k[3]}×`);
         if (k[4]) acts.push(`signed dissenting views`);
         if (k[5]) acts.push(`spoke ${k[5]}× (score ${k[6] > 0 ? "+" : ""}${k[6].toFixed(2)})`);
-        E_tip(ev, `<b>${best.l.name}</b> · ${best.l.district || best.l.state} · ${best.l.party}<br>${acts.join(" · ")}<div style="color:var(--accent);margin-top:3px">click → profile · dashed lines = same member elsewhere on this issue</div>`);
+        E_tip(ev, `<b>${best.l.name}</b> · ${best.l.district || best.l.state} · ${best.l.party}<br>${acts.join(" · ")}<div style="color:var(--accent);margin-top:3px">click → profile · dashed lines = same member elsewhere on this topic</div>`);
       } else E_tip(ev, `<b>${best.num}</b> ${best.title}<div style="color:var(--accent);margin-top:3px">click → bill page</div>`);
     };
     cv2.onmouseleave = () => { hv = null; paint(); E_hideTip(); };
@@ -1610,10 +1610,11 @@
 
   // ---------- LIST ----------
   function listRows() {
-    const L = state.l;
+    const L = state.l, q = (L.q || "").trim().toLowerCase();
     return EDGES.filter(e => { const p = byId[e.from], i = issueById[e.to];
       return (!L.chamber || p.chamber === L.chamber) && (!L.state || p.state === L.state) && (!L.cat || i.cat === L.cat) && (!L.sub || i.sub === L.sub) && (!L.issue || e.to === L.issue)
-        && (!L.dir || e.direction === L.dir) && (!L.party || p.party === L.party) && (!L.gender || p.gender === L.gender) && (e.llm_confidence ? CONF.indexOf(e.llm_confidence) : 9) >= L.minConf; })
+        && (!L.dir || e.direction === L.dir) && (!L.party || p.party === L.party) && (!L.gender || p.gender === L.gender) && (e.llm_confidence ? CONF.indexOf(e.llm_confidence) : 9) >= L.minConf
+        && (!q || p.name.toLowerCase().includes(q) || p.state.toLowerCase() === q || (p.district || "").toLowerCase().includes(q)); })
       .map(e => ({ e, p: byId[e.from], i: issueById[e.to] }));
   }
   function renderListAside() {
@@ -1622,11 +1623,12 @@
     const subs = SUBS.filter(s => (!L.cat || s.cat === L.cat) && ISSUES.some(i => i.sub === s.id && countFor(i.id) > 0));
     const issues = ISSUES.filter(i => (!L.cat || i.cat === L.cat) && (!L.sub || i.sub === L.sub) && countFor(i.id) > 0);
     const F = (id, label, options) => `<div class="field"><label>${label}</label><select id="${id}">${options}</select></div>`;
-    $aside.innerHTML = `<div class="h" style="margin-top:8px">Find legislators</div>
+    $aside.innerHTML = `<div class="h" style="margin-top:8px">Filter legislators</div>
+      <div class="field"><label>Legislator</label><input class="search" id="l-q" placeholder="name, state or district…" value="${L.q}"></div>
       ${F("l-state", "State", opt("", "All states", L.state) + STATES.map(s => opt(s, s, L.state)).join(""))}
       ${F("l-cat", "Committee", opt("", "Any committee", L.cat) + cats.map(c => opt(c.id, c.name, L.cat)).join(""))}
       ${F("l-sub", "Subcommittee", opt("", "Any subcommittee", L.sub) + subs.map(s => opt(s.id, s.name, L.sub)).join(""))}
-      ${F("l-issue", "Issue", opt("", "Any issue", L.issue) + issues.map(i => opt(i.id, i.name, L.issue)).join(""))}
+      ${F("l-issue", "Topic", opt("", "Any topic", L.issue) + issues.map(i => opt(i.id, i.name, L.issue)).join(""))}
       ${F("l-dir", "Stance", opt("", "Any stance", L.dir) + ["support", "oppose", "neutral"].map(d => opt(d, d[0].toUpperCase() + d.slice(1), L.dir)).join(""))}
       ${F("l-party", "Party", opt("", "Any party", L.party) + opt("D", "Democrat", L.party) + opt("R", "Republican", L.party) + opt("I", "Independent", L.party))}
       ${F("l-gender", "Gender", opt("", "Any", L.gender) + opt("F", "Female", L.gender) + opt("M", "Male", L.gender))}
@@ -1634,7 +1636,8 @@
       <div class="field"><button class="btn" id="l-reset">Reset filters</button></div>`;
     const bind = (id, key, num) => { const el = $(id); el.onchange = () => { L[key] = num ? +el.value : el.value; if (key === "cat") { L.sub = ""; L.issue = ""; } if (key === "sub") L.issue = ""; L.sel = null; render(); }; };
     ["state", "cat", "sub", "issue", "dir", "party", "gender"].forEach(k => bind("l-" + k, k)); bind("l-conf", "minConf", true);
-    $("l-reset").onclick = () => { Object.assign(L, { chamber: "", state: "", cat: "", sub: "", issue: "", dir: "", party: "", gender: "", minConf: 0, sel: null }); render(); };
+    const lq = $("l-q"); lq.oninput = () => { L.q = lq.value; L.sel = null; renderTable(); renderSide(); };
+    $("l-reset").onclick = () => { Object.assign(L, { q: "", chamber: "", state: "", cat: "", sub: "", issue: "", dir: "", party: "", gender: "", minConf: 0, sel: null }); render(); };
   }
   // CSV export (group 7): RFC 4180 quoting (quote when the field holds a comma, quote or newline),
   // UTF-8 BOM so spreadsheets detect the encoding; quotes are passed through byte-for-byte
@@ -1654,7 +1657,7 @@
     rows.sort((a, b) => { const x = key(a), y = key(b); const c = typeof x === "number" ? x - y : String(x).localeCompare(String(y)); return L.desc ? -c : c; });
     const th = (k, label) => `<th data-k="${k}" class="${L.sort === k ? "sorted" : ""}">${label}${L.sort === k ? (L.desc ? " ↓" : " ↑") : ""}</th>`;
     wrap.innerHTML = `<div class="toolbar"><span>${rows.length} stances · ${new Set(rows.map(r => r.p.id)).size} legislators</span><button class="btn" id="csv">Download CSV</button></div>
-      <table><thead><tr>${th("name", "Legislator")}${th("state", "District")}${th("party", "Party")}${th("gender", "Gender")}${th("issue", "Issue")}${th("score", "Stance")}${th("n", "Stmts")}${th("conf", "Confidence")}<th>Latest quote</th></tr></thead>
+      <table><thead><tr>${th("name", "Legislator")}${th("state", "District")}${th("party", "Party")}${th("gender", "Gender")}${th("issue", "Topic")}${th("score", "Stance")}${th("n", "Stmts")}${th("conf", "Confidence")}<th>Latest quote</th></tr></thead>
       <tbody>${rows.slice(0, L.limit || 300).map((r, k) => `<tr data-i="${k}" class="${L.sel === r.e ? "active" : ""}"><td><b>${r.p.name}</b></td><td>${seat(r.p)}</td><td><span class="pill ${r.p.party}">${r.p.party}</span></td><td>${r.p.gender}</td><td class="wrap">${r.i.name}<div style="font-size:11px;color:var(--muted)">${r.i.catName} › ${r.i.subName}</div></td><td><span class="pill ${r.e.direction}">${r.e.direction}</span> <span class="score" style="color:${color(r.e.direction)};min-width:0">${fmt(r.e.score)}</span></td><td style="text-align:center">${r.e.n}${r.e.flip ? ' <span style="color:var(--accent)" title="position changed over time">⟲</span>' : ""}</td><td><span class="tag c-${r.e.llm_confidence || "…"}">${r.e.llm_confidence || "…"}</span></td><td class="quote" title="${(r.e.quote || "").replace(/"/g, "&quot;")}">${statementsReady ? `“${r.e.quote}”` : `<span style="color:var(--muted)">loading…</span>`}</td></tr>`).join("") || `<tr><td colspan="11" class="empty-state">No legislators match.</td></tr>`}</tbody></table>${rows.length > (L.limit || 300) ? `<div class="toolbar" style="justify-content:flex-start;gap:16px"><span>Showing ${L.limit || 300} of ${rows.length} rows · narrow with the filters on the left</span><span class="link" id="tbl-more">Show 500 more</span><span class="link" id="tbl-all">Show all (slow)</span></div>` : ""}`;
     const more = $("tbl-more"); if (more) { more.onclick = () => { L.limit = (L.limit || 300) + 500; renderTable(); }; $("tbl-all").onclick = () => { L.limit = rows.length; renderTable(); }; }
     wrap.querySelectorAll("th[data-k]").forEach(h => h.onclick = () => { const k = h.dataset.k; if (L.sort === k) L.desc = !L.desc; else { L.sort = k; L.desc = k === "score" || k === "conf"; } renderTable(); });
@@ -1730,16 +1733,16 @@
       </div>
       ${summaryHtml}
       ${condBlock}
-      <div class="tabs">${[["overview", "Overview"], ["issues", "Issues by committee"], ["timeline", "Timeline"]].map(([k, l]) => `<button class="${tab === k ? "active" : ""}" data-tab="${k}">${l}</button>`).join("")}</div>
+      <div class="tabs">${[["overview", "Overview"], ["issues", "Topics by committee"], ["timeline", "Timeline"]].map(([k, l]) => `<button class="${tab === k ? "active" : ""}" data-tab="${k}">${l}</button>`).join("")}</div>
       <div id="tab-overview" class="tabpane" ${tab !== "overview" ? "hidden" : ""}>
         <div class="pgrid">
-          <div class="card"><h3>What they talk about</h3><div class="sub">Top issues by attention — recent statements count more. Click a row for the evidence.</div>${noSpeechNote}<div id="p-attn"></div><div class="sub" id="p-attn-note" style="margin:8px 0 0"></div></div>
+          <div class="card"><h3>What they talk about</h3><div class="sub">Top topics by attention — recent statements count more. Click a row for the evidence.</div>${noSpeechNote}<div id="p-attn"></div><div class="sub" id="p-attn-note" style="margin:8px 0 0"></div></div>
           <div class="card"><h3>Where their attention goes</h3><div class="sub">Share of attention by committee.</div><div id="p-mix"></div><div id="p-mix-leg" class="mix-leg"></div><div class="mix-nums"><div><div class="v">${decisiveTxt}</div><div class="l" title="mean |score| across issues: how strongly they commit, regardless of direction">Decisiveness</div></div><div><div class="v">${divTxt}</div><div class="l" title="mean distance from other ${partyName}s on the same issues">vs own party</div></div></div>
             </div>
         </div>
       </div>
       <div id="tab-issues" class="tabpane" ${tab !== "issues" ? "hidden" : ""}>
-        <div class="card"><h3>Where they stand</h3><div class="sub">Grouped by committee; click a committee row to expand. Bar = score, faded = low LLM confidence; <b>dot size = attention</b>; ×N = statements; ⟲ = position changed (ribbon on the right). <span style="color:${partyColor(p.party)}">▌</span> = average of other ${partyName}s on the same issue. Click an issue for the evidence. <span class="link" id="exp-all">expand all</span> · <span class="link" id="col-all">collapse all</span></div><svg id="pbars"></svg></div>
+        <div class="card"><h3>Where they stand</h3><div class="sub">Grouped by committee; click a committee row to expand. Bar = score, faded = low LLM confidence; <b>dot size = attention</b>; ×N = statements; ⟲ = position changed (ribbon on the right). <span style="color:${partyColor(p.party)}">▌</span> = average of other ${partyName}s on the same topic. Click a topic for the evidence. <span class="link" id="exp-all">expand all</span> · <span class="link" id="col-all">collapse all</span></div><svg id="pbars"></svg></div>
       </div>
       <div id="tab-timeline" class="tabpane" ${tab !== "timeline" ? "hidden" : ""}>
         <div class="card"><h3>Everything they said, in order</h3><div class="sub">One ribbon per issue on a shared time axis. Band color = direction held at that time, dot = a statement. Click a dot for the quote.</div><svg id="ptimeline"></svg></div>
@@ -1804,7 +1807,7 @@
         + `<span class="score" style="color:${color(e.direction)}">${fmt(e.score)}</span><span class="attn-n" title="${e.n} statement${e.n === 1 ? "" : "s"}">×${e.n}</span></div>`;
     }).join("");
     host.querySelectorAll(".attn-row").forEach(el => { kbRow(el, "link"); el.onclick = () => { const hit = mine.find(x => x.e.to === el.dataset.to); if (hit) { state.p.sel = hit.e; renderProfile(); renderSide(); } }; });
-    if (note) note.textContent = `${shown.length} of ${mine.length} issues · ranked by attention (recent statements count more) · bar = score, −1…+1 · ×n = statements`;
+    if (note) note.textContent = `${shown.length} of ${mine.length} topics · ranked by attention (recent statements count more) · bar = score, −1…+1 · ×n = statements`;
   }
   function drawMix(mine) {
     const host = document.getElementById("p-mix"), leg = document.getElementById("p-mix-leg");
@@ -2447,11 +2450,11 @@
     if (!i) return "";
     const es = seByI.get(id) || [];
     const D = es.filter(e => byId[e.from].party === "D").map(e => e.score), R = es.filter(e => byId[e.from].party === "R").map(e => e.score);
-    return E_issueQuestionsHtml(id) + `<div class="h">Issue · ${i.catName}</div><h2 class="topic-title">${i.name}</h2><div class="topic-sub">${es.length} legislators on record. Click the issue again or empty space to unpin.</div>`
+    return E_issueQuestionsHtml(id) + `<div class="h">Topic · ${i.catName}</div><h2 class="topic-title">${i.name}</h2><div class="topic-sub">${es.length} legislators on record. Click the topic again or empty space to unpin.</div>`
       + `<div style="font-weight:600">All</div>` + E_splitbar(es.map(e => e.score))
       + `<div style="font-weight:600;color:var(--party-d)">Democrats</div>` + E_splitbar(D)
       + `<div style="font-weight:600;color:var(--party-r)">Republicans</div>` + E_splitbar(R)
-      + `<div style="margin-top:10px"><button class="btn" id="open-issue" data-i="${id}">Open issue page →</button></div><div class="topic-sub" style="margin-top:10px">Party splits live here; the graph never colours nodes by stance.</div>`
+      + `<div style="margin-top:10px"><button class="btn" id="open-issue" data-i="${id}">Open topic page →</button></div><div class="topic-sub" style="margin-top:10px">Party splits live here; the graph never colours nodes by stance.</div>`
       + conditionsPanel(id);
   }
   function E_pinHtml(n) {
@@ -2509,7 +2512,7 @@
     ectl.innerHTML = `<div class="er"><div class="eg"><span class="lab">Party</span><button class="pt on" id="fD" aria-pressed="true"><i style="background:var(--party-d)"></i>D</button><button class="pt on" id="fR" aria-pressed="true"><i style="background:var(--party-r)"></i>R</button></div>`
       + `<div class="eg"><span class="lab"><span class="full">Edges per member</span><span class="short">Edges</span></span><input type="range" id="eK" min="1" max="5" value="${E.K}" aria-label="Edges per member"><b id="eKv" class="val">${E.K}</b></div>`
       + `<div class="eg act"><button class="btn rz" id="eRz" title="Zoom out, unpin, clear highlight">↺ Reset view</button></div></div>`
-      + `<div class="er er2"><div class="eg leg"><span class="lab">Edge</span><span title="Edge colour = the member's position on the issue"><i style="background:var(--support)"></i>Support</span><span><i style="background:var(--oppose)"></i>Oppose</span><span><i style="background:var(--neutral)"></i>Neutral</span><span title="Edge width = attention, opacity = strength of the position, dashed = the member changed direction"><i class="ln"></i>Changed direction</span></div></div>`;
+      + `<div class="er er2"><div class="eg leg"><span class="lab">Edge</span><span title="Edge colour = the member's position on the topic"><i style="background:var(--support)"></i>Support</span><span><i style="background:var(--oppose)"></i>Oppose</span><span><i style="background:var(--neutral)"></i>Neutral</span><span title="Edge width = attention, opacity = strength of the position, dashed = the member changed direction"><i class="ln"></i>Changed direction</span></div></div>`;
     ectl.querySelector(".er2").appendChild(ehud);
     E_targets();
     E_build(true);
@@ -2877,7 +2880,7 @@
     else if (n.kind === "cond") E_tip(ev, n.rows.map(row => `<div><b>${byId[row.person].name}</b> ${phrase(n.score, row)}<div class="cond-q">“${row.quote}”</div></div>`).join(`<hr style="border:0;border-top:1px solid var(--border);margin:6px 0">`));
     else if (n.kind === "leg") E_tip(ev, E_legTip(n) + `<div style="color:var(--accent);margin-top:3px">click → profile</div>`);
 
-    else if (n.kind === "com") E_tip(ev, `<b>${n.name}</b><br>click to open its issues`);
+    else if (n.kind === "com") E_tip(ev, `<b>${n.name}</b><br>click to open its topics`);
     else E_tip(ev, `<b>${n.name}</b><br>${(seByI.get(n.id) || []).length} legislators · click to pin`);
   }
   function E_click() {
@@ -2963,7 +2966,7 @@
     if (modeEl) modeEl.textContent = mode ? "bar = stance on " + mode : "bar = party split";
     if (legEl) legEl.innerHTML = (mode
       ? `<span><span class="sq" style="background:var(--support)"></span>for</span><span><span class="sq" style="background:var(--neutral)"></span>neutral</span><span><span class="sq" style="background:var(--oppose)"></span>against</span><span><span class="sq" style="background:#2a3148"></span>no record</span>`
-      : `<span><span class="sq" style="background:var(--party-d)"></span>Democrats</span><span><span class="sq" style="background:var(--party-r)"></span>Republicans</span><span>one tile per state · number = seats · hover an issue on the ring to recolour by stance</span>`)
+      : `<span><span class="sq" style="background:var(--party-d)"></span>Democrats</span><span><span class="sq" style="background:var(--party-r)"></span>Republicans</span><span>one tile per state · number = seats · hover a topic on the ring to recolour by stance</span>`)
       + (E.stateF ? ` <span class="chip" id="clrst">${STATE_NAMES[E.stateF]} only ✕</span>` : ` <span>click a state to show only its delegation</span>`);
     const clr = $("clrst");
     if (clr) clr.onclick = () => { E.stateF = null; renderSide(); E_draw(); syncExploreHash(); };
@@ -3033,23 +3036,23 @@
     { let _t = "OWL";
       if (state.mode === "profile") { const _p = byId[state.p.person]; _t = (_p ? _p.name : "Legislators") + " \u00b7 OWL"; }
       else if (state.mode === "bill") { const _bi = statementsReady ? billInfo(state.b.id) : null; _t = ((_bi && _bi.num) || "Bill") + " \u00b7 OWL"; }
-      else if (state.mode === "list") _t = "Find \u00b7 OWL";
+      else if (state.mode === "list") _t = "Legislators \u00b7 OWL";
       else if (state.mode === "explore") _t = "OWL";
       else if (state.mode === "bills") _t = "Bills \u00b7 OWL";
-      else if (state.mode === "issues") _t = "Issues \u00b7 OWL";
-      else if (state.mode === "issue") { const _is = issueById[state.iid]; _t = ((_is && _is.name) || "Issue") + " \u00b7 OWL"; }
+      else if (state.mode === "issues") _t = "Topics \u00b7 OWL";
+      else if (state.mode === "issue") { const _is = issueById[state.iid]; _t = ((_is && _is.name) || "Topic") + " \u00b7 OWL"; }
       else if (state.mode === "about") _t = "About \u00b7 OWL";
       document.title = _t; }
     document.body.dataset.mode = state.mode;
-    ["explore", "issues", "bills", "list", "profile", "about"].forEach(m => $("m-" + m).classList.toggle("active", state.mode === m));
+    ["explore", "issues", "bills", "list", "about"].forEach(m => $("m-" + m).classList.toggle("active", m === state.mode || (m === "list" && state.mode === "profile")));
     if (state.mode === "profile") { const p = byId[state.p.person]; $crumb.innerHTML = p ? `<b>${p.name}</b> · ${seat(p)}` : `<b>Legislators</b>`; $hint.textContent = ""; }
     else if (state.mode === "bill") { const info = statementsReady ? billInfo(state.b.id) : null; $crumb.innerHTML = info ? `<b>${info.num}</b> · ${billTitleDisp(info) || "Bill"}` : `<b>Bill</b> · ${statementsReady ? "not found" : "loading statements…"}`; $hint.textContent = ""; }
-    else if (state.mode === "list") { $crumb.innerHTML = `<b>Legislator list</b> · dropdown filters`; $hint.textContent = ""; }
-    else if (state.mode === "explore") { $crumb.innerHTML = `<b>All issues</b> · filtered view`; $hint.textContent = "Click a committee to open it in place · hover or pin to see all of a node's edges · scroll to zoom · / to search · click empty space to reset"; }
+    else if (state.mode === "list") { $crumb.innerHTML = `<b>Legislators</b> · filter and compare`; $hint.textContent = ""; }
+    else if (state.mode === "explore") { $crumb.innerHTML = `<b>All topics</b> · filtered view`; $hint.textContent = "Click a committee to open it in place · hover or pin to see all of a node's edges · scroll to zoom · / to search · click empty space to reset"; }
     else if (state.mode === "bills") { $crumb.innerHTML = `<b>Bills</b> · every bill in data`; $hint.textContent = ""; }
-    else if (state.mode === "issues") { $crumb.innerHTML = `<b>Issues</b> · directory`; $hint.textContent = ""; }
+    else if (state.mode === "issues") { $crumb.innerHTML = `<b>Topics</b> · directory`; $hint.textContent = ""; }
     else if (state.mode === "about") { $crumb.innerHTML = "<b>About</b> | methodology"; $hint.textContent = ""; }
-    else { const i = issueById[state.iid]; $crumb.innerHTML = i ? `<b>${i.catName}</b> › ${i.subName} › <b>${i.name}</b>` : "Pick an issue"; $hint.textContent = ""; }
+    else { const i = issueById[state.iid]; $crumb.innerHTML = i ? `<b>${i.catName}</b> › ${i.subName} › <b>${i.name}</b>` : "Pick a topic"; $hint.textContent = ""; }
   }
   function renderAside() { ({ explore: renderExploreAside, issues: renderIssuesAside, issue: renderIssueAside, bills: renderBillsAside, list: renderListAside, profile: renderProfileAside, bill: renderBillAside, about: renderAboutAside })[state.mode](); }
   function renderSide() {
@@ -3064,7 +3067,6 @@
   function render() { document.body.dataset.pane = state.pane || "view"; renderHeader(); renderAside(); renderSide(); renderCenter(); const _sw = document.getElementById("pane-switch"); if (_sw) _sw.querySelectorAll("button").forEach(b => b.classList.toggle("active", b.dataset.pane === (state.pane || "view"))); }
   $("m-explore").onclick = () => { if (location.hash === "#/explore") { routeFromHash(); render(); } else location.hash = "#/explore"; };
   $("m-list").onclick = () => { if (location.hash === "#/find") { routeFromHash(); render(); } else location.hash = "#/find"; };
-  $("m-profile").onclick = () => { if (location.hash === "#/legislators") { routeFromHash(); render(); } else location.hash = "#/legislators"; };
   $("m-about").onclick = () => { if (location.hash === "#/about") { routeFromHash(); render(); } else location.hash = "#/about"; };
 $("m-issues").onclick = goIssues;
 $("m-bills").onclick = goBills;
