@@ -146,12 +146,14 @@ Rules: `quote` must be verbatim against the record named by `record_id`; `statem
 ### bills.json — optional
 
 ```
-{ "_meta": {...}, "bills": [ { "bill_id", "number", "congress"?, "title"?, "short_title"?, "status"?, "introduced_date"?, "last_action"?, "sponsor_id"?, "issue_ids"?, "url"?, "short_context"?, "binary_question"? } ] }
+{ "_meta": {...}, "bills": [ { "bill_id", "number", "congress"?, "title"?, "short_title"?, "status"?, "introduced_date"?, "last_action"?, "sponsor_id"?, "issue_ids"?, "url"?, "short_context"?, "complex_bill"?, "binary_question"? } ] }
 ```
 
 One record per bill, emitted by `services/ingest/csv-to-json.mjs` from `bills.csv`. The Bills tab and bill pages read this file when present and fall back to grouping statement rows on the bill string when absent. `status` is best-effort (omitted when the latest action is ambiguous); `issue_ids` carries all of the bill's seed issues. Statement and condition rows link via their optional `bill_id`, which must resolve when present.
 
-Match attributes (optional, process-merged, never ingest-emitted): `short_context` is a neutral ≤30-word plain-language summary of what the bill addresses; `binary_question` is `{ question, options: [{ stance, label }, …] }` with exactly two options, one `support` and one `oppose`, driving the match-board picker. Bills that cannot be fairly reduced to one question set `complex_bill: true` instead: context may run to 50 words, no question is carried, and the UI shows a read-the-full-bill tag. Ingest regens must carry these fields forward by `bill_id` without overwriting them.
+Match attributes (optional, process-merged, never ingest-emitted): `short_context` is a neutral ≤30-word plain-language summary of what the bill addresses; `binary_question` is `{ question, options: [{ stance, label, tradeoff? }, …] }` with exactly two options, one `support` and one `oppose`, driving the match-board picker. Each option may carry a `tradeoff`: a neutral ≤25-word line stating what the voter gives up by choosing that side, rendered in the match summary ("What you accepted"); absent tradeoffs hide the block.
+
+Why some bills have no question: omnibus / multi-title packages (e.g. the reconciliation bill) cannot be reduced to one fair yes/no question — a "support" answer could mean supporting any one of several unrelated titles, so forcing a question would manufacture a stance the voter never took. Such bills set `complex_bill: true` instead: context may run to 50 words, no question is carried, and the UI shows a read-the-full-bill tag. Scoring must treat votes on complex bills as activity-only (no issue direction), exactly like votes with an unknown question. Ingest regens must carry these fields forward by `bill_id` without overwriting them.
 
 ## Contract C — derived in the browser
 
