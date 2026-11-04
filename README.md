@@ -227,6 +227,9 @@ browser only renders it.
     (`draft-bill-context.mjs`)
   - issue-taxonomy review and a blind re-scoring audit without names or parties
     (`review-issues.mjs`, `audit/`)
+- **Demo narration** — [script](docs/demo/script.md) written by Muse Spark, spoken at 1:59,
+  verified round-trip through Muse Voice Transcribe
+  ([`docs/demo/narration.mp3`](docs/demo/narration.mp3))
 - **Muse Image 1.0** — the OWL mark and shareable cards (`tools/gen-image.mjs`)
 - **Muse Code** — wrote most of `apps/web/index.html` headlessly from OpenSpec change
   documents (commits carry `Co-Authored-By: Muse Code`); `tools/claude-muse.ps1` points Claude
