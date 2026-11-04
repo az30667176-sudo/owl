@@ -1,6 +1,6 @@
 # OWL demo script (2-minute voiceover)
 
-Structure per direction: mission and vision first (first 30-60 seconds), the app today with exactly two numbers (451 members, 20,608 statements), how it is built on Meta Spark and Wonder, then the future — decades of past Congresses, public social-media ingestion, runtime natural-language answers at a hundred times the data on Meta cost-efficient model serving.
+Structure per direction: mission and vision first (first 30–60 seconds), the app today with exactly two numbers (451 members, 20,608 statements), how it is built on Meta Spark and Wonder, then the future — decades of past Congresses, public social-media ingestion, and runtime natural-language answers at a hundred times the data on Meta's cost-efficient model serving.
 
 Production: script by Muse Spark (Meta Model API) → neural TTS at -6% rate (OpenAI TTS had no credits; Meta offers speech-to-text only) → verified round-trip through Meta Muse Voice Transcribe (measured duration 2:02, transcript matches this script, single speaker). Audio: `narration.mp3`.
 
