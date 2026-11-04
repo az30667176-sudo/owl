@@ -26,7 +26,7 @@ const probe = f => +execFileSync("ffprobe", ["-v", "error", "-show_entries", "fo
 const segs = SEG.segments.map(s => ({ ...s, dur: probe(path.join(AUDIO, s.id + ".mp3")) + PAD,
   words: JSON.parse(fs.readFileSync(path.join(AUDIO, s.id + ".words.json"), "utf8")) }));
 
-const browser = await chromium.launch({ channel: "chrome", headless: true, args: ["--hide-scrollbars", "--force-device-scale-factor=1"] });
+const browser = await chromium.launch({ channel: "chrome", headless: true, args: ["--hide-scrollbars", "--force-device-scale-factor=1", "--autoplay-policy=no-user-gesture-required"] });
 const ctx = await browser.newContext({ viewport: { width: W, height: H }, deviceScaleFactor: 1, colorScheme: "dark" }); // GitHub follows it, matching the app
 await ctx.addInitScript(() => {
   addEventListener("DOMContentLoaded", () => {
@@ -165,6 +165,26 @@ const SHOTS = {
   },
   async kEnd() { await clickSel("#m-explore", 0, 700); await sleep(500); await moveTo(W * .45, H * .45, 900); },
   // ---- closing segment (segments-tech.json): GitHub repo, pipeline, vision scenes ----
+  // ---- opening (segments-opening.json) ----
+  async oFootage() { await hideCursor(); const span = segs[0].dur + segs[1].dur; await page.evaluate(r => { scene(10); const v = document.getElementById("opv"); v.playbackRate = r; step(1); }, Math.min(1.2, Math.max(.75, 10 / span))); }, // stretch the 10 s footage over the first two lines
+  async oUnread() { /* the footage runs on into its "Public. Unread." card */ },
+  async oOwl() {
+    await page.evaluate(() => scene(11));
+    await cue("451"); await page.evaluate(() => step(1));
+    await cue("20608"); await page.evaluate(() => step(2));
+    await cue("click"); await page.evaluate(() => step(3));
+  },
+  async oVision() {
+    await page.evaluate(() => scene(12));
+    await cue("claim"); await page.evaluate(() => step(1));
+    await cue("exact"); await page.evaluate(() => step(2));
+    await cue("place"); await page.evaluate(() => step(3));
+  },
+  async oLabel() {
+    await page.evaluate(() => scene(13));
+    await cue("record"); await page.evaluate(() => step(2));
+    await cue("label"); await page.evaluate(() => step(1));
+  },
   async tRepo() {
     await cue("github"); await pointAt('[itemprop="name"]', 0, 900);
     await cue("architecture"); await go(LOCAL + "tools/demo/vision.html#rec", 500); await page.evaluate(() => scene(1)); await sleep(400); await page.evaluate(() => step(1));
@@ -196,12 +216,12 @@ const SHOTS = {
   },
   async tPlug() {
     await page.evaluate(() => scene(8)); await hideCursor();
-    await cue("hearings"); await page.evaluate(() => step(1));
+    await cue("source"); await page.evaluate(() => step(1));
+    await cue("pipeline"); await page.evaluate(() => step(2));
     await cue("decades"); await page.evaluate(() => { const d = document.querySelector("#srcs"); if (d && !d.querySelector(".old")) { const e = document.createElement("div"); e.className = "src new old on"; e.innerHTML = "decades of past Congresses<small>next</small>"; d.appendChild(e); } });
-    await cue("adapter"); await page.evaluate(() => step(2));
   },
   async tLive() {
-    await cue("positions"); await page.evaluate(() => step(3));
+    await cue("new"); await page.evaluate(() => step(3));
     await cue("multilingual"); await page.evaluate(() => scene(5)); await sleep(350); await page.evaluate(() => step(1));
   },
   async tReach() {

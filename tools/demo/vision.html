@@ -106,6 +106,38 @@
   .row9 .q { font: italic 400 18px/1.45 var(--display); }
   .row9 .ok { color: #3fcf77; font: 600 15px var(--mono); }
 
+
+  /* 10-13 · opening: the teammate's footage, then OWL, the vision, record not label */
+  #s10 { padding: 0; }
+  #s10 video { width: 100%; height: 100%; object-fit: cover; }
+  .owl11 { align-items: center; text-align: center; }
+  .owl11 img { width: 120px; height: 120px; border-radius: 50%; margin-bottom: 20px; }
+  .owl11 h1 { font-size: 78px; margin-bottom: 4px; }
+  .owl11 .full { font: 600 20px var(--mono); letter-spacing: .2em; text-transform: uppercase; color: var(--accent); }
+  .nums { display: flex; gap: 70px; justify-content: center; margin-top: 46px; }
+  .nums div { text-align: center; }
+  .nums b { display: block; font: 600 64px/1 var(--display); color: var(--text); }
+  .nums span { font: 500 16px var(--mono); color: var(--muted); letter-spacing: .06em; }
+  .chain { display: grid; grid-template-columns: 1fr 56px 1.25fr 56px 1fr; align-items: stretch; margin-top: 34px; }
+  .lk { border: 1px solid var(--border-strong); background: var(--panel); padding: 22px 24px; opacity: 0; transform: translateY(10px); transition: all .5s ease; }
+  .lk.on { opacity: 1; transform: none; }
+  .lk .h { font: 600 14px var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+  .lk .t { font-size: 22px; line-height: 1.4; }
+  .lk .q { font: italic 400 22px/1.45 var(--display); }
+  .lk .s { font: 500 15px var(--mono); color: var(--muted); margin-top: 10px; }
+  .lnk { display: flex; align-items: center; justify-content: center; font: 700 36px var(--mono); color: var(--accent); opacity: 0; transition: opacity .4s ease; }
+  .lnk.on { opacity: 1; }
+  .rl { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; }
+  .lab { border: 1px solid var(--border); background: var(--panel); padding: 30px; text-align: center; transition: opacity .6s ease, filter .6s ease; }
+  .lab .pp { display: inline-block; font: 700 64px var(--display); width: 120px; height: 120px; line-height: 120px; border-radius: 50%; margin: 0 10px; }
+  .lab.off { opacity: .28; filter: grayscale(1); }
+  .lab .x { font: 500 18px var(--mono); color: var(--muted); margin-top: 18px; }
+  .rec { border: 1px solid var(--accent); background: rgba(240,180,41,.07); padding: 26px 30px; opacity: 0; transition: opacity .6s ease; }
+  .rec.on { opacity: 1; }
+  .rec .r { border-top: 1px solid var(--border); padding: 12px 0; font-size: 20px; display: flex; justify-content: space-between; }
+  .rec .r:first-of-type { border-top: 0; }
+  .rec .r span:last-child { font: 500 15px var(--mono); color: var(--muted); }
+
   /* 2 · decades of records */
   .tl { display: flex; align-items: flex-end; gap: 14px; height: 360px; margin: 34px 0 8px; border-bottom: 1px solid var(--border-strong); padding-bottom: 2px; }
   .tl .c { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; }
@@ -184,6 +216,40 @@
   <div class="legend1"><span><i style="background:#2f8cff"></i>Muse Spark</span><span><i style="background:#3fcf77"></i>deterministic, zero model calls</span><span><i style="background:#f0b429"></i>human review · the website</span></div>
 </section>
 
+<section class="scene" id="s10"><video id="opv" src="out/opening-src.mp4" muted playsinline preload="auto"></video></section>
+
+<section class="scene owl11" id="s11">
+  <img src="../../apps/web/assets/logo/owl-mark-512.png" alt="">
+  <h1>OWL</h1>
+  <div class="full">Open Watch on Legislators</div>
+  <div class="nums">
+    <div class="fade" id="n1"><b>451</b><span>House members</span></div>
+    <div class="fade" id="n2"><b>20,608</b><span>statements</span></div>
+    <div class="fade" id="n3"><b>1 click</b><span>to the source</span></div>
+  </div>
+</section>
+
+<section class="scene" id="s12">
+  <div class="kicker">Our vision</div>
+  <h1>Every claim comes with the proof.</h1>
+  <div class="chain">
+    <div class="lk" id="l1"><div class="h">The claim</div><div class="t">Rep. J. Luis Correa supports better border-security technology.</div></div>
+    <div class="lnk" id="la">→</div>
+    <div class="lk" id="l2"><div class="h">The exact words</div><div class="q">“Committee Democrats support the use of more efficient border security technologies to catch and detect smugglers and interdict drugs.”</div></div>
+    <div class="lnk" id="lb">→</div>
+    <div class="lk" id="l3"><div class="h">Where it was said</div><div class="t">House committee report H. Rept. 119-106</div><div class="s">govinfo.gov · May 20, 2025</div></div>
+  </div>
+</section>
+
+<section class="scene" id="s13">
+  <div class="kicker">Before you vote</div>
+  <h1>Judge the record, not the label.</h1>
+  <div class="rl">
+    <div class="lab" id="lab"><span class="pp" style="background:#5b8cff;color:#0f1322">D</span><span class="pp" style="background:#ff7a6b;color:#0f1322">R</span><div class="x">a party label</div></div>
+    <div class="rec" id="rec"><div class="r"><span>what they said</span><span>quoted</span></div><div class="r"><span>how they voted</span><span>on record</span></div><div class="r"><span>when they changed</span><span>dated</span></div><div class="r"><span>where it came from</span><span>linked</span></div></div>
+  </div>
+</section>
+
 <section class="scene" id="s9">
   <div class="kicker" style="color:#5aa5ff">Muse Spark · one real example</div>
   <h1>From a committee report to quoted evidence.</h1>
@@ -213,8 +279,8 @@
 </section>
 
 <section class="scene" id="s8">
-  <div class="kicker">Next · any source, updated continuously</div>
-  <h1>Every new source is one more adapter.</h1>
+  <div class="kicker">Next · more public sources</div>
+  <h1>Any public source. Same pipeline.</h1>
   <div class="plug">
     <div class="srcs" id="srcs">
       <div class="src now">congress.gov bills and votes<small>today</small></div>
@@ -226,10 +292,10 @@
       <div class="src new">Instagram · public posts<small>next</small></div>
     </div>
     <div class="arr2" id="ar1">→</div>
-    <div class="pipe2" id="pp"><div class="ch">Same pipeline</div><div class="n">adapter → contract-A record</div><div class="n sp">Muse Spark reads it</div><div class="n gt">contract gate</div></div>
+    <div class="pipe2" id="pp"><div class="ch">Same pipeline</div><div class="n">turned into a standard record</div><div class="n sp">Muse Spark reads it</div><div class="n gt">contract gate</div></div>
     <div class="arr2" id="ar2">→</div>
-    <div class="feed" id="feed"><div class="ch">Positions, as they speak</div>
-      <div class="fi" id="f1"><div class="t">new statement · minutes ago</div>stance on the topic updated<div class="ch2" style="color:var(--support)">linked to its quote</div></div>
+    <div class="feed" id="feed"><div class="ch">What voters get</div>
+      <div class="fi" id="f1"><div class="t">new statement · minutes ago</div>position updated<div class="ch2" style="color:var(--support)">with the quote attached</div></div>
       <div class="fi" id="f2"><div class="t">new vote · today</div>position changed<div class="ch2" style="color:var(--accent)">⟲ support → oppose</div></div>
       <div class="fi" id="f3"><div class="t">new post · today</div>match results refreshed<div class="ch2" style="color:var(--muted)">for every voter who answered</div></div>
     </div>
@@ -319,6 +385,10 @@
   window.step = n => {
     const on = id => $(id).classList.add("on");
     const cur = (document.querySelector(".scene.on") || {}).id;
+    if (cur === "s10" && n === 1) { const v = $("opv"); v.currentTime = 0; v.play(); }
+    if (cur === "s11") on("n" + n);
+    if (cur === "s12") { if (n === 1) on("l1"); if (n === 2) { on("la"); on("l2"); } if (n === 3) { on("lb"); on("l3"); } }
+    if (cur === "s13") { if (n === 1) $("lab").classList.add("off"); if (n === 2) on("rec"); }
     if (cur === "s9") {
       if (n === 1) $("hl").classList.add("on");
       if (n === 2) { on("ba1"); ["r1", "r2", "r3", "r4", "r5"].forEach((id, i) => timers.push(setTimeout(() => on(id), 200 + i * 260))); }

@@ -1,0 +1,42 @@
+{
+  "_meta": {
+    "description": "Opening of the demo video (about 32 s): the record is public but unread; OWL reads it; the vision; record, not label. The first two lines play over the teammate's original footage (tools/demo/out/opening-src.mp4).",
+    "out": "owl-opening",
+    "voice": "en-US-BrianMultilingualNeural",
+    "wordsPerSecond": 2.8,
+    "rate": "+7%",
+    "startUrl": "http://127.0.0.1:8765/tools/demo/vision.html#rec"
+  },
+  "segments": [
+    {
+      "id": "o01",
+      "shot": "oFootage",
+      "caption": "",
+      "text": "This is a House committee report. It's public, and this Congress has published hundreds of them."
+    },
+    {
+      "id": "o02",
+      "shot": "oUnread",
+      "caption": "",
+      "text": "Almost nobody reads them. So voters go by the party label."
+    },
+    {
+      "id": "o03",
+      "shot": "oOwl",
+      "caption": "",
+      "text": "That's why we built OWL, Open Watch on Legislators. It reads that record for you: 451 House members and 20,608 statements, each one click from its source."
+    },
+    {
+      "id": "o04",
+      "shot": "oVision",
+      "caption": "",
+      "text": "Our vision is simple. Every claim about a politician comes with their exact words, and the place they said them."
+    },
+    {
+      "id": "o05",
+      "shot": "oLabel",
+      "caption": "",
+      "text": "So you can judge them on the record, not the label."
+    }
+  ]
+}
