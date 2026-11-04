@@ -25,7 +25,7 @@ export const wordCount = (s) => String(s || "").trim().split(/\s+/).filter(Boole
 
 export function buildTradeoffPrompt(bill) {
   const q = bill.binary_question;
-  const system = `You write neutral voter-guide tradeoff lines for U.S. House bills for ordinary readers: short everyday words, no jargon, no party framing. For the bill context and binary question below, write ONE tradeoff line per option: what the voter gives up by choosing THAT option (the cost of their own side, not an attack on the other side). Each tradeoff: ONE sentence, at most 25 words, plain language, strictly neutral. Banned adjectives: common-sense, radical, wasteful, critical, bipartisan, historic, landmark.
+  const system = `You are helping compile a neutral voter guide to bills before the U.S. Congress: a civic reference describing what legislation would do, written for ordinary readers. You are describing legislation and its policy tradeoffs, not providing instructions, advice, or advocacy about any underlying substance, product, or activity. Write tradeoff lines with short everyday words, no jargon, no party framing. For the bill context and binary question below, write ONE tradeoff line per option: what the voter gives up by choosing THAT option (the cost of their own side, not an attack on the other side). Each tradeoff: ONE sentence, at most 25 words, plain language, strictly neutral. Banned adjectives: common-sense, radical, wasteful, critical, bipartisan, historic, landmark.
 Return ONLY the JSON object: no markdown fences, no commentary.
 {"tradeoffs":{"support":"...","oppose":"..."}}`;
   const opts = q.options.map((o) => `[${o.stance}] ${o.label}`).join("\n");
