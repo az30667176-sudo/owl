@@ -148,7 +148,11 @@ if (isMain) {
       await new Promise((res) => setTimeout(res, 5000));
       return draftOne(b, attempt + 1);
     }
-    if (!r.ok) return { error: `HTTP ${r.status}` };
+    if (!r.ok) {
+      let detail = "";
+      try { detail = ` ${(await r.text()).slice(0, 200)}`; } catch { /* ignore */ }
+      return { error: `HTTP ${r.status}${detail}` };
+    }
     const j = await r.json();
     const raw = j.choices?.[0]?.message?.content || "";
     let parsed = null;
@@ -166,7 +170,9 @@ if (isMain) {
     return { tradeoffs: { support: parsed.tradeoffs.support.trim(), oppose: parsed.tradeoffs.oppose.trim() }, error: null };
   }
 
-  const kept = targets.filter((b) => prev.has(b.bill_id) && !prev.get(b.bill_id).error).map((b) => prev.get(b.bill_id));
+  // Keep EVERY previously good draft, not just the current targets: a scoped
+  // re-run (--only) must not discard the rest of the staging file.
+  const kept = [...prev.values()].filter((d) => !d.error);
   const all = [...kept];
   const meta = {
     description: "Staging: LLM-drafted per-option tradeoffs. Human review required; merge only approved entries.",

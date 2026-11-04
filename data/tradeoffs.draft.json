@@ -1,0 +1,770 @@
+{
+  "_meta": {
+    "description": "Staging: LLM-drafted per-option tradeoffs. Human review required; merge only approved entries.",
+    "model": "muse-spark-1.3",
+    "at": "2026-11-04",
+    "prompt_sha": "ffcdb92016e2"
+  },
+  "drafts": [
+    {
+      "bill_id": "hconres113-119",
+      "number": "H. Con. Res. 113",
+      "approved": false,
+      "tradeoffs": {
+        "support": "Supporting these targets gives up some freedom to adjust taxes and spending later if needs change.",
+        "oppose": "Opposing these targets gives up a set plan that could make future tax and spending choices clearer."
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hconres14-119",
+      "number": "H. Con. Res. 14",
+      "approved": false,
+      "tradeoffs": {
+        "support": "Supporting means accepting limits on later spending and tax choices tied to these targets.",
+        "oppose": "Opposing means giving up a shared plan and keeping less clear guidance for later money bills."
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hconres73-119",
+      "number": "H. Con. Res. 73",
+      "approved": false,
+      "tradeoffs": {
+        "support": "Supporting this use gives up open public access to the grounds during setup and the event.",
+        "oppose": "Opposing this use gives up a central and visible place to honor fallen officers."
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hconres9-119",
+      "number": "H. Con. Res. 9",
+      "approved": false,
+      "tradeoffs": {
+        "support": "Allowing it uses shared Capitol space and staff time that could go to other public needs.",
+        "oppose": "Not allowing it gives up a central public place to honor fallen officers together."
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hjres1-119",
+      "number": "H.J. Res. 1",
+      "approved": false,
+      "tradeoffs": {
+        "support": "Locking the number in makes future changes much harder, even if needs shift.",
+        "oppose": "Leaving it open keeps the chance of repeated size changes over time."
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hjres139-119",
+      "number": "H.J. Res. 139",
+      "approved": false,
+      "tradeoffs": {
+        "support": "Supporting this gives up the ability to borrow quickly in wars, recessions, or disasters without cutting services or raising taxes.",
+        "oppose": "Opposing this gives up a firm limit on yearly debt growth and leaves future borrowing without a set rule."
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hjres25-119",
+      "number": "H.J. Res. 25",
+      "approved": false,
+      "tradeoffs": {
+        "support": "Supporting cancellation gives up extra tax records that help make sure digital sales are taxed fairly.",
+        "oppose": "Opposing cancellation gives up added privacy and less paperwork for people and firms that handle digital sales."
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hjres59-119",
+      "number": "H.J. Res. 59",
+      "approved": false,
+      "tradeoffs": {
+        "support": "Supporting cancellation means giving up caps that could keep costs down for people who overdraw their accounts.",
+        "oppose": "Opposing cancellation means giving up letting banks set fees freely, which might change what services they offer."
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr1001-119",
+      "number": "H.R. 1001",
+      "approved": false,
+      "tradeoffs": {
+        "support": "Supporting means using federal money and staff time to fill the gap, leaving less for other needs.",
+        "oppose": "Opposing means the fund may stay short and do less river work until other money is found."
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr1005-119",
+      "number": "H.R. 1005",
+      "approved": false,
+      "tradeoffs": {
+        "support": "Supporting this could take learning money from students when schools lose federal funds.",
+        "oppose": "Opposing this could leave schools open to outside pressure from foreign governments."
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr1013-119",
+      "number": "H.R. 1013",
+      "approved": false,
+      "tradeoffs": {
+        "support": "Supporting means giving up the extra limits that now shield these plans from some shared fund risks.",
+        "oppose": "Opposing means giving up possible lower fees and wider choices that shared funds can offer savers."
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr10238-119",
+      "number": "H.R. 10238",
+      "approved": false,
+      "tradeoffs": {
+        "support": "Supporting means accepting higher public spending and more government involvement in private business safety.",
+        "oppose": "Opposing means small firms stay more open to computer attacks and must pay for help on their own."
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr1028-119",
+      "number": "H.R. 1028",
+      "approved": false,
+      "tradeoffs": {
+        "support": "Supporting limits means some athletes who live as women could not join women's events.",
+        "oppose": "Opposing limits means women's events stay open to all, giving up a birth-based fairness rule."
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr10329-119",
+      "number": "H.R. 10329",
+      "approved": false,
+      "tradeoffs": {
+        "support": "Supporting means using tax money and staff time for this help, leaving less for other small-business needs.",
+        "oppose": "Opposing means small firms get no added help here and may face higher risk of losing data and ideas."
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr10352-119",
+      "number": "H.R. 10352",
+      "approved": false,
+      "tradeoffs": {
+        "support": "Supporting this gives up yearly limits set by Congress and accepts more risk if loans are not repaid.",
+        "oppose": "Opposing this gives up a chance to fund more small-firm projects when demand is high."
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr10353-119",
+      "number": "H.R. 10353",
+      "approved": false,
+      "tradeoffs": {
+        "support": "Supporting means giving up the current known process and accepting time and work to learn new filing steps.",
+        "oppose": "Opposing means giving up possible simpler reports and keeping paperwork that may feel old or harder to use."
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr10355-119",
+      "number": "H.R. 10355",
+      "approved": false,
+      "tradeoffs": {
+        "support": "Requiring the same outreach in each area gives up the agency's ability to adjust its message to local needs.",
+        "oppose": "Leaving outreach decisions to the agency gives up a guarantee that each disaster area gets the same loan information."
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr10371-119",
+      "number": "H.R. 10371",
+      "approved": false,
+      "tradeoffs": {
+        "support": "Requiring action could limit the agency's room to set its own plans and handle costs.",
+        "oppose": "Leaving the choice open could let useful fixes sit unused and problems last longer."
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr10375-119",
+      "number": "H.R. 10375",
+      "approved": false,
+      "tradeoffs": {
+        "support": "Supporting means accepting more risk of loan losses paid with public money.",
+        "oppose": "Opposing means accepting that some small makers may wait longer to buy space or tools."
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr1041-119",
+      "number": "H.R. 1041",
+      "approved": false,
+      "tradeoffs": {
+        "support": "Supporting this gives up quick limits on guns while waiting for a court decision.",
+        "oppose": "Opposing this gives up keeping gun rights until a judge finds a safety risk."
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr1043-119",
+      "number": "H.R. 1043",
+      "approved": false,
+      "tradeoffs": {
+        "support": "Supporting sale gives up lasting federal care of the land and open use for all people.",
+        "oppose": "Opposing sale gives up possible local jobs and new clean power made close to home."
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr1044-119",
+      "number": "H.R. 1044",
+      "approved": false,
+      "tradeoffs": {
+        "support": "Supporting extension gives up a fresh review of water, land, and wildlife effects before more years of use.",
+        "oppose": "Opposing extension gives up steady local water and power while a new permit path is sought."
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr1045-119",
+      "number": "H.R. 1045",
+      "approved": false,
+      "tradeoffs": {
+        "support": "Supporting it means spending federal money on a new research office that may take time to show results.",
+        "oppose": "Opposing it means giving up a focused Utah research effort that could help find ways to lower fire risk."
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr1047-119",
+      "number": "H.R. 1047",
+      "approved": false,
+      "tradeoffs": {
+        "support": "Supporting means using public money for these projects, leaving less for other needs or adding to debt.",
+        "oppose": "Opposing means passing up help for the network, risking more outages and slower fixes when demand grows."
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr1048-119",
+      "number": "H.R. 1048",
+      "approved": false,
+      "tradeoffs": {
+        "support": "Supporting reporting means schools spend more time and money on forms and tracking gifts.",
+        "oppose": "Opposing reporting means the public learns less about where foreign money to colleges comes from."
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr1049-119",
+      "number": "H.R. 1049",
+      "approved": false,
+      "tradeoffs": {
+        "support": "Requiring reports adds paperwork and costs for schools and staff time spent on forms.",
+        "oppose": "Not requiring reports means parents may miss facts about outside money in their schools."
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr1069-119",
+      "number": "H.R. 1069",
+      "approved": false,
+      "tradeoffs": {
+        "support": "Choosing this means giving up federal aid for some schools, which could cut classes and language learning for students.",
+        "oppose": "Choosing this means giving up a tool to limit foreign sway in schools, leaving possible outside sway over lessons in place."
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr1071-119",
+      "number": "H.R. 1071",
+      "approved": false,
+      "tradeoffs": {
+        "support": "Supporting this could make talks with other countries harder and risk payback against Americans traveling or working abroad.",
+        "oppose": "Opposing this keeps a way for officials who limit speech to enter, giving up a tool to defend Americans' voice."
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr1077-119",
+      "number": "H.R. 1077",
+      "approved": false,
+      "tradeoffs": {
+        "support": "Supporting means giving up some added checks that slow harm to land, air, and water near mines.",
+        "oppose": "Opposing means giving up a chance for quicker local supply of minerals and jobs tied to new mines."
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr1078-119",
+      "number": "H.R. 1078",
+      "approved": false,
+      "tradeoffs": {
+        "support": "Choosing this gives up one set of rules everywhere, so help for renters could differ a lot by state.",
+        "oppose": "Choosing this gives up local control, so federal rules might not fit housing needs in some towns."
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr1082-119",
+      "number": "H.R. 1082",
+      "approved": false,
+      "tradeoffs": {
+        "support": "Supporting stricter rules could mean higher costs and slower access to some treatments.",
+        "oppose": "Keeping current rules could mean less protection if unsafe products reach patients."
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr1098-119",
+      "number": "H.R. 1098",
+      "approved": false,
+      "tradeoffs": {
+        "support": "Supporting renewal means keeping federal spending on the contest that could be used for other needs.",
+        "oppose": "Opposing renewal means giving up a hands-on way for students to learn about wetlands and wildlife."
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr1107-119",
+      "number": "H.R. 1107",
+      "approved": false,
+      "tradeoffs": {
+        "support": "Supporting means accepting less state control over care standards and follow-up for veterans.",
+        "oppose": "Opposing means accepting that some veterans may wait longer or travel farther for care."
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr1110-119",
+      "number": "H.R. 1110",
+      "approved": false,
+      "tradeoffs": {
+        "support": "Supporting means accepting less review and higher risk to soil, water, plants, and wildlife.",
+        "oppose": "Opposing means accepting slower fuel removal and higher risk of large, hard to fight fires."
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr1152-119",
+      "number": "H.R. 1152",
+      "approved": false,
+      "tradeoffs": {
+        "support": "Supporting means accepting that tax money may arrive a few days later.",
+        "oppose": "Opposing means accepting that online filers get no extra time when due dates fall on weekends or holidays."
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr1155-119",
+      "number": "H.R. 1155",
+      "approved": false,
+      "tradeoffs": {
+        "support": "Supporting means accepting higher IRS workload and costs to track down stolen money and send new checks.",
+        "oppose": "Opposing means accepting that victims of stolen checks may wait longer or never get their refund money."
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr1156-119",
+      "number": "H.R. 1156",
+      "approved": false,
+      "tradeoffs": {
+        "support": "Choosing this means accepting longer legal risk for people accused and more work and cost for courts.",
+        "oppose": "Choosing this means accepting that some fraud cases may run out of time and lost funds may not be paid back."
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr1163-119",
+      "number": "H.R. 1163",
+      "approved": false,
+      "tradeoffs": {
+        "support": "Supporting this means accepting slower new rules and higher agency costs to review effects first.",
+        "oppose": "Opposing this means giving up early public detail on how new rules could affect small firms."
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr1181-119",
+      "number": "H.R. 1181",
+      "approved": false,
+      "tradeoffs": {
+        "support": "Supporting this gives up a way to flag unusual gun store buying that might help stop crime.",
+        "oppose": "Opposing this gives up some buyer privacy by letting gun store buys be marked and studied separately."
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr1182-119",
+      "number": "H.R. 1182",
+      "approved": false,
+      "tradeoffs": {
+        "support": "Requiring updated checks could mean higher shipping costs and more wait time for fuel and gas deliveries.",
+        "oppose": "Keeping current rules could mean missing new risks that lead to leaks or harm in a crash."
+      },
+      "error": null
+    },
+    {
+      "bill_id": "hr1190-119",
+      "number": "H.R. 1190",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1262-119",
+      "number": "H.R. 1262",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1266-119",
+      "number": "H.R. 1266",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1276-119",
+      "number": "H.R. 1276",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1286-119",
+      "number": "H.R. 1286",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1295-119",
+      "number": "H.R. 1295",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr131-119",
+      "number": "H.R. 131",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1319-119",
+      "number": "H.R. 1319",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1320-119",
+      "number": "H.R. 1320",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1327-119",
+      "number": "H.R. 1327",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1329-119",
+      "number": "H.R. 1329",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1336-119",
+      "number": "H.R. 1336",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1343-119",
+      "number": "H.R. 1343",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1352-119",
+      "number": "H.R. 1352",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1355-119",
+      "number": "H.R. 1355",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1364-119",
+      "number": "H.R. 1364",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1366-119",
+      "number": "H.R. 1366",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1373-119",
+      "number": "H.R. 1373",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1382-119",
+      "number": "H.R. 1382",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1402-119",
+      "number": "H.R. 1402",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1442-119",
+      "number": "H.R. 1442",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1450-119",
+      "number": "H.R. 1450",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1455-119",
+      "number": "H.R. 1455",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1458-119",
+      "number": "H.R. 1458",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1468-119",
+      "number": "H.R. 1468",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1469-119",
+      "number": "H.R. 1469",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1474-119",
+      "number": "H.R. 1474",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1479-119",
+      "number": "H.R. 1479",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1483-119",
+      "number": "H.R. 1483",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1491-119",
+      "number": "H.R. 1491",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1493-119",
+      "number": "H.R. 1493",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1501-119",
+      "number": "H.R. 1501",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr151-119",
+      "number": "H.R. 151",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1520-119",
+      "number": "H.R. 1520",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1526-119",
+      "number": "H.R. 1526",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1531-119",
+      "number": "H.R. 1531",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1549-119",
+      "number": "H.R. 1549",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1569-119",
+      "number": "H.R. 1569",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1577-119",
+      "number": "H.R. 1577",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1578-119",
+      "number": "H.R. 1578",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1588-119",
+      "number": "H.R. 1588",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1602-119",
+      "number": "H.R. 1602",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1608-119",
+      "number": "H.R. 1608",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr161-119",
+      "number": "H.R. 161",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1618-119",
+      "number": "H.R. 1618",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1621-119",
+      "number": "H.R. 1621",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1634-119",
+      "number": "H.R. 1634",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1640-119",
+      "number": "H.R. 1640",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1642-119",
+      "number": "H.R. 1642",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1663-119",
+      "number": "H.R. 1663",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1664-119",
+      "number": "H.R. 1664",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1665-119",
+      "number": "H.R. 1665",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1669-119",
+      "number": "H.R. 1669",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1676-119",
+      "number": "H.R. 1676",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1679-119",
+      "number": "H.R. 1679",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1681-119",
+      "number": "H.R. 1681",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1687-119",
+      "number": "H.R. 1687",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1693-119",
+      "number": "H.R. 1693",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1703-119",
+      "number": "H.R. 1703",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    },
+    {
+      "bill_id": "hr1709-119",
+      "number": "H.R. 1709",
+      "approved": false,
+      "error": "HTTP 403 {\"error\":{\"code\":\"user_blocked\",\"message\":\"Your access has been restricted due to repeated policy violations.\",\"param\":null,\"type\":\"permission_error\"}}"
+    }
+  ]
+}

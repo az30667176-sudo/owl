@@ -216,7 +216,9 @@ if (isMain) {
     };
   }
 
-  const kept = targets.filter((b) => prev.has(b.bill_id) && !prev.get(b.bill_id).error).map((b) => prev.get(b.bill_id));
+  // Keep EVERY previously good draft, not just the current targets: a scoped
+  // re-run (--only) must not discard the rest of the staging file.
+  const kept = [...prev.values()].filter((d) => !d.error);
   const all = [...kept];
   const meta = {
     description: "Staging: LLM-drafted bill match attributes. Human review required; merge only approved entries.",
