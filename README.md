@@ -46,6 +46,98 @@ Four boxes, three contracts (mirrors the team board):
 `node packages/contract/validate.mjs <data dir>` checks types, enums, id references, score/direction
 consistency, verbatim quotes and summary citations. The Pages workflow runs it before every deploy.
 
+### End-to-end pipeline
+
+Blue = Muse Spark · green = deterministic, zero model calls · yellow = human review gates.
+The browser itself never calls a model — every LLM read or write happens in `services/process`,
+and every generated field merges only after human approval.
+
+```mermaid
+flowchart TB
+    subgraph SRC["Sources — official records only"]
+        direction LR
+        CG[congress.gov<br/>BILLSTATUS]
+        GI[govinfo<br/>committee reports]
+        HT[hearing transcripts<br/>planned for M3]
+    end
+
+    subgraph ING["services/ingest — deterministic, zero LLM calls"]
+        direction TB
+        GP[govinfo parser<br/>ingest.py weekly job]
+        DROP[CSV drop<br/>9 tables + MANIFEST]
+        VG[validate-csv.mjs<br/>producer self-check gate]
+        CV[csv-to-json.mjs<br/>all CSVs → all JSONs]
+    end
+
+    subgraph DATA["data/ — contracts A + B"]
+        direction LR
+        RECA[(contract-A records<br/>speaker-tagged text)]
+        BASE[(contract-B base<br/>taxonomy · issues · people<br/>stances · bills)]
+    end
+
+    subgraph SPARK["Muse Spark — all model reads and writes"]
+        direction TB
+        EXT[extract.mjs<br/>records → speech stances]
+        SUM[summarize.mjs<br/>per-legislator summaries]
+        CTX[draft-bill-context.mjs<br/>short_context + binary_question]
+        TRD[draft-tradeoffs.mjs<br/>per-option tradeoffs]
+        AUD[blind-scoring audit<br/>bias check, n = 101]
+    end
+
+    subgraph REV["Human review gates"]
+        direction LR
+        RV1[approve context drafts<br/>before merge]
+        RV2[approve tradeoff drafts<br/>before merge]
+    end
+
+    subgraph APP["apps/web — no model calls in the browser"]
+        direction TB
+        GR[graph.json<br/>prebuilt edge cache]
+        UI[Explore · Issues · Bills<br/>Legislators · Find · About]
+        MB[match board<br/>binary picker → ranked legislators]
+    end
+
+    subgraph META2["Other Meta models"]
+        direction LR
+        IMG[Muse Image<br/>logo + share cards]
+        CODE[Muse Code<br/>coding agent]
+    end
+
+    CG --> GP
+    GI --> GP
+    HT -.-> GP
+    GP --> DROP
+    DROP --> VG
+    VG -->|CSV-OK| CV
+    CV --> RECA
+    CV --> BASE
+    RECA --> EXT
+    EXT --> BASE
+    BASE --> SUM
+    SUM --> BASE
+    BASE --> CTX
+    CTX --> RV1
+    RV1 --> BASE
+    BASE --> TRD
+    TRD --> RV2
+    RV2 --> BASE
+    RECA --> AUD
+    BASE --> VAL[validate.mjs<br/>contract gate]
+    VAL --> GR
+    GR --> UI
+    BASE --> UI
+    UI --> MB
+    IMG -.-> UI
+    CODE -.-> ING & SPARK & APP
+
+    classDef muse fill:#0082FB,stroke:#005BB5,color:#fff
+    classDef rev fill:#FFF3CD,stroke:#B58900,color:#333
+    classDef det fill:#E8F5E9,stroke:#2E7D32,color:#222
+    class EXT,SUM,CTX,TRD,AUD muse
+    class RV1,RV2 rev
+    class GP,VG,CV,VAL det
+```
+
 ## Repo layout
 
 ```
